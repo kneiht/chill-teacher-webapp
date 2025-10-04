@@ -2,57 +2,21 @@ import type {
   UseCaseResponse,
   UserCreateInput,
   UserLoginInput,
-  UserPublic,
 } from '@/lib/types'
 
-const API_BASE_URL = 'http://localhost:3000'
+import { API_BASE_URL, postFetch } from '.'
+import type { AuthResponseData } from '../types/auth'
 
-export const fetchLogin = async (
+// Login user
+export const fetchLogin = (
   data: UserLoginInput,
-): Promise<
-  UseCaseResponse<{ user: UserPublic; token: { accessToken: string } }>
-> => {
-  const response = await fetch(`${API_BASE_URL}/auth/login`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  const body: UseCaseResponse<{
-    user: UserPublic
-    token: { accessToken: string }
-  }> = await response.json()
-  if (body.type === 'UNAUTHORIZED') {
-    import('js-cookie').then(({ default: Cookies }) => {
-      Cookies.remove('accessToken')
-      window.location.href = '/auth/login'
-    })
-  }
-  return body
+): Promise<UseCaseResponse<AuthResponseData>> => {
+  return postFetch(`${API_BASE_URL}/auth/login`, data)
 }
 
-export const fetchRegister = async (
+// Register new user
+export const fetchRegister = (
   data: UserCreateInput,
-): Promise<
-  UseCaseResponse<{ user: UserPublic; token: { accessToken: string } }>
-> => {
-  const response = await fetch(`${API_BASE_URL}/auth/register`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  const body: UseCaseResponse<{
-    user: UserPublic
-    token: { accessToken: string }
-  }> = await response.json()
-  if (body.type === 'UNAUTHORIZED') {
-    import('js-cookie').then(({ default: Cookies }) => {
-      Cookies.remove('accessToken')
-      window.location.href = '/auth/login'
-    })
-  }
-  return body
+): Promise<UseCaseResponse<AuthResponseData>> => {
+  return postFetch(`${API_BASE_URL}/auth/register`, data)
 }
