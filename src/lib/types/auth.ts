@@ -1,6 +1,6 @@
 import type { UserPublic } from './user'
 
-export interface LoginResponseData {
+export interface AuthResponseData {
   user: UserPublic
   token: {
     accessToken: string

@@ -26,7 +26,7 @@ import {
 
 // Fetches
 import { fetchLogin, fetchRegister } from '@/lib/fetches/auth.fetch'
-import type { LoginResponseData } from '../types/auth'
+import type { AuthResponseData } from '../types/auth'
 
 // Return type for this hook
 interface AuthContextType {
@@ -36,12 +36,12 @@ interface AuthContextType {
   login: (
     email: string,
     password: string,
-  ) => Promise<UseCaseResponse<LoginResponseData>>
+  ) => Promise<UseCaseResponse<AuthResponseData>>
   signup: (
     name: string,
     email: string,
     password: string,
-  ) => Promise<UseCaseResponse<LoginResponseData>>
+  ) => Promise<UseCaseResponse<AuthResponseData>>
   logout: () => void
   setUser: (user: UserPublic) => void
 }
@@ -63,7 +63,7 @@ export const useAuth = (): AuthContextType => {
   const login = async (
     email: string,
     password: string,
-  ): Promise<UseCaseResponse<LoginResponseData>> => {
+  ): Promise<UseCaseResponse<AuthResponseData>> => {
     // Set loading state so that the UI can show a loading indicator
     setLoading(true)
 
@@ -98,7 +98,7 @@ export const useAuth = (): AuthContextType => {
     name: string,
     email: string,
     password: string,
-  ): Promise<UseCaseResponse<LoginResponseData>> => {
+  ): Promise<UseCaseResponse<AuthResponseData>> => {
     // Set loading state so that the UI can show a loading indicator
     setLoading(true)
 
