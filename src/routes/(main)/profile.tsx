@@ -13,8 +13,8 @@ const Dashboard: React.FC = () => {
   return (
     <div>
       <div style={{ marginBottom: 24 }}>
-        <Title level={2}>{t('Dashboard')}</Title>
-        <Text type="secondary">{t('Welcome back!')}</Text>
+        <Title level={2}>{t('Profile')}</Title>
+        <Text type="secondary">{t('This is the profile page!')}</Text>
       </div>
     </div>
   )
@@ -22,6 +22,6 @@ const Dashboard: React.FC = () => {
 
 // Export the route
 
-export const Route = createFileRoute('/(main)/dashboard')({
+export const Route = createFileRoute('/(main)/profile')({
   component: Dashboard,
 })

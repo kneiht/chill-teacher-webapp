@@ -8,6 +8,5 @@ count.txt
 .nitro
 .tanstack
 
-
-.vscode
+# Private files and folders
 \#*

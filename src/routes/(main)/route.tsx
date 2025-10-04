@@ -1,4 +1,4 @@
-// Import Icons from Ant Design
+// Icons
 import {
   DashboardOutlined,
   LogoutOutlined,
@@ -10,7 +10,10 @@ import {
   UserOutlined,
 } from '@ant-design/icons'
 
-// Import Components from Ant Design
+// UI components
+import { Logo } from '@/lib/components/ui/Logo'
+import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
+import type { MenuProps } from 'antd'
 import {
   Avatar,
   Button,
@@ -23,8 +26,12 @@ import {
   theme,
 } from 'antd'
 
-// Import React hooks and Tanstack Router
+// Hooks
 import { useState } from 'react'
+import { useAuth } from '@/lib/hooks/use-auth'
+import { useLang } from '@/lib/hooks/use-lang'
+
+// Router
 import {
   Link,
   Outlet,
@@ -33,15 +40,8 @@ import {
   useLocation,
   useNavigate,
 } from '@tanstack/react-router'
-import type { MenuProps } from 'antd'
 
-// Import Components
-import { Logo } from '@/lib/components/ui/Logo'
-import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
-
-// Import contexts
-import { useAuth } from '@/lib/hooks/use-auth'
-import { useLang } from '@/lib/hooks/use-lang'
+// Utils
 import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
 
 // Destructure Layout components from Ant Design
@@ -70,16 +70,6 @@ const TriggerButton = ({
   )
 }
 
-export const Route = createFileRoute('/(main)')({
-  beforeLoad: () => {
-    const user = localStorage.getItem(LocalStorageKeys.USER)
-    if (!user) {
-      throw redirect({ to: '/login', replace: true })
-    }
-  },
-  component: MainLayout,
-})
-
 // Define the MainLayout component
 function MainLayout() {
   const [collapsed, setCollapsed] = useState(true)
@@ -95,16 +85,6 @@ function MainLayout() {
       key: '/dashboard',
       icon: <DashboardOutlined />,
       label: <Link to="/dashboard">{t('Dashboard')}</Link>,
-    },
-    {
-      key: '/teachers',
-      icon: <TeamOutlined />,
-      label: <Link to="/teachers">{t('Teachers')}</Link>,
-    },
-    {
-      key: '/teacher-position',
-      icon: <ReadOutlined />,
-      label: <Link to="/teacher-position">{t('Teacher Position')}</Link>,
     },
   ]
 
@@ -282,3 +262,13 @@ function MainLayout() {
     </Layout>
   )
 }
+
+export const Route = createFileRoute('/(main)')({
+  beforeLoad: () => {
+    // const user = localStorage.getItem(LocalStorageKeys.USER)
+    // if (!user) {
+    //   throw redirect({ to: '/login', replace: true })
+    // }
+  },
+  component: MainLayout,
+})

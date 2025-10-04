@@ -13,6 +13,8 @@ import { Route as SplatRouteImport } from './routes/$splat'
 import { Route as mainRouteRouteImport } from './routes/(main)/route'
 import { Route as authRouteRouteImport } from './routes/(auth)/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as mainSettingsRouteImport } from './routes/(main)/settings'
+import { Route as mainProfileRouteImport } from './routes/(main)/profile'
 import { Route as mainDashboardRouteImport } from './routes/(main)/dashboard'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
@@ -34,6 +36,16 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const mainSettingsRoute = mainSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainProfileRoute = mainProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => mainRouteRoute,
 } as any)
 const mainDashboardRoute = mainDashboardRouteImport.update({
   id: '/dashboard',
@@ -57,6 +69,8 @@ export interface FileRoutesByFullPath {
   '/login': typeof authLoginRoute
   '/signup': typeof authSignupRoute
   '/dashboard': typeof mainDashboardRoute
+  '/profile': typeof mainProfileRoute
+  '/settings': typeof mainSettingsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainRouteRouteWithChildren
@@ -64,6 +78,8 @@ export interface FileRoutesByTo {
   '/login': typeof authLoginRoute
   '/signup': typeof authSignupRoute
   '/dashboard': typeof mainDashboardRoute
+  '/profile': typeof mainProfileRoute
+  '/settings': typeof mainSettingsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -74,12 +90,28 @@ export interface FileRoutesById {
   '/(auth)/login': typeof authLoginRoute
   '/(auth)/signup': typeof authSignupRoute
   '/(main)/dashboard': typeof mainDashboardRoute
+  '/(main)/profile': typeof mainProfileRoute
+  '/(main)/settings': typeof mainSettingsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$splat' | '/login' | '/signup' | '/dashboard'
+  fullPaths:
+    | '/'
+    | '/$splat'
+    | '/login'
+    | '/signup'
+    | '/dashboard'
+    | '/profile'
+    | '/settings'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$splat' | '/login' | '/signup' | '/dashboard'
+  to:
+    | '/'
+    | '/$splat'
+    | '/login'
+    | '/signup'
+    | '/dashboard'
+    | '/profile'
+    | '/settings'
   id:
     | '__root__'
     | '/'
@@ -89,6 +121,8 @@ export interface FileRouteTypes {
     | '/(auth)/login'
     | '/(auth)/signup'
     | '/(main)/dashboard'
+    | '/(main)/profile'
+    | '/(main)/settings'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -127,6 +161,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/(main)/settings': {
+      id: '/(main)/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof mainSettingsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/profile': {
+      id: '/(main)/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof mainProfileRouteImport
+      parentRoute: typeof mainRouteRoute
     }
     '/(main)/dashboard': {
       id: '/(main)/dashboard'
@@ -168,10 +216,14 @@ const authRouteRouteWithChildren = authRouteRoute._addFileChildren(
 
 interface mainRouteRouteChildren {
   mainDashboardRoute: typeof mainDashboardRoute
+  mainProfileRoute: typeof mainProfileRoute
+  mainSettingsRoute: typeof mainSettingsRoute
 }
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainDashboardRoute: mainDashboardRoute,
+  mainProfileRoute: mainProfileRoute,
+  mainSettingsRoute: mainSettingsRoute,
 }
 
 const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
