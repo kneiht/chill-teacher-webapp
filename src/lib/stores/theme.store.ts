@@ -23,12 +23,9 @@ export const themeStore = new Store<ThemeState>({
 
 // Get system theme preference
 const getSystemTheme = (): ActualTheme => {
-  if (typeof window !== 'undefined' && window.matchMedia) {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? Theme.Dark
-      : Theme.Light
-  }
-  return Theme.Light
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? Theme.Dark
+    : Theme.Light
 }
 
 // Action to set selected theme
