@@ -1,11 +1,15 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 // import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 // import { TanstackDevtools } from '@tanstack/react-devtools'
+import { AppProvider } from '@/lib/components/AppProvider'
 
 export const Route = createRootRoute({
   component: () => (
     <>
-      <Outlet />
+      <AppProvider>
+        <Outlet />
+      </AppProvider>
+
       {/* <TanstackDevtools
         config={{
           position: 'bottom-left',
