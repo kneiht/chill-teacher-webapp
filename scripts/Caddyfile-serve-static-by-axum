@@ -1,0 +1,110 @@
+
+
+
+# ========== Caddyfile Config for serving static by AXUM ==========
+# Cấu hình cho domain chính
+chillteacher.com {
+
+    handle_path /api/* {
+        reverse_proxy chillteacher:3000 {
+            header_up Host {host}
+            header_up X-Real-IP {remote}
+            header_up X-Forwarded-For {remote}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Serve static frontend (auto detect css/js from all subfolders)
+    handle {A
+
+# Cấu hình cho domain chính
+chillteacher.com {
+    # Tự động HTTPS tls {}
+
+    # Reverse proxy đến ứng dụng Axum
+    reverse_proxy chillteacher:3000 {
+        # Cấu hình header
+        header_up Host {host}
+        header_up X-Real-IP {remote}
+        header_up X-Forwarded-For {remote}
+        header_up X-Forwarded-Proto {scheme}
+    }
+
+    # Cấu hình cho các file tĩnh (nếu có)
+    handle /static/* {
+        root * /app
+        file_server {
+            precompressed
+        }
+    }
+
+    # Cấu hình cho các file media
+    @media {
+        path *.jpg *.jpeg *.png *.gif *.ico *.svg *.webp
+    }
+    handle @media {
+        header Cache-Control "public, max-age=604800"
+    }
+
+    # Cấu hình cho các file font
+    @fonts {
+        path *.woff *.woff2 *.ttf *.otf *.eot
+    }
+    handle @fonts {
+        header Cache-Control "public, max-age=604800"
+    }
+
+    # Cấu hình cho file CSS
+    @css {
+        path *.css
+    }
+    handle @css {
+        header Content-Type text/css
+        header Cache-Control "public, max-age=604800"
+    }
+
+    # Cấu hình cho file JS
+    @js {
+        path *.js
+    }
+    handle @js {
+        header Content-Type application/javascript
+        header Cache-Control "public, max-age=604800"
+    }
+
+    # Nén dữ liệu
+    encode gzip
+}
+
+# Cấu hình cho www.chillteacher.com (chuyển hướng về chillteacher.com)
+www.chillteacher.com {
+    redir https://chillteacher.com{uri} permanent
+}
+
+# Cấu hình cho IP của server (chuyển hướng về chillteacher.com)
+:80, :443 {
+    # Chỉ áp dụng nếu host không phải là chillteacher.com hoặc www.chillteacher.com
+    @notDomain {
+        not host chillteacher.com www.chillteacher.com
+    }
+    handle @notDomain {
+        redir https://chillteacher.com{uri} permanent
+    }
+}
+
+        root * /srv
+        # try_files {path} {path}/ /index.html
+        encode gzip
+        file_server
+    }
+
+    # Optional: Cache all static files based on extension
+    @static_ext path_regexp \.(css|js|woff2?|ttf|otf|eot|png|jpg|jpeg|gif|webp|svg|ico)$
+    handle @static_ext {
+        header Cache-Control "public, max-age=604800"
+    }
+}
+
+
+
+

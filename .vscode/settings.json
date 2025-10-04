@@ -10,6 +10,16 @@
   },
   "files.exclude": {
     "node_modules": true,
-    ".tanstack": true
+    ".tanstack": true,
+    ".prettierignore": true,
+    "tsconfig.json": true,
+    "eslint.config.js": true,
+    "prettier.config.js": true,
+    "README.md": true,
+    "pnpm-workspace.yaml": true,
+    "vite.config.ts": true,
+    "pnpm-lock.yaml": true,
+    ".cta.json": true,
+    ".vscode": true
   }
 }
