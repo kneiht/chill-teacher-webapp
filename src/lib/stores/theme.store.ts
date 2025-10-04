@@ -8,8 +8,8 @@ export enum Theme {
 }
 
 // Define theme state
-type SelectedTheme = Theme
-type ActualTheme = Exclude<Theme, Theme.System>
+export type SelectedTheme = Theme
+export type ActualTheme = Exclude<Theme, Theme.System>
 export interface ThemeState {
   selectedTheme: SelectedTheme
   actualTheme: ActualTheme

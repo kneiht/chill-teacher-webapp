@@ -12,10 +12,11 @@ export interface User {
 }
 
 export interface UserCreateInput {
+  name?: string
   email: string
-  username: string
+  username?: string
   password: string
-  role: 'ADMIN' | 'USER'
+  role?: 'ADMIN' | 'USER'
 }
 
 export interface UserLoginInput {
@@ -27,6 +28,7 @@ export interface UserPublic {
   id: string
   name: string
   email: string
+  username: string
   role: 'ADMIN' | 'USER'
   avatar?: string
   phoneNumber?: string
@@ -38,6 +40,7 @@ export interface UserUpdateInput {
   id: string
   name?: string
   email?: string
+  username?: string
   password?: string
   role?: 'ADMIN' | 'USER'
   avatar?: string

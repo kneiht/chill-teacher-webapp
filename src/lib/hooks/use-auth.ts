@@ -1,21 +1,34 @@
+// Cookies
+import Cookies from 'js-cookie'
+
+// Hooks
 import { useStore } from '@tanstack/react-store'
 import { useEffect } from 'react'
-import Cookies from 'js-cookie'
+
+// Types
 import type { UseCaseResponse, UserPublic } from '@/lib/types'
+
+// Stores
 import {
   authStore,
   logout as logoutAction,
   setLoading,
   setUser,
 } from '@/lib/stores/auth.store'
+
+// Utils
 import {
   LocalStorageKeys,
   getFromLocalStorage,
   removeFromLocalStorage,
   setToLocalStorage,
 } from '@/lib/utils/local-storage-helpers'
-import { fetchLogin, fetchRegister } from '@/lib/fetches/auth.fetch'
 
+// Fetches
+import { fetchLogin, fetchRegister } from '@/lib/fetches/auth.fetch'
+import type { LoginResponseData } from '../types/auth'
+
+// Return type for this hook
 interface AuthContextType {
   user: UserPublic | null
   isLoading: boolean
@@ -23,23 +36,21 @@ interface AuthContextType {
   login: (
     email: string,
     password: string,
-  ) => Promise<
-    UseCaseResponse<{ user: UserPublic; token: { accessToken: string } }>
-  >
+  ) => Promise<UseCaseResponse<LoginResponseData>>
   signup: (
     name: string,
     email: string,
     password: string,
-  ) => Promise<
-    UseCaseResponse<{ user: UserPublic; token: { accessToken: string } }>
-  >
+  ) => Promise<UseCaseResponse<LoginResponseData>>
   logout: () => void
   setUser: (user: UserPublic) => void
 }
 
+// Custom hook for managing authentication state
 export const useAuth = (): AuthContextType => {
   const state = useStore(authStore)
 
+  // Load saved user from localStorage on mount
   useEffect(() => {
     const storedUser = getFromLocalStorage<UserPublic>(LocalStorageKeys.USER)
     if (storedUser) {
@@ -48,64 +59,84 @@ export const useAuth = (): AuthContextType => {
     setLoading(false)
   }, [])
 
+  // Login user with email and password
   const login = async (
     email: string,
     password: string,
-  ): Promise<
-    UseCaseResponse<{ user: UserPublic; token: { accessToken: string } }>
-  > => {
+  ): Promise<UseCaseResponse<LoginResponseData>> => {
+    // Set loading state so that the UI can show a loading indicator
     setLoading(true)
+
     try {
+      // Fetch login data from the server
       const result = await fetchLogin({ email, password })
+
+      // Check if the request was successful
       if (result.success && result.data) {
+        // Extract user and token data from the response
         const { user, token } = result.data
 
+        // Set the access token cookie
         Cookies.set('accessToken', token.accessToken, {
           secure: false,
           sameSite: 'lax',
           expires: 1,
         })
-        setToLocalStorage(LocalStorageKeys.USER, { ...user, password: '' })
-        setUser(user)
-      }
-      return result
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const signup = async (
-    name: string,
-    email: string,
-    password: string,
-  ): Promise<
-    UseCaseResponse<{ user: UserPublic; token: { accessToken: string } }>
-  > => {
-    setLoading(true)
-    try {
-      const result = await fetchRegister({ name, email, password })
-      if (result.success && result.data) {
-        const { user, token } = result.data
-        Cookies.set('accessToken', token.accessToken, {
-          secure: false,
-          sameSite: 'lax',
-          expires: 1,
-        })
+        // Save user data to localStorage
         setToLocalStorage(LocalStorageKeys.USER, user)
         setUser(user)
       }
       return result
     } finally {
+      // Reset loading state
       setLoading(false)
     }
   }
 
+  // Signup new user with name, email, and password
+  const signup = async (
+    name: string,
+    email: string,
+    password: string,
+  ): Promise<UseCaseResponse<LoginResponseData>> => {
+    // Set loading state so that the UI can show a loading indicator
+    setLoading(true)
+
+    try {
+      // Fetch signup data from the server
+      const result = await fetchRegister({ name, email, password })
+
+      // Check if the request was successful
+      if (result.success && result.data) {
+        // Extract user and token data from the response
+        const { user, token } = result.data
+
+        // Set the access token cookie
+        Cookies.set('accessToken', token.accessToken, {
+          secure: false,
+          sameSite: 'lax',
+          expires: 1,
+        })
+
+        // Save user data to localStorage
+        setToLocalStorage(LocalStorageKeys.USER, user)
+        setUser(user)
+      }
+      return result
+    } finally {
+      // Reset loading state
+      setLoading(false)
+    }
+  }
+
+  // Logout user by clearing cookies and localStorage
   const logout = () => {
     Cookies.remove('accessToken')
     removeFromLocalStorage(LocalStorageKeys.USER)
     logoutAction()
   }
 
+  // Return auth state and functions
   return {
     user: state.user,
     isLoading: state.isLoading,
