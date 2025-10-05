@@ -92,7 +92,7 @@ if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
         cd ./dist && tar -czf ../scripts/static-files.tar.gz .
         cd ../scripts
         $SCP_CMD static-files.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
-        $SSH_CMD "cd $REMOTE_DIR && tar -xzf static-files.tar.gz -C static/"
+        $SSH_CMD "cd $REMOTE_DIR && rm -rf static/* && tar -xzf static-files.tar.gz -C static/"
 
         echo -e "${GREEN}✓ Copy static files thành công!${NC}"
     else
