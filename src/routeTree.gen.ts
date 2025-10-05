@@ -13,11 +13,12 @@ import { Route as SplatRouteImport } from './routes/$splat'
 import { Route as mainRouteRouteImport } from './routes/(main)/route'
 import { Route as authRouteRouteImport } from './routes/(auth)/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LessonsIndexRouteImport } from './routes/lessons/index'
 import { Route as mainSettingsRouteImport } from './routes/(main)/settings'
 import { Route as mainProfileRouteImport } from './routes/(main)/profile'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
-import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons/index'
+import { Route as LessonsEverybodyUp0Unit1PresentationRouteRouteImport } from './routes/lessons/everybody-up-0/unit-1/presentation.route'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -35,6 +36,11 @@ const authRouteRoute = authRouteRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LessonsIndexRoute = LessonsIndexRouteImport.update({
+  id: '/lessons/',
+  path: '/lessons/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const mainSettingsRoute = mainSettingsRouteImport.update({
@@ -57,11 +63,12 @@ const authLoginRoute = authLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => authRouteRoute,
 } as any)
-const mainLessonsIndexRoute = mainLessonsIndexRouteImport.update({
-  id: '/lessons/',
-  path: '/lessons/',
-  getParentRoute: () => mainRouteRoute,
-} as any)
+const LessonsEverybodyUp0Unit1PresentationRouteRoute =
+  LessonsEverybodyUp0Unit1PresentationRouteRouteImport.update({
+    id: '/lessons/everybody-up-0/unit-1/presentation',
+    path: '/lessons/everybody-up-0/unit-1/presentation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof mainRouteRouteWithChildren
@@ -70,7 +77,8 @@ export interface FileRoutesByFullPath {
   '/signup': typeof authSignupRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
-  '/lessons': typeof mainLessonsIndexRoute
+  '/lessons': typeof LessonsIndexRoute
+  '/lessons/everybody-up-0/unit-1/presentation': typeof LessonsEverybodyUp0Unit1PresentationRouteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainRouteRouteWithChildren
@@ -79,7 +87,8 @@ export interface FileRoutesByTo {
   '/signup': typeof authSignupRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
-  '/lessons': typeof mainLessonsIndexRoute
+  '/lessons': typeof LessonsIndexRoute
+  '/lessons/everybody-up-0/unit-1/presentation': typeof LessonsEverybodyUp0Unit1PresentationRouteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -91,7 +100,8 @@ export interface FileRoutesById {
   '/(auth)/signup': typeof authSignupRoute
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
-  '/(main)/lessons/': typeof mainLessonsIndexRoute
+  '/lessons/': typeof LessonsIndexRoute
+  '/lessons/everybody-up-0/unit-1/presentation': typeof LessonsEverybodyUp0Unit1PresentationRouteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -103,6 +113,7 @@ export interface FileRouteTypes {
     | '/profile'
     | '/settings'
     | '/lessons'
+    | '/lessons/everybody-up-0/unit-1/presentation'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -112,6 +123,7 @@ export interface FileRouteTypes {
     | '/profile'
     | '/settings'
     | '/lessons'
+    | '/lessons/everybody-up-0/unit-1/presentation'
   id:
     | '__root__'
     | '/'
@@ -122,7 +134,8 @@ export interface FileRouteTypes {
     | '/(auth)/signup'
     | '/(main)/profile'
     | '/(main)/settings'
-    | '/(main)/lessons/'
+    | '/lessons/'
+    | '/lessons/everybody-up-0/unit-1/presentation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -130,6 +143,8 @@ export interface RootRouteChildren {
   authRouteRoute: typeof authRouteRouteWithChildren
   mainRouteRoute: typeof mainRouteRouteWithChildren
   SplatRoute: typeof SplatRoute
+  LessonsIndexRoute: typeof LessonsIndexRoute
+  LessonsEverybodyUp0Unit1PresentationRouteRoute: typeof LessonsEverybodyUp0Unit1PresentationRouteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -162,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lessons/': {
+      id: '/lessons/'
+      path: '/lessons'
+      fullPath: '/lessons'
+      preLoaderRoute: typeof LessonsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/(main)/settings': {
       id: '/(main)/settings'
       path: '/settings'
@@ -190,12 +212,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authLoginRouteImport
       parentRoute: typeof authRouteRoute
     }
-    '/(main)/lessons/': {
-      id: '/(main)/lessons/'
-      path: '/lessons'
-      fullPath: '/lessons'
-      preLoaderRoute: typeof mainLessonsIndexRouteImport
-      parentRoute: typeof mainRouteRoute
+    '/lessons/everybody-up-0/unit-1/presentation': {
+      id: '/lessons/everybody-up-0/unit-1/presentation'
+      path: '/lessons/everybody-up-0/unit-1/presentation'
+      fullPath: '/lessons/everybody-up-0/unit-1/presentation'
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1PresentationRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -217,13 +239,11 @@ const authRouteRouteWithChildren = authRouteRoute._addFileChildren(
 interface mainRouteRouteChildren {
   mainProfileRoute: typeof mainProfileRoute
   mainSettingsRoute: typeof mainSettingsRoute
-  mainLessonsIndexRoute: typeof mainLessonsIndexRoute
 }
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainProfileRoute: mainProfileRoute,
   mainSettingsRoute: mainSettingsRoute,
-  mainLessonsIndexRoute: mainLessonsIndexRoute,
 }
 
 const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
@@ -235,6 +255,9 @@ const rootRouteChildren: RootRouteChildren = {
   authRouteRoute: authRouteRouteWithChildren,
   mainRouteRoute: mainRouteRouteWithChildren,
   SplatRoute: SplatRoute,
+  LessonsIndexRoute: LessonsIndexRoute,
+  LessonsEverybodyUp0Unit1PresentationRouteRoute:
+    LessonsEverybodyUp0Unit1PresentationRouteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
