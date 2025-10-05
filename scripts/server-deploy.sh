@@ -16,15 +16,14 @@ NC='\033[0m' # No Color
 SERVER_IP=${SERVER_IP:-${1:-"your_server_ip"}}
 USERNAME=${SERVER_USER:-${2:-"root"}}
 SSH_PORT=${SSH_PORT:-${3:-"22"}}
-DOMAIN=${DOMAIN:-"coaching.chillteacher.com"}
+DOMAIN=${DOMAIN}
 
 
 REMOTE_DIR="/opt/english-coaching"
 
 # Đường dẫn tới thư mục gốc của dự án
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-FRONTEND_BUILD_DIR="$PROJECT_ROOT/frontend/build"
-BACKEND_DIR="$PROJECT_ROOT/backend"
+FRONTEND_BUILD_DIR="$PROJECT_ROOT/dist"
 
 
 # Check if server_ip is still default
@@ -59,7 +58,7 @@ else
 fi
 
 
-echo -e "${BLUE}=== SCRIPT DEPLOY AXUM ENGLISH-COACHING ===${NC}"
+echo -e "${BLUE}=== SCRIPT DEPLOY ENGLISH-COACHING ===${NC}"
 echo -e "${YELLOW}Server IP: ${SERVER_IP}${NC}"
 echo -e "${YELLOW}Username: ${USERNAME}${NC}"
 echo -e "${YELLOW}SSH Port: ${SSH_PORT}${NC}"
@@ -80,69 +79,6 @@ fi
 echo -e "${GREEN}✓ Directories created successfully!${NC}"
 
 
-
-
-# Copy các file cần thiết khác lên server
-echo -e "${BLUE}Copy các file lên server...${NC}"
-$SCP_CMD ./scripts/docker-compose.yml $USERNAME@$SERVER_IP:$REMOTE_DIR/
-$SCP_CMD ./scripts/setup-server.sh $USERNAME@$SERVER_IP:$REMOTE_DIR/
-$SCP_CMD ./scripts/Caddyfile $USERNAME@$SERVER_IP:$REMOTE_DIR/
-if [ -f ".env" ]; then
-    $SCP_CMD .env $USERNAME@$SERVER_IP:$REMOTE_DIR/
-    echo -e "${GREEN}✓ Copied .env file${NC}"
-else
-    echo -e "${RED}.env file not found. Please create .env with required variables.${NC}"
-    exit 1
-fi
-
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Lỗi khi copy file lên server!${NC}"
-    exit 1
-fi
-echo -e "${GREEN}✓ Copy file thành công!${NC}"
-
-
-
-
-
-
-# Hỏi người dùng có build image không
-read -p "Bạn có muốn build và copy Docker image lên server không? (y/n): " BUILD_IMAGE
-if [[ "$BUILD_IMAGE" =~ ^[Yy]$ ]]; then
-
-    # Step 1: Build Docker image
-    echo -e "${BLUE}Build Docker image...${NC}"
-    docker build -t english-coaching:latest -f scripts/Dockerfile .
-
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Lỗi khi build Docker image!${NC}"
-        exit 1
-    fi
-    echo -e "${GREEN}✓ Build Docker image thành công!${NC}"
-
-    # Step 2: Save Docker image to file
-    echo -e "${BLUE}Save Docker image to file...${NC}"
-    cd scripts &&  docker save english-coaching:latest | gzip > english-coaching-image.tar.gz
-
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Lỗi khi lưu Docker image!${NC}"
-        exit 1
-    fi
-    echo -e "${GREEN}✓ Lưu Docker image thành công!${NC}"
-
-    $SCP_CMD english-coaching-image.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Lỗi khi copy file Docker image lên server!${NC}"
-        exit 1
-    fi
-    echo -e "${GREEN}✓ Copy Docker image thành công!${NC}"
-    cd ..
-fi
-
-
-
-
-
 # Ask user if they want to rebuild static files
 read -p "Do you want to build and copy static files to server? (y/n): " BUILD_STATIC
 if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
@@ -152,9 +88,9 @@ if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
 
     # Copy static files lên server nếu có
     echo -e "${BLUE}Copy static files lên server...${NC}"
-    if [ -d "./frontend/dist" ]; then
-        cd ./frontend/dist && tar -czf ../../scripts/static-files.tar.gz .
-        cd ../../scripts
+    if [ -d "./dist" ]; then
+        cd ./dist && tar -czf ../scripts/static-files.tar.gz .
+        cd ../scripts
         $SCP_CMD static-files.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
         $SSH_CMD "cd $REMOTE_DIR && tar -xzf static-files.tar.gz -C static/"
 
@@ -164,27 +100,13 @@ if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
     fi
 fi
 
-# Tạo script cài đặt trên server
-echo -e "${BLUE}Setup script cài đặt trên server...${NC}"
-$SSH_CMD "chmod +x $REMOTE_DIR/setup-server.sh"
-
-# Chạy script cài đặt trên server
-echo -e "${BLUE}Chạy script cài đặt trên server...${NC}"
-$SSH_CMD "cd $REMOTE_DIR && ./setup-server.sh"
-
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Lỗi khi chạy script cài đặt!${NC}"
-    exit 1
-fi
-echo -e "${GREEN}✓ Cài đặt trên server thành công!${NC}"
-
 # Kiểm tra trạng thái của các container
 echo -e "${BLUE}Kiểm tra trạng thái của các container...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker-compose ps"
 
-    # Check logs of english-coaching container
-    echo -e "${BLUE}Check logs of english-coaching container...${NC}"
-    $SSH_CMD "cd $REMOTE_DIR && docker logs english-coaching 2>&1 | tail -n 20"
+# Check logs of english-coaching container
+echo -e "${BLUE}Check logs of english-coaching container...${NC}"
+$SSH_CMD "cd $REMOTE_DIR && docker logs english-coaching 2>&1 | tail -n 20"
 
 # Kiểm tra logs của container caddy
 echo -e "${BLUE}Kiểm tra logs của container caddy...${NC}"
@@ -194,7 +116,6 @@ $SSH_CMD "cd $REMOTE_DIR && docker logs caddy 2>&1 | tail -n 20"
 echo -e "${BLUE}Cleanup...${NC}"
 # rm -rf ./scripts/english-coaching-image.tar.gz
 # rm -rf ./scripts/static-files.tar.gz
-docker image prune -f
 
 # Đóng kết nối SSH Control Master
 echo -e "${BLUE}Đang đóng kết nối SSH...${NC}"

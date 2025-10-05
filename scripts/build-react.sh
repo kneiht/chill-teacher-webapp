@@ -9,8 +9,7 @@ NC='\033[0m' # No Color
 
 # Path to project root
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-FRONTEND_DIR="$PROJECT_ROOT/frontend"
-BACKEND_DIR="$PROJECT_ROOT/backend"
+FRONTEND_DIR="$PROJECT_ROOT"
 
 echo -e "${BLUE}=== Build React to static files ===${NC}"
 
