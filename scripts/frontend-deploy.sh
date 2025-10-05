@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Màu sắc cho output
+# Colors for output
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
@@ -37,7 +37,7 @@ if [ "$SERVER_IP" == "your_server_ip" ]; then
 fi
 
 
-# Thiết lập SSH Control Master để tái sử dụng kết nối SSH
+# Set up SSH Control Master to reuse SSH connection
 SSH_CONTROL_PATH="/tmp/ssh_mux_%h_%p_%r"
 SSH_OPTS="-o ControlMaster=auto -o ControlPath=$SSH_CONTROL_PATH -o ControlPersist=1h -o StrictHostKeyChecking=accept-new"
 SSH_CMD="ssh $SSH_OPTS -p $SSH_PORT $USERNAME@$SERVER_IP"
@@ -70,7 +70,7 @@ echo -e "${YELLOW}Remote Directory: ${REMOTE_DIR}${NC}"
 echo ""
 
 
-# Tạo thư mục trên server
+# Create directories on server
 echo -e "${BLUE}Creating directories on server...${NC}"
 $SSH_CMD "mkdir -p $REMOTE_DIR && mkdir -p $REMOTE_DIR/static"
 
@@ -91,31 +91,31 @@ if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
     chmod +x ./scripts/build-react.sh
     ./scripts/build-react.sh
 
-    # Copy static files lên server nếu có
-    echo -e "${BLUE}Copy static files lên server...${NC}"
+    # Copy static files to server if available
+    echo -e "${BLUE}Copying static files to server...${NC}"
     if [ -d "$FRONTEND_BUILD_DIR" ]; then
         cd $FRONTEND_BUILD_DIR && tar -czf $FRONTEND_DIR/static-files.tar.gz .
         cd $FRONTEND_DIR
         $SCP_CMD static-files.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
         $SSH_CMD "cd $REMOTE_DIR && tar -xzf static-files.tar.gz -C static/"
 
-        echo -e "${GREEN}✓ Copy static files thành công!${NC}"
+        echo -e "${GREEN}✓ Static files copied successfully!${NC}"
     else
-        echo -e "${YELLOW}⚠️ Không tìm thấy thư mục static files. Bạn có thể cập nhật sau bằng lệnh 'make update-static'.${NC}"
+        echo -e "${YELLOW}⚠️ Static files directory not found. You can update later with 'make update-static' command.${NC}"
     fi
 fi
 
 
-# Kiểm tra trạng thái của các container
-echo -e "${BLUE}Kiểm tra trạng thái của các container...${NC}"
+# Check status of containers
+echo -e "${BLUE}Checking status of containers...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker-compose ps"
 
 # Check logs of app container
 echo -e "${BLUE}Check logs of backend ${APP_CONTAINER_NAME} container...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker logs ${APP_CONTAINER_NAME} 2>&1 | tail -n 20"
 
-# Kiểm tra logs của container caddy
-echo -e "${BLUE}Kiểm tra logs của container caddy...${NC}"
+# Check logs of caddy container
+echo -e "${BLUE}Checking logs of caddy container...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker logs caddy 2>&1 | tail -n 20"
 
 # Cleanup
@@ -124,12 +124,12 @@ echo -e "${BLUE}Cleanup...${NC}"
 # rm -rf ./scripts/static-files.tar.gz
 docker image prune -f
 
-# Đóng kết nối SSH Control Master
-echo -e "${BLUE}Đang đóng kết nối SSH...${NC}"
+# Close SSH Control Master connection
+echo -e "${BLUE}Closing SSH connection...${NC}"
 ssh $SSH_OPTS -p $SSH_PORT -O exit $USERNAME@$SERVER_IP
 
-echo -e "${GREEN}=== DEPLOY HOÀN TẤT THÀNH CÔNG! ===${NC}"
-echo -e "${YELLOW}Ứng dụng đang chạy tại:${NC}"
+echo -e "${GREEN}=== DEPLOY COMPLETED SUCCESSFULLY! ===${NC}"
+echo -e "${YELLOW}Application is running at:${NC}"
 echo -e "${YELLOW}- HTTP: http://${SERVER_IP} (sẽ tự động chuyển hướng sang HTTPS)${NC}"
 echo -e "${YELLOW}- HTTPS: https://${SERVER_IP} (Caddy sẽ tự động lấy SSL certificates)${NC}"
 echo -e "${YELLOW}- Domain: https://${DOMAIN} (after configuring DNS to point to ${SERVER_IP})${NC}"
