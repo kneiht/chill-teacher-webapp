@@ -25,14 +25,13 @@ REMOTE_DIR=${REMOTE_DIR}
 # Path to project root (from env)
 PROJECT_ROOT=${PROJECT_ROOT}
 FRONTEND_DIR=${FRONTEND_DIR}
-BACKEND_DIR=${BACKEND_DIR}
 FRONTEND_BUILD_DIR="$FRONTEND_DIR/dist"
 
 
 # Check if server_ip is still default
 if [ "$SERVER_IP" == "your_server_ip" ]; then
     echo -e "${RED}Please provide the actual server IP address!${NC}"
-    echo -e "${YELLOW}Usage: ./scripts/server-deploy.sh [server_ip] [username] [ssh_port]${NC}"
+    echo -e "${YELLOW}Usage: ./scripts/frontend-deploy.sh [server_ip] [username] [ssh_port]${NC}"
     echo -e "${YELLOW}Or set SERVER_IP, SERVER_USER, SERVER_PASSWORD, DOMAIN in .env${NC}"
     exit 1
 fi
@@ -61,7 +60,8 @@ else
 fi
 
 
-echo -e "${BLUE}=== SCRIPT DEPLOY AXUM ENGLISH-COACHING ===${NC}"
+echo ""
+echo -e "${BLUE}=== DEPLOY APP TO SERVER ===${NC}"
 echo -e "${YELLOW}Server IP: ${SERVER_IP}${NC}"
 echo -e "${YELLOW}Username: ${USERNAME}${NC}"
 echo -e "${YELLOW}SSH Port: ${SSH_PORT}${NC}"
@@ -80,64 +80,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 echo -e "${GREEN}✓ Directories created successfully!${NC}"
-
-
-
-
-# Copy các file cần thiết khác lên server
-echo -e "${BLUE}Copy các file lên server...${NC}"
-$SCP_CMD ./scripts/docker-compose.yml $USERNAME@$SERVER_IP:$REMOTE_DIR/
-$SCP_CMD ./scripts/setup-server.sh $USERNAME@$SERVER_IP:$REMOTE_DIR/
-$SCP_CMD ./scripts/Caddyfile $USERNAME@$SERVER_IP:$REMOTE_DIR/
-if [ -f ".env" ]; then
-    $SCP_CMD .env $USERNAME@$SERVER_IP:$REMOTE_DIR/
-    echo -e "${GREEN}✓ Copied .env file${NC}"
-else
-    echo -e "${RED}.env file not found. Please create .env with required variables.${NC}"
-    exit 1
-fi
-
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Lỗi khi copy file lên server!${NC}"
-    exit 1
-fi
-echo -e "${GREEN}✓ Copy file thành công!${NC}"
-
-
-
-# Hỏi người dùng có build image không
-read -p "Bạn có muốn build và copy Docker image lên server không? (y/n): " BUILD_IMAGE
-if [[ "$BUILD_IMAGE" =~ ^[Yy]$ ]]; then
-
-    # Step 1: Build Docker image
-    echo -e "${BLUE}Build Docker image...${NC}"
-    docker build -t ${APP_CONTAINER_NAME}:latest -f scripts/Dockerfile .
-
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Lỗi khi build Docker image!${NC}"
-        exit 1
-    fi
-    echo -e "${GREEN}✓ Build Docker image thành công!${NC}"
-
-    # Step 2: Save Docker image to file
-    echo -e "${BLUE}Save Docker image to file...${NC}"
-    cd scripts &&  docker save ${APP_CONTAINER_NAME}:latest | gzip > ${APP_CONTAINER_NAME}-image.tar.gz
-
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Lỗi khi lưu Docker image!${NC}"
-        exit 1
-    fi
-    echo -e "${GREEN}✓ Lưu Docker image thành công!${NC}"
-
-    $SCP_CMD ${APP_CONTAINER_NAME}-image.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Lỗi khi copy file Docker image lên server!${NC}"
-        exit 1
-    fi
-    echo -e "${GREEN}✓ Copy Docker image thành công!${NC}"
-    cd ..
-fi
-
 
 
 
@@ -163,27 +105,14 @@ if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
     fi
 fi
 
-# Tạo script cài đặt trên server
-echo -e "${BLUE}Setup script cài đặt trên server...${NC}"
-$SSH_CMD "chmod +x $REMOTE_DIR/setup-server.sh"
-
-# Chạy script cài đặt trên server
-echo -e "${BLUE}Chạy script cài đặt trên server...${NC}"
-$SSH_CMD "cd $REMOTE_DIR && ./setup-server.sh"
-
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Lỗi khi chạy script cài đặt!${NC}"
-    exit 1
-fi
-echo -e "${GREEN}✓ Cài đặt trên server thành công!${NC}"
 
 # Kiểm tra trạng thái của các container
 echo -e "${BLUE}Kiểm tra trạng thái của các container...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker-compose ps"
 
-    # Check logs of english-coaching container
-    echo -e "${BLUE}Check logs of english-coaching container...${NC}"
-    $SSH_CMD "cd $REMOTE_DIR && docker logs english-coaching 2>&1 | tail -n 20"
+# Check logs of app container
+echo -e "${BLUE}Check logs of backend ${APP_CONTAINER_NAME} container...${NC}"
+$SSH_CMD "cd $REMOTE_DIR && docker logs ${APP_CONTAINER_NAME} 2>&1 | tail -n 20"
 
 # Kiểm tra logs của container caddy
 echo -e "${BLUE}Kiểm tra logs của container caddy...${NC}"

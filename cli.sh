@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# english-coaching-cli.sh
-# CLI tool for managing the EnglishCoaching project
-
 # --- Configuration ---
 # Source .env if it exists and export variables
 if [ -f ".env" ]; then
@@ -13,7 +10,6 @@ if [ -f ".env" ]; then
     set +o allexport
 else
     echo -e "\033[1;33mWarning: .env file not found. Some commands might not work as expected.\033[0m"
-    echo -e "\033[1;33mPlease ensure DATABASE_URL, DATABASE_URL_TEST, etc., are set if needed.\033[0m"
 fi
 
 # Warning: make sure to set the correct values in .env
@@ -32,10 +28,6 @@ fi
 FRONTEND_DIR=${FRONTEND_DIR}
 SCRIPTS_DIR=${SCRIPTS_DIR}
 
-# Atlas default environment
-ATLAS_ENV_DEFAULT="dev"
-ATLAS_ENV_CURRENT="$ATLAS_ENV_DEFAULT" # Will be updated by ask_atlas_env
-
 # Colors
 BLUE='\033[0;34m'
 GREEN='\033[0;32m'
@@ -48,15 +40,11 @@ NC='\033[0m' # No Color
 
 # --- Helper Functions ---
 print_header() {
-    echo -e "${BLUE}=== EnglishCoaching CLI ===${NC}"
+    echo
+    echo -e "${BLUE}=== App CLI ===${NC}"
     echo
 }
 
-ask_atlas_env() {
-    read -p "Enter Atlas environment (default: $ATLAS_ENV_DEFAULT): " atlas_env_input
-    ATLAS_ENV_CURRENT="${atlas_env_input:-$ATLAS_ENV_DEFAULT}"
-    echo -e "${CYAN}Using Atlas environment: $ATLAS_ENV_CURRENT${NC}"
-}
 
 _ensure_env_var() {
     local var_name="$1"
@@ -69,80 +57,11 @@ _ensure_env_var() {
     return 0
 }
 
-
-# --- Target Functions ---
-
 # --- Setup ---
 setup_scripts() {
     echo -e "${BLUE}Making scripts executable...${NC}"
     chmod +x "$SCRIPTS_DIR"/*.sh
     echo -e "${GREEN}✓ Scripts are now executable${NC}"
-}
-
-# --- Backend ---
-_prompt_apply_migrations_after_db_start() {
-    local db_context="$1" # "dev" or "test"
-    echo -en "${YELLOW}Apply database migrations now? (y/N): ${NC}"
-    read -r answer
-    if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
-        echo -e "${BLUE}Applying migrations...${NC}"
-        if [[ "$db_context" == "test" ]]; then
-            db_apply_test # For test DB
-        else
-            db_apply # For dev DB
-        fi
-    else
-        echo -e "${YELLOW}Skipping migrations.${NC}"
-    fi
-}
-
-backend_start_db_base() {
-    local mode="$1" # "dev" or "test"
-    setup_scripts
-    echo -e "${BLUE}Starting PostgreSQL container for ${mode} environment...${NC}"
-    if [[ "$mode" == "test" ]]; then
-        "$SCRIPTS_DIR/start-postgres.sh" --test
-    else
-        "$SCRIPTS_DIR/start-postgres.sh"
-    fi
-    _prompt_apply_migrations_after_db_start "$mode"
-}
-
-backend_start_db() {
-    backend_start_db_base "dev"
-}
-
-backend_start_db_test() {
-    backend_start_db_base "test"
-}
-
-backend_serve() {
-    # Dependency: backend_start_db (implicitly handled by user flow or separate call)
-    echo -e "${MAGENTA}Note: Ensure the development database is running. Use 'Start DB (dev)' if needed.${NC}"
-    echo -e "${BLUE}Starting Axum server (single run)...${NC}"
-    (cd "$BACKEND_DIR" && cargo run --bin backend)
-}
-
-backend_watch() {
-    tools_install_watch # Dependency
-    # Dependency: backend_start_db (implicitly handled by user flow or separate call)
-    echo -e "${MAGENTA}Note: Ensure the development database is running. Use 'Start DB (dev)' if needed.${NC}"
-    echo -e "${BLUE}Starting Axum server with cargo watch...${NC}"
-    (cd "$BACKEND_DIR" && cargo watch -c -q -x "run --bin backend")
-}
-
-backend_test() {
-    # Dependencies: backend_start_db_test, db_apply_test
-    echo -e "${MAGENTA}Note: Ensure the test database is running and migrations are applied.${NC}"
-    echo -e "${MAGENTA}Use 'Start DB (test)' (which includes migration prompt) if needed.${NC}"
-    echo -e "${BLUE}Starting backend tests...${NC}"
-    (cd "$BACKEND_DIR" && cargo test)
-}
-
-backend_sqlx_prepare() {
-    echo -e "${CYAN}Preparing SQLx for offline mode...${NC}"
-    (cd "$BACKEND_DIR" && cargo sqlx prepare)
-    echo -e "${GREEN}✓ SQLx prepared successfully${NC}"
 }
 
 # --- Frontend ---
@@ -191,54 +110,6 @@ frontend_fix_lint() {
     echo -e "${GREEN}✓ Formatting complete${NC}"
 }
 
-# --- Database Migrations (Atlas & SQLx) ---
-db_atlas_hash() {
-    ask_atlas_env
-    echo -e "${CYAN}Generating Atlas migration hash (env: $ATLAS_ENV_CURRENT)...${NC}"
-    (cd "$DATABASE_DIR" && atlas --env "$ATLAS_ENV_CURRENT" migrate hash)
-    echo -e "${GREEN}✓ Atlas hash generated successfully${NC}"
-}
-
-db_atlas_schema() {
-    ask_atlas_env
-    echo -e "${CYAN}Generating schema.sql from DB state (env: $ATLAS_ENV_CURRENT)...${NC}"
-    (cd "$DATABASE_DIR" && atlas --env "$ATLAS_ENV_CURRENT" schema inspect > schema.sql)
-    echo -e "${GREEN}✓ schema.sql generated successfully${NC}"
-}
-
-db_atlas_plan() {
-    ask_atlas_env
-    read -p "Enter migration name: " migration_name
-    if [ -z "$migration_name" ]; then
-        echo -e "${RED}Error: Missing 'name' argument.${NC}"
-        echo -e "${YELLOW}Usage: Enter a name for your migration.${NC}"
-        return 1
-    fi
-    echo -e "${CYAN}Generating Atlas migration diff named '$migration_name' (env: $ATLAS_ENV_CURRENT)...${NC}"
-    (cd "$DATABASE_DIR" && atlas --env "$ATLAS_ENV_CURRENT" migrate diff "$migration_name" --format '{{ sql . "  " }}')
-    echo -e "${GREEN}✓ Atlas migration '$migration_name' generated successfully${NC}"
-}
-
-db_apply() {
-    _ensure_env_var "DATABASE_URL" || return 1
-    echo -e "${CYAN}Applying pending migrations to DEV database ($DATABASE_URL)...${NC}"
-    (cd "$DATABASE_DIR" && sqlx migrate run --database-url "$DATABASE_URL")
-    echo -e "${GREEN}✓ Migrations applied successfully to DEV database${NC}"
-}
-
-db_apply_test() {
-    _ensure_env_var "DATABASE_URL_TEST" || return 1
-    echo -e "${CYAN}Applying pending migrations to TEST database ($DATABASE_URL_TEST)...${NC}"
-    (cd "$DATABASE_DIR" && sqlx migrate run --database-url "$DATABASE_URL_TEST")
-    echo -e "${GREEN}✓ Migrations applied successfully to TEST database${NC}"
-}
-
-db_atlas_status() {
-    ask_atlas_env
-    echo -e "${CYAN}Checking Atlas migration status (env: $ATLAS_ENV_CURRENT)...${NC}"
-    (cd "$DATABASE_DIR" && atlas --env "$ATLAS_ENV_CURRENT" migrate status)
-    echo -e "${GREEN}✓ Atlas migration status check complete${NC}"
-}
 
 # --- Deployment ---
 _get_deploy_params() {
@@ -289,7 +160,7 @@ deploy_app() {
     echo -e "${CYAN}Deploying application to server...${NC}"
     _get_deploy_params
     echo -e "${YELLOW}Deploying to ${DEPLOY_USER}@${SERVER_IP}:${SSH_DEPLOY_PORT}...${NC}"
-    "$SCRIPTS_DIR/server-deploy.sh" "$SERVER_IP" "$DEPLOY_USER" "$SSH_DEPLOY_PORT"
+    "$SCRIPTS_DIR/frontend-deploy.sh" "$SERVER_IP" "$DEPLOY_USER" "$SSH_DEPLOY_PORT"
     echo -e "${GREEN}✅ Application deployment complete!${NC}"
 }
 
@@ -302,44 +173,11 @@ deploy_setup() {
 }
 
 # --- Tools & Cleanup ---
-tools_install_sweep() {
-    echo -e "${CYAN}Checking/Installing cargo-sweep...${NC}"
-    if ! command -v cargo-sweep &> /dev/null; then
-        echo "cargo-sweep not found. Installing..."
-        cargo install cargo-sweep
-        echo -e "${GREEN}✓ cargo-sweep installed successfully${NC}"
-    else
-        echo -e "${GREEN}✓ cargo-sweep is already installed${NC}"
-    fi
-}
-
-tools_install_watch() {
-    echo -e "${CYAN}Checking/Installing cargo-watch...${NC}"
-    if ! command -v cargo-watch &> /dev/null; then
-        echo "cargo-watch not found. Installing..."
-        cargo install cargo-watch
-        echo -e "${GREEN}✓ cargo-watch installed successfully${NC}"
-    else
-        echo -e "${GREEN}✓ cargo-watch is already installed${NC}"
-    fi
-}
-
-tools_clean_cargo() {
-    tools_install_sweep # Dependency
-    echo -e "${CYAN}Sweeping unused Rust build artifacts...${NC}"
-    (cd "$BACKEND_DIR" && cargo sweep --installed)
-    echo -e "${GREEN}✓ Cargo sweep complete${NC}"
-}
-
 _clean_action() {
     local force_clean_node_modules=false
     if [[ "$1" == "--force" ]]; then
         force_clean_node_modules=true
     fi
-
-    echo -e "${BLUE}Cleaning backend build artifacts...${NC}"
-    (cd "$BACKEND_DIR" && cargo clean)
-    echo -e "${GREEN}✓ Backend target directory cleaned${NC}"
 
     if [ -d "$FRONTEND_DIR/node_modules" ]; then
         if $force_clean_node_modules; then
@@ -371,36 +209,6 @@ clean_force() {
 }
 
 # --- Menu Functions ---
-show_backend_menu() {
-    while true; do
-        echo -e "\n${BOLD}${CYAN}--- Backend ---${NC}"
-        local options=(
-            "Serve (single run)"
-            "Watch (dev mode with auto-reload)"
-            "Test backend"
-            "Start DB (dev) & Apply Migrations"
-            "Start DB (test) & Apply Migrations"
-            "Build SvelteKit & Serve with Axum"
-            "SQLx Prepare (for offline mode)"
-            "Back to Main Menu"
-        )
-        COLUMNS=1 # Ensure select options are listed vertically
-        PS3="Backend action? "
-        select opt in "${options[@]}"; do
-            case $REPLY in
-                1) backend_serve; break ;;
-                2) backend_watch; break ;;
-                3) backend_test; break ;;
-                4) backend_start_db; break ;;
-                5) backend_start_db_test; break ;;
-                7) backend_sqlx_prepare; break ;;
-                $((${#options[@]}))) return ;;
-                *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
-            esac
-        done
-    done
-}
-
 show_frontend_menu() {
     while true; do
         echo -e "\n${BOLD}${CYAN}--- Frontend (React) ---${NC}"
@@ -425,35 +233,6 @@ show_frontend_menu() {
                 5) frontend_lint; break ;;
                 6) frontend_fix_lint; break ;;
                 7) frontend_check; break ;;
-                $((${#options[@]}))) return ;;
-                *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
-            esac
-        done
-    done
-}
-
-show_db_menu() {
-    while true; do
-        echo -e "\n${BOLD}${CYAN}--- Database (Atlas & SQLx) ---${NC}"
-        local options=(
-            "Atlas: Generate migration hash"
-            "Atlas: Generate schema.sql from DB state"
-            "Atlas: Generate new migration (plan/diff)"
-            "SQLx: Apply pending migrations (DEV DB)"
-            "SQLx: Apply pending migrations (TEST DB)"
-            "Atlas: Show migration status"
-            "Back to Main Menu"
-        )
-        COLUMNS=1
-        PS3="Database action? "
-        select opt in "${options[@]}"; do
-            case $REPLY in
-                1) db_atlas_hash; break ;;
-                2) db_atlas_schema; break ;;
-                3) db_atlas_plan; break ;;
-                4) db_apply; break ;;
-                5) db_apply_test; break ;;
-                6) db_atlas_status; break ;;
                 $((${#options[@]}))) return ;;
                 *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
             esac
@@ -524,9 +303,7 @@ main_menu() {
         PS3="Enter your choice (or q to quit): "
         local main_options=(
             "Setup Scripts (make executable)"
-            "Backend (Rust/Axum)"
             "Frontend (React)"
-            "Database (Atlas & SQLx)"
             "Deployment"
             "Tools & Cleanup"
             "Quit"
@@ -539,11 +316,9 @@ main_menu() {
 
             case $REPLY in
                 1) setup_scripts; break ;;
-                2) show_backend_menu; break ;;
-                3) show_frontend_menu; break ;;
-                4) show_db_menu; break ;;
-                5) show_deploy_menu; break ;;
-                6) show_tools_menu; break ;;
+                2) show_frontend_menu; break ;;
+                3) show_deploy_menu; break ;;
+                4) show_tools_menu; break ;;
                 $((${#main_options[@]}))) echo -e "${GREEN}Exiting EnglishCoaching CLI. Goodbye!${NC}"; exit 0 ;;
                 *) echo -e "${RED}Invalid option $REPLY. Type 'q' or the number of 'Quit' to exit.${NC}" ;;
             esac
@@ -552,23 +327,5 @@ main_menu() {
 }
 
 # --- Entry Point ---
-# Set COLUMNS to 1 for better readability of select menus if it's not already narrow
-# This helps prevent options from wrapping weirdly on wider terminals.
-# However, user might have specific COLUMNS setting, so this is optional.
-# export COLUMNS=1
-
-# Start the main menu
-main_menu
-            esac
-        done
-    done
-}
-
-# --- Entry Point ---
-# Set COLUMNS to 1 for better readability of select menus if it's not already narrow
-# This helps prevent options from wrapping weirdly on wider terminals.
-# However, user might have specific COLUMNS setting, so this is optional.
-# export COLUMNS=1
-
 # Start the main menu
 main_menu
