@@ -1,6 +1,14 @@
 #!/bin/bash
+
+# Source .env if it exists
+if [ -f ".env" ]; then
+    set -o allexport
+    source .env
+    set +o allexport
+fi
+
 # Set working directory
-cd /opt/english-coaching
+cd /opt/${APP_CONTAINER_NAME}
 
 # Cài đặt Docker nếu chưa có
 if ! command -v docker &> /dev/null; then
@@ -113,9 +121,9 @@ echo "Đang dừng và xóa container cũ..."
 
 docker-compose down
 
-    # Load new Docker image
-    echo "Loading new Docker image..."
-    docker load < english-coaching-image.tar.gz
+# Load new Docker image
+echo "Loading new Docker image..."
+docker load < ${APP_CONTAINER_NAME}-image.tar.gz
 
 # Tạo thư mục cho Caddy và PostgreSQL
 echo "Đang tạo thư mục cho Caddy và PostgreSQL..."
@@ -143,9 +151,9 @@ else
     echo "Kết nối PostgreSQL thành công!"
 fi
 
-    # Check logs of english-coaching container
-    echo "Checking logs of english-coaching container..."
-    docker logs english-coaching
+# Check logs of the app container
+echo "Checking logs of ${APP_CONTAINER_NAME} container..."
+docker logs ${APP_CONTAINER_NAME}
 
 # Dọn dẹp các image không sử dụng (dangling)
 echo "Đang dọn dẹp các image cũ..."

@@ -16,11 +16,21 @@ else
     echo -e "\033[1;33mPlease ensure DATABASE_URL, DATABASE_URL_TEST, etc., are set if needed.\033[0m"
 fi
 
-# Directories
-BACKEND_DIR="./backend"
-FRONTEND_DIR="./frontend"
-SCRIPTS_DIR="./scripts"
-DATABASE_DIR="$BACKEND_DIR/database"
+# Warning: make sure to set the correct values in .env
+echo -e "\033[1;33mWarning: Please ensure all variables are set in .env file.\033[0m"
+
+read -p "Have you set all variables in .env file? (y/n): " ENV_VARS_SET
+if [[ "$ENV_VARS_SET" =~ ^[Yy]$ ]]; then
+    echo -e "\033[1;32mAll variables are set in .env file.\033[0m"
+    echo -e "\033[1;32mContinuing...\033[0m"
+else
+    echo -e "\033[1;31mError: Please ensure all variables are set in .env file.\033[0m"
+    exit 1
+fi
+
+# Directories (from env or defaults)
+FRONTEND_DIR=${FRONTEND_DIR}
+SCRIPTS_DIR=${SCRIPTS_DIR}
 
 # Atlas default environment
 ATLAS_ENV_DEFAULT="dev"
@@ -127,13 +137,6 @@ backend_test() {
     echo -e "${MAGENTA}Use 'Start DB (test)' (which includes migration prompt) if needed.${NC}"
     echo -e "${BLUE}Starting backend tests...${NC}"
     (cd "$BACKEND_DIR" && cargo test)
-}
-
-backend_build_serve() {
-    setup_scripts
-    frontend_build # Dependency
-    echo -e "${BLUE}Building React and starting Axum server...${NC}"
-    "$SCRIPTS_DIR/build-react-and-serve.sh"
 }
 
 backend_sqlx_prepare() {
@@ -290,15 +293,6 @@ deploy_app() {
     echo -e "${GREEN}✅ Application deployment complete!${NC}"
 }
 
-deploy_static() {
-    setup_scripts # Dependency
-    echo -e "${CYAN}Deploying static files to server...${NC}"
-    _get_deploy_params
-    echo -e "${YELLOW}Deploying static files to ${DEPLOY_USER}@${SERVER_IP}:${SSH_DEPLOY_PORT}...${NC}"
-    "$SCRIPTS_DIR/server-update-static.sh" "$SERVER_IP" "$DEPLOY_USER" "$SSH_DEPLOY_PORT"
-    echo -e "${GREEN}✅ Static files deployment complete!${NC}"
-}
-
 deploy_setup() {
     deploy_generate_key
     deploy_copy_key
@@ -379,7 +373,7 @@ clean_force() {
 # --- Menu Functions ---
 show_backend_menu() {
     while true; do
-        echo -e "\n${BOLD}${CYAN}--- Backend (Rust/Axum) ---${NC}"
+        echo -e "\n${BOLD}${CYAN}--- Backend ---${NC}"
         local options=(
             "Serve (single run)"
             "Watch (dev mode with auto-reload)"
@@ -399,7 +393,6 @@ show_backend_menu() {
                 3) backend_test; break ;;
                 4) backend_start_db; break ;;
                 5) backend_start_db_test; break ;;
-                6) backend_build_serve; break ;;
                 7) backend_sqlx_prepare; break ;;
                 $((${#options[@]}))) return ;;
                 *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
@@ -475,8 +468,7 @@ show_deploy_menu() {
             "Generate SSH key (if needed)"
             "Copy SSH public key to server"
             "Test SSH connection to server"
-            "Deploy backend application"
-            "Deploy static frontend files"
+            "Deploy application"
             "Run full deployment setup (key, copy, test, app)"
             "Back to Main Menu"
         )
@@ -488,8 +480,7 @@ show_deploy_menu() {
                 2) deploy_copy_key; break ;;
                 3) deploy_test_conn; break ;;
                 4) deploy_app; break ;;
-                5) deploy_static; break ;;
-                6) deploy_setup; break ;;
+                5) deploy_setup; break ;;
                 $((${#options[@]}))) return ;;
                 *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
             esac

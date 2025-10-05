@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# TODO: Update start-postgres.sh
 # Thiết lập màu sắc cho output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -8,7 +8,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 # --- Configuration ---
-CONTAINER_NAME="chillteacher-postgres"
+CONTAINER_NAME=${POSTGRES_CONTAINER_NAME}
 TEST_CONTAINER_NAME="chillteacher-postgres-test"
 VOLUME_NAME="chillteacher_postgres_data"
 TEST_VOLUME_NAME="chillteacher_postgres_data_test"

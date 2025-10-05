@@ -7,10 +7,21 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+# Source .env if it exists
+if [ -f ".env" ]; then
+    set -o allexport
+    source .env
+    set +o allexport
+fi
+
 # Path to project root
-PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-FRONTEND_DIR="$PROJECT_ROOT/frontend"
-BACKEND_DIR="$PROJECT_ROOT/backend"
+FRONTEND_DIR=${FRONTEND_DIR}
+
+# If FRONTEND_DIR is not set, exit
+if [ -z "$FRONTEND_DIR" ]; then
+    echo -e "${RED}FRONTEND_DIR is not set. Please set it in .env file or current environment.${NC}"
+    exit 1
+fi
 
 echo -e "${BLUE}=== Build React to static files ===${NC}"
 
@@ -45,5 +56,5 @@ echo -e "${YELLOW}Building React...${NC}"
 pnpm run build || { echo -e "${RED}Build React failed${NC}"; exit 1; }
 echo -e ""
 
-echo -e "${YELLOW}>>> Build successful, see built files in frontend/dist${NC}"
+echo -e "${YELLOW}>>> Build successful${NC}"
 echo -e ""

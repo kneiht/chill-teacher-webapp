@@ -1,8 +1,4 @@
 #!/bin/bash
-# Đặt quyền thực thi: chmod +x server-deploy.sh
-
-# Script deploy ứng dụng Axum Chill Teacher
-# Sử dụng: ./server-deploy.sh [server_ip] [username] [ssh_port]
 
 # Màu sắc cho output
 GREEN='\033[0;32m'
@@ -11,20 +7,26 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+# Source .env if it exists
+if [ -f ".env" ]; then
+    set -o allexport
+    source .env
+    set +o allexport
+fi
 
 # Read from env or use defaults
-SERVER_IP=${SERVER_IP:-${1:-"your_server_ip"}}
-USERNAME=${SERVER_USER:-${2:-"root"}}
-SSH_PORT=${SSH_PORT:-${3:-"22"}}
-DOMAIN=${DOMAIN:-"coaching.chillteacher.com"}
+SERVER_IP=${SERVER_IP}
+USERNAME=${SERVER_USER:-"root"}
+SSH_PORT=${SSH_PORT:-"22"}
+DOMAIN=${DOMAIN}
 
+REMOTE_DIR=${REMOTE_DIR}
 
-REMOTE_DIR="/opt/english-coaching"
-
-# Đường dẫn tới thư mục gốc của dự án
-PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-FRONTEND_BUILD_DIR="$PROJECT_ROOT/frontend/build"
-BACKEND_DIR="$PROJECT_ROOT/backend"
+# Path to project root (from env)
+PROJECT_ROOT=${PROJECT_ROOT}
+FRONTEND_DIR=${FRONTEND_DIR}
+BACKEND_DIR=${BACKEND_DIR}
+FRONTEND_BUILD_DIR="$FRONTEND_DIR/dist"
 
 
 # Check if server_ip is still default
@@ -103,16 +105,13 @@ echo -e "${GREEN}✓ Copy file thành công!${NC}"
 
 
 
-
-
-
 # Hỏi người dùng có build image không
 read -p "Bạn có muốn build và copy Docker image lên server không? (y/n): " BUILD_IMAGE
 if [[ "$BUILD_IMAGE" =~ ^[Yy]$ ]]; then
 
     # Step 1: Build Docker image
     echo -e "${BLUE}Build Docker image...${NC}"
-    docker build -t english-coaching:latest -f scripts/Dockerfile .
+    docker build -t ${APP_CONTAINER_NAME}:latest -f scripts/Dockerfile .
 
     if [ $? -ne 0 ]; then
         echo -e "${RED}Lỗi khi build Docker image!${NC}"
@@ -122,7 +121,7 @@ if [[ "$BUILD_IMAGE" =~ ^[Yy]$ ]]; then
 
     # Step 2: Save Docker image to file
     echo -e "${BLUE}Save Docker image to file...${NC}"
-    cd scripts &&  docker save english-coaching:latest | gzip > english-coaching-image.tar.gz
+    cd scripts &&  docker save ${APP_CONTAINER_NAME}:latest | gzip > ${APP_CONTAINER_NAME}-image.tar.gz
 
     if [ $? -ne 0 ]; then
         echo -e "${RED}Lỗi khi lưu Docker image!${NC}"
@@ -130,7 +129,7 @@ if [[ "$BUILD_IMAGE" =~ ^[Yy]$ ]]; then
     fi
     echo -e "${GREEN}✓ Lưu Docker image thành công!${NC}"
 
-    $SCP_CMD english-coaching-image.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
+    $SCP_CMD ${APP_CONTAINER_NAME}-image.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
     if [ $? -ne 0 ]; then
         echo -e "${RED}Lỗi khi copy file Docker image lên server!${NC}"
         exit 1
@@ -152,9 +151,9 @@ if [[ "$BUILD_STATIC" =~ ^[Yy]$ ]]; then
 
     # Copy static files lên server nếu có
     echo -e "${BLUE}Copy static files lên server...${NC}"
-    if [ -d "./frontend/dist" ]; then
-        cd ./frontend/dist && tar -czf ../../scripts/static-files.tar.gz .
-        cd ../../scripts
+    if [ -d "$FRONTEND_BUILD_DIR" ]; then
+        cd $FRONTEND_BUILD_DIR && tar -czf $FRONTEND_DIR/static-files.tar.gz .
+        cd $FRONTEND_DIR
         $SCP_CMD static-files.tar.gz $USERNAME@$SERVER_IP:$REMOTE_DIR/
         $SSH_CMD "cd $REMOTE_DIR && tar -xzf static-files.tar.gz -C static/"
 
