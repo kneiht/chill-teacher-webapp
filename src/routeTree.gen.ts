@@ -18,6 +18,7 @@ import { Route as mainProfileRouteImport } from './routes/(main)/profile'
 import { Route as mainDashboardRouteImport } from './routes/(main)/dashboard'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
+import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons/index'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -62,6 +63,11 @@ const authLoginRoute = authLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => authRouteRoute,
 } as any)
+const mainLessonsIndexRoute = mainLessonsIndexRouteImport.update({
+  id: '/lessons/',
+  path: '/lessons/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof mainRouteRouteWithChildren
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof mainDashboardRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
+  '/lessons': typeof mainLessonsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainRouteRouteWithChildren
@@ -80,6 +87,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof mainDashboardRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
+  '/lessons': typeof mainLessonsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -92,6 +100,7 @@ export interface FileRoutesById {
   '/(main)/dashboard': typeof mainDashboardRoute
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
+  '/(main)/lessons/': typeof mainLessonsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -103,6 +112,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/profile'
     | '/settings'
+    | '/lessons'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -112,6 +122,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/profile'
     | '/settings'
+    | '/lessons'
   id:
     | '__root__'
     | '/'
@@ -123,6 +134,7 @@ export interface FileRouteTypes {
     | '/(main)/dashboard'
     | '/(main)/profile'
     | '/(main)/settings'
+    | '/(main)/lessons/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -197,6 +209,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authLoginRouteImport
       parentRoute: typeof authRouteRoute
     }
+    '/(main)/lessons/': {
+      id: '/(main)/lessons/'
+      path: '/lessons'
+      fullPath: '/lessons'
+      preLoaderRoute: typeof mainLessonsIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
   }
 }
 
@@ -218,12 +237,14 @@ interface mainRouteRouteChildren {
   mainDashboardRoute: typeof mainDashboardRoute
   mainProfileRoute: typeof mainProfileRoute
   mainSettingsRoute: typeof mainSettingsRoute
+  mainLessonsIndexRoute: typeof mainLessonsIndexRoute
 }
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainDashboardRoute: mainDashboardRoute,
   mainProfileRoute: mainProfileRoute,
   mainSettingsRoute: mainSettingsRoute,
+  mainLessonsIndexRoute: mainLessonsIndexRoute,
 }
 
 const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
