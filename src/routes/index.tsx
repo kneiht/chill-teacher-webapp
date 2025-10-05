@@ -5,7 +5,7 @@ export const Route = createFileRoute('/')({
   beforeLoad: () => {
     const user = localStorage.getItem(LocalStorageKeys.USER)
     if (user) {
-      throw redirect({ to: '/dashboard', replace: true })
+      throw redirect({ to: '/lessons', replace: true })
     } else {
       throw redirect({ to: '/login', replace: true })
     }

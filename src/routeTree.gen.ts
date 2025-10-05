@@ -15,7 +15,6 @@ import { Route as authRouteRouteImport } from './routes/(auth)/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as mainSettingsRouteImport } from './routes/(main)/settings'
 import { Route as mainProfileRouteImport } from './routes/(main)/profile'
-import { Route as mainDashboardRouteImport } from './routes/(main)/dashboard'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
 import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons/index'
@@ -48,11 +47,6 @@ const mainProfileRoute = mainProfileRouteImport.update({
   path: '/profile',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainDashboardRoute = mainDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => mainRouteRoute,
-} as any)
 const authSignupRoute = authSignupRouteImport.update({
   id: '/signup',
   path: '/signup',
@@ -74,7 +68,6 @@ export interface FileRoutesByFullPath {
   '/$splat': typeof SplatRoute
   '/login': typeof authLoginRoute
   '/signup': typeof authSignupRoute
-  '/dashboard': typeof mainDashboardRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof mainLessonsIndexRoute
@@ -84,7 +77,6 @@ export interface FileRoutesByTo {
   '/$splat': typeof SplatRoute
   '/login': typeof authLoginRoute
   '/signup': typeof authSignupRoute
-  '/dashboard': typeof mainDashboardRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof mainLessonsIndexRoute
@@ -97,7 +89,6 @@ export interface FileRoutesById {
   '/$splat': typeof SplatRoute
   '/(auth)/login': typeof authLoginRoute
   '/(auth)/signup': typeof authSignupRoute
-  '/(main)/dashboard': typeof mainDashboardRoute
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
   '/(main)/lessons/': typeof mainLessonsIndexRoute
@@ -109,7 +100,6 @@ export interface FileRouteTypes {
     | '/$splat'
     | '/login'
     | '/signup'
-    | '/dashboard'
     | '/profile'
     | '/settings'
     | '/lessons'
@@ -119,7 +109,6 @@ export interface FileRouteTypes {
     | '/$splat'
     | '/login'
     | '/signup'
-    | '/dashboard'
     | '/profile'
     | '/settings'
     | '/lessons'
@@ -131,7 +120,6 @@ export interface FileRouteTypes {
     | '/$splat'
     | '/(auth)/login'
     | '/(auth)/signup'
-    | '/(main)/dashboard'
     | '/(main)/profile'
     | '/(main)/settings'
     | '/(main)/lessons/'
@@ -188,13 +176,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainProfileRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/dashboard': {
-      id: '/(main)/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof mainDashboardRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
     '/(auth)/signup': {
       id: '/(auth)/signup'
       path: '/signup'
@@ -234,14 +215,12 @@ const authRouteRouteWithChildren = authRouteRoute._addFileChildren(
 )
 
 interface mainRouteRouteChildren {
-  mainDashboardRoute: typeof mainDashboardRoute
   mainProfileRoute: typeof mainProfileRoute
   mainSettingsRoute: typeof mainSettingsRoute
   mainLessonsIndexRoute: typeof mainLessonsIndexRoute
 }
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
-  mainDashboardRoute: mainDashboardRoute,
   mainProfileRoute: mainProfileRoute,
   mainSettingsRoute: mainSettingsRoute,
   mainLessonsIndexRoute: mainLessonsIndexRoute,

@@ -34,13 +34,14 @@ import {
   Link,
   Outlet,
   createFileRoute,
+  redirect,
   // redirect,
   useLocation,
   useNavigate,
 } from '@tanstack/react-router'
 
 // Utils
-// import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
+import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
 
 // Destructure Layout components from Ant Design
 const { Header, Sider, Content } = Layout
@@ -80,9 +81,9 @@ function MainLayout() {
   // Define the menu items
   const menuItems: MenuProps['items'] = [
     {
-      key: '/dashboard',
+      key: '/lessons',
       icon: <DashboardOutlined />,
-      label: <Link to="/dashboard">{t('Dashboard')}</Link>,
+      label: <Link to="/lessons">{t('Lessons')}</Link>,
     },
   ]
 
@@ -190,7 +191,7 @@ function MainLayout() {
           style={{ boxShadow: token.boxShadow, borderRadius: '10px' }}
         >
           <Flex vertical style={{ height: '100%' }}>
-            <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <Flex
                 vertical
                 justify="space-between"
@@ -263,10 +264,10 @@ function MainLayout() {
 
 export const Route = createFileRoute('/(main)')({
   beforeLoad: () => {
-    // const user = localStorage.getItem(LocalStorageKeys.USER)
-    // if (!user) {
-    //   throw redirect({ to: '/login', replace: true })
-    // }
+    const user = localStorage.getItem(LocalStorageKeys.USER)
+    if (!user) {
+      throw redirect({ to: '/login', replace: true })
+    }
   },
   component: MainLayout,
 })

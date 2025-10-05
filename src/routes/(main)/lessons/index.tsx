@@ -21,7 +21,6 @@ const Dashboard: React.FC = () => {
 }
 
 // Export the route
-
 export const Route = createFileRoute('/(main)/lessons/')({
   component: Dashboard,
 })
