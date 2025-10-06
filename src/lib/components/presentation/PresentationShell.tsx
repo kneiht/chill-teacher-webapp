@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './PresentationShell.css'
-import bg1 from '@/lib/assets/slide-backgrounds/background-1.jpg'
 
 interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
@@ -9,11 +8,10 @@ interface PresentationShellProps {
 
 const PresentationShell: React.FC<PresentationShellProps> = ({
   slides,
-  backgroundUrl = bg1,
+  backgroundUrl = 'None',
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
-  const [showZoomInstructions, setShowZoomInstructions] = useState(false)
   const totalSlides = slides.length
 
   // Font size adjustment
@@ -29,13 +27,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
       htmlElement.style.fontSize = `${fontSize}px`
     }
   }
-
-  // Show zoom instructions
-  useEffect(() => {
-    if (window.innerWidth <= 768) return
-    if (localStorage.getItem('hideZoomInstructions')) return
-    setShowZoomInstructions(true)
-  }, [])
 
   // Initialize
   useEffect(() => {
@@ -91,12 +82,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
     } else if (diff < -threshold) {
       showSlide(currentSlide - 1)
     }
-  }
-
-  // Zoom instructions dismiss
-  const dismissZoomInstructions = () => {
-    setShowZoomInstructions(false)
-    localStorage.setItem('hideZoomInstructions', 'true')
   }
 
   return (
@@ -213,87 +198,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           ))}
         </div>
       </div>
-
-      {/* Zoom Instructions Popup */}
-      {showZoomInstructions && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div
-            className="bg-white p-6 rounded-xl shadow-lg max-w-md w-full mx-4"
-            style={{
-              animation: 'popIn 0.3s ease-out',
-            }}
-          >
-            <div className="text-center mb-4">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="mx-auto mb-3"
-              >
-                <path
-                  d="M15 3H21V9"
-                  stroke="#4f46e5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M9 21H3V15"
-                  stroke="#4f46e5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M21 3L14 10"
-                  stroke="#4f46e5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M3 21L10 14"
-                  stroke="#4f46e5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                Hướng dẫn phóng to/thu nhỏ
-              </h3>
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg mb-4">
-              <p className="text-sm mb-3">
-                Bạn có thể sử dụng tổ hợp phím sau để phóng to/thu nhỏ nội dung
-                cho phù hợp với màn hình của bạn:
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <span className="bg-gray-200 px-2 py-1 rounded text-sm">
-                    Windows
-                  </span>
-                  <span>Ctrl + (+/-)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="bg-gray-200 px-2 py-1 rounded text-sm">
-                    Mac
-                  </span>
-                  <span>Command + (+/-)</span>
-                </div>
-              </div>
-            </div>
-            <button
-              onClick={dismissZoomInstructions}
-              className="w-full bg-indigo-600 text-white py-2 rounded-lg font-bold hover:bg-indigo-700"
-            >
-              Không hiển thị lại
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
