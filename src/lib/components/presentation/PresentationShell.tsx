@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useRouterState } from '@tanstack/react-router'
 import {
-  FullscreenOutlined,
-  FullscreenExitOutlined,
-  HomeOutlined,
-} from '@ant-design/icons'
+  Maximize,
+  Minimize,
+  Home,
+  ChevronLeft,
+  ChevronRight,
+  Menu,
+} from 'lucide-react'
 import './PresentationShell.css'
 
 interface PresentationShellProps {
@@ -39,9 +42,9 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
       <Link
         to={parentPath || '/'}
         title="Go to Lesson Home" // Tooltip
-        className="bg-white hover:bg-indigo-100 text-indigo-600 w-8 h-8 flex items-center justify-center rounded-full shadow-lg font-bold transition-all duration-300 ease-in-out transform hover:scale-110"
+        className="presentation-fullscreen"
       >
-        <HomeOutlined style={{ fontSize: '16px' }} />
+        <Home size={18} />
       </Link>
     )
   }
@@ -179,62 +182,20 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             <>
               <button
                 onClick={() => showSlide(currentSlide - 1)}
-                className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
+                className="presentation-button"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
+                <ChevronLeft size={18} />
               </button>
               <button
                 onClick={() => showSlide(currentSlide + 1)}
-                className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
+                className="presentation-button"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+                <ChevronRight size={18} />
               </button>
-              <button
-                onClick={toggleOutline}
-                className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+              <button onClick={toggleOutline} className="presentation-button">
+                <Menu size={18} />
               </button>
-              <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 text-xs">
+              <div className="presentation-counter">
                 {currentSlide + 1}/{totalSlides}
               </div>
             </>
@@ -242,13 +203,9 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           <button
             onClick={toggleFullscreen}
             title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-            className="bg-white hover:bg-indigo-100 text-indigo-600 w-8 h-8 flex items-center justify-center rounded-full shadow-lg font-bold transition-all duration-300 ease-in-out transform hover:scale-110"
+            className="presentation-fullscreen"
           >
-            {isFullscreen ? (
-              <FullscreenExitOutlined style={{ fontSize: '16px' }} />
-            ) : (
-              <FullscreenOutlined style={{ fontSize: '16px' }} />
-            )}
+            {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
           </button>
         </div>
 
