@@ -174,11 +174,16 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
         </div>
 
         {/* Activity controls */}
-        {showHome && (
-          <div className="absolute top-4 right-4 flex flex-row gap-2 z-50">
-            <HomeButton />
-          </div>
-        )}
+        <div className="absolute top-4 right-4 flex flex-row gap-2 z-50">
+          {showHome && <HomeButton />}
+          <button
+            onClick={toggleFullscreen}
+            title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+            className="presentation-fullscreen"
+          >
+            {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+          </button>
+        </div>
 
         {/* Controls */}
         <div className="absolute bottom-3 right-4 z-50 flex items-center gap-2">
@@ -204,13 +209,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               </div>
             </>
           )}
-          <button
-            onClick={toggleFullscreen}
-            title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-            className="presentation-fullscreen"
-          >
-            {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
-          </button>
         </div>
 
         {/* Outline Modal */}
