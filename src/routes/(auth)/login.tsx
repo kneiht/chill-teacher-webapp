@@ -19,14 +19,14 @@ function LoginPage() {
 
   console.log(isLoggedIn)
   if (isLoggedIn) {
-    navigate({ to: '/dashboard' })
+    navigate({ to: '/lessons' })
   }
 
   const handleSubmit = async (values: { email: string; password: string }) => {
     const result = await login(values.email, values.password)
     if (result.success) {
       message.success(result.message)
-      navigate({ to: '/dashboard' })
+      navigate({ to: '/lessons' })
     } else {
       message.error(result.message)
     }
