@@ -1195,16 +1195,10 @@ const Slide16: React.FC<SlideProps> = ({ isActive }) => {
 
 const Slide17: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <GoogleSlide isActive={isActive} style={{ overflow: 'hidden' }}>
-      <iframe
-        src="https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed"
-        style={{ border: 0 }}
-        width="100%"
-        height="103.9%"
-        allowFullScreen
-        className="rounded-xl"
-      ></iframe>
-    </GoogleSlide>
+    <GoogleSlide
+      isActive={isActive}
+      src="https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed"
+    />
   )
 }
 
