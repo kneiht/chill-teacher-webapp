@@ -22,7 +22,7 @@ const GoogleSlideLesson = () => {
 }
 
 export const Route = createFileRoute(
-  '/lessons/everybody-up-0/unit-1/lesson-1/lesson',
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
 )({
   component: GoogleSlideLesson,
 })

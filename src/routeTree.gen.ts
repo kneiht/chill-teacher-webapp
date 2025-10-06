@@ -19,7 +19,8 @@ import { Route as mainProfileRouteImport } from './routes/(main)/profile'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
 import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index'
-import { Route as LessonsEverybodyUp0Unit1Lesson1LessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/lesson'
+import { Route as LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+import { Route as LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
 import { Route as LessonsEverybodyUp0Unit1Lesson1ExercisesRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/exercises'
 
 const SplatRoute = SplatRouteImport.update({
@@ -71,10 +72,16 @@ const LessonsEverybodyUp0Unit1Lesson1IndexRoute =
     path: '/lessons/everybody-up-0/unit-1/lesson-1/',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LessonsEverybodyUp0Unit1Lesson1LessonRoute =
-  LessonsEverybodyUp0Unit1Lesson1LessonRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/lesson',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/lesson',
+const LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute =
+  LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport.update({
+    id: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson',
+    path: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute =
+  LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport.update({
+    id: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
+    path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LessonsEverybodyUp0Unit1Lesson1ExercisesRoute =
@@ -93,7 +100,8 @@ export interface FileRoutesByFullPath {
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/exercises': typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/lesson': typeof LessonsEverybodyUp0Unit1Lesson1LessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRoutesByTo {
@@ -105,7 +113,8 @@ export interface FileRoutesByTo {
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/exercises': typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/lesson': typeof LessonsEverybodyUp0Unit1Lesson1LessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRoutesById {
@@ -120,7 +129,8 @@ export interface FileRoutesById {
   '/(main)/settings': typeof mainSettingsRoute
   '/lessons/': typeof LessonsIndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/exercises': typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/lesson': typeof LessonsEverybodyUp0Unit1Lesson1LessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRouteTypes {
@@ -134,7 +144,8 @@ export interface FileRouteTypes {
     | '/settings'
     | '/lessons'
     | '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -146,7 +157,8 @@ export interface FileRouteTypes {
     | '/settings'
     | '/lessons'
     | '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
   id:
     | '__root__'
@@ -160,7 +172,8 @@ export interface FileRouteTypes {
     | '/(main)/settings'
     | '/lessons/'
     | '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/'
   fileRoutesById: FileRoutesById
 }
@@ -171,7 +184,8 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   LessonsIndexRoute: typeof LessonsIndexRoute
   LessonsEverybodyUp0Unit1Lesson1ExercisesRoute: typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
-  LessonsEverybodyUp0Unit1Lesson1LessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1LessonRoute
+  LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   LessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 
@@ -247,11 +261,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/lessons/everybody-up-0/unit-1/lesson-1/lesson': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/lesson'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/lesson'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/lesson'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1LessonRouteImport
+    '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+      path: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+      path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lessons/everybody-up-0/unit-1/lesson-1/exercises': {
@@ -300,8 +321,10 @@ const rootRouteChildren: RootRouteChildren = {
   LessonsIndexRoute: LessonsIndexRoute,
   LessonsEverybodyUp0Unit1Lesson1ExercisesRoute:
     LessonsEverybodyUp0Unit1Lesson1ExercisesRoute,
-  LessonsEverybodyUp0Unit1Lesson1LessonRoute:
-    LessonsEverybodyUp0Unit1Lesson1LessonRoute,
+  LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute:
+    LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute,
+  LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute:
+    LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute,
   LessonsEverybodyUp0Unit1Lesson1IndexRoute:
     LessonsEverybodyUp0Unit1Lesson1IndexRoute,
 }
