@@ -2,8 +2,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 // Components
+import ActivityControls from '@/lib/components/presentation/ActivityControls'
 import GoogleSlide from '@/lib/components/presentation/GoogleSlide'
-import HomeButton from '@/lib/components/ui/HomeButton'
 
 const GoogleSlideLesson = () => {
   return (
@@ -12,7 +12,7 @@ const GoogleSlideLesson = () => {
         isActive={true}
         src="https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed"
       />
-      <HomeButton />
+      <ActivityControls />
     </div>
   )
 }

@@ -7,7 +7,7 @@ import { createFileRoute } from '@tanstack/react-router'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import HomeButton from '@/lib/components/ui/HomeButton'
+import ActivityControls from '@/lib/components/presentation/ActivityControls'
 
 // Assets
 import bg from './assets/bg.png'
@@ -709,7 +709,7 @@ const ExercisesActivity = () => {
   return (
     <div className="w-screen h-screen bg-black relative">
       <PresentationShell slides={exerciseSlides} backgroundUrl={bg} />
-      <HomeButton />
+      <ActivityControls />
     </div>
   )
 }
