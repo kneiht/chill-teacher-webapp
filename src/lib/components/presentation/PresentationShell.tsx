@@ -1,21 +1,52 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link, useRouterState } from '@tanstack/react-router'
+import {
+  FullscreenOutlined,
+  FullscreenExitOutlined,
+  HomeOutlined,
+} from '@ant-design/icons'
 import './PresentationShell.css'
 
 interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
   backgroundUrl?: string
   showControls?: boolean
+  showFullscreen?: boolean
+  showHome?: boolean
 }
 
 const PresentationShell: React.FC<PresentationShellProps> = ({
   slides,
   backgroundUrl = 'None',
   showControls = true,
+  showFullscreen = true,
+  showHome = true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
+
+  // Home button component
+  const HomeButton = () => {
+    // Get the current path
+    const routerState = useRouterState()
+    const pathname = routerState.location.pathname
+
+    // Remove the last segment of the path to get the parent path
+    const parentPath = pathname.substring(0, pathname.lastIndexOf('/'))
+
+    return (
+      <Link
+        to={parentPath || '/'}
+        title="Go to Lesson Home" // Tooltip
+        className="bg-white hover:bg-indigo-100 text-indigo-600 w-14 h-14 flex items-center justify-center rounded-full shadow-xl z-50 transition-all duration-300 ease-in-out transform hover:scale-110"
+      >
+        <HomeOutlined style={{ fontSize: '28px' }} />
+      </Link>
+    )
+  }
 
   // Font size adjustment
   const adjustFontSize = () => {
@@ -39,6 +70,19 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
     return () => window.removeEventListener('resize', adjustFontSize)
   }, [])
 
+  // Handle fullscreen change
+  const handleFullscreenChange = () => {
+    setIsFullscreen(!!document.fullscreenElement)
+  }
+
+  // Add event listener for fullscreen change
+  useEffect(() => {
+    document.addEventListener('fullscreenchange', handleFullscreenChange)
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange)
+    }
+  }, [])
+
   // Slide navigation
   const showSlide = (n: number) => {
     setCurrentSlide((n + totalSlides) % totalSlides)
@@ -53,6 +97,15 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const goToSlide = (slideNumber: number) => {
     setCurrentSlide(slideNumber)
     setShowOutline(false)
+  }
+
+  // Toggle fullscreen
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen()
+    } else {
+      document.exitFullscreen()
+    }
   }
 
   // Keyboard navigation
@@ -114,6 +167,26 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             <SlideComponent key={index} isActive={currentSlide === index} />
           ))}
         </div>
+
+        {/* Activity controls */}
+        {(showFullscreen || showHome) && (
+          <div className="absolute top-4 right-4 flex flex-row gap-3 z-50">
+            {showFullscreen && (
+              <button
+                onClick={toggleFullscreen}
+                title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+                className="bg-white hover:bg-indigo-100 text-indigo-600 w-14 h-14 flex items-center justify-center rounded-full shadow-xl z-50 transition-all duration-300 ease-in-out transform hover:scale-110"
+              >
+                {isFullscreen ? (
+                  <FullscreenExitOutlined style={{ fontSize: '28px' }} />
+                ) : (
+                  <FullscreenOutlined style={{ fontSize: '28px' }} />
+                )}
+              </button>
+            )}
+            {showHome && <HomeButton />}
+          </div>
+        )}
 
         {/* Slide counter */}
         {showControls && (

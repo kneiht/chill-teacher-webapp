@@ -7,7 +7,6 @@ import { createFileRoute } from '@tanstack/react-router'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import ActivityControls from '@/lib/components/presentation/ActivityControls'
 
 // Assets
 import bg from './assets/bg.png'
@@ -707,10 +706,12 @@ const ExercisesActivity = () => {
   const exerciseSlides = [Slide5, Slide8, Slide10, Slide12, Slide14]
 
   return (
-    <div className="w-screen h-screen bg-black relative">
-      <PresentationShell slides={exerciseSlides} backgroundUrl={bg} />
-      <ActivityControls />
-    </div>
+    <PresentationShell
+      slides={exerciseSlides}
+      backgroundUrl={bg}
+      showFullscreen={true}
+      showHome={true}
+    />
   )
 }
 
