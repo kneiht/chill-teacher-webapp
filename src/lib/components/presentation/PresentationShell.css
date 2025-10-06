@@ -6,6 +6,7 @@ body {
 .slide {
   display: none;
   animation: fadeIn 0.5s ease-in-out;
+  overflow: auto;
 }
 
 .slide.active {
@@ -35,12 +36,6 @@ body {
 
 .floating {
   animation: float 3s ease-in-out infinite;
-}
-
-.content-box {
-  background-color: rgba(255, 255, 255, 0.45);
-  overflow-y: auto;
-  padding: 1rem 1rem 2rem 1rem;
 }
 
 .exercise-input {

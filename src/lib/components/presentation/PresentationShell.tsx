@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './PresentationShell.css'
 
 interface PresentationShellProps {
@@ -13,22 +13,24 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
   const totalSlides = slides.length
+  const slideContainerRef = useRef<HTMLDivElement>(null)
 
   // Font size adjustment
   const adjustFontSize = () => {
-    const screenWidth = window.innerWidth
+    if (!slideContainerRef.current) return
+
+    // Get slide width
+    const slideWidth = slideContainerRef.current.offsetWidth
     const htmlElement = document.documentElement
 
-    if (screenWidth <= 768) {
-      htmlElement.style.fontSize = '20px'
-    } else {
-      const scaleFactor = screenWidth / 1680
-      const fontSize = Math.max(20, Math.min(30, 30 * scaleFactor))
-      htmlElement.style.fontSize = `${fontSize}px`
-    }
+    // Scale font size based on slide width. 1920 is a common 16:9 reference width.
+    const scaleFactor = slideWidth / 1920
+    // Adjust min/max font sizes as needed
+    const fontSize = 30 * scaleFactor
+    htmlElement.style.fontSize = `${fontSize}px`
   }
 
-  // Initialize
+  // Initialize and handle resize
   useEffect(() => {
     adjustFontSize()
     window.addEventListener('resize', adjustFontSize)
@@ -45,6 +47,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
     setShowOutline(!showOutline)
   }
 
+  // Go to slide
   const goToSlide = (slideNumber: number) => {
     setCurrentSlide(slideNumber)
     setShowOutline(false)
@@ -53,9 +56,9 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (e.key === 'ArrowRight') {
         showSlide(currentSlide + 1)
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      } else if (e.key === 'ArrowLeft') {
         showSlide(currentSlide - 1)
       } else if (e.key === 'Escape' && showOutline) {
         setShowOutline(false)
@@ -75,7 +78,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     setTouchEndX(e.changedTouches[0].screenX)
-    const threshold = 50
+    const threshold = 100
     const diff = touchStartX - touchEndX
     if (diff > threshold) {
       showSlide(currentSlide + 1)
@@ -85,22 +88,33 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   }
 
   return (
-    <div
-      className="bg-blue-50 min-h-screen flex items-center justify-center p-2"
-      style={{
-        backgroundImage:
-          backgroundUrl && backgroundUrl !== 'None'
-            ? `url(${backgroundUrl})`
-            : undefined,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-      <div className="relative w-full max-w-6xl h-[95vh] mx-auto">
+    <div className="bg-black h-screen w-screen flex items-center justify-center">
+      <div
+        ref={slideContainerRef}
+        className="relative aspect-[16/9] w-full max-h-full max-w-[calc(100vh*16/9)]"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Slides container */}
+        <div
+          className="w-full h-full overflow-hidden rounded-xl shadow-2xl"
+          style={{
+            backgroundImage:
+              backgroundUrl && backgroundUrl !== 'None'
+                ? `url(${backgroundUrl})`
+                : undefined,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Slides will be rendered here */}
+          {slides.map((SlideComponent, index) => (
+            <SlideComponent key={index} isActive={currentSlide === index} />
+          ))}
+        </div>
+
         {/* Slide counter */}
-        <div className="absolute bottom-2 sm:bottom-full sm:top-7 right-4 z-50 flex items-center gap-2">
+        <div className="absolute bottom-3 right-4 z-50 flex items-center gap-2">
           <button
             onClick={() => showSlide(currentSlide - 1)}
             className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
@@ -197,14 +211,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             </div>
           </div>
         )}
-
-        {/* Slides container */}
-        <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl">
-          {/* Slides will be rendered here */}
-          {slides.map((SlideComponent, index) => (
-            <SlideComponent key={index} isActive={currentSlide === index} />
-          ))}
-        </div>
       </div>
     </div>
   )
