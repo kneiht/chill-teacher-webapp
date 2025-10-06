@@ -12,27 +12,29 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   return (
     <Slide isActive={isActive}>
       <div className="flex flex-col items-center justify-start h-full text-center">
-        <h1 className="text-5xl font-bold text-indigo-700 mb-12 mt-12">
-          Present Continuous Tense
+        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-12 mt-12 text-center leading-tight">
+          Unit 1: Art Class
+          <br />
+          Lesson 1: School Supplies
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           <Link
             to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
           >
             Bài giảng
           </Link>
           <Link
             to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson"
-            className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
           >
-            YouTube
+            Video bài giảng
           </Link>
           <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/exercises"
-            className="bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+            to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
           >
-            Bài tập
+            Flashcards
           </Link>
         </div>
       </div>

@@ -1,0 +1,34 @@
+[
+  {
+    "word": "paper",
+    "phonics": "/ˈpeɪ.pər/",
+    "image": "vocab-images/paper.png",
+    "vietnameseMeaning": "giấy",
+    "sampleSentence": "I need paper to draw.",
+    "vietnameseTranslation": "Tôi cần giấy để vẽ."
+  },
+  {
+    "word": "glue",
+    "phonics": "/ɡluː/",
+    "image": "vocab-images/glue.png",
+    "vietnameseMeaning": "keo",
+    "sampleSentence": "Use glue to stick the paper.",
+    "vietnameseTranslation": "Dùng keo để dán giấy."
+  },
+  {
+    "word": "scissors",
+    "phonics": "/ˈsɪz.əz/",
+    "image": "vocab-images/scissors.png",
+    "vietnameseMeaning": "kéo",
+    "sampleSentence": "Cut the paper with scissors.",
+    "vietnameseTranslation": "Cắt giấy bằng kéo."
+  },
+  {
+    "word": "paint",
+    "phonics": "/peɪnt/",
+    "image": "vocab-images/paint.png",
+    "vietnameseMeaning": "sơn, màu",
+    "sampleSentence": "I like to paint pictures.",
+    "vietnameseTranslation": "Tôi thích vẽ tranh."
+  }
+]
