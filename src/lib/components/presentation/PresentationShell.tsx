@@ -103,9 +103,13 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   // Toggle fullscreen
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen()
+      document.documentElement.requestFullscreen().then(() => {
+        ;(screen as any).orientation?.lock('landscape').catch(() => {})
+      })
     } else {
-      document.exitFullscreen()
+      document.exitFullscreen().then(() => {
+        ;(screen as any).orientation?.unlock().catch(() => {})
+      })
     }
   }
 

@@ -186,7 +186,7 @@ body {
 }
 
 .presentation-button {
-  font-weight: 700;
+  border: rgba(102, 102, 102, 0.535) solid 1px;
   background-color: white;
   border-radius: 50%;
   width: 2rem;
@@ -208,6 +208,7 @@ body {
 }
 
 .presentation-fullscreen {
+  border: rgba(102, 102, 102, 0.535) solid 1px;
   background-color: white;
   border-radius: 50%;
   width: 2rem;
@@ -231,7 +232,8 @@ body {
 }
 
 .presentation-counter {
-  background-color: white;
+  border: rgba(102, 102, 102, 0.535) solid 1px;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
