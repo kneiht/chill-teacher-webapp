@@ -41,7 +41,7 @@ const PresentContinuousLesson: React.FC = () => {
     Slide16,
     Slide17,
   ]
-
+  console.log(bg)
   return <PresentationShell slides={slides} backgroundUrl={bg} />
 }
 

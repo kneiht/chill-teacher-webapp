@@ -18,7 +18,7 @@ import { Route as mainSettingsRouteImport } from './routes/(main)/settings'
 import { Route as mainProfileRouteImport } from './routes/(main)/profile'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
-import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index.route'
+import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -63,8 +63,8 @@ const authLoginRoute = authLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => authRouteRoute,
 } as any)
-const LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute =
-  LessonsEverybodyUp0Unit1Lesson1IndexRouteRouteImport.update({
+const LessonsEverybodyUp0Unit1Lesson1IndexRoute =
+  LessonsEverybodyUp0Unit1Lesson1IndexRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/',
     getParentRoute: () => rootRouteImport,
@@ -78,7 +78,7 @@ export interface FileRoutesByFullPath {
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainRouteRouteWithChildren
@@ -88,7 +88,7 @@ export interface FileRoutesByTo {
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -101,7 +101,7 @@ export interface FileRoutesById {
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
   '/lessons/': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/': typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -144,7 +144,7 @@ export interface RootRouteChildren {
   mainRouteRoute: typeof mainRouteRouteWithChildren
   SplatRoute: typeof SplatRoute
   LessonsIndexRoute: typeof LessonsIndexRoute
-  LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute
+  LessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -216,7 +216,7 @@ declare module '@tanstack/react-router' {
       id: '/lessons/everybody-up-0/unit-1/lesson-1/'
       path: '/lessons/everybody-up-0/unit-1/lesson-1'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteRouteImport
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -256,8 +256,8 @@ const rootRouteChildren: RootRouteChildren = {
   mainRouteRoute: mainRouteRouteWithChildren,
   SplatRoute: SplatRoute,
   LessonsIndexRoute: LessonsIndexRoute,
-  LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute:
-    LessonsEverybodyUp0Unit1Lesson1IndexRouteRoute,
+  LessonsEverybodyUp0Unit1Lesson1IndexRoute:
+    LessonsEverybodyUp0Unit1Lesson1IndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
