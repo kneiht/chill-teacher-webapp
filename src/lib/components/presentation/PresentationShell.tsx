@@ -86,7 +86,15 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
 
   return (
     <div
-      className={`bg-blue-50 bg-[url('${backgroundUrl}')] bg-cover bg-center min-h-screen flex items-center justify-center p-2`}
+      className="bg-blue-50 min-h-screen flex items-center justify-center p-2"
+      style={{
+        backgroundImage:
+          backgroundUrl && backgroundUrl !== 'None'
+            ? `url(${backgroundUrl})`
+            : undefined,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
