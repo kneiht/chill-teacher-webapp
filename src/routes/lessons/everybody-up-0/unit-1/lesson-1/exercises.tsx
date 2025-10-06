@@ -709,7 +709,6 @@ const ExercisesActivity = () => {
     <PresentationShell
       slides={exerciseSlides}
       backgroundUrl={bg}
-      showFullscreen={true}
       showHome={true}
     />
   )

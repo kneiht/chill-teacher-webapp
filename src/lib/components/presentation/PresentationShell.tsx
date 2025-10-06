@@ -11,7 +11,6 @@ interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
   backgroundUrl?: string
   showControls?: boolean
-  showFullscreen?: boolean
   showHome?: boolean
 }
 
@@ -19,7 +18,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   slides,
   backgroundUrl = 'None',
   showControls = true,
-  showFullscreen = true,
   showHome = true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -41,9 +39,9 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
       <Link
         to={parentPath || '/'}
         title="Go to Lesson Home" // Tooltip
-        className="bg-white hover:bg-indigo-100 text-indigo-600 w-14 h-14 flex items-center justify-center rounded-full shadow-xl z-50 transition-all duration-300 ease-in-out transform hover:scale-110"
+        className="bg-white hover:bg-indigo-100 text-indigo-600 w-8 h-8 flex items-center justify-center rounded-full shadow-lg font-bold transition-all duration-300 ease-in-out transform hover:scale-110"
       >
-        <HomeOutlined style={{ fontSize: '28px' }} />
+        <HomeOutlined style={{ fontSize: '16px' }} />
       </Link>
     )
   }
@@ -169,90 +167,90 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
         </div>
 
         {/* Activity controls */}
-        {(showFullscreen || showHome) && (
-          <div className="absolute top-4 right-4 flex flex-row gap-3 z-50">
-            {showFullscreen && (
-              <button
-                onClick={toggleFullscreen}
-                title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-                className="bg-white hover:bg-indigo-100 text-indigo-600 w-14 h-14 flex items-center justify-center rounded-full shadow-xl z-50 transition-all duration-300 ease-in-out transform hover:scale-110"
-              >
-                {isFullscreen ? (
-                  <FullscreenExitOutlined style={{ fontSize: '28px' }} />
-                ) : (
-                  <FullscreenOutlined style={{ fontSize: '28px' }} />
-                )}
-              </button>
-            )}
-            {showHome && <HomeButton />}
+        {showHome && (
+          <div className="absolute top-4 right-4 flex flex-row gap-2 z-50">
+            <HomeButton />
           </div>
         )}
 
-        {/* Slide counter */}
-        {showControls && (
-          <div className="absolute bottom-3 right-4 z-50 flex items-center gap-2">
-            <button
-              onClick={() => showSlide(currentSlide - 1)}
-              className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        {/* Controls */}
+        <div className="absolute bottom-3 right-4 z-50 flex items-center gap-2">
+          {showControls && (
+            <>
+              <button
+                onClick={() => showSlide(currentSlide - 1)}
+                className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={() => showSlide(currentSlide + 1)}
-              className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={() => showSlide(currentSlide + 1)}
+                className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={toggleOutline}
-              className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={toggleOutline}
+                className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 hover:bg-indigo-50"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-            <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 text-xs">
-              {currentSlide + 1}/{totalSlides}
-            </div>
-          </div>
-        )}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+              <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg font-bold text-indigo-600 text-xs">
+                {currentSlide + 1}/{totalSlides}
+              </div>
+            </>
+          )}
+          <button
+            onClick={toggleFullscreen}
+            title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+            className="bg-white hover:bg-indigo-100 text-indigo-600 w-8 h-8 flex items-center justify-center rounded-full shadow-lg font-bold transition-all duration-300 ease-in-out transform hover:scale-110"
+          >
+            {isFullscreen ? (
+              <FullscreenExitOutlined style={{ fontSize: '16px' }} />
+            ) : (
+              <FullscreenOutlined style={{ fontSize: '16px' }} />
+            )}
+          </button>
+        </div>
 
         {/* Outline Modal */}
         {showOutline && (

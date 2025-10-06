@@ -17,12 +17,7 @@ const GoogleSlideComponent: React.FC<{ isActive: boolean }> = ({
 const GoogleSlideLesson = () => {
   const slides = [GoogleSlideComponent]
   return (
-    <PresentationShell
-      slides={slides}
-      showControls={false}
-      showFullscreen={true}
-      showHome={true}
-    />
+    <PresentationShell slides={slides} showControls={false} showHome={true} />
   )
 }
 

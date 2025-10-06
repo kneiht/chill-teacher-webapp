@@ -41,6 +41,7 @@ const LessonHomePage: React.FC = () => {
       slides={slides}
       backgroundUrl={bg}
       showControls={false}
+      showHome={false}
     />
   )
 }
