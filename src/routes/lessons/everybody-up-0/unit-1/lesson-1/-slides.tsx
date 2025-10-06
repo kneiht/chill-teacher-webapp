@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Slide from '@/lib/components/presentation/Slide'
+import GoogleSlide from '@/lib/components/presentation/GoogleSlide'
 
 interface SlideProps {
   isActive: boolean
@@ -6,9 +8,7 @@ interface SlideProps {
 
 const Slide1: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <div className="flex flex-col items-center justify-start h-full text-center">
         <h1 className="text-2xl font-bold text-indigo-700 mb-8">
           GRAMMAR FOR PRE-GRADE 7
@@ -36,15 +36,13 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
         </div>
         <div className="my-3 opacity-0">---</div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide2: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         1. Thì Present Continuous là gì?
       </h2>
@@ -80,15 +78,13 @@ const Slide2: React.FC<SlideProps> = ({ isActive }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide3: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full text-2xl ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive} className="text-2xl">
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         2. Cấu trúc Present Continuous
       </h2>
@@ -130,15 +126,13 @@ const Slide3: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide4: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full text-2xl ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive} className="text-2xl">
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         3. Cách thêm -ing vào động từ
       </h2>
@@ -182,7 +176,7 @@ const Slide4: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
@@ -209,9 +203,7 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
   }
 
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         Bài tập 1: Thêm -ing vào động từ
       </h2>
@@ -317,15 +309,13 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide6: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         4. Câu khẳng định Present Continuous
       </h2>
@@ -374,15 +364,13 @@ const Slide6: React.FC<SlideProps> = ({ isActive }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide7: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         5. Câu phủ định Present Continuous
       </h2>
@@ -417,7 +405,7 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
@@ -444,9 +432,7 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
   }
 
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         Bài tập 2: Chuyển sang câu phủ định
       </h2>
@@ -552,15 +538,13 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide9: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         6. Câu hỏi Yes/No Present Continuous
       </h2>
@@ -600,7 +584,7 @@ const Slide9: React.FC<SlideProps> = ({ isActive }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
@@ -627,9 +611,7 @@ const Slide10: React.FC<SlideProps> = ({ isActive }) => {
   }
 
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         Bài tập 3: Đặt câu hỏi Yes/No
       </h2>
@@ -735,15 +717,13 @@ const Slide10: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide11: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         7. Câu hỏi WH- Present Continuous
       </h2>
@@ -779,7 +759,7 @@ const Slide11: React.FC<SlideProps> = ({ isActive }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
@@ -806,9 +786,7 @@ const Slide12: React.FC<SlideProps> = ({ isActive }) => {
   }
 
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         Bài tập 4: Đặt câu hỏi WH-
       </h2>
@@ -914,15 +892,13 @@ const Slide12: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide13: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         8. So sánh Present Continuous và Present Simple
       </h2>
@@ -967,7 +943,7 @@ const Slide13: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
@@ -993,9 +969,7 @@ const Slide14: React.FC<SlideProps> = ({ isActive }) => {
   }
 
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
         Bài tập 5: Chọn thì đúng
       </h2>
@@ -1124,15 +1098,13 @@ const Slide14: React.FC<SlideProps> = ({ isActive }) => {
           )}
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide15: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <div className="flex flex-col items-center justify-start h-full">
         <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-5">
           Tổng kết bài học
@@ -1188,15 +1160,13 @@ const Slide15: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide16: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-    >
+    <Slide isActive={isActive}>
       <div className="flex flex-col items-center justify-start h-full text-center">
         <h1 className="text-2xl font-bold text-indigo-700 mb-3">Chúc mừng!</h1>
         <div className="text-2xl md:text-3xl text-gray-700 mb-3">
@@ -1219,16 +1189,13 @@ const Slide16: React.FC<SlideProps> = ({ isActive }) => {
           <p className="text-xl">Hẹn gặp lại trong bài học tiếp theo!</p>
         </div>
       </div>
-    </div>
+    </Slide>
   )
 }
 
 const Slide17: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div
-      className={`slide rounded-xl w-full h-full ${isActive ? 'active' : ''}`}
-      style={{ overflow: 'hidden' }}
-    >
+    <GoogleSlide isActive={isActive} style={{ overflow: 'hidden' }}>
       <iframe
         src="https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed"
         style={{ border: 0 }}
@@ -1237,7 +1204,7 @@ const Slide17: React.FC<SlideProps> = ({ isActive }) => {
         allowFullScreen
         className="rounded-xl"
       ></iframe>
-    </div>
+    </GoogleSlide>
   )
 }
 
