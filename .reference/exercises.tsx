@@ -702,8 +702,40 @@ const Slide14: React.FC<SlideProps> = ({ isActive }) => {
   )
 }
 
+const Slide16: React.FC<SlideProps> = ({ isActive }) => {
+  const [gameCompleted, setGameCompleted] = useState(false)
+
+  const handleGameComplete = () => {
+    setGameCompleted(true)
+  }
+
+  if (gameCompleted) {
+    return (
+      <Slide isActive={isActive}>
+        <div className="flex flex-col items-center justify-center h-full text-center">
+          <h2 className="text-4xl font-bold text-green-600 mb-8">
+            Hoàn thành!
+          </h2>
+          <p className="text-2xl">Bạn đã trả lời đúng. Chúc mừng!</p>
+        </div>
+      </Slide>
+    )
+  }
+
+  return (
+    <Slide isActive={isActive}>
+      <MultipleChoiceGame
+        correctVocab={vocabData[0]}
+        options={vocabData}
+        isActive={isActive}
+        onComplete={handleGameComplete}
+      />
+    </Slide>
+  )
+}
+
 const ExercisesActivity = () => {
-  const exerciseSlides = [Slide5, Slide8, Slide10, Slide12, Slide14]
+  const exerciseSlides = [Slide5, Slide8, Slide10, Slide12, Slide14, Slide16]
 
   return (
     <PresentationShell
