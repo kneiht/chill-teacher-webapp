@@ -1,7 +1,11 @@
-import { SwapOutlined } from '@ant-design/icons'
+import { ArrowLeftRight, RotateCcw, Volume2, VolumeX  } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import { useStore } from '@tanstack/react-store'
-import { flashcardStore, toggleInitialSide } from '@/lib/stores/flashcard.store'
+import {
+  flashcardStore,
+  toggleInitialSide,
+  toggleSound,
+} from '@/lib/stores/flashcard.store'
 
 interface VocabItem {
   word: string
@@ -19,12 +23,30 @@ interface FlashcardProps {
 
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
-  const { initialSide } = useStore(flashcardStore)
+  const { initialSide, soundEnabled } = useStore(flashcardStore)
 
   useEffect(() => {
     // Reset flip state when card becomes active or inactive
     setIsFlipped(initialSide === 'back')
   }, [isActive, initialSide])
+
+  useEffect(() => {
+    if (isActive && soundEnabled) {
+      const speak = (text: string) => {
+        const utterance = new SpeechSynthesisUtterance(text)
+        utterance.lang = 'en-US' // English
+        speechSynthesis.speak(utterance)
+      }
+
+      // Speak word
+      speak(vocab.word)
+
+      // Speak sentence after a delay
+      setTimeout(() => {
+        speak(vocab.sampleSentence)
+      }, 1500)
+    }
+  }, [isActive, soundEnabled, vocab.word, vocab.sampleSentence])
 
   useEffect(() => {
     if (isActive) {
@@ -92,11 +114,27 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
       </div>
 
       {/* Settings */}
-      <div className="absolute bottom-4 inset-x-0 flex items-center gap-2">
-        <SwapOutlined
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4">
+        <button
           onClick={toggleInitialSide}
-          className="text-2xl cursor-pointer"
-        />
+          className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors shadow-lg"
+          title="Toggle initial side"
+        >
+          <RotateCcw className="text-lg" />
+          <span className="text-sm">Initial: {initialSide}</span>
+        </button>
+        <button
+          onClick={toggleSound}
+          className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors shadow-lg"
+          title="Toggle sound"
+        >
+          {soundEnabled ? (
+            <Volume2 className="text-lg" />
+          ) : (
+            <VolumeX className="text-lg" />
+          )}
+          <span className="text-sm">Sound: {soundEnabled ? 'On' : 'Off'}</span>
+        </button>
       </div>
     </div>
   )
