@@ -47,9 +47,9 @@ export const setTotalQuestions = (total: number) => {
 
 // Action to reset the game state
 export const resetGame = () => {
-  gameStore.setState(() => ({
+  gameStore.setState((prev) => ({
+    ...prev,
     score: 0,
-    totalQuestions: 0,
     correctAnswers: 0,
     incorrectAnswers: 0,
   }))
