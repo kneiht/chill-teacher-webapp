@@ -1,4 +1,4 @@
-import { ArrowLeftRight, RotateCcw, Volume2, VolumeX } from 'lucide-react'
+import { ArrowRightLeft, Volume2, VolumeX } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import { useStore } from '@tanstack/react-store'
 import {
@@ -6,6 +6,7 @@ import {
   toggleInitialSide,
   toggleSound,
 } from '@/lib/stores/flashcard.store'
+import { useVoice } from '@/lib/hooks/use-voice'
 
 interface VocabItem {
   word: string
@@ -24,6 +25,7 @@ interface FlashcardProps {
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const { initialSide, soundEnabled } = useStore(flashcardStore)
+  const { speak } = useVoice()
 
   useEffect(() => {
     // Reset flip state when card becomes active or inactive
@@ -32,12 +34,6 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
 
   useEffect(() => {
     if (isActive && soundEnabled && !isFlipped) {
-      const speak = (text: string) => {
-        const utterance = new SpeechSynthesisUtterance(text)
-        utterance.lang = 'en-US' // English
-        speechSynthesis.speak(utterance)
-      }
-
       // Delay 500ms before speaking
       setTimeout(() => {
         // Speak word
@@ -49,7 +45,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
         }, 1500)
       }, 500)
     }
-  }, [isActive, soundEnabled, isFlipped, vocab.word, vocab.sampleSentence])
+  }, [isActive, isFlipped, vocab.word, vocab.sampleSentence, speak])
 
   useEffect(() => {
     if (isActive) {
@@ -123,7 +119,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
           className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors shadow-lg"
           title="Toggle initial side"
         >
-          <RotateCcw className="text-lg" />
+          <ArrowRightLeft className="text-lg" />
           <span className="text-sm">Initial: {initialSide}</span>
         </button>
         <button

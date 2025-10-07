@@ -7,8 +7,12 @@ import {
   ChevronLeft,
   ChevronRight,
   Menu,
+  Settings,
 } from 'lucide-react'
 import './PresentationShell.css'
+import { useStore } from '@tanstack/react-store'
+import { ttsStore, setVoice, setRate } from '@/lib/stores/tts.store'
+import { useVoice } from '@/lib/hooks/use-voice'
 
 interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
@@ -26,6 +30,9 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
+  const [showTTSSettings, setShowTTSSettings] = useState(false)
+  const voices = useVoice()
+  const { voice, rate } = useStore(ttsStore)
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
 
@@ -204,6 +211,13 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               <button onClick={toggleOutline} className="presentation-button">
                 <Menu size={18} />
               </button>
+              <button
+                onClick={() => setShowTTSSettings(true)}
+                className="presentation-button"
+                title="TTS Settings"
+              >
+                <Settings size={18} />
+              </button>
               <div className="presentation-counter">
                 {currentSlide + 1}/{totalSlides}
               </div>
@@ -242,6 +256,58 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* TTS Settings Modal */}
+        {showTTSSettings && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+            onClick={(e) =>
+              e.target === e.currentTarget && setShowTTSSettings(false)
+            }
+          >
+            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+              <h3 className="text-lg font-semibold mb-4">TTS Settings</h3>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Voice
+                  </label>
+                  <select
+                    value={voice}
+                    onChange={(e) => setVoice(e.target.value)}
+                    className="w-full p-2 border rounded"
+                  >
+                    {voices.map((v) => (
+                      <option key={v.name} value={v.name}>
+                        {v.name} ({v.lang})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Speed: {rate.toFixed(1)}
+                  </label>
+                  <input
+                    type="range"
+                    min="0.5"
+                    max="2.0"
+                    step="0.1"
+                    value={rate}
+                    onChange={(e) => setRate(parseFloat(e.target.value))}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+              <button
+                onClick={() => setShowTTSSettings(false)}
+                className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
+              >
+                Close
+              </button>
             </div>
           </div>
         )}
