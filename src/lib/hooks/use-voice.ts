@@ -19,11 +19,12 @@ export const useVoice = () => {
     utterance.lang = lang
     utterance.rate = rate
     if (voice !== 'default') {
-      const selectedVoice = voices.find((v) => v.name === voice)
+      const allVoices = speechSynthesis.getVoices()
+      const selectedVoice = allVoices.find((v) => v.name === voice)
       if (selectedVoice) {
         utterance.voice = selectedVoice
       } else {
-        utterance.voice = voices[0]
+        utterance.voice = allVoices[0]
       }
     }
     speechSynthesis.speak(utterance)
