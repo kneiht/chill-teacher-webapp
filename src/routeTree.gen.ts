@@ -21,8 +21,8 @@ import { Route as authLoginRouteImport } from './routes/(auth)/login'
 import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index'
 import { Route as LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
 import { Route as LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+import { Route as LessonsEverybodyUp0Unit1Lesson1McqImageRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
 import { Route as LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-import { Route as LessonsEverybodyUp0Unit1Lesson1ExercisesRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/exercises'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -85,16 +85,16 @@ const LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute =
     path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
     getParentRoute: () => rootRouteImport,
   } as any)
+const LessonsEverybodyUp0Unit1Lesson1McqImageRoute =
+  LessonsEverybodyUp0Unit1Lesson1McqImageRouteImport.update({
+    id: '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image',
+    path: '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute =
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1ExercisesRoute =
-  LessonsEverybodyUp0Unit1Lesson1ExercisesRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/exercises',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/exercises',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -106,8 +106,8 @@ export interface FileRoutesByFullPath {
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/exercises': typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image': typeof LessonsEverybodyUp0Unit1Lesson1McqImageRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
@@ -120,8 +120,8 @@ export interface FileRoutesByTo {
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/exercises': typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image': typeof LessonsEverybodyUp0Unit1Lesson1McqImageRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
@@ -137,8 +137,8 @@ export interface FileRoutesById {
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
   '/lessons/': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/exercises': typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image': typeof LessonsEverybodyUp0Unit1Lesson1McqImageRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
@@ -153,8 +153,8 @@ export interface FileRouteTypes {
     | '/profile'
     | '/settings'
     | '/lessons'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
@@ -167,8 +167,8 @@ export interface FileRouteTypes {
     | '/profile'
     | '/settings'
     | '/lessons'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
@@ -183,8 +183,8 @@ export interface FileRouteTypes {
     | '/(main)/profile'
     | '/(main)/settings'
     | '/lessons/'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/'
@@ -196,8 +196,8 @@ export interface RootRouteChildren {
   mainRouteRoute: typeof mainRouteRouteWithChildren
   SplatRoute: typeof SplatRoute
   LessonsIndexRoute: typeof LessonsIndexRoute
-  LessonsEverybodyUp0Unit1Lesson1ExercisesRoute: typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRoute
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  LessonsEverybodyUp0Unit1Lesson1McqImageRoute: typeof LessonsEverybodyUp0Unit1Lesson1McqImageRoute
   LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
   LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   LessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
@@ -289,18 +289,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
+      path: '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
+      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/mcq-image'
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1McqImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': {
       id: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
       path: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/exercises': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/exercises'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1ExercisesRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -340,10 +340,10 @@ const rootRouteChildren: RootRouteChildren = {
   mainRouteRoute: mainRouteRouteWithChildren,
   SplatRoute: SplatRoute,
   LessonsIndexRoute: LessonsIndexRoute,
-  LessonsEverybodyUp0Unit1Lesson1ExercisesRoute:
-    LessonsEverybodyUp0Unit1Lesson1ExercisesRoute,
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute:
     LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute,
+  LessonsEverybodyUp0Unit1Lesson1McqImageRoute:
+    LessonsEverybodyUp0Unit1Lesson1McqImageRoute,
   LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute:
     LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute,
   LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute:

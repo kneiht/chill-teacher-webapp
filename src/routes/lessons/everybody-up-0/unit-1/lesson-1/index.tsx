@@ -36,6 +36,12 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           >
             Flashcards
           </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/mcq-image"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            MCQ Image
+          </Link>
         </div>
       </div>
     </Slide>
