@@ -5,7 +5,6 @@ import {
   setTotalQuestions,
   resetGame,
 } from '@/lib/stores/game.store'
-import vocabData from '../../../routes/lessons/everybody-up-0/unit-1/lesson-1/assets/vocab.json'
 
 interface VocabItem {
   word: string
@@ -20,19 +19,52 @@ interface Card {
   matched: boolean
 }
 
-const MatchingGame: React.FC = () => {
+interface MatchingGameProps {
+  vocabData: Array<VocabItem>
+}
+
+const MatchingGame: React.FC<MatchingGameProps> = ({ vocabData }) => {
   const [gameData, setGameData] = useState<Array<Card>>([])
   const [selectedCards, setSelectedCards] = useState<Array<number>>([])
   const [matchedPairs, setMatchedPairs] = useState<Array<number>>([])
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [isGameOver, setIsGameOver] = useState(false)
+  const [timer, setTimer] = useState(0)
+  const [timerInterval, setTimerInterval] = useState<NodeJS.Timeout | null>(
+    null,
+  )
 
-  const vocabWords: Array<VocabItem> = vocabData.slice(0, 4) // Use first 4 words
+  const vocabWords: Array<VocabItem> = vocabData
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
     resetGame()
   }, [])
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+  }
+
+  const startTimer = () => {
+    const interval = setInterval(() => {
+      setTimer((prev) => prev + 1)
+    }, 1000)
+    setTimerInterval(interval)
+  }
+
+  const stopTimer = () => {
+    if (timerInterval) {
+      clearInterval(timerInterval)
+      setTimerInterval(null)
+    }
+  }
+
+  const resetTimer = () => {
+    setTimer(0)
+    stopTimer()
+  }
 
   const shuffleArray = (array: Array<any>) => {
     const shuffled = [...array]
@@ -69,11 +101,14 @@ const MatchingGame: React.FC = () => {
     setMatchedPairs([])
     setIsGameStarted(true)
     setIsGameOver(false)
+    resetTimer()
     resetGame()
     setTotalQuestions(vocabWords.length)
+    startTimer()
   }
 
   const restartGame = () => {
+    stopTimer()
     setIsGameStarted(false)
     setIsGameOver(false)
     setGameData([])
@@ -110,6 +145,7 @@ const MatchingGame: React.FC = () => {
       answerCorrect()
       if (matchedPairs.length + 1 === vocabWords.length) {
         setIsGameOver(true)
+        stopTimer()
         // Win logic
       }
     } else {
@@ -121,66 +157,105 @@ const MatchingGame: React.FC = () => {
 
   return (
     <div className="h-full flex flex-col">
-      <h2 className="text-xl font-bold text-indigo-700 text-center mb-4">
-        Matching Game
+      <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
+        Matching Game - School Supplies
       </h2>
-      {!isGameStarted ? (
-        <div className="flex-1 flex items-center justify-center">
+
+      {/* Game Controls */}
+      <div className="w-full my-2 flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-4 items-stretch transition-transform duration-200">
+        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-start">
+          {isGameStarted && (
+            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+              ⏱️ {formatTime(timer)}
+            </div>
+          )}
+          {isGameStarted && (
+            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+              🎯 {matchedPairs.length}/{vocabWords.length}
+            </div>
+          )}
+        </div>
+        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-end">
+          {!isGameStarted && (
+            <button
+              onClick={startGame}
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
+            >
+              ▶️ Start Game
+            </button>
+          )}
+          {isGameStarted && (
+            <button
+              onClick={restartGame}
+              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
+            >
+              🔄 Restart
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Game Area */}
+      <div className="flex-1 flex items-center justify-center">
+        {!isGameStarted ? (
           <div className="text-center bg-white rounded-xl shadow-lg p-8">
             <div className="text-6xl mb-4">🃏</div>
             <h3 className="text-2xl font-bold text-indigo-700 mb-4">
               Matching Game
             </h3>
             <p className="text-gray-600 mb-6">
-              Match English words with their Vietnamese meanings.
+              Bạn sẽ ghép {vocabWords.length} cặp. Bấm Start để bắt đầu.
+            </p>
+            <div className="text-sm text-gray-500">
+              Click "▶️ Start Game" để bắt đầu!
+            </div>
+          </div>
+        ) : (
+          <div className="max-w-4xl w-full">
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 w-full">
+              {gameData.map((card, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleCardClick(index)}
+                  className={`game-card bg-white rounded-lg shadow-md p-4 cursor-pointer transition-all duration-300 hover:scale-105 border-2 min-h-[100px] flex items-center justify-center text-center ${
+                    card.matched
+                      ? 'bg-green-200 border-green-500'
+                      : selectedCards.includes(index)
+                        ? 'bg-blue-200 border-blue-500'
+                        : 'border-gray-200 hover:bg-blue-50'
+                  }`}
+                >
+                  <span className="card-text text-xs md:text-lg font-semibold text-gray-800">
+                    {card.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {isGameOver && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30">
+          <div className="bg-white rounded-xl p-8 shadow-2xl text-center">
+            <div className="text-6xl mb-4">🎉</div>
+            <h3 className="text-2xl font-bold text-green-600 mb-2">
+              Excellent Work!
+            </h3>
+            <p className="text-gray-600">
+              You matched all {vocabWords.length} pairs!
+            </p>
+            <p className="text-indigo-700 font-bold mt-2">
+              ⏱️ Time: {formatTime(timer)} seconds
             </p>
             <button
-              onClick={startGame}
-              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700"
+              onClick={() => setIsGameOver(false)}
+              className="mt-6 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200"
             >
-              Start Game
+              Close
             </button>
           </div>
         </div>
-      ) : (
-        <>
-          <div className="flex justify-between mb-4">
-            <button
-              onClick={restartGame}
-              className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
-            >
-              Restart
-            </button>
-            <div>
-              Matched: {matchedPairs.length}/{vocabWords.length}
-            </div>
-          </div>
-          <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {gameData.map((card, index) => (
-              <div
-                key={index}
-                onClick={() => handleCardClick(index)}
-                className={`p-4 border-2 rounded-lg cursor-pointer transition-all ${
-                  card.matched
-                    ? 'bg-green-200 border-green-500'
-                    : selectedCards.includes(index)
-                      ? 'bg-blue-200 border-blue-500'
-                      : 'bg-white border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                <div className="text-center font-semibold">{card.text}</div>
-              </div>
-            ))}
-          </div>
-          {isGameOver && (
-            <div className="text-center mt-4">
-              <h3 className="text-2xl font-bold text-green-600">
-                Congratulations!
-              </h3>
-              <p>You matched all pairs!</p>
-            </div>
-          )}
-        </>
       )}
     </div>
   )

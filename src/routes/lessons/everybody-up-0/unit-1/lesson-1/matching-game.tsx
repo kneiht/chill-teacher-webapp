@@ -7,12 +7,13 @@ import Slide from '@/lib/components/presentation/Slide'
 import MatchingGame from '@/lib/components/games/MatchingGame'
 
 // Assets
+import vocabData from './assets/vocab.json'
 import bg from './assets/bg.png'
 
 const MatchingGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   return (
     <Slide isActive={isActive}>
-      <MatchingGame />
+      <MatchingGame vocabData={vocabData} />
     </Slide>
   )
 }
