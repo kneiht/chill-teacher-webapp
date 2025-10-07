@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
-import { useStore } from '@tanstack/react-store'
-import { ttsStore, setVoice, setRate } from '@/lib/stores/tts.store'
+import { useTTS } from '@/lib/hooks/use-tts'
 
 export const useVoice = () => {
   const [voices, setVoices] = useState<Array<SpeechSynthesisVoice>>([])
-  const { voice, rate } = useStore(ttsStore)
+  const {
+    settings: { voice, rate },
+    setVoice,
+    setRate,
+  } = useTTS()
 
   useEffect(() => {
     const loadVoices = () => {

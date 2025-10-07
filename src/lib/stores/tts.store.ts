@@ -10,22 +10,7 @@ const defaultSettings: TTSSettings = {
   rate: 1.0,
 }
 
-const loadSettings = (): TTSSettings => {
-  try {
-    const stored = localStorage.getItem('tts-settings')
-    return stored
-      ? { ...defaultSettings, ...JSON.parse(stored) }
-      : defaultSettings
-  } catch {
-    return defaultSettings
-  }
-}
-
-export const ttsStore = new Store<TTSSettings>(loadSettings())
-
-ttsStore.subscribe((state) => {
-  localStorage.setItem('tts-settings', JSON.stringify(state))
-})
+export const ttsStore = new Store<TTSSettings>(defaultSettings)
 
 export const setVoice = (voice: string) => {
   ttsStore.setState((prev: TTSSettings) => ({

@@ -1,11 +1,6 @@
 import { ArrowRightLeft, Volume2, VolumeX } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
-import { useStore } from '@tanstack/react-store'
-import {
-  flashcardStore,
-  toggleInitialSide,
-  toggleSound,
-} from '@/lib/stores/flashcard.store'
+import { useFlashcard } from '@/lib/hooks/use-flashcard'
 import { useVoice } from '@/lib/hooks/use-voice'
 
 interface VocabItem {
@@ -24,16 +19,17 @@ interface FlashcardProps {
 
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
-  const { initialSide, soundEnabled } = useStore(flashcardStore)
+  const { settings, toggleInitialSide, toggleSound } = useFlashcard()
+  console.log(settings)
   const { speak } = useVoice()
 
   useEffect(() => {
     // Reset flip state when card becomes active or inactive
-    setIsFlipped(initialSide === 'back')
-  }, [isActive, initialSide])
+    setIsFlipped(settings.initialSide === 'back')
+  }, [isActive, settings.initialSide])
 
   useEffect(() => {
-    if (isActive && soundEnabled && !isFlipped) {
+    if (isActive && settings.soundEnabled && !isFlipped) {
       // Delay 500ms before speaking
       setTimeout(() => {
         // Speak word
@@ -120,19 +116,17 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
           title="Toggle initial side"
         >
           <ArrowRightLeft className="text-lg" />
-          <span className="text-sm">Initial: {initialSide}</span>
         </button>
         <button
           onClick={toggleSound}
           className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors shadow-lg"
           title="Toggle sound"
         >
-          {soundEnabled ? (
+          {settings.soundEnabled ? (
             <Volume2 className="text-lg" />
           ) : (
             <VolumeX className="text-lg" />
           )}
-          <span className="text-sm">Sound: {soundEnabled ? 'On' : 'Off'}</span>
         </button>
       </div>
     </div>

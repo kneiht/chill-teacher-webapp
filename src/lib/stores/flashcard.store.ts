@@ -5,10 +5,12 @@ export interface FlashcardSettings {
   soundEnabled: boolean
 }
 
-export const flashcardStore = new Store<FlashcardSettings>({
+const defaultSettings: FlashcardSettings = {
   initialSide: 'front',
   soundEnabled: true,
-})
+}
+
+export const flashcardStore = new Store<FlashcardSettings>(defaultSettings)
 
 export const toggleInitialSide = () => {
   flashcardStore.setState((prev: FlashcardSettings) => ({

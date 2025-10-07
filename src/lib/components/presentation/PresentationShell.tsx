@@ -10,8 +10,6 @@ import {
   Settings,
 } from 'lucide-react'
 import './PresentationShell.css'
-import { useStore } from '@tanstack/react-store'
-import { ttsStore, setVoice, setRate } from '@/lib/stores/tts.store'
 import { useVoice } from '@/lib/hooks/use-voice'
 
 interface PresentationShellProps {
@@ -31,8 +29,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const [showOutline, setShowOutline] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showTTSSettings, setShowTTSSettings] = useState(false)
-  const voices = useVoice()
-  const { voice, rate } = useStore(ttsStore)
+  const { voices, voice, rate, setVoice, setRate } = useVoice()
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
 
