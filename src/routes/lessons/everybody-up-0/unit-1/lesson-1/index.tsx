@@ -42,6 +42,12 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           >
             MCQ Image
           </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/matching-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Matching Game
+          </Link>
         </div>
       </div>
     </Slide>
