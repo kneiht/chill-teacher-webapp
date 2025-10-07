@@ -38,12 +38,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
       // Delay 500ms before speaking
       setTimeout(() => {
         // Speak word
-        speak(vocab.word)
-
-        // Speak sentence after another delay
-        setTimeout(() => {
-          speak(vocab.sampleSentence)
-        }, 1500)
+        speak(`${vocab.word}. ${vocab.sampleSentence}`)
       }, 500)
     }
   }, [isActive, isFlipped, vocab.word, vocab.sampleSentence, speak])

@@ -15,6 +15,9 @@ export const useVoice = () => {
   }, [])
 
   const speak = (text: string, lang: string = 'en-US') => {
+    if (speechSynthesis.speaking) {
+      return
+    }
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.lang = lang
     utterance.rate = rate
