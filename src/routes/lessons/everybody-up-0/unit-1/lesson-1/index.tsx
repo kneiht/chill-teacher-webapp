@@ -36,17 +36,66 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           >
             Flashcards
           </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/mcq-image"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            MCQ Image
-          </Link>
+
           <Link
             to="/lessons/everybody-up-0/unit-1/lesson-1/matching-game"
             className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
           >
             Matching Game
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/anagram-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Anagram Game
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Multiple Choice En→Vi
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Multiple Choice Vi→En
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/memory-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Memory Game
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Image Reveal
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Listening & Typing
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Picture Choice
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Picture Typing
+          </Link>
+          <Link
+            to="/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game"
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+          >
+            Unjumble Game
           </Link>
         </div>
       </div>
