@@ -1,4 +1,7 @@
+import { SwapOutlined } from '@ant-design/icons'
 import React, { useState, useEffect } from 'react'
+import { useStore } from '@tanstack/react-store'
+import { flashcardStore, toggleInitialSide } from '@/lib/stores/flashcard.store'
 
 interface VocabItem {
   word: string
@@ -16,25 +19,31 @@ interface FlashcardProps {
 
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
+  const { initialSide } = useStore(flashcardStore)
+
+  useEffect(() => {
+    // Reset flip state when card becomes active or inactive
+    setIsFlipped(initialSide === 'back')
+  }, [isActive, initialSide])
 
   useEffect(() => {
     if (isActive) {
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
           e.preventDefault()
-          setIsFlipped(!isFlipped)
+          setIsFlipped((prev) => !prev)
         }
       }
 
       window.addEventListener('keydown', handleKeyDown)
       return () => window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [isActive, isFlipped])
+  }, [isActive])
 
   if (!isActive) return null
 
   return (
-    <div className="w-full h-full flex items-center justify-center p-8">
+    <div className="relative w-full h-full flex items-center justify-center p-8">
       <div
         className="relative w-[70%] h-[80%] cursor-pointer"
         onClick={() => setIsFlipped(!isFlipped)}
@@ -58,15 +67,6 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
             <p className="text-5xl text-gray-700 text-center">
               "{vocab.sampleSentence}"
             </p>
-            <button
-              onClick={(e) => {
-                e.stopPropagation()
-                setIsFlipped(true)
-              }}
-              className="mt-4 px-6 py-3 bg-indigo-600 text-white text-xl rounded-lg hover:bg-indigo-700 transition-colors"
-            >
-              Show Answer
-            </button>
           </div>
 
           {/* Back */}
@@ -87,19 +87,16 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
                 {vocab.vietnameseMeaning}
               </h3>
             </div>
-            <div className="absolute bottom-4 inset-x-0 flex items-center justify-center">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setIsFlipped(false)
-                }}
-                className="px-6 py-3 bg-white text-indigo-600 text-xl rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Show Front
-              </button>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* Settings */}
+      <div className="absolute bottom-4 inset-x-0 flex items-center gap-2">
+        <SwapOutlined
+          onClick={toggleInitialSide}
+          className="text-2xl cursor-pointer"
+        />
       </div>
     </div>
   )
