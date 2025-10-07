@@ -2,33 +2,33 @@
   {
     "word": "paper",
     "phonics": "/ˈpeɪ.pər/",
-    "image": "vocab-images/paper.png",
+    "image": "/vocab-images/paper.jpeg",
     "vietnameseMeaning": "giấy",
-    "sampleSentence": "I need paper to draw.",
-    "vietnameseTranslation": "Tôi cần giấy để vẽ."
+    "sampleSentence": "I have paper.",
+    "vietnameseTranslation": "Tôi có giấy."
   },
   {
     "word": "glue",
     "phonics": "/ɡluː/",
-    "image": "vocab-images/glue.png",
-    "vietnameseMeaning": "keo",
-    "sampleSentence": "Use glue to stick the paper.",
-    "vietnameseTranslation": "Dùng keo để dán giấy."
+    "image": "/vocab-images/glue.jpeg",
+    "vietnameseMeaning": "keo dán",
+    "sampleSentence": "I have glue.",
+    "vietnameseTranslation": "Tôi có keo dán  ."
   },
   {
     "word": "scissors",
     "phonics": "/ˈsɪz.əz/",
-    "image": "vocab-images/scissors.png",
+    "image": "/vocab-images/scissors.jpeg",
     "vietnameseMeaning": "kéo",
-    "sampleSentence": "Cut the paper with scissors.",
-    "vietnameseTranslation": "Cắt giấy bằng kéo."
+    "sampleSentence": "I have scissors.",
+    "vietnameseTranslation": "Tôi có kéo."
   },
   {
     "word": "paint",
     "phonics": "/peɪnt/",
-    "image": "vocab-images/paint.png",
-    "vietnameseMeaning": "sơn, màu",
-    "sampleSentence": "I like to paint pictures.",
-    "vietnameseTranslation": "Tôi thích vẽ tranh."
+    "image": "/vocab-images/paint.jpeg",
+    "vietnameseMeaning": "màu vẽ",
+    "sampleSentence": "I have paint.",
+    "vietnameseTranslation": "Tôi có màu vẽ."
   }
 ]

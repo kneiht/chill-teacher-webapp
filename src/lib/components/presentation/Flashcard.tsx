@@ -51,34 +51,53 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
             className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center p-6"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            <img
-              src={vocab.image}
-              alt={vocab.word}
-              className="w-32 h-32 object-contain mb-4"
-            />
-            <h2 className="text-4xl font-bold text-indigo-600 mb-2">
+            <h2 className="text-8xl font-bold text-indigo-600 mb-4">
               {vocab.word}
             </h2>
-            <p className="text-xl text-gray-600">{vocab.phonics}</p>
+            <p className="text-5xl text-gray-600 mb-4">{vocab.phonics}</p>
+            <p className="text-5xl text-gray-700 text-center">
+              "{vocab.sampleSentence}"
+            </p>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setIsFlipped(true)
+              }}
+              className="mt-4 px-6 py-3 bg-indigo-600 text-white text-xl rounded-lg hover:bg-indigo-700 transition-colors"
+            >
+              Show Answer
+            </button>
           </div>
 
           {/* Back */}
           <div
-            className="absolute inset-0 w-full h-full backface-hidden bg-indigo-50 rounded-xl shadow-2xl flex flex-col items-center justify-center p-6 rotate-x-180"
+            className="absolute inset-0 w-full h-full backface-hidden rounded-xl shadow-2xl rotate-x-180 overflow-hidden"
             style={{
               backfaceVisibility: 'hidden',
               transform: 'rotateX(180deg)',
             }}
           >
-            <h3 className="text-2xl font-bold text-indigo-700 mb-4">
-              {vocab.vietnameseMeaning}
-            </h3>
-            <p className="text-lg text-gray-700 mb-4 text-center">
-              "{vocab.sampleSentence}"
-            </p>
-            <p className="text-md text-gray-600 text-center italic">
-              "{vocab.vietnameseTranslation}"
-            </p>
+            <img
+              src={vocab.image}
+              alt={vocab.word}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute top-3 inset-x-0 flex items-center justify-center">
+              <h3 className="text-3xl font-bold text-indigo-600 px-6 py-3 rounded-lg bg-[#ffffff9b]">
+                {vocab.vietnameseMeaning}
+              </h3>
+            </div>
+            <div className="absolute bottom-4 inset-x-0 flex items-center justify-center">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setIsFlipped(false)
+                }}
+                className="px-6 py-3 bg-white text-indigo-600 text-xl rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Show Front
+              </button>
+            </div>
           </div>
         </div>
       </div>
