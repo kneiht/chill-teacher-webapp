@@ -1,6 +1,11 @@
 import { ArrowRightLeft, Volume2, VolumeX } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
-import { useFlashcard } from '@/lib/hooks/use-flashcard'
+import { useStore } from '@tanstack/react-store'
+import {
+  flashcardStore,
+  toggleInitialSide,
+  toggleSound,
+} from '@/lib/stores/flashcard.store'
 import { useVoice } from '@/lib/hooks/use-voice'
 
 interface VocabItem {
@@ -19,7 +24,7 @@ interface FlashcardProps {
 
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
-  const { settings, toggleInitialSide, toggleSound } = useFlashcard()
+  const settings = useStore(flashcardStore)
   console.log(settings)
   const { speak } = useVoice()
 
