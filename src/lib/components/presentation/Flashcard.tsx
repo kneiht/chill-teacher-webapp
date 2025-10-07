@@ -1,4 +1,4 @@
-import { ArrowLeftRight, RotateCcw, Volume2, VolumeX  } from 'lucide-react'
+import { ArrowLeftRight, RotateCcw, Volume2, VolumeX } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import { useStore } from '@tanstack/react-store'
 import {
@@ -31,22 +31,25 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   }, [isActive, initialSide])
 
   useEffect(() => {
-    if (isActive && soundEnabled) {
+    if (isActive && soundEnabled && !isFlipped) {
       const speak = (text: string) => {
         const utterance = new SpeechSynthesisUtterance(text)
         utterance.lang = 'en-US' // English
         speechSynthesis.speak(utterance)
       }
 
-      // Speak word
-      speak(vocab.word)
-
-      // Speak sentence after a delay
+      // Delay 500ms before speaking
       setTimeout(() => {
-        speak(vocab.sampleSentence)
-      }, 1500)
+        // Speak word
+        speak(vocab.word)
+
+        // Speak sentence after another delay
+        setTimeout(() => {
+          speak(vocab.sampleSentence)
+        }, 1500)
+      }, 500)
     }
-  }, [isActive, soundEnabled, vocab.word, vocab.sampleSentence])
+  }, [isActive, soundEnabled, isFlipped, vocab.word, vocab.sampleSentence])
 
   useEffect(() => {
     if (isActive) {
