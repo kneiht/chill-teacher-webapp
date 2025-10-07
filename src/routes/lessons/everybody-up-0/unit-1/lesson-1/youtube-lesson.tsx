@@ -5,14 +5,12 @@ import { createFileRoute } from '@tanstack/react-router'
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import YoutubeSlide from '@/lib/components/presentation/YoutubeSlide'
 
+// Url
+import urls from './assets/urls.json'
+
 const YoutubeSlideComponent: React.FC<{ isActive: boolean }> = ({
   isActive,
-}) => (
-  <YoutubeSlide
-    isActive={isActive}
-    src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Sample YouTube URL
-  />
-)
+}) => <YoutubeSlide isActive={isActive} src={urls.youtubeLesson} />
 
 const YoutubeSlideLesson = () => {
   const slides = [YoutubeSlideComponent]

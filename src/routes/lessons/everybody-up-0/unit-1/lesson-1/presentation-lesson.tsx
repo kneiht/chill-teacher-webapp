@@ -5,14 +5,12 @@ import { createFileRoute } from '@tanstack/react-router'
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import GoogleSlide from '@/lib/components/presentation/GoogleSlide'
 
+// Url
+import urls from './assets/urls.json'
+
 const GoogleSlideComponent: React.FC<{ isActive: boolean }> = ({
   isActive,
-}) => (
-  <GoogleSlide
-    isActive={isActive}
-    src="https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed"
-  />
-)
+}) => <GoogleSlide isActive={isActive} src={urls.googleSlide} />
 
 const GoogleSlideLesson = () => {
   const slides = [GoogleSlideComponent]
