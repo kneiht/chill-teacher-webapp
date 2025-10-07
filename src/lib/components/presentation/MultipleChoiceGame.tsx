@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Volume2, VolumeX } from 'lucide-react'
-import { useStore } from '@tanstack/react-store'
-import { flashcardStore, toggleSound } from '@/lib/stores/flashcard.store'
-import { useVoice } from '@/lib/hooks/use-voice'
+import { answerCorrect, answerIncorrect } from '@/lib/stores/game.store'
 
 interface VocabItem {
   word: string
@@ -17,22 +14,16 @@ interface MultipleChoiceGameProps {
   correctVocab: VocabItem
   options: Array<VocabItem>
   isActive: boolean
-  onComplete: () => void
-  onNext?: () => void
-  onPrev?: () => void
 }
 
 const MultipleChoiceGame: React.FC<MultipleChoiceGameProps> = ({
   correctVocab,
   options,
   isActive,
-  onComplete,
 }) => {
   const [shuffledOptions, setShuffledOptions] = useState<Array<VocabItem>>([])
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
-  const settings = useStore(flashcardStore)
-  const { speak } = useVoice()
 
   useEffect(() => {
     if (isActive) {
@@ -52,10 +43,9 @@ const MultipleChoiceGame: React.FC<MultipleChoiceGameProps> = ({
     setIsCorrect(correct)
 
     if (correct) {
-      // Wait a moment before moving to the next slide
-      setTimeout(() => {
-        onComplete()
-      }, 1500)
+      answerCorrect()
+    } else {
+      answerIncorrect()
     }
   }
 

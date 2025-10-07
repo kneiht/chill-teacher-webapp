@@ -2,7 +2,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 // Components
-import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import GameShell from '@/lib/components/presentation/GameShell'
 import MultipleChoiceGame from '@/lib/components/presentation/MultipleChoiceGame'
 
 // Assets
@@ -16,15 +16,12 @@ const McqImageActivity = () => {
         correctVocab={vocab}
         options={vocabData}
         isActive={isActive}
-        onComplete={() => {}}
       />
     )
     return McqSlide
   })
 
-  return (
-    <PresentationShell slides={mcqSlides} backgroundUrl={bg} showHome={true} />
-  )
+  return <GameShell slides={mcqSlides} backgroundUrl={bg} showHome={true} />
 }
 
 export const Route = createFileRoute(
