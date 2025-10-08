@@ -13,8 +13,8 @@ import Slide from '@/lib/components/presentation/Slide'
 interface VocabItem {
   word: string
   vietnameseMeaning: string
-  exampleSentenceEn?: string
-  exampleSentenceVi?: string
+  sampleSentence?: string
+  vietnameseTranslation?: string
   // other fields
 }
 
@@ -94,13 +94,13 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
 
   const createQuestions = (words: Array<VocabItem>): Array<Question> => {
     const questionList = words
-      .filter((word) => word.exampleSentenceEn)
+      .filter((word) => word.sampleSentence)
       .map((word) => {
-        const en = word.exampleSentenceEn!.trim()
+        const en = word.sampleSentence!.trim()
         const tokens = tokenize(en)
         const scrambled = shuffleArray([...tokens])
         return {
-          vietnamese: word.exampleSentenceVi || word.vietnameseMeaning,
+          vietnamese: word.vietnameseTranslation || word.vietnameseMeaning,
           englishTokens: tokens,
           scrambledTokens: scrambled,
         }
@@ -225,36 +225,28 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col overflow-hidden">
       <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
 
       {/* Game Controls */}
-      <div className="w-full my-2 flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-4 items-stretch transition-transform duration-200">
-        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-start">
+      <div className="w-full my-3 flex flex-row justify-center gap-2 items-stretch transition-transform duration-200">
+        <div className="w-auto flex flex-row gap-4 justify-stretch">
           {isGameStarted && (
-            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               ⏱️ {formatTime(timer)}
             </div>
           )}
           {isGameStarted && (
-            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               🎯 {score}/{questions.length}
             </div>
           )}
         </div>
-        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-end">
-          {!isGameStarted && (
-            <button
-              onClick={startGame}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
-            >
-              ▶️ Start Game
-            </button>
-          )}
+        <div className="w-auto flex flex-row gap-4 justify-end">
           {isGameStarted && (
             <button
               onClick={restartGame}
-              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
+              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 w-auto text-sm"
             >
               🔄 Restart
             </button>
@@ -263,23 +255,26 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
       </div>
 
       {/* Game Area */}
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-start justify-center h-full">
         {!isGameStarted ? (
-          <div className="text-center bg-white rounded-xl shadow-lg p-8">
+          <div className="text-center bg-glass rounded-xl shadow-lg p-8 py-12 mt-10 w-full max-w-2xl">
             <div className="text-6xl mb-4">🧩</div>
-            <h3 className="text-2xl font-bold text-indigo-700 mb-4">
+            <h3 className="text-4xl font-bold text-indigo-700 mb-4">
               Unjumble Game
             </h3>
-            <p className="text-gray-600 mb-6">
-              Bạn sẽ có {vocabWords.filter((w) => w.exampleSentenceEn).length}{' '}
-              câu. Kéo thả từ để tạo câu đúng.
+            <p className="text-gray-600 mb-6 text-xl">
+              Bạn sẽ có {vocabWords.filter((w) => w.sampleSentence).length} câu.
+              Kéo thả từ để tạo câu đúng.
             </p>
-            <div className="text-sm text-gray-500">
-              Click "▶️ Start Game" để bắt đầu!
-            </div>
+            <button
+              onClick={startGame}
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-lg w-auto"
+            >
+              ▶️ Start Game
+            </button>
           </div>
-        ) : (
-          <div className="max-w-4xl w-full bg-white rounded-xl shadow-lg p-3">
+        ) : currentQuestion ? (
+          <div className="w-full h-[98%] bg-glass rounded-xl shadow-lg p-2 mt-1 overflow-auto ">
             <div className="mb-6">
               <div className="flex justify-between text-sm text-gray-600 mb-2">
                 <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
@@ -294,16 +289,16 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 items-center">
-              <div className="text-lg text-gray-700">
-                <span className="inline-block bg-indigo-100 text-indigo-700 font-semibold px-3 py-1 rounded-full">
+            <div className="flex flex-col gap-6 items-center max-w-4xl mx-auto">
+              <div className="text-3xl text-gray-700 text-center">
+                <span className="inline-block bg-indigo-100 text-indigo-700 font-semibold px-5 py-3 rounded-full">
                   {currentQuestion.vietnamese}
                 </span>
               </div>
 
               {/* Answer Area */}
               <div
-                className="min-h-16 border-2 border-dashed border-indigo-300 bg-indigo-50 rounded-xl p-3 flex flex-wrap gap-2 items-center justify-center w-full max-w-2xl"
+                className="h-20 border-2 border-dashed border-indigo-300 bg-indigo-50 rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center w-full"
                 onDragOver={handleDragOver}
                 onDrop={(e) => handleDrop(e, false)}
               >
@@ -312,7 +307,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
                     key={`answer-${index}`}
                     draggable={!isAnswering}
                     onDragStart={(e) => handleDragStart(e, token, false)}
-                    className="inline-flex items-center justify-center px-3 py-2 rounded-full border-2 border-gray-200 bg-white font-bold text-gray-800 cursor-grab active:cursor-grabbing"
+                    className="inline-flex items-center justify-center px-4 py-2 rounded-lg border-2 border-gray-300 bg-white font-bold text-xl text-gray-800 cursor-grab active:cursor-grabbing shadow-sm"
                   >
                     {token}
                   </span>
@@ -326,7 +321,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
 
               {/* Word Bank */}
               <div
-                className="min-h-16 border-2 border-dashed border-gray-300 bg-gray-50 rounded-xl p-3 flex flex-wrap gap-2 items-center justify-center w-full max-w-2xl"
+                className="h-20 border-2 border-dashed border-gray-300 bg-gray-50 rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center w-full"
                 onDragOver={handleDragOver}
                 onDrop={(e) => handleDrop(e, true)}
               >
@@ -335,7 +330,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
                     key={`bank-${index}`}
                     draggable={!isAnswering}
                     onDragStart={(e) => handleDragStart(e, token, true)}
-                    className="inline-flex items-center justify-center px-3 py-2 rounded-full border-2 border-gray-200 bg-white font-bold text-gray-800 cursor-grab active:cursor-grabbing"
+                    className="inline-flex items-center justify-center px-4 py-2 rounded-lg border-2 border-gray-300 bg-white font-bold text-xl text-gray-800 cursor-grab active:cursor-grabbing shadow-sm"
                   >
                     {token}
                   </span>
@@ -347,31 +342,37 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
                 )}
               </div>
 
-              <div className="flex gap-2">
+              <div className="flex gap-4">
                 <button
                   onClick={clearAnswer}
                   disabled={isAnswering}
-                  className="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed text-gray-800 font-semibold px-4 py-2 rounded-lg"
+                  className="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed text-gray-800 font-semibold px-6 py-3 rounded-lg text-lg"
                 >
                   Clear
                 </button>
                 <button
                   onClick={submitAnswer}
                   disabled={isAnswering || answerTokens.length === 0}
-                  className="bg-green-500 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-4 py-2 rounded-lg"
+                  className="bg-green-500 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg text-lg"
                 >
                   Submit
                 </button>
               </div>
 
-              <div className="text-sm text-center">{feedback}</div>
+              <div className="text-lg font-semibold text-center h-6">
+                {feedback.includes('✅') ? (
+                  <span className="text-green-600">{feedback}</span>
+                ) : (
+                  <span className="text-red-600">{feedback}</span>
+                )}
+              </div>
             </div>
           </div>
-        )}
+        ) : null}
       </div>
 
       {isGameOver && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-30">
           <div className="bg-white rounded-xl p-8 shadow-2xl text-center">
             <div className="text-6xl mb-4">🎉</div>
             <h3 className="text-2xl font-bold text-green-600 mb-2">
@@ -383,11 +384,11 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
                     ? 'Good Try! 👍'
                     : 'Keep Practicing! 💪'}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-xl">
               You scored {score}/{questions.length} (
               {Math.round((score / questions.length) * 100)}%)
             </p>
-            <p className="text-indigo-700 font-bold mt-2">
+            <p className="text-indigo-700 font-bold mt-2 text-xl">
               ⏱️ Time: {formatTime(timer)} seconds
             </p>
             <button

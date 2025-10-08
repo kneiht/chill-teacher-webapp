@@ -189,32 +189,24 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
       <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
 
       {/* Game Controls */}
-      <div className="w-full my-2 flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-4 items-stretch transition-transform duration-200">
-        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-start">
+      <div className="w-full my-3 flex flex-row justify-center gap-2 items-stretch transition-transform duration-200">
+        <div className="w-auto flex flex-row gap-4 justify-stretch">
           {isGameStarted && (
-            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               ⏱️ {formatTime(timer)}
             </div>
           )}
           {isGameStarted && (
-            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               🎯 {score}/{vocabWords.length}
             </div>
           )}
         </div>
-        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-end">
-          {!isGameStarted && (
-            <button
-              onClick={startGame}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
-            >
-              ▶️ Start Game
-            </button>
-          )}
+        <div className="w-auto flex flex-row gap-4 justify-end">
           {isGameStarted && (
             <button
               onClick={restartGame}
-              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
+              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 w-auto text-sm"
             >
               🔄 Restart
             </button>
@@ -223,9 +215,9 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
       </div>
 
       {/* Game Area */}
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-start justify-center h-full">
         {!isGameStarted ? (
-          <div className="text-center bg-glass rounded-xl shadow-lg p-8 py-12 mt-10">
+          <div className="text-center bg-glass rounded-xl shadow-lg p-8 py-12 mt-10 w-full max-w-2xl">
             <div className="text-6xl mb-4">🇬🇧→🇻🇳</div>
             <h3 className="text-4xl font-bold text-indigo-700 mb-4">
               Multiple Choice Game
@@ -235,65 +227,66 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
               <br />
               Đọc từ tiếng Anh và chọn nghĩa tiếng Việt đúng.
             </p>
-            <div className="text-sm text-gray-500">
-              Click "▶️ Start Game" để bắt đầu!
-            </div>
+            <button
+              onClick={startGame}
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-lg w-auto"
+            >
+              ▶️ Start Game
+            </button>
           </div>
         ) : (
-          <div className="w-full h-[760px] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
-            <div className="max-w-2xl w-full">
-              <div className="mb-6">
-                <div className="flex justify-between text-sm text-gray-600 mb-2">
-                  <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
-                    Question {currentQuestionIndex + 1} of {questions.length}
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${progress}%` }}
-                  ></div>
-                </div>
+          <div className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
+            <div className="mb-6">
+              <div className="flex justify-between text-sm text-gray-600 mb-2">
+                <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
+                  Question {currentQuestionIndex + 1} of {questions.length}
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div
+                  className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${progress}%` }}
+                ></div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-4">
+              <div className="text-4xl text-gray-700">
+                <span className="inline-block bg-indigo-100 text-indigo-700 font-semibold px-5 py-3 rounded-full">
+                  {currentQuestion.english}
+                </span>
               </div>
 
-              <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
-                <div className="text-center mb-0 lg:mb-0 lg:mr-8 flex-shrink-0">
-                  <h3 className="text-3xl font-bold text-blue-600 mb-2">
-                    {currentQuestion.english}
-                  </h3>
-                </div>
-
-                <div className="flex flex-col space-y-3 w-full max-w-md">
-                  {currentQuestion.options.map((option, index) => (
-                    <div
-                      key={index}
-                      onClick={() => handleOptionClick(option)}
-                      className={`bg-gray-50 border-2 border-gray-200 rounded-lg p-3 md:p-4 text-center transition-all duration-300 ${
-                        showFeedback
-                          ? 'pointer-events-none opacity-70'
-                          : 'cursor-pointer hover:translate-x-2 hover:shadow-lg'
-                      } ${
-                        !showFeedback && selectedOption === option
-                          ? 'border-blue-500 bg-blue-50 translate-x-2'
-                          : ''
-                      } ${
-                        showFeedback && option === currentQuestion.correct
-                          ? 'border-green-500 bg-green-100 animate-pulse'
-                          : ''
-                      } ${
-                        showFeedback &&
-                        selectedOption === option &&
-                        option !== currentQuestion.correct
-                          ? 'border-red-500 bg-red-100'
-                          : ''
-                      }`}
-                    >
-                      <span className="font-semibold text-gray-800">
-                        {option}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              <div className="grid grid-cols-2 gap-4 w-full">
+                {currentQuestion.options.map((option, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleOptionClick(option)}
+                    className={`border-2 border-gray-200 rounded-lg p-3 md:p-4 text-center transition-all duration-300 text-xl font-semibold text-gray-800 ${
+                      showFeedback
+                        ? 'pointer-events-none opacity-70'
+                        : 'cursor-pointer bg-white hover:bg-indigo-50 hover:scale-105 hover:shadow-md'
+                    } ${
+                      !showFeedback && selectedOption === option
+                        ? 'border-blue-500 bg-blue-100 scale-105 shadow-lg'
+                        : ''
+                    } ${
+                      showFeedback && option === currentQuestion.correct
+                        ? 'border-green-500 bg-green-100'
+                        : ''
+                    } ${
+                      showFeedback &&
+                      selectedOption === option &&
+                      option !== currentQuestion.correct
+                        ? 'border-red-500 bg-red-100'
+                        : ''
+                    }`}
+                  >
+                    <span className="font-semibold text-gray-800 text-4xl">
+                      {option}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

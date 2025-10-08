@@ -165,11 +165,6 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
     setSelectedCards([])
   }
 
-  const progress =
-    isGameStarted && vocabWords.length > 0
-      ? ((matchedPairs.length + 1) / vocabWords.length) * 100
-      : 0
-
   return (
     <div className="h-full flex flex-col overflow-hidden">
       <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
@@ -219,17 +214,17 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
             </button>
           </div>
         ) : (
-          <div className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto flex justify-center items-center">
-            <div className="grid grid-cols-4 gap-4 w-full h-full">
+          <div className="w-full h-[98%] bg-glass rounded-xl shadow-lg p-2 mt-1 overflow-auto flex justify-center items-center">
+            <div className="grid grid-cols-4 gap-4 w-full h-fit">
               {gameData.map((card, index) => (
                 <div
                   key={index}
                   onClick={() => handleCardClick(index)}
-                  className={`game-card rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center text-center overflow-hidden relative bg-cover bg-center ${
+                  className={`game-card rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center text-center overflow-hidden relative bg-cover bg-center h-24 ${
                     card.matched
-                      ? 'bg-green-100 border-green-400 opacity-60'
+                      ? 'bg-green-200 border-green-600 opacity-60 border-5'
                       : selectedCards.includes(index)
-                        ? 'bg-blue-100 border-blue-400 scale-105 shadow-lg'
+                        ? 'bg-blue-200 border-blue-600 scale-105 shadow-lg border-5'
                         : 'bg-white border-gray-200 hover:bg-indigo-50'
                   }`}
                   style={{

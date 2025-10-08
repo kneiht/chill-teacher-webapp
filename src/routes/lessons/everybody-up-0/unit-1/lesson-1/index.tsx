@@ -26,10 +26,11 @@ const gameComponents: Record<string, React.FC<any>> = {
   MatchingGame,
   MultipleChoiceEnViGame,
   MultipleChoiceViEnGame,
+  PictureChoiceEnGame,
   MemoryGame,
   ImageRevealChoiceGame,
   ListeningTypingEnGame,
-  PictureChoiceEnGame,
+
   PictureTypingEnGame,
   UnjumbleGame,
 }
@@ -45,6 +46,10 @@ const gameInfo: Record<string, { title: string; component: string }> = {
     title: 'Multiple Choice (VI → EN)',
     component: 'MultipleChoiceViEnGame',
   },
+  'Picture Choice': {
+    title: 'Picture Choice',
+    component: 'PictureChoiceEnGame',
+  },
   'Memory Game': { title: 'Memory Game', component: 'MemoryGame' },
   'Image Reveal': {
     title: 'Image Reveal Choice',
@@ -54,10 +59,7 @@ const gameInfo: Record<string, { title: string; component: string }> = {
     title: 'Listening & Typing',
     component: 'ListeningTypingEnGame',
   },
-  'Picture Choice': {
-    title: 'Picture Choice',
-    component: 'PictureChoiceEnGame',
-  },
+
   'Picture Typing': {
     title: 'Picture Typing',
     component: 'PictureTypingEnGame',

@@ -24,7 +24,16 @@
     "vietnameseTranslation": "Tôi có kéo."
   },
   {
-    "word": "paint fads asd fá dfsd fasdf adfa dfasdf asdf ",
+    "word": "paint",
+    "phonics": "/peɪnt/",
+    "image": "/vocab-images/paint.jpeg",
+    "vietnameseMeaning": "màu vẽ",
+    "sampleSentence": "I have paint.",
+    "vietnameseTranslation": "Tôi có màu vẽ."
+  },
+
+  {
+    "word": "paint fasd fasdf asd fasdf asd fà  ",
     "phonics": "/peɪnt/",
     "image": "/vocab-images/paint.jpeg",
     "vietnameseMeaning": "màu vẽ",
@@ -32,27 +41,28 @@
     "vietnameseTranslation": "Tôi có màu vẽ."
   },
   {
-    "word": "paper sfdg sdfg dfsg dsf",
-    "phonics": "/ˈpeɪ.pər/",
-    "image": "/vocab-images/paper.jpeg",
-    "vietnameseMeaning": "giấy",
-    "sampleSentence": "I have paper.",
-    "vietnameseTranslation": "Tôi có giấy."
+    "word": "paint fasd fasdf asd fasdf asd fà  ",
+    "phonics": "/peɪnt/",
+    "image": "/vocab-images/paint.jpeg",
+    "vietnameseMeaning": "màu vẽ",
+    "sampleSentence": "I have paint.",
+    "vietnameseTranslation": "Tôi có màu vẽ."
+  },
+
+  {
+    "word": "paint fasd fasdf asd fasdf asd fà  ",
+    "phonics": "/peɪnt/",
+    "image": "/vocab-images/paint.jpeg",
+    "vietnameseMeaning": "màu vẽ",
+    "sampleSentence": "I have paint.",
+    "vietnameseTranslation": "Tôi có màu vẽ."
   },
   {
-    "word": "glue fg sdfg sdg sd",
-    "phonics": "/ɡluː/",
-    "image": "/vocab-images/glue.jpeg",
-    "vietnameseMeaning": "keo dán",
-    "sampleSentence": "I have glue.",
-    "vietnameseTranslation": "Tôi có keo dán  ."
-  },
-  {
-    "word": "scissors fads asd asd fá fá fsad f",
-    "phonics": "/ˈsɪz.əz/",
-    "image": "/vocab-images/scissors.jpeg",
-    "vietnameseMeaning": "kéo fasdf á f",
-    "sampleSentence": "I have scissors.",
-    "vietnameseTranslation": "Tôi có kéo."
+    "word": "paint fasd fasdf asd fasdf asd fà  ",
+    "phonics": "/peɪnt/",
+    "image": "/vocab-images/paint.jpeg",
+    "vietnameseMeaning": "màu vẽ",
+    "sampleSentence": "I have paint.",
+    "vietnameseTranslation": "Tôi có màu vẽ."
   }
 ]
