@@ -409,12 +409,14 @@ interface UnjumbleGameActivityProps {
   vocabData: VocabItem[]
   backgroundUrl: string
   title: string
+  onClose?: () => void
 }
 
 const UnjumbleGame: React.FC<UnjumbleGameActivityProps> = ({
   vocabData,
   backgroundUrl,
   title,
+  onClose,
 }) => {
   const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
     <Slide isActive={isActive}>
@@ -428,7 +430,10 @@ const UnjumbleGame: React.FC<UnjumbleGameActivityProps> = ({
     <PresentationShell
       slides={slides}
       backgroundUrl={backgroundUrl}
-      showHome={true}
+      onHomeClick={onClose}
+      showNavButtons={false}
+      showOutlineButton={false}
+      showSlideCounter={false}
     />
   )
 }

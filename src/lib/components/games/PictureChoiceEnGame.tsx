@@ -346,12 +346,14 @@ interface PictureChoiceEnGameActivityProps {
   vocabData: VocabItem[]
   backgroundUrl: string
   title: string
+  onClose?: () => void
 }
 
 const PictureChoiceEnGame: React.FC<PictureChoiceEnGameActivityProps> = ({
   vocabData,
   backgroundUrl,
   title,
+  onClose,
 }) => {
   const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
     <Slide isActive={isActive}>
@@ -365,7 +367,10 @@ const PictureChoiceEnGame: React.FC<PictureChoiceEnGameActivityProps> = ({
     <PresentationShell
       slides={slides}
       backgroundUrl={backgroundUrl}
-      showHome={true}
+      onHomeClick={onClose}
+      showNavButtons={false}
+      showOutlineButton={false}
+      showSlideCounter={false}
     />
   )
 }

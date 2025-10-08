@@ -341,12 +341,14 @@ interface PictureTypingEnGameActivityProps {
   vocabData: VocabItem[]
   backgroundUrl: string
   title: string
+  onClose?: () => void
 }
 
 const PictureTypingEnGame: React.FC<PictureTypingEnGameActivityProps> = ({
   vocabData,
   backgroundUrl,
   title,
+  onClose,
 }) => {
   const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
     <Slide isActive={isActive}>
@@ -360,7 +362,10 @@ const PictureTypingEnGame: React.FC<PictureTypingEnGameActivityProps> = ({
     <PresentationShell
       slides={slides}
       backgroundUrl={backgroundUrl}
-      showHome={true}
+      onHomeClick={onClose}
+      showNavButtons={false}
+      showOutlineButton={false}
+      showSlideCounter={false}
     />
   )
 }

@@ -333,12 +333,14 @@ interface MultipleChoiceViEnGameActivityProps {
   vocabData: VocabItem[]
   backgroundUrl: string
   title: string
+  onClose?: () => void
 }
 
 const MultipleChoiceViEnGame: React.FC<MultipleChoiceViEnGameActivityProps> = ({
   vocabData,
   backgroundUrl,
   title,
+  onClose,
 }) => {
   const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
     <Slide isActive={isActive}>
@@ -352,7 +354,10 @@ const MultipleChoiceViEnGame: React.FC<MultipleChoiceViEnGameActivityProps> = ({
     <PresentationShell
       slides={slides}
       backgroundUrl={backgroundUrl}
-      showHome={true}
+      onHomeClick={onClose}
+      showNavButtons={false}
+      showOutlineButton={false}
+      showSlideCounter={false}
     />
   )
 }

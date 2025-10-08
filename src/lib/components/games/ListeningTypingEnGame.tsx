@@ -352,12 +352,14 @@ interface ListeningTypingEnGameActivityProps {
   vocabData: VocabItem[]
   backgroundUrl: string
   title: string
+  onClose?: () => void
 }
 
 const ListeningTypingEnGame: React.FC<ListeningTypingEnGameActivityProps> = ({
   vocabData,
   backgroundUrl,
   title,
+  onClose,
 }) => {
   const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
     <Slide isActive={isActive}>
@@ -371,7 +373,10 @@ const ListeningTypingEnGame: React.FC<ListeningTypingEnGameActivityProps> = ({
     <PresentationShell
       slides={slides}
       backgroundUrl={backgroundUrl}
-      showHome={true}
+      onHomeClick={onClose}
+      showNavButtons={false}
+      showOutlineButton={false}
+      showSlideCounter={false}
     />
   )
 }

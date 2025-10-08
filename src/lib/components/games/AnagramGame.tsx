@@ -415,6 +415,9 @@ const AnagramGame: React.FC<AnagramGameActivityProps> = ({
       slides={slides}
       backgroundUrl={backgroundUrl}
       onHomeClick={onClose}
+      showNavButtons={false}
+      showOutlineButton={false}
+      showSlideCounter={false}
     />
   )
 }

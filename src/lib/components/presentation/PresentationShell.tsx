@@ -28,10 +28,10 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   backgroundUrl = 'None',
   onHomeClick,
   showFullscreenButton = true,
-  showNavButtons = true,
-  showOutlineButton = true,
-  showSettingsButton = true,
-  showSlideCounter = true,
+  showNavButtons = false,
+  showOutlineButton = false,
+  showSettingsButton = false,
+  showSlideCounter = false,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
