@@ -25,7 +25,6 @@ interface FlashcardProps {
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const settings = useStore(flashcardStore)
-  console.log(settings)
   const { speak } = useVoice()
 
   useEffect(() => {

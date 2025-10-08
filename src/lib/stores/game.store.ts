@@ -40,9 +40,7 @@ export const answerIncorrect = () => {
 
 // Action to set the total number of questions
 export const setTotalQuestions = (total: number) => {
-  console.log('setTotalQuestions', total)
   gameStore.setState((prev) => ({ ...prev, totalQuestions: total }))
-  console.log('totalQuestions', gameStore.state.totalQuestions)
 }
 
 // Action to reset the game state
