@@ -39,6 +39,8 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const { voices, voice, rate, setVoice, setRate } = useVoice()
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
+  const touchStartX = useRef<number>(0)
+  const touchStartY = useRef<number>(0)
 
   // Font size adjustment
   const adjustFontSize = () => {
@@ -104,6 +106,33 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
     }
   }
 
+  // Touch navigation
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+    touchStartY.current = e.touches[0].clientY
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX
+    const touchEndY = e.changedTouches[0].clientY
+    const deltaX = touchStartX.current - touchEndX
+    const deltaY = touchStartY.current - touchEndY
+    const minSwipeDistance = 50
+
+    if (
+      Math.abs(deltaX) > minSwipeDistance &&
+      Math.abs(deltaY) < minSwipeDistance
+    ) {
+      if (deltaX > 0) {
+        // Swipe left - next slide
+        showSlide(currentSlide + 1)
+      } else {
+        // Swipe right - previous slide
+        showSlide(currentSlide - 1)
+      }
+    }
+  }
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -119,32 +148,11 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [currentSlide, showOutline])
 
-  // Touch swipe
-  const [touchStartX, setTouchStartX] = useState(0)
-  const [touchEndX, setTouchEndX] = useState(0)
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.changedTouches[0].screenX)
-  }
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    setTouchEndX(e.changedTouches[0].screenX)
-    const threshold = 100
-    const diff = touchStartX - touchEndX
-    if (diff > threshold) {
-      showSlide(currentSlide + 1)
-    } else if (diff < -threshold) {
-      showSlide(currentSlide - 1)
-    }
-  }
-
   return (
     <div className="bg-black h-screen w-screen flex items-center justify-center">
       <div
         ref={slideContainerRef}
         className="relative aspect-[16/9] w-full max-h-full max-w-[calc(100vh*16/9)]"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
       >
         {/* Slides container */}
         <div
@@ -157,6 +165,8 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           {/* Slides will be rendered here */}
           {slides.map((SlideComponent, index) => (
@@ -170,24 +180,24 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             <button
               onClick={onHomeClick}
               title="Go Back"
-              className="presentation-fullscreen"
+              className="presentation-fullscreen p-4 h-12 w-12 md:h-10 md:w-10"
             >
-              <Home />
+              <Home className="h-10 w-10 md:h-6 md:w-6" />
             </button>
           )}
 
           {showNavButtons && (
             <button
               onClick={() => showSlide(currentSlide - 1)}
-              className="presentation-button"
+              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
               title="Previous Slide"
             >
-              <ChevronLeft />
+              <ChevronLeft className="h-10 w-10 md:h-6 md:w-6" />
             </button>
           )}
 
           {showSlideCounter && (
-            <div className="presentation-counter">
+            <div className="presentation-counter p-2 h-12 w-12 md:h-10 md:w-10 text-sm">
               {currentSlide + 1}/{totalSlides}
             </div>
           )}
@@ -195,30 +205,30 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           {showNavButtons && (
             <button
               onClick={() => showSlide(currentSlide + 1)}
-              className="presentation-button"
+              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
               title="Next Slide"
             >
-              <ChevronRight />
+              <ChevronRight className="h-10 w-10 md:h-6 md:w-6" />
             </button>
           )}
 
           {showOutlineButton && (
             <button
               onClick={toggleOutline}
-              className="presentation-button"
+              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
               title="Outline"
             >
-              <Menu />
+              <Menu className="h-10 w-10 md:h-6 md:w-6" />
             </button>
           )}
 
           {showSettingsButton && (
             <button
               onClick={() => setShowTTSSettings(true)}
-              className="presentation-button"
+              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
               title="TTS Settings"
             >
-              <Settings />
+              <Settings className="h-10 w-10 md:h-6 md:w-6" />
             </button>
           )}
 
@@ -226,9 +236,13 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             <button
               onClick={toggleFullscreen}
               title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-              className="presentation-fullscreen"
+              className="presentation-fullscreen p-2 h-12 w-12 md:h-10 md:w-10"
             >
-              {isFullscreen ? <Minimize /> : <Maximize />}
+              {isFullscreen ? (
+                <Minimize className="h-10 w-10 md:h-6 md:w-6" />
+              ) : (
+                <Maximize className="h-10 w-10 md:h-6 md:w-6" />
+              )}
             </button>
           )}
         </div>
@@ -271,7 +285,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
         {/* TTS Settings Modal */}
         {showTTSSettings && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+            className="fixed inset-0 bg-[#00000075] z-50 flex items-center justify-center"
             onClick={(e) =>
               e.target === e.currentTarget && setShowTTSSettings(false)
             }

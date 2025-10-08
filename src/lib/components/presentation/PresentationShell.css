@@ -195,8 +195,6 @@ body {
   border: rgba(102, 102, 102, 0.535) solid 0.02rem;
   background-color: white;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +218,6 @@ body {
 }
 
 .presentation-counter {
-  font-size: 0.75rem;
   cursor: default;
 }
 
