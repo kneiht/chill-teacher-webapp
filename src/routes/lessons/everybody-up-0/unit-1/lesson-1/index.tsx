@@ -35,8 +35,8 @@ const gameComponents: Record<string, React.FC<any>> = {
 }
 
 const gameInfo: Record<string, { title: string; component: string }> = {
-  MatchingGame: { title: 'Matching Game', component: 'MatchingGame' },
-  AnagramGame: { title: 'Anagram Game', component: 'AnagramGame' },
+  'Matching Game': { title: 'Matching Game', component: 'MatchingGame' },
+  'Anagram Game': { title: 'Anagram Game', component: 'AnagramGame' },
   'Multiple Choice En→Vi': {
     title: 'Multiple Choice (EN → VI)',
     component: 'MultipleChoiceEnViGame',
@@ -64,6 +64,9 @@ const gameInfo: Record<string, { title: string; component: string }> = {
   },
   'Unjumble Game': { title: 'Unjumble Game', component: 'UnjumbleGame' },
 }
+
+const buttonStyle =
+  'text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const [activeGame, setActiveGame] = useState<string | null>(null)
@@ -94,36 +97,27 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   return (
     <Slide isActive={isActive}>
       <div className="flex flex-col items-center justify-start h-full text-center">
-        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-12 mt-12 text-center leading-tight">
+        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
           Unit 1: Art Class
           <br />
           Lesson 1: School Supplies
         </h1>
-        <div className="grid grid-cols-3 gap-8">
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Bài giảng
+        <div className="grid grid-cols-3 gap-5">
+          <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
+            <button className={buttonStyle}>Bài giảng</button>
           </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Video bài giảng
+          <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
+            <button className={buttonStyle}>Video bài giảng</button>
           </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Flashcards
+          <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
+            <button className={buttonStyle}>Flashcards</button>
           </Link>
 
           {Object.keys(gameInfo).map((gameName) => (
             <button
               key={gameName}
               onClick={() => setActiveGame(gameName)}
-              className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+              className={buttonStyle}
             >
               {gameName}
             </button>
@@ -131,7 +125,6 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
         </div>
       </div>
 
-      {/* Modal/Overlay để hiển thị game khi test */}
       <GamePlayer />
     </Slide>
   )

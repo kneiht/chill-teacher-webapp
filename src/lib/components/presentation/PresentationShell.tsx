@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, useRouterState } from '@tanstack/react-router'
 import {
   Maximize,
   Minimize,
