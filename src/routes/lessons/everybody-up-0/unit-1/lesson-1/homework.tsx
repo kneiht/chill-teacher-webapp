@@ -11,7 +11,7 @@ import urls from './assets/urls.json'
 const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
   <Slide isActive={isActive} scrollable={true}>
     <div className="flex flex-col items-center justify-start h-full text-center p-6">
-      <div className="bg-white bg-opacity-90 rounded-xl p-8 shadow-2xl w-full">
+      <div className="bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl w-full">
         <h2 className="text-4xl font-bold text-indigo-700 mb-6">
           Unit 1: Art Class
           <br />
@@ -27,11 +27,31 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
           <li>
             Viết các câu sau, mỗi câu tối thiểu 5 lần, chụp hình bài viết gửi
             giáo viên:
-            <ul className="ml-8 mt-2 space-y-1 list-disc">
-              <li>I have paper.</li>
-              <li>I have glue.</li>
-              <li>I have scissors.</li>
-              <li>I have paint.</li>
+            <ul className="ml-8 mt-2 space-y-1">
+              <li className="ml-10">I have paper.</li>
+              <li className="ml-10">I have glue.</li>
+              <li className="ml-10">I have scissors.</li>
+              <li className="ml-10">I have paint.</li>
+            </ul>
+            {/* ví dụ */}
+            <p className="text-xl mt-6 italic px-10">
+              Ví dụ cách viết (lưu ý cách viết theo chuẩn Tiếng Anh nên một số
+              chữ khác sẽ có nét khác Tiếng Việt)
+            </p>
+            <ul
+              className="ml-8 mt-2 space-y-5"
+              style={{ fontFamily: "'Playwrite AU NSW Guides', cursive" }}
+            >
+              <li className="ml-10">
+                I have paper. I have paper. I have paper.
+              </li>
+              <li className="ml-10">I have glue. I have glue. I have glue.</li>
+              <li className="ml-10">
+                I have scissors. I have scissors. I have scissors.
+              </li>
+              <li className="ml-10">
+                I have paint. I have paint. I have paint.
+              </li>
             </ul>
           </li>
           <li>
