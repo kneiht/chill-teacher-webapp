@@ -2,7 +2,7 @@
   {
     "word": "paper",
     "phonics": "/ˈpeɪ.pər/",
-    "image": "/vocab-images/paper.jpeg",
+    "image": "/vocab-images/paper.webp",
     "vietnameseMeaning": "giấy",
     "sampleSentence": "I have paper.",
     "vietnameseTranslation": "Tôi có giấy."
@@ -10,7 +10,7 @@
   {
     "word": "glue",
     "phonics": "/ɡluː/",
-    "image": "/vocab-images/glue.jpeg",
+    "image": "/vocab-images/glue.webp",
     "vietnameseMeaning": "keo dán",
     "sampleSentence": "I have glue.",
     "vietnameseTranslation": "Tôi có keo dán."
@@ -18,7 +18,7 @@
   {
     "word": "scissors",
     "phonics": "/ˈsɪz.əz/",
-    "image": "/vocab-images/scissors.jpeg",
+    "image": "/vocab-images/scissors.webp",
     "vietnameseMeaning": "kéo",
     "sampleSentence": "I have scissors.",
     "vietnameseTranslation": "Tôi có kéo."
@@ -26,7 +26,7 @@
   {
     "word": "paint",
     "phonics": "/peɪnt/",
-    "image": "/vocab-images/paint.jpeg",
+    "image": "/vocab-images/paint.webp",
     "vietnameseMeaning": "màu vẽ",
     "sampleSentence": "I have paint.",
     "vietnameseTranslation": "Tôi có màu vẽ."

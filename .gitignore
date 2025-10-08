@@ -11,3 +11,10 @@ count.txt
 # Private files and folders
 \#*
 *.tar.gz
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
