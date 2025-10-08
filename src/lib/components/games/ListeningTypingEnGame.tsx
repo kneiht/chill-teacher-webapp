@@ -48,6 +48,7 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   const [isPlayingAudio, setIsPlayingAudio] = useState(false)
 
   const inputRef = useRef<HTMLInputElement>(null)
+  const nextButtonRef = useRef<HTMLButtonElement>(null)
   const { speak } = useVoice()
 
   const vocabWords: Array<VocabItem> = vocabData
@@ -56,6 +57,13 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     setTotalQuestions(vocabWords.length)
     resetGame()
   }, [])
+
+  // Auto-focus input when moving to next question
+  useEffect(() => {
+    if (isGameStarted && !isAnswering && inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [currentQuestionIndex, isAnswering, isGameStarted])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -164,12 +172,15 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
       setFeedback(`❌ Sai. Đáp án đúng: "${currentQuestion.english}"`)
     }
 
+    // Focus next button after showing feedback
     setTimeout(() => {
-      nextQuestion()
-    }, 2000)
+      nextButtonRef.current?.focus()
+    }, 100)
   }
 
   const nextQuestion = () => {
+    if (!isAnswering) return
+
     const nextIndex = currentQuestionIndex + 1
     if (nextIndex < questions.length) {
       setCurrentQuestionIndex(nextIndex)
@@ -298,13 +309,23 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
                   placeholder="Gõ từ tiếng Anh..."
                   autoComplete="off"
                 />
-                <button
-                  onClick={submitAnswer}
-                  disabled={isAnswering || !userAnswer.trim()}
-                  className="bg-green-500 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg text-lg"
-                >
-                  Submit
-                </button>
+                {!isAnswering ? (
+                  <button
+                    onClick={submitAnswer}
+                    disabled={!userAnswer.trim()}
+                    className="bg-green-500 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg text-lg"
+                  >
+                    Submit
+                  </button>
+                ) : (
+                  <button
+                    ref={nextButtonRef}
+                    onClick={nextQuestion}
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg text-lg"
+                  >
+                    Next
+                  </button>
+                )}
               </div>
 
               <div className="text-lg font-semibold text-center h-6">
