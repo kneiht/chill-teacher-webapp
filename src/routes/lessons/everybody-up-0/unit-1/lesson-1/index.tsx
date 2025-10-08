@@ -84,13 +84,8 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             vocabData={vocabData}
             backgroundUrl={bg}
             title={`${game.title} - School Supplies`}
+            onClose={() => setActiveGame(null)}
           />
-          <button
-            onClick={() => setActiveGame(null)}
-            className="absolute top-2 right-20 z-[60] bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors"
-          >
-            Đóng
-          </button>
         </div>
       </div>
     )
@@ -144,14 +139,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
 
 const LessonHomePage: React.FC = () => {
   const slides = [LessonHomepageSlide]
-  return (
-    <PresentationShell
-      slides={slides}
-      backgroundUrl={bg}
-      showControls={false}
-      showHome={false}
-    />
-  )
+  return <PresentationShell slides={slides} backgroundUrl={bg} />
 }
 
 export const Route = createFileRoute(

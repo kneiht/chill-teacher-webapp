@@ -14,9 +14,7 @@ const GoogleSlideComponent: React.FC<{ isActive: boolean }> = ({
 
 const GoogleSlideLesson = () => {
   const slides = [GoogleSlideComponent]
-  return (
-    <PresentationShell slides={slides} showControls={false} showHome={true} />
-  )
+  return <PresentationShell slides={slides} />
 }
 
 export const Route = createFileRoute(

@@ -15,15 +15,23 @@ import { useVoice } from '@/lib/hooks/use-voice'
 interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
   backgroundUrl?: string
-  showControls?: boolean
-  showHome?: boolean
+  onHomeClick?: () => void
+  showFullscreenButton?: boolean
+  showNavButtons?: boolean
+  showOutlineButton?: boolean
+  showSettingsButton?: boolean
+  showSlideCounter?: boolean
 }
 
 const PresentationShell: React.FC<PresentationShellProps> = ({
   slides,
   backgroundUrl = 'None',
-  showControls = true,
-  showHome = true,
+  onHomeClick,
+  showFullscreenButton = true,
+  showNavButtons = true,
+  showOutlineButton = true,
+  showSettingsButton = true,
+  showSlideCounter = true,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
@@ -32,26 +40,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const { voices, voice, rate, setVoice, setRate } = useVoice()
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
-
-  // Home button component
-  const HomeButton = () => {
-    // Get the current path
-    const routerState = useRouterState()
-    const pathname = routerState.location.pathname
-
-    // Remove the last segment of the path to get the parent path
-    const parentPath = pathname.substring(0, pathname.lastIndexOf('/'))
-
-    return (
-      <Link
-        to={parentPath || '/'}
-        title="Go to Lesson Home" // Tooltip
-        className="presentation-fullscreen"
-      >
-        <Home size={18} />
-      </Link>
-    )
-  }
 
   // Font size adjustment
   const adjustFontSize = () => {
@@ -177,48 +165,72 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           ))}
         </div>
 
-        {/* Activity controls */}
-        <div className="absolute top-4 right-4 flex flex-row gap-2 z-50">
-          {showHome && <HomeButton />}
-          <button
-            onClick={toggleFullscreen}
-            title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-            className="presentation-fullscreen"
-          >
-            {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
-          </button>
-        </div>
+        {/* Top Controls Bar */}
+        <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
+          {onHomeClick && (
+            <button
+              onClick={onHomeClick}
+              title="Go Back"
+              className="presentation-fullscreen"
+            >
+              <Home size={18} />
+            </button>
+          )}
 
-        {/* Controls */}
-        <div className="absolute bottom-3 right-4 z-50 flex items-center gap-2">
-          {showControls && (
-            <>
-              <button
-                onClick={() => showSlide(currentSlide - 1)}
-                className="presentation-button"
-              >
-                <ChevronLeft size={18} />
-              </button>
-              <button
-                onClick={() => showSlide(currentSlide + 1)}
-                className="presentation-button"
-              >
-                <ChevronRight size={18} />
-              </button>
-              <button onClick={toggleOutline} className="presentation-button">
-                <Menu size={18} />
-              </button>
-              <button
-                onClick={() => setShowTTSSettings(true)}
-                className="presentation-button"
-                title="TTS Settings"
-              >
-                <Settings size={18} />
-              </button>
-              <div className="presentation-counter">
-                {currentSlide + 1}/{totalSlides}
-              </div>
-            </>
+          {showNavButtons && (
+            <button
+              onClick={() => showSlide(currentSlide - 1)}
+              className="presentation-button"
+              title="Previous Slide"
+            >
+              <ChevronLeft size={18} />
+            </button>
+          )}
+
+          {showSlideCounter && (
+            <div className="presentation-counter">
+              {currentSlide + 1}/{totalSlides}
+            </div>
+          )}
+
+          {showNavButtons && (
+            <button
+              onClick={() => showSlide(currentSlide + 1)}
+              className="presentation-button"
+              title="Next Slide"
+            >
+              <ChevronRight size={18} />
+            </button>
+          )}
+
+          {showOutlineButton && (
+            <button
+              onClick={toggleOutline}
+              className="presentation-button"
+              title="Outline"
+            >
+              <Menu size={18} />
+            </button>
+          )}
+
+          {showSettingsButton && (
+            <button
+              onClick={() => setShowTTSSettings(true)}
+              className="presentation-button"
+              title="TTS Settings"
+            >
+              <Settings size={18} />
+            </button>
+          )}
+
+          {showFullscreenButton && (
+            <button
+              onClick={toggleFullscreen}
+              title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+              className="presentation-fullscreen"
+            >
+              {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+            </button>
           )}
         </div>
 
