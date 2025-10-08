@@ -14,6 +14,7 @@ export default [
     rules: {
       'import/order': 'off',
       'sort-imports': 'off',
+      '@typescript-eslint/no-unnecessary-condition': 'off',
     },
   },
 ]
