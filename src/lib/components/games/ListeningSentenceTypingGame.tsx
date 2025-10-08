@@ -14,7 +14,7 @@ import Slide from '@/lib/components/presentation/Slide'
 interface VocabItem {
   word: string
   pronunciation?: string
-  exampleSentenceEn?: string
+  sampleSentence?: string
   // other fields
 }
 
@@ -105,7 +105,7 @@ const ListeningSentenceTypingGameCore: React.FC<
     return shuffled
       .slice(0, num)
       .map((word) => ({
-        sentence: word.exampleSentenceEn || '',
+        sentence: word.sampleSentence || '',
       }))
       .filter((q) => q.sentence) // Only include items with sentences
   }
@@ -252,7 +252,7 @@ const ListeningSentenceTypingGameCore: React.FC<
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
               Nghe phát âm câu ví dụ và gõ lại câu. Có{' '}
-              {vocabWords.filter((w) => w.exampleSentenceEn).length} câu.
+              {vocabWords.filter((w) => w.sampleSentence).length} câu.
             </p>
             <button
               onClick={startGame}
