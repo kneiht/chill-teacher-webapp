@@ -43,38 +43,42 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   }
 
   return (
-    <Slide isActive={isActive}>
-      <div className="flex flex-col items-center justify-start h-full text-center">
-        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
-          Unit 1: Art Class
-          <br />
-          Lesson 1: School Supplies
-        </h1>
-        <div className="grid grid-cols-2 gap-x-20  gap-y-7">
-          <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
-            <WoodenButton className={buttonStyle}>Bài giảng</WoodenButton>
-          </Link>
-          <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
-            <WoodenButton className={buttonStyle}>Video bài giảng</WoodenButton>
-          </Link>
-          <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
-            <WoodenButton className={buttonStyle}>Flashcards</WoodenButton>
-          </Link>
+    <div className="h-[98%] overflow-auto">
+      <Slide isActive={isActive}>
+        <div className="flex flex-col items-center justify-start h-full text-center">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
+            Unit 1: Art Class
+            <br />
+            Lesson 1: School Supplies
+          </h1>
+          <div className="grid grid-cols-2 gap-x-20  gap-y-7">
+            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
+              <WoodenButton className={buttonStyle}>Bài giảng</WoodenButton>
+            </Link>
+            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
+              <WoodenButton className={buttonStyle}>
+                Video bài giảng
+              </WoodenButton>
+            </Link>
+            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
+              <WoodenButton className={buttonStyle}>Flashcards</WoodenButton>
+            </Link>
 
-          {Object.keys(gameInfo).map((gameName) => (
-            <WoodenButton
-              key={gameName}
-              onClick={() => setActiveGame(gameName)}
-              className={buttonStyle}
-            >
-              {gameName}
-            </WoodenButton>
-          ))}
+            {Object.keys(gameInfo).map((gameName) => (
+              <WoodenButton
+                key={gameName}
+                onClick={() => setActiveGame(gameName)}
+                className={buttonStyle}
+              >
+                {gameName}
+              </WoodenButton>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <GamePlayer />
-    </Slide>
+        <GamePlayer />
+      </Slide>
+    </div>
   )
 }
 
