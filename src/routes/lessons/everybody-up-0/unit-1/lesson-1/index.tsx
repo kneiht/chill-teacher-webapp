@@ -5,15 +5,96 @@ import vocabData from './assets/vocab.json'
 import { createFileRoute, Link } from '@tanstack/react-router'
 
 // Components
-import AnagramGame from '@/lib/components/games/AnagramGame'
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
+import AnagramGame from '@/lib/components/games/AnagramGame'
+import MatchingGame from '@/lib/components/games/MatchingGame'
+import MultipleChoiceEnViGame from '@/lib/components/games/MultipleChoiceEnViGame'
+import MultipleChoiceViEnGame from '@/lib/components/games/MultipleChoiceViEnGame'
+import MemoryGame from '@/lib/components/games/MemoryGame'
+import ImageRevealChoiceGame from '@/lib/components/games/ImageRevealChoiceGame'
+import ListeningTypingEnGame from '@/lib/components/games/ListeningTypingEnGame'
+import PictureChoiceEnGame from '@/lib/components/games/PictureChoiceEnGame'
+import PictureTypingEnGame from '@/lib/components/games/PictureTypingEnGame'
+import UnjumbleGame from '@/lib/components/games/UnjumbleGame'
 
 // Assets
 import bg from './assets/bg.png'
 
+const gameComponents: Record<string, React.FC<any>> = {
+  AnagramGame,
+  MatchingGame,
+  MultipleChoiceEnViGame,
+  MultipleChoiceViEnGame,
+  MemoryGame,
+  ImageRevealChoiceGame,
+  ListeningTypingEnGame,
+  PictureChoiceEnGame,
+  PictureTypingEnGame,
+  UnjumbleGame,
+}
+
+const gameInfo: Record<string, { title: string; component: string }> = {
+  MatchingGame: { title: 'Matching Game', component: 'MatchingGame' },
+  AnagramGame: { title: 'Anagram Game', component: 'AnagramGame' },
+  'Multiple Choice En→Vi': {
+    title: 'Multiple Choice (EN → VI)',
+    component: 'MultipleChoiceEnViGame',
+  },
+  'Multiple Choice Vi→En': {
+    title: 'Multiple Choice (VI → EN)',
+    component: 'MultipleChoiceViEnGame',
+  },
+  'Memory Game': { title: 'Memory Game', component: 'MemoryGame' },
+  'Image Reveal': {
+    title: 'Image Reveal Choice',
+    component: 'ImageRevealChoiceGame',
+  },
+  'Listening & Typing': {
+    title: 'Listening & Typing',
+    component: 'ListeningTypingEnGame',
+  },
+  'Picture Choice': {
+    title: 'Picture Choice',
+    component: 'PictureChoiceEnGame',
+  },
+  'Picture Typing': {
+    title: 'Picture Typing',
+    component: 'PictureTypingEnGame',
+  },
+  'Unjumble Game': { title: 'Unjumble Game', component: 'UnjumbleGame' },
+}
+
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
-  const [showAnagramGame, setShowAnagramGame] = useState(false)
+  const [activeGame, setActiveGame] = useState<string | null>(null)
+
+  const GamePlayer = () => {
+    if (!activeGame) return null
+
+    const game = gameInfo[activeGame]
+    if (!game) return null
+
+    const GameComponent = gameComponents[game.component]
+    if (!GameComponent) return null
+
+    return (
+      <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+        <div className="relative w-full h-full">
+          <GameComponent
+            vocabData={vocabData}
+            backgroundUrl={bg}
+            title={`${game.title} - School Supplies`}
+          />
+          <button
+            onClick={() => setActiveGame(null)}
+            className="absolute top-2 right-20 z-[60] bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <Slide isActive={isActive}>
@@ -43,89 +124,20 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             Flashcards
           </Link>
 
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/matching-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Matching Game
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Multiple Choice En→Vi
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Multiple Choice Vi→En
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/memory-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Memory Game
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Image Reveal
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Listening & Typing
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Picture Choice
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Picture Typing
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Unjumble Game
-          </Link>
-          {/* Nút để test game */}
-          <button
-            onClick={() => setShowAnagramGame(true)}
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105 bg-yellow-400 text-yellow-900"
-          >
-            Test Anagram Game
-          </button>
+          {Object.keys(gameInfo).map((gameName) => (
+            <button
+              key={gameName}
+              onClick={() => setActiveGame(gameName)}
+              className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
+            >
+              {gameName}
+            </button>
+          ))}
         </div>
       </div>
 
       {/* Modal/Overlay để hiển thị game khi test */}
-      {showAnagramGame && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
-          <div className="relative w-full h-full">
-            <AnagramGame
-              vocabData={vocabData}
-              backgroundUrl={bg}
-              title="Anagram Game (Test Mode)"
-            />
-            {/* Nút đóng game test */}
-            <button
-              onClick={() => setShowAnagramGame(false)}
-              className="absolute top-2 right-20 z-[60] bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors"
-            >
-              Đóng
-            </button>
-          </div>
-        </div>
-      )}
+      <GamePlayer />
     </Slide>
   )
 }

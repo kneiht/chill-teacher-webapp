@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -21,10 +25,12 @@ interface Question {
 
 interface PictureTypingEnGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const PictureTypingEnGame: React.FC<PictureTypingEnGameProps> = ({
+const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
   vocabData,
+  title,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -173,7 +179,7 @@ const PictureTypingEnGame: React.FC<PictureTypingEnGameProps> = ({
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Picture Typing - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -328,6 +334,34 @@ const PictureTypingEnGame: React.FC<PictureTypingEnGameProps> = ({
         </div>
       )}
     </div>
+  )
+}
+
+interface PictureTypingEnGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const PictureTypingEnGame: React.FC<PictureTypingEnGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <PictureTypingEnGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [GameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

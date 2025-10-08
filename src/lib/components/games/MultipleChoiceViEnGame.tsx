@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -20,10 +24,12 @@ interface Question {
 
 interface MultipleChoiceViEnGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const MultipleChoiceViEnGame: React.FC<MultipleChoiceViEnGameProps> = ({
+const MultipleChoiceViEnGameCore: React.FC<MultipleChoiceViEnGameProps> = ({
   vocabData,
+  title,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -177,7 +183,7 @@ const MultipleChoiceViEnGame: React.FC<MultipleChoiceViEnGameProps> = ({
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Multiple Choice - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -320,6 +326,34 @@ const MultipleChoiceViEnGame: React.FC<MultipleChoiceViEnGameProps> = ({
         </div>
       )}
     </div>
+  )
+}
+
+interface MultipleChoiceViEnGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const MultipleChoiceViEnGame: React.FC<MultipleChoiceViEnGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <MultipleChoiceViEnGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [GameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

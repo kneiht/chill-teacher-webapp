@@ -7,6 +7,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   pronunciation?: string
@@ -22,10 +26,12 @@ interface Question {
 
 interface ListeningTypingEnGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const ListeningTypingEnGame: React.FC<ListeningTypingEnGameProps> = ({
+const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   vocabData,
+  title,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -196,7 +202,7 @@ const ListeningTypingEnGame: React.FC<ListeningTypingEnGameProps> = ({
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Listening & Typing - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -339,6 +345,34 @@ const ListeningTypingEnGame: React.FC<ListeningTypingEnGameProps> = ({
         </div>
       )}
     </div>
+  )
+}
+
+interface ListeningTypingEnGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const ListeningTypingEnGame: React.FC<ListeningTypingEnGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <ListeningTypingEnGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [GameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

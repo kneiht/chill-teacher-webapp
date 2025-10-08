@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -21,10 +25,12 @@ interface Question {
 
 interface ImageRevealChoiceGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const ImageRevealChoiceGame: React.FC<ImageRevealChoiceGameProps> = ({
+const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
   vocabData,
+  title,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -236,7 +242,7 @@ const ImageRevealChoiceGame: React.FC<ImageRevealChoiceGameProps> = ({
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Image Reveal Choice - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -368,6 +374,34 @@ const ImageRevealChoiceGame: React.FC<ImageRevealChoiceGameProps> = ({
         </div>
       )}
     </div>
+  )
+}
+
+interface ImageRevealChoiceGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const ImageRevealChoiceGame: React.FC<ImageRevealChoiceGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <ImageRevealChoiceGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [GameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

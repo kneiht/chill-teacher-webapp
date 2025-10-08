@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -23,9 +27,10 @@ interface Card {
 
 interface MemoryGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const MemoryGame: React.FC<MemoryGameProps> = ({ vocabData }) => {
+const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
   const [gameData, setGameData] = useState<Array<Card>>([])
   const [selectedCards, setSelectedCards] = useState<Array<number>>([])
   const [matchedPairs, setMatchedPairs] = useState<Array<number>>([])
@@ -176,7 +181,7 @@ const MemoryGame: React.FC<MemoryGameProps> = ({ vocabData }) => {
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Memory Game - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -327,6 +332,34 @@ const MemoryGame: React.FC<MemoryGameProps> = ({ vocabData }) => {
         </div>
       )}
     </div>
+  )
+}
+
+interface MemoryGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const MemoryGame: React.FC<MemoryGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const MemoryGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <MemoryGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [MemoryGameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

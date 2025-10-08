@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -21,9 +25,13 @@ interface Card {
 
 interface MatchingGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const MatchingGame: React.FC<MatchingGameProps> = ({ vocabData }) => {
+const MatchingGameCore: React.FC<MatchingGameProps> = ({
+  vocabData,
+  title,
+}) => {
   const [gameData, setGameData] = useState<Array<Card>>([])
   const [selectedCards, setSelectedCards] = useState<Array<number>>([])
   const [matchedPairs, setMatchedPairs] = useState<Array<number>>([])
@@ -158,7 +166,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ vocabData }) => {
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Matching Game - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -258,6 +266,34 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ vocabData }) => {
         </div>
       )}
     </div>
+  )
+}
+
+interface MatchingGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const MatchingGame: React.FC<MatchingGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const MatchingGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <MatchingGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [MatchingGameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

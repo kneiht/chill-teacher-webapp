@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -22,9 +26,13 @@ interface Question {
 
 interface UnjumbleGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const UnjumbleGame: React.FC<UnjumbleGameProps> = ({ vocabData }) => {
+const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
+  vocabData,
+  title,
+}) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -219,7 +227,7 @@ const UnjumbleGame: React.FC<UnjumbleGameProps> = ({ vocabData }) => {
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Unjumble Game - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -394,6 +402,34 @@ const UnjumbleGame: React.FC<UnjumbleGameProps> = ({ vocabData }) => {
         </div>
       )}
     </div>
+  )
+}
+
+interface UnjumbleGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const UnjumbleGame: React.FC<UnjumbleGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <UnjumbleGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [GameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

@@ -20,16 +20,7 @@ import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
 import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index'
 import { Route as LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
-import { Route as LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
 import { Route as LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-import { Route as LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1MemoryGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1MatchingGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-import { Route as LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
 import { Route as LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
 
 const SplatRoute = SplatRouteImport.update({
@@ -87,64 +78,10 @@ const LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute =
     path: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute =
   LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1MemoryGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/memory-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/memory-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1MatchingGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/matching-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/matching-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute =
@@ -163,16 +100,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/matching-game': typeof LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/memory-game': typeof LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game': typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game': typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game': typeof LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game': typeof LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
@@ -185,16 +113,7 @@ export interface FileRoutesByTo {
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/matching-game': typeof LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/memory-game': typeof LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game': typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game': typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game': typeof LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game': typeof LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
@@ -210,16 +129,7 @@ export interface FileRoutesById {
   '/(main)/settings': typeof mainSettingsRoute
   '/lessons/': typeof LessonsIndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/matching-game': typeof LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/memory-game': typeof LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game': typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game': typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game': typeof LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game': typeof LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
@@ -234,16 +144,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/lessons'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
   fileRoutesByTo: FileRoutesByTo
@@ -256,16 +157,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/lessons'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
   id:
@@ -280,16 +172,7 @@ export interface FileRouteTypes {
     | '/(main)/settings'
     | '/lessons/'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/'
   fileRoutesById: FileRoutesById
@@ -301,16 +184,7 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   LessonsIndexRoute: typeof LessonsIndexRoute
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
-  LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
-  LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute
-  LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute
-  LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute
-  LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute
-  LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute
-  LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute
   LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute
   LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
   LessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
@@ -394,74 +268,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/unjumble-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': {
       id: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
       path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/picture-typing-en-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/picture-choice-en-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-vi-en-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/memory-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/memory-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1MemoryGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/matching-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/matching-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1MatchingGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': {
@@ -510,26 +321,8 @@ const rootRouteChildren: RootRouteChildren = {
   LessonsIndexRoute: LessonsIndexRoute,
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute:
     LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute,
-  LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1MatchingGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1MemoryGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1MultipleChoiceEnViGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1MultipleChoiceViEnGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1PictureChoiceEnGameRoute,
-  LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1PictureTypingEnGameRoute,
   LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute:
     LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute,
-  LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1UnjumbleGameRoute,
   LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute:
     LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute,
   LessonsEverybodyUp0Unit1Lesson1IndexRoute:
