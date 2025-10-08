@@ -111,12 +111,12 @@ echo -e "${BLUE}Checking status of containers...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker-compose ps"
 
 # Check logs of app container
-echo -e "${BLUE}Check logs of backend ${APP_CONTAINER_NAME} container...${NC}"
-$SSH_CMD "cd $REMOTE_DIR && docker logs ${APP_CONTAINER_NAME} 2>&1 | tail -n 20"
+# echo -e "${BLUE}Check logs of backend ${APP_CONTAINER_NAME} container...${NC}"
+# $SSH_CMD "cd $REMOTE_DIR && docker logs ${APP_CONTAINER_NAME} 2>&1 | tail -n 20"
 
 # Check logs of caddy container
-echo -e "${BLUE}Checking logs of caddy container...${NC}"
-$SSH_CMD "cd $REMOTE_DIR && docker logs caddy 2>&1 | tail -n 20"
+# echo -e "${BLUE}Checking logs of caddy container...${NC}"
+# $SSH_CMD "cd $REMOTE_DIR && docker logs caddy 2>&1 | tail -n 20"
 
 # Cleanup
 echo -e "${BLUE}Cleanup...${NC}"
