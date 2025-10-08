@@ -27,11 +27,13 @@ interface Question {
 interface ListeningTypingEnGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   vocabData,
   title,
+  numQuestions = vocabData.length,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -99,18 +101,20 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     return shuffled
   }
 
-  const createQuestions = (words: Array<VocabItem>): Array<Question> => {
-    return shuffleArray(
-      words.map((word) => ({
-        english: word.word,
-        pronunciation: word.pronunciation || '',
-        exampleSentence: word.exampleSentenceEn || '',
-      })),
-    )
+  const createQuestions = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Question> => {
+    const shuffled = shuffleArray(words)
+    return shuffled.slice(0, num).map((word) => ({
+      english: word.word,
+      pronunciation: word.pronunciation || '',
+      exampleSentence: word.exampleSentenceEn || '',
+    }))
   }
 
   const startGame = () => {
-    const newQuestions = createQuestions(vocabWords)
+    const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -122,22 +126,25 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     setIsPlayingAudio(false)
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(newQuestions.length)
     startTimer()
   }
 
   const restartGame = () => {
-    stopTimer()
-    setIsGameStarted(false)
-    setIsGameOver(false)
-    setQuestions([])
+    const newQuestions = createQuestions(vocabWords, numQuestions)
+    setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
+    setIsGameStarted(true)
+    setIsGameOver(false)
     setIsAnswering(false)
     setUserAnswer('')
     setFeedback('')
     setIsPlayingAudio(false)
+    resetTimer()
     resetGame()
+    setTotalQuestions(newQuestions.length)
+    startTimer()
   }
 
   const playCurrentWord = () => {

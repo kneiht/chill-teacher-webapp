@@ -27,11 +27,13 @@ interface Question {
 interface UnjumbleGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
   vocabData,
   title,
+  numQuestions = vocabData.length,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -92,24 +94,27 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
     return sentence.split(/\s+/).filter(Boolean)
   }
 
-  const createQuestions = (words: Array<VocabItem>): Array<Question> => {
-    const questionList = words
-      .filter((word) => word.sampleSentence)
-      .map((word) => {
-        const en = word.sampleSentence!.trim()
-        const tokens = tokenize(en)
-        const scrambled = shuffleArray([...tokens])
-        return {
-          vietnamese: word.vietnameseTranslation || word.vietnameseMeaning,
-          englishTokens: tokens,
-          scrambledTokens: scrambled,
-        }
-      })
+  const createQuestions = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Question> => {
+    const filtered = words.filter((word) => word.sampleSentence)
+    const shuffled = shuffleArray(filtered).slice(0, num)
+    const questionList = shuffled.map((word) => {
+      const en = word.sampleSentence!.trim()
+      const tokens = tokenize(en)
+      const scrambled = shuffleArray([...tokens])
+      return {
+        vietnamese: word.vietnameseTranslation || word.vietnameseMeaning,
+        englishTokens: tokens,
+        scrambledTokens: scrambled,
+      }
+    })
     return shuffleArray(questionList)
   }
 
   const startGame = () => {
-    const newQuestions = createQuestions(vocabWords)
+    const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -263,8 +268,12 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
               Unjumble Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Bạn sẽ có {vocabWords.filter((w) => w.sampleSentence).length} câu.
-              Kéo thả từ để tạo câu đúng.
+              Bạn sẽ có{' '}
+              {Math.min(
+                numQuestions,
+                vocabWords.filter((w) => w.sampleSentence).length,
+              )}{' '}
+              câu. Kéo thả từ để tạo câu đúng.
             </p>
             <button
               onClick={startGame}

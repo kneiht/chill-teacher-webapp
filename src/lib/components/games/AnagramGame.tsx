@@ -26,6 +26,7 @@ interface Question {
 interface AnagramGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 interface AnswerSlot {
@@ -33,7 +34,11 @@ interface AnswerSlot {
   sourceIndex: number | null
 }
 
-const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
+const AnagramGameCore: React.FC<AnagramGameProps> = ({
+  vocabData,
+  title,
+  numQuestions = vocabData.length,
+}) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -103,8 +108,12 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
     return scrambled
   }
 
-  const createQuestions = (words: Array<VocabItem>): Array<Question> => {
-    const questionList = words.map((word) => ({
+  const createQuestions = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Question> => {
+    const shuffled = shuffleArray(words)
+    const questionList = shuffled.slice(0, num).map((word) => ({
       vietnamese: word.vietnameseMeaning,
       correct: word.word,
       scrambled: scrambleWord(word.word),
@@ -113,7 +122,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
   }
 
   const startGame = () => {
-    const newQuestions = createQuestions(vocabWords)
+    const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -124,7 +133,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
     setFeedback('')
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(newQuestions.length)
     startTimer()
   }
 
@@ -140,17 +149,20 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
   }, [isGameStarted, currentQuestionIndex, questions])
 
   const restartGame = () => {
-    stopTimer()
-    setIsGameStarted(false)
-    setIsGameOver(false)
-    setQuestions([])
+    const newQuestions = createQuestions(vocabWords, numQuestions)
+    setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
+    setIsGameStarted(true)
+    setIsGameOver(false)
     setIsAnswering(false)
     setAnswerSlots([]) // Clear slots
     setUsedLetters(new Set())
     setFeedback('')
+    resetTimer()
     resetGame()
+    setTotalQuestions(newQuestions.length)
+    startTimer()
   }
 
   const handleLetterClick = (letterIndex: number, letter: string) => {

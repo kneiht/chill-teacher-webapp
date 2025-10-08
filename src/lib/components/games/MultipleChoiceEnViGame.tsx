@@ -25,11 +25,13 @@ interface Question {
 interface MultipleChoiceEnViGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
   vocabData,
   title,
+  numQuestions = vocabData.length,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -99,8 +101,12 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
     return shuffled.slice(0, count)
   }
 
-  const createQuestions = (words: Array<VocabItem>): Array<Question> => {
-    const questionList = words.map((word) => {
+  const createQuestions = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Question> => {
+    const shuffledWords = shuffleArray(words).slice(0, num)
+    const questionList = shuffledWords.map((word) => {
       const wrongAnswers = getRandomWrongAnswers(
         word.vietnameseMeaning,
         words,
@@ -119,7 +125,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
   }
 
   const startGame = () => {
-    const newQuestions = createQuestions(vocabWords)
+    const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -130,7 +136,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
     setShowFeedback(false)
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(newQuestions.length)
     startTimer()
   }
 
@@ -198,7 +204,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
           )}
           {isGameStarted && (
             <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
-              🎯 {score}/{vocabWords.length}
+              🎯 {score}/{questions.length}
             </div>
           )}
         </div>
@@ -223,7 +229,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
               Multiple Choice Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Bạn sẽ có {vocabWords.length} câu hỏi.
+              Bạn sẽ có {Math.min(numQuestions, vocabData.length)} câu hỏi.
               <br />
               Đọc từ tiếng Anh và chọn nghĩa tiếng Việt đúng.
             </p>
@@ -307,8 +313,8 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
                     : 'Keep Practicing! 💪'}
             </h3>
             <p className="text-gray-600 text-xl">
-              You scored {score}/{vocabWords.length} (
-              {Math.round((score / vocabWords.length) * 100)}%)
+              You scored {score}/{questions.length} (
+              {Math.round((score / questions.length) * 100)}%)
             </p>
             <p className="text-indigo-700 font-bold mt-2 text-xl">
               ⏱️ Time: {formatTime(timer)} seconds

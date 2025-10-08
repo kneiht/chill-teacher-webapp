@@ -26,11 +26,13 @@ interface Question {
 interface ImageRevealChoiceGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
   vocabData,
   title,
+  numQuestions = vocabData.length,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -89,9 +91,13 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
     return shuffled
   }
 
-  const createQuestions = (words: Array<VocabItem>): Array<Question> => {
+  const createQuestions = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Question> => {
+    const shuffled = shuffleArray(words)
     return shuffleArray(
-      words.map((word) => {
+      shuffled.slice(0, num).map((word) => {
         const wrongs = shuffleArray(words.filter((w) => w.word !== word.word))
           .slice(0, 3)
           .map((w) => w.word)
@@ -106,7 +112,7 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
   }
 
   const startGame = () => {
-    const newQuestions = createQuestions(vocabWords)
+    const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -119,23 +125,26 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
     setFeedback('')
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(newQuestions.length)
     startTimer()
   }
 
   const restartGame = () => {
-    stopTimer()
-    setIsGameStarted(false)
-    setIsGameOver(false)
-    setQuestions([])
+    const newQuestions = createQuestions(vocabWords, numQuestions)
+    setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
+    setIsGameStarted(true)
+    setIsGameOver(false)
     setIsAnswering(false)
     setRevealedTiles(new Set())
     setSelectedOption(null)
     setShowFeedback(false)
     setFeedback('')
+    resetTimer()
     resetGame()
+    setTotalQuestions(newQuestions.length)
+    startTimer()
   }
 
   const handleTileClick = (tileId: string) => {

@@ -20,6 +20,7 @@ interface PresentationShellProps {
   showOutlineButton?: boolean
   showSettingsButton?: boolean
   showSlideCounter?: boolean
+  styles?: Record<string, string>
 }
 
 const PresentationShell: React.FC<PresentationShellProps> = ({

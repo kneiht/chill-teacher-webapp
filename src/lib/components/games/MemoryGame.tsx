@@ -28,9 +28,14 @@ interface Card {
 interface MemoryGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
-const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
+const MemoryGameCore: React.FC<MemoryGameProps> = ({
+  vocabData,
+  title,
+  numQuestions = vocabData.length,
+}) => {
   const [gameData, setGameData] = useState<Array<Card>>([])
   const [selectedCards, setSelectedCards] = useState<Array<number>>([])
   const [matchedPairs, setMatchedPairs] = useState<Array<number>>([])
@@ -84,9 +89,13 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
     return shuffled
   }
 
-  const createGameData = (words: Array<VocabItem>): Array<Card> => {
+  const createGameData = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Card> => {
+    const shuffledWords = shuffleArray(words).slice(0, num)
     const cards: Array<Card> = []
-    words.forEach((word, index) => {
+    shuffledWords.forEach((word, index) => {
       cards.push({
         id: index,
         type: 'english',
@@ -105,7 +114,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
   }
 
   const startGame = () => {
-    const data = createGameData(vocabWords)
+    const data = createGameData(vocabWords, numQuestions)
     setGameData(data)
     setSelectedCards([])
     setMatchedPairs([])
@@ -115,7 +124,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
     setMoves(0)
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(numQuestions)
     startTimer()
   }
 
@@ -163,7 +172,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
       setMatchedPairs([...matchedPairs, card1.id])
       answerCorrect()
 
-      if (matchedPairs.length + 1 === vocabWords.length) {
+      if (matchedPairs.length + 1 === numQuestions) {
         setIsGameOver(true)
         stopTimer()
       }
@@ -192,7 +201,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
           )}
           {isGameStarted && (
             <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
-              🎯 {matchedPairs.length}/{vocabWords.length}
+              🎯 {matchedPairs.length}/{numQuestions}
             </div>
           )}
           {isGameStarted && (
@@ -222,8 +231,8 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
               Memory Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Lật thẻ và tìm {vocabWords.length} cặp trùng nhau. Bấm Start để
-              bắt đầu.
+              Lật thẻ và tìm {numQuestions} cặp trùng nhau. Bấm Start để bắt
+              đầu.
             </p>
             <button
               onClick={startGame}
@@ -306,7 +315,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
               Excellent Work!
             </h3>
             <p className="text-gray-600 text-xl">
-              You matched all {vocabWords.length} pairs in {moves} moves!
+              You matched all {numQuestions} pairs in {moves} moves!
             </p>
             <p className="text-indigo-700 font-bold mt-2 text-xl">
               ⏱️ Time: {formatTime(timer)}

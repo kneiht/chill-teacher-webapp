@@ -26,11 +26,13 @@ interface Question {
 interface PictureChoiceEnGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
   vocabData,
   title,
+  numQuestions = vocabData.length,
 }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -100,8 +102,12 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
     return shuffled.slice(0, count)
   }
 
-  const createQuestions = (words: Array<VocabItem>): Array<Question> => {
-    const questionList = words.map((word) => {
+  const createQuestions = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Question> => {
+    const shuffledWords = shuffleArray(words).slice(0, num)
+    const questionList = shuffledWords.map((word) => {
       const wrongAnswers = getRandomWrongAnswers(word.word, words, 3)
       const allOptions = [word.word, ...wrongAnswers]
       const shuffledOptions = shuffleArray(allOptions)
@@ -116,7 +122,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
   }
 
   const startGame = () => {
-    const newQuestions = createQuestions(vocabWords)
+    const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -127,7 +133,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
     setShowFeedback(false)
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(newQuestions.length)
     startTimer()
   }
 
@@ -222,7 +228,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
               Picture Choice Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Bạn sẽ có {vocabWords.length} câu hỏi.
+              Bạn sẽ có {Math.min(numQuestions, vocabData.length)} câu hỏi.
               <br />
               Nhìn hình và chọn từ tiếng Anh đúng.
             </p>

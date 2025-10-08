@@ -28,11 +28,13 @@ interface Card {
 interface MatchingGameProps {
   vocabData: Array<VocabItem>
   title: string
+  numQuestions?: number
 }
 
 const MatchingGameCore: React.FC<MatchingGameProps> = ({
   vocabData,
   title,
+  numQuestions = vocabData.length,
 }) => {
   const [gameData, setGameData] = useState<Array<Card>>([])
   const [selectedCards, setSelectedCards] = useState<Array<number>>([])
@@ -85,9 +87,13 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
     return shuffled
   }
 
-  const createGameData = (words: Array<VocabItem>): Array<Card> => {
+  const createGameData = (
+    words: Array<VocabItem>,
+    num: number,
+  ): Array<Card> => {
+    const shuffled = shuffleArray(words)
     const cards: Array<Card> = []
-    words.forEach((word, index) => {
+    shuffled.slice(0, num).forEach((word, index) => {
       cards.push({
         id: index,
         type: 'english',
@@ -106,26 +112,31 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
   }
 
   const startGame = () => {
-    const data = createGameData(vocabWords)
+    const data = createGameData(vocabWords, numQuestions)
     setGameData(data)
     setSelectedCards([])
     setMatchedPairs([])
     setIsGameStarted(true)
     setIsGameOver(false)
+    setTimer(0)
     resetTimer()
     resetGame()
-    setTotalQuestions(vocabWords.length)
+    setTotalQuestions(numQuestions)
     startTimer()
   }
 
   const restartGame = () => {
-    stopTimer()
-    setIsGameStarted(false)
-    setIsGameOver(false)
-    setGameData([])
+    const data = createGameData(vocabWords, numQuestions)
+    setGameData(data)
     setSelectedCards([])
     setMatchedPairs([])
+    setIsGameStarted(true)
+    setIsGameOver(false)
+    setTimer(0)
+    resetTimer()
     resetGame()
+    setTotalQuestions(numQuestions)
+    startTimer()
   }
 
   const handleCardClick = (index: number) => {
