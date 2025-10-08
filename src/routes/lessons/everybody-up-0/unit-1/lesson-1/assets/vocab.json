@@ -30,5 +30,29 @@
     "vietnameseMeaning": "màu vẽ",
     "sampleSentence": "I have paint.",
     "vietnameseTranslation": "Tôi có màu vẽ."
+  },
+  {
+    "word": "paper",
+    "phonics": "/ˈpeɪ.pər/",
+    "image": "/vocab-images/paper.jpeg",
+    "vietnameseMeaning": "giấy",
+    "sampleSentence": "I have paper.",
+    "vietnameseTranslation": "Tôi có giấy."
+  },
+  {
+    "word": "glue",
+    "phonics": "/ɡluː/",
+    "image": "/vocab-images/glue.jpeg",
+    "vietnameseMeaning": "keo dán",
+    "sampleSentence": "I have glue.",
+    "vietnameseTranslation": "Tôi có keo dán  ."
+  },
+  {
+    "word": "scissors fads asd asd fá fá fsad f",
+    "phonics": "/ˈsɪz.əz/",
+    "image": "/vocab-images/scissors.jpeg",
+    "vietnameseMeaning": "kéo fasdf á f",
+    "sampleSentence": "I have scissors.",
+    "vietnameseTranslation": "Tôi có kéo."
   }
 ]

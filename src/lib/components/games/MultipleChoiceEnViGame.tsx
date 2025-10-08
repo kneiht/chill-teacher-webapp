@@ -186,9 +186,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
 
   return (
     <div className="h-full flex flex-col">
-      <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        {title}
-      </h2>
+      <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
 
       {/* Game Controls */}
       <div className="w-full my-2 flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-4 items-stretch transition-transform duration-200">
@@ -227,12 +225,12 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
       {/* Game Area */}
       <div className="flex-1 flex items-center justify-center">
         {!isGameStarted ? (
-          <div className="text-center bg-white rounded-xl shadow-lg p-8">
+          <div className="text-center bg-glass rounded-xl shadow-lg p-8 py-12 mt-10">
             <div className="text-6xl mb-4">🇬🇧→🇻🇳</div>
-            <h3 className="text-2xl font-bold text-indigo-700 mb-4">
+            <h3 className="text-4xl font-bold text-indigo-700 mb-4">
               Multiple Choice Game
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 text-xl">
               Bạn sẽ có {vocabWords.length} câu hỏi.
               <br />
               Đọc từ tiếng Anh và chọn nghĩa tiếng Việt đúng.
@@ -242,58 +240,60 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
             </div>
           </div>
         ) : (
-          <div className="max-w-2xl w-full bg-white rounded-xl shadow-lg p-3">
-            <div className="mb-6">
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
-                <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
-                  Question {currentQuestionIndex + 1} of {questions.length}
-                </span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${progress}%` }}
-                ></div>
-              </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
-              <div className="text-center mb-0 lg:mb-0 lg:mr-8 flex-shrink-0">
-                <h3 className="text-3xl font-bold text-blue-600 mb-2">
-                  {currentQuestion.english}
-                </h3>
-              </div>
-
-              <div className="flex flex-col space-y-3 w-full max-w-md">
-                {currentQuestion.options.map((option, index) => (
+          <div className="w-full h-[760px] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
+            <div className="max-w-2xl w-full">
+              <div className="mb-6">
+                <div className="flex justify-between text-sm text-gray-600 mb-2">
+                  <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
+                    Question {currentQuestionIndex + 1} of {questions.length}
+                  </span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    key={index}
-                    onClick={() => handleOptionClick(option)}
-                    className={`bg-gray-50 border-2 border-gray-200 rounded-lg p-3 md:p-4 text-center transition-all duration-300 ${
-                      showFeedback
-                        ? 'pointer-events-none opacity-70'
-                        : 'cursor-pointer hover:translate-x-2 hover:shadow-lg'
-                    } ${
-                      !showFeedback && selectedOption === option
-                        ? 'border-blue-500 bg-blue-50 translate-x-2'
-                        : ''
-                    } ${
-                      showFeedback && option === currentQuestion.correct
-                        ? 'border-green-500 bg-green-100 animate-pulse'
-                        : ''
-                    } ${
-                      showFeedback &&
-                      selectedOption === option &&
-                      option !== currentQuestion.correct
-                        ? 'border-red-500 bg-red-100'
-                        : ''
-                    }`}
-                  >
-                    <span className="font-semibold text-gray-800">
-                      {option}
-                    </span>
-                  </div>
-                ))}
+                    className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${progress}%` }}
+                  ></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
+                <div className="text-center mb-0 lg:mb-0 lg:mr-8 flex-shrink-0">
+                  <h3 className="text-3xl font-bold text-blue-600 mb-2">
+                    {currentQuestion.english}
+                  </h3>
+                </div>
+
+                <div className="flex flex-col space-y-3 w-full max-w-md">
+                  {currentQuestion.options.map((option, index) => (
+                    <div
+                      key={index}
+                      onClick={() => handleOptionClick(option)}
+                      className={`bg-gray-50 border-2 border-gray-200 rounded-lg p-3 md:p-4 text-center transition-all duration-300 ${
+                        showFeedback
+                          ? 'pointer-events-none opacity-70'
+                          : 'cursor-pointer hover:translate-x-2 hover:shadow-lg'
+                      } ${
+                        !showFeedback && selectedOption === option
+                          ? 'border-blue-500 bg-blue-50 translate-x-2'
+                          : ''
+                      } ${
+                        showFeedback && option === currentQuestion.correct
+                          ? 'border-green-500 bg-green-100 animate-pulse'
+                          : ''
+                      } ${
+                        showFeedback &&
+                        selectedOption === option &&
+                        option !== currentQuestion.correct
+                          ? 'border-red-500 bg-red-100'
+                          : ''
+                      }`}
+                    >
+                      <span className="font-semibold text-gray-800">
+                        {option}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -301,7 +301,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
       </div>
 
       {isGameOver && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-30">
           <div className="bg-white rounded-xl p-8 shadow-2xl text-center">
             <div className="text-6xl mb-4">🎉</div>
             <h3 className="text-2xl font-bold text-green-600 mb-2">
@@ -313,11 +313,11 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
                     ? 'Good Try! 👍'
                     : 'Keep Practicing! 💪'}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-xl">
               You scored {score}/{vocabWords.length} (
               {Math.round((score / vocabWords.length) * 100)}%)
             </p>
-            <p className="text-indigo-700 font-bold mt-2">
+            <p className="text-indigo-700 font-bold mt-2 text-xl">
               ⏱️ Time: {formatTime(timer)} seconds
             </p>
             <button

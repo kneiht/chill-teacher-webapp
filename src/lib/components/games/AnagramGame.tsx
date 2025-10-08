@@ -245,9 +245,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
 
   return (
     <div className="h-full flex flex-col overflow-hidden">
-      <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        {title}
-      </h2>
+      <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
 
       {/* Game Controls */}
       <div className="w-full my-3 flex flex-row justify-center gap-2 items-stretch transition-transform duration-200">
@@ -314,7 +312,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
             </div>
 
             <div className="flex flex-col items-center gap-4 mb-3">
-              <div className="text-2xl md:text-4xl text-gray-700">
+              <div className="text-2xl text-4xl text-gray-700">
                 <span className="inline-block bg-indigo-100 text-indigo-700 font-semibold px-5 py-3 rounded-full">
                   {currentQuestion.vietnamese}
                 </span>
@@ -325,7 +323,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
                   <div
                     key={index}
                     onClick={() => handleSlotClick(index)}
-                    className={`w-12 h-12 md:w-14 md:h-14 rounded-lg border-2 flex items-center justify-center font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 ${
+                    className={`w-12 h-12 w-14 h-14 rounded-lg border-2 flex items-center justify-center font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 ${
                       slot.letter
                         ? 'border-solid bg-indigo-100 border-indigo-300 shadow-sm'
                         : 'border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100'
@@ -349,7 +347,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
                   <span
                     key={index}
                     onClick={() => handleLetterClick(index, letter)}
-                    className={`inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-lg border-2 border-gray-200 bg-white font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 hover:bg-indigo-50 hover:scale-105 hover:shadow-md active:scale-95 ${
+                    className={`inline-flex items-center justify-center w-12 h-12 w-14 h-14 rounded-lg border-2 border-gray-200 bg-white font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 hover:bg-indigo-50 hover:scale-105 hover:shadow-md active:scale-95 ${
                       usedLetters.has(index)
                         ? 'opacity-30 pointer-events-none'
                         : ''

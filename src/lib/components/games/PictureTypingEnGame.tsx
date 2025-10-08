@@ -178,9 +178,7 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
 
   return (
     <div className="h-full flex flex-col">
-      <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        {title}
-      </h2>
+      <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
 
       {/* Game Controls */}
       <div className="w-full my-2 flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-4 items-stretch transition-transform duration-200">

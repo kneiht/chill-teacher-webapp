@@ -47,7 +47,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
+    return () => resetGame()
   }, [])
 
   const formatTime = (seconds: number) => {
@@ -178,44 +178,41 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
     setSelectedCards([])
   }
 
+  const progress =
+    isGameStarted && vocabWords.length > 0
+      ? ((matchedPairs.length + 1) / vocabWords.length) * 100
+      : 0
+
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col overflow-hidden">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
         {title}
       </h2>
 
       {/* Game Controls */}
-      <div className="w-full my-2 flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-4 items-stretch transition-transform duration-200">
-        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-start">
+      <div className="w-full my-3 flex flex-row justify-center gap-2 items-stretch transition-transform duration-200">
+        <div className="w-auto flex flex-row gap-4 justify-stretch">
           {isGameStarted && (
-            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               ⏱️ {formatTime(timer)}
             </div>
           )}
           {isGameStarted && (
-            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               🎯 {matchedPairs.length}/{vocabWords.length}
             </div>
           )}
           {isGameStarted && (
-            <div className="bg-orange-100 text-orange-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-xs sm:text-sm w-full sm:w-28">
+            <div className="bg-orange-100 text-orange-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
               🎲 {moves}
             </div>
           )}
         </div>
-        <div className="w-full sm:w-auto flex flex-row gap-1 sm:gap-4 justify-stretch sm:justify-end">
-          {!isGameStarted && (
-            <button
-              onClick={startGame}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
-            >
-              ▶️ Start Game
-            </button>
-          )}
+        <div className="w-auto flex flex-row gap-4 justify-end">
           {isGameStarted && (
             <button
               onClick={restartGame}
-              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
+              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 w-auto text-sm"
             >
               🔄 Restart
             </button>
@@ -224,42 +221,51 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
       </div>
 
       {/* Game Area */}
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-start justify-center h-full">
         {!isGameStarted ? (
-          <div className="text-center bg-white rounded-xl shadow-lg p-8">
+          <div className="text-center bg-glass rounded-xl shadow-lg p-8 py-12 mt-10">
             <div className="text-6xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold text-indigo-700 mb-4">
+            <h3 className="text-4xl font-bold text-indigo-700 mb-4">
               Memory Game
             </h3>
-            <p className="text-gray-600 mb-6">
-              Lật thẻ và tìm {vocabWords.length} cặp trùng nhau. Bấm Start để
-              bắt đầu.
+            <p className="text-gray-600 mb-6 text-xl">
+              Lật thẻ và tìm {vocabWords.length} cặp trùng nhau.
             </p>
-            <div className="text-sm text-gray-500">
-              Click "▶️ Start Game" để bắt đầu!
-            </div>
+            <button
+              onClick={startGame}
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded-full shadow-lg transition-all duration-200 text-lg w-auto"
+            >
+              ▶️ Start Game
+            </button>
           </div>
         ) : (
-          <div className="max-w-4xl w-full">
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 w-full">
+          <div className="w-full h-[760px] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
+            <div className="mb-6">
+              <div className="flex justify-between text-sm text-gray-600 mb-2">
+                <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
+                  Matched {matchedPairs.length} of {vocabWords.length}
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div
+                  className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${progress}%` }}
+                ></div>
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 w-full">
               {gameData.map((card, index) => (
                 <div
                   key={index}
                   onClick={() => handleCardClick(index)}
-                  className={`memory-card relative bg-transparent rounded-lg shadow-md border-2 border-gray-200 min-h-[100px] h-24 sm:h-28 cursor-pointer transition-all duration-300 hover:scale-105 ${
-                    card.matched
-                      ? 'opacity-95 pointer-events-none border-green-500 shadow-green-200'
-                      : ''
+                  className={`memory-card relative rounded-lg min-h-[120px] cursor-pointer transition-transform duration-300 hover:scale-105 ${
+                    card.matched ? 'pointer-events-none' : ''
                   }`}
                   style={{ perspective: '1000px' }}
                 >
                   {/* Card Back */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg flex items-center justify-center transition-all duration-500 ${
-                      flippedCards.has(index) || card.matched
-                        ? 'transform rotate-y-180 opacity-0'
-                        : 'transform rotate-y-0 opacity-100'
-                    }`}
+                    className={`absolute inset-0 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg shadow-md flex items-center justify-center transition-all duration-500 border-2 ${flippedCards.has(index) || card.matched ? 'transform rotate-y-180 opacity-0' : 'transform rotate-y-0 opacity-100 border-indigo-300'}`}
                     style={{
                       backfaceVisibility: 'hidden',
                       WebkitBackfaceVisibility: 'hidden',
@@ -270,15 +276,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
 
                   {/* Card Front */}
                   <div
-                    className={`absolute inset-0 rounded-lg border-2 border-gray-200 flex items-center justify-center p-3 transition-all duration-500 ${
-                      card.type === 'vietnamese' && card.image
-                        ? 'bg-cover bg-center bg-no-repeat'
-                        : 'bg-white'
-                    } ${
-                      flippedCards.has(index) || card.matched
-                        ? 'transform rotate-y-0 opacity-100'
-                        : 'transform rotate-y-180 opacity-0'
-                    }`}
+                    className={`absolute inset-0 rounded-lg border-2 flex items-center justify-center p-2 transition-all duration-500 ${card.type === 'vietnamese' && card.image ? 'bg-cover bg-center bg-no-repeat' : 'bg-white'} ${flippedCards.has(index) || card.matched ? 'transform rotate-y-0 opacity-100 border-blue-400' : 'transform rotate-y-180 opacity-0 border-transparent'} ${card.matched ? 'border-green-500 opacity-60' : ''}`}
                     style={{
                       backfaceVisibility: 'hidden',
                       WebkitBackfaceVisibility: 'hidden',
@@ -289,15 +287,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
                     }}
                   >
                     <span
-                      className={`text-xs md:text-sm font-semibold text-center ${
-                        card.type === 'english'
-                          ? 'text-blue-600'
-                          : 'text-green-700'
-                      } ${
-                        card.type === 'vietnamese' && card.image
-                          ? 'bg-white bg-opacity-90 px-1 py-1 rounded shadow-sm'
-                          : ''
-                      }`}
+                      className={`text-lg font-semibold text-center ${card.type === 'english' ? 'text-blue-800' : 'text-green-800'} ${card.type === 'vietnamese' && card.image ? 'bg-white bg-opacity-90 px-2 py-1 rounded shadow-sm' : ''}`}
                     >
                       {card.text}
                     </span>
@@ -310,17 +300,17 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
       </div>
 
       {isGameOver && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-30">
           <div className="bg-white rounded-xl p-8 shadow-2xl text-center">
             <div className="text-6xl mb-4">🎉</div>
             <h3 className="text-2xl font-bold text-green-600 mb-2">
               Excellent Work!
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-xl">
               You matched all {vocabWords.length} pairs in {moves} moves!
             </p>
-            <p className="text-indigo-700 font-bold mt-2">
-              ⏱️ Time: {formatTime(timer)} seconds
+            <p className="text-indigo-700 font-bold mt-2 text-xl">
+              ⏱️ Time: {formatTime(timer)}
             </p>
             <button
               onClick={() => setIsGameOver(false)}
