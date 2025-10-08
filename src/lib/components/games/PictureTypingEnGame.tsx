@@ -147,8 +147,13 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
     if (isAnswering || !currentQuestion) return
 
     setIsAnswering(true)
-    const normalizedUserAnswer = userAnswer.trim().toLowerCase()
-    const normalizedCorrectAnswer = currentQuestion.correct.toLowerCase()
+    const normalizedUserAnswer = userAnswer
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, '')
+    const normalizedCorrectAnswer = currentQuestion.correct
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, '')
 
     if (normalizedUserAnswer === normalizedCorrectAnswer) {
       setScore((prev) => prev + 1)

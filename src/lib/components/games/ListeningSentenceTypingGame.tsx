@@ -162,8 +162,13 @@ const ListeningSentenceTypingGameCore: React.FC<
     if (isAnswering || !currentQuestion) return
 
     setIsAnswering(true)
-    const normalizedUserAnswer = userAnswer.trim().toLowerCase()
-    const normalizedCorrectAnswer = currentQuestion.sentence.toLowerCase()
+    const normalizedUserAnswer = userAnswer
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, '')
+    const normalizedCorrectAnswer = currentQuestion.sentence
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, '')
 
     if (normalizedUserAnswer === normalizedCorrectAnswer) {
       setScore((prev) => prev + 1)
@@ -211,6 +216,19 @@ const ListeningSentenceTypingGameCore: React.FC<
   const progress = currentQuestion
     ? ((currentQuestionIndex + 1) / questions.length) * 100
     : 0
+
+  // Auto-focus input and auto-speak when moving to next question
+  useEffect(() => {
+    if (isGameStarted && !isAnswering && currentQuestion) {
+      // Auto-speak the sentence
+      speak(currentQuestion.sentence, 'en-US')
+
+      // Focus input after a short delay
+      setTimeout(() => {
+        inputRef.current?.focus()
+      }, 500)
+    }
+  }, [currentQuestionIndex, isAnswering, isGameStarted, currentQuestion])
 
   return (
     <div className="h-full flex flex-col">

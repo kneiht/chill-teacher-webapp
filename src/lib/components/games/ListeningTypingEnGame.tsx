@@ -60,13 +60,6 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     resetGame()
   }, [])
 
-  // Auto-focus input when moving to next question
-  useEffect(() => {
-    if (isGameStarted && !isAnswering && inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, [currentQuestionIndex, isAnswering, isGameStarted])
-
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
     const secs = seconds % 60
@@ -167,8 +160,13 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     if (isAnswering || !currentQuestion) return
 
     setIsAnswering(true)
-    const normalizedUserAnswer = userAnswer.trim().toLowerCase()
-    const normalizedCorrectAnswer = currentQuestion.english.toLowerCase()
+    const normalizedUserAnswer = userAnswer
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, '')
+    const normalizedCorrectAnswer = currentQuestion.english
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, '')
 
     if (normalizedUserAnswer === normalizedCorrectAnswer) {
       setScore((prev) => prev + 1)
@@ -216,6 +214,22 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   const progress = currentQuestion
     ? ((currentQuestionIndex + 1) / questions.length) * 100
     : 0
+
+  // Auto-focus input and auto-speak when moving to next question
+  useEffect(() => {
+    if (isGameStarted && !isAnswering && currentQuestion) {
+      // Auto-speak the word
+      const text = currentQuestion.exampleSentence
+        ? `${currentQuestion.english}. ${currentQuestion.exampleSentence}`
+        : currentQuestion.english
+      speak(text, 'en-US')
+
+      // Focus input after a short delay
+      setTimeout(() => {
+        inputRef.current?.focus()
+      }, 500)
+    }
+  }, [currentQuestionIndex, isAnswering, isGameStarted, currentQuestion])
 
   return (
     <div className="h-full flex flex-col">
