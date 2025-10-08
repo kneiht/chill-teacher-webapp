@@ -43,41 +43,64 @@ export const gameComponents: Record<string, React.FC<any>> = {
   VietnameseToEnglishTranslationGame,
 }
 
-export const gameInfo: Record<string, { title: string; component: string }> = {
-  'Matching Game': { title: 'Matching Game', component: 'MatchingGame' },
-  'Anagram Game': { title: 'Anagram Game', component: 'AnagramGame' },
+export const gameInfo: Record<
+  string,
+  { title: string; component: string; icon: string }
+> = {
+  'Matching Game': {
+    title: 'Matching Game',
+    component: 'MatchingGame',
+    icon: '🔀',
+  },
+  'Anagram Game': {
+    title: 'Anagram Game',
+    component: 'AnagramGame',
+    icon: '🧩',
+  },
   'Multiple Choice En→Vi': {
     title: 'Multiple Choice (EN → VI)',
     component: 'MultipleChoiceEnViGame',
+    icon: '📝',
   },
   'Multiple Choice Vi→En': {
     title: 'Multiple Choice (VI → EN)',
     component: 'MultipleChoiceViEnGame',
+    icon: '📝',
   },
   'Picture Choice': {
     title: 'Picture Choice',
     component: 'PictureChoiceEnGame',
+    icon: '🖼️',
   },
-  'Memory Game': { title: 'Memory Game', component: 'MemoryGame' },
+  'Memory Game': { title: 'Memory Game', component: 'MemoryGame', icon: '🧠' },
   'Image Reveal': {
     title: 'Image Reveal Choice',
     component: 'ImageRevealChoiceGame',
+    icon: '🔍',
   },
   'Listening & Typing': {
     title: 'Listening & Typing',
     component: 'ListeningTypingEnGame',
+    icon: '🔊',
   },
   'Picture Typing': {
     title: 'Picture Typing',
     component: 'PictureTypingEnGame',
+    icon: '⌨️',
   },
-  'Unjumble Game': { title: 'Unjumble Game', component: 'UnjumbleGame' },
+  'Unjumble Game': {
+    title: 'Unjumble Game',
+    component: 'UnjumbleGame',
+    icon: '🔀',
+  },
   'Listening Sentences': {
     title: 'Listening & Typing Sentences',
     component: 'ListeningSentenceTypingGame',
+    icon: '🎧',
   },
   'Vietnamese to English': {
     title: 'Vietnamese to English Translation',
     component: 'VietnameseToEnglishTranslationGame',
+    icon: '🌐',
   },
 }

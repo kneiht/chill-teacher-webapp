@@ -14,7 +14,7 @@ import WoodenButton from '@/lib/components/ui/WoodenButton'
 import bg from './assets/bg.png'
 
 const buttonStyle =
-  'w-88 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
+  'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const [activeGame, setActiveGame] = useState<string | null>(null)
@@ -53,15 +53,15 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
             <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
-              <WoodenButton className={buttonStyle}>Bài giảng</WoodenButton>
+              <WoodenButton className={buttonStyle}>📖 Bài giảng</WoodenButton>
             </Link>
             <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
               <WoodenButton className={buttonStyle}>
-                Video bài giảng
+                🎥 Video bài giảng
               </WoodenButton>
             </Link>
             <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
-              <WoodenButton className={buttonStyle}>Flashcards</WoodenButton>
+              <WoodenButton className={buttonStyle}>🃏 Flashcards</WoodenButton>
             </Link>
 
             {Object.keys(gameInfo).map((gameName) => (
@@ -70,7 +70,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
                 onClick={() => setActiveGame(gameName)}
                 className={buttonStyle}
               >
-                {gameName}
+                {gameInfo[gameName].icon} {gameName}
               </WoodenButton>
             ))}
           </div>
