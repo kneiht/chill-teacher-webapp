@@ -3,22 +3,37 @@ import React from 'react'
 interface SlideProps extends React.HTMLAttributes<HTMLDivElement> {
   isActive: boolean
   children: React.ReactNode
+  scrollable?: boolean
 }
 
 const Slide: React.FC<SlideProps> = ({
   isActive,
   children,
   className,
+  scrollable,
   ...props
 }) => {
-  return (
-    <div
-      className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
-      {...props}
-    >
-      {children}
-    </div>
-  )
+  if (!scrollable) {
+    return (
+      <div
+        className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
+        {...props}
+      >
+        {children}
+      </div>
+    )
+  } else {
+    return (
+      <div className="h-[98%] overflow-auto">
+        <div
+          className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
+          {...props}
+        >
+          {children}
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Slide
