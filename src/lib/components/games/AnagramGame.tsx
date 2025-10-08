@@ -44,7 +44,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
   )
   const [score, setScore] = useState(0)
   const [isAnswering, setIsAnswering] = useState(false)
-  const [answerSlots, setAnswerSlots] = useState<AnswerSlot[]>([])
+  const [answerSlots, setAnswerSlots] = useState<Array<AnswerSlot>>([])
   const [usedLetters, setUsedLetters] = useState<Set<number>>(new Set())
   const [feedback, setFeedback] = useState('')
 
@@ -433,7 +433,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
 }
 
 interface AnagramGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void

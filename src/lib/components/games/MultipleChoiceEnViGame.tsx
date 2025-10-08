@@ -327,7 +327,7 @@ const MultipleChoiceEnViGameCore: React.FC<MultipleChoiceEnViGameProps> = ({
 }
 
 interface MultipleChoiceEnViGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void

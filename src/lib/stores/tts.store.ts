@@ -17,7 +17,8 @@ const defaultSettings: TTSSettings = {
 }
 
 const initialSettings =
-  getFromLocalStorage<TTSSettings>(LocalStorageKeys.TTS_SETTINGS) || defaultSettings
+  getFromLocalStorage<TTSSettings>(LocalStorageKeys.TTS_SETTINGS) ||
+  defaultSettings
 
 export const ttsStore = new Store<TTSSettings>(initialSettings)
 

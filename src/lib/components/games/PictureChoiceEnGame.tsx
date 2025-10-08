@@ -331,7 +331,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
 }
 
 interface PictureChoiceEnGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void

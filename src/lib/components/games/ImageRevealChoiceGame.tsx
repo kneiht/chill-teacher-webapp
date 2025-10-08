@@ -376,7 +376,7 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
 }
 
 interface ImageRevealChoiceGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void

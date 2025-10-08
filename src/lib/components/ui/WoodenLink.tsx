@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, type LinkProps } from '@tanstack/react-router'
+import { Link  } from '@tanstack/react-router'
+import type {LinkProps} from '@tanstack/react-router';
 
 interface WoodenLinkProps extends LinkProps {
   children: React.ReactNode

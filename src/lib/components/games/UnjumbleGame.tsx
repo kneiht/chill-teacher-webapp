@@ -405,7 +405,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
 }
 
 interface UnjumbleGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void

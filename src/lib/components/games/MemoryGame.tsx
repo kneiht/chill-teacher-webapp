@@ -325,7 +325,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({ vocabData, title }) => {
 }
 
 interface MemoryGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void

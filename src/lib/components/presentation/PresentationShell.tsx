@@ -29,7 +29,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   showFullscreenButton = true,
   showNavButtons = false,
   showOutlineButton = false,
-  showSettingsButton = false,
+  showSettingsButton = true,
   showSlideCounter = false,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -172,7 +172,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               title="Go Back"
               className="presentation-fullscreen"
             >
-              <Home size={18} />
+              <Home />
             </button>
           )}
 
@@ -182,7 +182,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               className="presentation-button"
               title="Previous Slide"
             >
-              <ChevronLeft size={18} />
+              <ChevronLeft />
             </button>
           )}
 
@@ -198,7 +198,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               className="presentation-button"
               title="Next Slide"
             >
-              <ChevronRight size={18} />
+              <ChevronRight />
             </button>
           )}
 
@@ -208,7 +208,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               className="presentation-button"
               title="Outline"
             >
-              <Menu size={18} />
+              <Menu />
             </button>
           )}
 
@@ -218,7 +218,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               className="presentation-button"
               title="TTS Settings"
             >
-              <Settings size={18} />
+              <Settings />
             </button>
           )}
 
@@ -228,7 +228,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
               title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
               className="presentation-fullscreen"
             >
-              {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+              {isFullscreen ? <Minimize /> : <Maximize />}
             </button>
           )}
         </div>

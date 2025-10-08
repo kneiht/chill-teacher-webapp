@@ -190,7 +190,7 @@ body {
 }
 
 .presentation-button {
-  border: rgba(102, 102, 102, 0.535) solid 1px;
+  border: rgba(102, 102, 102, 0.535) solid 0.02rem;
   background-color: white;
   border-radius: 50%;
   width: 2rem;
@@ -204,6 +204,7 @@ body {
   font-weight: bold;
   color: #4f46e5;
   transition: all 0.3s ease-in-out;
+  padding: 0.2rem;
 }
 
 .presentation-button:hover {
@@ -212,7 +213,7 @@ body {
 }
 
 .presentation-fullscreen {
-  border: rgba(102, 102, 102, 0.535) solid 1px;
+  border: rgba(102, 102, 102, 0.535) solid 0.02rem;
   background-color: white;
   border-radius: 50%;
   width: 2rem;
@@ -227,6 +228,7 @@ body {
   color: #4f46e5;
   transition: all 0.3s ease-in-out;
   transform: scale(1);
+  padding: 0.3rem;
 }
 
 .presentation-fullscreen:hover {
@@ -236,7 +238,7 @@ body {
 }
 
 .presentation-counter {
-  border: rgba(102, 102, 102, 0.535) solid 1px;
+  border: rgba(102, 102, 102, 0.535) solid 0.02rem;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   width: 2rem;
@@ -249,6 +251,7 @@ body {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   color: #4f46e5;
   font-size: 0.75rem;
+  padding: 0.2rem;
 }
 
 @keyframes popIn {

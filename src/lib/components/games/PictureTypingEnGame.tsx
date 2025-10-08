@@ -335,7 +335,7 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
 }
 
 interface PictureTypingEnGameActivityProps {
-  vocabData: VocabItem[]
+  vocabData: Array<VocabItem>
   backgroundUrl: string
   title: string
   onClose?: () => void
