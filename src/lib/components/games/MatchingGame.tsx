@@ -13,6 +13,7 @@ import Slide from '@/lib/components/presentation/Slide'
 interface VocabItem {
   word: string
   vietnameseMeaning: string
+  image?: string
   // other fields
 }
 
@@ -21,6 +22,7 @@ interface Card {
   type: 'english' | 'vietnamese'
   text: string
   matched: boolean
+  image?: string
 }
 
 interface MatchingGameProps {
@@ -97,6 +99,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
         type: 'vietnamese',
         text: word.vietnameseMeaning,
         matched: false,
+        image: word.image,
       })
     })
     return shuffleArray(cards)
@@ -216,23 +219,35 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
             </button>
           </div>
         ) : (
-          <div className="w-full h-[760px] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto flex justify-center items-center">
-            <div className="grid grid-cols-4 gap-4 w-full">
+          <div className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto flex justify-center items-center">
+            <div className="grid grid-cols-4 gap-4 w-full h-full">
               {gameData.map((card, index) => (
                 <div
                   key={index}
                   onClick={() => handleCardClick(index)}
-                  className={`game-card rounded-lg shadow-md p-2 cursor-pointer transition-all duration-300 hover:scale-105 border-2 h-[150px] flex items-center justify-center text-center ${
+                  className={`game-card rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center text-center overflow-hidden relative bg-cover bg-center ${
                     card.matched
                       ? 'bg-green-100 border-green-400 opacity-60'
                       : selectedCards.includes(index)
                         ? 'bg-blue-100 border-blue-400 scale-105 shadow-lg'
                         : 'bg-white border-gray-200 hover:bg-indigo-50'
                   }`}
+                  style={{
+                    backgroundImage:
+                      card.type === 'vietnamese' && card.image
+                        ? `url('${card.image}')`
+                        : 'none',
+                  }}
                 >
-                  <span className="text-2xl font-semibold text-gray-800">
-                    {card.text}
-                  </span>
+                  {card.type === 'vietnamese' && card.image ? (
+                    <span className="text-lg font-semibold text-white bg-[#0000005c] bg-opacity-50 px-2 py-1 rounded-lg">
+                      {card.text}
+                    </span>
+                  ) : (
+                    <span className="text-2xl font-semibold text-gray-800">
+                      {card.text}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

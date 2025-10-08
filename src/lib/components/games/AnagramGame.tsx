@@ -296,7 +296,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
             )}
           </div>
         ) : currentQuestion ? (
-          <div className="w-full h-[760px] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
+          <div className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
             <div className="mb-6">
               <div className="flex justify-between text-sm text-gray-600 mb-2">
                 <span className="bg-green-500 text-white font-semibold px-3 py-1 rounded-lg">
@@ -312,7 +312,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
             </div>
 
             <div className="flex flex-col items-center gap-4 mb-3">
-              <div className="text-2xl text-4xl text-gray-700">
+              <div className="text-4xl text-gray-700">
                 <span className="inline-block bg-indigo-100 text-indigo-700 font-semibold px-5 py-3 rounded-full">
                   {currentQuestion.vietnamese}
                 </span>
@@ -323,7 +323,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
                   <div
                     key={index}
                     onClick={() => handleSlotClick(index)}
-                    className={`w-12 h-12 w-14 h-14 rounded-lg border-2 flex items-center justify-center font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 ${
+                    className={`w-14 h-14 rounded-lg border-2 flex items-center justify-center font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 ${
                       slot.letter
                         ? 'border-solid bg-indigo-100 border-indigo-300 shadow-sm'
                         : 'border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100'
@@ -347,7 +347,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
                   <span
                     key={index}
                     onClick={() => handleLetterClick(index, letter)}
-                    className={`inline-flex items-center justify-center w-12 h-12 w-14 h-14 rounded-lg border-2 border-gray-200 bg-white font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 hover:bg-indigo-50 hover:scale-105 hover:shadow-md active:scale-95 ${
+                    className={`inline-flex items-center justify-center w-14 h-14 rounded-lg border-2 border-gray-200 bg-white font-bold text-3xl text-gray-800 cursor-pointer transition-all duration-200 hover:bg-indigo-50 hover:scale-105 hover:shadow-md active:scale-95 ${
                       usedLetters.has(index)
                         ? 'opacity-30 pointer-events-none'
                         : ''
