@@ -11,7 +11,7 @@ import { gameComponents, gameInfo } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
-import bg from './assets/bg.png'
+import urls from './assets/urls.json'
 
 const buttonStyle =
   'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
@@ -33,7 +33,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
         <div className="relative w-full h-full">
           <GameComponent
             vocabData={vocabData}
-            backgroundUrl={bg}
+            backgroundUrl={urls.background}
             title={`${game.title} - School Supplies`}
             onClose={() => setActiveGame(null)}
           />
@@ -90,7 +90,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
 
 const LessonHomePage: React.FC = () => {
   const slides = [LessonHomepageSlide]
-  return <PresentationShell slides={slides} backgroundUrl={bg} />
+  return <PresentationShell slides={slides} backgroundUrl={urls.background} />
 }
 
 export const Route = createFileRoute(

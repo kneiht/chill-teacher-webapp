@@ -6,7 +6,7 @@ import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 
 // Assets
-import bg from './assets/bg.png'
+import urls from './assets/urls.json'
 
 const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
   <Slide isActive={isActive} scrollable={true}>
@@ -97,7 +97,7 @@ const HomeworkPage: React.FC = () => {
   return (
     <PresentationShell
       slides={slides}
-      backgroundUrl={bg}
+      backgroundUrl={urls.background}
       onHomeClick={goHome}
       showNavButtons={false}
       showOutlineButton={false}

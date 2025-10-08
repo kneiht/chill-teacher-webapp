@@ -7,7 +7,7 @@ import Flashcard from '@/lib/components/presentation/Flashcard'
 
 // Assets
 import vocabData from './assets/vocab.json'
-import bg from './assets/bg.png'
+import urls from './assets/urls.json'
 
 export const Route = createFileRoute(
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
@@ -27,7 +27,7 @@ export const Route = createFileRoute(
     return (
       <PresentationShell
         slides={flashcardSlides}
-        backgroundUrl={bg}
+        backgroundUrl={urls.background}
         onHomeClick={goHome}
         showNavButtons={true}
         showSlideCounter={true}
