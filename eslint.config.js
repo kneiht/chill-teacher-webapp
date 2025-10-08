@@ -8,6 +8,7 @@ export default [
       'prettier.config.js',
       'vite.config.js',
       '.reference/**/*',
+      'convert-images.js',
     ],
   },
   {
