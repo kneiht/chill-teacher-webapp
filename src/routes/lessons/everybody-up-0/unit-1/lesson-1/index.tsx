@@ -17,6 +17,7 @@ import ListeningTypingEnGame from '@/lib/components/games/ListeningTypingEnGame'
 import PictureChoiceEnGame from '@/lib/components/games/PictureChoiceEnGame'
 import PictureTypingEnGame from '@/lib/components/games/PictureTypingEnGame'
 import UnjumbleGame from '@/lib/components/games/UnjumbleGame'
+import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
 import bg from './assets/bg.png'
@@ -68,7 +69,7 @@ const gameInfo: Record<string, { title: string; component: string }> = {
 }
 
 const buttonStyle =
-  'text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
+  'w-88 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const [activeGame, setActiveGame] = useState<string | null>(null)
@@ -104,25 +105,25 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           <br />
           Lesson 1: School Supplies
         </h1>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 gap-x-20  gap-y-7">
           <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
-            <button className={buttonStyle}>Bài giảng</button>
+            <WoodenButton className={buttonStyle}>Bài giảng</WoodenButton>
           </Link>
           <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
-            <button className={buttonStyle}>Video bài giảng</button>
+            <WoodenButton className={buttonStyle}>Video bài giảng</WoodenButton>
           </Link>
           <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
-            <button className={buttonStyle}>Flashcards</button>
+            <WoodenButton className={buttonStyle}>Flashcards</WoodenButton>
           </Link>
 
           {Object.keys(gameInfo).map((gameName) => (
-            <button
+            <WoodenButton
               key={gameName}
               onClick={() => setActiveGame(gameName)}
               className={buttonStyle}
             >
               {gameName}
-            </button>
+            </WoodenButton>
           ))}
         </div>
       </div>
