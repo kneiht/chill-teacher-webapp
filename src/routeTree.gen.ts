@@ -31,7 +31,6 @@ import { Route as LessonsEverybodyUp0Unit1Lesson1MatchingGameRouteImport } from 
 import { Route as LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
 import { Route as LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
 import { Route as LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-import { Route as LessonsEverybodyUp0Unit1Lesson1AnagramGameRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -154,12 +153,6 @@ const LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute =
     path: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute =
-  LessonsEverybodyUp0Unit1Lesson1AnagramGameRouteImport.update({
-    id: '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game',
-    path: '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof mainRouteRouteWithChildren
@@ -169,7 +162,6 @@ export interface FileRoutesByFullPath {
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game': typeof LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
@@ -192,7 +184,6 @@ export interface FileRoutesByTo {
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
   '/lessons': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game': typeof LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
@@ -218,7 +209,6 @@ export interface FileRoutesById {
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
   '/lessons/': typeof LessonsIndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game': typeof LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game': typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game': typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
@@ -243,7 +233,6 @@ export interface FileRouteTypes {
     | '/profile'
     | '/settings'
     | '/lessons'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
@@ -266,7 +255,6 @@ export interface FileRouteTypes {
     | '/profile'
     | '/settings'
     | '/lessons'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
@@ -291,7 +279,6 @@ export interface FileRouteTypes {
     | '/(main)/profile'
     | '/(main)/settings'
     | '/lessons/'
-    | '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-1/image-reveal-choice-game'
     | '/lessons/everybody-up-0/unit-1/lesson-1/listening-typing-en-game'
@@ -313,7 +300,6 @@ export interface RootRouteChildren {
   mainRouteRoute: typeof mainRouteRouteWithChildren
   SplatRoute: typeof SplatRoute
   LessonsIndexRoute: typeof LessonsIndexRoute
-  LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute
   LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute: typeof LessonsEverybodyUp0Unit1Lesson1ListeningTypingEnGameRoute
@@ -485,13 +471,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game': {
-      id: '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
-      path: '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
-      fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/anagram-game'
-      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1AnagramGameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -529,8 +508,6 @@ const rootRouteChildren: RootRouteChildren = {
   mainRouteRoute: mainRouteRouteWithChildren,
   SplatRoute: SplatRoute,
   LessonsIndexRoute: LessonsIndexRoute,
-  LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute:
-    LessonsEverybodyUp0Unit1Lesson1AnagramGameRoute,
   LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute:
     LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute,
   LessonsEverybodyUp0Unit1Lesson1ImageRevealChoiceGameRoute:

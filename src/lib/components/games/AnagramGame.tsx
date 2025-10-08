@@ -6,6 +6,10 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -20,9 +24,10 @@ interface Question {
 
 interface AnagramGameProps {
   vocabData: Array<VocabItem>
+  title: string
 }
 
-const AnagramGame: React.FC<AnagramGameProps> = ({ vocabData }) => {
+const AnagramGameCore: React.FC<AnagramGameProps> = ({ vocabData, title }) => {
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -217,7 +222,7 @@ const AnagramGame: React.FC<AnagramGameProps> = ({ vocabData }) => {
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-md md:text-xl font-bold text-indigo-700 text-center">
-        Anagram Game - School Supplies
+        {title}
       </h2>
 
       {/* Game Controls */}
@@ -381,6 +386,34 @@ const AnagramGame: React.FC<AnagramGameProps> = ({ vocabData }) => {
         </div>
       )}
     </div>
+  )
+}
+
+interface AnagramGameActivityProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title: string
+}
+
+const AnagramGame: React.FC<AnagramGameActivityProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+}) => {
+  const AnagramGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
+    <Slide isActive={isActive}>
+      <AnagramGameCore vocabData={vocabData} title={title} />
+    </Slide>
+  )
+
+  const slides = [AnagramGameSlide]
+
+  return (
+    <PresentationShell
+      slides={slides}
+      backgroundUrl={backgroundUrl}
+      showHome={true}
+    />
   )
 }
 

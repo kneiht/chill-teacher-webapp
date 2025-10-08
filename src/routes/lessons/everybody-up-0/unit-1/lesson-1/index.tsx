@@ -1,7 +1,11 @@
+import { useState } from 'react'
+import vocabData from './assets/vocab.json'
+
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
 
 // Components
+import AnagramGame from '@/lib/components/games/AnagramGame'
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 
@@ -9,6 +13,8 @@ import Slide from '@/lib/components/presentation/Slide'
 import bg from './assets/bg.png'
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
+  const [showAnagramGame, setShowAnagramGame] = useState(false)
+
   return (
     <Slide isActive={isActive}>
       <div className="flex flex-col items-center justify-start h-full text-center">
@@ -42,12 +48,6 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
           >
             Matching Game
-          </Link>
-          <Link
-            to="/lessons/everybody-up-0/unit-1/lesson-1/anagram-game"
-            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105"
-          >
-            Anagram Game
           </Link>
           <Link
             to="/lessons/everybody-up-0/unit-1/lesson-1/multiple-choice-en-vi-game"
@@ -97,8 +97,35 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           >
             Unjumble Game
           </Link>
+          {/* Nút để test game */}
+          <button
+            onClick={() => setShowAnagramGame(true)}
+            className="font-bold py-6 px-10 rounded-xl text-3xl transition-transform transform hover:scale-105 bg-yellow-400 text-yellow-900"
+          >
+            Test Anagram Game
+          </button>
         </div>
       </div>
+
+      {/* Modal/Overlay để hiển thị game khi test */}
+      {showAnagramGame && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+          <div className="relative w-full h-full">
+            <AnagramGame
+              vocabData={vocabData}
+              backgroundUrl={bg}
+              title="Anagram Game (Test Mode)"
+            />
+            {/* Nút đóng game test */}
+            <button
+              onClick={() => setShowAnagramGame(false)}
+              className="absolute top-2 right-20 z-[60] bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
     </Slide>
   )
 }
