@@ -55,13 +55,19 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
               <WoodenButton className={buttonStyle}>📖 Bài giảng</WoodenButton>
             </Link>
+
             <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
               <WoodenButton className={buttonStyle}>
                 🎥 Video bài giảng
               </WoodenButton>
             </Link>
+
             <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
               <WoodenButton className={buttonStyle}>🃏 Flashcards</WoodenButton>
+            </Link>
+
+            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/homework">
+              <WoodenButton className={buttonStyle}>📝 Bài tập</WoodenButton>
             </Link>
 
             {Object.keys(gameInfo).map((gameName) => (
