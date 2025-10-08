@@ -4,18 +4,22 @@ import { ttsStore, setVoice, setRate } from '@/lib/stores/tts.store'
 
 export const useVoice = () => {
   const [voices, setVoices] = useState<Array<SpeechSynthesisVoice>>([])
+  const [isSupported, setIsSupported] = useState(false)
   const { voice, rate } = useStore(ttsStore)
 
   useEffect(() => {
-    const loadVoices = () => {
-      setVoices(speechSynthesis.getVoices())
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      setIsSupported(true)
+      const loadVoices = () => {
+        setVoices(speechSynthesis.getVoices())
+      }
+      loadVoices()
+      speechSynthesis.onvoiceschanged = loadVoices
     }
-    loadVoices()
-    speechSynthesis.onvoiceschanged = loadVoices
   }, [])
 
   const speak = (text: string, lang: string = 'en-US') => {
-    if (speechSynthesis.speaking) {
+    if (!isSupported || speechSynthesis.speaking) {
       return
     }
     const utterance = new SpeechSynthesisUtterance(text)
@@ -40,5 +44,6 @@ export const useVoice = () => {
     setVoice,
     setRate,
     speak,
+    isSupported,
   }
 }

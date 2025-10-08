@@ -36,7 +36,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const [showOutline, setShowOutline] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showTTSSettings, setShowTTSSettings] = useState(false)
-  const { voices, voice, rate, setVoice, setRate } = useVoice()
+  const { voices, voice, rate, setVoice, setRate, isSupported } = useVoice()
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef<number>(0)
@@ -222,7 +222,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             </button>
           )}
 
-          {showSettingsButton && (
+          {showSettingsButton && isSupported && (
             <button
               onClick={() => setShowTTSSettings(true)}
               className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
