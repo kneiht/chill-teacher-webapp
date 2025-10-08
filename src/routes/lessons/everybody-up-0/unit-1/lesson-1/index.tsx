@@ -7,66 +7,11 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import AnagramGame from '@/lib/components/games/AnagramGame'
-import MatchingGame from '@/lib/components/games/MatchingGame'
-import MultipleChoiceEnViGame from '@/lib/components/games/MultipleChoiceEnViGame'
-import MultipleChoiceViEnGame from '@/lib/components/games/MultipleChoiceViEnGame'
-import MemoryGame from '@/lib/components/games/MemoryGame'
-import ImageRevealChoiceGame from '@/lib/components/games/ImageRevealChoiceGame'
-import ListeningTypingEnGame from '@/lib/components/games/ListeningTypingEnGame'
-import PictureChoiceEnGame from '@/lib/components/games/PictureChoiceEnGame'
-import PictureTypingEnGame from '@/lib/components/games/PictureTypingEnGame'
-import UnjumbleGame from '@/lib/components/games/UnjumbleGame'
+import { gameComponents, gameInfo } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
 import bg from './assets/bg.png'
-
-const gameComponents: Record<string, React.FC<any>> = {
-  AnagramGame,
-  MatchingGame,
-  MultipleChoiceEnViGame,
-  MultipleChoiceViEnGame,
-  PictureChoiceEnGame,
-  MemoryGame,
-  ImageRevealChoiceGame,
-  ListeningTypingEnGame,
-
-  PictureTypingEnGame,
-  UnjumbleGame,
-}
-
-const gameInfo: Record<string, { title: string; component: string }> = {
-  'Matching Game': { title: 'Matching Game', component: 'MatchingGame' },
-  'Anagram Game': { title: 'Anagram Game', component: 'AnagramGame' },
-  'Multiple Choice En→Vi': {
-    title: 'Multiple Choice (EN → VI)',
-    component: 'MultipleChoiceEnViGame',
-  },
-  'Multiple Choice Vi→En': {
-    title: 'Multiple Choice (VI → EN)',
-    component: 'MultipleChoiceViEnGame',
-  },
-  'Picture Choice': {
-    title: 'Picture Choice',
-    component: 'PictureChoiceEnGame',
-  },
-  'Memory Game': { title: 'Memory Game', component: 'MemoryGame' },
-  'Image Reveal': {
-    title: 'Image Reveal Choice',
-    component: 'ImageRevealChoiceGame',
-  },
-  'Listening & Typing': {
-    title: 'Listening & Typing',
-    component: 'ListeningTypingEnGame',
-  },
-
-  'Picture Typing': {
-    title: 'Picture Typing',
-    component: 'PictureTypingEnGame',
-  },
-  'Unjumble Game': { title: 'Unjumble Game', component: 'UnjumbleGame' },
-}
 
 const buttonStyle =
   'w-88 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
