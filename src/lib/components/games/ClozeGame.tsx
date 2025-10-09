@@ -19,7 +19,7 @@ interface VocabItem {
 
 interface ClozeData {
   paragraph?: string
-  words?: string[]
+  words?: Array<string>
   sentences?: Array<{ sentence: string; word: string }>
 }
 
@@ -38,9 +38,9 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   const [score, setScore] = useState(0) // Score can be 1 for completing, 0 for not.
   const [isAnswering, setIsAnswering] = useState(false) // To show feedback
   const [feedback, setFeedback] = useState('')
-  const [answers, setAnswers] = useState<string[]>([])
-  const [shuffledWords, setShuffledWords] = useState<string[]>([])
-  const [correctAnswers, setCorrectAnswers] = useState<boolean[]>([])
+  const [answers, setAnswers] = useState<Array<string>>([])
+  const [shuffledWords, setShuffledWords] = useState<Array<string>>([])
+  const [correctAnswers, setCorrectAnswers] = useState<Array<boolean>>([])
 
   const parts =
     clozeData && clozeData.paragraph ? clozeData.paragraph.split('_____') : []
@@ -118,7 +118,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
     if (isAnswering || !clozeData) return
     setIsAnswering(true)
 
-    let newCorrectAnswers: boolean[]
+    let newCorrectAnswers: Array<boolean>
     let correctCount: number
     let totalBlanks: number
 
@@ -128,7 +128,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
           normalizeText(answer) === normalizeText(clozeData.words![index]),
       )
       correctCount = newCorrectAnswers.filter(Boolean).length
-      totalBlanks = clozeData.words!.length
+      totalBlanks = clozeData.words.length
     } else if (clozeData.sentences) {
       newCorrectAnswers = answers.map(
         (answer, index) =>
@@ -136,7 +136,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
           normalizeText(clozeData.sentences![index].word),
       )
       correctCount = newCorrectAnswers.filter(Boolean).length
-      totalBlanks = clozeData.sentences!.length
+      totalBlanks = clozeData.sentences.length
     } else {
       return
     }
