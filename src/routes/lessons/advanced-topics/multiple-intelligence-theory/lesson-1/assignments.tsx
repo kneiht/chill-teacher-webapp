@@ -23,8 +23,10 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
         <ol className="text-3xl text-left text-gray-800 space-y-8  list-decimal list-inside">
           <li>Xem video bài học.</li>
           <li>Luyện tập phát âm từ vựng và câu theo video.</li>
-          <li>Luyện tập từ vựng bằng các game tương tác.</li>
-          <li>Làm các bài tập từ vựng, chụp kết quả lại gửi giáo viên.</li>
+          <li>
+            Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả
+            cho giáo viên.
+          </li>
           <li>Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.</li>
           <li>
             Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên.

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import vocabData from './assets/vocab.json'
 
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
@@ -11,36 +10,45 @@ import { Route as youtubeLessonRoute } from './youtube-lesson'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import { gameComponents, noImageGameInfo } from '@/lib/components/games'
+import { gameComponents, gameInfo } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
 import urls from './assets/urls.json'
+import vocabData from './assets/vocab.json'
+import clozeData from './assets/cloze.json'
 
 const buttonStyle =
   'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const [activeGame, setActiveGame] = useState<string | null>(null)
+  const games = gameInfo({ vocabData, hasClozeData: true })
 
   const GamePlayer = () => {
     if (!activeGame) return null
 
-    const game = noImageGameInfo[activeGame]
+    const game = games[activeGame]
     if (!game) return null
 
     const GameComponent = gameComponents[game.component]
     if (!GameComponent) return null
 
+    const props: any = {
+      vocabData,
+      backgroundUrl: urls.background,
+      title: `${game.title} - School Supplies`,
+      onClose: () => setActiveGame(null),
+    }
+
+    if (game.component === 'ClozeGame') {
+      props.clozeData = clozeData
+    }
+
     return (
       <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <div className="relative w-full h-full">
-          <GameComponent
-            vocabData={vocabData}
-            backgroundUrl={urls.background}
-            title={`${game.title} - School Supplies`}
-            onClose={() => setActiveGame(null)}
-          />
+          <GameComponent {...props} />
         </div>
       </div>
     )
@@ -74,13 +82,13 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
-            {Object.keys(noImageGameInfo).map((gameName) => (
+            {Object.keys(games).map((gameName) => (
               <WoodenButton
                 key={gameName}
                 onClick={() => setActiveGame(gameName)}
                 className={buttonStyle}
               >
-                {noImageGameInfo[gameName].icon} {gameName}
+                {games[gameName].icon} {gameName}
               </WoodenButton>
             ))}
           </div>

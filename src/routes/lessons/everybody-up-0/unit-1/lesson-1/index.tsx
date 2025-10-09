@@ -22,11 +22,12 @@ const buttonStyle =
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const [activeGame, setActiveGame] = useState<string | null>(null)
+  const games = gameInfo({ vocabData })
 
   const GamePlayer = () => {
     if (!activeGame) return null
 
-    const game = gameInfo[activeGame]
+    const game = games[activeGame]
     if (!game) return null
 
     const GameComponent = gameComponents[game.component]
@@ -74,13 +75,13 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
-            {Object.keys(gameInfo).map((gameName) => (
+            {Object.keys(games).map((gameName) => (
               <WoodenButton
                 key={gameName}
                 onClick={() => setActiveGame(gameName)}
                 className={buttonStyle}
               >
-                {gameInfo[gameName].icon} {gameName}
+                {games[gameName].icon} {gameName}
               </WoodenButton>
             ))}
           </div>
