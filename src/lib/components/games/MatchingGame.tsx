@@ -50,6 +50,21 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
 
   const vocabWords: Array<VocabItem> = vocabData
 
+  const pairColors = [
+    'bg-blue-200 border-blue-600',
+    'bg-yellow-200 border-yellow-600',
+    'bg-purple-200 border-purple-600',
+    'bg-pink-200 border-pink-600',
+    'bg-orange-200 border-orange-600',
+    'bg-teal-200 border-teal-600',
+    'bg-indigo-200 border-indigo-600',
+    'bg-gray-200 border-gray-600',
+  ]
+
+  const getPairColor = (id: number) => {
+    return pairColors[id % pairColors.length]
+  }
+
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
     return () => resetGame()
@@ -251,11 +266,11 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                   onClick={() => handleCardClick(index)}
                   className={`game-card rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center text-center overflow-hidden relative bg-cover bg-center h-24 ${
                     card.matched
-                      ? 'bg-green-200 border-green-600 opacity-60 border-5'
+                      ? `${getPairColor(card.id)} opacity-60 border-5`
                       : selectedCards.includes(index) && isPenalty
                         ? 'bg-red-200 border-red-600 scale-105 shadow-lg border-5'
                         : selectedCards.includes(index)
-                          ? 'bg-blue-200 border-blue-600 scale-105 shadow-lg border-5'
+                          ? 'bg-gradient-to-r from-pink-400 via-red-400 via-yellow-400 via-green-400 via-blue-400 via-indigo-400 via-purple-400 border-5 scale-105 shadow-lg'
                           : 'bg-white border-gray-200 hover:bg-indigo-50'
                   }`}
                   style={{
@@ -269,8 +284,12 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                     <span className="text-lg font-semibold text-white bg-[#0000005c] bg-opacity-50 px-2 py-1 rounded-lg">
                       {card.text}
                     </span>
-                  ) : (
+                  ) : card.type === 'vietnamese' ? (
                     <span className="text-2xl font-semibold text-gray-800">
+                      {card.text}
+                    </span>
+                  ) : (
+                    <span className="text-2xl font-semibold text-blue-800">
                       {card.text}
                     </span>
                   )}
