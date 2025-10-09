@@ -47,7 +47,9 @@ export const gameComponents: Record<string, React.FC<any>> = {
 }
 
 export const gameInfo = (
-  options: { vocabData: Array<any>; hasClozeData?: boolean } = { vocabData: [] },
+  options: { vocabData: Array<any>; hasClozeData?: boolean } = {
+    vocabData: [],
+  },
 ) => {
   const hasImages = options.vocabData.some(
     (v) => v.image && v.image.trim() !== '',

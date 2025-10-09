@@ -9,6 +9,7 @@ import {
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
+import './game-styles.css'
 
 interface VocabItem {
   word: string
@@ -270,7 +271,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                       : selectedCards.includes(index) && isPenalty
                         ? 'bg-red-200 border-red-600 scale-105 shadow-lg border-5'
                         : selectedCards.includes(index)
-                          ? 'bg-gradient-to-r from-pink-400 via-red-400 via-yellow-400 via-green-400 via-blue-400 via-indigo-400 via-purple-400 border-5 scale-105 shadow-lg'
+                          ? 'bg-blue-300 border-blue-600 shadow-lg'
                           : 'bg-white border-gray-200 hover:bg-indigo-50'
                   }`}
                   style={{
