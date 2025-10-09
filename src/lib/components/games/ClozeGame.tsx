@@ -39,6 +39,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   const [feedback, setFeedback] = useState('')
   const [answers, setAnswers] = useState<string[]>([])
   const [shuffledWords, setShuffledWords] = useState<string[]>([])
+  const [correctAnswers, setCorrectAnswers] = useState<boolean[]>([])
 
   const parts = clozeData ? clozeData.paragraph.split('_____') : []
 
@@ -53,6 +54,14 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
     return `${mins.toString().padStart(2, '0')}:${secs
       .toString()
       .padStart(2, '0')}`
+  }
+
+  const normalizeText = (text: string) => {
+    return text
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, ' ') // Loại bỏ khoảng trắng thừa
+      .replace(/[^\w\s]/g, '') // Loại bỏ dấu câu
   }
 
   const startTimer = () => {
@@ -78,6 +87,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
     if (!clozeData) return
     setShuffledWords([...clozeData.words].sort(() => Math.random() - 0.5))
     setAnswers(new Array(clozeData.words.length).fill(''))
+    setCorrectAnswers(new Array(clozeData.words.length).fill(false))
     setIsGameStarted(true)
     setIsGameOver(false)
     setIsAnswering(false)
@@ -90,6 +100,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   }
 
   const restartGame = () => {
+    setCorrectAnswers([])
     startGame()
   }
 
@@ -97,13 +108,17 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
     if (isAnswering || !clozeData) return
     setIsAnswering(true)
 
-    const isCorrect = answers.every(
+    const newCorrectAnswers = answers.map(
       (answer, index) =>
-        answer.trim().toLowerCase() === clozeData.words[index].toLowerCase(),
+        normalizeText(answer) === normalizeText(clozeData.words[index]),
     )
+    setCorrectAnswers(newCorrectAnswers)
 
-    if (isCorrect) {
-      setScore(1)
+    const correctCount = newCorrectAnswers.filter(Boolean).length
+    const totalBlanks = clozeData.words.length
+    setScore(correctCount / totalBlanks)
+
+    if (correctCount === totalBlanks) {
       answerCorrect()
       setFeedback('✅ Chúc mừng! Bạn đã hoàn thành!')
       stopTimer()
@@ -144,7 +159,8 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
           )}
           {isGameStarted && (
             <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
-              🎯 {score}/1
+              🎯 {Math.floor(score * clozeData.words.length)}/
+              {clozeData.words.length}
             </div>
           )}
         </div>
@@ -214,10 +230,10 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
                         }
                         disabled={isAnswering && feedback.includes('✅')}
                         className={`border-b-2 w-32 text-center mx-2 py-1 text-2xl font-semibold bg-transparent focus:outline-none transition-colors ${
-                          isAnswering && feedback.includes('✅')
+                          correctAnswers[index]
                             ? 'border-green-500 text-green-700'
-                            : isAnswering && feedback.includes('❌')
-                              ? 'border-red-500'
+                            : isAnswering && !correctAnswers[index]
+                              ? 'border-red-500 text-red-700'
                               : 'border-indigo-400 focus:border-indigo-600'
                         }`}
                       />
@@ -255,9 +271,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
             <h3 className="text-2xl font-bold text-green-600 mb-2">
               Excellent Work!
             </h3>
-            <p className="text-gray-600 text-xl">
-              You completed the exercise!
-            </p>
+            <p className="text-gray-600 text-xl">You completed the exercise!</p>
             <p className="text-indigo-700 font-bold mt-2 text-xl">
               ⏱️ Time: {formatTime(timer)}
             </p>
@@ -309,4 +323,3 @@ const ClozeGame: React.FC<ClozeGameActivityProps> = ({
 }
 
 export default ClozeGame
-
