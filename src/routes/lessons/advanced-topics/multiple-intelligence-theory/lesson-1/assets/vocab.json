@@ -1,15 +1,17 @@
 [
   {
     "word": "Implication",
-    "phonics": "/ˌɪm.plɪˈkeɪ.ʃən/",
+    "phonics": "/ɪmplɪˈkeɪʃən/",
+    "partOfSpeech": "n",
     "image": "",
-    "vietnameseMeaning": "hàm ý, tác động",
+    "vietnameseMeaning": "hàm ý",
     "sampleSentence": "The teacher explained the implications of the new rule.",
     "vietnameseTranslation": "Giáo viên giải thích những hàm ý của quy định mới."
   },
   {
     "word": "Intelligence",
-    "phonics": "/ɪnˈtel.ɪ.dʒəns/",
+    "phonics": "/ɪnˈtɛlədʒəns/",
+    "partOfSpeech": "n",
     "image": "",
     "vietnameseMeaning": "trí thông minh",
     "sampleSentence": "Emotional intelligence is as important as IQ.",
@@ -17,7 +19,8 @@
   },
   {
     "word": "Theory",
-    "phonics": "/ˈθɪə.ri/",
+    "phonics": "/ˈθɪri/",
+    "partOfSpeech": "n",
     "image": "",
     "vietnameseMeaning": "lý thuyết",
     "sampleSentence": "The students studied the theory of evolution.",
@@ -25,7 +28,8 @@
   },
   {
     "word": "Intelligence Quotient",
-    "phonics": "/ɪnˈtel.ɪ.dʒəns ˈkwəʊ.ʃənt/",
+    "phonics": "/ɪnˈtɛlədʒəns ˈkwoʊʃənt/",
+    "partOfSpeech": "n",
     "image": "",
     "vietnameseMeaning": "chỉ số IQ",
     "sampleSentence": "Her intelligence quotient is above average.",
@@ -33,7 +37,8 @@
   },
   {
     "word": "popular",
-    "phonics": "/ˈpɒp.jə.lər/",
+    "phonics": "/ˈpɑpjələr/",
+    "partOfSpeech": "adj",
     "image": "",
     "vietnameseMeaning": "phổ biến, được ưa chuộng",
     "sampleSentence": "Football is very popular in Vietnam.",
@@ -41,7 +46,8 @@
   },
   {
     "word": "language skills",
-    "phonics": "/ˈlæŋ.ɡwɪdʒ skɪlz/",
+    "phonics": "/ˈlæŋɡwɪdʒ skɪlz/",
+    "partOfSpeech": "phr",
     "image": "",
     "vietnameseMeaning": "kỹ năng ngôn ngữ",
     "sampleSentence": "Reading books helps improve language skills.",
@@ -49,7 +55,8 @@
   },
   {
     "word": "logical-mathematical skills",
-    "phonics": "/ˈlɒdʒ.ɪ.kəl ˌmæθ.məˈmæt.ɪ.kəl skɪlz/",
+    "phonics": "/ˈlɑdʒɪkəl ˌmæθəˈmætɪkəl skɪlz/",
+    "partOfSpeech": "phr",
     "image": "",
     "vietnameseMeaning": "kỹ năng logic - toán học",
     "sampleSentence": "Solving puzzles develops logical-mathematical skills.",
@@ -57,7 +64,8 @@
   },
   {
     "word": "narrow",
-    "phonics": "/ˈnær.əʊ/",
+    "phonics": "/ˈnæroʊ/",
+    "partOfSpeech": "adj",
     "image": "",
     "vietnameseMeaning": "hạn hẹp",
     "sampleSentence": "That is a narrow definition of intelligence.",
@@ -65,7 +73,8 @@
   },
   {
     "word": "professor",
-    "phonics": "/prəˈfes.ər/",
+    "phonics": "/prəˈfɛsər/",
+    "partOfSpeech": "n",
     "image": "",
     "vietnameseMeaning": "giáo sư",
     "sampleSentence": "The professor gave a lecture on psychology.",
@@ -73,178 +82,11 @@
   },
   {
     "word": "effective",
-    "phonics": "/ɪˈfek.tɪv/",
+    "phonics": "/ɪˈfɛktɪv/",
+    "partOfSpeech": "adj",
     "image": "",
     "vietnameseMeaning": "hiệu quả",
     "sampleSentence": "Group work can be very effective for learning.",
     "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
-  },
-  {
-    "word": "Linguistic",
-    "phonics": "/lɪŋˈɡwɪs.tɪk/",
-    "image": "",
-    "vietnameseMeaning": "ngôn ngữ học",
-    "sampleSentence": "Linguistic intelligence involves reading and writing.",
-    "vietnameseTranslation": "Trí thông minh ngôn ngữ liên quan đến đọc và viết."
-  },
-  {
-    "word": "discussion",
-    "phonics": "/dɪˈskʌʃ.ən/",
-    "image": "",
-    "vietnameseMeaning": "thảo luận",
-    "sampleSentence": "We had a discussion about the project.",
-    "vietnameseTranslation": "Chúng tôi đã thảo luận về dự án."
-  },
-  {
-    "word": "pattern",
-    "phonics": "/ˈpæt.ən/",
-    "image": "",
-    "vietnameseMeaning": "mẫu, khuôn mẫu",
-    "sampleSentence": "Children quickly notice patterns in language.",
-    "vietnameseTranslation": "Trẻ em nhanh chóng nhận ra các mẫu trong ngôn ngữ."
-  },
-  {
-    "word": "problem-solving",
-    "phonics": "/ˈprɒb.ləm ˌsɒlv.ɪŋ/",
-    "image": "",
-    "vietnameseMeaning": "giải quyết vấn đề",
-    "sampleSentence": "Problem-solving is an important skill in daily life.",
-    "vietnameseTranslation": "Giải quyết vấn đề là một kỹ năng quan trọng trong cuộc sống hàng ngày."
-  },
-  {
-    "word": "Spatial",
-    "phonics": "/ˈspeɪ.ʃəl/",
-    "image": "",
-    "vietnameseMeaning": "không gian",
-    "sampleSentence": "Architects need strong spatial intelligence.",
-    "vietnameseTranslation": "Kiến trúc sư cần trí thông minh không gian mạnh."
-  },
-  {
-    "word": "imagination",
-    "phonics": "/ɪˌmædʒ.ɪˈneɪ.ʃən/",
-    "image": "",
-    "vietnameseMeaning": "trí tưởng tượng",
-    "sampleSentence": "Children often have a strong imagination.",
-    "vietnameseTranslation": "Trẻ em thường có trí tưởng tượng phong phú."
-  },
-  {
-    "word": "Bodily-kinesthetic",
-    "phonics": "/ˈbɒd.ɪ.li kɪˈnes.θet.ɪk/",
-    "image": "",
-    "vietnameseMeaning": "thể chất - vận động",
-    "sampleSentence": "Dancers use their bodily-kinesthetic intelligence.",
-    "vietnameseTranslation": "Các vũ công sử dụng trí thông minh vận động thể chất."
-  },
-  {
-    "word": "creative",
-    "phonics": "/kriˈeɪ.tɪv/",
-    "image": "",
-    "vietnameseMeaning": "sáng tạo",
-    "sampleSentence": "She is very creative with her art projects.",
-    "vietnameseTranslation": "Cô ấy rất sáng tạo trong các dự án nghệ thuật."
-  },
-  {
-    "word": "Interpersonal",
-    "phonics": "/ˌɪn.təˈpɜː.sən.əl/",
-    "image": "",
-    "vietnameseMeaning": "giữa người với người (giao tiếp)",
-    "sampleSentence": "Teachers need strong interpersonal skills.",
-    "vietnameseTranslation": "Giáo viên cần có kỹ năng giao tiếp tốt."
-  },
-  {
-    "word": "journal",
-    "phonics": "/ˈdʒɜː.nəl/",
-    "image": "",
-    "vietnameseMeaning": "nhật ký, tạp chí",
-    "sampleSentence": "She writes in her journal every night.",
-    "vietnameseTranslation": "Cô ấy viết vào nhật ký của mình mỗi tối."
-  },
-  {
-    "word": "reflection",
-    "phonics": "/rɪˈflek.ʃən/",
-    "image": "",
-    "vietnameseMeaning": "suy ngẫm, phản chiếu",
-    "sampleSentence": "Reflection helps us learn from mistakes.",
-    "vietnameseTranslation": "Suy ngẫm giúp chúng ta học từ những sai lầm."
-  },
-  {
-    "word": "independent",
-    "phonics": "/ˌɪn.dɪˈpen.dənt/",
-    "image": "",
-    "vietnameseMeaning": "độc lập",
-    "sampleSentence": "He likes to be independent in his work.",
-    "vietnameseTranslation": "Anh ấy thích làm việc một cách độc lập."
-  },
-  {
-    "word": "Naturalist",
-    "phonics": "/ˈnætʃ.ər.ə.lɪst/",
-    "image": "",
-    "vietnameseMeaning": "người nghiên cứu thiên nhiên",
-    "sampleSentence": "Naturalist intelligence is about understanding nature.",
-    "vietnameseTranslation": "Trí thông minh tự nhiên là việc hiểu biết về thiên nhiên."
-  },
-  {
-    "word": "observe",
-    "phonics": "/əbˈzɜːv/",
-    "image": "",
-    "vietnameseMeaning": "quan sát",
-    "sampleSentence": "Scientists observe animals in their natural environment.",
-    "vietnameseTranslation": "Các nhà khoa học quan sát động vật trong môi trường tự nhiên."
-  },
-  {
-    "word": "possibility",
-    "phonics": "/ˌpɒs.əˈbɪl.ə.ti/",
-    "image": "",
-    "vietnameseMeaning": "khả năng",
-    "sampleSentence": "There is a possibility of rain tomorrow.",
-    "vietnameseTranslation": "Có khả năng sẽ mưa vào ngày mai."
-  },
-  {
-    "word": "spiritual",
-    "phonics": "/ˈspɪr.ɪ.tʃu.əl/",
-    "image": "",
-    "vietnameseMeaning": "thuộc tinh thần, tâm linh",
-    "sampleSentence": "Meditation is often a spiritual practice.",
-    "vietnameseTranslation": "Thiền thường là một hoạt động tinh thần."
-  },
-  {
-    "word": "existential",
-    "phonics": "/ˌeɡ.zɪˈsten.ʃəl/",
-    "image": "",
-    "vietnameseMeaning": "thuộc về tồn tại",
-    "sampleSentence": "He asked deep existential questions about life.",
-    "vietnameseTranslation": "Anh ấy đặt ra những câu hỏi hiện sinh sâu sắc về cuộc sống."
-  },
-  {
-    "word": "conclusion",
-    "phonics": "/kənˈkluː.ʒən/",
-    "image": "",
-    "vietnameseMeaning": "kết luận",
-    "sampleSentence": "The teacher came to the conclusion after the test.",
-    "vietnameseTranslation": "Giáo viên đã đưa ra kết luận sau bài kiểm tra."
-  },
-  {
-    "word": "separate",
-    "phonics": "/ˈsep.ər.ət/",
-    "image": "",
-    "vietnameseMeaning": "riêng biệt, tách rời",
-    "sampleSentence": "The two ideas are separate but related.",
-    "vietnameseTranslation": "Hai ý tưởng này tách biệt nhưng có liên quan."
-  },
-  {
-    "word": "strength",
-    "phonics": "/streŋθ/",
-    "image": "",
-    "vietnameseMeaning": "điểm mạnh, sức mạnh",
-    "sampleSentence": "Her strength is in problem-solving.",
-    "vietnameseTranslation": "Điểm mạnh của cô ấy là giải quyết vấn đề."
-  },
-  {
-    "word": "opportunity",
-    "phonics": "/ˌɒp.əˈtʃuː.nə.ti/",
-    "image": "",
-    "vietnameseMeaning": "cơ hội",
-    "sampleSentence": "Education gives everyone an equal opportunity.",
-    "vietnameseTranslation": "Giáo dục mang lại cơ hội bình đẳng cho mọi người."
   }
 ]

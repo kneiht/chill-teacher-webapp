@@ -4,14 +4,14 @@ import vocabData from './assets/vocab.json'
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Route as flashcardsRoute } from './flashcards'
-import { Route as homeworkRoute } from './homework'
+import { Route as assignmentsRoute } from './assignments'
 import { Route as presentationLessonRoute } from './presentation-lesson'
 import { Route as youtubeLessonRoute } from './youtube-lesson'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import { gameComponents, gameInfo } from '@/lib/components/games'
+import { gameComponents, noImageGameInfo } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
@@ -26,7 +26,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const GamePlayer = () => {
     if (!activeGame) return null
 
-    const game = gameInfo[activeGame]
+    const game = noImageGameInfo[activeGame]
     if (!game) return null
 
     const GameComponent = gameComponents[game.component]
@@ -51,9 +51,9 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
       <Slide isActive={isActive}>
         <div className="flex flex-col items-center justify-start h-full text-center">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
-            Unit 1: Art Class
+            Multiple Intelligence Theory
             <br />
-            Lesson 1: School Supplies
+            Lesson 1: Vocabulary - Part 1
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
             <Link to={presentationLessonRoute.to}>
@@ -70,17 +70,17 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>🃏 Flashcards</WoodenButton>
             </Link>
 
-            <Link to={homeworkRoute.to}>
-              <WoodenButton className={buttonStyle}>📝 Bài tập</WoodenButton>
+            <Link to={assignmentsRoute.to}>
+              <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
-            {Object.keys(gameInfo).map((gameName) => (
+            {Object.keys(noImageGameInfo).map((gameName) => (
               <WoodenButton
                 key={gameName}
                 onClick={() => setActiveGame(gameName)}
                 className={buttonStyle}
               >
-                {gameInfo[gameName].icon} {gameName}
+                {noImageGameInfo[gameName].icon} {gameName}
               </WoodenButton>
             ))}
           </div>
