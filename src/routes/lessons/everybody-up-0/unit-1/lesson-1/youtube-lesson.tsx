@@ -13,8 +13,7 @@ export const Route = createFileRoute(
 )({
   component: () => {
     const navigate = useNavigate()
-    const goHome = () =>
-      navigate({ to: '/lessons/everybody-up-0/unit-1/lesson-1' })
+    const goHome = () => navigate({ to: '..' })
 
     const slides = [
       ({ isActive }: { isActive: boolean }) => (

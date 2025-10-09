@@ -3,6 +3,10 @@ import vocabData from './assets/vocab.json'
 
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
+import { Route as flashcardsRoute } from './flashcards'
+import { Route as assignmentsRoute } from './assignments'
+import { Route as presentationLessonRoute } from './presentation-lesson'
+import { Route as youtubeLessonRoute } from './youtube-lesson'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
@@ -52,21 +56,21 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             Lesson 1: School Supplies
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
-            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson">
+            <Link to={presentationLessonRoute.to}>
               <WoodenButton className={buttonStyle}>📖 Bài giảng</WoodenButton>
             </Link>
 
-            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson">
+            <Link to={youtubeLessonRoute.to}>
               <WoodenButton className={buttonStyle}>
                 🎥 Video bài giảng
               </WoodenButton>
             </Link>
 
-            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/flashcards">
+            <Link to={flashcardsRoute.to}>
               <WoodenButton className={buttonStyle}>🃏 Flashcards</WoodenButton>
             </Link>
 
-            <Link to="/lessons/everybody-up-0/unit-1/lesson-1/homework">
+            <Link to={assignmentsRoute.to}>
               <WoodenButton className={buttonStyle}>📝 Bài tập</WoodenButton>
             </Link>
 

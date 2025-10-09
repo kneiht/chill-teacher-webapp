@@ -36,7 +36,7 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
             {/* ví dụ */}
             <p className="text-xl mt-6 italic px-10">
               Ví dụ cách viết (lưu ý cách viết theo chuẩn Tiếng Anh nên một số
-              chữ khác sẽ có nét khác Tiếng Việt)
+              chữ sẽ có nét viết khác Tiếng Việt)
             </p>
             <ul
               className="ml-8 mt-2 space-y-5"
@@ -110,8 +110,7 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
 
 const HomeworkPage: React.FC = () => {
   const navigate = useNavigate()
-  const goHome = () =>
-    navigate({ to: '/lessons/everybody-up-0/unit-1/lesson-1' })
+  const goHome = () => navigate({ to: '..' })
 
   const slides = [HomeworkSlide]
   return (
@@ -127,7 +126,7 @@ const HomeworkPage: React.FC = () => {
 }
 
 export const Route = createFileRoute(
-  '/lessons/everybody-up-0/unit-1/lesson-1/homework',
+  '/lessons/everybody-up-0/unit-1/lesson-1/assignments',
 )({
   component: HomeworkPage,
 })
