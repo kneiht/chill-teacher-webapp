@@ -18,8 +18,9 @@ interface VocabItem {
 }
 
 interface ClozeData {
-  paragraph: string
-  words: string[]
+  paragraph?: string
+  words?: string[]
+  sentences?: Array<{ sentence: string; word: string }>
 }
 
 interface ClozeGameProps {
@@ -41,7 +42,8 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   const [shuffledWords, setShuffledWords] = useState<string[]>([])
   const [correctAnswers, setCorrectAnswers] = useState<boolean[]>([])
 
-  const parts = clozeData ? clozeData.paragraph.split('_____') : []
+  const parts =
+    clozeData && clozeData.paragraph ? clozeData.paragraph.split('_____') : []
 
   useEffect(() => {
     setTotalQuestions(1) // This game has one big question
@@ -85,9 +87,17 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
 
   const startGame = () => {
     if (!clozeData) return
-    setShuffledWords([...clozeData.words].sort(() => Math.random() - 0.5))
-    setAnswers(new Array(clozeData.words.length).fill(''))
-    setCorrectAnswers(new Array(clozeData.words.length).fill(false))
+    if (clozeData.words) {
+      setShuffledWords([...clozeData.words].sort(() => Math.random() - 0.5))
+      setAnswers(new Array(clozeData.words.length).fill(''))
+      setCorrectAnswers(new Array(clozeData.words.length).fill(false))
+    } else if (clozeData.sentences) {
+      setShuffledWords(
+        clozeData.sentences.map((s) => s.word).sort(() => Math.random() - 0.5),
+      )
+      setAnswers(new Array(clozeData.sentences.length).fill(''))
+      setCorrectAnswers(new Array(clozeData.sentences.length).fill(false))
+    }
     setIsGameStarted(true)
     setIsGameOver(false)
     setIsAnswering(false)
@@ -108,14 +118,30 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
     if (isAnswering || !clozeData) return
     setIsAnswering(true)
 
-    const newCorrectAnswers = answers.map(
-      (answer, index) =>
-        normalizeText(answer) === normalizeText(clozeData.words[index]),
-    )
-    setCorrectAnswers(newCorrectAnswers)
+    let newCorrectAnswers: boolean[]
+    let correctCount: number
+    let totalBlanks: number
 
-    const correctCount = newCorrectAnswers.filter(Boolean).length
-    const totalBlanks = clozeData.words.length
+    if (clozeData.words) {
+      newCorrectAnswers = answers.map(
+        (answer, index) =>
+          normalizeText(answer) === normalizeText(clozeData.words![index]),
+      )
+      correctCount = newCorrectAnswers.filter(Boolean).length
+      totalBlanks = clozeData.words!.length
+    } else if (clozeData.sentences) {
+      newCorrectAnswers = answers.map(
+        (answer, index) =>
+          normalizeText(answer) ===
+          normalizeText(clozeData.sentences![index].word),
+      )
+      correctCount = newCorrectAnswers.filter(Boolean).length
+      totalBlanks = clozeData.sentences!.length
+    } else {
+      return
+    }
+
+    setCorrectAnswers(newCorrectAnswers)
     setScore(correctCount / totalBlanks)
 
     if (correctCount === totalBlanks) {
@@ -159,8 +185,21 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
           )}
           {isGameStarted && (
             <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
-              🎯 {Math.floor(score * clozeData.words.length)}/
-              {clozeData.words.length}
+              🎯{' '}
+              {Math.floor(
+                score *
+                  (clozeData.words
+                    ? clozeData.words.length
+                    : clozeData.sentences
+                      ? clozeData.sentences.length
+                      : 0),
+              )}
+              /
+              {clozeData.words
+                ? clozeData.words.length
+                : clozeData.sentences
+                  ? clozeData.sentences.length
+                  : 0}
             </div>
           )}
         </div>
@@ -185,7 +224,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
               Cloze Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Điền từ còn thiếu vào đoạn văn.
+              Điền từ còn thiếu vào câu hoặc đoạn văn.
             </p>
             <button
               onClick={startGame}
@@ -213,34 +252,83 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
                 </div>
               </div>
 
-              <div className="text-2xl mb-4 leading-relaxed bg-white/70 p-6 rounded-lg shadow">
-                {parts.map((part, index) => (
-                  <span key={index}>
-                    {part}
-                    {index < parts.length - 1 && (
-                      <input
-                        type="text"
-                        value={answers[index]}
-                        onChange={(e) =>
-                          setAnswers((prev) => {
-                            const newA = [...prev]
-                            newA[index] = e.target.value
-                            return newA
-                          })
-                        }
-                        disabled={isAnswering && feedback.includes('✅')}
-                        className={`border-b-2 w-32 text-center mx-2 py-1 text-2xl font-semibold bg-transparent focus:outline-none transition-colors ${
-                          correctAnswers[index]
-                            ? 'border-green-500 text-green-700'
-                            : isAnswering && !correctAnswers[index]
-                              ? 'border-red-500 text-red-700'
-                              : 'border-indigo-400 focus:border-indigo-600'
-                        }`}
-                      />
-                    )}
-                  </span>
-                ))}
-              </div>
+              {clozeData.sentences ? (
+                <div className="space-y-4">
+                  {clozeData.sentences.map((item, index) => {
+                    const sentenceParts = item.sentence.split('_____')
+                    return (
+                      <div
+                        key={index}
+                        className="text-xl leading-relaxed bg-white/70 p-4 rounded-lg shadow select-none"
+                        onCopy={(e) => e.preventDefault()}
+                        onContextMenu={(e) => e.preventDefault()}
+                      >
+                        {sentenceParts.map((part, partIndex) => (
+                          <span key={partIndex}>
+                            {part}
+                            {partIndex < sentenceParts.length - 1 && (
+                              <input
+                                type="text"
+                                value={answers[index]}
+                                onChange={(e) =>
+                                  setAnswers((prev) => {
+                                    const newA = [...prev]
+                                    newA[index] = e.target.value
+                                    return newA
+                                  })
+                                }
+                                disabled={
+                                  isAnswering && feedback.includes('✅')
+                                }
+                                className={`border-b-2 w-32 text-center mx-2 py-1 text-xl font-semibold bg-transparent focus:outline-none transition-colors ${
+                                  correctAnswers[index]
+                                    ? 'border-green-500 text-green-700'
+                                    : isAnswering && !correctAnswers[index]
+                                      ? 'border-red-500 text-red-700'
+                                      : 'border-indigo-400 focus:border-indigo-600'
+                                }`}
+                              />
+                            )}
+                          </span>
+                        ))}
+                      </div>
+                    )
+                  })}
+                </div>
+              ) : (
+                <div
+                  className="text-2xl mb-4 leading-relaxed bg-white/70 p-6 rounded-lg shadow select-none"
+                  onCopy={(e) => e.preventDefault()}
+                  onContextMenu={(e) => e.preventDefault()}
+                >
+                  {parts.map((part, index) => (
+                    <span key={index}>
+                      {part}
+                      {index < parts.length - 1 && (
+                        <input
+                          type="text"
+                          value={answers[index]}
+                          onChange={(e) =>
+                            setAnswers((prev) => {
+                              const newA = [...prev]
+                              newA[index] = e.target.value
+                              return newA
+                            })
+                          }
+                          disabled={isAnswering && feedback.includes('✅')}
+                          className={`border-b-2 w-32 text-center mx-2 py-1 text-2xl font-semibold bg-transparent focus:outline-none transition-colors ${
+                            correctAnswers[index]
+                              ? 'border-green-500 text-green-700'
+                              : isAnswering && !correctAnswers[index]
+                                ? 'border-red-500 text-red-700'
+                                : 'border-indigo-400 focus:border-indigo-600'
+                          }`}
+                        />
+                      )}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               <div className="flex gap-4">
                 <button
