@@ -179,8 +179,35 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
       <div className="w-full my-3 flex flex-row justify-center gap-2 items-stretch transition-transform duration-200">
         <div className="w-auto flex flex-row gap-4 justify-stretch">
           {isGameStarted && (
-            <div className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
+            <div
+              className="bg-yellow-100 text-yellow-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28 select-none"
+              onCopy={(e) => e.preventDefault()}
+              onContextMenu={(e) => e.preventDefault()}
+            >
               ⏱️ {formatTime(timer)}
+            </div>
+          )}
+          {isGameStarted && (
+            <div
+              className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28 select-none"
+              onCopy={(e) => e.preventDefault()}
+              onContextMenu={(e) => e.preventDefault()}
+            >
+              🎯{' '}
+              {Math.floor(
+                score *
+                  (clozeData.words
+                    ? clozeData.words.length
+                    : clozeData.sentences
+                      ? clozeData.sentences.length
+                      : 0),
+              )}
+              /
+              {clozeData.words
+                ? clozeData.words.length
+                : clozeData.sentences
+                  ? clozeData.sentences.length
+                  : 0}
             </div>
           )}
           {isGameStarted && (
@@ -234,7 +261,11 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
             </button>
           </div>
         ) : (
-          <div className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
+          <div
+            className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto"
+            onCopy={(e) => e.preventDefault()}
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <div className="flex flex-col items-center gap-4">
               <div className="mb-4 w-full max-w-3xl">
                 <h3 className="text-xl font-bold text-indigo-600 mb-3 text-center">
@@ -244,7 +275,10 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
                   {shuffledWords.map((word, index) => (
                     <div
                       key={index}
-                      className="bg-indigo-100 rounded-lg px-3 py-1 text-center text-lg font-semibold text-indigo-800 shadow-sm"
+                      className="bg-indigo-100 rounded-lg px-3 py-1 text-center text-lg font-semibold text-indigo-800 shadow-sm select-none"
+                      onCopy={(e) => e.preventDefault()}
+                      onContextMenu={(e) => e.preventDefault()}
+                      onSelect={(e) => e.preventDefault()}
                     >
                       {word}
                     </div>
