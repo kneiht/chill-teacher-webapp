@@ -45,6 +45,8 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
   const [timerInterval, setTimerInterval] = useState<NodeJS.Timeout | null>(
     null,
   )
+  const [isPenalty, setIsPenalty] = useState(false)
+  const [penaltyTime, setPenaltyTime] = useState(0)
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -140,7 +142,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
   }
 
   const handleCardClick = (index: number) => {
-    if (!isGameStarted || isGameOver) return
+    if (!isGameStarted || isGameOver || isPenalty) return
     if (gameData[index].matched || selectedCards.includes(index)) return
     if (selectedCards.length >= 2) return
 
@@ -169,11 +171,25 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
         setIsGameOver(true)
         stopTimer()
       }
+      setSelectedCards([])
     } else {
-      // No match
+      // No match - start penalty
+      setIsPenalty(true)
+      setPenaltyTime(3)
       answerIncorrect()
+      // Reset after penalty
+      const interval = setInterval(() => {
+        setPenaltyTime((prev) => {
+          if (prev <= 1) {
+            setIsPenalty(false)
+            setSelectedCards([])
+            clearInterval(interval)
+            return 0
+          }
+          return prev - 1
+        })
+      }, 1000)
     }
-    setSelectedCards([])
   }
 
   return (
@@ -225,8 +241,10 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
             </button>
           </div>
         ) : (
-          <div className="w-full h-[98%] bg-glass rounded-xl shadow-lg p-2 mt-1 overflow-auto flex justify-center items-center">
-            <div className="grid grid-cols-4 gap-4 w-full h-fit">
+          <div className="w-full h-[98%] bg-glass rounded-xl shadow-lg p-2 mt-1 overflow-auto flex justify-center items-center relative">
+            <div
+              className={`grid grid-cols-4 gap-4 w-full h-fit ${isPenalty ? 'animate-blur-in' : 'animate-blur-out'}`}
+            >
               {gameData.map((card, index) => (
                 <div
                   key={index}
@@ -234,9 +252,11 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                   className={`game-card rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center text-center overflow-hidden relative bg-cover bg-center h-24 ${
                     card.matched
                       ? 'bg-green-200 border-green-600 opacity-60 border-5'
-                      : selectedCards.includes(index)
-                        ? 'bg-blue-200 border-blue-600 scale-105 shadow-lg border-5'
-                        : 'bg-white border-gray-200 hover:bg-indigo-50'
+                      : selectedCards.includes(index) && isPenalty
+                        ? 'bg-red-200 border-red-600 scale-105 shadow-lg border-5'
+                        : selectedCards.includes(index)
+                          ? 'bg-blue-200 border-blue-600 scale-105 shadow-lg border-5'
+                          : 'bg-white border-gray-200 hover:bg-indigo-50'
                   }`}
                   style={{
                     backgroundImage:
@@ -257,6 +277,24 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                 </div>
               ))}
             </div>
+            {isPenalty && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white/5 backdrop-blur-md rounded-xl transition-all duration-1000">
+                <div className="bg-white rounded-xl p-6 shadow-2xl text-center">
+                  <div className="w-64 bg-gray-200 rounded-full h-3 mb-4">
+                    <div
+                      className="h-3 rounded-full transition-all duration-1000"
+                      style={{
+                        width: `${(penaltyTime / 3) * 100}%`,
+                        backgroundColor: `rgb(${255 * (penaltyTime / 3)}, ${255 * (1 - penaltyTime / 3)}, 0)`,
+                      }}
+                    ></div>
+                  </div>
+                  <p className="text-red-600 font-semibold text-lg">
+                    ⏳ Phạt chờ {penaltyTime} giây...
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
