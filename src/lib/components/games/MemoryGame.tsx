@@ -290,7 +290,11 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
                   >
                     <span
                       className={`text-lg font-semibold text-center ${
-                        card.type === 'english' ? 'text-gray-800' : 'text-white'
+                        card.type === 'english'
+                          ? 'text-gray-800'
+                          : card.image
+                            ? 'text-white'
+                            : 'text-gray-800'
                       } ${
                         card.type === 'vietnamese' && card.image
                           ? 'bg-[#0000005c] px-3 py-1.5 rounded-lg shadow-lg'
