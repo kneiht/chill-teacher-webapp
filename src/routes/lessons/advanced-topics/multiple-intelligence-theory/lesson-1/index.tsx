@@ -37,7 +37,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
     const props: any = {
       vocabData,
       backgroundUrl: urls.background,
-      title: `${game.title} - School Supplies`,
+      title: `${game.title} - Multiple Intelligence Theory`,
       onClose: () => setActiveGame(null),
     }
 
