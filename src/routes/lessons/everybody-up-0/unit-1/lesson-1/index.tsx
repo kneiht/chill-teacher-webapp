@@ -71,7 +71,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             </Link>
 
             <Link to={assignmentsRoute.to}>
-              <WoodenButton className={buttonStyle}>📝 Bài tập</WoodenButton>
+              <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
             {Object.keys(gameInfo).map((gameName) => (
