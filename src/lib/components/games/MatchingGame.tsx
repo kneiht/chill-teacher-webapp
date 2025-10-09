@@ -34,7 +34,7 @@ interface MatchingGameProps {
 const MatchingGameCore: React.FC<MatchingGameProps> = ({
   vocabData,
   title,
-  numQuestions = vocabData.length,
+  numQuestions = vocabData.length > 8 ? 8 : vocabData.length,
 }) => {
   const [gameData, setGameData] = useState<Array<Card>>([])
   const [selectedCards, setSelectedCards] = useState<Array<number>>([])
