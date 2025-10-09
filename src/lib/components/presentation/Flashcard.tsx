@@ -76,7 +76,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
             className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center p-6"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            <h2 className="text-8xl font-bold text-indigo-600 mb-4">
+            <h2 className="text-8xl font-bold text-indigo-600 mb-4  text-center">
               {vocab.word}
             </h2>
             <p className="text-5xl text-gray-600 mb-4">{vocab.phonics}</p>
@@ -93,16 +93,29 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
               transform: 'rotateX(180deg)',
             }}
           >
-            <img
-              src={vocab.image}
-              alt={vocab.word}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute top-3 inset-x-0 flex items-center justify-center">
-              <h3 className="text-3xl font-bold text-indigo-600 px-6 py-3 rounded-lg bg-[#ffffff9b]">
-                {vocab.vietnameseMeaning}
-              </h3>
-            </div>
+            {vocab.image ? (
+              <>
+                <img
+                  src={vocab.image}
+                  alt={vocab.word}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute top-3 inset-x-0 flex items-center justify-center">
+                  <h3 className="text-3xl font-bold text-indigo-600 px-6 py-3 rounded-lg bg-[#ffffff9b]">
+                    {vocab.vietnameseMeaning}
+                  </h3>
+                </div>
+              </>
+            ) : (
+              <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center p-6">
+                <h2 className="text-6xl font-bold text-indigo-600 mb-4 text-center">
+                  {vocab.vietnameseMeaning}
+                </h2>
+                <p className="text-5xl text-gray-700 text-center">
+                  "{vocab.vietnameseTranslation}"
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
