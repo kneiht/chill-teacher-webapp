@@ -104,3 +104,44 @@ export const gameInfo: Record<
     icon: '🎮',
   },
 }
+
+export const noImageGameInfo: Record<
+  string,
+  { title: string; component: string; icon: string }
+> = {
+  'Matching Game': {
+    title: 'Matching Game',
+    component: 'MatchingGame',
+    icon: '🎮',
+  },
+  'Anagram Game': {
+    title: 'Anagram Game',
+    component: 'AnagramGame',
+    icon: '🎮',
+  },
+  'Multiple Choice En→Vi': {
+    title: 'Multiple Choice (EN → VI)',
+    component: 'MultipleChoiceEnViGame',
+    icon: '🎮',
+  },
+  'Multiple Choice Vi→En': {
+    title: 'Multiple Choice (VI → EN)',
+    component: 'MultipleChoiceViEnGame',
+    icon: '🎮',
+  },
+  'Unjumble Game': {
+    title: 'Unjumble Game',
+    component: 'UnjumbleGame',
+    icon: '🎮',
+  },
+  'Listening Sentences': {
+    title: 'Listening & Typing Sentences',
+    component: 'ListeningSentenceTypingGame',
+    icon: '🎮',
+  },
+  'Vietnamese to English': {
+    title: 'Vietnamese to English Translation',
+    component: 'VietnameseToEnglishTranslationGame',
+    icon: '🎮',
+  },
+}
