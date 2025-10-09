@@ -76,7 +76,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
             className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center p-6"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            <h2 className="text-8xl font-bold text-indigo-600 mb-4  text-center">
+            <h2 className="text-6xl font-bold text-indigo-600 mb-4  text-center">
               {vocab.word}
             </h2>
             <p className="text-5xl text-gray-600 mb-4">{vocab.phonics}</p>
