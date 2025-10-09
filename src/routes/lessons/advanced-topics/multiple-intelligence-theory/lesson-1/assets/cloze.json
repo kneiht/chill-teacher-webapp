@@ -1,10 +1,46 @@
 {
-  "paragraph": "The _____ of the new policy is important. Many people believe that _____ includes various types. A _____ is a statement that can be tested. The _____ measures cognitive abilities. Some skills like _____ are crucial for communication.",
-  "words": [
-    "Implication",
-    "Intelligence",
-    "Theory",
-    "Intelligence Quotient",
-    "language skills"
+  "sentences": [
+    {
+      "sentence": "Solving math problems requires strong _____.",
+      "word": "logical-mathematical skills"
+    },
+    {
+      "sentence": "An _____ cannot describe all aspects of human ability.",
+      "word": "Intelligence Quotient"
+    },
+    {
+      "sentence": "That is a very _____ view of education.",
+      "word": "narrow"
+    },
+
+    {
+      "sentence": "Her high level of emotional _____ helped her succeed in teamwork.",
+      "word": "Intelligence"
+    },
+    {
+      "sentence": "The _____ explained the concept clearly to the students.",
+      "word": "professor"
+    },
+    {
+      "sentence": "Reading every day is an _____ way to improve your skills.",
+      "word": "effective"
+    },
+    {
+      "sentence": "Darwin’s _____ of evolution changed science forever.",
+      "word": "Theory"
+    },
+    {
+      "sentence": "Good _____ are necessary for learning foreign languages.",
+      "word": "language skills"
+    },
+    {
+      "sentence": "The _____ of his decision were not clear at first.",
+      "word": "Implications"
+    },
+
+    {
+      "sentence": "Basketball is very _____ among teenagers.",
+      "word": "popular"
+    }
   ]
 }
