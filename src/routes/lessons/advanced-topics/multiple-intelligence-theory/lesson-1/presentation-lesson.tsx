@@ -31,7 +31,7 @@ const vocabularySlides = vocabData.map(
 )
 
 export const Route = createFileRoute(
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson',
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson',
 )({
   component: () => {
     const navigate = useNavigate()

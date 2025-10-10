@@ -13,21 +13,21 @@ import { Route as SplatRouteImport } from './routes/$splat'
 import { Route as mainRouteRouteImport } from './routes/(main)/route'
 import { Route as authRouteRouteImport } from './routes/(auth)/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LessonsIndexRouteImport } from './routes/lessons/index'
 import { Route as mainSettingsRouteImport } from './routes/(main)/settings'
 import { Route as mainProfileRouteImport } from './routes/(main)/profile'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
-import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons/index'
-import { Route as mainLessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/(main)/lessons/everybody-up-0/unit-1/lesson-1/index'
-import { Route as mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport } from './routes/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/index'
-import { Route as mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport } from './routes/(main)/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
-import { Route as mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport } from './routes/(main)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-import { Route as mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport } from './routes/(main)/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-import { Route as mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport } from './routes/(main)/lessons/everybody-up-0/unit-1/lesson-1/assignments'
-import { Route as mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRouteImport } from './routes/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
-import { Route as mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport } from './routes/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
-import { Route as mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport } from './routes/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
-import { Route as mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport } from './routes/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
+import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index'
+import { Route as LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport } from './routes/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/index'
+import { Route as LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+import { Route as LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+import { Route as LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
+import { Route as LessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/assignments'
+import { Route as LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRouteImport } from './routes/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
+import { Route as LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport } from './routes/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
+import { Route as LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport } from './routes/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
+import { Route as LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport } from './routes/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -45,6 +45,11 @@ const authRouteRoute = authRouteRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LessonsIndexRoute = LessonsIndexRouteImport.update({
+  id: '/lessons/',
+  path: '/lessons/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const mainSettingsRoute = mainSettingsRouteImport.update({
@@ -67,79 +72,74 @@ const authLoginRoute = authLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => authRouteRoute,
 } as any)
-const mainLessonsIndexRoute = mainLessonsIndexRouteImport.update({
-  id: '/lessons/',
-  path: '/lessons/',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainLessonsEverybodyUp0Unit1Lesson1IndexRoute =
-  mainLessonsEverybodyUp0Unit1Lesson1IndexRouteImport.update({
+const LessonsEverybodyUp0Unit1Lesson1IndexRoute =
+  LessonsEverybodyUp0Unit1Lesson1IndexRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/',
-    getParentRoute: () => mainRouteRoute,
+    getParentRoute: () => rootRouteImport,
   } as any)
-const mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute =
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport.update(
+const LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute =
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport.update(
     {
       id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/',
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/',
-      getParentRoute: () => mainRouteRoute,
+      getParentRoute: () => rootRouteImport,
     } as any,
   )
-const mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute =
-  mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport.update({
+const LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute =
+  LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson',
-    getParentRoute: () => mainRouteRoute,
+    getParentRoute: () => rootRouteImport,
   } as any)
-const mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute =
-  mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport.update({
+const LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute =
+  LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
-    getParentRoute: () => mainRouteRoute,
+    getParentRoute: () => rootRouteImport,
   } as any)
-const mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute =
-  mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport.update({
+const LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute =
+  LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
-    getParentRoute: () => mainRouteRoute,
+    getParentRoute: () => rootRouteImport,
   } as any)
-const mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute =
-  mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport.update({
+const LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute =
+  LessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-1/assignments',
     path: '/lessons/everybody-up-0/unit-1/lesson-1/assignments',
-    getParentRoute: () => mainRouteRoute,
+    getParentRoute: () => rootRouteImport,
   } as any)
-const mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute =
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRouteImport.update(
+const LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute =
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRouteImport.update(
     {
       id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson',
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson',
-      getParentRoute: () => mainRouteRoute,
+      getParentRoute: () => rootRouteImport,
     } as any,
   )
-const mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute =
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport.update(
+const LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute =
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport.update(
     {
       id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson',
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson',
-      getParentRoute: () => mainRouteRoute,
+      getParentRoute: () => rootRouteImport,
     } as any,
   )
-const mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute =
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport.update(
+const LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute =
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport.update(
     {
       id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards',
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards',
-      getParentRoute: () => mainRouteRoute,
+      getParentRoute: () => rootRouteImport,
     } as any,
   )
-const mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute =
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport.update(
+const LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute =
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport.update(
     {
       id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments',
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments',
-      getParentRoute: () => mainRouteRoute,
+      getParentRoute: () => rootRouteImport,
     } as any,
   )
 
@@ -150,17 +150,17 @@ export interface FileRoutesByFullPath {
   '/signup': typeof authSignupRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
-  '/lessons': typeof mainLessonsIndexRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1': typeof mainLessonsEverybodyUp0Unit1Lesson1IndexRoute
+  '/lessons': typeof LessonsIndexRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainRouteRouteWithChildren
@@ -169,17 +169,17 @@ export interface FileRoutesByTo {
   '/signup': typeof authSignupRoute
   '/profile': typeof mainProfileRoute
   '/settings': typeof mainSettingsRoute
-  '/lessons': typeof mainLessonsIndexRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
-  '/lessons/everybody-up-0/unit-1/lesson-1': typeof mainLessonsEverybodyUp0Unit1Lesson1IndexRoute
+  '/lessons': typeof LessonsIndexRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -191,17 +191,17 @@ export interface FileRoutesById {
   '/(auth)/signup': typeof authSignupRoute
   '/(main)/profile': typeof mainProfileRoute
   '/(main)/settings': typeof mainSettingsRoute
-  '/(main)/lessons/': typeof mainLessonsIndexRoute
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/': typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/': typeof mainLessonsEverybodyUp0Unit1Lesson1IndexRoute
+  '/lessons/': typeof LessonsIndexRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
+  '/lessons/everybody-up-0/unit-1/lesson-1/': typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -252,17 +252,17 @@ export interface FileRouteTypes {
     | '/(auth)/signup'
     | '/(main)/profile'
     | '/(main)/settings'
-    | '/(main)/lessons/'
-    | '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
-    | '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
-    | '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
-    | '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
-    | '/(main)/lessons/everybody-up-0/unit-1/lesson-1/assignments'
-    | '/(main)/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-    | '/(main)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-    | '/(main)/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
-    | '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/'
-    | '/(main)/lessons/everybody-up-0/unit-1/lesson-1/'
+    | '/lessons/'
+    | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
+    | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
+    | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
+    | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+    | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/'
+    | '/lessons/everybody-up-0/unit-1/lesson-1/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -270,6 +270,17 @@ export interface RootRouteChildren {
   authRouteRoute: typeof authRouteRouteWithChildren
   mainRouteRoute: typeof mainRouteRouteWithChildren
   SplatRoute: typeof SplatRoute
+  LessonsIndexRoute: typeof LessonsIndexRoute
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
+  LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute: typeof LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
+  LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
+  LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
+  LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
+  LessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -302,6 +313,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lessons/': {
+      id: '/lessons/'
+      path: '/lessons'
+      fullPath: '/lessons'
+      preLoaderRoute: typeof LessonsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/(main)/settings': {
       id: '/(main)/settings'
       path: '/settings'
@@ -330,82 +348,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authLoginRouteImport
       parentRoute: typeof authRouteRoute
     }
-    '/(main)/lessons/': {
-      id: '/(main)/lessons/'
-      path: '/lessons'
-      fullPath: '/lessons'
-      preLoaderRoute: typeof mainLessonsIndexRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/lessons/everybody-up-0/unit-1/lesson-1/': {
-      id: '/(main)/lessons/everybody-up-0/unit-1/lesson-1/'
+    '/lessons/everybody-up-0/unit-1/lesson-1/': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/'
       path: '/lessons/everybody-up-0/unit-1/lesson-1'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1'
-      preLoaderRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1IndexRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/': {
-      id: '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/'
+    '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/': {
+      id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/'
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1'
       fullPath: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1'
-      preLoaderRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': {
-      id: '/(main)/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
+    '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
       path: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson'
-      preLoaderRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': {
-      id: '/(main)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
+    '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
       path: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
-      preLoaderRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/everybody-up-0/unit-1/lesson-1/flashcards': {
-      id: '/(main)/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
+    '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
       path: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
-      preLoaderRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/everybody-up-0/unit-1/lesson-1/assignments': {
-      id: '/(main)/lessons/everybody-up-0/unit-1/lesson-1/assignments'
+    '/lessons/everybody-up-0/unit-1/lesson-1/assignments': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
       path: '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
-      preLoaderRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': {
-      id: '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
+    '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson': {
+      id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
       fullPath: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson'
-      preLoaderRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': {
-      id: '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
+    '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': {
+      id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
       fullPath: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
-      preLoaderRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': {
-      id: '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
+    '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': {
+      id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
       fullPath: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
-      preLoaderRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': {
-      id: '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
+    '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': {
+      id: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
       fullPath: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
-      preLoaderRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport
-      parentRoute: typeof mainRouteRoute
+      preLoaderRoute: typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -427,43 +438,11 @@ const authRouteRouteWithChildren = authRouteRoute._addFileChildren(
 interface mainRouteRouteChildren {
   mainProfileRoute: typeof mainProfileRoute
   mainSettingsRoute: typeof mainSettingsRoute
-  mainLessonsIndexRoute: typeof mainLessonsIndexRoute
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute
-  mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
-  mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
-  mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
-  mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute: typeof mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
-  mainLessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof mainLessonsEverybodyUp0Unit1Lesson1IndexRoute
 }
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainProfileRoute: mainProfileRoute,
   mainSettingsRoute: mainSettingsRoute,
-  mainLessonsIndexRoute: mainLessonsIndexRoute,
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute:
-    mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute,
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute:
-    mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute,
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute:
-    mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute,
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute:
-    mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute,
-  mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute:
-    mainLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute,
-  mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute:
-    mainLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute,
-  mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute:
-    mainLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute,
-  mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute:
-    mainLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute,
-  mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute:
-    mainLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute,
-  mainLessonsEverybodyUp0Unit1Lesson1IndexRoute:
-    mainLessonsEverybodyUp0Unit1Lesson1IndexRoute,
 }
 
 const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
@@ -475,6 +454,27 @@ const rootRouteChildren: RootRouteChildren = {
   authRouteRoute: authRouteRouteWithChildren,
   mainRouteRoute: mainRouteRouteWithChildren,
   SplatRoute: SplatRoute,
+  LessonsIndexRoute: LessonsIndexRoute,
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute:
+    LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute,
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute:
+    LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute,
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute:
+    LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute,
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute:
+    LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1YoutubeLessonRoute,
+  LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute:
+    LessonsEverybodyUp0Unit1Lesson1AssignmentsRoute,
+  LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute:
+    LessonsEverybodyUp0Unit1Lesson1FlashcardsRoute,
+  LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute:
+    LessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute,
+  LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute:
+    LessonsEverybodyUp0Unit1Lesson1YoutubeLessonRoute,
+  LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute:
+    LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute,
+  LessonsEverybodyUp0Unit1Lesson1IndexRoute:
+    LessonsEverybodyUp0Unit1Lesson1IndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

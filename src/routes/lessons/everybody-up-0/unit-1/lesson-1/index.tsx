@@ -99,7 +99,7 @@ const LessonHomePage: React.FC = () => {
 }
 
 export const Route = createFileRoute(
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/',
+  '/lessons/everybody-up-0/unit-1/lesson-1/',
 )({
   component: LessonHomePage,
 })

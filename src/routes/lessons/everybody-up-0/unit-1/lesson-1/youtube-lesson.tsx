@@ -9,7 +9,7 @@ import YoutubeSlide from '@/lib/components/presentation/YoutubeSlide'
 import urls from './assets/urls.json'
 
 export const Route = createFileRoute(
-  '/(main)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson',
+  '/lessons/everybody-up-0/unit-1/lesson-1/youtube-lesson',
 )({
   component: () => {
     const navigate = useNavigate()

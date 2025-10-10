@@ -10,7 +10,7 @@ import vocabData from './assets/vocab.json'
 import urls from './assets/urls.json'
 
 export const Route = createFileRoute(
-  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/flashcards',
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards',
 )({
   component: () => {
     const navigate = useNavigate()
