@@ -111,8 +111,8 @@ echo -e "${BLUE}Checking status of containers...${NC}"
 $SSH_CMD "cd $REMOTE_DIR && docker-compose ps"
 
 # Check logs of app container
-# echo -e "${BLUE}Check logs of backend ${APP_CONTAINER_NAME} container...${NC}"
-# $SSH_CMD "cd $REMOTE_DIR && docker logs ${APP_CONTAINER_NAME} 2>&1 | tail -n 20"
+echo -e "${BLUE}Checking logs of backend ${APP_CONTAINER_NAME} container...${NC}"
+$SSH_CMD "cd $REMOTE_DIR && docker logs ${APP_CONTAINER_NAME} 2>&1 | tail -n 20"
 
 # Check logs of caddy container
 # echo -e "${BLUE}Checking logs of caddy container...${NC}"
@@ -130,9 +130,9 @@ ssh $SSH_OPTS -p $SSH_PORT -O exit $USERNAME@$SERVER_IP
 
 echo -e "${GREEN}=== DEPLOY COMPLETED SUCCESSFULLY! ===${NC}"
 echo -e "${YELLOW}Application is running at:${NC}"
-echo -e "${YELLOW}- HTTP: http://${SERVER_IP} (sẽ tự động chuyển hướng sang HTTPS)${NC}"
-echo -e "${YELLOW}- HTTPS: https://${SERVER_IP} (Caddy sẽ tự động lấy SSL certificates)${NC}"
+echo -e "${YELLOW}- HTTP: http://${SERVER_IP} (will automatically redirect to HTTPS)${NC}"
+echo -e "${YELLOW}- HTTPS: https://${SERVER_IP} (Caddy will automatically obtain SSL certificates)${NC}"
 echo -e "${YELLOW}- Domain: https://${DOMAIN} (after configuring DNS to point to ${SERVER_IP})${NC}"
 echo -e "${YELLOW}To check status, run: ssh -p $SSH_PORT $USERNAME@$SERVER_IP \"cd ${REMOTE_DIR} && docker-compose ps\"${NC}"
 echo -e "${YELLOW}To view logs, run: ssh -p $SSH_PORT $USERNAME@$SERVER_IP \"cd ${REMOTE_DIR} && docker-compose logs\"${NC}"
-echo -e "${YELLOW}To view Caddy logs, run: ssh -p $SSH_PORT $USERNAME@$SERVER_IP \"cd ${REMOTE_DIR} && docker-compose logs caddy\"${NC}"
+echo -e "${YELLOW}To view Caddy logs, run: ssh -p $SSH_PORT $USERNAME@$SERVER_IP \"cd ${REMOTE_DIR} && docker-compose logs caddy\"${NC}"`

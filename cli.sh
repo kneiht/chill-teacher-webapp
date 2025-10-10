@@ -220,10 +220,9 @@ show_frontend_menu() {
             "Lint code (pnpm run lint)"
             "Fix lint issues (Format with Prettier)"
             "Run type checks (TypeScript)"
-            "Back to Main Menu"
         )
         COLUMNS=1
-        PS3="Frontend action? "
+        PS3="Frontend action? (0: exit)"
         select opt in "${options[@]}"; do
             case $REPLY in
                 1) frontend_install; break ;;
@@ -233,7 +232,7 @@ show_frontend_menu() {
                 5) frontend_lint; break ;;
                 6) frontend_fix_lint; break ;;
                 7) frontend_check; break ;;
-                $((${#options[@]}))) return ;;
+                0) return ;;
                 *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
             esac
         done
@@ -249,10 +248,9 @@ show_deploy_menu() {
             "Test SSH connection to server"
             "Deploy application"
             "Run full deployment setup (key, copy, test, app)"
-            "Back to Main Menu"
         )
         COLUMNS=1
-        PS3="Deployment action? "
+        PS3="Deployment action? (0: exit)"
         select opt in "${options[@]}"; do
             case $REPLY in
                 1) deploy_generate_key; break ;;
@@ -260,7 +258,7 @@ show_deploy_menu() {
                 3) deploy_test_conn; break ;;
                 4) deploy_app; break ;;
                 5) deploy_setup; break ;;
-                $((${#options[@]}))) return ;;
+                0) return ;;
                 *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
             esac
         done
@@ -276,10 +274,9 @@ show_tools_menu() {
             "Clean unused Rust build artifacts (cargo-sweep)"
             "Clean (backend + optional frontend node_modules)"
             "Clean Force (backend + frontend node_modules)"
-            "Back to Main Menu"
         )
         COLUMNS=1
-        PS3="Tool/Cleanup action? "
+        PS3="Tool/Cleanup action? (0: exit)"
         select opt in "${options[@]}"; do
             case $REPLY in
                 1) tools_install_sweep; break ;;
@@ -287,7 +284,7 @@ show_tools_menu() {
                 3) tools_clean_cargo; break ;;
                 4) clean_normal; break ;;
                 5) clean_force; break ;;
-                $((${#options[@]}))) return ;;
+                0) return ;;
                 *) echo -e "${RED}Invalid option $REPLY${NC}" ;;
             esac
         done
@@ -306,7 +303,6 @@ main_menu() {
             "Frontend (React)"
             "Deployment"
             "Tools & Cleanup"
-            "Quit"
         )
         select opt in "${main_options[@]}"; do
             # Check if REPLY is 'q' or 'Q' for quitting, in addition to the numbered option
@@ -319,7 +315,7 @@ main_menu() {
                 2) show_frontend_menu; break ;;
                 3) show_deploy_menu; break ;;
                 4) show_tools_menu; break ;;
-                $((${#main_options[@]}))) echo -e "${GREEN}Exiting EnglishCoaching CLI. Goodbye!${NC}"; exit 0 ;;
+                0) echo -e "${GREEN}Exiting EnglishCoaching CLI. Goodbye!${NC}"; exit 0 ;;
                 *) echo -e "${RED}Invalid option $REPLY. Type 'q' or the number of 'Quit' to exit.${NC}" ;;
             esac
         done
