@@ -11,7 +11,7 @@ import {
 export const Route = createRootRoute({
   // TODO: Remove this when there is a proper auth system
   beforeLoad: () => {
-    setToLocalStorage(LocalStorageKeys.USER, 'Student')
+    setToLocalStorage(LocalStorageKeys.USER, 'Demo User')
   },
   component: () => (
     <>

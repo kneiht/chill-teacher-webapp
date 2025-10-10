@@ -3,13 +3,13 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
-import YoutubeSlide from '@/lib/components/presentation/YoutubeSlide'
+import GoogleSlide from '@/lib/components/presentation/GoogleSlide'
 
 // Url
 import urls from './assets/urls.json'
 
 export const Route = createFileRoute(
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/youtube-lesson',
+  '/(main)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson',
 )({
   component: () => {
     const navigate = useNavigate()
@@ -17,7 +17,7 @@ export const Route = createFileRoute(
 
     const slides = [
       ({ isActive }: { isActive: boolean }) => (
-        <YoutubeSlide isActive={isActive} src={urls.youtubeLesson} />
+        <GoogleSlide isActive={isActive} src={urls.googleSlide} />
       ),
     ]
 

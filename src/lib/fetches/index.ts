@@ -1,6 +1,6 @@
 import type { UseCaseResponse } from '@/lib/types'
 
-const API_BASE_URL = 'http://localhost:3000'
+const API_BASE_URL = 'http://localhost:3000/api'
 
 // Handle unauthorized responses by clearing token and redirecting
 const handleUnauthorized = () => {
