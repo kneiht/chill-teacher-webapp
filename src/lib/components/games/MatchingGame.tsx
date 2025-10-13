@@ -222,7 +222,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
           )}
           {isGameStarted && (
             <div className="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full shadow-lg text-center text-sm w-28">
-              🎯 {matchedPairs.length}/{vocabWords.length}
+              🎯 {matchedPairs.length}/{numQuestions}
             </div>
           )}
         </div>
@@ -247,7 +247,10 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
               Matching Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Bạn sẽ ghép {vocabWords.length} cặp từ tiếng Anh và tiếng Việt.
+              Bạn sẽ ghép {numQuestions} cặp từ tiếng Anh và tiếng Việt trong số{' '}
+              {vocabWords.length} từ vựng được chọn ngẫu nhiên.
+              <br />
+              Mỗi lần Restart, các từ vựng sẽ được thay đổi.
             </p>
             <button
               onClick={startGame}
@@ -267,7 +270,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                   onClick={() => handleCardClick(index)}
                   className={`game-card rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center text-center overflow-hidden relative bg-cover bg-center h-24 ${
                     card.matched
-                      ? `${getPairColor(card.id)} opacity-60 border-5`
+                      ? `${getPairColor(card.id)} border-5`
                       : selectedCards.includes(index) && isPenalty
                         ? 'bg-red-200 border-red-600 scale-105 shadow-lg border-5'
                         : selectedCards.includes(index)
@@ -281,6 +284,18 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
                         : 'none',
                   }}
                 >
+                  {/* Overlay for selected or matched cards */}
+                  {(selectedCards.includes(index) || card.matched) && (
+                    <div
+                      className={`absolute inset-0 pointer-events-none rounded-lg ${
+                        card.matched
+                          ? `${getPairColor(card.id)} opacity-10`
+                          : selectedCards.includes(index) && isPenalty
+                            ? 'bg-red-300/20'
+                            : 'bg-blue-300/20'
+                      }`}
+                    ></div>
+                  )}
                   {card.type === 'vietnamese' && card.image ? (
                     <span className="text-lg font-semibold text-white bg-[#0000005c] bg-opacity-50 px-2 py-1 rounded-lg">
                       {card.text}

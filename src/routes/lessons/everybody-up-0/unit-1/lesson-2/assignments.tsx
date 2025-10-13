@@ -15,7 +15,7 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
         <h2 className="text-4xl font-bold text-indigo-700 mb-6">
           Unit 1: Art Class
           <br />
-          Lesson 1: School Supplies
+          Lesson 2: School Supplies - Vocabulary
         </h2>
         <p className="text-3xl text-gray-700 mb-4">
           Hãy hoàn thành các nhiệm vụ sau:
@@ -28,10 +28,10 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
             Viết các câu sau, mỗi câu tối thiểu 5 lần, chụp hình bài viết gửi
             giáo viên:
             <ul className="ml-8 mt-2 space-y-1">
-              <li className="ml-10">I have paper.</li>
-              <li className="ml-10">I have glue.</li>
-              <li className="ml-10">I have scissors.</li>
-              <li className="ml-10">I have paint.</li>
+              <li className="ml-10">I have a pen.</li>
+              <li className="ml-10">I have a pencil.</li>
+              <li className="ml-10">I have a crayon.</li>
+              <li className="ml-10">I have a marker.</li>
             </ul>
             {/* ví dụ */}
             <p className="text-xl mt-6 italic px-10">
@@ -43,14 +43,16 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
               style={{ fontFamily: "'Playwrite AU NSW Guides', cursive" }}
             >
               <li className="ml-10">
-                I have paper. I have paper. I have paper.
-              </li>
-              <li className="ml-10">I have glue. I have glue. I have glue.</li>
-              <li className="ml-10">
-                I have scissors. I have scissors. I have scissors.
+                I have a pen. I have a pen. I have a pen.
               </li>
               <li className="ml-10">
-                I have paint. I have paint. I have paint.
+                I have a pencil. I have a pencil. I have a pencil.
+              </li>
+              <li className="ml-10">
+                I have a crayon. I have a crayon. I have a crayon.
+              </li>
+              <li className="ml-10">
+                I have a marker. I have a marker. I have a marker.
               </li>
             </ul>
           </li>
@@ -69,27 +71,27 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-400 px-4 py-2">Paper</td>
+                  <td className="border border-gray-400 px-4 py-2">Pen</td>
                   <td className="border border-gray-400 px-4 py-2">
-                    I have paper.
+                    I have a pen.
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-400 px-4 py-2">Scissors</td>
+                  <td className="border border-gray-400 px-4 py-2">Pencil</td>
                   <td className="border border-gray-400 px-4 py-2">
-                    I have scissors.
+                    I have a pencil.
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-400 px-4 py-2">Glue</td>
+                  <td className="border border-gray-400 px-4 py-2">Crayon</td>
                   <td className="border border-gray-400 px-4 py-2">
-                    I have glue.
+                    I have a crayon.
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-400 px-4 py-2">Paint</td>
+                  <td className="border border-gray-400 px-4 py-2">Marker</td>
                   <td className="border border-gray-400 px-4 py-2">
-                    I have paint.
+                    I have a marker.
                   </td>
                 </tr>
               </tbody>

@@ -1,7 +1,39 @@
 [
   {
+    "word": "pen",
+    "phonics": "/pɛn/",
+    "image": "/vocab-images/pen.webp",
+    "vietnameseMeaning": "bút mực",
+    "sampleSentence": "What do you have? I have a pen.",
+    "vietnameseTranslation": "Tôi có một cây bút mực."
+  },
+  {
+    "word": "pencil",
+    "phonics": "/ˈpɛn.səl/",
+    "image": "/vocab-images/pencil.webp",
+    "vietnameseMeaning": "bút chì",
+    "sampleSentence": "What do you have? I have a pencil.",
+    "vietnameseTranslation": "Tôi có một cây bút chì."
+  },
+  {
+    "word": "crayon",
+    "phonics": "/ˈkreɪ.ɑn/",
+    "image": "/vocab-images/crayon.webp",
+    "vietnameseMeaning": "bút sáp màu",
+    "sampleSentence": "What do you have? I have a crayon.",
+    "vietnameseTranslation": "Tôi có một cây bút sáp màu."
+  },
+  {
+    "word": "marker",
+    "phonics": "/ˈmɑr.kɚ/",
+    "image": "/vocab-images/marker.webp",
+    "vietnameseMeaning": "bút lông",
+    "sampleSentence": "What do you have? I have a marker.",
+    "vietnameseTranslation": "Tôi có một cây bút lông."
+  },
+  {
     "word": "paper",
-    "phonics": "/ˈpeɪ.pər/",
+    "phonics": "/ˈpeɪ.pɚ/",
     "image": "/vocab-images/paper.webp",
     "vietnameseMeaning": "giấy",
     "sampleSentence": "What do you have? I have paper.",
@@ -9,18 +41,18 @@
   },
   {
     "word": "glue",
-    "phonics": "/ɡluː/",
+    "phonics": "/ɡlu/",
     "image": "/vocab-images/glue.webp",
     "vietnameseMeaning": "keo dán",
-    "sampleSentence": "I have glue.",
+    "sampleSentence": "What do you have? I have glue.",
     "vietnameseTranslation": "Tôi có keo dán."
   },
   {
     "word": "scissors",
-    "phonics": "/ˈsɪz.əz/",
+    "phonics": "/ˈsɪz.ɚz/",
     "image": "/vocab-images/scissors.webp",
     "vietnameseMeaning": "kéo",
-    "sampleSentence": "I have scissors.",
+    "sampleSentence": "What do you have? I have scissors.",
     "vietnameseTranslation": "Tôi có kéo."
   },
   {
@@ -28,7 +60,7 @@
     "phonics": "/peɪnt/",
     "image": "/vocab-images/paint.webp",
     "vietnameseMeaning": "màu vẽ",
-    "sampleSentence": "I have paint.",
+    "sampleSentence": "What do you have? I have paint.",
     "vietnameseTranslation": "Tôi có màu vẽ."
   }
 ]

@@ -15,7 +15,7 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
         <h2 className="text-4xl font-bold text-indigo-700 mb-6">
           Unit 1: Art Class
           <br />
-          Lesson 1: School Supplies
+          Lesson 1: School Supplies - Vocabulary
         </h2>
         <p className="text-3xl text-gray-700 mb-4">
           Hãy hoàn thành các nhiệm vụ sau:

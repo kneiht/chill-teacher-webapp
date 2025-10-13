@@ -231,8 +231,8 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
               Memory Game
             </h3>
             <p className="text-gray-600 mb-6 text-xl">
-              Lật thẻ và tìm {numQuestions} cặp trùng nhau. Bấm Start để bắt
-              đầu.
+              Lật thẻ và tìm {numQuestions} cặp trùng nhau. <br />
+              Mỗi lần Restart, các từ vựng sẽ được thay đổi.
             </p>
             <button
               onClick={startGame}
