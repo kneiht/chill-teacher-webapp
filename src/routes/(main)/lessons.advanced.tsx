@@ -16,12 +16,12 @@ const lessons = [
     path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-2/',
     imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
   },
-  {
-    title: 'Multiple Intelligence Theory',
-    description: 'Lesson 1: Vocabulary - Part 3',
-    path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-3/',
-    imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
-  },
+  // {
+  //   title: 'Multiple Intelligence Theory',
+  //   description: 'Lesson 1: Vocabulary - Part 3',
+  //   path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-3/',
+  //   imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
+  // },
 ]
 
 export const Route = createFileRoute('/(main)/lessons/advanced')({
