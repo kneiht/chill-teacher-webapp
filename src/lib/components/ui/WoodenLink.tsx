@@ -25,7 +25,7 @@ const WoodenLink: React.FC<WoodenLinkProps> = ({
         ${className || ''}
       `}
       style={{
-        backgroundImage: "url('/textures/wood-texture.jpg')",
+        backgroundImage: "url('/textures/wood-texture.webp')",
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',
       }}
       {...props}

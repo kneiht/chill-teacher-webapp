@@ -26,7 +26,7 @@ const WoodenButton: React.FC<WoodenButtonProps> = ({
       `}
       style={{
         // Đường dẫn đến ảnh texture gỗ của bạn
-        backgroundImage: "url('/textures/wood-texture.jpg')",
+        backgroundImage: "url('/textures/wood-texture.webp')",
         // Tạo hiệu ứng chữ được khắc vào gỗ
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',
       }}

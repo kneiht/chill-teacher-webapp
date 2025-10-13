@@ -19,6 +19,10 @@ async function convertToWebP(inputPath, outputPath) {
       .webp({ quality: 80 }) // Adjust quality as needed (0-100)
       .toFile(outputPath)
     console.log(`Converted: ${inputPath} -> ${outputPath}`)
+
+    // Delete the original image after successful conversion
+    fs.unlinkSync(inputPath)
+    console.log(`Deleted original: ${inputPath}`)
   } catch (error) {
     console.error(`Error converting ${inputPath}:`, error.message)
   }

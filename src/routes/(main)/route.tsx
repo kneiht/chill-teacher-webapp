@@ -198,10 +198,7 @@ function MainLayout() {
                 align="center"
                 style={{ padding: '1rem' }}
               >
-                <Avatar
-                  size={60}
-                  src="https://img.freepik.com/premium-vector/university-college-school-crests-logo-emblem-vector-template_441059-1011.jpg?semt=ais_hybrid&w=740"
-                />
+                <Avatar size={60} src="/logo.png" />
                 <Text
                   strong
                   style={{
