@@ -21,7 +21,12 @@ interface VocabItem {
   phonics?: string
 }
 
-type QuestionType = 'multipleChoice' | 'listening' | 'fillBlank'
+type QuestionType =
+  | 'multipleChoice'
+  | 'listening'
+  | 'fillBlank'
+  | 'imageChoice'
+  | 'imageToVietnamese'
 
 interface Question {
   type: QuestionType
@@ -29,6 +34,7 @@ interface Question {
   correctAnswer: string
   options?: string[]
   wordToSpeak?: string
+  image?: string
 }
 
 interface Candy {
@@ -80,6 +86,14 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   const [questionFeedback, setQuestionFeedback] = useState('')
   const [questionsAnswered, setQuestionsAnswered] = useState(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Animation effects states
+  const [particles, setParticles] = useState<
+    Array<{ id: string; x: number; y: number; emoji: string }>
+  >([])
+  const [showCorrectAnimation, setShowCorrectAnimation] = useState(false)
+  const [showIncorrectAnimation, setShowIncorrectAnimation] = useState(false)
+  const [comboCount, setComboCount] = useState(0)
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -179,13 +193,40 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
       setGrid(newGrid)
       // Count matches for score
       let matchCount = 0
+      const matchedCandies: Array<{ row: number; col: number; color: string }> =
+        []
       newGrid.forEach((row) =>
         row.forEach((candy) => {
-          if (candy.isMatched) matchCount++
+          if (candy.isMatched) {
+            matchCount++
+            matchedCandies.push({
+              row: candy.row,
+              col: candy.col,
+              color: candy.color,
+            })
+          }
         }),
       )
       setScore((prev) => prev + matchCount * 10)
       playSound('match')
+
+      // Create particle effects for matched candies
+      const newParticles = matchedCandies.map((candy, index) => ({
+        id: `particle-${Date.now()}-${index}`,
+        x: candy.col * 70 + 35,
+        y: candy.row * 70 + 35,
+        emoji: candy.color,
+      }))
+      setParticles((prev) => [...prev, ...newParticles])
+      setTimeout(() => {
+        setParticles((prev) =>
+          prev.filter((p) => !newParticles.find((np) => np.id === p.id)),
+        )
+      }, 1000)
+
+      // Combo counter
+      setComboCount((prev) => prev + 1)
+      setTimeout(() => setComboCount(0), 2000)
     }
 
     return hasMatch
@@ -422,6 +463,22 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
       setQuestionFeedback('✅ Chính xác! +2 lượt chơi')
       setMoves((prev) => prev + 2)
       answerCorrect()
+      setShowCorrectAnimation(true)
+      setTimeout(() => setShowCorrectAnimation(false), 1500)
+
+      // Success confetti
+      const confettiParticles = Array.from({ length: 20 }, (_, i) => ({
+        id: `confetti-${Date.now()}-${i}`,
+        x: Math.random() * window.innerWidth,
+        y: -50,
+        emoji: ['🎉', '⭐', '✨', '🌟', '💫'][Math.floor(Math.random() * 5)],
+      }))
+      setParticles((prev) => [...prev, ...confettiParticles])
+      setTimeout(() => {
+        setParticles((prev) =>
+          prev.filter((p) => !confettiParticles.find((cp) => cp.id === p.id)),
+        )
+      }, 2000)
     } else {
       playSound('incorrect')
       setQuestionFeedback(
@@ -429,6 +486,8 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
       )
       setMoves((prev) => Math.max(0, prev - 1))
       answerIncorrect()
+      setShowIncorrectAnimation(true)
+      setTimeout(() => setShowIncorrectAnimation(false), 600)
     }
 
     setQuestionsAnswered((prev) => prev + 1)
@@ -473,31 +532,121 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   }
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col relative">
+      {/* CSS Animations */}
+      <style>{`
+        @keyframes float-up {
+          0% { transform: translateY(0) scale(1); opacity: 1; }
+          100% { transform: translateY(-200px) scale(0.5); opacity: 0; }
+        }
+        @keyframes confetti-fall {
+          0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+          100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        @keyframes pulse-success {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+        }
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-10px); }
+          75% { transform: translateX(10px); }
+        }
+        @keyframes bounce-in {
+          0% { transform: scale(0.3); opacity: 0; }
+          50% { transform: scale(1.05); }
+          70% { transform: scale(0.9); }
+          100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes glow {
+          0%, 100% { box-shadow: 0 0 5px rgba(99, 102, 241, 0.5); }
+          50% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.8), 0 0 30px rgba(99, 102, 241, 0.6); }
+        }
+        @keyframes sparkle {
+          0%, 100% { opacity: 0; transform: scale(0); }
+          50% { opacity: 1; transform: scale(1); }
+        }
+        .particle {
+          position: fixed;
+          pointer-events: none;
+          font-size: 2rem;
+          z-index: 1000;
+          animation: float-up 1s ease-out forwards;
+        }
+        .confetti {
+          position: fixed;
+          pointer-events: none;
+          font-size: 2rem;
+          z-index: 1000;
+          animation: confetti-fall 2s ease-out forwards;
+        }
+        .success-animation {
+          animation: pulse-success 0.5s ease-in-out;
+        }
+        .error-animation {
+          animation: shake 0.3s ease-in-out;
+        }
+        .bounce-enter {
+          animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .candy-hover:hover {
+          animation: bounce-in 0.3s ease-in-out;
+        }
+        .glow-effect {
+          animation: glow 1.5s ease-in-out infinite;
+        }
+      `}</style>
+
+      {/* Particle Effects */}
+      {particles.map((particle) => (
+        <div
+          key={particle.id}
+          className={particle.id.includes('confetti') ? 'confetti' : 'particle'}
+          style={{
+            left: particle.x,
+            top: particle.y,
+            animationDelay: particle.id.includes('confetti')
+              ? `${Math.random() * 0.5}s`
+              : '0s',
+          }}
+        >
+          {particle.emoji}
+        </div>
+      ))}
+
+      {/* Combo Counter */}
+      {comboCount > 1 && (
+        <div className="fixed top-1/4 left-1/2 transform -translate-x-1/2 z-50 bounce-enter">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold text-4xl px-8 py-4 rounded-full shadow-2xl glow-effect">
+            🔥 COMBO x{comboCount}! 🔥
+          </div>
+        </div>
+      )}
+
       <h2 className="text-xl font-bold text-indigo-700 text-center">{title}</h2>
 
       {/* Game Controls */}
       <div className="w-full my-3 flex flex-row justify-center gap-4 items-stretch">
         {isGameStarted && (
           <>
-            <div className="bg-yellow-100 text-yellow-700 font-bold px-3 py-2 rounded-full shadow-lg text-center text-sm">
+            <div className="bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-700 font-bold px-3 py-2 rounded-full shadow-lg text-center text-sm transform hover:scale-110 transition-transform bounce-enter">
               💎 Điểm: {score}
             </div>
-            <div className="bg-purple-100 text-purple-700 font-bold px-3 py-2 rounded-full shadow-lg text-center text-sm">
+            <div className="bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 font-bold px-3 py-2 rounded-full shadow-lg text-center text-sm transform hover:scale-110 transition-transform bounce-enter">
               🎯 Lượt: {moves}
             </div>
-            <div className="bg-green-100 text-green-700 font-bold px-3 py-2 rounded-full shadow-lg text-center text-sm">
+            <div className="bg-gradient-to-r from-green-100 to-green-200 text-green-700 font-bold px-3 py-2 rounded-full shadow-lg text-center text-sm transform hover:scale-110 transition-transform bounce-enter">
               📝 Câu hỏi: {questionsAnswered}
             </div>
             <button
               onClick={openQuestionModal}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-200 text-sm"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-200 text-sm transform hover:scale-110 glow-effect"
             >
               ❓ Trả lời câu hỏi
             </button>
             <button
               onClick={restartGame}
-              className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-200 text-sm"
+              className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-200 text-sm transform hover:scale-110"
             >
               🔄 Restart
             </button>
@@ -508,30 +657,30 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
       {/* Game Area */}
       <div className="flex-1 flex items-start justify-center h-full overflow-auto">
         {!isGameStarted ? (
-          <div className="text-center bg-glass rounded-xl shadow-lg p-8 py-12 mt-10 w-full max-w-2xl">
-            <div className="text-6xl mb-4">🍬</div>
-            <h3 className="text-4xl font-bold text-indigo-700 mb-4">
+          <div className="text-center bg-gradient-to-br from-white to-indigo-100 rounded-2xl shadow-2xl p-8 py-12 mt-10 w-full max-w-2xl bounce-enter">
+            <div className="text-7xl mb-4 animate-bounce">🍬</div>
+            <h3 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">
               Candy Crush Tiếng Anh
             </h3>
-            <p className="text-gray-600 mb-6 text-xl">
-              Xếp 3 candy cùng loại để ghi điểm!
+            <p className="text-gray-700 mb-6 text-xl leading-relaxed">
+              ✨ Xếp 3 candy cùng loại để ghi điểm!
               <br />
-              Bấm "Trả lời câu hỏi" để nhận +2 lượt chơi.
+              💡 Bấm "Trả lời câu hỏi" để nhận +2 lượt chơi.
               <br />
               🎯 Mục tiêu: Trả lời càng nhiều câu càng tốt!
             </p>
             <button
               onClick={startGame}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-200 text-lg"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-200 text-xl transform hover:scale-110 glow-effect"
             >
               ▶️ Bắt đầu
             </button>
           </div>
         ) : (
-          <div className="w-full max-w-3xl bg-glass rounded-xl shadow-lg p-6">
+          <div className="w-full max-w-3xl bg-glass rounded-xl shadow-lg p-6 bounce-enter">
             {/* Candy Grid */}
             <div
-              className="grid gap-1 mx-auto"
+              className="grid gap-2 mx-auto relative"
               style={{
                 gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)`,
                 maxWidth: '600px',
@@ -543,12 +692,13 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                     key={candy.id}
                     onClick={() => handleCandyClick(rowIndex, colIndex)}
                     disabled={isProcessing}
+                    style={{ willChange: 'transform' }}
                     className={`
-                      aspect-square text-4xl rounded-lg transition-all duration-200
-                      ${candy.isMatched ? 'opacity-30 scale-75' : 'hover:scale-110'}
-                      ${selectedCandy?.row === rowIndex && selectedCandy?.col === colIndex ? 'ring-4 ring-yellow-400 scale-110' : ''}
+                      aspect-square text-4xl rounded-xl transition-all duration-300 ease-out
+                      ${candy.isMatched ? 'opacity-0 scale-0' : 'transform hover:scale-110'}
+                      ${selectedCandy?.row === rowIndex && selectedCandy?.col === colIndex ? 'ring-4 ring-yellow-400 scale-110 shadow-2xl glow-effect' : ''}
                       ${isProcessing ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-                      bg-white shadow-md
+                      bg-gradient-to-br from-white to-gray-50 shadow-lg hover:shadow-xl
                     `}
                   >
                     {candy.color}
@@ -562,23 +712,41 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
 
       {/* Question Modal */}
       {showQuestion && currentQuestion && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white rounded-xl p-8 shadow-2xl max-w-2xl w-full mx-4">
-            <div className="text-5xl mb-4 text-center">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-sm">
+          <div
+            className={`bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-8 shadow-2xl max-w-2xl w-full mx-4 bounce-enter ${showCorrectAnimation ? 'success-animation' : ''} ${showIncorrectAnimation ? 'error-animation' : ''}`}
+          >
+            <div className="text-6xl mb-4 text-center animate-bounce">
               {currentQuestion.type === 'listening'
                 ? '🎧'
                 : currentQuestion.type === 'fillBlank'
                   ? '✏️'
-                  : '❓'}
+                  : currentQuestion.type === 'imageChoice' ||
+                      currentQuestion.type === 'imageToVietnamese'
+                    ? '🖼️'
+                    : '❓'}
             </div>
             <h3 className="text-2xl font-bold text-indigo-700 mb-6 text-center">
               {currentQuestion.question}
             </h3>
 
+            {/* Image Display */}
+            {(currentQuestion.type === 'imageChoice' ||
+              currentQuestion.type === 'imageToVietnamese') &&
+              currentQuestion.image && (
+                <div className="mb-6 flex justify-center">
+                  <img
+                    src={currentQuestion.image}
+                    alt="Question"
+                    className="w-64 h-64 object-cover rounded-2xl shadow-2xl border-4 border-indigo-200 transform hover:scale-105 transition-all"
+                  />
+                </div>
+              )}
+
             {currentQuestion.type === 'listening' && (
               <button
                 onClick={replayAudio}
-                className="mb-4 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg mx-auto block"
+                className="mb-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl mx-auto block shadow-lg transform hover:scale-110 transition-all glow-effect"
               >
                 🔊 Nghe lại
               </button>
@@ -590,9 +758,11 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                   type="text"
                   value={userAnswer}
                   onChange={(e) => setUserAnswer(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && handleSubmitAnswer()}
+                  onKeyDown={(e) =>
+                    e.key === 'Enter' && !isSubmitting && handleSubmitAnswer()
+                  }
                   disabled={isSubmitting}
-                  className="w-full text-center text-2xl border-2 border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full text-center text-2xl border-2 border-indigo-300 rounded-xl p-4 focus:outline-none focus:ring-4 focus:ring-indigo-400 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg bg-white transition-all"
                   placeholder="Nhập từ tiếng Anh..."
                   autoFocus
                 />
@@ -605,8 +775,8 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                     onClick={() => !isSubmitting && setSelectedOption(option)}
                     disabled={isSubmitting}
                     className={`
-                      border-2 rounded-lg p-4 text-xl font-semibold transition-all
-                      ${selectedOption === option ? 'border-indigo-500 bg-indigo-100 scale-105' : 'border-gray-300 hover:bg-gray-50'}
+                      border-3 rounded-xl p-4 text-xl font-semibold transition-all transform hover:scale-105 shadow-lg
+                      ${selectedOption === option ? 'border-indigo-500 bg-gradient-to-br from-indigo-100 to-indigo-200 scale-105 glow-effect' : 'border-gray-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100'}
                       ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
                     `}
                   >
@@ -618,7 +788,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
 
             {questionFeedback ? (
               <div
-                className={`text-center text-xl font-bold ${questionFeedback.includes('✅') ? 'text-green-600' : 'text-red-600'}`}
+                className={`text-center text-2xl font-bold p-4 rounded-xl ${questionFeedback.includes('✅') ? 'text-green-600 bg-green-100 bounce-enter' : 'text-red-600 bg-red-100 error-animation'}`}
               >
                 {questionFeedback}
               </div>
@@ -629,7 +799,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                     setShowQuestion(false)
                     setCurrentQuestion(null)
                   }}
-                  className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-semibold px-6 py-3 rounded-lg text-lg"
+                  className="flex-1 bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 text-white font-semibold px-6 py-3 rounded-xl text-lg shadow-lg transform hover:scale-105 transition-all"
                 >
                   ← Quay lại chơi
                 </button>
@@ -638,7 +808,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                   disabled={
                     (!userAnswer.trim() && !selectedOption) || isSubmitting
                   }
-                  className="flex-1 bg-green-500 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg text-lg"
+                  className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-xl text-lg shadow-lg transform hover:scale-105 transition-all glow-effect"
                 >
                   ✓ Xác nhận
                 </button>

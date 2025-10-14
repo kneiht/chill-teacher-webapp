@@ -1,5 +1,26 @@
 [
   {
+    "type": "imageChoice",
+    "question": "Đây là từ gì trong tiếng Anh?",
+    "correctAnswer": "pencil",
+    "options": ["pencil", "pen", "marker", "crayon"],
+    "image": "/vocab-images/pencil.webp"
+  },
+  {
+    "type": "imageToVietnamese",
+    "question": "Hình này nghĩa là gì?",
+    "correctAnswer": "cái kéo",
+    "options": ["cái kéo", "giấy", "hồ dán", "bút màu"],
+    "image": "/vocab-images/scissors.webp"
+  },
+  {
+    "type": "imageChoice",
+    "question": "Đây là từ gì trong tiếng Anh?",
+    "correctAnswer": "glue",
+    "options": ["glue", "paint", "paper", "scissors"],
+    "image": "/vocab-images/glue.webp"
+  },
+  {
     "type": "multipleChoice",
     "question": "\"pencil\" nghĩa là gì?",
     "correctAnswer": "bút chì",
@@ -47,6 +68,27 @@
     "correctAnswer": "scissors"
   },
   {
+    "type": "imageChoice",
+    "question": "Đây là từ gì trong tiếng Anh?",
+    "correctAnswer": "marker",
+    "options": ["marker", "pen", "pencil", "crayon"],
+    "image": "/vocab-images/marker.webp"
+  },
+  {
+    "type": "imageToVietnamese",
+    "question": "Hình này nghĩa là gì?",
+    "correctAnswer": "sơn",
+    "options": ["sơn", "bút màu", "hồ dán", "giấy"],
+    "image": "/vocab-images/paint.webp"
+  },
+  {
+    "type": "imageChoice",
+    "question": "Từ tiếng Anh này là gì?",
+    "correctAnswer": "paper",
+    "options": ["paper", "paint", "pen", "pencil"],
+    "image": "/vocab-images/paper.webp"
+  },
+  {
     "type": "multipleChoice",
     "question": "\"crayon\" nghĩa là gì?",
     "correctAnswer": "bút sáp màu",
@@ -69,5 +111,19 @@
     "type": "fillBlank",
     "question": "Điền từ tiếng Anh cho: \"bút mực\"",
     "correctAnswer": "pen"
+  },
+  {
+    "type": "imageChoice",
+    "question": "Đây là từ gì?",
+    "correctAnswer": "crayon",
+    "options": ["crayon", "marker", "pencil", "pen"],
+    "image": "/vocab-images/crayon.webp"
+  },
+  {
+    "type": "imageToVietnamese",
+    "question": "Đây là gì?",
+    "correctAnswer": "bút mực",
+    "options": ["bút mực", "bút chì", "bút dạ", "bút sáp"],
+    "image": "/vocab-images/pen.webp"
   }
 ]
