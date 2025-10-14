@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import vocabData from './assets/vocab.json'
 
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
@@ -12,63 +13,88 @@ import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 import { games, type GameDefinition } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
+import WordwallSlide from '@/lib/components/presentation/WordwallSlide'
 
 // Assets
 import urls from './assets/urls.json'
-import vocabData from './assets/vocab.json'
-import clozeData from './assets/cloze.json'
 
 const buttonStyle =
   'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
-// Game Configuration with VocabData and optional ClozeData
+// Game Configuration with VocabData
 interface LessonGame {
   game: GameDefinition
-  vocabData?: Array<any>
-  clozeData?: any
+  vocabData: Array<any>
 }
 
-// Configure which games to include in this lesson
+// Configure which games to include in this lesson - just import and assign data!
 const lessonGames: LessonGame[] = [
   { game: games.MatchingGame, vocabData: vocabData },
-  { game: games.MemoryGame, vocabData: vocabData },
+  { game: games.AnagramGame, vocabData: vocabData },
   { game: games.MultipleChoiceEnViGame, vocabData: vocabData },
   { game: games.MultipleChoiceViEnGame, vocabData: vocabData },
-  { game: games.PictureChoiceEnGame, vocabData: vocabData },
-  { game: games.PictureTypingEnGame, vocabData: vocabData },
+  { game: games.MemoryGame, vocabData: vocabData },
   { game: games.ListeningTypingEnGame, vocabData: vocabData },
+  { game: games.UnjumbleGame, vocabData: vocabData },
   { game: games.ListeningSentenceTypingGame, vocabData: vocabData },
   { game: games.VietnameseToEnglishTranslationGame, vocabData: vocabData },
-  { game: games.ClozeGame, clozeData: clozeData },
+  { game: games.PictureChoiceEnGame, vocabData: vocabData },
+  { game: games.ImageRevealChoiceGame, vocabData: vocabData },
+  { game: games.PictureTypingEnGame, vocabData: vocabData },
 ]
+
+// Wordwall Games Configuration
+interface WordwallGame {
+  name: string
+  icon: string
+  url: string
+}
+
+const wordwallGames: WordwallGame[] = urls.wordwallGames || []
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   const [activeGame, setActiveGame] = useState<LessonGame | null>(null)
+  const [activeWordwallGame, setActiveWordwallGame] =
+    useState<WordwallGame | null>(null)
 
   const GamePlayer = () => {
     if (!activeGame) return null
 
     const GameComponent = activeGame.game.component
 
-    const props: any = {
-      backgroundUrl: urls.background,
-      title: `${activeGame.game.title} - Multiple Intelligence Theory`,
-      onClose: () => setActiveGame(null),
-    }
-
-    if (activeGame.vocabData) {
-      props.vocabData = activeGame.vocabData
-    }
-
-    if (activeGame.clozeData) {
-      props.clozeData = activeGame.clozeData
-    }
-
     return (
       <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <div className="relative w-full h-full">
-          <GameComponent {...props} />
+          <GameComponent
+            vocabData={activeGame.vocabData}
+            backgroundUrl={urls.background}
+            title={`${activeGame.game.title} - School Supplies`}
+            onClose={() => setActiveGame(null)}
+          />
         </div>
+      </div>
+    )
+  }
+
+  const WordwallPlayer = () => {
+    if (!activeWordwallGame) return null
+
+    const WordwallGameSlide: React.FC<{ isActive: boolean }> = ({
+      isActive,
+    }) => <WordwallSlide isActive={isActive} src={activeWordwallGame.url} />
+
+    const slides = [WordwallGameSlide]
+
+    return (
+      <div className="absolute inset-0">
+        <PresentationShell
+          slides={slides}
+          backgroundUrl={urls.background}
+          onHomeClick={() => setActiveWordwallGame(null)}
+          showNavButtons={false}
+          showOutlineButton={false}
+          showSlideCounter={false}
+        />
       </div>
     )
   }
@@ -78,9 +104,9 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
       <Slide isActive={isActive}>
         <div className="flex flex-col items-center justify-start h-full text-center">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
-            Multiple Intelligence Theory
+            Unit 1: Art Class
             <br />
-            Lesson 1: Vocabulary - Part 1
+            Lesson 2: School Supplies
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
             <Link to={presentationLessonRoute.to}>
@@ -101,6 +127,16 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
+            {wordwallGames.map((wordwallGame, index) => (
+              <WoodenButton
+                key={`wordwall-${index}`}
+                onClick={() => setActiveWordwallGame(wordwallGame)}
+                className={buttonStyle}
+              >
+                {wordwallGame.icon} {wordwallGame.name}
+              </WoodenButton>
+            ))}
+
             {lessonGames.map((lessonGame) => (
               <WoodenButton
                 key={lessonGame.game.id}
@@ -114,6 +150,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
         </div>
 
         <GamePlayer />
+        <WordwallPlayer />
       </Slide>
     </div>
   )
@@ -125,7 +162,7 @@ const LessonHomePage: React.FC = () => {
 }
 
 export const Route = createFileRoute(
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-3/',
+  '/lessons/everybody-up-0/unit-1/lesson-3/',
 )({
   component: LessonHomePage,
 })

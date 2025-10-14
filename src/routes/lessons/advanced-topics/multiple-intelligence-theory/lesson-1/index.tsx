@@ -10,7 +10,7 @@ import { Route as youtubeLessonRoute } from './youtube-lesson'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import { gameComponents, gameInfo } from '@/lib/components/games'
+import { games, type GameDefinition } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
@@ -21,28 +21,47 @@ import clozeData from './assets/cloze.json'
 const buttonStyle =
   'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
+// Game Configuration with VocabData and optional ClozeData
+interface LessonGame {
+  game: GameDefinition
+  vocabData?: Array<any>
+  clozeData?: any
+}
+
+// Configure which games to include in this lesson
+const lessonGames: LessonGame[] = [
+  { game: games.MatchingGame, vocabData: vocabData },
+  { game: games.MemoryGame, vocabData: vocabData },
+  { game: games.MultipleChoiceEnViGame, vocabData: vocabData },
+  { game: games.MultipleChoiceViEnGame, vocabData: vocabData },
+  { game: games.PictureChoiceEnGame, vocabData: vocabData },
+  { game: games.PictureTypingEnGame, vocabData: vocabData },
+  { game: games.ListeningTypingEnGame, vocabData: vocabData },
+  { game: games.ListeningSentenceTypingGame, vocabData: vocabData },
+  { game: games.VietnameseToEnglishTranslationGame, vocabData: vocabData },
+  { game: games.ClozeGame, clozeData: clozeData },
+]
+
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
-  const [activeGame, setActiveGame] = useState<string | null>(null)
-  const games = gameInfo({ vocabData, hasClozeData: true })
+  const [activeGame, setActiveGame] = useState<LessonGame | null>(null)
 
   const GamePlayer = () => {
     if (!activeGame) return null
 
-    const game = games[activeGame]
-    if (!game) return null
-
-    const GameComponent = gameComponents[game.component]
-    if (!GameComponent) return null
+    const GameComponent = activeGame.game.component
 
     const props: any = {
-      vocabData,
       backgroundUrl: urls.background,
-      title: `${game.title} - Multiple Intelligence Theory`,
+      title: `${activeGame.game.title} - Multiple Intelligence Theory`,
       onClose: () => setActiveGame(null),
     }
 
-    if (game.component === 'ClozeGame') {
-      props.clozeData = clozeData
+    if (activeGame.vocabData) {
+      props.vocabData = activeGame.vocabData
+    }
+
+    if (activeGame.clozeData) {
+      props.clozeData = activeGame.clozeData
     }
 
     return (
@@ -82,13 +101,13 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
-            {Object.keys(games).map((gameName) => (
+            {lessonGames.map((lessonGame) => (
               <WoodenButton
-                key={gameName}
-                onClick={() => setActiveGame(gameName)}
+                key={lessonGame.game.id}
+                onClick={() => setActiveGame(lessonGame)}
                 className={buttonStyle}
               >
-                {games[gameName].icon} {gameName}
+                {lessonGame.game.icon} {lessonGame.game.name}
               </WoodenButton>
             ))}
           </div>

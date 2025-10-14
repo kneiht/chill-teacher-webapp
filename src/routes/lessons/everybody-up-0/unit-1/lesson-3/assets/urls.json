@@ -1,0 +1,32 @@
+{
+  "googleSlide": "https://docs.google.com/presentation/d/e/2PACX-1vSGdTu6SwVIlKBKq15hxUsIinqbPog0iDZ08uus14BfaDDQeVOzhCLkrWxWzEc0CWdfw1IW25UJefSa/pubembed",
+  "youtubeLesson": "https://youtu.be/Ku-WJOsRLqk",
+  "background": "/backgrounds/EU0-U1L2.webp",
+  "wordwallGames": [
+    {
+      "name": "Match Up",
+      "icon": "🎯",
+      "url": "https://wordwall.net/embed/game1"
+    },
+    {
+      "name": "Quiz",
+      "icon": "❓",
+      "url": "https://wordwall.net/embed/game2"
+    },
+    {
+      "name": "Random Wheel",
+      "icon": "🎡",
+      "url": "https://wordwall.net/embed/game3"
+    },
+    {
+      "name": "Wordsearch",
+      "icon": "🔍",
+      "url": "https://wordwall.net/embed/game4"
+    },
+    {
+      "name": "Crossword",
+      "icon": "✏️",
+      "url": "https://wordwall.net/embed/game5"
+    }
+  ]
+}
