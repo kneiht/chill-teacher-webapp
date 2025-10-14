@@ -182,6 +182,7 @@ export const gameInfo = (
 
 // Legacy game components registry
 export const gameComponents: Record<string, React.FC<any>> = {
+  CandyCrushEnglishGame,
   AnagramGame,
   MatchingGame,
   MultipleChoiceEnViGame,
@@ -195,5 +196,4 @@ export const gameComponents: Record<string, React.FC<any>> = {
   UnjumbleGame,
   ListeningSentenceTypingGame,
   VietnameseToEnglishTranslationGame,
-  CandyCrushEnglishGame,
 }

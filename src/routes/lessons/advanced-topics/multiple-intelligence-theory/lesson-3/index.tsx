@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import vocabData from './assets/vocab.json'
+import questionsData from './assets/questions.json'
+import clozeData from './assets/cloze.json'
 
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
@@ -16,20 +19,17 @@ import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
 import urls from './assets/urls.json'
-import vocabData from './assets/vocab.json'
-import clozeData from './assets/cloze.json'
 
 const buttonStyle =
   'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
-// Game Configuration with VocabData and optional ClozeData
+// Game Configuration with VocabData
 interface LessonGame {
   game: GameDefinition
-  vocabData?: Array<any>
-  clozeData?: any
+  vocabData: Array<any>
 }
 
-// Configure which games to include in this lesson
+// Configure which games to include in this lesson - just import and assign data!
 const lessonGames: Array<LessonGame> = [
   { game: games.CandyCrushEnglishGame, vocabData: vocabData },
   { game: games.MatchingGame, vocabData: vocabData },
@@ -39,7 +39,7 @@ const lessonGames: Array<LessonGame> = [
   { game: games.ListeningTypingEnGame, vocabData: vocabData },
   { game: games.ListeningSentenceTypingGame, vocabData: vocabData },
   { game: games.VietnameseToEnglishTranslationGame, vocabData: vocabData },
-  { game: games.ClozeGame, clozeData: clozeData },
+  { game: games.ClozeGame, vocabData: vocabData },
 ]
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
@@ -50,24 +50,17 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
 
     const GameComponent = activeGame.game.component
 
-    const props: any = {
-      backgroundUrl: urls.background,
-      title: `${activeGame.game.title} - Multiple Intelligence Theory`,
-      onClose: () => setActiveGame(null),
-    }
-
-    if (activeGame.vocabData) {
-      props.vocabData = activeGame.vocabData
-    }
-
-    if (activeGame.clozeData) {
-      props.clozeData = activeGame.clozeData
-    }
-
     return (
       <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <div className="relative w-full h-full">
-          <GameComponent {...props} />
+          <GameComponent
+            vocabData={activeGame.vocabData}
+            questionsData={questionsData}
+            clozeData={clozeData}
+            backgroundUrl={urls.background}
+            title={`${activeGame.game.title} - Multiple Intelligence Theory`}
+            onClose={() => setActiveGame(null)}
+          />
         </div>
       </div>
     )

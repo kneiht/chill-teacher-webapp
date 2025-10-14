@@ -1,0 +1,380 @@
+[
+  {
+    "type": "multipleChoice",
+    "question": "\"reflection\" nghĩa là gì?",
+    "correctAnswer": "suy ngẫm, phản chiếu",
+    "options": ["suy ngẫm, phản chiếu", "độc lập", "quan sát", "kết luận"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"independent\" nghĩa là gì?",
+    "correctAnswer": "độc lập",
+    "options": ["độc lập", "riêng biệt", "sáng tạo", "hiệu quả"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"naturalist\" nghĩa là gì?",
+    "correctAnswer": "người nghiên cứu thiên nhiên",
+    "options": [
+      "người nghiên cứu thiên nhiên",
+      "giáo sư",
+      "nhật ký",
+      "lý thuyết"
+    ]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"observe\" nghĩa là gì?",
+    "correctAnswer": "quan sát",
+    "options": ["quan sát", "suy ngẫm", "thảo luận", "giải quyết vấn đề"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"possibility\" nghĩa là gì?",
+    "correctAnswer": "khả năng",
+    "options": ["khả năng", "cơ hội", "điểm mạnh", "mẫu"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"spiritual\" nghĩa là gì?",
+    "correctAnswer": "thuộc tinh thần, tâm linh",
+    "options": [
+      "thuộc tinh thần, tâm linh",
+      "thuộc về tồn tại",
+      "sáng tạo",
+      "hiệu quả"
+    ]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"existential\" nghĩa là gì?",
+    "correctAnswer": "thuộc về tồn tại",
+    "options": ["thuộc về tồn tại", "thuộc tinh thần", "không gian", "độc lập"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"conclusion\" nghĩa là gì?",
+    "correctAnswer": "kết luận",
+    "options": ["kết luận", "thảo luận", "hàm ý", "lý thuyết"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"separate\" nghĩa là gì?",
+    "correctAnswer": "riêng biệt, tách rời",
+    "options": ["riêng biệt, tách rời", "độc lập", "hạn hẹp", "phổ biến"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"strength\" nghĩa là gì?",
+    "correctAnswer": "điểm mạnh, sức mạnh",
+    "options": ["điểm mạnh, sức mạnh", "khả năng", "cơ hội", "kỹ năng"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"opportunity\" nghĩa là gì?",
+    "correctAnswer": "cơ hội",
+    "options": ["cơ hội", "khả năng", "điểm mạnh", "kết luận"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"linguistic\" nghĩa là gì?",
+    "correctAnswer": "ngôn ngữ học",
+    "options": ["ngôn ngữ học", "không gian", "vận động thể chất", "giao tiếp"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"discussion\" nghĩa là gì?",
+    "correctAnswer": "thảo luận",
+    "options": ["thảo luận", "kết luận", "hàm ý", "suy ngẫm"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"pattern\" nghĩa là gì?",
+    "correctAnswer": "mẫu, khuôn mẫu",
+    "options": ["mẫu, khuôn mẫu", "lý thuyết", "trí tưởng tượng", "kỹ năng"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"problem-solving\" nghĩa là gì?",
+    "correctAnswer": "giải quyết vấn đề",
+    "options": ["giải quyết vấn đề", "thảo luận", "quan sát", "suy ngẫm"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"spatial\" nghĩa là gì?",
+    "correctAnswer": "không gian",
+    "options": ["không gian", "ngôn ngữ học", "vận động thể chất", "giao tiếp"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"imagination\" nghĩa là gì?",
+    "correctAnswer": "trí tưởng tượng",
+    "options": ["trí tưởng tượng", "trí thông minh", "sáng tạo", "mẫu"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"bodily-kinesthetic\" nghĩa là gì?",
+    "correctAnswer": "vận động thể chất",
+    "options": ["vận động thể chất", "không gian", "ngôn ngữ học", "giao tiếp"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"creative\" nghĩa là gì?",
+    "correctAnswer": "sáng tạo",
+    "options": ["sáng tạo", "hiệu quả", "phổ biến", "độc lập"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"interpersonal\" nghĩa là gì?",
+    "correctAnswer": "giữa người với người (giao tiếp)",
+    "options": [
+      "giữa người với người (giao tiếp)",
+      "độc lập",
+      "riêng biệt",
+      "sáng tạo"
+    ]
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "reflection",
+    "options": ["reflection", "independent", "separate", "creative"],
+    "wordToSpeak": "reflection"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "naturalist",
+    "options": ["naturalist", "professor", "theory", "journal"],
+    "wordToSpeak": "naturalist"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "observe",
+    "options": ["observe", "discussion", "conclusion", "implication"],
+    "wordToSpeak": "observe"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "spiritual",
+    "options": ["spiritual", "existential", "spatial", "linguistic"],
+    "wordToSpeak": "spiritual"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "intelligence",
+    "options": ["intelligence", "imagination", "opportunity", "possibility"],
+    "wordToSpeak": "intelligence"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "pattern",
+    "options": ["pattern", "strength", "journal", "theory"],
+    "wordToSpeak": "pattern"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "spatial",
+    "options": ["spatial", "spiritual", "separate", "popular"],
+    "wordToSpeak": "spatial"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "creative",
+    "options": ["creative", "effective", "popular", "narrow"],
+    "wordToSpeak": "creative"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "interpersonal",
+    "options": ["interpersonal", "independent", "linguistic", "existential"],
+    "wordToSpeak": "interpersonal"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "possibility",
+    "options": ["possibility", "opportunity", "strength", "implication"],
+    "wordToSpeak": "possibility"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "professor",
+    "options": ["professor", "naturalist", "theory", "journal"],
+    "wordToSpeak": "professor"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "bodily-kinesthetic",
+    "options": ["bodily-kinesthetic", "linguistic", "spatial", "interpersonal"],
+    "wordToSpeak": "bodily-kinesthetic"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "imagination",
+    "options": ["imagination", "intelligence", "implication", "discussion"],
+    "wordToSpeak": "imagination"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "conclusion",
+    "options": ["conclusion", "discussion", "reflection", "observation"],
+    "wordToSpeak": "conclusion"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "effective",
+    "options": ["effective", "creative", "popular", "separate"],
+    "wordToSpeak": "effective"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"suy ngẫm, phản chiếu\"",
+    "correctAnswer": "reflection"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"độc lập\"",
+    "correctAnswer": "independent"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"quan sát\"",
+    "correctAnswer": "observe"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"khả năng\"",
+    "correctAnswer": "possibility"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"kết luận\"",
+    "correctAnswer": "conclusion"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"riêng biệt, tách rời\"",
+    "correctAnswer": "separate"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"điểm mạnh, sức mạnh\"",
+    "correctAnswer": "strength"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"cơ hội\"",
+    "correctAnswer": "opportunity"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"thảo luận\"",
+    "correctAnswer": "discussion"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"mẫu, khuôn mẫu\"",
+    "correctAnswer": "pattern"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"giải quyết vấn đề\"",
+    "correctAnswer": "problem-solving"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"không gian\"",
+    "correctAnswer": "spatial"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"trí tưởng tượng\"",
+    "correctAnswer": "imagination"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"sáng tạo\"",
+    "correctAnswer": "creative"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"nhật ký, tạp chí\"",
+    "correctAnswer": "journal"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"journal\" nghĩa là gì?",
+    "correctAnswer": "nhật ký, tạp chí",
+    "options": ["nhật ký, tạp chí", "lý thuyết", "mẫu", "hàm ý"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"implication\" nghĩa là gì?",
+    "correctAnswer": "hàm ý, ngụ ý, ẩn ý",
+    "options": ["hàm ý, ngụ ý, ẩn ý", "kết luận", "thảo luận", "suy ngẫm"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"intelligence\" nghĩa là gì?",
+    "correctAnswer": "trí thông minh",
+    "options": ["trí thông minh", "trí tưởng tượng", "sáng tạo", "kỹ năng"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"theory\" nghĩa là gì?",
+    "correctAnswer": "lý thuyết",
+    "options": ["lý thuyết", "kết luận", "hàm ý", "mẫu"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"popular\" nghĩa là gì?",
+    "correctAnswer": "phổ biến, được ưa chuộng",
+    "options": ["phổ biến, được ưa chuộng", "hiệu quả", "sáng tạo", "hạn hẹp"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"narrow\" nghĩa là gì?",
+    "correctAnswer": "hạn hẹp",
+    "options": ["hạn hẹp", "riêng biệt", "phổ biến", "độc lập"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"professor\" nghĩa là gì?",
+    "correctAnswer": "giáo sư",
+    "options": [
+      "giáo sư",
+      "người nghiên cứu thiên nhiên",
+      "nhật ký",
+      "lý thuyết"
+    ]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"effective\" nghĩa là gì?",
+    "correctAnswer": "hiệu quả",
+    "options": ["hiệu quả", "sáng tạo", "phổ biến", "độc lập"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"trí thông minh\"",
+    "correctAnswer": "intelligence"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"lý thuyết\"",
+    "correctAnswer": "theory"
+  }
+]

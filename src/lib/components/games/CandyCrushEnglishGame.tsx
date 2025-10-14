@@ -697,7 +697,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                       aspect-square text-4xl rounded-xl transition-all duration-300 ease-out
                       ${candy.isMatched ? 'opacity-0 scale-0' : 'transform hover:scale-110'}
                       ${selectedCandy?.row === rowIndex && selectedCandy?.col === colIndex ? 'ring-4 ring-yellow-400 scale-110 shadow-2xl glow-effect' : ''}
-                      ${isProcessing ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+                      ${isProcessing ? 'cursor-not-allowed' : 'cursor-pointer'}
                       bg-gradient-to-br from-white to-gray-50 shadow-lg hover:shadow-xl
                     `}
                   >
@@ -767,7 +767,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                       className={`
                         border-3 rounded-xl p-4 text-xl font-semibold transition-all transform hover:scale-105 shadow-lg
                         ${selectedOption === option ? 'border-indigo-500 bg-gradient-to-br from-indigo-100 to-indigo-200 scale-105 glow-effect' : 'border-gray-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100'}
-                        ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
+                        ${isSubmitting ? 'cursor-not-allowed' : ''}
                       `}
                     >
                       {option}
@@ -786,7 +786,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                     className={`
                       border-3 rounded-xl p-4 text-xl font-semibold transition-all transform hover:scale-105 shadow-lg
                       ${selectedOption === option ? 'border-indigo-500 bg-gradient-to-br from-indigo-100 to-indigo-200 scale-105 glow-effect' : 'border-gray-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100'}
-                      ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
+                      ${isSubmitting ? 'cursor-not-allowed' : ''}
                     `}
                   >
                     {option}
