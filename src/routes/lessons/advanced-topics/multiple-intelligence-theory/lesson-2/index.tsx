@@ -10,7 +10,8 @@ import { Route as youtubeLessonRoute } from './youtube-lesson'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import { games, type GameDefinition } from '@/lib/components/games'
+import { games } from '@/lib/components/games'
+import type { GameDefinition } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
@@ -29,13 +30,11 @@ interface LessonGame {
 }
 
 // Configure which games to include in this lesson
-const lessonGames: LessonGame[] = [
+const lessonGames: Array<LessonGame> = [
   { game: games.MatchingGame, vocabData: vocabData },
   { game: games.MemoryGame, vocabData: vocabData },
   { game: games.MultipleChoiceEnViGame, vocabData: vocabData },
   { game: games.MultipleChoiceViEnGame, vocabData: vocabData },
-  { game: games.PictureChoiceEnGame, vocabData: vocabData },
-  { game: games.PictureTypingEnGame, vocabData: vocabData },
   { game: games.ListeningTypingEnGame, vocabData: vocabData },
   { game: games.ListeningSentenceTypingGame, vocabData: vocabData },
   { game: games.VietnameseToEnglishTranslationGame, vocabData: vocabData },

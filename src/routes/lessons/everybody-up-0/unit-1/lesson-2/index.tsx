@@ -11,7 +11,8 @@ import { Route as youtubeLessonRoute } from './youtube-lesson'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import { games, type GameDefinition } from '@/lib/components/games'
+import { games } from '@/lib/components/games'
+import type { GameDefinition } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
@@ -27,7 +28,7 @@ interface LessonGame {
 }
 
 // Configure which games to include in this lesson - just import and assign data!
-const lessonGames: LessonGame[] = [
+const lessonGames: Array<LessonGame> = [
   { game: games.MatchingGame, vocabData: vocabData },
   { game: games.AnagramGame, vocabData: vocabData },
   { game: games.MultipleChoiceEnViGame, vocabData: vocabData },

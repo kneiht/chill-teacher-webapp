@@ -12,6 +12,7 @@ import PictureTypingEnGame from './PictureTypingEnGame'
 import UnjumbleGame from './UnjumbleGame'
 import ListeningSentenceTypingGame from './ListeningSentenceTypingGame'
 import VietnameseToEnglishTranslationGame from './VietnameseToEnglishTranslationGame'
+import CandyCrushEnglishGame from './CandyCrushEnglishGame'
 
 export {
   AnagramGame,
@@ -27,6 +28,7 @@ export {
   UnjumbleGame,
   ListeningSentenceTypingGame,
   VietnameseToEnglishTranslationGame,
+  CandyCrushEnglishGame,
 }
 
 // Game Definition Interface
@@ -137,6 +139,13 @@ export const games: Record<string, GameDefinition> = {
     component: ClozeGame,
     requiresClozeData: true,
   },
+  CandyCrushEnglishGame: {
+    id: 'CandyCrushEnglishGame',
+    name: 'Candy Crush Tiếng Anh',
+    title: 'Candy Crush English',
+    icon: '🍬',
+    component: CandyCrushEnglishGame,
+  },
 }
 
 // Legacy support - keep gameInfo for backward compatibility
@@ -186,4 +195,5 @@ export const gameComponents: Record<string, React.FC<any>> = {
   UnjumbleGame,
   ListeningSentenceTypingGame,
   VietnameseToEnglishTranslationGame,
+  CandyCrushEnglishGame,
 }
