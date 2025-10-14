@@ -10,6 +10,14 @@ import {
 } from 'lucide-react'
 import './PresentationShell.css'
 import { useVoice } from '@/lib/hooks/use-voice'
+import { useStore } from '@tanstack/react-store'
+import {
+  audioStore,
+  toggleBackgroundMusic,
+  toggleSoundEffects,
+  setBackgroundMusicVolume,
+  setSoundEffectsVolume,
+} from '@/lib/stores/audio.store'
 
 interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
@@ -36,8 +44,9 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [showTTSSettings, setShowTTSSettings] = useState(false)
+  const [showSettings, setShowSettings] = useState(false)
   const { voices, voice, rate, setVoice, setRate, isSupported } = useVoice()
+  const audioSettings = useStore(audioStore)
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef<number>(0)
@@ -223,11 +232,11 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             </button>
           )}
 
-          {showSettingsButton && isSupported && (
+          {showSettingsButton && (
             <button
-              onClick={() => setShowTTSSettings(true)}
+              onClick={() => setShowSettings(true)}
               className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
-              title="TTS Settings"
+              title="Settings"
             >
               <Settings className="h-10 w-10 md:h-6 md:w-6" />
             </button>
@@ -283,51 +292,162 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           </div>
         )}
 
-        {/* TTS Settings Modal */}
-        {showTTSSettings && (
+        {/* Settings Modal */}
+        {showSettings && (
           <div
             className="fixed inset-0 bg-[#00000075] z-50 flex items-center justify-center"
             onClick={(e) =>
-              e.target === e.currentTarget && setShowTTSSettings(false)
+              e.target === e.currentTarget && setShowSettings(false)
             }
           >
-            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
-              <h3 className="text-lg font-semibold mb-4">TTS Settings</h3>
-              <div className="space-y-4">
+            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[80vh] overflow-y-auto">
+              <h3 className="text-xl font-bold mb-6">⚙️ Settings</h3>
+
+              {/* Audio Settings Section */}
+              <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Voice
-                  </label>
-                  <select
-                    value={voice}
-                    onChange={(e) => setVoice(e.target.value)}
-                    className="w-full p-2 border rounded"
-                  >
-                    {voices.map((v) => (
-                      <option key={v.name} value={v.name}>
-                        {v.name} ({v.lang})
-                      </option>
-                    ))}
-                  </select>
+                  <h4 className="text-md font-semibold mb-3 text-gray-700">
+                    🎵 Audio
+                  </h4>
+                  <div className="space-y-4 pl-2">
+                    {/* Background Music Toggle */}
+                    <div className="flex items-center justify-between">
+                      <label className="text-sm font-medium">
+                        Background Music
+                      </label>
+                      <button
+                        onClick={toggleBackgroundMusic}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          audioSettings.backgroundMusicEnabled
+                            ? 'bg-indigo-600'
+                            : 'bg-gray-300'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            audioSettings.backgroundMusicEnabled
+                              ? 'translate-x-6'
+                              : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    {/* Background Music Volume */}
+                    {audioSettings.backgroundMusicEnabled && (
+                      <div>
+                        <label className="block text-sm font-medium mb-1">
+                          Volume:{' '}
+                          {Math.round(
+                            audioSettings.backgroundMusicVolume * 100,
+                          )}
+                          %
+                        </label>
+                        <input
+                          type="range"
+                          min="0"
+                          max="1"
+                          step="0.05"
+                          value={audioSettings.backgroundMusicVolume}
+                          onChange={(e) =>
+                            setBackgroundMusicVolume(parseFloat(e.target.value))
+                          }
+                          className="w-full"
+                        />
+                      </div>
+                    )}
+
+                    {/* Sound Effects Toggle */}
+                    <div className="flex items-center justify-between">
+                      <label className="text-sm font-medium">
+                        Sound Effects
+                      </label>
+                      <button
+                        onClick={toggleSoundEffects}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          audioSettings.soundEffectsEnabled
+                            ? 'bg-indigo-600'
+                            : 'bg-gray-300'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            audioSettings.soundEffectsEnabled
+                              ? 'translate-x-6'
+                              : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    {/* Sound Effects Volume */}
+                    {audioSettings.soundEffectsEnabled && (
+                      <div>
+                        <label className="block text-sm font-medium mb-1">
+                          Volume:{' '}
+                          {Math.round(audioSettings.soundEffectsVolume * 100)}%
+                        </label>
+                        <input
+                          type="range"
+                          min="0"
+                          max="1"
+                          step="0.05"
+                          value={audioSettings.soundEffectsVolume}
+                          onChange={(e) =>
+                            setSoundEffectsVolume(parseFloat(e.target.value))
+                          }
+                          className="w-full"
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Speed: {rate.toFixed(1)}
-                  </label>
-                  <input
-                    type="range"
-                    min="0.5"
-                    max="2.0"
-                    step="0.1"
-                    value={rate}
-                    onChange={(e) => setRate(parseFloat(e.target.value))}
-                    className="w-full"
-                  />
-                </div>
+
+                {/* TTS Settings Section */}
+                {isSupported && (
+                  <div>
+                    <h4 className="text-md font-semibold mb-3 text-gray-700">
+                      🗣️ Text-to-Speech
+                    </h4>
+                    <div className="space-y-4 pl-2">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Voice
+                        </label>
+                        <select
+                          value={voice}
+                          onChange={(e) => setVoice(e.target.value)}
+                          className="w-full p-2 border rounded"
+                        >
+                          {voices.map((v) => (
+                            <option key={v.name} value={v.name}>
+                              {v.name} ({v.lang})
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-1">
+                          Speed: {rate.toFixed(1)}
+                        </label>
+                        <input
+                          type="range"
+                          min="0.5"
+                          max="2.0"
+                          step="0.1"
+                          value={rate}
+                          onChange={(e) => setRate(parseFloat(e.target.value))}
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
+
               <button
-                onClick={() => setShowTTSSettings(false)}
-                className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
+                onClick={() => setShowSettings(false)}
+                className="mt-6 w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium"
               >
                 Close
               </button>
