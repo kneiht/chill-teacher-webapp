@@ -376,5 +376,356 @@
     "type": "fillBlank",
     "question": "Điền từ tiếng Anh cho: \"lý thuyết\"",
     "correctAnswer": "theory"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "___ helps us learn from mistakes.",
+    "correctAnswer": "Reflection",
+    "options": ["Reflection", "Discussion", "Journal", "Pattern"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "___ helps us learn from mistakes.",
+    "correctAnswer": "Reflection"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "He likes to be ___ in his work.",
+    "correctAnswer": "independent",
+    "options": ["independent", "creative", "popular", "effective"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "He likes to be ___ in his work.",
+    "correctAnswer": "independent"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "___ intelligence is about understanding nature.",
+    "correctAnswer": "Naturalist",
+    "options": ["Naturalist", "Linguistic", "Spatial", "Interpersonal"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "___ intelligence is about understanding nature.",
+    "correctAnswer": "Naturalist"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Scientists ___ animals in their natural environment.",
+    "correctAnswer": "observe",
+    "options": ["observe", "discuss", "solve", "create"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Scientists ___ animals in their natural environment.",
+    "correctAnswer": "observe"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "There is a ___ of rain tomorrow.",
+    "correctAnswer": "possibility",
+    "options": ["possibility", "opportunity", "strength", "pattern"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "There is a ___ of rain tomorrow.",
+    "correctAnswer": "possibility"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Meditation is often a ___ practice.",
+    "correctAnswer": "spiritual",
+    "options": ["spiritual", "creative", "narrow", "popular"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Meditation is often a ___ practice.",
+    "correctAnswer": "spiritual"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "He asked deep ___ questions about life.",
+    "correctAnswer": "existential",
+    "options": ["existential", "spiritual", "linguistic", "effective"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "He asked deep ___ questions about life.",
+    "correctAnswer": "existential"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "The teacher came to the ___ after the test.",
+    "correctAnswer": "conclusion",
+    "options": ["conclusion", "discussion", "implication", "reflection"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "The teacher came to the ___ after the test.",
+    "correctAnswer": "conclusion"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "The two ideas are ___ but related.",
+    "correctAnswer": "separate",
+    "options": ["separate", "creative", "independent", "popular"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "The two ideas are ___ but related.",
+    "correctAnswer": "separate"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Her ___ is in problem-solving.",
+    "correctAnswer": "strength",
+    "options": ["strength", "opportunity", "imagination", "pattern"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Her ___ is in problem-solving.",
+    "correctAnswer": "strength"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Education gives everyone an equal ___.",
+    "correctAnswer": "opportunity",
+    "options": ["opportunity", "possibility", "strength", "pattern"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Education gives everyone an equal ___.",
+    "correctAnswer": "opportunity"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "___ intelligence involves reading and writing.",
+    "correctAnswer": "Linguistic",
+    "options": ["Linguistic", "Spatial", "Naturalist", "Interpersonal"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "___ intelligence involves reading and writing.",
+    "correctAnswer": "Linguistic"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "We had a ___ about the project.",
+    "correctAnswer": "discussion",
+    "options": ["discussion", "conclusion", "reflection", "implication"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "We had a ___ about the project.",
+    "correctAnswer": "discussion"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Children quickly notice ___ in language.",
+    "correctAnswer": "patterns",
+    "options": ["patterns", "implications", "journals", "theories"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Children quickly notice ___ in language.",
+    "correctAnswer": "patterns"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "___ is an important skill in daily life.",
+    "correctAnswer": "Problem-solving",
+    "options": ["Problem-solving", "Discussion", "Reflection", "Observation"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "___ is an important skill in daily life.",
+    "correctAnswer": "Problem-solving"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Architects need strong ___ intelligence.",
+    "correctAnswer": "spatial",
+    "options": ["spatial", "linguistic", "naturalist", "interpersonal"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Architects need strong ___ intelligence.",
+    "correctAnswer": "spatial"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Children often have a strong ___.",
+    "correctAnswer": "imagination",
+    "options": ["imagination", "discussion", "journal", "theory"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Children often have a strong ___.",
+    "correctAnswer": "imagination"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Dancers use their ___ intelligence.",
+    "correctAnswer": "bodily-kinesthetic",
+    "options": ["bodily-kinesthetic", "spatial", "linguistic", "naturalist"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Dancers use their ___ intelligence.",
+    "correctAnswer": "bodily-kinesthetic"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "She is very ___ with her art projects.",
+    "correctAnswer": "creative",
+    "options": ["creative", "independent", "popular", "effective"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "She is very ___ with her art projects.",
+    "correctAnswer": "creative"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Teachers need strong ___ skills.",
+    "correctAnswer": "interpersonal",
+    "options": ["interpersonal", "linguistic", "spatial", "creative"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Teachers need strong ___ skills.",
+    "correctAnswer": "interpersonal"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "She writes in her ___ every night.",
+    "correctAnswer": "journal",
+    "options": ["journal", "pattern", "theory", "conclusion"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "She writes in her ___ every night.",
+    "correctAnswer": "journal"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "The teacher explained the ___ of the new rule.",
+    "correctAnswer": "implications",
+    "options": ["implications", "conclusions", "patterns", "discussions"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "The teacher explained the ___ of the new rule.",
+    "correctAnswer": "implications"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Emotional ___ is as important as IQ.",
+    "correctAnswer": "intelligence",
+    "options": ["intelligence", "imagination", "strength", "opportunity"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Emotional ___ is as important as IQ.",
+    "correctAnswer": "intelligence"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "The students studied the ___ of evolution.",
+    "correctAnswer": "theory",
+    "options": ["theory", "journal", "pattern", "implication"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "The students studied the ___ of evolution.",
+    "correctAnswer": "theory"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Her ___ is above average.",
+    "correctAnswer": "intelligence quotient",
+    "options": [
+      "intelligence quotient",
+      "imagination",
+      "strength",
+      "opportunity"
+    ]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Her ___ is above average.",
+    "correctAnswer": "intelligence quotient"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Football is very ___ in Vietnam.",
+    "correctAnswer": "popular",
+    "options": ["popular", "creative", "effective", "narrow"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Football is very ___ in Vietnam.",
+    "correctAnswer": "popular"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Reading books helps improve ___.",
+    "correctAnswer": "language skills",
+    "options": ["language skills", "imagination", "pattern", "journal"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Reading books helps improve ___.",
+    "correctAnswer": "language skills"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Solving puzzles develops ___.",
+    "correctAnswer": "logical-mathematical skills",
+    "options": [
+      "logical-mathematical skills",
+      "language skills",
+      "interpersonal skills",
+      "spatial intelligence"
+    ]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Solving puzzles develops ___.",
+    "correctAnswer": "logical-mathematical skills"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "That is a ___ definition of intelligence.",
+    "correctAnswer": "narrow",
+    "options": ["narrow", "popular", "creative", "effective"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "That is a ___ definition of intelligence.",
+    "correctAnswer": "narrow"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "The ___ gave a lecture on psychology.",
+    "correctAnswer": "professor",
+    "options": ["professor", "naturalist", "student", "journal"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "The ___ gave a lecture on psychology.",
+    "correctAnswer": "professor"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "Group work can be very ___ for learning.",
+    "correctAnswer": "effective",
+    "options": ["effective", "creative", "popular", "narrow"]
+  },
+  {
+    "type": "fillBlank",
+    "question": "Group work can be very ___ for learning.",
+    "correctAnswer": "effective"
   }
 ]
