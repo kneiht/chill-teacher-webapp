@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import {
   answerCorrect,
   answerIncorrect,
@@ -8,6 +8,7 @@ import {
 
 // Hooks
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
@@ -38,6 +39,9 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
   numQuestions = vocabData.length,
 }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -56,8 +60,11 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -128,6 +135,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
 
   const startGame = () => {
     playSound('start')
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -144,6 +152,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
   }
 
   const restartGame = () => {
+    stopMusic()
     stopTimer()
     setIsGameStarted(false)
     setIsGameOver(false)
@@ -189,6 +198,7 @@ const PictureChoiceEnGameCore: React.FC<PictureChoiceEnGameProps> = ({
       setShowFeedback(false)
     } else {
       playSound('success')
+      stopMusic()
       setIsGameOver(true)
       stopTimer()
     }
@@ -359,13 +369,15 @@ const PictureChoiceEnGame: React.FC<PictureChoiceEnGameActivityProps> = ({
   title,
   onClose,
 }) => {
-  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <PictureChoiceEnGameCore vocabData={vocabData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const GameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
+      <Slide isActive={isActive}>
+        <PictureChoiceEnGameCore vocabData={vocabData} title={title} />
+      </Slide>
+    ))
 
-  const slides = [GameSlide]
+    return [GameSlide]
+  }, [vocabData, title])
 
   return (
     <PresentationShell

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 import {
   answerCorrect,
   answerIncorrect,
@@ -31,6 +32,9 @@ interface ClozeGameProps {
 
 const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [isGameOver, setIsGameOver] = useState(false)
@@ -50,8 +54,11 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
 
   useEffect(() => {
     setTotalQuestions(1) // This game has one big question
-    return () => resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -91,6 +98,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   const startGame = () => {
     if (!clozeData) return
     playSound('start')
+    playMusic() // Start background music with random track
     if (clozeData.words) {
       setShuffledWords([...clozeData.words].sort(() => Math.random() - 0.5))
       setAnswers(new Array(clozeData.words.length).fill(''))
@@ -114,6 +122,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   }
 
   const restartGame = () => {
+    stopMusic() // Stop current music
     setCorrectAnswers([])
     startGame()
   }
@@ -151,6 +160,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
     if (correctCount === totalBlanks) {
       answerCorrect()
       playSound('success')
+      stopMusic() // Stop background music when game ends
       setFeedback('✅ Chúc mừng! Bạn đã hoàn thành!')
       stopTimer()
       setTimeout(() => {
@@ -430,13 +440,15 @@ const ClozeGame: React.FC<ClozeGameActivityProps> = ({
   onClose,
   clozeData,
 }) => {
-  const ClozeGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive} className="overflow-hidden">
-      <ClozeGameCore clozeData={clozeData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const ClozeGameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
+      <Slide isActive={isActive} className="overflow-hidden">
+        <ClozeGameCore clozeData={clozeData} title={title} />
+      </Slide>
+    ))
 
-  const slides = [ClozeGameSlide]
+    return [ClozeGameSlide]
+  }, [clozeData, title])
 
   return (
     <PresentationShell

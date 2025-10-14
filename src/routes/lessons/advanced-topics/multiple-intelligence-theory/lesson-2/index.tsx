@@ -80,7 +80,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
             Multiple Intelligence Theory
             <br />
-            Lesson 1: Vocabulary - Part 1
+            Lesson 2: Vocabulary - Part 2
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
             <Link to={presentationLessonRoute.to}>

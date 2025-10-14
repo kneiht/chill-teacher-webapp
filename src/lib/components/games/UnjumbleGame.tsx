@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import {
   answerCorrect,
   answerIncorrect,
@@ -8,6 +8,7 @@ import {
 
 // Hooks
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
@@ -39,6 +40,9 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
   numQuestions = vocabData.length,
 }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -58,8 +62,11 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -120,6 +127,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
 
   const startGame = () => {
     playSound('start')
+    playMusic() // Start background music with random track
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -142,6 +150,8 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
   }
 
   const restartGame = () => {
+    stopMusic() // Stop current music
+    playMusic() // Start new random background music
     stopTimer()
     setIsGameStarted(false)
     setIsGameOver(false)
@@ -231,6 +241,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
         setFeedback('')
       } else {
         playSound('success')
+        stopMusic() // Stop background music when game ends
         setIsGameOver(true)
         stopTimer()
       }
@@ -437,13 +448,15 @@ const UnjumbleGame: React.FC<UnjumbleGameActivityProps> = ({
   title,
   onClose,
 }) => {
-  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <UnjumbleGameCore vocabData={vocabData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const GameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
+      <Slide isActive={isActive}>
+        <UnjumbleGameCore vocabData={vocabData} title={title} />
+      </Slide>
+    ))
 
-  const slides = [GameSlide]
+    return [GameSlide]
+  }, [vocabData, title])
 
   return (
     <PresentationShell

@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { useVoice } from '@/lib/hooks/use-voice'
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 import {
   answerCorrect,
   answerIncorrect,
@@ -37,6 +38,9 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   numQuestions = vocabData.length,
 }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -60,8 +64,11 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -111,6 +118,7 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
 
   const startGame = () => {
     playSound('start')
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -128,6 +136,8 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   }
 
   const restartGame = () => {
+    stopMusic()
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -202,6 +212,7 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
       setIsPlayingAudio(false)
     } else {
       playSound('success')
+      stopMusic()
       setIsGameOver(true)
       stopTimer()
     }
@@ -415,13 +426,15 @@ const ListeningTypingEnGame: React.FC<ListeningTypingEnGameActivityProps> = ({
   title,
   onClose,
 }) => {
-  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <ListeningTypingEnGameCore vocabData={vocabData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const GameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
+      <Slide isActive={isActive}>
+        <ListeningTypingEnGameCore vocabData={vocabData} title={title} />
+      </Slide>
+    ))
 
-  const slides = [GameSlide]
+    return [GameSlide]
+  }, [vocabData, title])
 
   return (
     <PresentationShell

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import {
   answerCorrect,
   answerIncorrect,
@@ -12,6 +12,7 @@ import Slide from '@/lib/components/presentation/Slide'
 
 // Hooks
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 
 interface VocabItem {
   word: string
@@ -53,13 +54,19 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
 
   // Sound effects hook
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const vocabWords: Array<VocabItem> = vocabData
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -120,6 +127,8 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
   }
 
   const startGame = () => {
+    playSound('start')
+    playMusic() // Start background music with random track
     const data = createGameData(vocabWords, numQuestions)
     setGameData(data)
     setSelectedCards([])
@@ -132,10 +141,11 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
     resetGame()
     setTotalQuestions(numQuestions)
     startTimer()
-    playSound('start') // Play start sound
   }
 
   const restartGame = () => {
+    stopMusic() // Stop current music
+    playMusic() // Start new random background music
     stopTimer()
     setIsGameStarted(false)
     setIsGameOver(false)
@@ -182,9 +192,10 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
       answerCorrect()
 
       if (matchedPairs.length + 1 === numQuestions) {
+        playSound('success') // Play success sound on game completion
+        stopMusic() // Stop background music when game ends
         setIsGameOver(true)
         stopTimer()
-        playSound('success') // Play success sound on game completion
       }
     } else {
       // No match
@@ -361,13 +372,17 @@ const MemoryGame: React.FC<MemoryGameActivityProps> = ({
   title,
   onClose,
 }) => {
-  const MemoryGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <MemoryGameCore vocabData={vocabData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const MemoryGameSlide = React.memo<{ isActive: boolean }>(
+      ({ isActive }) => (
+        <Slide isActive={isActive}>
+          <MemoryGameCore vocabData={vocabData} title={title} />
+        </Slide>
+      ),
+    )
 
-  const slides = [MemoryGameSlide]
+    return [MemoryGameSlide]
+  }, [vocabData, title])
 
   return (
     <PresentationShell

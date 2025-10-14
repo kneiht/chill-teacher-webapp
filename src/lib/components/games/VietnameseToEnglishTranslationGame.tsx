@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 import {
   answerCorrect,
   answerIncorrect,
@@ -32,6 +33,9 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
   VietnameseToEnglishTranslationGameProps
 > = ({ vocabData, title, numQuestions = vocabData.length }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -53,8 +57,11 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   // Auto-focus input when moving to next question
   useEffect(() => {
@@ -110,6 +117,7 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
 
   const startGame = () => {
     playSound('start')
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -126,6 +134,8 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
   }
 
   const restartGame = () => {
+    stopMusic()
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -181,6 +191,7 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
       setFeedback('')
     } else {
       playSound('success')
+      stopMusic()
       setIsGameOver(true)
       stopTimer()
     }
@@ -371,17 +382,19 @@ interface VietnameseToEnglishTranslationGameActivityProps {
 const VietnameseToEnglishTranslationGame: React.FC<
   VietnameseToEnglishTranslationGameActivityProps
 > = ({ vocabData, backgroundUrl, title, onClose, numQuestions }) => {
-  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <VietnameseToEnglishTranslationGameCore
-        vocabData={vocabData}
-        title={title}
-        numQuestions={numQuestions}
-      />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const GameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
+      <Slide isActive={isActive}>
+        <VietnameseToEnglishTranslationGameCore
+          vocabData={vocabData}
+          title={title}
+          numQuestions={numQuestions}
+        />
+      </Slide>
+    ))
 
-  const slides = [GameSlide]
+    return [GameSlide]
+  }, [vocabData, title, numQuestions])
 
   return (
     <PresentationShell

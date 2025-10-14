@@ -1,46 +1,128 @@
 {
   "sentences": [
     {
-      "sentence": "Solving math problems requires strong _____.",
-      "word": "logical-mathematical skills"
+      "sentence": "In quiet _____ after the workshop, she realized how much her mindset had shifted.",
+      "word": "reflection"
     },
     {
-      "sentence": "An _____ cannot describe all aspects of human ability.",
-      "word": "Intelligence Quotient"
+      "sentence": "The _____ learner preferred to study alone rather than in groups.",
+      "word": "independent"
     },
     {
-      "sentence": "That is a very _____ view of education.",
-      "word": "narrow"
-    },
-
-    {
-      "sentence": "Her high level of emotional _____ helped her succeed in teamwork.",
-      "word": "Intelligence"
+      "sentence": "The _____ documented every plant and animal species found in the rainforest.",
+      "word": "naturalist"
     },
     {
-      "sentence": "The _____ explained the concept clearly to the students.",
-      "word": "professor"
+      "sentence": "Scientists _____ the behavior of dolphins to understand their communication.",
+      "word": "observe"
     },
     {
-      "sentence": "Reading every day is an _____ way to improve your skills.",
-      "word": "effective"
+      "sentence": "There is a strong _____ that the new teaching method will improve test scores.",
+      "word": "possibility"
     },
     {
-      "sentence": "Darwin’s _____ of evolution changed science forever.",
-      "word": "Theory"
+      "sentence": "Yoga class provided a _____ experience that helped students feel calm and centered.",
+      "word": "spiritual"
     },
     {
-      "sentence": "Good _____ are necessary for learning foreign languages.",
+      "sentence": "The philosophy club debated _____ questions about human existence and purpose.",
+      "word": "existential"
+    },
+    {
+      "sentence": "The researcher reached an important _____ after analyzing all the survey data.",
+      "word": "conclusion"
+    },
+    {
+      "sentence": "The study examined two _____ groups to compare different learning approaches.",
+      "word": "separate"
+    },
+    {
+      "sentence": "Her main _____ is visual learning; she remembers best through pictures and diagrams.",
+      "word": "strength"
+    },
+    {
+      "sentence": "The scholarship provided an excellent _____ for underprivileged students to attend university.",
+      "word": "opportunity"
+    },
+    {
+      "sentence": "Her research focuses on _____ changes in immigrant communities, such as how they adopt new words and accents.",
+      "word": "linguistic"
+    },
+    {
+      "sentence": "The team scheduled a _____ to resolve the budget concerns, hoping to reach an agreement.",
+      "word": "discussion"
+    },
+    {
+      "sentence": "Students mapped the rainfall _____ across the region to see where it rains most and least.",
+      "word": "pattern"
+    },
+    {
+      "sentence": "Daily _____ exercises helped the apprentices adapt quickly by tackling tricky puzzles.",
+      "word": "problem-solving"
+    },
+    {
+      "sentence": "Pilots train with _____ simulations to improve navigation, learning to judge distances and directions visually.",
+      "word": "spatial"
+    },
+    {
+      "sentence": "The illustrator's _____ brought the fantasy world to life, filling it with magical creatures.",
+      "word": "imagination"
+    },
+    {
+      "sentence": "Gymnasts rely on their _____ awareness during complex flips, knowing exactly where their arms and legs are.",
+      "word": "bodily-kinesthetic"
+    },
+    {
+      "sentence": "The team proposed a _____ marketing strategy for local shops, using bright colors and catchy slogans.",
+      "word": "creative"
+    },
+    {
+      "sentence": "Her _____ approach helped mediate the conflict between departments, listening carefully to both sides.",
+      "word": "interpersonal"
+    },
+    {
+      "sentence": "He kept a travel _____ to document each coastal village he visited, writing down stories and sketches.",
+      "word": "journal"
+    },
+    {
+      "sentence": "The policy analyst warned about the long-term _____ of ignoring the report, saying it could hurt future funding.",
+      "word": "implication"
+    },
+    {
+      "sentence": "Researchers debated whether _____ can be expanded through training, like learning new ways to solve problems.",
+      "word": "intelligence"
+    },
+    {
+      "sentence": "The seminar explored a new _____ about how memories form, suggesting they are rebuilt each time we recall them.",
+      "word": "theory"
+    },
+    {
+      "sentence": "The study compared each child's _____ with their classroom performance, looking at test scores and grades.",
+      "word": "intelligence quotient"
+    },
+    {
+      "sentence": "Street food stalls are increasingly _____ among visiting tourists, who love trying local snacks.",
+      "word": "popular"
+    },
+    {
+      "sentence": "Daily podcasts strengthened her _____ before the job interview, helping her speak more fluently.",
       "word": "language skills"
     },
     {
-      "sentence": "The _____ of his decision were not clear at first.",
-      "word": "Implications"
+      "sentence": "Chess clubs nurture students' _____ through strategic play, teaching them to plan several moves ahead.",
+      "word": "logical-mathematical skills"
     },
-
     {
-      "sentence": "Basketball is very _____ among teenagers.",
-      "word": "popular"
+      "sentence": "That proposal takes a _____ view of what success looks like, focusing only on money and ignoring happiness.",
+      "word": "narrow"
+    },
+    {
+      "sentence": "The _____ assigned a field project instead of a final exam, wanting students to learn by doing real-world tasks.",
+      "word": "professor"
+    },
+    {
+      "sentence": "Pairing seniors with mentors proved an _____ way to boost retention, keeping new employees from quitting.",
+      "word": "effective"
     }
   ]
 }

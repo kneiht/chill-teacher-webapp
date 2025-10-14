@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import {
   answerCorrect,
   answerIncorrect,
@@ -13,6 +13,7 @@ import './game-styles.css'
 
 // Hooks
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 
 interface VocabItem {
   word: string
@@ -54,6 +55,9 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
 
   // Sound effects hook
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -74,8 +78,11 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    return () => resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -136,6 +143,8 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
   }
 
   const startGame = () => {
+    playSound('start')
+    playMusic() // Start background music with random track
     const data = createGameData(vocabWords, numQuestions)
     setGameData(data)
     setSelectedCards([])
@@ -147,10 +156,11 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
     resetGame()
     setTotalQuestions(numQuestions)
     startTimer()
-    playSound('start') // Play start sound
   }
 
   const restartGame = () => {
+    stopMusic() // Stop current music
+    playMusic() // Start new random background music
     const data = createGameData(vocabWords, numQuestions)
     setGameData(data)
     setSelectedCards([])
@@ -193,9 +203,10 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
       setMatchedPairs([...matchedPairs, card1.id])
       answerCorrect()
       if (matchedPairs.length + 1 === vocabWords.length) {
+        playSound('success') // Play success sound on game completion
+        stopMusic() // Stop background music when game ends
         setIsGameOver(true)
         stopTimer()
-        playSound('success') // Play success sound on game completion
       }
       setSelectedCards([])
     } else {
@@ -384,13 +395,17 @@ const MatchingGame: React.FC<MatchingGameActivityProps> = ({
   title,
   onClose,
 }) => {
-  const MatchingGameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <MatchingGameCore vocabData={vocabData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const MatchingGameSlide = React.memo<{ isActive: boolean }>(
+      ({ isActive }) => (
+        <Slide isActive={isActive}>
+          <MatchingGameCore vocabData={vocabData} title={title} />
+        </Slide>
+      ),
+    )
 
-  const slides = [MatchingGameSlide]
+    return [MatchingGameSlide]
+  }, [vocabData, title])
 
   return (
     <PresentationShell

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import {
   answerCorrect,
   answerIncorrect,
@@ -8,6 +8,7 @@ import {
 
 // Hooks
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
@@ -38,6 +39,9 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
   numQuestions = vocabData.length,
 }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
+  const { play: playMusic, stop: stopMusic } = useBackgroundMusic({
+    volume: 0.3,
+  })
 
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -59,8 +63,11 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
 
   useEffect(() => {
     setTotalQuestions(vocabWords.length)
-    resetGame()
-  }, [])
+    return () => {
+      resetGame()
+      stopMusic()
+    }
+  }, [stopMusic])
 
   // Auto-focus input when moving to next question
   useEffect(() => {
@@ -118,6 +125,7 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
 
   const startGame = () => {
     playSound('start')
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -134,6 +142,8 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
   }
 
   const restartGame = () => {
+    stopMusic()
+    playMusic()
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -189,6 +199,7 @@ const PictureTypingEnGameCore: React.FC<PictureTypingEnGameProps> = ({
       setFeedback('')
     } else {
       playSound('success')
+      stopMusic()
       setIsGameOver(true)
       stopTimer()
     }
@@ -391,13 +402,15 @@ const PictureTypingEnGame: React.FC<PictureTypingEnGameActivityProps> = ({
   title,
   onClose,
 }) => {
-  const GameSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
-    <Slide isActive={isActive}>
-      <PictureTypingEnGameCore vocabData={vocabData} title={title} />
-    </Slide>
-  )
+  const slides = useMemo(() => {
+    const GameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
+      <Slide isActive={isActive}>
+        <PictureTypingEnGameCore vocabData={vocabData} title={title} />
+      </Slide>
+    ))
 
-  const slides = [GameSlide]
+    return [GameSlide]
+  }, [vocabData, title])
 
   return (
     <PresentationShell
