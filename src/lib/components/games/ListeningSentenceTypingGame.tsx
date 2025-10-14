@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useVoice } from '@/lib/hooks/use-voice'
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
 import {
   answerCorrect,
   answerIncorrect,
@@ -31,6 +32,8 @@ interface ListeningSentenceTypingGameProps {
 const ListeningSentenceTypingGameCore: React.FC<
   ListeningSentenceTypingGameProps
 > = ({ vocabData, title, numQuestions = vocabData.length }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -111,6 +114,7 @@ const ListeningSentenceTypingGameCore: React.FC<
   }
 
   const startGame = () => {
+    playSound('start')
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -147,6 +151,7 @@ const ListeningSentenceTypingGameCore: React.FC<
   const playCurrentSentence = () => {
     if (isPlayingAudio || !currentQuestion) return
 
+    playSound('click')
     setIsPlayingAudio(true)
     const text = currentQuestion.sentence
 
@@ -173,9 +178,11 @@ const ListeningSentenceTypingGameCore: React.FC<
     if (normalizedUserAnswer === normalizedCorrectAnswer) {
       setScore((prev) => prev + 1)
       answerCorrect()
+      playSound('correct')
       setFeedback(`✅ Chính xác! "${currentQuestion.sentence}"`)
     } else {
       answerIncorrect()
+      playSound('incorrect')
       setFeedback(`❌ Sai. Đáp án đúng: "${currentQuestion.sentence}"`)
     }
 
@@ -196,6 +203,7 @@ const ListeningSentenceTypingGameCore: React.FC<
       setFeedback('')
       setIsPlayingAudio(false)
     } else {
+      playSound('success')
       setIsGameOver(true)
       stopTimer()
     }

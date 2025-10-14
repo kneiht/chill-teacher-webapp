@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
 import {
   answerCorrect,
   answerIncorrect,
@@ -30,6 +31,8 @@ interface VietnameseToEnglishTranslationGameProps {
 const VietnameseToEnglishTranslationGameCore: React.FC<
   VietnameseToEnglishTranslationGameProps
 > = ({ vocabData, title, numQuestions = vocabData.length }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -106,6 +109,7 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
   }
 
   const startGame = () => {
+    playSound('start')
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -152,9 +156,11 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
     if (normalizedUserAnswer === normalizedCorrectAnswer) {
       setScore((prev) => prev + 1)
       answerCorrect()
+      playSound('correct')
       setFeedback(`✅ Chính xác! "${currentQuestion.correct}"`)
     } else {
       answerIncorrect()
+      playSound('incorrect')
       setFeedback(`❌ Sai. Đáp án đúng: "${currentQuestion.correct}"`)
     }
 
@@ -174,6 +180,7 @@ const VietnameseToEnglishTranslationGameCore: React.FC<
       setUserAnswer('')
       setFeedback('')
     } else {
+      playSound('success')
       setIsGameOver(true)
       stopTimer()
     }

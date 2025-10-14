@@ -11,6 +11,9 @@ import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 import './game-styles.css'
 
+// Hooks
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -48,6 +51,9 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
   )
   const [isPenalty, setIsPenalty] = useState(false)
   const [penaltyTime, setPenaltyTime] = useState(0)
+
+  // Sound effects hook
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -141,6 +147,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
     resetGame()
     setTotalQuestions(numQuestions)
     startTimer()
+    playSound('start') // Play start sound
   }
 
   const restartGame = () => {
@@ -162,6 +169,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
     if (gameData[index].matched || selectedCards.includes(index)) return
     if (selectedCards.length >= 2) return
 
+    playSound('click') // Play click sound
     const newSelected = [...selectedCards, index]
     setSelectedCards(newSelected)
 
@@ -177,6 +185,7 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
 
     if (card1.id === card2.id && card1.type !== card2.type) {
       // Match
+      playSound('correct') // Play correct sound
       const newGameData = [...gameData]
       newGameData[card1Index].matched = true
       newGameData[card2Index].matched = true
@@ -186,10 +195,12 @@ const MatchingGameCore: React.FC<MatchingGameProps> = ({
       if (matchedPairs.length + 1 === vocabWords.length) {
         setIsGameOver(true)
         stopTimer()
+        playSound('success') // Play success sound on game completion
       }
       setSelectedCards([])
     } else {
       // No match - start penalty
+      playSound('incorrect') // Play incorrect sound
       setIsPenalty(true)
       setPenaltyTime(3)
       answerIncorrect()

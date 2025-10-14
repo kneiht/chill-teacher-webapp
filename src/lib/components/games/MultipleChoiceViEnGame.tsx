@@ -6,6 +6,9 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Hooks
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
@@ -33,6 +36,8 @@ const MultipleChoiceViEnGameCore: React.FC<MultipleChoiceViEnGameProps> = ({
   title,
   numQuestions = vocabData.length,
 }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -121,6 +126,7 @@ const MultipleChoiceViEnGameCore: React.FC<MultipleChoiceViEnGameProps> = ({
   }
 
   const startGame = () => {
+    playSound('start')
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -151,6 +157,7 @@ const MultipleChoiceViEnGameCore: React.FC<MultipleChoiceViEnGameProps> = ({
 
   const handleOptionClick = (option: string) => {
     if (isAnswering) return
+    playSound('click')
     setSelectedOption(option)
     setIsAnswering(true)
     setShowFeedback(true)
@@ -159,9 +166,11 @@ const MultipleChoiceViEnGameCore: React.FC<MultipleChoiceViEnGameProps> = ({
     const isCorrect = option === currentQuestion.correct
 
     if (isCorrect) {
+      playSound('correct')
       setScore((prev) => prev + 1)
       answerCorrect()
     } else {
+      playSound('incorrect')
       answerIncorrect()
     }
 
@@ -178,6 +187,7 @@ const MultipleChoiceViEnGameCore: React.FC<MultipleChoiceViEnGameProps> = ({
       setIsAnswering(false)
       setShowFeedback(false)
     } else {
+      playSound('success')
       setIsGameOver(true)
       stopTimer()
     }

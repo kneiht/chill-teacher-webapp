@@ -6,6 +6,9 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Hooks
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
@@ -39,6 +42,8 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({
   title,
   numQuestions = vocabData.length,
 }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -122,6 +127,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({
   }
 
   const startGame = () => {
+    playSound('start')
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -171,6 +177,8 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({
 
     const emptySlotIndex = answerSlots.findIndex((slot) => slot.letter === '')
     if (emptySlotIndex === -1) return
+
+    playSound('click')
 
     const newSlots = [...answerSlots]
     newSlots[emptySlotIndex] = {
@@ -225,10 +233,12 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({
     const isCorrect = userAnswer === correctAnswer
 
     if (isCorrect) {
+      playSound('correct')
       setScore((prev) => prev + 1)
       answerCorrect()
       setFeedback('✅ Chính xác!')
     } else {
+      playSound('incorrect')
       answerIncorrect()
       setFeedback(`❌ Sai. Đáp án đúng: ${currentQuestion.correct}`)
     }
@@ -244,6 +254,7 @@ const AnagramGameCore: React.FC<AnagramGameProps> = ({
       setUsedLetters(new Set())
       setFeedback('')
     } else {
+      playSound('success')
       setIsGameOver(true)
       stopTimer()
     }

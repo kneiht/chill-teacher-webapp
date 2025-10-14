@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
 import {
   answerCorrect,
   answerIncorrect,
@@ -29,6 +30,8 @@ interface ClozeGameProps {
 }
 
 const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [isGameOver, setIsGameOver] = useState(false)
   const [timer, setTimer] = useState(0)
@@ -87,6 +90,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
 
   const startGame = () => {
     if (!clozeData) return
+    playSound('start')
     if (clozeData.words) {
       setShuffledWords([...clozeData.words].sort(() => Math.random() - 0.5))
       setAnswers(new Array(clozeData.words.length).fill(''))
@@ -146,6 +150,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
 
     if (correctCount === totalBlanks) {
       answerCorrect()
+      playSound('success')
       setFeedback('✅ Chúc mừng! Bạn đã hoàn thành!')
       stopTimer()
       setTimeout(() => {
@@ -153,6 +158,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
       }, 1500)
     } else {
       answerIncorrect()
+      playSound('incorrect')
       setFeedback('❌ Chưa đúng, thử lại nhé!')
       // Reset answering state after a delay to allow another try
       setTimeout(() => {

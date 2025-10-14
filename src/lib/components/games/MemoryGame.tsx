@@ -10,6 +10,9 @@ import {
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 
+// Hooks
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+
 interface VocabItem {
   word: string
   vietnameseMeaning: string
@@ -47,6 +50,9 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
   )
   const [moves, setMoves] = useState(0)
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set())
+
+  // Sound effects hook
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -126,6 +132,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
     resetGame()
     setTotalQuestions(numQuestions)
     startTimer()
+    playSound('start') // Play start sound
   }
 
   const restartGame = () => {
@@ -145,6 +152,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
     if (gameData[index].matched || flippedCards.has(index)) return
     if (selectedCards.length >= 2) return
 
+    playSound('flip') // Play flip sound when card is flipped
     const newFlipped = new Set(flippedCards)
     newFlipped.add(index)
     setFlippedCards(newFlipped)
@@ -165,6 +173,7 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
 
     if (card1.id === card2.id && card1.type !== card2.type) {
       // Match
+      playSound('match') // Play match sound for successful pair
       const newGameData = [...gameData]
       newGameData[card1Index].matched = true
       newGameData[card2Index].matched = true
@@ -175,9 +184,11 @@ const MemoryGameCore: React.FC<MemoryGameProps> = ({
       if (matchedPairs.length + 1 === numQuestions) {
         setIsGameOver(true)
         stopTimer()
+        playSound('success') // Play success sound on game completion
       }
     } else {
       // No match
+      playSound('incorrect') // Play incorrect sound when cards don't match
       answerIncorrect()
       const newFlipped = new Set(flippedCards)
       newFlipped.delete(card1Index)

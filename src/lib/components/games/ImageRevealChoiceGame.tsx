@@ -6,6 +6,9 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Hooks
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
@@ -34,6 +37,8 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
   title,
   numQuestions = vocabData.length,
 }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -112,6 +117,7 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
   }
 
   const startGame = () => {
+    playSound('start')
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -149,6 +155,7 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
 
   const handleTileClick = (tileId: string) => {
     if (isAnswering || revealedTiles.has(tileId)) return
+    playSound('click')
     const newRevealed = new Set(revealedTiles)
     newRevealed.add(tileId)
     setRevealedTiles(newRevealed)
@@ -165,11 +172,13 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
     const penalty = revealedTiles.size // Each revealed tile costs 1 point
 
     if (isCorrect) {
+      playSound('correct')
       const pointsEarned = Math.max(1, 10 - penalty) // Max 10 points, minus penalty
       setScore((prev) => prev + pointsEarned)
       answerCorrect()
       setFeedback(`✅ Chính xác! +${pointsEarned} điểm (${penalty} ô mở)`)
     } else {
+      playSound('incorrect')
       answerIncorrect()
       setFeedback(`❌ Sai. Đáp án đúng: ${currentQuestion.correct}`)
     }
@@ -189,6 +198,7 @@ const ImageRevealChoiceGameCore: React.FC<ImageRevealChoiceGameProps> = ({
       setShowFeedback(false)
       setFeedback('')
     } else {
+      playSound('success')
       setIsGameOver(true)
       stopTimer()
     }

@@ -6,6 +6,9 @@ import {
   resetGame,
 } from '@/lib/stores/game.store'
 
+// Hooks
+import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
+
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
@@ -35,6 +38,8 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
   title,
   numQuestions = vocabData.length,
 }) => {
+  const { play: playSound } = useSoundEffects({ volume: 0.6 })
+
   const [questions, setQuestions] = useState<Array<Question>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -114,6 +119,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
   }
 
   const startGame = () => {
+    playSound('start')
     const newQuestions = createQuestions(vocabWords, numQuestions)
     setQuestions(newQuestions)
     setCurrentQuestionIndex(0)
@@ -173,6 +179,8 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
 
     if (!token) return
 
+    playSound('click')
+
     if (fromBank && !toBank) {
       // Moving from bank to answer
       setBankTokens((prev) => prev.filter((t) => t !== token))
@@ -202,10 +210,12 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
     setIsAnswering(true)
 
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+      playSound('correct')
       setScore((prev) => prev + 1)
       answerCorrect()
       setFeedback(`✅ Chính xác! "${correctAnswer}"`)
     } else {
+      playSound('incorrect')
       answerIncorrect()
       setFeedback(`❌ Sai. Đáp án đúng: "${correctAnswer}"`)
     }
@@ -220,6 +230,7 @@ const UnjumbleGameCore: React.FC<UnjumbleGameProps> = ({
         setAnswerTokens([])
         setFeedback('')
       } else {
+        playSound('success')
         setIsGameOver(true)
         stopTimer()
       }
