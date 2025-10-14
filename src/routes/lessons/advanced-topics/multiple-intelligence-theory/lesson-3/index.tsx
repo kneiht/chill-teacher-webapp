@@ -31,6 +31,7 @@ interface LessonGame {
 
 // Configure which games to include in this lesson
 const lessonGames: Array<LessonGame> = [
+  { game: games.CandyCrushEnglishGame, vocabData: vocabData },
   { game: games.MatchingGame, vocabData: vocabData },
   { game: games.MemoryGame, vocabData: vocabData },
   { game: games.MultipleChoiceEnViGame, vocabData: vocabData },

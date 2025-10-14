@@ -16,12 +16,12 @@ const lessons = [
     path: '../../lessons/everybody-up-0/unit-1/lesson-2/',
     imageUrl: '/backgrounds/EU0-U1L2.webp',
   },
-  {
-    title: 'Everybody Up Starter - Unit 1',
-    description: 'Lesson 3: School Supplies - Reading',
-    path: '../../lessons/everybody-up-0/unit-1/lesson-3/',
-    imageUrl: '/backgrounds/EU0-U1L3.webp',
-  },
+  // {
+  //   title: 'Everybody Up Starter - Unit 1',
+  //   description: 'Lesson 3: School Supplies - Reading',
+  //   path: '../../lessons/everybody-up-0/unit-1/lesson-3/',
+  //   imageUrl: '/backgrounds/EU0-U1L3.webp',
+  // },
 ]
 
 export const Route = createFileRoute('/(main)/lessons/eu')({

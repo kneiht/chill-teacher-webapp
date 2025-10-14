@@ -141,9 +141,9 @@ export const games: Record<string, GameDefinition> = {
   },
   CandyCrushEnglishGame: {
     id: 'CandyCrushEnglishGame',
-    name: 'Candy Crush Tiếng Anh',
-    title: 'Candy Crush English',
-    icon: '🍬',
+    name: 'Fruit Game',
+    title: 'Fruit Game',
+    icon: '🍎',
     component: CandyCrushEnglishGame,
   },
 }

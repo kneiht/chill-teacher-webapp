@@ -658,9 +658,9 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
       <div className="flex-1 flex items-start justify-center h-full overflow-auto">
         {!isGameStarted ? (
           <div className="text-center bg-gradient-to-br from-white to-indigo-100 rounded-2xl shadow-2xl p-8 py-12 mt-10 w-full max-w-2xl bounce-enter">
-            <div className="text-7xl mb-4 animate-bounce">🍬</div>
+            <div className="text-7xl mb-4 animate-bounce">🍎</div>
             <h3 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">
-              Candy Crush Tiếng Anh
+              Fruit Game
             </h3>
             <p className="text-gray-700 mb-6 text-xl leading-relaxed">
               ✨ Xếp 3 candy cùng loại để ghi điểm!
