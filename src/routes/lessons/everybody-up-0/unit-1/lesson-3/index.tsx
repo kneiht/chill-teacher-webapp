@@ -13,7 +13,6 @@ import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 import { games, type GameDefinition } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
-import WordwallSlide from '@/lib/components/presentation/WordwallSlide'
 
 // Assets
 import urls from './assets/urls.json'
@@ -76,29 +75,6 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
     )
   }
 
-  const WordwallPlayer = () => {
-    if (!activeWordwallGame) return null
-
-    const WordwallGameSlide: React.FC<{ isActive: boolean }> = ({
-      isActive,
-    }) => <WordwallSlide isActive={isActive} src={activeWordwallGame.url} />
-
-    const slides = [WordwallGameSlide]
-
-    return (
-      <div className="absolute inset-0">
-        <PresentationShell
-          slides={slides}
-          backgroundUrl={urls.background}
-          onHomeClick={() => setActiveWordwallGame(null)}
-          showNavButtons={false}
-          showOutlineButton={false}
-          showSlideCounter={false}
-        />
-      </div>
-    )
-  }
-
   return (
     <div className="h-[98%] overflow-auto">
       <Slide isActive={isActive}>
@@ -127,16 +103,6 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
             </Link>
 
-            {wordwallGames.map((wordwallGame, index) => (
-              <WoodenButton
-                key={`wordwall-${index}`}
-                onClick={() => setActiveWordwallGame(wordwallGame)}
-                className={buttonStyle}
-              >
-                {wordwallGame.icon} {wordwallGame.name}
-              </WoodenButton>
-            ))}
-
             {lessonGames.map((lessonGame) => (
               <WoodenButton
                 key={lessonGame.game.id}
@@ -150,7 +116,6 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
         </div>
 
         <GamePlayer />
-        <WordwallPlayer />
       </Slide>
     </div>
   )
