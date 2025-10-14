@@ -41,6 +41,7 @@ interface Candy {
 
 interface CandyCrushEnglishGameProps {
   vocabData: Array<VocabItem>
+  questionsData: Array<Question>
   title: string
 }
 
@@ -50,6 +51,7 @@ const INITIAL_MOVES = 3
 
 const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   vocabData,
+  questionsData,
   title,
 }) => {
   const { play: playSound } = useSoundEffects({ volume: 0.6 })
@@ -77,6 +79,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [questionFeedback, setQuestionFeedback] = useState('')
   const [questionsAnswered, setQuestionsAnswered] = useState(0)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -375,77 +378,35 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
     }, 300)
   }
 
-  // Generate question
-  const generateQuestion = useCallback((): Question => {
-    const vocab = vocabWords[Math.floor(Math.random() * vocabWords.length)]
-    const questionTypes: QuestionType[] = [
-      'multipleChoice',
-      'listening',
-      'fillBlank',
-    ]
-    const type = questionTypes[Math.floor(Math.random() * questionTypes.length)]
+  // Get random question from questionsData
+  const getRandomQuestion = useCallback((): Question => {
+    const randomIndex = Math.floor(Math.random() * questionsData.length)
+    const question = questionsData[randomIndex]
 
-    if (type === 'multipleChoice') {
-      const wrongOptions = vocabWords
-        .filter((v) => v.vietnameseMeaning !== vocab.vietnameseMeaning)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3)
-        .map((v) => v.vietnameseMeaning)
-
-      const options = [vocab.vietnameseMeaning, ...wrongOptions].sort(
-        () => Math.random() - 0.5,
-      )
-
-      return {
-        type: 'multipleChoice',
-        question: `"${vocab.word}" nghĩa là gì?`,
-        correctAnswer: vocab.vietnameseMeaning,
-        options,
-      }
-    } else if (type === 'listening') {
-      const wrongOptions = vocabWords
-        .filter((v) => v.word !== vocab.word)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3)
-        .map((v) => v.word)
-
-      const options = [vocab.word, ...wrongOptions].sort(
-        () => Math.random() - 0.5,
-      )
-
-      // Auto-speak the word
-      setTimeout(() => speak(vocab.word, 'en-US'), 500)
-
-      return {
-        type: 'listening',
-        question: '🔊 Nghe và chọn từ đúng:',
-        correctAnswer: vocab.word,
-        options,
-        wordToSpeak: vocab.word,
-      }
-    } else {
-      // Fill blank
-      return {
-        type: 'fillBlank',
-        question: `Điền từ tiếng Anh cho: "${vocab.vietnameseMeaning}"`,
-        correctAnswer: vocab.word.toLowerCase(),
-      }
+    // Auto-speak for listening questions
+    if (question.type === 'listening' && question.wordToSpeak) {
+      setTimeout(() => speak(question.wordToSpeak!, 'en-US'), 500)
     }
-  }, [vocabWords, speak])
+
+    return question
+  }, [questionsData, speak])
 
   // Open question modal manually
   const openQuestionModal = () => {
     setShowQuestion(true)
-    const question = generateQuestion()
+    const question = getRandomQuestion()
     setCurrentQuestion(question)
     setUserAnswer('')
     setSelectedOption(null)
     setQuestionFeedback('')
+    setIsSubmitting(false)
   }
 
   // Handle question answer
   const handleSubmitAnswer = () => {
-    if (!currentQuestion) return
+    if (!currentQuestion || isSubmitting) return
+
+    setIsSubmitting(true)
 
     let isCorrect = false
     if (currentQuestion.type === 'fillBlank') {
@@ -459,25 +420,27 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
     if (isCorrect) {
       playSound('correct')
       setQuestionFeedback('✅ Chính xác! +2 lượt chơi')
+      setMoves((prev) => prev + 2)
       answerCorrect()
     } else {
       playSound('incorrect')
       setQuestionFeedback(
-        `❌ Sai! Đáp án đúng: "${currentQuestion.correctAnswer}". +2 lượt`,
+        `❌ Sai! Đáp án đúng: "${currentQuestion.correctAnswer}". -1 lượt`,
       )
+      setMoves((prev) => Math.max(0, prev - 1))
       answerIncorrect()
     }
 
-    setMoves((prev) => prev + 2)
     setQuestionsAnswered((prev) => prev + 1)
 
     setTimeout(() => {
       setQuestionFeedback('')
       // Generate new question immediately
-      const newQuestion = generateQuestion()
+      const newQuestion = getRandomQuestion()
       setCurrentQuestion(newQuestion)
       setUserAnswer('')
       setSelectedOption(null)
+      setIsSubmitting(false)
     }, 1500)
   }
 
@@ -628,7 +591,8 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                   value={userAnswer}
                   onChange={(e) => setUserAnswer(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSubmitAnswer()}
-                  className="w-full text-center text-2xl border-2 border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                  disabled={isSubmitting}
+                  className="w-full text-center text-2xl border-2 border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400 disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Nhập từ tiếng Anh..."
                   autoFocus
                 />
@@ -638,10 +602,12 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                 {currentQuestion.options?.map((option, index) => (
                   <button
                     key={index}
-                    onClick={() => setSelectedOption(option)}
+                    onClick={() => !isSubmitting && setSelectedOption(option)}
+                    disabled={isSubmitting}
                     className={`
                       border-2 rounded-lg p-4 text-xl font-semibold transition-all
                       ${selectedOption === option ? 'border-indigo-500 bg-indigo-100 scale-105' : 'border-gray-300 hover:bg-gray-50'}
+                      ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
                     `}
                   >
                     {option}
@@ -669,7 +635,9 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                 </button>
                 <button
                   onClick={handleSubmitAnswer}
-                  disabled={!userAnswer.trim() && !selectedOption}
+                  disabled={
+                    (!userAnswer.trim() && !selectedOption) || isSubmitting
+                  }
                   className="flex-1 bg-green-500 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg text-lg"
                 >
                   ✓ Xác nhận
@@ -685,6 +653,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
 
 interface CandyCrushEnglishGameActivityProps {
   vocabData: Array<VocabItem>
+  questionsData: Array<Question>
   backgroundUrl: string
   title: string
   onClose?: () => void
@@ -692,6 +661,7 @@ interface CandyCrushEnglishGameActivityProps {
 
 const CandyCrushEnglishGame: React.FC<CandyCrushEnglishGameActivityProps> = ({
   vocabData,
+  questionsData,
   backgroundUrl,
   title,
   onClose,
@@ -699,12 +669,16 @@ const CandyCrushEnglishGame: React.FC<CandyCrushEnglishGameActivityProps> = ({
   const slides = useMemo(() => {
     const GameSlide = React.memo<{ isActive: boolean }>(({ isActive }) => (
       <Slide isActive={isActive}>
-        <CandyCrushEnglishGameCore vocabData={vocabData} title={title} />
+        <CandyCrushEnglishGameCore
+          vocabData={vocabData}
+          questionsData={questionsData}
+          title={title}
+        />
       </Slide>
     ))
 
     return [GameSlide]
-  }, [vocabData, title])
+  }, [vocabData, questionsData, title])
 
   return (
     <PresentationShell

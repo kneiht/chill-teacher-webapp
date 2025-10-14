@@ -1,0 +1,73 @@
+[
+  {
+    "type": "multipleChoice",
+    "question": "\"pencil\" nghĩa là gì?",
+    "correctAnswer": "bút chì",
+    "options": ["bút chì", "bút mực", "bút dạ", "kéo"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"scissors\" nghĩa là gì?",
+    "correctAnswer": "cái kéo",
+    "options": ["cái kéo", "giấy", "hồ dán", "bút màu"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"glue\" nghĩa là gì?",
+    "correctAnswer": "hồ dán",
+    "options": ["hồ dán", "giấy", "sơn", "bút chì"]
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "marker",
+    "options": ["marker", "pencil", "pen", "crayon"],
+    "wordToSpeak": "marker"
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "paper",
+    "options": ["paper", "paint", "glue", "scissors"],
+    "wordToSpeak": "paper"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"bút dạ\"",
+    "correctAnswer": "marker"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"giấy\"",
+    "correctAnswer": "paper"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"cái kéo\"",
+    "correctAnswer": "scissors"
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"crayon\" nghĩa là gì?",
+    "correctAnswer": "bút sáp màu",
+    "options": ["bút sáp màu", "bút chì màu", "bút dạ", "sơn"]
+  },
+  {
+    "type": "multipleChoice",
+    "question": "\"paint\" nghĩa là gì?",
+    "correctAnswer": "sơn",
+    "options": ["sơn", "bút màu", "hồ dán", "giấy"]
+  },
+  {
+    "type": "listening",
+    "question": "🔊 Nghe và chọn từ đúng:",
+    "correctAnswer": "crayon",
+    "options": ["crayon", "marker", "pencil", "pen"],
+    "wordToSpeak": "crayon"
+  },
+  {
+    "type": "fillBlank",
+    "question": "Điền từ tiếng Anh cho: \"bút mực\"",
+    "correctAnswer": "pen"
+  }
+]

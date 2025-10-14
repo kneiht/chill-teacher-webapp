@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import vocabData from './assets/vocab.json'
+import questionsData from './assets/questions.json'
 
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
@@ -57,6 +58,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
         <div className="relative w-full h-full">
           <GameComponent
             vocabData={activeGame.vocabData}
+            questionsData={questionsData}
             backgroundUrl={urls.background}
             title={`${activeGame.game.title} - School Supplies`}
             onClose={() => setActiveGame(null)}
