@@ -712,41 +712,18 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
 
       {/* Question Modal */}
       {showQuestion && currentQuestion && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-sm">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-sm w-full">
           <div
-            className={`bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-8 shadow-2xl max-w-2xl w-full mx-4 bounce-enter ${showCorrectAnimation ? 'success-animation' : ''} ${showIncorrectAnimation ? 'error-animation' : ''}`}
+            className={`bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-8 shadow-2xl w-full mx-4 bounce-enter ${showCorrectAnimation ? 'success-animation' : ''} ${showIncorrectAnimation ? 'error-animation' : ''}`}
           >
-            <div className="text-6xl mb-4 text-center animate-bounce">
-              {currentQuestion.type === 'listening'
-                ? '🎧'
-                : currentQuestion.type === 'fillBlank'
-                  ? '✏️'
-                  : currentQuestion.type === 'imageChoice' ||
-                      currentQuestion.type === 'imageToVietnamese'
-                    ? '🖼️'
-                    : '❓'}
-            </div>
             <h3 className="text-2xl font-bold text-indigo-700 mb-6 text-center">
               {currentQuestion.question}
             </h3>
 
-            {/* Image Display */}
-            {(currentQuestion.type === 'imageChoice' ||
-              currentQuestion.type === 'imageToVietnamese') &&
-              currentQuestion.image && (
-                <div className="mb-6 flex justify-center">
-                  <img
-                    src={currentQuestion.image}
-                    alt="Question"
-                    className="w-64 h-64 object-cover rounded-2xl shadow-2xl border-4 border-indigo-200 transform hover:scale-105 transition-all"
-                  />
-                </div>
-              )}
-
             {currentQuestion.type === 'listening' && (
               <button
                 onClick={replayAudio}
-                className="mb-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl mx-auto block shadow-lg transform hover:scale-110 transition-all glow-effect"
+                className="mb-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl mx-auto block shadow-lg transform hover:scale-110 transition-all glow-effect text-xl"
               >
                 🔊 Nghe lại
               </button>
@@ -767,7 +744,39 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
                   autoFocus
                 />
               </div>
+            ) : (currentQuestion.type === 'imageChoice' ||
+                currentQuestion.type === 'imageToVietnamese') &&
+              currentQuestion.image ? (
+              // Image question layout: image on left, options in column on right
+              <div className="flex gap-6 mb-6">
+                {/* Image on the left */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={currentQuestion.image}
+                    alt="Question"
+                    className="w-full h-64 object-cover rounded-2xl shadow-2xl border-4 border-indigo-200 transform hover:scale-105 transition-all"
+                  />
+                </div>
+                {/* Options in column on the right */}
+                <div className="flex-1 flex flex-col gap-4">
+                  {currentQuestion.options?.map((option, index) => (
+                    <button
+                      key={index}
+                      onClick={() => !isSubmitting && setSelectedOption(option)}
+                      disabled={isSubmitting}
+                      className={`
+                        border-3 rounded-xl p-4 text-xl font-semibold transition-all transform hover:scale-105 shadow-lg
+                        ${selectedOption === option ? 'border-indigo-500 bg-gradient-to-br from-indigo-100 to-indigo-200 scale-105 glow-effect' : 'border-gray-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100'}
+                        ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
+                      `}
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              </div>
             ) : (
+              // Default 2x2 grid for other question types
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {currentQuestion.options?.map((option, index) => (
                   <button
