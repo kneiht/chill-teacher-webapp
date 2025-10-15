@@ -30,6 +30,7 @@ import { Route as LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRou
 import { Route as LessonsEverybodyUp0Unit1Lesson3YoutubeLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson'
 import { Route as LessonsEverybodyUp0Unit1Lesson3PresentationLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson'
 import { Route as LessonsEverybodyUp0Unit1Lesson3FlashcardsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-3/flashcards'
+import { Route as LessonsEverybodyUp0Unit1Lesson3ExercisesRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-3/exercises'
 import { Route as LessonsEverybodyUp0Unit1Lesson3AssignmentsRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-3/assignments'
 import { Route as LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson'
 import { Route as LessonsEverybodyUp0Unit1Lesson2PresentationLessonRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson'
@@ -176,6 +177,12 @@ const LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute =
   LessonsEverybodyUp0Unit1Lesson3FlashcardsRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-3/flashcards',
     path: '/lessons/everybody-up-0/unit-1/lesson-3/flashcards',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LessonsEverybodyUp0Unit1Lesson3ExercisesRoute =
+  LessonsEverybodyUp0Unit1Lesson3ExercisesRouteImport.update({
+    id: '/lessons/everybody-up-0/unit-1/lesson-3/exercises',
+    path: '/lessons/everybody-up-0/unit-1/lesson-3/exercises',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute =
@@ -405,6 +412,7 @@ export interface FileRoutesByFullPath {
   '/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson2PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/assignments': typeof LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-3/exercises': typeof LessonsEverybodyUp0Unit1Lesson3ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/flashcards': typeof LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson3PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson3YoutubeLessonRoute
@@ -452,6 +460,7 @@ export interface FileRoutesByTo {
   '/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson2PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/assignments': typeof LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-3/exercises': typeof LessonsEverybodyUp0Unit1Lesson3ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/flashcards': typeof LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson3PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson3YoutubeLessonRoute
@@ -502,6 +511,7 @@ export interface FileRoutesById {
   '/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson2PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/assignments': typeof LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute
+  '/lessons/everybody-up-0/unit-1/lesson-3/exercises': typeof LessonsEverybodyUp0Unit1Lesson3ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/flashcards': typeof LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson': typeof LessonsEverybodyUp0Unit1Lesson3PresentationLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson': typeof LessonsEverybodyUp0Unit1Lesson3YoutubeLessonRoute
@@ -551,6 +561,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-3/assignments'
+    | '/lessons/everybody-up-0/unit-1/lesson-3/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-3/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson'
@@ -598,6 +609,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-3/assignments'
+    | '/lessons/everybody-up-0/unit-1/lesson-3/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-3/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson'
@@ -647,6 +659,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-2/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-2/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-3/assignments'
+    | '/lessons/everybody-up-0/unit-1/lesson-3/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-3/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-3/presentation-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-3/youtube-lesson'
@@ -690,6 +703,7 @@ export interface RootRouteChildren {
   LessonsEverybodyUp0Unit1Lesson2PresentationLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson2PresentationLessonRoute
   LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRoute
   LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute: typeof LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute
+  LessonsEverybodyUp0Unit1Lesson3ExercisesRoute: typeof LessonsEverybodyUp0Unit1Lesson3ExercisesRoute
   LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute: typeof LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute
   LessonsEverybodyUp0Unit1Lesson3PresentationLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson3PresentationLessonRoute
   LessonsEverybodyUp0Unit1Lesson3YoutubeLessonRoute: typeof LessonsEverybodyUp0Unit1Lesson3YoutubeLessonRoute
@@ -849,6 +863,13 @@ declare module '@tanstack/react-router' {
       path: '/lessons/everybody-up-0/unit-1/lesson-3/flashcards'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-3/flashcards'
       preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson3FlashcardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lessons/everybody-up-0/unit-1/lesson-3/exercises': {
+      id: '/lessons/everybody-up-0/unit-1/lesson-3/exercises'
+      path: '/lessons/everybody-up-0/unit-1/lesson-3/exercises'
+      fullPath: '/lessons/everybody-up-0/unit-1/lesson-3/exercises'
+      preLoaderRoute: typeof LessonsEverybodyUp0Unit1Lesson3ExercisesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lessons/everybody-up-0/unit-1/lesson-3/assignments': {
@@ -1127,6 +1148,8 @@ const rootRouteChildren: RootRouteChildren = {
     LessonsEverybodyUp0Unit1Lesson2YoutubeLessonRoute,
   LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute:
     LessonsEverybodyUp0Unit1Lesson3AssignmentsRoute,
+  LessonsEverybodyUp0Unit1Lesson3ExercisesRoute:
+    LessonsEverybodyUp0Unit1Lesson3ExercisesRoute,
   LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute:
     LessonsEverybodyUp0Unit1Lesson3FlashcardsRoute,
   LessonsEverybodyUp0Unit1Lesson3PresentationLessonRoute:

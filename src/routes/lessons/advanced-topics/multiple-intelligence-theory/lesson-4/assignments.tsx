@@ -23,7 +23,7 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
         <ol className="text-3xl text-left text-gray-800 space-y-8  list-decimal list-inside">
           <li>Xem video bài học.</li>
           <li>Xem lại flashcards để nhớ từ vựng.</li>
-          <li>Làm các bài tập đọc hiểu</li>
+          <li>Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên.</li>
           <li>
             Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và
             ngữ điệu khi đọc.
