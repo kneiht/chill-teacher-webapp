@@ -31,18 +31,6 @@ interface LessonGame {
 // Configure which games to include in this lesson - just import and assign data!
 const lessonGames: Array<LessonGame> = [
   { game: games.CandyCrushEnglishGame, vocabData: vocabData },
-  { game: games.MatchingGame, vocabData: vocabData },
-  { game: games.AnagramGame, vocabData: vocabData },
-  { game: games.MultipleChoiceEnViGame, vocabData: vocabData },
-  { game: games.MultipleChoiceViEnGame, vocabData: vocabData },
-  { game: games.MemoryGame, vocabData: vocabData },
-  { game: games.ListeningTypingEnGame, vocabData: vocabData },
-  { game: games.UnjumbleGame, vocabData: vocabData },
-  { game: games.ListeningSentenceTypingGame, vocabData: vocabData },
-  { game: games.VietnameseToEnglishTranslationGame, vocabData: vocabData },
-  { game: games.PictureChoiceEnGame, vocabData: vocabData },
-  { game: games.ImageRevealChoiceGame, vocabData: vocabData },
-  { game: games.PictureTypingEnGame, vocabData: vocabData },
 ]
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
@@ -75,7 +63,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
             Unit 1: Art Class
             <br />
-            Lesson 2: School Supplies
+            Lesson 3: Reading
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
             <Link to={presentationLessonRoute.to}>

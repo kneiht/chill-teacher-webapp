@@ -6,6 +6,7 @@ import questionsData from './assets/questions.json'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Route as flashcardsRoute } from './flashcards'
 import { Route as assignmentsRoute } from './assignments'
+import { Route as exercisesRoute } from './exercises'
 import { Route as presentationLessonRoute } from './presentation-lesson'
 import { Route as youtubeLessonRoute } from './youtube-lesson'
 
@@ -82,6 +83,10 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
 
             <Link to={assignmentsRoute.to}>
               <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
+            </Link>
+
+            <Link to={exercisesRoute.to}>
+              <WoodenButton className={buttonStyle}>📝 Bài tập</WoodenButton>
             </Link>
 
             {lessonGames.map((lessonGame) => (

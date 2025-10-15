@@ -11,7 +11,7 @@ const Slide: React.FC<SlideProps> = React.memo(
     if (!scrollable) {
       return (
         <div
-          className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
+          className={`slide px-3 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
           {...props}
         >
           {children}
@@ -21,7 +21,7 @@ const Slide: React.FC<SlideProps> = React.memo(
       return (
         <div className="h-[98%] overflow-auto">
           <div
-            className={`slide px-5 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
+            className={`slide px-2 py-2 rounded-xl w-full h-full ${isActive ? 'active' : ''} ${className || ''}`}
             {...props}
           >
             {children}
