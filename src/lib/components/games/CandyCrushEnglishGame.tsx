@@ -5,7 +5,6 @@ import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 import {
   answerCorrect,
   answerIncorrect,
-  setTotalQuestions,
   resetGame,
 } from '@/lib/stores/game.store'
 
@@ -32,7 +31,7 @@ interface Question {
   type: QuestionType
   question: string
   correctAnswer: string
-  options?: string[]
+  options?: Array<string>
   wordToSpeak?: string
   image?: string
 }
@@ -56,7 +55,6 @@ const GRID_SIZE = 8
 const INITIAL_MOVES = 3
 
 const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
-  vocabData,
   questionsData,
   title,
 }) => {
@@ -68,10 +66,10 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
 
   // Game states
   const [isGameStarted, setIsGameStarted] = useState(false)
-  const [isGameOver, setIsGameOver] = useState(false)
+  const [_isGameOver, setIsGameOver] = useState(false)
   const [score, setScore] = useState(0)
   const [moves, setMoves] = useState(INITIAL_MOVES)
-  const [grid, setGrid] = useState<Candy[][]>([])
+  const [grid, setGrid] = useState<Array<Array<Candy>>>([])
   const [selectedCandy, setSelectedCandy] = useState<{
     row: number
     col: number
@@ -95,8 +93,6 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   const [showIncorrectAnimation, setShowIncorrectAnimation] = useState(false)
   const [comboCount, setComboCount] = useState(0)
 
-  const vocabWords: Array<VocabItem> = vocabData
-
   useEffect(() => {
     return () => {
       resetGame()
@@ -108,7 +104,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   const createCandy = (
     row: number,
     col: number,
-    excludeColors: string[] = [],
+    excludeColors: Array<string> = [],
   ): Candy => {
     let availableColors = COLORS.filter((c) => !excludeColors.includes(c))
     if (availableColors.length === 0) availableColors = COLORS
@@ -124,11 +120,11 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   }
 
   const initializeGrid = useCallback(() => {
-    const newGrid: Candy[][] = []
+    const newGrid: Array<Array<Candy>> = []
     for (let row = 0; row < GRID_SIZE; row++) {
       newGrid[row] = []
       for (let col = 0; col < GRID_SIZE; col++) {
-        const excludeColors: string[] = []
+        const excludeColors: Array<string> = []
 
         // Check horizontal match (2 candies to the left)
         if (
@@ -153,7 +149,7 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   }, [])
 
   // Check for matches
-  const checkMatches = (currentGrid: Candy[][]): boolean => {
+  const checkMatches = (currentGrid: Array<Array<Candy>>): boolean => {
     let hasMatch = false
     const newGrid = currentGrid.map((row) => row.map((candy) => ({ ...candy })))
 
@@ -233,38 +229,38 @@ const CandyCrushEnglishGameCore: React.FC<CandyCrushEnglishGameProps> = ({
   }
 
   // Remove matched candies and fill gaps
-  const removeMatchedAndFill = useCallback(() => {
-    setGrid((currentGrid) => {
-      const newGrid = currentGrid.map((row) => [...row])
+  // const removeMatchedAndFill = useCallback(() => {
+  //   setGrid((currentGrid) => {
+  //     const newGrid = currentGrid.map((row) => [...row])
 
-      // Remove matched candies and drop above candies
-      for (let col = 0; col < GRID_SIZE; col++) {
-        let emptyRow = GRID_SIZE - 1
-        for (let row = GRID_SIZE - 1; row >= 0; row--) {
-          if (!newGrid[row][col].isMatched) {
-            if (row !== emptyRow) {
-              newGrid[emptyRow][col] = {
-                ...newGrid[row][col],
-                row: emptyRow,
-              }
-            }
-            emptyRow--
-          }
-        }
+  //     // Remove matched candies and drop above candies
+  //     for (let col = 0; col < GRID_SIZE; col++) {
+  //       let emptyRow = GRID_SIZE - 1
+  //       for (let row = GRID_SIZE - 1; row >= 0; row--) {
+  //         if (!newGrid[row][col].isMatched) {
+  //           if (row !== emptyRow) {
+  //             newGrid[emptyRow][col] = {
+  //               ...newGrid[row][col],
+  //               row: emptyRow,
+  //             }
+  //           }
+  //           emptyRow--
+  //         }
+  //       }
 
-        // Fill empty spaces with new candies
-        for (let row = emptyRow; row >= 0; row--) {
-          newGrid[row][col] = createCandy(row, col)
-        }
-      }
+  //       // Fill empty spaces with new candies
+  //       for (let row = emptyRow; row >= 0; row--) {
+  //         newGrid[row][col] = createCandy(row, col)
+  //       }
+  //     }
 
-      return newGrid
-    })
-  }, [])
+  //     return newGrid
+  //   })
+  // }, [])
 
   // Process matches cascade
   const processMatches = useCallback(
-    async (currentGrid: Candy[][]) => {
+    async (currentGrid: Array<Array<Candy>>) => {
       setIsProcessing(true)
       let gridToCheck = currentGrid
       let hasMatches = true
