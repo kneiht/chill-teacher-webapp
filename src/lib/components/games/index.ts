@@ -13,6 +13,7 @@ import UnjumbleGame from './UnjumbleGame'
 import ListeningSentenceTypingGame from './ListeningSentenceTypingGame'
 import VietnameseToEnglishTranslationGame from './VietnameseToEnglishTranslationGame'
 import CandyCrushEnglishGame from './CandyCrushEnglishGame'
+import BubbleShooterEnglishGame from './BubbleShooterEnglishGame'
 
 export {
   AnagramGame,
@@ -29,6 +30,7 @@ export {
   ListeningSentenceTypingGame,
   VietnameseToEnglishTranslationGame,
   CandyCrushEnglishGame,
+  BubbleShooterEnglishGame,
 }
 
 // Game Definition Interface
@@ -146,6 +148,13 @@ export const games: Record<string, GameDefinition> = {
     icon: '🍎',
     component: CandyCrushEnglishGame,
   },
+  BubbleShooterEnglishGame: {
+    id: 'BubbleShooterEnglishGame',
+    name: 'Bubble Shooter',
+    title: 'Bubble Shooter',
+    icon: '🫧',
+    component: BubbleShooterEnglishGame,
+  },
 }
 
 // Legacy support - keep gameInfo for backward compatibility
@@ -183,6 +192,7 @@ export const gameInfo = (
 // Legacy game components registry
 export const gameComponents: Record<string, React.FC<any>> = {
   CandyCrushEnglishGame,
+  BubbleShooterEnglishGame,
   AnagramGame,
   MatchingGame,
   MultipleChoiceEnViGame,

@@ -114,7 +114,7 @@ const LessonHomePage: React.FC = () => {
 }
 
 export const Route = createFileRoute(
-  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-4/',
+  '/lessons/advanced-topics/multiple-intelligence-theory/lesson-5/',
 )({
   component: LessonHomePage,
 })
