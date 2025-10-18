@@ -15,19 +15,15 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
         <h2 className="text-4xl font-bold text-indigo-700 mb-6">
           Multiple Intelligence Theory
           <br />
-          Lesson 4: Reading
+          Lesson 5: Listening
         </h2>
         <p className="text-3xl text-gray-700 mb-4">
           Hãy hoàn thành các nhiệm vụ sau:
         </p>
         <ol className="text-3xl text-left text-gray-800 space-y-8  list-decimal list-inside">
-          <li>Xem video bài học.</li>
           <li>Xem lại flashcards để nhớ từ vựng.</li>
-          <li>Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên.</li>
-          <li>
-            Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và
-            ngữ điệu khi đọc.
-          </li>
+          <li>Xem video tóm tắt bài học.</li>
+          <li>Làm các bài tập nghe hiểu. Chụp điểm số gửi giáo viên.</li>
         </ol>
         <p className="text-xl text-gray-600 mt-6 italic">
           Chúc các em học tốt!

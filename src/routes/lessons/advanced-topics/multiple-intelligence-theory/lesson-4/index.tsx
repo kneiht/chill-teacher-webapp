@@ -32,7 +32,6 @@ interface LessonGame {
 // Configure which games to include in this lesson - just import and assign data!
 const lessonGames: Array<LessonGame> = [
   { game: games.CandyCrushEnglishGame, vocabData: vocabData },
-  // { game: games.BubbleShooterEnglishGame, vocabData: vocabData },
 ]
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {

@@ -277,11 +277,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
             </button>
           </div>
         ) : (
-          <div
-            className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto"
-            onCopy={(e) => e.preventDefault()}
-            onContextMenu={(e) => e.preventDefault()}
-          >
+          <div className="w-full h-[95%] bg-glass rounded-xl shadow-lg p-5 mt-3 overflow-auto">
             <div className="flex flex-col items-center gap-4">
               <div className="mb-4 w-full max-w-3xl">
                 <h3 className="text-xl font-bold text-indigo-600 mb-3 text-center">
@@ -309,9 +305,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
                     return (
                       <div
                         key={index}
-                        className="text-xl leading-relaxed bg-white/70 p-4 rounded-lg shadow select-none"
-                        onCopy={(e) => e.preventDefault()}
-                        onContextMenu={(e) => e.preventDefault()}
+                        className="text-xl leading-relaxed bg-white/70 p-4 rounded-lg shadow"
                       >
                         {sentenceParts.map((part, partIndex) => (
                           <span key={partIndex}>
@@ -346,11 +340,7 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
                   })}
                 </div>
               ) : (
-                <div
-                  className="text-2xl mb-4 leading-relaxed bg-white/70 p-6 rounded-lg shadow select-none"
-                  onCopy={(e) => e.preventDefault()}
-                  onContextMenu={(e) => e.preventDefault()}
-                >
+                <div className="text-2xl mb-4 leading-relaxed bg-white/70 p-6 rounded-lg shadow">
                   {parts.map((part, index) => (
                     <span key={index}>
                       {part}

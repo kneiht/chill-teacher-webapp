@@ -9,6 +9,8 @@ export default [
       'vite.config.js',
       '.reference/**/*',
       'convert-images.js',
+      'demo/**/*',
+      '*script.js*',
     ],
   },
   {

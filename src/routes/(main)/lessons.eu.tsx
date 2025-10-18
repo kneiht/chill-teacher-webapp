@@ -34,7 +34,13 @@ function RouteComponent() {
       <Title level={2}>Available Lessons</Title>
       <Row gutter={[16, 16]}>
         {lessons.map((lesson) => (
-          <Col key={lesson.path} xs={24} sm={12} md={8} lg={6}>
+          <Col
+            key={lesson.path}
+            xs={24} // 1 column for extra small screens
+            sm={12} // 2 columns for small screens
+            md={8} // 3 columns for medium screens and up
+            lg={6} // 4 columns for large screens and up
+          >
             <a
               href={lesson.path}
               target="_blank"
@@ -44,11 +50,41 @@ function RouteComponent() {
               <Card
                 hoverable
                 cover={
-                  <img
-                    alt={lesson.title}
-                    src={lesson.imageUrl}
-                    style={{ height: 200, objectFit: 'cover' }}
-                  />
+                  <div
+                    style={{
+                      position: 'relative',
+                      height: 200,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <img
+                      alt={lesson.title}
+                      src={lesson.imageUrl}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        color: '#fff',
+                        fontSize: 24,
+                        fontWeight: 700,
+                        textAlign: 'center',
+                        width: '100%',
+                        padding: '12px 16px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                      }}
+                    >
+                      {lesson.description}
+                    </div>
+                  </div>
                 }
               >
                 <Card.Meta

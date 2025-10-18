@@ -28,6 +28,12 @@ const lessons = [
     path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-4/',
     imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
   },
+  {
+    title: 'Multiple Intelligence Theory',
+    description: 'Lesson 5: Listening',
+    path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-5/',
+    imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
+  },
 ]
 
 export const Route = createFileRoute('/(main)/lessons/advanced')({
@@ -38,6 +44,7 @@ function RouteComponent() {
   return (
     <div>
       <Title level={2}>Available Lessons</Title>
+
       <Row gutter={[16, 16]}>
         {lessons.map((lesson) => (
           <Col
@@ -56,11 +63,41 @@ function RouteComponent() {
               <Card
                 hoverable
                 cover={
-                  <img
-                    alt={lesson.title}
-                    src={lesson.imageUrl}
-                    style={{ height: 200, objectFit: 'cover' }}
-                  />
+                  <div
+                    style={{
+                      position: 'relative',
+                      height: 200,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <img
+                      alt={lesson.title}
+                      src={lesson.imageUrl}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        color: '#fff',
+                        fontSize: 24,
+                        fontWeight: 700,
+                        textAlign: 'center',
+                        width: '100%',
+                        padding: '12px 16px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                      }}
+                    >
+                      {lesson.description}
+                    </div>
+                  </div>
                 }
               >
                 <Card.Meta
