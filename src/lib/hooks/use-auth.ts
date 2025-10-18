@@ -6,7 +6,7 @@ import { useStore } from '@tanstack/react-store'
 import { useEffect } from 'react'
 
 // Types
-import type { UseCaseResponse, UserPublic } from '@/lib/types'
+import type { ApiResponse, UserPublic } from '@/lib/types'
 
 // Stores
 import {
@@ -36,12 +36,12 @@ interface AuthContextType {
   login: (
     email: string,
     password: string,
-  ) => Promise<UseCaseResponse<AuthResponseData>>
+  ) => Promise<ApiResponse<AuthResponseData>>
   signup: (
     name: string,
     email: string,
     password: string,
-  ) => Promise<UseCaseResponse<AuthResponseData>>
+  ) => Promise<ApiResponse<AuthResponseData>>
   logout: () => void
   setUser: (user: UserPublic) => void
 }
@@ -63,7 +63,7 @@ export const useAuth = (): AuthContextType => {
   const login = async (
     email: string,
     password: string,
-  ): Promise<UseCaseResponse<AuthResponseData>> => {
+  ): Promise<ApiResponse<AuthResponseData>> => {
     // Set loading state so that the UI can show a loading indicator
     setLoading(true)
 
@@ -98,7 +98,7 @@ export const useAuth = (): AuthContextType => {
     name: string,
     email: string,
     password: string,
-  ): Promise<UseCaseResponse<AuthResponseData>> => {
+  ): Promise<ApiResponse<AuthResponseData>> => {
     // Set loading state so that the UI can show a loading indicator
     setLoading(true)
 

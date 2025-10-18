@@ -13,7 +13,7 @@ export enum SuccessType {
   NO_CONTENT = 'NO_CONTENT',
 }
 
-export type UseCaseResponse<T = unknown> = {
+export type ApiResponse<T = unknown> = {
   success: boolean
   message: string
   type?: ErrorType | SuccessType

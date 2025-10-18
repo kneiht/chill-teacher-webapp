@@ -1,4 +1,4 @@
-import type { UseCaseResponse, User, UserUpdateInput } from '@/lib/types'
+import type { ApiResponse, User, UserUpdateInput } from '@/lib/types'
 import { getAuthHeaders } from '@/lib/utils/auth-helpers'
 import { API_BASE_URL, putFetch } from '.'
 
@@ -6,6 +6,6 @@ import { API_BASE_URL, putFetch } from '.'
 export const updateUser = (
   id: string,
   data: UserUpdateInput,
-): Promise<UseCaseResponse<User>> => {
+): Promise<ApiResponse<User>> => {
   return putFetch(`${API_BASE_URL}/users/${id}`, data, getAuthHeaders())
 }

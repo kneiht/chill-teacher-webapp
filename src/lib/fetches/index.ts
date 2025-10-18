@@ -1,4 +1,4 @@
-import type { UseCaseResponse } from '@/lib/types'
+import type { ApiResponse } from '@/lib/types'
 
 const API_BASE_URL = 'http://localhost:3000/api'
 
@@ -14,9 +14,9 @@ const handleUnauthorized = () => {
 const baseFetch = async <T>(
   url: string,
   options: RequestInit,
-): Promise<UseCaseResponse<T>> => {
+): Promise<ApiResponse<T>> => {
   const response = await fetch(url, options)
-  const body: UseCaseResponse<T> = await response.json()
+  const body: ApiResponse<T> = await response.json()
   if (body.type === 'UNAUTHORIZED') {
     handleUnauthorized()
   }
@@ -28,7 +28,7 @@ const postFetch = <T>(
   url: string,
   data: any,
   headers: Record<string, string> = {},
-): Promise<UseCaseResponse<T>> => {
+): Promise<ApiResponse<T>> => {
   return baseFetch(url, {
     method: 'POST',
     headers: {
@@ -44,7 +44,7 @@ const putFetch = <T>(
   url: string,
   data: any,
   headers: Record<string, string> = {},
-): Promise<UseCaseResponse<T>> => {
+): Promise<ApiResponse<T>> => {
   return baseFetch(url, {
     method: 'PUT',
     headers: {
