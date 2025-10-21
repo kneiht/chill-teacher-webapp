@@ -18,6 +18,7 @@
     "vite.config.ts": true,
     "pnpm-lock.yaml": true,
     ".cta.json": true,
-    ".vscode": true
+    ".vscode": true,
+    "dist": true
   }
 }

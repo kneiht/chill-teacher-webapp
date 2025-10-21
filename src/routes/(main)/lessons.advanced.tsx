@@ -34,6 +34,18 @@ const lessons = [
     path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-5/',
     imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
   },
+  {
+    title: 'Multiple Intelligence Theory',
+    description: 'Lesson 6: Shadowing',
+    path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-6/',
+    imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
+  },
+  {
+    title: 'Multiple Intelligence Theory',
+    description: 'Lesson 7: Writing',
+    path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-7/',
+    imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
+  },
 ]
 
 export const Route = createFileRoute('/(main)/lessons/advanced')({
