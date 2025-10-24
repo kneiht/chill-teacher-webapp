@@ -17,21 +17,20 @@ export type AuthSuccessData = {
 }
 
 // Login user (guide: login + password)
-export const fetchLogin = (
-  data: { login: string; password: string },
-): Promise<ApiResponse<AuthSuccessData>> => {
+export const fetchLogin = (data: {
+  login: string
+  password: string
+}): Promise<ApiResponse<AuthSuccessData>> => {
   return postFetch<AuthSuccessData>(`${API_BASE_URL}/auth/login`, data)
 }
 
 // Register new user
-export const fetchRegister = (
-  data: {
-    display_name?: string
-    username?: string
-    email?: string
-    password: string
-  },
-): Promise<ApiResponse<AuthSuccessData>> => {
+export const fetchRegister = (data: {
+  display_name?: string
+  username?: string
+  email?: string
+  password: string
+}): Promise<ApiResponse<AuthSuccessData>> => {
   return postFetch(`${API_BASE_URL}/auth/register`, data)
 }
 

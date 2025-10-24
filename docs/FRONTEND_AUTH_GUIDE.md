@@ -3,6 +3,7 @@
 This guide provides complete instructions for implementing authentication in your frontend application using the Chill Labs API.
 
 ## Table of Contents
+
 - [Base URL Configuration](#base-url-configuration)
 - [Response Format](#response-format)
 - [Authentication Endpoints](#authentication-endpoints)
@@ -21,12 +22,13 @@ This guide provides complete instructions for implementing authentication in you
 The API runs on port **3000** by default. Configure your base URL:
 
 ```javascript
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'http://localhost:3000'
 ```
 
 For production, replace with your actual domain:
+
 ```javascript
-const API_BASE_URL = 'https://api.yourdomain.com';
+const API_BASE_URL = 'https://api.yourdomain.com'
 ```
 
 ---
@@ -36,6 +38,7 @@ const API_BASE_URL = 'https://api.yourdomain.com';
 All API responses follow a standardized format:
 
 ### Success Response
+
 ```json
 {
   "success": true,
@@ -47,6 +50,7 @@ All API responses follow a standardized format:
 ```
 
 ### Error Response
+
 ```json
 {
   "success": false,
@@ -57,6 +61,7 @@ All API responses follow a standardized format:
 ```
 
 ### HTTP Status Codes
+
 - **200 OK**: Successful request
 - **400 Bad Request**: Validation errors
 - **401 Unauthorized**: Invalid or missing authentication
@@ -71,23 +76,25 @@ All API responses follow a standardized format:
 
 All authentication endpoints are prefixed with `/auth`:
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| POST | `/auth/register` | Register new user | No |
-| POST | `/auth/login` | Login user | No |
-| POST | `/auth/refresh` | Refresh access token | No |
-| GET | `/auth/me` | Get current user info | Yes |
+| Method | Endpoint         | Description           | Auth Required |
+| ------ | ---------------- | --------------------- | ------------- |
+| POST   | `/auth/register` | Register new user     | No            |
+| POST   | `/auth/login`    | Login user            | No            |
+| POST   | `/auth/refresh`  | Refresh access token  | No            |
+| GET    | `/auth/me`       | Get current user info | Yes           |
 
 ---
 
 ## User Registration
 
 ### Endpoint
+
 ```
 POST /auth/register
 ```
 
 ### Request Body
+
 ```json
 {
   "display_name": "John Doe",
@@ -98,6 +105,7 @@ POST /auth/register
 ```
 
 ### Field Requirements
+
 - **display_name** (optional): Non-empty string
 - **username** (optional): Minimum 3 characters
 - **email** (optional): Valid email format
@@ -105,6 +113,7 @@ POST /auth/register
 - **Note**: At least one of `username` or `email` must be provided
 
 ### Success Response (201 Created)
+
 ```json
 {
   "success": true,
@@ -126,16 +135,19 @@ POST /auth/register
 ```
 
 ### User Roles
+
 - **Student**: Default role for new registrations
 - **Teacher**: Assigned by admin
 - **Admin**: Highest permission level
 
 ### User Status
+
 - **Pending**: Newly registered (can still login)
 - **Active**: Fully activated account
 - **Suspended**: Account disabled (cannot login)
 
 ### Example Code
+
 ```javascript
 async function register(displayName, username, email, password) {
   const response = await fetch(`${API_BASE_URL}/auth/register`, {
@@ -147,25 +159,26 @@ async function register(displayName, username, email, password) {
       display_name: displayName,
       username: username,
       email: email,
-      password: password
-    })
-  });
+      password: password,
+    }),
+  })
 
-  const data = await response.json();
-  
+  const data = await response.json()
+
   if (data.success) {
     // Store tokens
-    localStorage.setItem('access_token', data.data.access_token);
-    localStorage.setItem('refresh_token', data.data.refresh_token);
-    localStorage.setItem('user', JSON.stringify(data.data.user));
-    return data.data;
+    localStorage.setItem('access_token', data.data.access_token)
+    localStorage.setItem('refresh_token', data.data.refresh_token)
+    localStorage.setItem('user', JSON.stringify(data.data.user))
+    return data.data
   } else {
-    throw new Error(data.message);
+    throw new Error(data.message)
   }
 }
 ```
 
 ### Common Errors
+
 - **400 Validation**: Missing required fields or invalid format
 - **409 Conflict**: Username or email already exists
 
@@ -174,11 +187,13 @@ async function register(displayName, username, email, password) {
 ## User Login
 
 ### Endpoint
+
 ```
 POST /auth/login
 ```
 
 ### Request Body
+
 ```json
 {
   "login": "johndoe",
@@ -187,12 +202,14 @@ POST /auth/login
 ```
 
 ### Field Requirements
+
 - **login** (required): Username or email (automatically detected)
 - **password** (required): User's password
 
 **Note**: The API automatically detects if `login` contains `@` to determine if it's an email or username.
 
 ### Success Response (200 OK)
+
 ```json
 {
   "success": true,
@@ -214,6 +231,7 @@ POST /auth/login
 ```
 
 ### Example Code
+
 ```javascript
 async function login(loginIdentifier, password) {
   const response = await fetch(`${API_BASE_URL}/auth/login`, {
@@ -223,25 +241,26 @@ async function login(loginIdentifier, password) {
     },
     body: JSON.stringify({
       login: loginIdentifier,
-      password: password
-    })
-  });
+      password: password,
+    }),
+  })
 
-  const data = await response.json();
-  
+  const data = await response.json()
+
   if (data.success) {
     // Store tokens
-    localStorage.setItem('access_token', data.data.access_token);
-    localStorage.setItem('refresh_token', data.data.refresh_token);
-    localStorage.setItem('user', JSON.stringify(data.data.user));
-    return data.data;
+    localStorage.setItem('access_token', data.data.access_token)
+    localStorage.setItem('refresh_token', data.data.refresh_token)
+    localStorage.setItem('user', JSON.stringify(data.data.user))
+    return data.data
   } else {
-    throw new Error(data.message);
+    throw new Error(data.message)
   }
 }
 ```
 
 ### Common Errors
+
 - **400 Validation**: Missing credentials
 - **401 Unauthorized**: Invalid credentials
 - **403 Forbidden**: Account is suspended
@@ -252,11 +271,13 @@ async function login(loginIdentifier, password) {
 ## Token Refresh
 
 ### Endpoint
+
 ```
 POST /auth/refresh
 ```
 
 ### Request Body
+
 ```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
@@ -264,9 +285,11 @@ POST /auth/refresh
 ```
 
 ### Field Requirements
+
 - **token** (required): The refresh token received during login/registration
 
 ### Success Response (200 OK)
+
 ```json
 {
   "success": true,
@@ -279,18 +302,20 @@ POST /auth/refresh
 ```
 
 **Important Notes**:
+
 - Only the **access token** is returned
 - The refresh token remains the same and does not need to be updated
 - Use the refresh token to get a new access token when the current one expires
 - Refresh tokens have a longer expiration time than access tokens
 
 ### Example Code
+
 ```javascript
 async function refreshAccessToken() {
-  const refreshToken = localStorage.getItem('refresh_token');
-  
+  const refreshToken = localStorage.getItem('refresh_token')
+
   if (!refreshToken) {
-    throw new Error('No refresh token available');
+    throw new Error('No refresh token available')
   }
 
   const response = await fetch(`${API_BASE_URL}/auth/refresh`, {
@@ -299,25 +324,26 @@ async function refreshAccessToken() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      token: refreshToken
-    })
-  });
+      token: refreshToken,
+    }),
+  })
 
-  const data = await response.json();
-  
+  const data = await response.json()
+
   if (data.success) {
     // Update only the access token
-    localStorage.setItem('access_token', data.data.access_token);
-    return data.data.access_token;
+    localStorage.setItem('access_token', data.data.access_token)
+    return data.data.access_token
   } else {
     // Refresh token is invalid or expired - redirect to login
-    localStorage.clear();
-    throw new Error('Session expired. Please login again.');
+    localStorage.clear()
+    throw new Error('Session expired. Please login again.')
   }
 }
 ```
 
 ### Common Errors
+
 - **401 Unauthorized**: Invalid or expired refresh token (redirect to login)
 - **403 Forbidden**: Account suspended
 
@@ -326,16 +352,19 @@ async function refreshAccessToken() {
 ## Get Current User
 
 ### Endpoint
+
 ```
 GET /auth/me
 ```
 
 ### Headers
+
 ```
 Authorization: Bearer <access_token>
 ```
 
 ### Success Response (200 OK)
+
 ```json
 {
   "success": true,
@@ -353,33 +382,35 @@ Authorization: Bearer <access_token>
 ```
 
 ### Example Code
+
 ```javascript
 async function getCurrentUser() {
-  const accessToken = localStorage.getItem('access_token');
-  
+  const accessToken = localStorage.getItem('access_token')
+
   if (!accessToken) {
-    throw new Error('No access token available');
+    throw new Error('No access token available')
   }
 
   const response = await fetch(`${API_BASE_URL}/auth/me`, {
     method: 'GET',
     headers: {
-      'Authorization': `Bearer ${accessToken}`,
+      Authorization: `Bearer ${accessToken}`,
       'Content-Type': 'application/json',
-    }
-  });
+    },
+  })
 
-  const data = await response.json();
-  
+  const data = await response.json()
+
   if (data.success) {
-    return data.data;
+    return data.data
   } else {
-    throw new Error(data.message);
+    throw new Error(data.message)
   }
 }
 ```
 
 ### Common Errors
+
 - **401 Unauthorized**: Missing, invalid, or expired access token
 - **403 Forbidden**: Account suspended
 
@@ -388,94 +419,97 @@ async function getCurrentUser() {
 ## Token Management
 
 ### Token Storage
+
 Store tokens securely in your application:
 
 ```javascript
 // After successful login or registration
 function storeAuthData(authData) {
-  localStorage.setItem('access_token', authData.access_token);
-  localStorage.setItem('refresh_token', authData.refresh_token);
-  localStorage.setItem('user', JSON.stringify(authData.user));
+  localStorage.setItem('access_token', authData.access_token)
+  localStorage.setItem('refresh_token', authData.refresh_token)
+  localStorage.setItem('user', JSON.stringify(authData.user))
 }
 
 // Retrieve tokens
 function getAccessToken() {
-  return localStorage.getItem('access_token');
+  return localStorage.getItem('access_token')
 }
 
 function getRefreshToken() {
-  return localStorage.getItem('refresh_token');
+  return localStorage.getItem('refresh_token')
 }
 
 // Clear tokens on logout
 function logout() {
-  localStorage.removeItem('access_token');
-  localStorage.removeItem('refresh_token');
-  localStorage.removeItem('user');
+  localStorage.removeItem('access_token')
+  localStorage.removeItem('refresh_token')
+  localStorage.removeItem('user')
   // Redirect to login page
 }
 ```
 
 ### Automatic Token Refresh
+
 Implement automatic token refresh when API calls fail with 401:
 
 ```javascript
 async function apiCall(url, options = {}) {
-  const accessToken = getAccessToken();
-  
+  const accessToken = getAccessToken()
+
   // Add authorization header
   options.headers = {
     ...options.headers,
-    'Authorization': `Bearer ${accessToken}`,
+    Authorization: `Bearer ${accessToken}`,
     'Content-Type': 'application/json',
-  };
+  }
 
-  let response = await fetch(url, options);
-  
+  let response = await fetch(url, options)
+
   // If unauthorized, try refreshing token
   if (response.status === 401) {
     try {
-      const newAccessToken = await refreshAccessToken();
-      
+      const newAccessToken = await refreshAccessToken()
+
       // Retry the original request with new token
-      options.headers['Authorization'] = `Bearer ${newAccessToken}`;
-      response = await fetch(url, options);
+      options.headers['Authorization'] = `Bearer ${newAccessToken}`
+      response = await fetch(url, options)
     } catch (error) {
       // Refresh failed - redirect to login
-      logout();
-      window.location.href = '/login';
-      throw new Error('Session expired');
+      logout()
+      window.location.href = '/login'
+      throw new Error('Session expired')
     }
   }
 
-  return response.json();
+  return response.json()
 }
 ```
 
 ### Protected API Requests
+
 Always include the access token in the Authorization header:
 
 ```javascript
 async function makeProtectedRequest(endpoint, method = 'GET', body = null) {
-  const accessToken = getAccessToken();
-  
+  const accessToken = getAccessToken()
+
   if (!accessToken) {
-    throw new Error('Not authenticated');
+    throw new Error('Not authenticated')
   }
 
   const options = {
     method: method,
     headers: {
-      'Authorization': `Bearer ${accessToken}`,
+      Authorization: `Bearer ${accessToken}`,
       'Content-Type': 'application/json',
-    }
-  };
-
-  if (body) {
-    options.body = JSON.stringify(body);
+    },
   }
 
-  return await apiCall(`${API_BASE_URL}${endpoint}`, options);
+  if (body) {
+    options.body = JSON.stringify(body)
+  }
+
+  return await apiCall(`${API_BASE_URL}${endpoint}`, options)
 }
 ```
 
@@ -484,40 +518,42 @@ async function makeProtectedRequest(endpoint, method = 'GET', body = null) {
 ## Error Handling
 
 ### Comprehensive Error Handler
+
 ```javascript
 function handleApiError(data) {
   const errorMessages = {
-    'Validation': 'Please check your input and try again.',
-    'Unauthorized': 'Invalid credentials or session expired.',
-    'Forbidden': 'You do not have permission to perform this action.',
-    'NotFound': 'The requested resource was not found.',
-    'Conflict': 'This username or email is already taken.',
-    'Internal': 'An internal server error occurred. Please try again later.'
-  };
+    Validation: 'Please check your input and try again.',
+    Unauthorized: 'Invalid credentials or session expired.',
+    Forbidden: 'You do not have permission to perform this action.',
+    NotFound: 'The requested resource was not found.',
+    Conflict: 'This username or email is already taken.',
+    Internal: 'An internal server error occurred. Please try again later.',
+  }
 
-  const errorType = data.status;
-  const defaultMessage = errorMessages[errorType] || 'An error occurred.';
-  
+  const errorType = data.status
+  const defaultMessage = errorMessages[errorType] || 'An error occurred.'
+
   // Use the specific error message from API if available
-  const errorMessage = data.error || data.message || defaultMessage;
-  
+  const errorMessage = data.error || data.message || defaultMessage
+
   return {
     type: errorType,
-    message: errorMessage
-  };
+    message: errorMessage,
+  }
 }
 ```
 
 ### Usage Example
+
 ```javascript
 try {
-  const userData = await login('johndoe', 'password123');
-  console.log('Login successful:', userData);
+  const userData = await login('johndoe', 'password123')
+  console.log('Login successful:', userData)
 } catch (error) {
-  const errorDetails = handleApiError(error);
-  console.error('Login failed:', errorDetails.message);
+  const errorDetails = handleApiError(error)
+  console.error('Login failed:', errorDetails.message)
   // Display error to user
-  showErrorNotification(errorDetails.message);
+  showErrorNotification(errorDetails.message)
 }
 ```
 
@@ -530,33 +566,33 @@ Here's a complete authentication service for your frontend:
 ```javascript
 class AuthService {
   constructor(baseURL) {
-    this.baseURL = baseURL;
+    this.baseURL = baseURL
   }
 
   // Store tokens and user data
   storeAuthData(authData) {
-    localStorage.setItem('access_token', authData.access_token);
-    localStorage.setItem('refresh_token', authData.refresh_token);
-    localStorage.setItem('user', JSON.stringify(authData.user));
+    localStorage.setItem('access_token', authData.access_token)
+    localStorage.setItem('refresh_token', authData.refresh_token)
+    localStorage.setItem('user', JSON.stringify(authData.user))
   }
 
   // Get stored tokens
   getAccessToken() {
-    return localStorage.getItem('access_token');
+    return localStorage.getItem('access_token')
   }
 
   getRefreshToken() {
-    return localStorage.getItem('refresh_token');
+    return localStorage.getItem('refresh_token')
   }
 
   getUser() {
-    const user = localStorage.getItem('user');
-    return user ? JSON.parse(user) : null;
+    const user = localStorage.getItem('user')
+    return user ? JSON.parse(user) : null
   }
 
   // Check if user is authenticated
   isAuthenticated() {
-    return !!this.getAccessToken();
+    return !!this.getAccessToken()
   }
 
   // Register new user
@@ -568,17 +604,17 @@ class AuthService {
         display_name: displayName,
         username: username,
         email: email,
-        password: password
-      })
-    });
+        password: password,
+      }),
+    })
 
-    const data = await response.json();
-    
+    const data = await response.json()
+
     if (data.success) {
-      this.storeAuthData(data.data);
-      return data.data;
+      this.storeAuthData(data.data)
+      return data.data
     } else {
-      throw new Error(data.message || 'Registration failed');
+      throw new Error(data.message || 'Registration failed')
     }
   }
 
@@ -589,149 +625,154 @@ class AuthService {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         login: loginIdentifier,
-        password: password
-      })
-    });
+        password: password,
+      }),
+    })
 
-    const data = await response.json();
-    
+    const data = await response.json()
+
     if (data.success) {
-      this.storeAuthData(data.data);
-      return data.data;
+      this.storeAuthData(data.data)
+      return data.data
     } else {
-      throw new Error(data.message || 'Login failed');
+      throw new Error(data.message || 'Login failed')
     }
   }
 
   // Refresh access token
   async refreshAccessToken() {
-    const refreshToken = this.getRefreshToken();
-    
+    const refreshToken = this.getRefreshToken()
+
     if (!refreshToken) {
-      throw new Error('No refresh token available');
+      throw new Error('No refresh token available')
     }
 
     const response = await fetch(`${this.baseURL}/auth/refresh`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ token: refreshToken })
-    });
+      body: JSON.stringify({ token: refreshToken }),
+    })
 
-    const data = await response.json();
-    
+    const data = await response.json()
+
     if (data.success) {
-      localStorage.setItem('access_token', data.data.access_token);
-      return data.data.access_token;
+      localStorage.setItem('access_token', data.data.access_token)
+      return data.data.access_token
     } else {
-      this.logout();
-      throw new Error('Session expired. Please login again.');
+      this.logout()
+      throw new Error('Session expired. Please login again.')
     }
   }
 
   // Get current user info
   async getCurrentUser() {
-    const accessToken = this.getAccessToken();
-    
+    const accessToken = this.getAccessToken()
+
     if (!accessToken) {
-      throw new Error('Not authenticated');
+      throw new Error('Not authenticated')
     }
 
     const response = await fetch(`${this.baseURL}/auth/me`, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Content-Type': 'application/json'
-      }
-    });
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+    })
 
-    const data = await response.json();
-    
+    const data = await response.json()
+
     if (data.success) {
-      localStorage.setItem('user', JSON.stringify(data.data));
-      return data.data;
+      localStorage.setItem('user', JSON.stringify(data.data))
+      return data.data
     } else {
-      throw new Error(data.message || 'Failed to get user info');
+      throw new Error(data.message || 'Failed to get user info')
     }
   }
 
   // Make authenticated API request with auto-refresh
   async apiCall(endpoint, options = {}) {
-    const accessToken = this.getAccessToken();
-    
+    const accessToken = this.getAccessToken()
+
     if (!accessToken) {
-      throw new Error('Not authenticated');
+      throw new Error('Not authenticated')
     }
 
     options.headers = {
       ...options.headers,
-      'Authorization': `Bearer ${accessToken}`,
+      Authorization: `Bearer ${accessToken}`,
       'Content-Type': 'application/json',
-    };
+    }
 
-    let response = await fetch(`${this.baseURL}${endpoint}`, options);
-    
+    let response = await fetch(`${this.baseURL}${endpoint}`, options)
+
     // Auto-refresh on 401
     if (response.status === 401) {
       try {
-        await this.refreshAccessToken();
-        
+        await this.refreshAccessToken()
+
         // Retry with new token
-        options.headers['Authorization'] = `Bearer ${this.getAccessToken()}`;
-        response = await fetch(`${this.baseURL}${endpoint}`, options);
+        options.headers['Authorization'] = `Bearer ${this.getAccessToken()}`
+        response = await fetch(`${this.baseURL}${endpoint}`, options)
       } catch (error) {
-        this.logout();
-        throw new Error('Session expired');
+        this.logout()
+        throw new Error('Session expired')
       }
     }
 
-    return response.json();
+    return response.json()
   }
 
   // Logout
   logout() {
-    localStorage.removeItem('access_token');
-    localStorage.removeItem('refresh_token');
-    localStorage.removeItem('user');
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('refresh_token')
+    localStorage.removeItem('user')
   }
 }
 
 // Usage
-const auth = new AuthService('http://localhost:3000');
+const auth = new AuthService('http://localhost:3000')
 
 // Register
 try {
-  const user = await auth.register('John Doe', 'johndoe', 'john@example.com', 'password123');
-  console.log('Registered:', user);
+  const user = await auth.register(
+    'John Doe',
+    'johndoe',
+    'john@example.com',
+    'password123',
+  )
+  console.log('Registered:', user)
 } catch (error) {
-  console.error('Registration failed:', error.message);
+  console.error('Registration failed:', error.message)
 }
 
 // Login
 try {
-  const user = await auth.login('johndoe', 'password123');
-  console.log('Logged in:', user);
+  const user = await auth.login('johndoe', 'password123')
+  console.log('Logged in:', user)
 } catch (error) {
-  console.error('Login failed:', error.message);
+  console.error('Login failed:', error.message)
 }
 
 // Get current user
 try {
-  const user = await auth.getCurrentUser();
-  console.log('Current user:', user);
+  const user = await auth.getCurrentUser()
+  console.log('Current user:', user)
 } catch (error) {
-  console.error('Failed to get user:', error.message);
+  console.error('Failed to get user:', error.message)
 }
 
 // Make protected API call
 try {
-  const data = await auth.apiCall('/users/profile');
-  console.log('Profile data:', data);
+  const data = await auth.apiCall('/users/profile')
+  console.log('Profile data:', data)
 } catch (error) {
-  console.error('API call failed:', error.message);
+  console.error('API call failed:', error.message)
 }
 
 // Logout
-auth.logout();
+auth.logout()
 ```
 
 ---
@@ -763,6 +804,7 @@ auth.logout();
 ## Support
 
 For issues or questions about authentication implementation, please refer to:
+
 - API documentation at `/tester` endpoint
 - Backend repository documentation
 - Contact the backend team

@@ -307,7 +307,7 @@ main_menu() {
         select opt in "${main_options[@]}"; do
             # Check if REPLY is 'q' or 'Q' for quitting, in addition to the numbered option
             if [[ "$REPLY" == "q" || "$REPLY" == "Q" ]]; then
-                echo -e "${GREEN}Exiting EnglishCoaching CLI. Goodbye!${NC}"; exit 0
+                echo -e "${GREEN}Exiting CLI. Goodbye!${NC}"; exit 0
             fi
 
             case $REPLY in
@@ -315,7 +315,7 @@ main_menu() {
                 2) show_frontend_menu; break ;;
                 3) show_deploy_menu; break ;;
                 4) show_tools_menu; break ;;
-                0) echo -e "${GREEN}Exiting EnglishCoaching CLI. Goodbye!${NC}"; exit 0 ;;
+                0) echo -e "${GREEN}Exiting CLI. Goodbye!${NC}"; exit 0 ;;
                 *) echo -e "${RED}Invalid option $REPLY. Type 'q' or the number of 'Quit' to exit.${NC}" ;;
             esac
         done

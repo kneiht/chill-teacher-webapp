@@ -14,7 +14,7 @@ export const Logo = () => {
           fontWeight: 'bold',
         }}
       >
-        English
+        Chill
       </Text>
       <Text
         style={{
@@ -24,7 +24,7 @@ export const Logo = () => {
           fontWeight: 'bold',
         }}
       >
-        Coaching
+        Teacher
       </Text>
     </Text>
   )

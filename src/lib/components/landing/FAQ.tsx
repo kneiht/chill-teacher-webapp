@@ -1,4 +1,3 @@
-'use client'
 import { QuestionCircleOutlined } from '@ant-design/icons'
 import { Button, Card, Collapse, Typography, theme } from 'antd'
 

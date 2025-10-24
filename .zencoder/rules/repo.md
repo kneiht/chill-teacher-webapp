@@ -1,6 +1,6 @@
 # Repository Overview
 
-- **Name**: english-coaching (frontend)
+- **Name**: chill-teacher (frontend)
 - **Framework**: React 19 with TypeScript via Vite
 - **Routing**: @tanstack/react-router file-based routing
 - **Styling**: Tailwind CSS 4 and custom CSS modules/components

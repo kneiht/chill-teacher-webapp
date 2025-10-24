@@ -1,5 +1,3 @@
-'use client'
-
 // Import Icons from Ant Design
 import {
   BarChartOutlined,

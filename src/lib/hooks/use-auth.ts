@@ -26,9 +26,10 @@ import {
   fetchLogin,
   fetchMe,
   fetchRefresh,
-  fetchRegister,
-  type AuthSuccessData,
+  fetchRegister
+  
 } from '@/lib/fetches/auth.fetch'
+import type {AuthSuccessData} from '@/lib/fetches/auth.fetch';
 
 // Return type for this hook
 interface AuthContextType {
@@ -57,7 +58,9 @@ export const useAuth = (): AuthContextType => {
 
   // Load saved user from localStorage on mount
   useEffect(() => {
-    const storedUser = getFromLocalStorage<AuthSuccessData['user']>(LocalStorageKeys.USER)
+    const storedUser = getFromLocalStorage<AuthSuccessData['user']>(
+      LocalStorageKeys.USER,
+    )
     if (storedUser) {
       setUser(storedUser as any)
     }
@@ -94,7 +97,12 @@ export const useAuth = (): AuthContextType => {
   ): Promise<ApiResponse<AuthSuccessData>> => {
     setLoading(true)
     try {
-      const result = await fetchRegister({ display_name, username, email, password })
+      const result = await fetchRegister({
+        display_name,
+        username,
+        email,
+        password,
+      })
       if (result.success && result.data) {
         const { user, access_token, refresh_token } = result.data
         localStorage.setItem('access_token', access_token)

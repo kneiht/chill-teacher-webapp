@@ -1,5 +1,3 @@
-'use client'
-
 import { StarFilled, UserOutlined } from '@ant-design/icons'
 import { Card, Col, Flex, Rate, Row, Typography, theme } from 'antd'
 

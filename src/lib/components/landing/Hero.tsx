@@ -1,5 +1,3 @@
-'use client'
-
 import { ArrowRightOutlined, PlayCircleOutlined } from '@ant-design/icons'
 import {
   Button,

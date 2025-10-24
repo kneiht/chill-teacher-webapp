@@ -1,891 +1,999 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shadowing Practice</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #111827; color: #d1d5db; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 2rem; background-color: #1f2937; border-radius: 1rem; border: 1px solid #374151; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-        .tab-btn { color: #9ca3af; border-bottom: 2px solid transparent; }
-        .tab-btn.active { color: #c4b5fd; border-bottom-color: #8b5cf6; }
-        audio::-webkit-media-controls-panel { background-color: #374151; }
+      body {
+        background-color: #111827;
+        color: #d1d5db;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+          Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #1f2937;
+        border-radius: 1rem;
+        border: 1px solid #374151;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .tab-btn {
+        color: #9ca3af;
+        border-bottom: 2px solid transparent;
+      }
+      .tab-btn.active {
+        color: #c4b5fd;
+        border-bottom-color: #8b5cf6;
+      }
+      audio::-webkit-media-controls-panel {
+        background-color: #374151;
+      }
     </style>
-</head>
-<body class="antialiased">
+  </head>
+  <body class="antialiased">
     <div class="container">
-        <h1 class="text-3xl font-bold mb-2 text-white">Shadowing Practice</h1>
-        <p class="mb-6 text-gray-400">Listen to each sentence and repeat it aloud. Use the 'Practice' tab to read along, and the 'Shadowing' tab to test yourself without text.</p>
+      <h1 class="text-3xl font-bold mb-2 text-white">Shadowing Practice</h1>
+      <p class="mb-6 text-gray-400">
+        Listen to each sentence and repeat it aloud. Use the 'Practice' tab to
+        read along, and the 'Shadowing' tab to test yourself without text.
+      </p>
 
-        <div class="border-b border-gray-600 mb-6">
-            <nav class="flex -mb-px space-x-6">
-                <button class="tab-btn px-4 py-2 text-lg font-medium rounded-t-lg transition" data-tab="practice">Practice</button>
-                <button class="tab-btn px-4 py-2 text-lg font-medium rounded-t-lg transition" data-tab="shadowing">Shadowing</button>
-            </nav>
-        </div>
+      <div class="border-b border-gray-600 mb-6">
+        <nav class="flex -mb-px space-x-6">
+          <button
+            class="tab-btn px-4 py-2 text-lg font-medium rounded-t-lg transition"
+            data-tab="practice"
+          >
+            Practice
+          </button>
+          <button
+            class="tab-btn px-4 py-2 text-lg font-medium rounded-t-lg transition"
+            data-tab="shadowing"
+          >
+            Shadowing
+          </button>
+        </nav>
+      </div>
 
-        <div id="tab-content-container">
-            <div id="practice" class="tab-content hidden">
-                <div class="space-y-6">
-                    
+      <div id="tab-content-container">
+        <div id="practice" class="tab-content hidden">
+          <div class="space-y-6">
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 1</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_1.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Good morning, everyone.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 1</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_1.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Good morning, everyone.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 2</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_2.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Today, we
-re going to talk about Multiple Intelligence Theory.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 2</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_2.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Today, we re going to talk about Multiple Intelligence Theory.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 3</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_3.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Have you heard about it before?</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 3</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_3.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Have you heard about it before?
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 4</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_4.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">I think it
-s about people being smart in different ways, right?</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 4</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_4.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                I think it s about people being smart in different ways, right?
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 5</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_5.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That
-s correct, Linh.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 5</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_5.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                That s correct, Linh.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 6</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_6.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">A long time ago, people believed that being intelligent meant being good at language or math.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 6</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_6.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                A long time ago, people believed that being intelligent meant
+                being good at language or math.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 7</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_7.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">This idea came from IQ tests 
- created by Alfred Binet in France.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 7</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_7.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                This idea came from IQ tests created by Alfred Binet in France.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 8</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_8.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">But later, Professor Howard Gardner from Harvard said IQ is too narrow.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 8</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_8.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                But later, Professor Howard Gardner from Harvard said IQ is too
+                narrow.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 9</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_9.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">He believed there are many kinds of intelligence.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 9</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_9.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                He believed there are many kinds of intelligence.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 10</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_10.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">How many kinds, teacher?</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 10</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_10.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                How many kinds, teacher?
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 11</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_11.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Gardner said there are eight main types of intelligence.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 11</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_11.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Gardner said there are eight main types of intelligence.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 12</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_12.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Let
-s look at them one by one.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 12</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_12.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Let s look at them one by one.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 13</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_13.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Linguistic intelligence 
- being good with words and languages.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 13</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_13.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Linguistic intelligence being good with words and languages.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 14</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_14.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Logical-mathematical intelligence 
- being good with numbers and problem-solving.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 14</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_14.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Logical-mathematical intelligence being good with numbers and
+                problem-solving.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 15</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_15.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Musical intelligence 
- understanding rhythm, sound, and music.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 15</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_15.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Musical intelligence understanding rhythm, sound, and music.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 16</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_16.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Spatial intelligence 
- thinking in pictures and shapes.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 16</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_16.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Spatial intelligence thinking in pictures and shapes.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 17</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_17.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Bodily-kinesthetic intelligence 
- learning through movement and physical activity.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 17</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_17.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Bodily-kinesthetic intelligence learning through movement and
+                physical activity.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 18</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_18.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Interpersonal intelligence 
- understanding and working well with other people.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 18</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_18.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Interpersonal intelligence understanding and working well with
+                other people.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 19</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_19.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Intrapersonal intelligence 
- understanding yourself and your emotions.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 19</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_19.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Intrapersonal intelligence understanding yourself and your
+                emotions.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 20</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_20.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Naturalist intelligence 
- understanding nature and the environment.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 20</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_20.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Naturalist intelligence understanding nature and the
+                environment.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 21</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_21.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">I think I have musical intelligence.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 21</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_21.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                I think I have musical intelligence.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 22</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_22.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">I love playing the guitar.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 22</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_22.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                I love playing the guitar.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 23</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_23.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That
-s a great example, Nam!</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 23</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_23.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                That s a great example, Nam!
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 24</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_24.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Your musical intelligence helps you express feelings through sound.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 24</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_24.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Your musical intelligence helps you express feelings through
+                sound.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 25</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_25.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">I like working with my classmates on group projects.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 25</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_25.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                I like working with my classmates on group projects.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 26</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_26.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Maybe I have interpersonal intelligence.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 26</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_26.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Maybe I have interpersonal intelligence.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 27</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_27.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Very good, Linh.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 27</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_27.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Very good, Linh.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 28</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_28.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">You understand people
-s feelings 
- that
-s interpersonal intelligence.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 28</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_28.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                You understand people s feelings that s interpersonal
+                intelligence.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 29</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_29.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">I love hiking and watching animals.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 29</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_29.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                I love hiking and watching animals.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 30</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_30.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Is that naturalist intelligence?</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 30</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_30.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Is that naturalist intelligence?
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 31</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_31.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Yes, An!</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 31</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_31.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">Yes, An!</p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 32</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_32.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Gardner even said there might also be spiritual or existential intelligence, but he wasn
-t sure about them yet.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 32</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_32.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Gardner even said there might also be spiritual or existential
+                intelligence, but he wasn t sure about them yet.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 33</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_33.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">So, teacher, does that mean everyone learns differently?</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 33</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_33.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                So, teacher, does that mean everyone learns differently?
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 34</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_34.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Exactly.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 34</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_34.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">Exactly.</p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 35</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_35.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Gardner said people don
-t all learn in the same way.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 35</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_35.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Gardner said people don t all learn in the same way.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 36</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_36.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That
-s why teachers should use different activities 
- reading, teamwork, problem-solving, art, or music 
- so every student can learn in their best way.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 36</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_36.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                That s why teachers should use different activities reading,
+                teamwork, problem-solving, art, or music so every student can
+                learn in their best way.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 37</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_37.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That makes sense!</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 37</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_37.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                That makes sense!
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 38</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_38.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Sometimes I understand better when I draw instead of just reading.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 38</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_38.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Sometimes I understand better when I draw instead of just
+                reading.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 39</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_39.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That
-s a perfect example.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 39</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_39.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                That s a perfect example.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 40</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_40.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">When we use different ways to learn, we can all do better.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 40</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_40.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                When we use different ways to learn, we can all do better.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 41</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_41.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">So intelligence isn
-t fixed?</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 41</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_41.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                So intelligence isn t fixed?
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 42</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_42.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That
-s right.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 42</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_42.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">That s right.</p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 43</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_43.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Intelligence can grow with practice and experience.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 43</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_43.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Intelligence can grow with practice and experience.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 44</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_44.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Everyone has different strengths, and school should help every kind of mind succeed.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 44</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_44.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                Everyone has different strengths, and school should help every
+                kind of mind succeed.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 45</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_45.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">I like that idea!</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 45</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_45.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                I like that idea!
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 46</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_46.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">It means we are all smart in our own way.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 46</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_46.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                It means we are all smart in our own way.
+              </p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 47</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_47.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">Exactly, Nam.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 47</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_47.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">Exactly, Nam.</p>
             </div>
-        
+
             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 48</p>
-                <audio controls class="w-full mb-3">
-                    <source src="assets/sentence_48.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <p class="text-gray-200 text-lg leading-relaxed">That
-s the message of Multiple Intelligence Theory.</p>
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 48</p>
+              <audio controls class="w-full mb-3">
+                <source src="assets/sentence_48.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <p class="text-gray-200 text-lg leading-relaxed">
+                That s the message of Multiple Intelligence Theory.
+              </p>
             </div>
-        
-                </div>
-            </div>
-            <div id="shadowing" class="tab-content hidden">
-                 <div class="space-y-6">
-                    
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 1</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_1.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 2</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_2.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 3</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_3.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 4</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_4.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 5</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_5.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 6</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_6.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 7</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_7.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 8</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_8.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 9</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_9.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 10</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_10.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 11</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_11.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 12</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_12.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 13</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_13.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 14</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_14.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 15</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_15.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 16</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_16.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 17</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_17.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 18</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_18.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 19</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_19.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 20</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_20.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 21</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_21.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 22</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_22.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 23</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_23.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 24</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_24.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 25</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_25.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 26</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_26.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 27</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_27.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 28</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_28.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 29</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_29.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 30</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_30.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 31</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_31.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 32</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_32.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 33</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_33.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 34</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_34.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 35</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_35.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 36</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_36.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 37</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_37.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 38</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_38.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 39</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_39.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 40</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_40.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 41</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_41.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 42</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_42.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 43</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_43.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 44</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_44.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 45</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_45.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 46</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_46.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 47</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_47.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-             <div class="p-4 bg-gray-800 rounded-lg shadow-md">
-                <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 48</p>
-                <audio controls class="w-full">
-                    <source src="assets/sentence_48.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        
-                </div>
-            </div>
+          </div>
         </div>
+        <div id="shadowing" class="tab-content hidden">
+          <div class="space-y-6">
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 1</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_1.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 2</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_2.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 3</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_3.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 4</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_4.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 5</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_5.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 6</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_6.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 7</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_7.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 8</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_8.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 9</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_9.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 10</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_10.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 11</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_11.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 12</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_12.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 13</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_13.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 14</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_14.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 15</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_15.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 16</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_16.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 17</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_17.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 18</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_18.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 19</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_19.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 20</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_20.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 21</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_21.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 22</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_22.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 23</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_23.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 24</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_24.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 25</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_25.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 26</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_26.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 27</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_27.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 28</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_28.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 29</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_29.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 30</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_30.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 31</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_31.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 32</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_32.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 33</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_33.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 34</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_34.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 35</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_35.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 36</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_36.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 37</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_37.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 38</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_38.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 39</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_39.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 40</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_40.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 41</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_41.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 42</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_42.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 43</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_43.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 44</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_44.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 45</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_45.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 46</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_46.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 47</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_47.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="p-4 bg-gray-800 rounded-lg shadow-md">
+              <p class="text-gray-400 mb-2 font-mono text-sm">Sentence 48</p>
+              <audio controls class="w-full">
+                <source src="assets/sentence_48.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        window.audioSpeed = 1;
+      window.audioSpeed = 1
     </script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-    

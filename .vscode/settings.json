@@ -22,7 +22,7 @@
     "dist": true,
     "scripts": true,
     "eslint.config.js": true,
-    "src/routeTree.gen.ts": true,
+    "src/routeTree.gen.ts": false,
     "src/reportWebVitals.ts": true
   }
 }

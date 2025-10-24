@@ -1,5 +1,3 @@
-'use client'
-
 import { CheckOutlined, CloseOutlined, DollarOutlined } from '@ant-design/icons'
 import { Button, Card, Col, Divider, Flex, Row, Typography, theme } from 'antd'
 
