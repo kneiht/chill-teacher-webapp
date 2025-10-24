@@ -21,6 +21,8 @@
     ".vscode": true,
     "dist": true,
     "scripts": true,
-    "eslint.config.js": true
+    "eslint.config.js": true,
+    "src/routeTree.gen.ts": true,
+    "src/reportWebVitals.ts": true
   }
 }
