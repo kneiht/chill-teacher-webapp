@@ -713,6 +713,6 @@ const Students: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/students')({
+export const Route = createFileRoute('/(main)/(teacher)/students')({
   component: Students,
 })

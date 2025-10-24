@@ -808,6 +808,6 @@ const Teachers: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/teachers')({
+export const Route = createFileRoute('/(main)/(teacher)/teachers')({
   component: Teachers,
 })

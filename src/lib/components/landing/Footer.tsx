@@ -1,3 +1,4 @@
+// Icons
 import {
   FacebookFilled,
   InstagramOutlined,
@@ -6,8 +7,14 @@ import {
   TwitterOutlined,
   YoutubeFilled,
 } from '@ant-design/icons'
+
+// Logo
+import { Logo } from '@/lib/components/ui/Logo'
+
+// Ant Design
 import { Col, Flex, Row, Typography, theme } from 'antd'
 
+// Router
 import { Link } from '@tanstack/react-router'
 
 const { Paragraph } = Typography
@@ -31,14 +38,7 @@ const Footer = () => {
               gap={token.marginSM}
               style={{ marginBottom: token.margin }}
             >
-              <SmileOutlined
-                style={{ fontSize: 32, color: token.colorPrimary }}
-              />
-              <span
-                style={{ fontSize: 28, fontWeight: token.fontWeightStrong }}
-              >
-                ChillTeacher
-              </span>
+              <Logo />
             </Flex>
             <Paragraph
               style={{

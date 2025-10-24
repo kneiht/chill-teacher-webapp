@@ -1,16 +1,19 @@
-// Icons
+// Import Icons from Ant Design
 import {
+  BarChartOutlined,
+  BookOutlined,
+  CalendarOutlined,
   DashboardOutlined,
   LogoutOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  ReadOutlined,
   SettingOutlined,
+  TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons'
 
-// UI components
-import { Logo } from '@/lib/components/ui/Logo'
-import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
+// Import Components from Ant Design
 import type { MenuProps } from 'antd'
 import {
   Avatar,
@@ -24,24 +27,29 @@ import {
   theme,
 } from 'antd'
 
-// Hooks
+// Import React hooks
 import { useState } from 'react'
-import { useAuth } from '@/lib/hooks/use-auth'
-import { useLang } from '@/lib/hooks/use-lang'
 
-// Router
+// Import Tanstack Router
 import {
   Link,
   Outlet,
   createFileRoute,
-  redirect,
-  // redirect,
   useLocation,
   useNavigate,
+  redirect,
 } from '@tanstack/react-router'
 
-// Utils
+// Import local storage helpers
 import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
+
+// Import Components
+import { Logo } from '@/lib/components/ui/Logo'
+import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
+
+// Import contexts
+import { useAuth } from '@/lib/hooks/use-auth'
+import { useLang } from '@/lib/hooks/use-lang'
 
 // Destructure Layout components from Ant Design
 const { Header, Sider, Content } = Layout
@@ -69,6 +77,16 @@ const TriggerButton = ({
   )
 }
 
+export const Route = createFileRoute('/(main)')({
+  beforeLoad: () => {
+    const user = localStorage.getItem(LocalStorageKeys.USER)
+    if (!user) {
+      throw redirect({ to: '/login', replace: true })
+    }
+  },
+  component: MainLayout,
+})
+
 // Define the MainLayout component
 function MainLayout() {
   const [collapsed, setCollapsed] = useState(true)
@@ -81,9 +99,44 @@ function MainLayout() {
   // Define the menu items
   const menuItems: MenuProps['items'] = [
     {
-      key: '/lessons',
+      key: '/dashboard',
       icon: <DashboardOutlined />,
-      label: <Link to="/lessons">{t('Lessons')}</Link>,
+      label: <Link to="/dashboard">{t('Dashboard')}</Link>,
+    },
+    {
+      key: '/students',
+      icon: <UserOutlined />,
+      label: <Link to="/students">{t('Students')}</Link>,
+    },
+    {
+      key: '/teachers',
+      icon: <TeamOutlined />,
+      label: <Link to="/teachers">{t('Teachers')}</Link>,
+    },
+    {
+      key: '/classes',
+      icon: <BookOutlined />,
+      label: <Link to="/classes">{t('Classes')}</Link>,
+    },
+    {
+      key: '/classroom',
+      icon: <ReadOutlined />,
+      label: <Link to="/classroom">{t('Classroom')}</Link>,
+    },
+    {
+      key: '/attendance',
+      icon: <CalendarOutlined />,
+      label: <Link to="/attendance">{t('Attendance')}</Link>,
+    },
+    {
+      key: '/reports',
+      icon: <BarChartOutlined />,
+      label: <Link to="/reports">{t('Reports')}</Link>,
+    },
+    {
+      key: '/settings',
+      icon: <SettingOutlined />,
+      label: <Link to="/settings">{t('Settings')}</Link>,
     },
   ]
 
@@ -92,7 +145,7 @@ function MainLayout() {
     {
       key: '/profile',
       icon: <UserOutlined />,
-      label: <Link to="/profile">{t('Profile')}</Link>,
+      label: t('Profile'),
     },
     {
       key: '/settings',
@@ -172,7 +225,7 @@ function MainLayout() {
                   whiteSpace: 'nowrap',
                 }}
               >
-                {user?.name}
+                {user?.display_name}
               </Text>
             </Flex>
           </Dropdown>
@@ -191,14 +244,17 @@ function MainLayout() {
           style={{ boxShadow: token.boxShadow, borderRadius: '10px' }}
         >
           <Flex vertical style={{ height: '100%' }}>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/schools" style={{ textDecoration: 'none' }}>
               <Flex
                 vertical
                 justify="space-between"
                 align="center"
                 style={{ padding: '1rem' }}
               >
-                <Avatar size={60} src="/logo.png" />
+                <Avatar
+                  size={60}
+                  src="https://img.freepik.com/premium-vector/university-college-school-crests-logo-emblem-vector-template_441059-1011.jpg?semt=ais_hybrid&w=740"
+                />
                 <Text
                   strong
                   style={{
@@ -258,13 +314,3 @@ function MainLayout() {
     </Layout>
   )
 }
-
-export const Route = createFileRoute('/(main)')({
-  beforeLoad: () => {
-    const user = localStorage.getItem(LocalStorageKeys.USER)
-    if (!user) {
-      throw redirect({ to: '/login', replace: true })
-    }
-  },
-  component: MainLayout,
-})

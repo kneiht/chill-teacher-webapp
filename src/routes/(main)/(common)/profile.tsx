@@ -8,20 +8,19 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useLang } from '@/lib/hooks/use-lang'
 
 const { Title, Text } = Typography
-const Dashboard: React.FC = () => {
+const Profile: React.FC = () => {
   const { t } = useLang()
   return (
     <div>
       <div style={{ marginBottom: 24 }}>
-        <Title level={2}>{t('Settings')}</Title>
-        <Text type="secondary">{t('This is the settings page!')}</Text>
+        <Title level={2}>{t('Profile')}</Title>
+        <Text type="secondary">{t('This is the profile page!')}</Text>
       </div>
     </div>
   )
 }
 
 // Export the route
-
-export const Route = createFileRoute('/(main)/settings')({
-  component: Dashboard,
+export const Route = createFileRoute('/(main)/(common)/profile')({
+  component: Profile,
 })

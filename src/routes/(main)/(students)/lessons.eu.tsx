@@ -24,7 +24,7 @@ const lessons = [
   },
 ]
 
-export const Route = createFileRoute('/(main)/lessons/eu')({
+export const Route = createFileRoute('/(main)/(students)/lessons/eu')({
   component: RouteComponent,
 })
 

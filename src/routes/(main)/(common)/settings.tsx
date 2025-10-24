@@ -821,6 +821,6 @@ const Settings: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/settings copy')({
+export const Route = createFileRoute('/(main)/(common)/settings')({
   component: Settings,
 })

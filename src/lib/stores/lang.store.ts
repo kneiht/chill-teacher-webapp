@@ -39,6 +39,7 @@ export const t = (key: string): string => {
   if (translation) {
     return translation
   }
-  console.log('Translation not found for key:', key)
+  // TODO: Add translation
+  // console.log('Translation not found:', key)
   return key
 }

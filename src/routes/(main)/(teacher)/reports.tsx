@@ -609,4 +609,6 @@ const Reports: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/reports')({ component: Reports })
+export const Route = createFileRoute('/(main)/(teacher)/reports')({
+  component: Reports,
+})

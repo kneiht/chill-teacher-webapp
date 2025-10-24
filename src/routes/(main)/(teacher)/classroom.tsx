@@ -382,7 +382,7 @@ const Classroom: React.FC = () => {
           {/* <Col flex="auto" style={{ textAlign: 'right' }}>
 						<Space>
 							<Button
-								type="primary"
+								type='primary'
 								icon={<MessageOutlined />}
 								onClick={() => setIsAnnouncementModalOpen(true)}
 								disabled={!selectedClass}
@@ -586,7 +586,7 @@ const Classroom: React.FC = () => {
 								<div>
 									<Title level={5}>{t('Recent Announcements')}</Title>
 									<List
-										size="small"
+										size='small'
 										dataSource={[
 											{
 												title: t('Quiz scheduled for next week'),
@@ -649,6 +649,6 @@ const Classroom: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/classroom')({
+export const Route = createFileRoute('/(main)/(teacher)/classroom')({
   component: Classroom,
 })

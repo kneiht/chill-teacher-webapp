@@ -26,10 +26,9 @@ import {
   fetchLogin,
   fetchMe,
   fetchRefresh,
-  fetchRegister
-  
+  fetchRegister,
 } from '@/lib/fetches/auth.fetch'
-import type {AuthSuccessData} from '@/lib/fetches/auth.fetch';
+import type { AuthSuccessData } from '@/lib/fetches/auth.fetch'
 
 // Return type for this hook
 interface AuthContextType {

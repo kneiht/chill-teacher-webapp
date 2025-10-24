@@ -54,7 +54,7 @@ const lessons = [
   },
 ]
 
-export const Route = createFileRoute('/(main)/lessons/advanced')({
+export const Route = createFileRoute('/(main)/(students)/lessons/advanced')({
   component: RouteComponent,
 })
 

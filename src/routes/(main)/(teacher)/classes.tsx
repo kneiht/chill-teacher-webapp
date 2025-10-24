@@ -758,4 +758,6 @@ const Classes: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/classes')({ component: Classes })
+export const Route = createFileRoute('/(main)/(teacher)/classes')({
+  component: Classes,
+})

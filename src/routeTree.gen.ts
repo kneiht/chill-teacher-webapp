@@ -13,23 +13,21 @@ import { Route as SplatRouteImport } from './routes/$splat'
 import { Route as mainRouteRouteImport } from './routes/(main)/route'
 import { Route as authRouteRouteImport } from './routes/(auth)/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as mainTeachersRouteImport } from './routes/(main)/teachers'
-import { Route as mainStudentsRouteImport } from './routes/(main)/students'
-import { Route as mainSettingscopyRouteImport } from './routes/(main)/settings copy'
-import { Route as mainSettingsRouteImport } from './routes/(main)/settings'
-import { Route as mainSchoolsRouteImport } from './routes/(main)/schools'
-import { Route as mainRoutecopyRouteImport } from './routes/(main)/route copy'
-import { Route as mainReportsRouteImport } from './routes/(main)/reports'
-import { Route as mainProfileRouteImport } from './routes/(main)/profile'
-import { Route as mainDashboardRouteImport } from './routes/(main)/dashboard'
-import { Route as mainClassroomRouteImport } from './routes/(main)/classroom'
-import { Route as mainClassesRouteImport } from './routes/(main)/classes'
-import { Route as mainAttendanceRouteImport } from './routes/(main)/attendance'
 import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
-import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons.index'
-import { Route as mainLessonsEuRouteImport } from './routes/(main)/lessons.eu'
-import { Route as mainLessonsAdvancedRouteImport } from './routes/(main)/lessons.advanced'
+import { Route as mainteacherTeachersRouteImport } from './routes/(main)/(teacher)/teachers'
+import { Route as mainteacherStudentsRouteImport } from './routes/(main)/(teacher)/students'
+import { Route as mainteacherSchoolsRouteImport } from './routes/(main)/(teacher)/schools'
+import { Route as mainteacherReportsRouteImport } from './routes/(main)/(teacher)/reports'
+import { Route as mainteacherDashboardRouteImport } from './routes/(main)/(teacher)/dashboard'
+import { Route as mainteacherClassroomRouteImport } from './routes/(main)/(teacher)/classroom'
+import { Route as mainteacherClassesRouteImport } from './routes/(main)/(teacher)/classes'
+import { Route as mainteacherAttendanceRouteImport } from './routes/(main)/(teacher)/attendance'
+import { Route as maincommonSettingsRouteImport } from './routes/(main)/(common)/settings'
+import { Route as maincommonProfileRouteImport } from './routes/(main)/(common)/profile'
+import { Route as mainstudentsLessonsIndexRouteImport } from './routes/(main)/(students)/lessons.index'
+import { Route as mainstudentsLessonsEuRouteImport } from './routes/(main)/(students)/lessons.eu'
+import { Route as mainstudentsLessonsAdvancedRouteImport } from './routes/(main)/(students)/lessons.advanced'
 import { Route as LessonsEverybodyUp0Unit1Lesson3IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-3/index'
 import { Route as LessonsEverybodyUp0Unit1Lesson2IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-2/index'
 import { Route as LessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/lessons/everybody-up-0/unit-1/lesson-1/index'
@@ -101,66 +99,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const mainTeachersRoute = mainTeachersRouteImport.update({
-  id: '/teachers',
-  path: '/teachers',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainStudentsRoute = mainStudentsRouteImport.update({
-  id: '/students',
-  path: '/students',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainSettingscopyRoute = mainSettingscopyRouteImport.update({
-  id: '/settings copy',
-  path: '/settings copy',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainSettingsRoute = mainSettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainSchoolsRoute = mainSchoolsRouteImport.update({
-  id: '/schools',
-  path: '/schools',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainRoutecopyRoute = mainRoutecopyRouteImport.update({
-  id: '/route copy',
-  path: '/route copy',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainReportsRoute = mainReportsRouteImport.update({
-  id: '/reports',
-  path: '/reports',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainProfileRoute = mainProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainDashboardRoute = mainDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainClassroomRoute = mainClassroomRouteImport.update({
-  id: '/classroom',
-  path: '/classroom',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainClassesRoute = mainClassesRouteImport.update({
-  id: '/classes',
-  path: '/classes',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainAttendanceRoute = mainAttendanceRouteImport.update({
-  id: '/attendance',
-  path: '/attendance',
-  getParentRoute: () => mainRouteRoute,
-} as any)
 const authSignupRoute = authSignupRouteImport.update({
   id: '/signup',
   path: '/signup',
@@ -171,21 +109,73 @@ const authLoginRoute = authLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => authRouteRoute,
 } as any)
-const mainLessonsIndexRoute = mainLessonsIndexRouteImport.update({
-  id: '/lessons/',
-  path: '/lessons/',
+const mainteacherTeachersRoute = mainteacherTeachersRouteImport.update({
+  id: '/(teacher)/teachers',
+  path: '/teachers',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainLessonsEuRoute = mainLessonsEuRouteImport.update({
-  id: '/lessons/eu',
+const mainteacherStudentsRoute = mainteacherStudentsRouteImport.update({
+  id: '/(teacher)/students',
+  path: '/students',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainteacherSchoolsRoute = mainteacherSchoolsRouteImport.update({
+  id: '/(teacher)/schools',
+  path: '/schools',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainteacherReportsRoute = mainteacherReportsRouteImport.update({
+  id: '/(teacher)/reports',
+  path: '/reports',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainteacherDashboardRoute = mainteacherDashboardRouteImport.update({
+  id: '/(teacher)/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainteacherClassroomRoute = mainteacherClassroomRouteImport.update({
+  id: '/(teacher)/classroom',
+  path: '/classroom',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainteacherClassesRoute = mainteacherClassesRouteImport.update({
+  id: '/(teacher)/classes',
+  path: '/classes',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainteacherAttendanceRoute = mainteacherAttendanceRouteImport.update({
+  id: '/(teacher)/attendance',
+  path: '/attendance',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const maincommonSettingsRoute = maincommonSettingsRouteImport.update({
+  id: '/(common)/settings',
+  path: '/settings',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const maincommonProfileRoute = maincommonProfileRouteImport.update({
+  id: '/(common)/profile',
+  path: '/profile',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainstudentsLessonsIndexRoute =
+  mainstudentsLessonsIndexRouteImport.update({
+    id: '/(students)/lessons/',
+    path: '/lessons/',
+    getParentRoute: () => mainRouteRoute,
+  } as any)
+const mainstudentsLessonsEuRoute = mainstudentsLessonsEuRouteImport.update({
+  id: '/(students)/lessons/eu',
   path: '/lessons/eu',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainLessonsAdvancedRoute = mainLessonsAdvancedRouteImport.update({
-  id: '/lessons/advanced',
-  path: '/lessons/advanced',
-  getParentRoute: () => mainRouteRoute,
-} as any)
+const mainstudentsLessonsAdvancedRoute =
+  mainstudentsLessonsAdvancedRouteImport.update({
+    id: '/(students)/lessons/advanced',
+    path: '/lessons/advanced',
+    getParentRoute: () => mainRouteRoute,
+  } as any)
 const LessonsEverybodyUp0Unit1Lesson3IndexRoute =
   LessonsEverybodyUp0Unit1Lesson3IndexRouteImport.update({
     id: '/lessons/everybody-up-0/unit-1/lesson-3/',
@@ -576,21 +566,19 @@ export interface FileRoutesByFullPath {
   '/$splat': typeof SplatRoute
   '/login': typeof authLoginRoute
   '/signup': typeof authSignupRoute
-  '/attendance': typeof mainAttendanceRoute
-  '/classes': typeof mainClassesRoute
-  '/classroom': typeof mainClassroomRoute
-  '/dashboard': typeof mainDashboardRoute
-  '/profile': typeof mainProfileRoute
-  '/reports': typeof mainReportsRoute
-  '/route copy': typeof mainRoutecopyRoute
-  '/schools': typeof mainSchoolsRoute
-  '/settings': typeof mainSettingsRoute
-  '/settings copy': typeof mainSettingscopyRoute
-  '/students': typeof mainStudentsRoute
-  '/teachers': typeof mainTeachersRoute
-  '/lessons/advanced': typeof mainLessonsAdvancedRoute
-  '/lessons/eu': typeof mainLessonsEuRoute
-  '/lessons': typeof mainLessonsIndexRoute
+  '/profile': typeof maincommonProfileRoute
+  '/settings': typeof maincommonSettingsRoute
+  '/attendance': typeof mainteacherAttendanceRoute
+  '/classes': typeof mainteacherClassesRoute
+  '/classroom': typeof mainteacherClassroomRoute
+  '/dashboard': typeof mainteacherDashboardRoute
+  '/reports': typeof mainteacherReportsRoute
+  '/schools': typeof mainteacherSchoolsRoute
+  '/students': typeof mainteacherStudentsRoute
+  '/teachers': typeof mainteacherTeachersRoute
+  '/lessons/advanced': typeof mainstudentsLessonsAdvancedRoute
+  '/lessons/eu': typeof mainstudentsLessonsEuRoute
+  '/lessons': typeof mainstudentsLessonsIndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -649,21 +637,19 @@ export interface FileRoutesByTo {
   '/$splat': typeof SplatRoute
   '/login': typeof authLoginRoute
   '/signup': typeof authSignupRoute
-  '/attendance': typeof mainAttendanceRoute
-  '/classes': typeof mainClassesRoute
-  '/classroom': typeof mainClassroomRoute
-  '/dashboard': typeof mainDashboardRoute
-  '/profile': typeof mainProfileRoute
-  '/reports': typeof mainReportsRoute
-  '/route copy': typeof mainRoutecopyRoute
-  '/schools': typeof mainSchoolsRoute
-  '/settings': typeof mainSettingsRoute
-  '/settings copy': typeof mainSettingscopyRoute
-  '/students': typeof mainStudentsRoute
-  '/teachers': typeof mainTeachersRoute
-  '/lessons/advanced': typeof mainLessonsAdvancedRoute
-  '/lessons/eu': typeof mainLessonsEuRoute
-  '/lessons': typeof mainLessonsIndexRoute
+  '/profile': typeof maincommonProfileRoute
+  '/settings': typeof maincommonSettingsRoute
+  '/attendance': typeof mainteacherAttendanceRoute
+  '/classes': typeof mainteacherClassesRoute
+  '/classroom': typeof mainteacherClassroomRoute
+  '/dashboard': typeof mainteacherDashboardRoute
+  '/reports': typeof mainteacherReportsRoute
+  '/schools': typeof mainteacherSchoolsRoute
+  '/students': typeof mainteacherStudentsRoute
+  '/teachers': typeof mainteacherTeachersRoute
+  '/lessons/advanced': typeof mainstudentsLessonsAdvancedRoute
+  '/lessons/eu': typeof mainstudentsLessonsEuRoute
+  '/lessons': typeof mainstudentsLessonsIndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -725,21 +711,19 @@ export interface FileRoutesById {
   '/$splat': typeof SplatRoute
   '/(auth)/login': typeof authLoginRoute
   '/(auth)/signup': typeof authSignupRoute
-  '/(main)/attendance': typeof mainAttendanceRoute
-  '/(main)/classes': typeof mainClassesRoute
-  '/(main)/classroom': typeof mainClassroomRoute
-  '/(main)/dashboard': typeof mainDashboardRoute
-  '/(main)/profile': typeof mainProfileRoute
-  '/(main)/reports': typeof mainReportsRoute
-  '/(main)/route copy': typeof mainRoutecopyRoute
-  '/(main)/schools': typeof mainSchoolsRoute
-  '/(main)/settings': typeof mainSettingsRoute
-  '/(main)/settings copy': typeof mainSettingscopyRoute
-  '/(main)/students': typeof mainStudentsRoute
-  '/(main)/teachers': typeof mainTeachersRoute
-  '/(main)/lessons/advanced': typeof mainLessonsAdvancedRoute
-  '/(main)/lessons/eu': typeof mainLessonsEuRoute
-  '/(main)/lessons/': typeof mainLessonsIndexRoute
+  '/(main)/(common)/profile': typeof maincommonProfileRoute
+  '/(main)/(common)/settings': typeof maincommonSettingsRoute
+  '/(main)/(teacher)/attendance': typeof mainteacherAttendanceRoute
+  '/(main)/(teacher)/classes': typeof mainteacherClassesRoute
+  '/(main)/(teacher)/classroom': typeof mainteacherClassroomRoute
+  '/(main)/(teacher)/dashboard': typeof mainteacherDashboardRoute
+  '/(main)/(teacher)/reports': typeof mainteacherReportsRoute
+  '/(main)/(teacher)/schools': typeof mainteacherSchoolsRoute
+  '/(main)/(teacher)/students': typeof mainteacherStudentsRoute
+  '/(main)/(teacher)/teachers': typeof mainteacherTeachersRoute
+  '/(main)/(students)/lessons/advanced': typeof mainstudentsLessonsAdvancedRoute
+  '/(main)/(students)/lessons/eu': typeof mainstudentsLessonsEuRoute
+  '/(main)/(students)/lessons/': typeof mainstudentsLessonsIndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof LessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -800,16 +784,14 @@ export interface FileRouteTypes {
     | '/$splat'
     | '/login'
     | '/signup'
+    | '/profile'
+    | '/settings'
     | '/attendance'
     | '/classes'
     | '/classroom'
     | '/dashboard'
-    | '/profile'
     | '/reports'
-    | '/route copy'
     | '/schools'
-    | '/settings'
-    | '/settings copy'
     | '/students'
     | '/teachers'
     | '/lessons/advanced'
@@ -873,16 +855,14 @@ export interface FileRouteTypes {
     | '/$splat'
     | '/login'
     | '/signup'
+    | '/profile'
+    | '/settings'
     | '/attendance'
     | '/classes'
     | '/classroom'
     | '/dashboard'
-    | '/profile'
     | '/reports'
-    | '/route copy'
     | '/schools'
-    | '/settings'
-    | '/settings copy'
     | '/students'
     | '/teachers'
     | '/lessons/advanced'
@@ -948,21 +928,19 @@ export interface FileRouteTypes {
     | '/$splat'
     | '/(auth)/login'
     | '/(auth)/signup'
-    | '/(main)/attendance'
-    | '/(main)/classes'
-    | '/(main)/classroom'
-    | '/(main)/dashboard'
-    | '/(main)/profile'
-    | '/(main)/reports'
-    | '/(main)/route copy'
-    | '/(main)/schools'
-    | '/(main)/settings'
-    | '/(main)/settings copy'
-    | '/(main)/students'
-    | '/(main)/teachers'
-    | '/(main)/lessons/advanced'
-    | '/(main)/lessons/eu'
-    | '/(main)/lessons/'
+    | '/(main)/(common)/profile'
+    | '/(main)/(common)/settings'
+    | '/(main)/(teacher)/attendance'
+    | '/(main)/(teacher)/classes'
+    | '/(main)/(teacher)/classroom'
+    | '/(main)/(teacher)/dashboard'
+    | '/(main)/(teacher)/reports'
+    | '/(main)/(teacher)/schools'
+    | '/(main)/(teacher)/students'
+    | '/(main)/(teacher)/teachers'
+    | '/(main)/(students)/lessons/advanced'
+    | '/(main)/(students)/lessons/eu'
+    | '/(main)/(students)/lessons/'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
@@ -1106,90 +1084,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/(main)/teachers': {
-      id: '/(main)/teachers'
-      path: '/teachers'
-      fullPath: '/teachers'
-      preLoaderRoute: typeof mainTeachersRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/students': {
-      id: '/(main)/students'
-      path: '/students'
-      fullPath: '/students'
-      preLoaderRoute: typeof mainStudentsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/settings copy': {
-      id: '/(main)/settings copy'
-      path: '/settings copy'
-      fullPath: '/settings copy'
-      preLoaderRoute: typeof mainSettingscopyRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/settings': {
-      id: '/(main)/settings'
-      path: '/settings'
-      fullPath: '/settings'
-      preLoaderRoute: typeof mainSettingsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/schools': {
-      id: '/(main)/schools'
-      path: '/schools'
-      fullPath: '/schools'
-      preLoaderRoute: typeof mainSchoolsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/route copy': {
-      id: '/(main)/route copy'
-      path: '/route copy'
-      fullPath: '/route copy'
-      preLoaderRoute: typeof mainRoutecopyRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/reports': {
-      id: '/(main)/reports'
-      path: '/reports'
-      fullPath: '/reports'
-      preLoaderRoute: typeof mainReportsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/profile': {
-      id: '/(main)/profile'
-      path: '/profile'
-      fullPath: '/profile'
-      preLoaderRoute: typeof mainProfileRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/dashboard': {
-      id: '/(main)/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof mainDashboardRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/classroom': {
-      id: '/(main)/classroom'
-      path: '/classroom'
-      fullPath: '/classroom'
-      preLoaderRoute: typeof mainClassroomRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/classes': {
-      id: '/(main)/classes'
-      path: '/classes'
-      fullPath: '/classes'
-      preLoaderRoute: typeof mainClassesRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/attendance': {
-      id: '/(main)/attendance'
-      path: '/attendance'
-      fullPath: '/attendance'
-      preLoaderRoute: typeof mainAttendanceRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
     '/(auth)/signup': {
       id: '/(auth)/signup'
       path: '/signup'
@@ -1204,25 +1098,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authLoginRouteImport
       parentRoute: typeof authRouteRoute
     }
-    '/(main)/lessons/': {
-      id: '/(main)/lessons/'
+    '/(main)/(teacher)/teachers': {
+      id: '/(main)/(teacher)/teachers'
+      path: '/teachers'
+      fullPath: '/teachers'
+      preLoaderRoute: typeof mainteacherTeachersRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/students': {
+      id: '/(main)/(teacher)/students'
+      path: '/students'
+      fullPath: '/students'
+      preLoaderRoute: typeof mainteacherStudentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/schools': {
+      id: '/(main)/(teacher)/schools'
+      path: '/schools'
+      fullPath: '/schools'
+      preLoaderRoute: typeof mainteacherSchoolsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/reports': {
+      id: '/(main)/(teacher)/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof mainteacherReportsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/dashboard': {
+      id: '/(main)/(teacher)/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof mainteacherDashboardRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/classroom': {
+      id: '/(main)/(teacher)/classroom'
+      path: '/classroom'
+      fullPath: '/classroom'
+      preLoaderRoute: typeof mainteacherClassroomRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/classes': {
+      id: '/(main)/(teacher)/classes'
+      path: '/classes'
+      fullPath: '/classes'
+      preLoaderRoute: typeof mainteacherClassesRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(teacher)/attendance': {
+      id: '/(main)/(teacher)/attendance'
+      path: '/attendance'
+      fullPath: '/attendance'
+      preLoaderRoute: typeof mainteacherAttendanceRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(common)/settings': {
+      id: '/(main)/(common)/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof maincommonSettingsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(common)/profile': {
+      id: '/(main)/(common)/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof maincommonProfileRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/': {
+      id: '/(main)/(students)/lessons/'
       path: '/lessons'
       fullPath: '/lessons'
-      preLoaderRoute: typeof mainLessonsIndexRouteImport
+      preLoaderRoute: typeof mainstudentsLessonsIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/lessons/eu': {
-      id: '/(main)/lessons/eu'
+    '/(main)/(students)/lessons/eu': {
+      id: '/(main)/(students)/lessons/eu'
       path: '/lessons/eu'
       fullPath: '/lessons/eu'
-      preLoaderRoute: typeof mainLessonsEuRouteImport
+      preLoaderRoute: typeof mainstudentsLessonsEuRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/lessons/advanced': {
-      id: '/(main)/lessons/advanced'
+    '/(main)/(students)/lessons/advanced': {
+      id: '/(main)/(students)/lessons/advanced'
       path: '/lessons/advanced'
       fullPath: '/lessons/advanced'
-      preLoaderRoute: typeof mainLessonsAdvancedRouteImport
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/lessons/everybody-up-0/unit-1/lesson-3/': {
@@ -1607,39 +1571,35 @@ const authRouteRouteWithChildren = authRouteRoute._addFileChildren(
 )
 
 interface mainRouteRouteChildren {
-  mainAttendanceRoute: typeof mainAttendanceRoute
-  mainClassesRoute: typeof mainClassesRoute
-  mainClassroomRoute: typeof mainClassroomRoute
-  mainDashboardRoute: typeof mainDashboardRoute
-  mainProfileRoute: typeof mainProfileRoute
-  mainReportsRoute: typeof mainReportsRoute
-  mainRoutecopyRoute: typeof mainRoutecopyRoute
-  mainSchoolsRoute: typeof mainSchoolsRoute
-  mainSettingsRoute: typeof mainSettingsRoute
-  mainSettingscopyRoute: typeof mainSettingscopyRoute
-  mainStudentsRoute: typeof mainStudentsRoute
-  mainTeachersRoute: typeof mainTeachersRoute
-  mainLessonsAdvancedRoute: typeof mainLessonsAdvancedRoute
-  mainLessonsEuRoute: typeof mainLessonsEuRoute
-  mainLessonsIndexRoute: typeof mainLessonsIndexRoute
+  maincommonProfileRoute: typeof maincommonProfileRoute
+  maincommonSettingsRoute: typeof maincommonSettingsRoute
+  mainteacherAttendanceRoute: typeof mainteacherAttendanceRoute
+  mainteacherClassesRoute: typeof mainteacherClassesRoute
+  mainteacherClassroomRoute: typeof mainteacherClassroomRoute
+  mainteacherDashboardRoute: typeof mainteacherDashboardRoute
+  mainteacherReportsRoute: typeof mainteacherReportsRoute
+  mainteacherSchoolsRoute: typeof mainteacherSchoolsRoute
+  mainteacherStudentsRoute: typeof mainteacherStudentsRoute
+  mainteacherTeachersRoute: typeof mainteacherTeachersRoute
+  mainstudentsLessonsAdvancedRoute: typeof mainstudentsLessonsAdvancedRoute
+  mainstudentsLessonsEuRoute: typeof mainstudentsLessonsEuRoute
+  mainstudentsLessonsIndexRoute: typeof mainstudentsLessonsIndexRoute
 }
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
-  mainAttendanceRoute: mainAttendanceRoute,
-  mainClassesRoute: mainClassesRoute,
-  mainClassroomRoute: mainClassroomRoute,
-  mainDashboardRoute: mainDashboardRoute,
-  mainProfileRoute: mainProfileRoute,
-  mainReportsRoute: mainReportsRoute,
-  mainRoutecopyRoute: mainRoutecopyRoute,
-  mainSchoolsRoute: mainSchoolsRoute,
-  mainSettingsRoute: mainSettingsRoute,
-  mainSettingscopyRoute: mainSettingscopyRoute,
-  mainStudentsRoute: mainStudentsRoute,
-  mainTeachersRoute: mainTeachersRoute,
-  mainLessonsAdvancedRoute: mainLessonsAdvancedRoute,
-  mainLessonsEuRoute: mainLessonsEuRoute,
-  mainLessonsIndexRoute: mainLessonsIndexRoute,
+  maincommonProfileRoute: maincommonProfileRoute,
+  maincommonSettingsRoute: maincommonSettingsRoute,
+  mainteacherAttendanceRoute: mainteacherAttendanceRoute,
+  mainteacherClassesRoute: mainteacherClassesRoute,
+  mainteacherClassroomRoute: mainteacherClassroomRoute,
+  mainteacherDashboardRoute: mainteacherDashboardRoute,
+  mainteacherReportsRoute: mainteacherReportsRoute,
+  mainteacherSchoolsRoute: mainteacherSchoolsRoute,
+  mainteacherStudentsRoute: mainteacherStudentsRoute,
+  mainteacherTeachersRoute: mainteacherTeachersRoute,
+  mainstudentsLessonsAdvancedRoute: mainstudentsLessonsAdvancedRoute,
+  mainstudentsLessonsEuRoute: mainstudentsLessonsEuRoute,
+  mainstudentsLessonsIndexRoute: mainstudentsLessonsIndexRoute,
 }
 
 const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(

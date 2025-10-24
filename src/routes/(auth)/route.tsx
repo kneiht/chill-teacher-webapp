@@ -5,7 +5,7 @@ export const Route = createFileRoute('/(auth)')({
   beforeLoad: () => {
     const user = localStorage.getItem(LocalStorageKeys.USER)
     if (user) {
-      throw redirect({ to: '/lessons', replace: true })
+      throw redirect({ to: '/dashboard', replace: true })
     }
   },
   component: AuthLayout,

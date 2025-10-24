@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
   BookOutlined,
   DeleteOutlined,
@@ -27,31 +27,20 @@ import {
 } from 'antd'
 import { createFileRoute } from '@tanstack/react-router'
 import type { ColumnsType } from 'antd/es/table'
-import type {
-  School,
-  SchoolCreateInput,
-  SchoolDeleteInput,
-  SchoolUpdateInput,
-} from '@/types'
-import {
-  addSchool,
-  deleteSchool,
-  getSchoolsByUserId,
-  updateSchool,
-} from '@/server/schools'
-import { useAuth } from '@/lib/hooks/use-auth'
 import { useLang } from '@/lib/hooks/use-lang'
 
 const { Title, Text } = Typography
 
+interface School {
+  id: string
+  name: string
+  address: string
+  status: 'Active' | 'Inactive'
+}
+
 const Schools: React.FC = () => {
   const { t } = useLang()
-  console.log('render school')
-  // const router = useRouter()
   const { message } = AntApp.useApp()
-  const { user } = useAuth()
-  const userId = user?.id
-  // const { schools: initialSchools } = Route.useLoaderData()
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -59,107 +48,96 @@ const Schools: React.FC = () => {
   const [searchText, setSearchText] = useState('')
   const [selectedStatus, setSelectedStatus] = useState<string>('')
 
-  // State cho schools, khởi tạo từ loader
-  const [schools, setSchools] = useState<Array<School>>([])
+  // Mock data similar to students.tsx approach
+  const [schools, setSchools] = useState<Array<School>>([
+    {
+      id: 'SCH001',
+      name: 'Sunrise Elementary',
+      address: '123 Main St, City, State 12345',
+      status: 'Active',
+    },
+    {
+      id: 'SCH002',
+      name: 'Riverside Middle School',
+      address: '456 Oak Ave, City, State 12345',
+      status: 'Inactive',
+    },
+    {
+      id: 'SCH003',
+      name: 'Mountainview High',
+      address: '789 Pine St, City, State 12345',
+      status: 'Active',
+    },
+  ])
 
-  useEffect(() => {
-    if (userId) {
-      getSchoolsByUserId({ data: { userId } } as any).then(setSchools)
-    }
-  }, [userId])
+  const getStatusColor = (status: string) =>
+    status === 'Active' ? 'green' : 'orange'
 
-  // Status color mapping
-  const getStatusColor = (status: string) => {
-    return status === 'Active' ? 'green' : 'orange'
-  }
-
-  // Handle Add School
   const handleAddSchool = () => {
     setSelectedSchool(null)
     form.resetFields()
     setIsModalOpen(true)
   }
 
-  // Handle Edit School
   const handleEditSchool = (schoolData: School) => {
     setSelectedSchool(schoolData)
     form.setFieldsValue(schoolData)
     setIsModalOpen(true)
   }
 
-  // Handle View School
   const handleViewSchool = (schoolData: School) => {
     setSelectedSchool(schoolData)
     setIsDrawerOpen(true)
   }
 
-  // Handle Delete School
-  const handleDeleteSchool = async (schoolId: string) => {
+  const handleDeleteSchool = (schoolId: string) => {
     Modal.confirm({
       title: t('Are you sure you want to delete this school?'),
       content: t('This action cannot be undone.'),
       okText: t('Yes, Delete'),
       okType: 'danger',
       cancelText: t('Cancel'),
-      onOk: async () => {
-        try {
-          if (!userId) throw new Error('No user')
-          const deleteData: SchoolDeleteInput = { id: schoolId, userId }
-          await deleteSchool({ data: deleteData } as any)
-          const userSchools = await getSchoolsByUserId({
-            data: { userId },
-          } as any)
-          setSchools(userSchools)
-          message.success(t('School deleted successfully'))
-        } catch (err: any) {
-          message.error(err?.message || t('Delete failed'))
-        }
+      onOk: () => {
+        setSchools((prev) => prev.filter((s) => s.id !== schoolId))
+        message.success(t('School deleted successfully'))
       },
     })
   }
 
-  // Modal Submit
-  const handleModalOk = async () => {
-    try {
-      const values = await form.validateFields()
-      console.log(values)
-      if (!userId) throw new Error('No user')
+  const handleModalOk = () => {
+    form.validateFields().then((values) => {
       if (selectedSchool) {
-        const updateData: SchoolUpdateInput = {
-          ...selectedSchool,
-          ...values,
-          userId,
-        }
-        await updateSchool({ data: updateData } as any)
+        // update
+        setSchools((prev) =>
+          prev.map((s) =>
+            s.id === selectedSchool.id ? { ...s, ...values } : s,
+          ),
+        )
         message.success(t('School updated successfully'))
       } else {
-        const createData: SchoolCreateInput = { ...values, userId }
-        console.log(createData)
-        await addSchool({ data: createData } as any)
+        // add new
+        const newSchool: School = {
+          id: `SCH${String(schools.length + 1).padStart(3, '0')}`,
+          ...values,
+        }
+        setSchools((prev) => [...prev, newSchool])
         message.success(t('School added successfully'))
       }
-      const userSchools = await getSchoolsByUserId({ data: { userId } } as any)
-      setSchools(userSchools)
       setIsModalOpen(false)
       form.resetFields()
-    } catch (err: any) {
-      if (err?.errorFields) return // validation error
-      message.error(err?.message || t('Operation failed'))
-    }
+    })
   }
 
-  // Filter schools
   const filteredSchools = schools.filter((school) => {
+    const q = searchText.toLowerCase()
     const matchesSearch =
-      school.name.toLowerCase().includes(searchText.toLowerCase()) ||
-      school.address.toLowerCase().includes(searchText.toLowerCase())
-
+      school.name.toLowerCase().includes(q) ||
+      school.address.toLowerCase().includes(q) ||
+      school.id.toLowerCase().includes(q)
     const matchesStatus = !selectedStatus || school.status === selectedStatus
-
     return matchesSearch && matchesStatus
   })
 
-  // Table columns
   const columns: ColumnsType<School> = [
     {
       title: t('School Name'),
@@ -173,18 +151,12 @@ const Schools: React.FC = () => {
         </div>
       ),
     },
-    {
-      title: t('Address'),
-      dataIndex: 'address',
-      key: 'address',
-    },
+    { title: t('Address'), dataIndex: 'address', key: 'address' },
     {
       title: t('Status'),
       dataIndex: 'status',
       key: 'status',
-      render: (text) => (
-        <Tag color={text === 'Active' ? 'green' : 'orange'}>{t(text)}</Tag>
-      ),
+      render: (text) => <Tag color={getStatusColor(text)}>{t(text)}</Tag>,
     },
     {
       title: t('Actions'),
@@ -214,7 +186,6 @@ const Schools: React.FC = () => {
 
   return (
     <div>
-      {/* Header */}
       <div style={{ marginBottom: 24 }}>
         <Title level={2}>{t('Schools')}</Title>
         <Text type="secondary">
@@ -222,7 +193,6 @@ const Schools: React.FC = () => {
         </Text>
       </div>
 
-      {/* Summary Cards */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col xs={24} sm={8}>
           <Card>
@@ -245,7 +215,6 @@ const Schools: React.FC = () => {
       </Row>
 
       <Card>
-        {/* Filters and Search */}
         <div
           style={{
             marginBottom: 16,
@@ -281,7 +250,6 @@ const Schools: React.FC = () => {
           </Button>
         </div>
 
-        {/* Table */}
         <Table
           columns={columns}
           dataSource={filteredSchools}
@@ -297,7 +265,6 @@ const Schools: React.FC = () => {
         />
       </Card>
 
-      {/* Add/Edit Modal */}
       <Modal
         title={selectedSchool ? t('Edit School') : t('Add New School')}
         open={isModalOpen}
@@ -305,7 +272,11 @@ const Schools: React.FC = () => {
         onCancel={() => setIsModalOpen(false)}
         width={600}
       >
-        <Form form={form} layout="vertical">
+        <Form
+          form={form}
+          layout="vertical"
+          initialValues={{ status: 'Active' }}
+        >
           <Form.Item
             label={t('School Name')}
             name="name"
@@ -333,7 +304,6 @@ const Schools: React.FC = () => {
         </Form>
       </Modal>
 
-      {/* View Drawer */}
       <Drawer
         title={t('School Details')}
         open={isDrawerOpen}
@@ -375,10 +345,6 @@ const Schools: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/schools')({
-  // loader: async () => {
-  // 	const schools = await getSchools({data: {userId: "01984024-a714-7093-9587-8d64594ce73e"}})
-  // 	return { schools }
-  // },
+export const Route = createFileRoute('/(main)/(teacher)/schools')({
   component: Schools,
 })
