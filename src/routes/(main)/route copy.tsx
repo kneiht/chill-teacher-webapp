@@ -40,8 +40,8 @@ import {
 import type { MenuProps } from 'antd'
 
 // Import Components
-import { Logo } from '@/components/ui/Logo'
-import { ThemeLangControl } from '@/components/ui/ThemeLangControl'
+import { Logo } from '@/lib/components/ui/Logo'
+import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
 
 // Import contexts
 import { useAuth } from '@/lib/hooks/use-auth'

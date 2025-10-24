@@ -22,8 +22,8 @@ import {
 import { useResponsive } from 'antd-style'
 import { useState } from 'react'
 import { Link, useRouter, useRouterState } from '@tanstack/react-router'
-import { Logo } from '@/components/ui/Logo'
-import { ThemeLangControl } from '@/components/ui/ThemeLangControl'
+import { Logo } from '@/lib/components/ui/Logo'
+import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
 
 const { Text } = Typography
 
