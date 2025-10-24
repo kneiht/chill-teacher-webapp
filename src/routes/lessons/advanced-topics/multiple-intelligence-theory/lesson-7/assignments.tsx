@@ -22,13 +22,12 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
         </p>
         <ol className="text-3xl text-left text-gray-800 space-y-8  list-decimal list-inside">
           <li>Xem video hướng dẫn viết.</li>
-          <a href="https://vimeo.com/1128712432/757356c90b?share=copy&fl=sv&fe=ci">
-            https://vimeo.com/1128712432/757356c90b?share=copy&fl=sv&fe=ci
+          <a href="https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci">
+            https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci
           </a>
-          <li>Viết bài .</li>
           <li>
-            Thực hiện bài test multiple intelligences bên dưới và gửi thầy kết
-            quả.
+            Viết bài vào vở và chụp hình bài viết cho thầy (Không nhận bài đánh
+            máy).
           </li>
         </ol>
         <p className="text-xl text-gray-600 mt-6 italic">

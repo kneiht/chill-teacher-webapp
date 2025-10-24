@@ -1,0 +1,1983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listening Exercise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #111827;
+        color: #d1d5db;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+          Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #1f2937;
+        border-radius: 1rem;
+        border: 1px solid #374151;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .tab-btn {
+        color: #9ca3af;
+        border-bottom: 2px solid transparent;
+      }
+      .tab-btn.active {
+        color: #c4b5fd;
+        border-bottom-color: #8b5cf6;
+      }
+      .question-card {
+        background-color: #374151;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        border-left: 4px solid transparent;
+        transition: border-color 0.3s;
+      }
+      .question-card.correct {
+        border-left-color: #34d399;
+      }
+      .question-card.incorrect {
+        border-left-color: #f87171;
+      }
+      .feedback {
+        font-weight: 500;
+      }
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: none;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .btn-primary {
+        background-color: #4f46e5;
+        color: white;
+      }
+      .btn-primary:hover {
+        background-color: #4338ca;
+      }
+      .btn-secondary {
+        background-color: #4b5563;
+        color: white;
+      }
+      .btn-secondary:hover {
+        background-color: #374151;
+      }
+      .form-input,
+      textarea {
+        background-color: #1f2937;
+        border: 1px solid #4b5563;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        color: #d1d5db;
+        width: 100%;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .form-input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 2px #4f46e560;
+      }
+      .form-radio {
+        accent-color: #4f46e5;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="container">
+      <h1 class="text-3xl font-bold mb-2 text-white">Listening Exercise</h1>
+      <p class="mb-6 text-gray-400">
+        Complete the exercises in each tab below.
+      </p>
+
+      <div class="border-b border-gray-600 mb-6">
+        <nav class="flex -mb-px space-x-6">
+          <button
+            class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg transition"
+            data-tab="multiple-choice"
+          >
+            Multiple Choice
+          </button>
+
+          <button
+            class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg transition"
+            data-tab="true-false"
+          >
+            True / False
+          </button>
+
+          <button
+            class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg transition"
+            data-tab="dictation"
+          >
+            Dictation
+          </button>
+        </nav>
+      </div>
+
+      <div id="tab-content-container">
+        <div id="multiple-choice" class="tab-content hidden">
+          <div class="mb-8 p-4 bg-gray-800 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2 text-white">Main Audio</h2>
+            <audio controls class="w-full">
+              <source src="assets/mc_main.wav" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <div class="questions-container space-y-6">
+            <div id="mc_q-1" class="question-card">
+              <p class="font-semibold">
+                1. What did people a long time ago believe intelligence
+                primarily meant?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q1"
+                    value="Being good at sports"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Being good at sports</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q1"
+                    value="Being good at language or math"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Being good at language or math</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q1"
+                    value="Understanding emotions"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Understanding emotions</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q1"
+                    value="Thinking in pictures"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Thinking in pictures</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-2" class="question-card">
+              <p class="font-semibold">
+                2. Who created the IQ tests, according to the script?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q2"
+                    value="Howard Gardner"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Howard Gardner</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q2"
+                    value="Alfred Binet"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Alfred Binet</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q2"
+                    value="Ms. Lan"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Ms. Lan</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q2"
+                    value="Nam"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Nam</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-3" class="question-card">
+              <p class="font-semibold">
+                3. Who stated that IQ is too narrow and proposed many kinds of
+                intelligence?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q3"
+                    value="Alfred Binet"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Alfred Binet</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q3"
+                    value="Ms. Lan"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Ms. Lan</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q3"
+                    value="Linh"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Linh</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q3"
+                    value="Professor Howard Gardner"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Professor Howard Gardner</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-4" class="question-card">
+              <p class="font-semibold">
+                4. How many main types of intelligence did Gardner initially
+                identify?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q4"
+                    value="Five"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Five</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q4"
+                    value="Six"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Six</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q4"
+                    value="Seven"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Seven</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q4"
+                    value="Eight"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Eight</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-5" class="question-card">
+              <p class="font-semibold">
+                5. Which type of intelligence is described as 'being good with
+                words and languages'?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q5"
+                    value="Logical-mathematical intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Logical-mathematical intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q5"
+                    value="Musical intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Musical intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q5"
+                    value="Linguistic intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Linguistic intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q5"
+                    value="Spatial intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Spatial intelligence</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-6" class="question-card">
+              <p class="font-semibold">
+                6. Nam believes he has which type of intelligence because he
+                loves playing the guitar?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q6"
+                    value="Bodily-kinesthetic intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Bodily-kinesthetic intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q6"
+                    value="Interpersonal intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Interpersonal intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q6"
+                    value="Musical intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Musical intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q6"
+                    value="Intrapersonal intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Intrapersonal intelligence</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-7" class="question-card">
+              <p class="font-semibold">
+                7. Linh likes working with classmates on group projects, which
+                Ms. Lan says demonstrates what kind of intelligence?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q7"
+                    value="Intrapersonal intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Intrapersonal intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q7"
+                    value="Naturalist intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Naturalist intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q7"
+                    value="Interpersonal intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Interpersonal intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q7"
+                    value="Logical-mathematical intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Logical-mathematical intelligence</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-8" class="question-card">
+              <p class="font-semibold">
+                8. An loves hiking and watching animals. What type of
+                intelligence does Ms. Lan suggest this is?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q8"
+                    value="Bodily-kinesthetic intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Bodily-kinesthetic intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q8"
+                    value="Spatial intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Spatial intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q8"
+                    value="Naturalist intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Naturalist intelligence</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q8"
+                    value="Linguistic intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Linguistic intelligence</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-9" class="question-card">
+              <p class="font-semibold">
+                9. What is the implication of Multiple Intelligence Theory for
+                teaching methods?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q9"
+                    value="Teachers should only focus on language and math"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Teachers should only focus on language and math</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q9"
+                    value="All students should learn in the same way"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>All students should learn in the same way</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q9"
+                    value="Teachers should only use IQ tests to measure intelligence"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span
+                    >Teachers should only use IQ tests to measure
+                    intelligence</span
+                  >
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q9"
+                    value="Teachers should use different activities so every student can learn in their best way"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span
+                    >Teachers should use different activities so every student
+                    can learn in their best way</span
+                  >
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="mc_q-10" class="question-card">
+              <p class="font-semibold">
+                10. According to Ms. Lan, is intelligence fixed?
+              </p>
+              <div class="space-y-2 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q10"
+                    value="Yes, it is fixed from birth."
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Yes, it is fixed from birth.</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q10"
+                    value="No, it can grow with practice and experience."
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>No, it can grow with practice and experience.</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q10"
+                    value="Only some types of intelligence can grow."
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>Only some types of intelligence can grow.</span>
+                </label>
+
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mc_q10"
+                    value="It only grows until adulthood."
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>It only grows until adulthood.</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+          </div>
+
+          <div
+            class="results-container my-6 p-4 text-center font-bold text-lg rounded-lg bg-indigo-900/50 text-white"
+            style="display: none"
+          ></div>
+
+          <div
+            class="script-container mt-8 p-4 bg-gray-800 rounded-lg"
+            style="display: none"
+          >
+            <h2 class="text-xl font-semibold mb-2 text-white">Full Script</h2>
+            <p
+              class="script-content text-gray-300 whitespace-pre-wrap leading-relaxed"
+            ></p>
+          </div>
+        </div>
+
+        <div id="fill-in-the-blank" class="tab-content hidden">
+          <div class="questions-container space-y-6">
+            <div id="fb_q-1" class="question-card">
+              <p class="font-semibold">1. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_1.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                Today, we’re going to talk about Multiple Intelligence
+                <span class="font-bold tracking-widest text-gray-400">____</span
+                >.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-2" class="question-card">
+              <p class="font-semibold">2. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_2.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                A long time ago, people believed that being
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                meant being good at language or math.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-3" class="question-card">
+              <p class="font-semibold">3. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_3.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                This idea came from IQ
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                — created by Alfred Binet in France.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-4" class="question-card">
+              <p class="font-semibold">4. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_4.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                Gardner said there are
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                main types of intelligence.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-5" class="question-card">
+              <p class="font-semibold">5. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_5.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                intelligence – being good with words and languages.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-6" class="question-card">
+              <p class="font-semibold">6. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_6.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                Bodily-kinesthetic intelligence – learning through
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                and physical activity.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-7" class="question-card">
+              <p class="font-semibold">7. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_7.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                intelligence – understanding and working well with other people.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-8" class="question-card">
+              <p class="font-semibold">8. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_8.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                Your musical intelligence helps you
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                feelings through sound.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-9" class="question-card">
+              <p class="font-semibold">9. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_9.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                Gardner said people don’t all
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                in the same way.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="fb_q-10" class="question-card">
+              <p class="font-semibold">10. Listen and fill in the blank.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/fb_q_10.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <p class="my-2 text-lg">
+                Intelligence can
+                <span class="font-bold tracking-widest text-gray-400"
+                  >____</span
+                >
+                with practice and experience.
+              </p>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your answer..."
+              />
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+          </div>
+
+          <div
+            class="results-container my-6 p-4 text-center font-bold text-lg rounded-lg bg-indigo-900/50 text-white"
+            style="display: none"
+          ></div>
+
+          <div
+            class="script-container mt-8 p-4 bg-gray-800 rounded-lg"
+            style="display: none"
+          >
+            <h2 class="text-xl font-semibold mb-2 text-white">Full Script</h2>
+            <p
+              class="script-content text-gray-300 whitespace-pre-wrap leading-relaxed"
+            ></p>
+          </div>
+        </div>
+
+        <div id="true-false" class="tab-content hidden">
+          <div class="mb-8 p-4 bg-gray-800 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2 text-white">Main Audio</h2>
+            <audio controls class="w-full">
+              <source src="assets/tf_main.wav" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <div class="questions-container space-y-6">
+            <div id="tf_q-1" class="question-card">
+              <p class="font-semibold">
+                1. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_1.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q1"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q1"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-2" class="question-card">
+              <p class="font-semibold">
+                2. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_2.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q2"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q2"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-3" class="question-card">
+              <p class="font-semibold">
+                3. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_3.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q3"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q3"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-4" class="question-card">
+              <p class="font-semibold">
+                4. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_4.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q4"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q4"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-5" class="question-card">
+              <p class="font-semibold">
+                5. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_5.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q5"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q5"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-6" class="question-card">
+              <p class="font-semibold">
+                6. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_6.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q6"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q6"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-7" class="question-card">
+              <p class="font-semibold">
+                7. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_7.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q7"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q7"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-8" class="question-card">
+              <p class="font-semibold">
+                8. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_8.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q8"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q8"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-9" class="question-card">
+              <p class="font-semibold">
+                9. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_9.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q9"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q9"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="tf_q-10" class="question-card">
+              <p class="font-semibold">
+                10. Listen to the statement and decide if it's true or false.
+              </p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/tf_q_10.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="flex space-x-4 mt-2">
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q10"
+                    value="true"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>True</span>
+                </label>
+                <label
+                  class="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-600 transition cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="tf_q10"
+                    value="false"
+                    class="form-radio h-4 w-4"
+                  />
+                  <span>False</span>
+                </label>
+              </div>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+          </div>
+
+          <div
+            class="results-container my-6 p-4 text-center font-bold text-lg rounded-lg bg-indigo-900/50 text-white"
+            style="display: none"
+          ></div>
+
+          <div
+            class="script-container mt-8 p-4 bg-gray-800 rounded-lg"
+            style="display: none"
+          >
+            <h2 class="text-xl font-semibold mb-2 text-white">Full Script</h2>
+            <p
+              class="script-content text-gray-300 whitespace-pre-wrap leading-relaxed"
+            ></p>
+          </div>
+        </div>
+
+        <div id="dictation" class="tab-content hidden">
+          <div class="questions-container space-y-6">
+            <div id="dict_q-1" class="question-card">
+              <p class="font-semibold">1. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_1.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-2" class="question-card">
+              <p class="font-semibold">2. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_2.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-3" class="question-card">
+              <p class="font-semibold">3. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_3.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-4" class="question-card">
+              <p class="font-semibold">4. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_4.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-5" class="question-card">
+              <p class="font-semibold">5. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_5.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-6" class="question-card">
+              <p class="font-semibold">6. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_6.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-7" class="question-card">
+              <p class="font-semibold">7. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_7.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-8" class="question-card">
+              <p class="font-semibold">8. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_8.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-9" class="question-card">
+              <p class="font-semibold">9. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_9.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+
+            <div id="dict_q-10" class="question-card">
+              <p class="font-semibold">10. Listen and type what you hear.</p>
+
+              <audio controls class="my-2 w-full">
+                <source src="assets/dict_q_10.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+
+              <textarea
+                class="form-input w-full mt-2"
+                rows="3"
+                placeholder="Type the sentence..."
+              ></textarea>
+
+              <div class="feedback text-amber-300 mt-2 text-sm"></div>
+            </div>
+          </div>
+
+          <div
+            class="results-container my-6 p-4 text-center font-bold text-lg rounded-lg bg-indigo-900/50 text-white"
+            style="display: none"
+          ></div>
+
+          <div
+            class="script-container mt-8 p-4 bg-gray-800 rounded-lg"
+            style="display: none"
+          >
+            <h2 class="text-xl font-semibold mb-2 text-white">Full Script</h2>
+            <p
+              class="script-content text-gray-300 whitespace-pre-wrap leading-relaxed"
+            ></p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center mt-8 pt-6 border-t border-gray-600 gap-4"
+      >
+        <button id="check-answers-btn" class="btn btn-primary w-full sm:w-auto">
+          Check Answers
+        </button>
+        <button
+          id="show-answers-btn"
+          class="btn btn-secondary w-full sm:w-auto"
+          style="display: none"
+        >
+          Show Correct Answer
+        </button>
+        <button
+          id="show-script-btn"
+          class="btn btn-secondary w-full sm:w-auto"
+          style="display: none"
+        >
+          Show Script
+        </button>
+      </div>
+    </div>
+
+    <script>
+      window.allExercisesData = [
+        {
+          type: 'multiple-choice',
+          script:
+            'Ms. Lan: Good morning, everyone.Today, we’re going to talk about Multiple Intelligence Theory.Have you heard about it before?Linh: I think it’s about people being smart in different ways, right?Ms. Lan: That’s correct, Linh.A long time ago, people believed that being intelligent meant being good at language or math.This idea came from IQ tests — created by Alfred Binet in France.But later, Professor Howard Gardner from Harvard said IQ is too narrow.He believed there are many kinds of intelligence.An: How many kinds, teacher?Ms. Lan: Gardner said there are eight main types of intelligence.Let’s look at them one by one.Linguistic intelligence – being good with words and languages.Logical-mathematical intelligence – being good with numbers and problem-solving.Musical intelligence – understanding rhythm, sound, and music.Spatial intelligence – thinking in pictures and shapes.Bodily-kinesthetic intelligence – learning through movement and physical activity.Interpersonal intelligence – understanding and working well with other people.Intrapersonal intelligence – understanding yourself and your emotions.Naturalist intelligence – understanding nature and the environment.Nam: I think I have musical intelligence. I love playing the guitar.Ms. Lan: That’s a great example, Nam!Your musical intelligence helps you express feelings through sound.Linh: I like working with my classmates on group projects.Maybe I have interpersonal intelligence.Ms. Lan: Very good, Linh. You understand people’s feelings — that’s interpersonal intelligence.An: I love hiking and watching animals. Is that naturalist intelligence?Ms. Lan: Yes, An! Gardner even said there might also be spiritual or existential intelligence,but he wasn’t sure about them yet.Nam: So, teacher, does that mean everyone learns differently?Ms. Lan: Exactly.Gardner said people don’t all learn in the same way.That’s why teachers should use different activities — reading, teamwork, problem-solving, art, or music —so every student can learn in their best way.Linh: That makes sense!Sometimes I understand better when I draw instead of just reading.Ms. Lan: That’s a perfect example.When we use different ways to learn, we can all do better.An: So intelligence isn’t fixed?Ms. Lan: That’s right.Intelligence can grow with practice and experience.Everyone has different strengths, and school should help every kind of mind succeed.Nam: I like that idea!It means we are all smart in our own way.Ms. Lan: Exactly, Nam.That’s the message of Multiple Intelligence Theory.',
+          questions: [
+            {
+              correctAnswer: 'Being good at language or math',
+              id: 1,
+              options: [
+                'Being good at sports',
+                'Being good at language or math',
+                'Understanding emotions',
+                'Thinking in pictures',
+              ],
+              questionText:
+                'What did people a long time ago believe intelligence primarily meant?',
+            },
+            {
+              correctAnswer: 'Alfred Binet',
+              id: 2,
+              options: ['Howard Gardner', 'Alfred Binet', 'Ms. Lan', 'Nam'],
+              questionText:
+                'Who created the IQ tests, according to the script?',
+            },
+            {
+              correctAnswer: 'Professor Howard Gardner',
+              id: 3,
+              options: [
+                'Alfred Binet',
+                'Ms. Lan',
+                'Linh',
+                'Professor Howard Gardner',
+              ],
+              questionText:
+                'Who stated that IQ is too narrow and proposed many kinds of intelligence?',
+            },
+            {
+              correctAnswer: 'Eight',
+              id: 4,
+              options: ['Five', 'Six', 'Seven', 'Eight'],
+              questionText:
+                'How many main types of intelligence did Gardner initially identify?',
+            },
+            {
+              correctAnswer: 'Linguistic intelligence',
+              id: 5,
+              options: [
+                'Logical-mathematical intelligence',
+                'Musical intelligence',
+                'Linguistic intelligence',
+                'Spatial intelligence',
+              ],
+              questionText:
+                "Which type of intelligence is described as 'being good with words and languages'?",
+            },
+            {
+              correctAnswer: 'Musical intelligence',
+              id: 6,
+              options: [
+                'Bodily-kinesthetic intelligence',
+                'Interpersonal intelligence',
+                'Musical intelligence',
+                'Intrapersonal intelligence',
+              ],
+              questionText:
+                'Nam believes he has which type of intelligence because he loves playing the guitar?',
+            },
+            {
+              correctAnswer: 'Interpersonal intelligence',
+              id: 7,
+              options: [
+                'Intrapersonal intelligence',
+                'Naturalist intelligence',
+                'Interpersonal intelligence',
+                'Logical-mathematical intelligence',
+              ],
+              questionText:
+                'Linh likes working with classmates on group projects, which Ms. Lan says demonstrates what kind of intelligence?',
+            },
+            {
+              correctAnswer: 'Naturalist intelligence',
+              id: 8,
+              options: [
+                'Bodily-kinesthetic intelligence',
+                'Spatial intelligence',
+                'Naturalist intelligence',
+                'Linguistic intelligence',
+              ],
+              questionText:
+                'An loves hiking and watching animals. What type of intelligence does Ms. Lan suggest this is?',
+            },
+            {
+              correctAnswer:
+                'Teachers should use different activities so every student can learn in their best way',
+              id: 9,
+              options: [
+                'Teachers should only focus on language and math',
+                'All students should learn in the same way',
+                'Teachers should only use IQ tests to measure intelligence',
+                'Teachers should use different activities so every student can learn in their best way',
+              ],
+              questionText:
+                'What is the implication of Multiple Intelligence Theory for teaching methods?',
+            },
+            {
+              correctAnswer: 'No, it can grow with practice and experience.',
+              id: 10,
+              options: [
+                'Yes, it is fixed from birth.',
+                'No, it can grow with practice and experience.',
+                'Only some types of intelligence can grow.',
+                'It only grows until adulthood.',
+              ],
+              questionText: 'According to Ms. Lan, is intelligence fixed?',
+            },
+          ],
+        },
+        {
+          type: 'fill-in-the-blank',
+          script:
+            'Ms. Lan: Good morning, everyone.Today, we’re going to talk about Multiple Intelligence Theory.Have you heard about it before?Linh: I think it’s about people being smart in different ways, right?Ms. Lan: That’s correct, Linh.A long time ago, people believed that being intelligent meant being good at language or math.This idea came from IQ tests — created by Alfred Binet in France.But later, Professor Howard Gardner from Harvard said IQ is too narrow.He believed there are many kinds of intelligence.An: How many kinds, teacher?Ms. Lan: Gardner said there are eight main types of intelligence.Let’s look at them one by one.Linguistic intelligence – being good with words and languages.Logical-mathematical intelligence – being good with numbers and problem-solving.Musical intelligence – understanding rhythm, sound, and music.Spatial intelligence – thinking in pictures and shapes.Bodily-kinesthetic intelligence – learning through movement and physical activity.Interpersonal intelligence – understanding and working well with other people.Intrapersonal intelligence – understanding yourself and your emotions.Naturalist intelligence – understanding nature and the environment.Nam: I think I have musical intelligence. I love playing the guitar.Ms. Lan: That’s a great example, Nam!Your musical intelligence helps you express feelings through sound.Linh: I like working with my classmates on group projects.Maybe I have interpersonal intelligence.Ms. Lan: Very good, Linh. You understand people’s feelings — that’s interpersonal intelligence.An: I love hiking and watching animals. Is that naturalist intelligence?Ms. Lan: Yes, An! Gardner even said there might also be spiritual or existential intelligence,but he wasn’t sure about them yet.Nam: So, teacher, does that mean everyone learns differently?Ms. Lan: Exactly.Gardner said people don’t all learn in the same way.That’s why teachers should use different activities — reading, teamwork, problem-solving, art, or music —so every student can learn in their best way.Linh: That makes sense!Sometimes I understand better when I draw instead of just reading.Ms. Lan: That’s a perfect example.When we use different ways to learn, we can all do better.An: So intelligence isn’t fixed?Ms. Lan: That’s right.Intelligence can grow with practice and experience.Everyone has different strengths, and school should help every kind of mind succeed.Nam: I like that idea!It means we are all smart in our own way.Ms. Lan: Exactly, Nam.That’s the message of Multiple Intelligence Theory.',
+          questions: [
+            {
+              audioScript:
+                'Today, we’re going to talk about Multiple Intelligence Theory.',
+              correctAnswer: 'Theory',
+              id: 1,
+              questionText:
+                'Today, we’re going to talk about Multiple Intelligence ____.',
+            },
+            {
+              audioScript:
+                'A long time ago, people believed that being intelligent meant being good at language or math.',
+              correctAnswer: 'intelligent',
+              id: 2,
+              questionText:
+                'A long time ago, people believed that being ____ meant being good at language or math.',
+            },
+            {
+              audioScript:
+                'This idea came from IQ tests — created by Alfred Binet in France.',
+              correctAnswer: 'tests',
+              id: 3,
+              questionText:
+                'This idea came from IQ ____ — created by Alfred Binet in France.',
+            },
+            {
+              audioScript:
+                'Gardner said there are eight main types of intelligence.',
+              correctAnswer: 'eight',
+              id: 4,
+              questionText:
+                'Gardner said there are ____ main types of intelligence.',
+            },
+            {
+              audioScript:
+                'Linguistic intelligence – being good with words and languages.',
+              correctAnswer: 'Linguistic',
+              id: 5,
+              questionText:
+                '____ intelligence – being good with words and languages.',
+            },
+            {
+              audioScript:
+                'Bodily-kinesthetic intelligence – learning through movement and physical activity.',
+              correctAnswer: 'movement',
+              id: 6,
+              questionText:
+                'Bodily-kinesthetic intelligence – learning through ____ and physical activity.',
+            },
+            {
+              audioScript:
+                'Interpersonal intelligence – understanding and working well with other people.',
+              correctAnswer: 'Interpersonal',
+              id: 7,
+              questionText:
+                '____ intelligence – understanding and working well with other people.',
+            },
+            {
+              audioScript:
+                'Your musical intelligence helps you express feelings through sound.',
+              correctAnswer: 'express',
+              id: 8,
+              questionText:
+                'Your musical intelligence helps you ____ feelings through sound.',
+            },
+            {
+              audioScript:
+                'Gardner said people don’t all learn in the same way.',
+              correctAnswer: 'learn',
+              id: 9,
+              questionText:
+                'Gardner said people don’t all ____ in the same way.',
+            },
+            {
+              audioScript:
+                'Intelligence can grow with practice and experience.',
+              correctAnswer: 'grow',
+              id: 10,
+              questionText:
+                'Intelligence can ____ with practice and experience.',
+            },
+          ],
+        },
+        {
+          type: 'true-false',
+          script:
+            'Ms. Lan: Good morning, everyone.Today, we\n’re going to talk about Multiple Intelligence Theory.Have you heard about it before?Linh: I think it\n’s about people being smart in different ways, right?Ms. Lan: That\n’s correct, Linh.A long time ago, people believed that being intelligent meant being good at language or math.This idea came from IQ tests — created by Alfred Binet in France.But later, Professor Howard Gardner from Harvard said IQ is too narrow.He believed there are many kinds of intelligence.An: How many kinds, teacher?Ms. Lan: Gardner said there are eight main types of intelligence.Let\n’s look at them one by one.Linguistic intelligence – being good with words and languages.Logical-mathematical intelligence – being good with numbers and problem-solving.Musical intelligence – understanding rhythm, sound, and music.Spatial intelligence – thinking in pictures and shapes.Bodily-kinesthetic intelligence – learning through movement and physical activity.Interpersonal intelligence – understanding and working well with other people.Intrapersonal intelligence – understanding yourself and your emotions.Naturalist intelligence – understanding nature and the environment.Nam: I think I have musical intelligence. I love playing the guitar.Ms. Lan: That\n’s a great example, Nam!Your musical intelligence helps you express feelings through sound.Linh: I like working with my classmates on group projects.Maybe I have interpersonal intelligence.Ms. Lan: Very good, Linh. You understand people\n’s feelings — that\n’s interpersonal intelligence.An: I love hiking and watching animals. Is that naturalist intelligence?Ms. Lan: Yes, An! Gardner even said there might also be spiritual or existential intelligence,but he wasn\n’t sure about them yet.Nam: So, teacher, does that mean everyone learns differently?Ms. Lan: Exactly.Gardner said people don\n’t all learn in the same way.That\n’s why teachers should use different activities — reading, teamwork, problem-solving, art, or music —so every student can learn in their best way.Linh: That makes sense!Sometimes I understand better when I draw instead of just reading.Ms. Lan: That\n’s a perfect example.When we use different ways to learn, we can all do better.An: So intelligence isn\n’t fixed?Ms. Lan: That\n’s right.Intelligence can grow with practice and experience.Everyone has different strengths, and school should help every kind of mind succeed.Nam: I like that idea!It means we are all smart in our own way.Ms. Lan: Exactly, Nam.That\n’s the message of Multiple Intelligence Theory.',
+          questions: [
+            {
+              audioScript:
+                'IQ tests were first created by Alfred Binet in France.',
+              correctAnswer: true,
+              id: 1,
+              statement:
+                'IQ tests were first created by Alfred Binet in France.',
+            },
+            {
+              audioScript:
+                'Professor Howard Gardner believed that IQ tests were too broad.',
+              correctAnswer: false,
+              id: 2,
+              statement:
+                'Professor Howard Gardner believed that IQ tests were too broad.',
+            },
+            {
+              audioScript:
+                'Gardner proposed there are ten main types of intelligence.',
+              correctAnswer: false,
+              id: 3,
+              statement:
+                'Gardner proposed there are ten main types of intelligence.',
+            },
+            {
+              audioScript:
+                'Linguistic intelligence is described as being good with numbers and problem-solving.',
+              correctAnswer: false,
+              id: 4,
+              statement:
+                'Linguistic intelligence is described as being good with numbers and problem-solving.',
+            },
+            {
+              audioScript:
+                'Nam believes he has musical intelligence because he loves playing the guitar.',
+              correctAnswer: true,
+              id: 5,
+              statement:
+                'Nam believes he has musical intelligence because he loves playing the guitar.',
+            },
+            {
+              audioScript:
+                "Linh's ability to work well with classmates on group projects is an example of intrapersonal intelligence.",
+              correctAnswer: false,
+              id: 6,
+              statement:
+                "Linh's ability to work well with classmates on group projects is an example of intrapersonal intelligence.",
+            },
+            {
+              audioScript:
+                "An's love for hiking and watching animals is a sign of naturalist intelligence.",
+              correctAnswer: true,
+              id: 7,
+              statement:
+                "An's love for hiking and watching animals is a sign of naturalist intelligence.",
+            },
+            {
+              audioScript:
+                'Gardner was certain about spiritual or existential intelligence as additional types.',
+              correctAnswer: false,
+              id: 8,
+              statement:
+                'Gardner was certain about spiritual or existential intelligence as additional types.',
+            },
+            {
+              audioScript:
+                'The theory suggests that all people learn in the same way.',
+              correctAnswer: false,
+              id: 9,
+              statement:
+                'The theory suggests that all people learn in the same way.',
+            },
+            {
+              audioScript:
+                'Intelligence is fixed and cannot grow with practice.',
+              correctAnswer: false,
+              id: 10,
+              statement: 'Intelligence is fixed and cannot grow with practice.',
+            },
+          ],
+        },
+        {
+          type: 'dictation',
+          script:
+            "Today, we're going to talk about Multiple Intelligence Theory. A long time ago, people believed intelligence meant being good at language or math. Professor Howard Gardner from Harvard said IQ tests were too narrow. Gardner stated there are eight main types of intelligence. Linguistic intelligence means being good with words and languages. Bodily-kinesthetic intelligence involves learning through movement and physical activity. Interpersonal intelligence helps you understand and work well with other people. Naturalist intelligence involves understanding nature and the environment. Gardner emphasized that people do not all learn in the same way. Intelligence can grow with practice and experience.",
+          questions: [
+            {
+              audioScript:
+                "Today, we're going to talk about Multiple Intelligence Theory.",
+              id: 1,
+            },
+            {
+              audioScript:
+                'A long time ago, people believed intelligence meant being good at language or math.',
+              id: 2,
+            },
+            {
+              audioScript:
+                'Professor Howard Gardner from Harvard said IQ tests were too narrow.',
+              id: 3,
+            },
+            {
+              audioScript:
+                'Gardner stated there are eight main types of intelligence.',
+              id: 4,
+            },
+            {
+              audioScript:
+                'Linguistic intelligence means being good with words and languages.',
+              id: 5,
+            },
+            {
+              audioScript:
+                'Bodily-kinesthetic intelligence involves learning through movement and physical activity.',
+              id: 6,
+            },
+            {
+              audioScript:
+                'Interpersonal intelligence helps you understand and work well with other people.',
+              id: 7,
+            },
+            {
+              audioScript:
+                'Naturalist intelligence involves understanding nature and the environment.',
+              id: 8,
+            },
+            {
+              audioScript:
+                'Gardner emphasized that people do not all learn in the same way.',
+              id: 9,
+            },
+            {
+              audioScript:
+                'Intelligence can grow with practice and experience.',
+              id: 10,
+            },
+          ],
+        },
+      ]
+      window.scriptPassword = 'anhngugen8'
+      window.audioSpeed = 1
+      window.EXERCISE_PREFIX = {
+        'multiple-choice': 'mc',
+        'fill-in-the-blank': 'fb',
+        'true-false': 'tf',
+        dictation: 'dict',
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

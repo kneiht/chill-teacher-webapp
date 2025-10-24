@@ -46,6 +46,12 @@ const lessons = [
     path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-7/',
     imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
   },
+  {
+    title: 'Multiple Intelligence Theory',
+    description: 'Lesson 8: Presentation',
+    path: '../../lessons/advanced-topics/multiple-intelligence-theory/lesson-8/',
+    imageUrl: '/backgrounds/multiple-intelligence-theory.webp',
+  },
 ]
 
 export const Route = createFileRoute('/(main)/lessons/advanced')({
