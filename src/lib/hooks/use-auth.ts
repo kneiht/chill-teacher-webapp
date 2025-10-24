@@ -1,12 +1,9 @@
-// Cookies
-import Cookies from 'js-cookie'
-
 // Hooks
 import { useStore } from '@tanstack/react-store'
 import { useEffect } from 'react'
 
 // Types
-import type { ApiResponse, UserPublic } from '@/lib/types'
+import type { ApiResponse } from '@/lib/types'
 
 // Stores
 import {
@@ -25,25 +22,33 @@ import {
 } from '@/lib/utils/local-storage-helpers'
 
 // Fetches
-import { fetchLogin, fetchRegister } from '@/lib/fetches/auth.fetch'
-import type { AuthResponseData } from '../types/auth'
+import {
+  fetchLogin,
+  fetchMe,
+  fetchRefresh,
+  fetchRegister,
+  type AuthSuccessData,
+} from '@/lib/fetches/auth.fetch'
 
 // Return type for this hook
 interface AuthContextType {
-  user: UserPublic | null
+  user: AuthSuccessData['user'] | null
   isLoading: boolean
   isLoggedIn: boolean
   login: (
-    email: string,
+    login: string,
     password: string,
-  ) => Promise<ApiResponse<AuthResponseData>>
+  ) => Promise<ApiResponse<AuthSuccessData>>
   signup: (
-    name: string,
-    email: string,
+    display_name: string | undefined,
+    username: string | undefined,
+    email: string | undefined,
     password: string,
-  ) => Promise<ApiResponse<AuthResponseData>>
+  ) => Promise<ApiResponse<AuthSuccessData>>
   logout: () => void
-  setUser: (user: UserPublic) => void
+  setUser: (user: AuthSuccessData['user']) => void
+  refresh: () => Promise<string>
+  getCurrentUser: () => Promise<AuthSuccessData['user'] | null>
 }
 
 // Custom hook for managing authentication state
@@ -52,98 +57,101 @@ export const useAuth = (): AuthContextType => {
 
   // Load saved user from localStorage on mount
   useEffect(() => {
-    const storedUser = getFromLocalStorage<UserPublic>(LocalStorageKeys.USER)
+    const storedUser = getFromLocalStorage<AuthSuccessData['user']>(LocalStorageKeys.USER)
     if (storedUser) {
-      setUser(storedUser)
+      setUser(storedUser as any)
     }
     setLoading(false)
   }, [])
 
-  // Login user with email and password
+  // Login user
   const login = async (
-    email: string,
+    login: string,
     password: string,
-  ): Promise<ApiResponse<AuthResponseData>> => {
-    // Set loading state so that the UI can show a loading indicator
+  ): Promise<ApiResponse<AuthSuccessData>> => {
     setLoading(true)
-
     try {
-      // Fetch login data from the server
-      const result = await fetchLogin({ email, password })
-
-      // Check if the request was successful
+      const result = await fetchLogin({ login, password })
       if (result.success && result.data) {
-        // Extract user and token data from the response
-        const { user, token } = result.data
-
-        // Set the access token cookie
-        Cookies.set('accessToken', token.accessToken, {
-          secure: false,
-          sameSite: 'lax',
-          expires: 1,
-        })
-        // Save user data to localStorage
+        const { user, access_token, refresh_token } = result.data
+        localStorage.setItem('access_token', access_token)
+        localStorage.setItem('refresh_token', refresh_token)
         setToLocalStorage(LocalStorageKeys.USER, user)
-        setUser(user)
+        setUser(user as any)
       }
       return result
     } finally {
-      // Reset loading state
       setLoading(false)
     }
   }
 
-  // Signup new user with name, email, and password
+  // Signup new user
   const signup = async (
-    name: string,
-    email: string,
+    display_name: string | undefined,
+    username: string | undefined,
+    email: string | undefined,
     password: string,
-  ): Promise<ApiResponse<AuthResponseData>> => {
-    // Set loading state so that the UI can show a loading indicator
+  ): Promise<ApiResponse<AuthSuccessData>> => {
     setLoading(true)
-
     try {
-      // Fetch signup data from the server
-      const result = await fetchRegister({ name, email, password })
-
-      // Check if the request was successful
+      const result = await fetchRegister({ display_name, username, email, password })
       if (result.success && result.data) {
-        // Extract user and token data from the response
-        const { user, token } = result.data
-
-        // Set the access token cookie
-        Cookies.set('accessToken', token.accessToken, {
-          secure: false,
-          sameSite: 'lax',
-          expires: 1,
-        })
-
-        // Save user data to localStorage
+        const { user, access_token, refresh_token } = result.data
+        localStorage.setItem('access_token', access_token)
+        localStorage.setItem('refresh_token', refresh_token)
         setToLocalStorage(LocalStorageKeys.USER, user)
-        setUser(user)
+        setUser(user as any)
       }
       return result
     } finally {
-      // Reset loading state
       setLoading(false)
     }
   }
 
-  // Logout user by clearing cookies and localStorage
+  // Refresh token
+  const refresh = async (): Promise<string> => {
+    const rt = localStorage.getItem('refresh_token')
+    if (!rt) throw new Error('No refresh token available')
+    const res = await fetchRefresh(rt)
+    if (res.success && res.data) {
+      localStorage.setItem('access_token', res.data.access_token)
+      return res.data.access_token
+    }
+    // invalid refresh
+    logout()
+    throw new Error('Session expired. Please login again.')
+  }
+
+  // Get current user
+  const getCurrentUser = async (): Promise<AuthSuccessData['user'] | null> => {
+    const at = localStorage.getItem('access_token')
+    if (!at) return null
+    const res = await fetchMe()
+    if (res.success && res.data) {
+      setToLocalStorage(LocalStorageKeys.USER, res.data)
+      setUser(res.data as any)
+      return res.data
+    }
+    return null
+  }
+
+  // Logout user by clearing tokens and localStorage
   const logout = () => {
-    Cookies.remove('accessToken')
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('refresh_token')
     removeFromLocalStorage(LocalStorageKeys.USER)
     logoutAction()
   }
 
-  // Return auth state and functions
   return {
-    user: state.user,
+    user: state.user as any,
     isLoading: state.isLoading,
     isLoggedIn: state.isLoggedIn,
     login,
     signup,
     logout,
-    setUser,
+    setUser: setUser as any,
+    refresh,
+    getCurrentUser,
   }
 }

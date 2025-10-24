@@ -1,18 +1,48 @@
-import type { ApiResponse, UserCreateInput, UserLoginInput } from '@/lib/types'
+import type { ApiResponse } from '@/lib/types'
 
-import { API_BASE_URL, postFetch } from '.'
-import type { AuthResponseData } from '../types/auth'
+import { API_BASE_URL, getFetch, postFetch } from '.'
 
-// Login user
+// Shapes per guide
+export type AuthSuccessData = {
+  access_token: string
+  refresh_token: string
+  user: {
+    id: string
+    display_name: string
+    username: string
+    email: string
+    role: string
+    status: 'Pending' | 'Active' | 'Suspended'
+  }
+}
+
+// Login user (guide: login + password)
 export const fetchLogin = (
-  data: UserLoginInput,
-): Promise<ApiResponse<AuthResponseData>> => {
-  return postFetch<AuthResponseData>(`${API_BASE_URL}/auth/login`, data)
+  data: { login: string; password: string },
+): Promise<ApiResponse<AuthSuccessData>> => {
+  return postFetch<AuthSuccessData>(`${API_BASE_URL}/auth/login`, data)
 }
 
 // Register new user
 export const fetchRegister = (
-  data: UserCreateInput,
-): Promise<ApiResponse<AuthResponseData>> => {
+  data: {
+    display_name?: string
+    username?: string
+    email?: string
+    password: string
+  },
+): Promise<ApiResponse<AuthSuccessData>> => {
   return postFetch(`${API_BASE_URL}/auth/register`, data)
+}
+
+// Refresh access token
+export const fetchRefresh = (
+  refreshToken: string,
+): Promise<ApiResponse<{ access_token: string }>> => {
+  return postFetch(`${API_BASE_URL}/auth/refresh`, { token: refreshToken })
+}
+
+// Get current user
+export const fetchMe = (): Promise<ApiResponse<AuthSuccessData['user']>> => {
+  return getFetch(`${API_BASE_URL}/auth/me`)
 }
