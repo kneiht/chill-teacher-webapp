@@ -22,13 +22,13 @@ function LoginPage() {
     navigate({ to: '/lessons' })
   }
 
-  const handleSubmit = async (values: { email: string; password: string }) => {
-    const result = await login(values.email, values.password)
+  const handleSubmit = async (values: { login: string; password: string }) => {
+    const result = await login(values.login, values.password)
     if (result.success) {
       message.success(result.message)
       navigate({ to: '/lessons' })
     } else {
-      message.error(result.message)
+      message.error(result.error)
     }
   }
 
@@ -40,29 +40,33 @@ function LoginPage() {
         boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
       }}
     >
-      <div style={{ textAlign: 'center', marginBottom: 32 }}>
+      <div style={{ textAlign: 'center', marginBottom: 10 }}>
         <Logo />
-        <p style={{ color: '#64748b', marginTop: 8 }}>
+        <p style={{ color: '#64748b', marginTop: 6 }}>
           {t('Login to your account')}
         </p>
       </div>
 
       <Form name="login" onFinish={handleSubmit} layout="vertical" size="large">
         <Form.Item
-          label={t('Email')}
-          name="email"
+          style={{ marginBottom: 12 }}
+          label={t('Username or Email')}
+          name="login"
           rules={[
-            { required: true, message: t('Please enter your email') },
-            { type: 'email', message: t('Please enter a valid email') },
+            {
+              required: true,
+              message: t('Please enter your username or email'),
+            },
           ]}
         >
           <Input
             prefix={<UserOutlined />}
-            placeholder={t('Enter your email')}
+            placeholder={t('Enter your username or email')}
           />
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 12 }}
           label={t('Password')}
           name="password"
           rules={[
@@ -76,7 +80,7 @@ function LoginPage() {
           />
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item style={{ marginBottom: 12, marginTop: 20 }}>
           <Button
             type="primary"
             htmlType="submit"

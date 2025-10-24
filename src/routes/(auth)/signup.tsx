@@ -18,18 +18,19 @@ function SignUpPage() {
   const { signup } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = async (values: {
-    name: string
-    email: string
-    password: string
-  }) => {
+  const handleSubmit = async (values: { email: string; password: string }) => {
     setIsLoading(true)
-    const result = await signup(values.name, values.email, values.password)
+    const result = await signup(
+      undefined,
+      undefined,
+      values.email,
+      values.password,
+    )
     if (result.success) {
       message.success(result.message)
       navigate({ to: '/login', replace: true })
     } else {
-      message.error(result.message)
+      message.error(result.error)
     }
     setIsLoading(false)
   }
@@ -42,9 +43,9 @@ function SignUpPage() {
         boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
       }}
     >
-      <div style={{ textAlign: 'center', marginBottom: 32 }}>
+      <div style={{ textAlign: 'center', marginBottom: 10 }}>
         <Logo />
-        <p style={{ color: '#64748b', marginTop: 8 }}>
+        <p style={{ color: '#64748b', marginTop: 6 }}>
           {t('Create a new account')}
         </p>
       </div>
@@ -56,17 +57,7 @@ function SignUpPage() {
         size="large"
       >
         <Form.Item
-          label={t('User name')}
-          name="name"
-          rules={[
-            { required: true, message: t('Please enter your name') },
-            { min: 2, message: t('Name must be at least 2 characters') },
-          ]}
-        >
-          <Input prefix={<UserOutlined />} placeholder={t('Enter your name')} />
-        </Form.Item>
-
-        <Form.Item
+          style={{ marginBottom: 12 }}
           label={t('Email')}
           name="email"
           rules={[
@@ -81,6 +72,7 @@ function SignUpPage() {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 12 }}
           label={t('Password')}
           name="password"
           rules={[
@@ -95,6 +87,7 @@ function SignUpPage() {
         </Form.Item>
 
         <Form.Item
+          style={{ marginBottom: 12 }}
           label={t('Confirm password')}
           name="confirmPassword"
           dependencies={['password']}
@@ -116,7 +109,7 @@ function SignUpPage() {
           />
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item style={{ marginBottom: 12, marginTop: 20 }}>
           <Button
             type="primary"
             htmlType="submit"
