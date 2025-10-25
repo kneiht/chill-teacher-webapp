@@ -18,11 +18,7 @@ function LoginPage() {
   const navigate = useNavigate()
   const { redirect } = Route.useSearch()
   const { t } = useLang()
-  const { login, isLoading, isLoggedIn } = useAuth()
-
-  if (isLoggedIn) {
-    navigate({ to: redirect || '/dashboard' })
-  }
+  const { login, isLoading } = useAuth()
 
   const handleSubmit = async (values: { login: string; password: string }) => {
     const result = await login(values.login, values.password)
@@ -103,6 +99,7 @@ function LoginPage() {
         </span>
         <Link
           to="/signup"
+          search={{ redirect: redirect }}
           style={{
             color: '#3b82f6', // blue-600
             fontWeight: 500,

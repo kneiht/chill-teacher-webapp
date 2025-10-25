@@ -8,12 +8,16 @@ import { useLang } from '@/lib/hooks/use-lang'
 import { useAuth } from '@/lib/hooks/use-auth'
 
 export const Route = createFileRoute('/(auth)/signup')({
+  validateSearch: (search: Record<string, unknown>) => ({
+    redirect: (search.redirect as string) || undefined,
+  }),
   component: SignUpPage,
 })
 
 function SignUpPage() {
   const { message } = AntApp.useApp()
   const navigate = useNavigate()
+  const { redirect } = Route.useSearch()
   const { t } = useLang()
   const { signup } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
@@ -125,7 +129,7 @@ function SignUpPage() {
         <span style={{ color: '#64748b' }}>{t('Have an account?')} </span>
         <Link
           to="/login"
-          search={{ redirect: undefined }}
+          search={{ redirect: redirect }}
           style={{ color: '#2563eb', fontWeight: 500, textDecoration: 'none' }}
         >
           {t('Login here')}
