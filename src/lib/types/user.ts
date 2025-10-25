@@ -4,7 +4,7 @@ export interface User {
   username: string
   email: string
   password: string
-  role: 'ADMIN' | 'USER'
+  role: 'Admin' | 'Teacher' | 'Student'
   avatar?: string
   phoneNumber?: string
   address?: string
@@ -16,7 +16,7 @@ export interface UserCreateInput {
   email: string
   username?: string
   password: string
-  role?: 'ADMIN' | 'USER'
+  role?: 'Admin' | 'Teacher' | 'Student'
 }
 
 export interface UserLoginInput {
@@ -29,7 +29,7 @@ export interface UserPublic {
   name: string
   email: string
   username: string
-  role: 'ADMIN' | 'USER'
+  role: 'Admin' | 'Teacher' | 'Student'
   avatar?: string
   phoneNumber?: string
   address?: string
@@ -42,7 +42,7 @@ export interface UserUpdateInput {
   email?: string
   username?: string
   password?: string
-  role?: 'ADMIN' | 'USER'
+  role?: 'Admin' | 'Teacher' | 'Student'
   avatar?: string
   phoneNumber?: string
   address?: string
