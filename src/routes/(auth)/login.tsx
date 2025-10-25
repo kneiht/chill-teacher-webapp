@@ -17,16 +17,15 @@ function LoginPage() {
   const { t } = useLang()
   const { login, isLoading, isLoggedIn } = useAuth()
 
-  console.log(isLoggedIn)
   if (isLoggedIn) {
-    navigate({ to: '/lessons' })
+    navigate({ to: '/dashboard' })
   }
 
   const handleSubmit = async (values: { login: string; password: string }) => {
     const result = await login(values.login, values.password)
     if (result.success) {
       message.success(result.message)
-      navigate({ to: '/lessons' })
+      navigate({ to: '/dashboard' })
     } else {
       message.error(result.error)
     }
