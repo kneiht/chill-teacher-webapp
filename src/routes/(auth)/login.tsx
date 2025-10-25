@@ -7,25 +7,28 @@ import { useLang } from '@/lib/hooks/use-lang'
 import { useAuth } from '@/lib/hooks/use-auth'
 
 export const Route = createFileRoute('/(auth)/login')({
+  validateSearch: (search: Record<string, unknown>) => ({
+    redirect: (search.redirect as string) || undefined,
+  }),
   component: LoginPage,
 })
 
 function LoginPage() {
   const { message } = AntApp.useApp()
   const navigate = useNavigate()
-  // const redirect = Route.useSearch()
+  const { redirect } = Route.useSearch()
   const { t } = useLang()
   const { login, isLoading, isLoggedIn } = useAuth()
 
   if (isLoggedIn) {
-    navigate({ to: '/dashboard' })
+    navigate({ to: redirect || '/dashboard' })
   }
 
   const handleSubmit = async (values: { login: string; password: string }) => {
     const result = await login(values.login, values.password)
     if (result.success) {
       message.success(result.message)
-      navigate({ to: '/dashboard' })
+      navigate({ to: redirect || '/dashboard' })
     } else {
       message.error(result.error)
     }

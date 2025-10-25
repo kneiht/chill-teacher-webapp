@@ -61,7 +61,11 @@ const navItems = [
 const CTA = () => {
   return (
     <>
-      <Link to="/login" style={{ textDecoration: 'none' }}>
+      <Link
+        to="/login"
+        search={{ redirect: undefined }}
+        style={{ textDecoration: 'none' }}
+      >
         <Button
           color="orange"
           variant="outlined"

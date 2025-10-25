@@ -181,7 +181,7 @@ function MainLayout() {
   const handleMenuClick = ({ key }: { key: string }) => {
     if (key === 'logout') {
       logout()
-      navigate({ to: '/login' })
+      navigate({ to: '/login', search: { redirect: undefined } })
     } else {
       navigate({ to: key })
     }
@@ -389,10 +389,15 @@ function LayoutSelector() {
 }
 
 export const Route = createFileRoute('/(main)')({
-  beforeLoad: () => {
+  beforeLoad: (ctx) => {
     const user = localStorage.getItem(LocalStorageKeys.USER)
-    if (!user) {
-      throw redirect({ to: '/login', replace: true })
+    const refreshToken = localStorage.getItem('refresh_token')
+    if (!user || !refreshToken) {
+      throw redirect({
+        to: '/login',
+        search: { redirect: ctx.location.pathname },
+        replace: true,
+      })
     }
   },
   component: LayoutSelector,

@@ -28,7 +28,7 @@ function SignUpPage() {
     )
     if (result.success) {
       message.success(result.message)
-      navigate({ to: '/login', replace: true })
+      navigate({ to: '/login', search: { redirect: undefined }, replace: true })
     } else {
       message.error(result.error)
     }
@@ -125,6 +125,7 @@ function SignUpPage() {
         <span style={{ color: '#64748b' }}>{t('Have an account?')} </span>
         <Link
           to="/login"
+          search={{ redirect: undefined }}
           style={{ color: '#2563eb', fontWeight: 500, textDecoration: 'none' }}
         >
           {t('Login here')}
