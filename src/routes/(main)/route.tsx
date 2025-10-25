@@ -86,49 +86,71 @@ function MainLayout() {
   const { token } = theme.useToken()
   const { user, logout } = useAuth()
 
-  // Define the menu items
-  const menuItems: MenuProps['items'] = [
-    {
-      key: '/dashboard',
-      icon: <DashboardOutlined />,
-      label: <Link to="/dashboard">{t('Dashboard')}</Link>,
-    },
-    {
-      key: '/students',
-      icon: <UserOutlined />,
-      label: <Link to="/students">{t('Students')}</Link>,
-    },
-    {
-      key: '/teachers',
-      icon: <TeamOutlined />,
-      label: <Link to="/teachers">{t('Teachers')}</Link>,
-    },
-    {
-      key: '/classes',
-      icon: <BookOutlined />,
-      label: <Link to="/classes">{t('Classes')}</Link>,
-    },
-    {
-      key: '/classroom',
-      icon: <ReadOutlined />,
-      label: <Link to="/classroom">{t('Classroom')}</Link>,
-    },
-    {
-      key: '/attendance',
-      icon: <CalendarOutlined />,
-      label: <Link to="/attendance">{t('Attendance')}</Link>,
-    },
-    {
-      key: '/reports',
-      icon: <BarChartOutlined />,
-      label: <Link to="/reports">{t('Reports')}</Link>,
-    },
-    {
-      key: '/settings',
-      icon: <SettingOutlined />,
-      label: <Link to="/settings">{t('Settings')}</Link>,
-    },
-  ]
+  const getMenuItems = (): MenuProps['items'] => {
+    const userRole = user?.role?.toLowerCase()
+
+    const allMenuItems: MenuProps['items'] = [
+      {
+        key: '/dashboard',
+        icon: <DashboardOutlined />,
+        label: <Link to="/dashboard">{t('Dashboard')}</Link>,
+      },
+      {
+        key: '/students',
+        icon: <UserOutlined />,
+        label: <Link to="/students">{t('Students')}</Link>,
+      },
+      {
+        key: '/teachers',
+        icon: <TeamOutlined />,
+        label: <Link to="/teachers">{t('Teachers')}</Link>,
+      },
+      {
+        key: '/classes',
+        icon: <BookOutlined />,
+        label: <Link to="/classes">{t('Classes')}</Link>,
+      },
+      {
+        key: '/classroom',
+        icon: <ReadOutlined />,
+        label: <Link to="/classroom">{t('Classroom')}</Link>,
+      },
+      {
+        key: '/attendance',
+        icon: <CalendarOutlined />,
+        label: <Link to="/attendance">{t('Attendance')}</Link>,
+      },
+      {
+        key: '/reports',
+        icon: <BarChartOutlined />,
+        label: <Link to="/reports">{t('Reports')}</Link>,
+      },
+      {
+        key: '/settings',
+        icon: <SettingOutlined />,
+        label: <Link to="/settings">{t('Settings')}</Link>,
+      },
+    ]
+
+    if (userRole === 'student') {
+      return [
+        {
+          key: '/dashboard',
+          icon: <DashboardOutlined />,
+          label: <Link to="/dashboard">{t('Dashboard')}</Link>,
+        },
+        {
+          key: '/lessons',
+          icon: <ReadOutlined />,
+          label: <Link to="/lessons">{t('Lessons')}</Link>,
+        },
+      ]
+    }
+
+    return allMenuItems
+  }
+
+  const menuItems = getMenuItems()
 
   // Define the user menu items
   const userMenuItems: MenuProps['items'] = [
@@ -240,10 +262,7 @@ function MainLayout() {
                 align="center"
                 style={{ padding: '1rem' }}
               >
-                <Avatar
-                  size={60}
-                  src="https://img.freepik.com/premium-vector/university-college-school-crests-logo-emblem-vector-template_441059-1011.jpg?semt=ais_hybrid&w=740"
-                />
+                <Avatar size={60} src="/logo/logo192.png" />
                 <Text
                   strong
                   style={{

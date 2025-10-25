@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import {
   // ArrowDownOutlined,
   ArrowUpOutlined,
@@ -10,6 +10,7 @@ import {
 } from '@ant-design/icons'
 import {
   Avatar,
+  Button,
   Card,
   Col,
   List,
@@ -34,11 +35,45 @@ import {
 
 import type React from 'react'
 import { useLang } from '@/lib/hooks/use-lang'
+import { useAuth } from '@/lib/hooks/use-auth'
 
 const { Title, Text } = Typography
 
 const Dashboard: React.FC = () => {
   const { t } = useLang()
+  const { user } = useAuth()
+  const navigate = useNavigate()
+  const userRole = user?.role?.toLowerCase()
+
+  if (userRole === 'student') {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '60vh',
+          textAlign: 'center',
+        }}
+      >
+        <Card style={{ maxWidth: 600, padding: '2rem' }}>
+          <Title level={2}>{t('Dashboard')}</Title>
+          <Text style={{ fontSize: '1.1rem', marginBottom: '2rem', display: 'block' }}>
+            {t('The dashboard page is under construction')}
+          </Text>
+          <Button
+            type="primary"
+            size="large"
+            icon={<BookOutlined />}
+            onClick={() => navigate({ to: '/classroom' })}
+          >
+            {t('Go to Lessons')}
+          </Button>
+        </Card>
+      </div>
+    )
+  }
   const enrollmentData = [
     { month: 'Jan', students: 320 },
     { month: 'Feb', students: 340 },
@@ -346,6 +381,6 @@ const Dashboard: React.FC = () => {
   )
 }
 
-export const Route = createFileRoute('/(main)/(teacher)/dashboard')({
+export const Route = createFileRoute('/(main)/(common)/dashboard')({
   component: Dashboard,
 })
