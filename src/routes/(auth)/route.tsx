@@ -4,7 +4,8 @@ import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
 export const Route = createFileRoute('/(auth)')({
   beforeLoad: () => {
     const user = localStorage.getItem(LocalStorageKeys.USER)
-    if (user) {
+    const refreshToken = localStorage.getItem('refresh_token')
+    if (user && refreshToken) {
       throw redirect({ to: '/dashboard', replace: true })
     }
   },
