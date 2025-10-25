@@ -23,6 +23,11 @@ function SignUpPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (values: { email: string; password: string }) => {
+    // TODO: Remove this error message after the feature is implemented
+    message.error(
+      'Đăng ký không thành công, chức năng đang bị khóa, liên hệ giáo viên để lấy tài khoản đăng nhập.',
+    )
+    return
     setIsLoading(true)
     const result = await signup(
       undefined,
