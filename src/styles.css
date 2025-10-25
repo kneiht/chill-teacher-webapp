@@ -41,3 +41,23 @@ code {
   scrollbar-width: thin; /* mỏng */
   scrollbar-color: rgba(100, 100, 100, 0.4) transparent; /* thumb, track */
 }
+
+/* Mobile Menu Responsive Styles */
+.mobile-menu-button {
+  display: none !important;
+}
+
+.desktop-sidebar {
+  display: block;
+}
+
+/* Show mobile menu button and hide sidebar on screens smaller than 992px (lg breakpoint) */
+@media (max-width: 991px) {
+  .mobile-menu-button {
+    display: inline-flex !important;
+  }
+  
+  .desktop-sidebar {
+    display: none !important;
+  }
+}

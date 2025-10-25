@@ -6,6 +6,7 @@ import {
   DashboardOutlined,
   LogoutOutlined,
   MenuFoldOutlined,
+  MenuOutlined,
   MenuUnfoldOutlined,
   ReadOutlined,
   SettingOutlined,
@@ -19,6 +20,7 @@ import {
   Avatar,
   Button,
   Divider,
+  Drawer,
   Dropdown,
   Flex,
   Layout,
@@ -80,6 +82,7 @@ const TriggerButton = ({
 // Define the MainLayout component
 function MainLayout() {
   const [collapsed, setCollapsed] = useState(true)
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false)
   const { t } = useLang()
   const { pathname } = useLocation()
   const navigate = useNavigate()
@@ -198,8 +201,22 @@ function MainLayout() {
           padding: '0 1rem',
         }}
       >
-        {/* Left side - Logo */}
-        <Logo />
+        {/* Left side - Mobile Menu Button + Logo */}
+        <Flex align="center" gap="small">
+          {/* Mobile Menu Button */}
+          <Button
+            type="text"
+            icon={<MenuOutlined />}
+            onClick={() => setMobileDrawerOpen(true)}
+            style={{
+              fontSize: '1.2rem',
+              display: 'none',
+            }}
+            className="mobile-menu-button"
+          />
+          <Logo />
+        </Flex>
+
         {/* Right side - Controls and User */}
         <Flex align="center" gap="middle">
           {/* Theme and Language Controls */}
@@ -253,6 +270,7 @@ function MainLayout() {
           breakpoint="lg"
           width={200}
           style={{ boxShadow: token.boxShadow, borderRadius: '10px' }}
+          className="desktop-sidebar"
         >
           <Flex vertical style={{ height: '100%' }}>
             <Link to="/schools" style={{ textDecoration: 'none' }}>
@@ -319,6 +337,38 @@ function MainLayout() {
           <Outlet />
         </Content>
       </Layout>
+
+      {/* Mobile Drawer Menu */}
+      <Drawer
+        title={
+          <Flex align="center" justify="center" vertical gap="small">
+            <Avatar size={60} src="/logo/logo192.png" />
+            <Text strong>School Name</Text>
+          </Flex>
+        }
+        placement="left"
+        onClose={() => setMobileDrawerOpen(false)}
+        open={mobileDrawerOpen}
+        width={280}
+        styles={{
+          body: { padding: 0 },
+        }}
+      >
+        <Menu
+          mode="inline"
+          selectedKeys={[pathname]}
+          items={menuItems}
+          onClick={({ key }) => {
+            if (key.startsWith('/')) {
+              navigate({ to: key })
+              setMobileDrawerOpen(false)
+            }
+          }}
+          style={{
+            border: 'none',
+          }}
+        />
+      </Drawer>
     </Layout>
   )
 }

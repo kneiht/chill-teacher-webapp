@@ -59,14 +59,20 @@ const Dashboard: React.FC = () => {
       >
         <Card style={{ maxWidth: 600, padding: '2rem' }}>
           <Title level={2}>{t('Dashboard')}</Title>
-          <Text style={{ fontSize: '1.1rem', marginBottom: '2rem', display: 'block' }}>
+          <Text
+            style={{
+              fontSize: '1.1rem',
+              marginBottom: '2rem',
+              display: 'block',
+            }}
+          >
             {t('The dashboard page is under construction')}
           </Text>
           <Button
             type="primary"
             size="large"
             icon={<BookOutlined />}
-            onClick={() => navigate({ to: '/classroom' })}
+            onClick={() => navigate({ to: '/lessons' })}
           >
             {t('Go to Lessons')}
           </Button>
