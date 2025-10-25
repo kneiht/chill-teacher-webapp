@@ -1,6 +1,4 @@
-import Cookies from 'js-cookie'
-
 export const getAuthHeaders = (): Record<string, string> => {
-  const token = Cookies.get('accessToken')
+  const token = localStorage.getItem('access_token')
   return token ? { Authorization: `Bearer ${token}` } : {}
 }

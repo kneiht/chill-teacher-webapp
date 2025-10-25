@@ -122,9 +122,11 @@ export const useAuth = (): AuthContextType => {
     const res = await fetchRefresh(rt)
     if (res.success && res.data) {
       localStorage.setItem('access_token', res.data.access_token)
+      localStorage.setItem('refresh_token', res.data.refresh_token)
+      setToLocalStorage(LocalStorageKeys.USER, res.data.user)
+      setUser(res.data.user as any)
       return res.data.access_token
     }
-    // invalid refresh
     logout()
     throw new Error('Session expired. Please login again.')
   }

@@ -1,4 +1,5 @@
 import type { ApiResponse } from '@/lib/types'
+import { getAuthHeaders } from '@/lib/utils/auth-helpers'
 
 import { API_BASE_URL, getFetch, postFetch } from '.'
 
@@ -34,14 +35,14 @@ export const fetchRegister = (data: {
   return postFetch(`${API_BASE_URL}/auth/register`, data)
 }
 
-// Refresh access token
+// Refresh access token (returns new access_token, refresh_token, and user)
 export const fetchRefresh = (
   refreshToken: string,
-): Promise<ApiResponse<{ access_token: string }>> => {
+): Promise<ApiResponse<AuthSuccessData>> => {
   return postFetch(`${API_BASE_URL}/auth/refresh`, { token: refreshToken })
 }
 
 // Get current user
 export const fetchMe = (): Promise<ApiResponse<AuthSuccessData['user']>> => {
-  return getFetch(`${API_BASE_URL}/auth/me`)
+  return getFetch(`${API_BASE_URL}/auth/me`, getAuthHeaders())
 }
