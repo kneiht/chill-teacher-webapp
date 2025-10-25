@@ -77,16 +77,6 @@ const TriggerButton = ({
   )
 }
 
-export const Route = createFileRoute('/(main)')({
-  beforeLoad: () => {
-    const user = localStorage.getItem(LocalStorageKeys.USER)
-    if (!user) {
-      throw redirect({ to: '/login', replace: true })
-    }
-  },
-  component: MainLayout,
-})
-
 // Define the MainLayout component
 function MainLayout() {
   const [collapsed, setCollapsed] = useState(true)
@@ -172,7 +162,6 @@ function MainLayout() {
     }
   }
 
-  // Return the MainLayout component
   return (
     <Layout style={{ minHeight: '100vh' }}>
       {/* Header */}
@@ -314,3 +303,28 @@ function MainLayout() {
     </Layout>
   )
 }
+
+// Define the EscapeMainLayout component
+function EscapeMainLayout() {
+  return <Outlet />
+}
+
+// Define the Layout Selector
+function LayoutSelector() {
+  const { pathname } = useLocation()
+  const escapedRoutes = ['/lessons/everybody-up-0', '/lessons/advanced-topics']
+  const isEscapedRoute = escapedRoutes.some((route) =>
+    pathname.startsWith(route),
+  )
+  return isEscapedRoute ? <EscapeMainLayout /> : <MainLayout />
+}
+
+export const Route = createFileRoute('/(main)')({
+  beforeLoad: () => {
+    const user = localStorage.getItem(LocalStorageKeys.USER)
+    if (!user) {
+      throw redirect({ to: '/login', replace: true })
+    }
+  },
+  component: LayoutSelector,
+})
