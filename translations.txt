@@ -1,0 +1,409 @@
+Switch to Light Mode
+Switch to Dark Mode
+Switch to English
+Switch to Vietnamese
+web-vitals
+Login to your account
+Username or Email
+Please enter your username or email
+Enter your username or email
+Password
+Please enter your password
+Password must be at least 6 characters
+Enter your password
+Login
+Sign up here
+Create a new account
+Email
+Please enter your email
+Please enter a valid email
+Enter your email
+Confirm password
+Please confirm your password
+Passwords do not match
+Confirm your password
+Sign up
+Have an account?
+Login here
+Dashboard
+The dashboard page is under construction
+Go to Lessons
+Parent-Teacher Meeting
+Meeting
+Science Fair
+Event
+Mid-term Exams
+Exam
+Sports Day
+Total Students
+Teachers
+Active Classes
+Attendance Rate
+Student Enrollment Trend
+Grade Distribution
+Top Performers
+Grade
+Upcoming Events
+Profile
+This is the profile page!
+Settings saved successfully
+Are you sure you want to delete this user?
+This action cannot be undone.
+Yes, Delete
+Cancel
+User deleted successfully
+User updated successfully
+User added successfully
+User
+Role
+Status
+Last Login
+Actions
+Role Name
+Users
+Settings
+Manage system configuration, user roles, and preferences
+General
+School Information
+School Name
+Please enter school name
+Address
+Please enter address
+Phone
+Please enter phone
+Please enter email
+Please enter valid email
+Website
+Established Year
+Principal Name
+Student Capacity
+Save Changes
+School Logo
+Upload New Logo
+Recommended size: 200x200px, Max size: 2MB
+Academic Year Settings
+Current Academic Year
+Semester System
+2 Semester
+3 Trimester
+4 Quarter
+Grading System
+Letter Grades (A-F)
+Percentage (0-100)
+GPA (0-4.0)
+Notifications
+Notification Settings
+Email Notifications
+Student Attendance Alerts
+Grade Updates
+Assignment Due Dates
+Fee Payment Reminders
+Event Announcements
+System Maintenance
+SMS Notifications
+Emergency Alerts
+Absence Notifications
+Event Reminders
+Fee Due Alerts
+Save Notification Settings
+Security
+Password Policy
+Minimum Password Length
+6 characters
+8 characters
+10 characters
+12 characters
+Password Requirements
+Require uppercase letters
+Require lowercase letters
+Require numbers
+Require special characters
+Password Expiry
+30 days
+60 days
+90 days
+Never
+Login Security
+Session Timeout
+15 minutes
+30 minutes
+1 hour
+2 hours
+Failed Login Attempts
+3 attempts
+5 attempts
+10 attempts
+Account Lockout Duration
+5 minutes
+Two-Factor Authentication
+Enable 2FA for all users
+Data Backup
+Automatic Backup
+Backup Frequency
+Hourly
+Daily
+Weekly
+Backup Retention
+7 days
+1 year
+Last Backup:
+Status:
+Successful
+Create Backup Now
+User Management
+User Accounts
+Add User
+User Roles
+Edit User
+Add New User
+Full Name
+Please enter name
+Please select role
+Administrator
+Teacher
+Student
+Parent
+Please select status
+Active
+Inactive
+Please enter password
+Confirm Password
+Medical appointment
+Family emergency
+YYYY-MM-DD
+Student Attendance
+Track and manage individual student attendance records
+Select Student:
+Choose a student
+Add Record
+Class
+Present
+Absent
+Late
+Attendance Calendar
+Recent Attendance
+Arrived
+Reason
+Attendance Record
+Date
+Please select date
+Excused
+Arrival Time
+Reason (for absences/excused)
+Enter reason for absence or excuse...
+Monday
+Wednesday
+Friday
+Tuesday
+Thursday
+Are you sure you want to delete this class?
+Class deleted successfully
+Class updated successfully
+TBD
+Class added successfully
+Students assigned successfully
+Grade & Section
+Section
+Subject
+Students
+Classes
+Manage class schedules, assign students and teachers
+Total Classes
+Total Enrolled
+Search classes...
+Filter by grade
+Grade 10
+Grade 11
+Grade 12
+Filter by status
+Completed
+Add Class
+of
+classes
+Edit Class
+Add New Class
+Please enter subject
+Enter subject name
+Please select teacher
+Select teacher
+Please select grade
+Select grade
+Please enter section
+e.g., A, B, C
+Capacity
+Please enter capacity
+Max students
+Assign Students to Class
+Available Students
+Assigned Students
+Class Details
+Enrolled
+Schedule
+HH:mm
+Please enter an announcement
+Please select a class
+Announcement sent to all students and parents
+Attendance
+Mark Attendance
+Behavior
+Excellent
+Good
+Fair
+Poor
+Classroom Management
+Select Class:
+Choose a class
+Send Announcement
+Ring Bell
+Room
+Student List
+All students marked as present
+Mark All Present
+All students marked as absent
+Mark All Absent
+Quick Actions
+Classroom Controls
+Projector
+Air Conditioning
+Smart Board
+Microphone
+Recent Announcements
+Quiz scheduled for next week
+10 minutes ago
+Assignment due date extended
+1 hour ago
+Parent-teacher meeting reminder
+2 hours ago
+To:
+All students and parents
+Message:
+Enter your announcement message...
+Assignments
+Avg. Attendance
+Avg. Grade
+Satisfaction
+Reports & Analytics
+Report Type:
+Academic
+Financial
+All Classes
+All Subjects
+Period:
+Export Format:
+Print
+Export Report
+Overview
+Attendance Trend
+Student Performance
+Student Performance Report
+students
+Teacher Performance
+Teacher Performance Report
+Class Analysis
+Class Performance Analysis
+Average Grade
+Attendance %
+Are you sure you want to delete this school?
+School deleted successfully
+School updated successfully
+School added successfully
+Schools
+Manage school information and settings
+Total Schools
+Active Schools
+Search schools...
+Add School
+schools
+Edit School
+Add New School
+Enter school name
+Enter school address
+School Details
+Are you sure you want to delete this student?
+Student deleted successfully
+Tuition payment recorded successfully
+Student updated successfully
+Student added successfully
+Contact
+Tuition
+Manage student profiles, enrollment, and tuition payments
+Active Students
+Pending Payments
+Search students...
+Filter by class
+Graduated
+Add Student
+Edit Student
+Add New Student
+Please enter student name
+Enter full name
+Enter email address
+Please enter phone number
+Enter phone number
+Please select class
+Select class
+Current Grade
+Please enter grade
+e.g., A, B+, C
+Enrollment Date
+Please select enrollment date
+Tuition Fee
+Please enter tuition fee
+Enter amount
+Enter full address
+Parent/Guardian Name
+Please enter parent name
+Enter parent/guardian name
+Parent/Guardian Phone
+Please enter parent phone
+Enter parent/guardian phone
+Student Details
+MMMM DD, YYYY
+Parent/Guardian Information
+Name
+Tuition Information
+Payment Status
+Record Payment
+Are you sure you want to delete this teacher?
+Teacher deleted successfully
+Teacher updated successfully
+Teacher added successfully
+Department
+Subjects
+Experience
+years
+Manage teachers
+Total Teachers
+Active Teachers
+Avg. Experience
+Search teachers...
+Filter by department
+On Leave
+Add Teacher
+teachers
+Edit Teacher
+Add New Teacher
+Please enter teacher name
+Please select department
+Select department
+Please select subjects
+Select subjects
+Please select classes
+Select classes
+Experience (years)
+Please enter experience
+Years
+Salary
+Please enter salary
+Amount
+Joining Date
+Please select joining date
+Qualification
+Please enter qualification
+e.g., M.Sc. in Physics
+Teacher Details
+Weekly Schedule
+Classroom
+Reports
+Lessons
+Logout

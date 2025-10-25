@@ -11,7 +11,8 @@
     "lint": "eslint",
     "format": "prettier",
     "check": "prettier --write . && eslint --fix",
-    "convert": "node convert-images.js"
+    "convert": "node convert-images.js",
+    "translate": "node collect-translations.js"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.2",
