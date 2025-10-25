@@ -76,7 +76,11 @@ const CTA = () => {
           Đăng nhập
         </Button>
       </Link>
-      <Link to="/signup" style={{ textDecoration: 'none' }}>
+      <Link
+        to="/signup"
+        search={{ redirect: undefined }}
+        style={{ textDecoration: 'none' }}
+      >
         <Button type="primary" style={{ fontWeight: 600 }}>
           Đăng ký
         </Button>
