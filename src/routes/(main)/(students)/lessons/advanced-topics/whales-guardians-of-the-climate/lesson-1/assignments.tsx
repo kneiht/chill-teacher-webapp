@@ -21,15 +21,30 @@ const HomeworkSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
           Hãy hoàn thành các nhiệm vụ sau:
         </p>
         <ol className="text-3xl text-left text-gray-800 space-y-8  list-decimal list-inside">
-          <li>Xem video bài học.</li>
-          <li>Luyện tập phát âm từ vựng và câu theo video.</li>
+          <li>Xem video mở đầu.</li>
+          <li>Luyện tập phát âm từ vựng và câu.</li>
           <li>
-            Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả
-            cho giáo viên.
+            Luyện tập từ vựng bằng các hoạt động tương tác, chụp kết quả gửi kết
+            quả cho giáo viên, quan trọng là cách hoạt động trắc nghiệm và nghe.
           </li>
           <li>Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.</li>
           <li>
             Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên.
+          </li>
+          <li>
+            Quay video trả lời các câu hỏi sau và gửi cho giáo viên:
+            <ul className="text-2xl text-gray-700 mt-4 space-y-4 list-disc list-inside">
+              <li>Where does the oxygen we breathe come from?</li>
+              <li>Do you think only trees make oxygen?</li>
+              <li>What kinds of animals live in the ocean?</li>
+              <li>
+                Have you ever seen a whale? What do you know about whales?
+              </li>
+              <li>What do whales eat?</li>
+              <li>
+                Do you think whales are helpful or harmful to the ocean? Why?
+              </li>
+            </ul>
           </li>
         </ol>
         <p className="text-xl text-gray-600 mt-6 italic">
