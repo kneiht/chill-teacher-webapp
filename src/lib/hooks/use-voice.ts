@@ -1,11 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useStore } from '@tanstack/react-store'
 import { ttsStore, setVoice, setRate } from '@/lib/stores/tts.store'
 
 export const useVoice = () => {
   const [voices, setVoices] = useState<Array<SpeechSynthesisVoice>>([])
   const [isSupported, setIsSupported] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
   const { voice, rate } = useStore(ttsStore)
+  const currentAudio = useRef<HTMLAudioElement | null>(null)
+  const isPlayingRef = useRef(false)
+  const audioQueue = useRef<
+    Array<{
+      url: string
+      fallbackText: string
+    }>
+  >([])
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
@@ -18,10 +27,23 @@ export const useVoice = () => {
     }
   }, [])
 
-  const speak = (text: string, lang: string = 'en-US') => {
-    if (!isSupported || speechSynthesis.speaking) {
-      return
+  const stopAll = () => {
+    if (currentAudio.current) {
+      currentAudio.current.pause()
+      currentAudio.current.currentTime = 0
+      currentAudio.current = null
     }
+    audioQueue.current = []
+    speechSynthesis.cancel()
+  }
+
+  const speak = (text: string, lang: string = 'en-US') => {
+    if (!isSupported) {
+      return null
+    }
+    stopAll()
+    isPlayingRef.current = true
+    setIsPlaying(true)
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.lang = lang
     utterance.rate = rate
@@ -34,36 +56,88 @@ export const useVoice = () => {
         utterance.voice = allVoices[0]
       }
     }
+    const cleanup = () => {
+      isPlayingRef.current = false
+      setIsPlaying(false)
+    }
+    utterance.onend = cleanup
+    utterance.onerror = cleanup
     speechSynthesis.speak(utterance)
+    return true
   }
 
   const playOnlineAudio = (
     url: string,
     fallbackText: string,
-    lang: string = 'en-US',
+    stopPrevious: boolean = true,
   ) => {
-    const audio = new Audio(url)
-    audio.play().catch(() => {
-      speak(fallbackText, lang)
-    })
+    const play = (urlToPlay: string, fallback: string) => {
+      isPlayingRef.current = true
+      setIsPlaying(true)
+      const audio = new Audio(urlToPlay)
+      currentAudio.current = audio
+
+      const cleanup = () => {
+        if (currentAudio.current === audio) {
+          isPlayingRef.current = false
+          setIsPlaying(false)
+          currentAudio.current = null
+        }
+        // Play next in queue
+        const nextInQueue = audioQueue.current.shift()
+        if (nextInQueue) {
+          play(nextInQueue.url, nextInQueue.fallbackText)
+        }
+      }
+
+      audio.onended = cleanup
+      audio.onerror = () => {
+        cleanup()
+        speak(fallback, 'en-US')
+      }
+      audio.play().catch(() => {
+        cleanup()
+        speak(fallback, 'en-US')
+      })
+    }
+
+    if (stopPrevious || !isPlayingRef.current) {
+      stopAll()
+      play(url, fallbackText)
+    } else {
+      // If something is playing and we shouldn't stop it, queue the new audio.
+      audioQueue.current.push({ url, fallbackText })
+    }
+
+    return true
   }
 
-  const speakWord = (word: string, pronunciation?: string) => {
+  const speakWord = (
+    word: string,
+    pronunciation?: string,
+    stopPrevious?: boolean,
+  ) => {
     if (pronunciation) {
       playOnlineAudio(
         `https://storage.chillteacher.com/audio-words/${pronunciation.replace('.mp3', '.wav')}`,
         word,
+        stopPrevious,
       )
     } else {
       speak(word)
     }
   }
 
-  const speakSentence = (sentence: string, pronunciation?: string) => {
+  const speakSentence = (
+    sentence: string,
+    pronunciation?: string,
+    stopPrevious?: boolean,
+  ) => {
     if (pronunciation) {
       playOnlineAudio(
         `https://storage.chillteacher.com/audio-sentences/${pronunciation.replace('.mp3', '.wav')}`,
         sentence,
+        stopPrevious,
       )
     } else {
       speak(sentence)
@@ -79,6 +153,7 @@ export const useVoice = () => {
     speak,
     speakWord,
     speakSentence,
+    stopAll,
     isSupported,
   }
 }

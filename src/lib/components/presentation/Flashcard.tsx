@@ -27,7 +27,7 @@ interface FlashcardProps {
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const settings = useStore(flashcardStore)
-  const { speakWord, speakSentence } = useVoice()
+  const { speakWord, speakSentence, stopAll } = useVoice()
 
   useEffect(() => {
     // Reset flip state when card becomes active or inactive
@@ -35,29 +35,21 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   }, [isActive, settings.initialSide])
 
   useEffect(() => {
-    if (isActive && settings.soundEnabled && !isFlipped) {
-      // Delay 500ms before speaking
-      setTimeout(() => {
-        // Speak word
+    if (isActive && settings.soundEnabled) {
+      const wordTimeout = setTimeout(() => {
         speakWord(vocab.word, vocab.wordPronunciation)
       }, 500)
-    }
-  }, [isActive, isFlipped, vocab.word, vocab.wordPronunciation, speakWord])
+      const sentenceTimeout = setTimeout(() => {
+        speakSentence(vocab.sampleSentence, vocab.sentencePronunciation, false)
+      }, 1500)
 
-  useEffect(() => {
-    if (isActive && settings.soundEnabled && isFlipped) {
-      // Speak sentence when flipped
-      setTimeout(() => {
-        speakSentence(vocab.sampleSentence, vocab.sentencePronunciation)
-      }, 500)
+      return () => {
+        clearTimeout(wordTimeout)
+        clearTimeout(sentenceTimeout)
+        stopAll()
+      }
     }
-  }, [
-    isActive,
-    isFlipped,
-    vocab.sampleSentence,
-    vocab.sentencePronunciation,
-    speakSentence,
-  ])
+  }, [isActive])
 
   useEffect(() => {
     if (isActive) {

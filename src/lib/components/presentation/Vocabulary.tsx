@@ -60,7 +60,7 @@ const Vocabulary: React.FC<VocabularyProps> = ({ vocab, isActive }) => {
         ({vocab.partOfSpeech}) {vocab.vietnameseMeaning}
       </h1>
       <p className="text-4xl text-gray-700 text-center mb-4">
-        "{vocab.sampleSentence}"
+        "{vocab.sampleSentence}
       </p>
       <p className="text-4xl text-gray-700 text-center">
         {vocab.vietnameseTranslation}
