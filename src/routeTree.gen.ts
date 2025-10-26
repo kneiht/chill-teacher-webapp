@@ -26,8 +26,8 @@ import { Route as mainteacherAttendanceRouteImport } from './routes/(main)/(teac
 import { Route as maincommonSettingsRouteImport } from './routes/(main)/(common)/settings'
 import { Route as maincommonProfileRouteImport } from './routes/(main)/(common)/profile'
 import { Route as maincommonDashboardRouteImport } from './routes/(main)/(common)/dashboard'
-import { Route as mainstudentsLesssonsLessonSlugRouteImport } from './routes/(main)/(students)/lesssons.$lessonSlug'
-import { Route as mainstudentsLessonsProgramRouteImport } from './routes/(main)/(students)/lessons.$program'
+import { Route as mainstudentsLessonsCourseIndexRouteImport } from './routes/(main)/(students)/lessons/$course/index'
+import { Route as mainstudentsLessonsCourseLessonRouteImport } from './routes/(main)/(students)/lessons/$course/$lesson'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/index'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-2/index'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/index'
@@ -163,16 +163,16 @@ const maincommonDashboardRoute = maincommonDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainstudentsLesssonsLessonSlugRoute =
-  mainstudentsLesssonsLessonSlugRouteImport.update({
-    id: '/(students)/lesssons/$lessonSlug',
-    path: '/lesssons/$lessonSlug',
+const mainstudentsLessonsCourseIndexRoute =
+  mainstudentsLessonsCourseIndexRouteImport.update({
+    id: '/(students)/lessons/$course/',
+    path: '/lessons/$course/',
     getParentRoute: () => mainRouteRoute,
   } as any)
-const mainstudentsLessonsProgramRoute =
-  mainstudentsLessonsProgramRouteImport.update({
-    id: '/(students)/lessons/$program',
-    path: '/lessons/$program',
+const mainstudentsLessonsCourseLessonRoute =
+  mainstudentsLessonsCourseLessonRouteImport.update({
+    id: '/(students)/lessons/$course/$lesson',
+    path: '/lessons/$course/$lesson',
     getParentRoute: () => mainRouteRoute,
   } as any)
 const mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute =
@@ -581,8 +581,8 @@ export interface FileRoutesByFullPath {
   '/schools': typeof mainteacherSchoolsRoute
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
-  '/lessons/$program': typeof mainstudentsLessonsProgramRoute
-  '/lesssons/$lessonSlug': typeof mainstudentsLesssonsLessonSlugRoute
+  '/lessons/$course/$lesson': typeof mainstudentsLessonsCourseLessonRoute
+  '/lessons/$course': typeof mainstudentsLessonsCourseIndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -651,8 +651,8 @@ export interface FileRoutesByTo {
   '/schools': typeof mainteacherSchoolsRoute
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
-  '/lessons/$program': typeof mainstudentsLessonsProgramRoute
-  '/lesssons/$lessonSlug': typeof mainstudentsLesssonsLessonSlugRoute
+  '/lessons/$course/$lesson': typeof mainstudentsLessonsCourseLessonRoute
+  '/lessons/$course': typeof mainstudentsLessonsCourseIndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -725,8 +725,8 @@ export interface FileRoutesById {
   '/(main)/(teacher)/schools': typeof mainteacherSchoolsRoute
   '/(main)/(teacher)/students': typeof mainteacherStudentsRoute
   '/(main)/(teacher)/teachers': typeof mainteacherTeachersRoute
-  '/(main)/(students)/lessons/$program': typeof mainstudentsLessonsProgramRoute
-  '/(main)/(students)/lesssons/$lessonSlug': typeof mainstudentsLesssonsLessonSlugRoute
+  '/(main)/(students)/lessons/$course/$lesson': typeof mainstudentsLessonsCourseLessonRoute
+  '/(main)/(students)/lessons/$course/': typeof mainstudentsLessonsCourseIndexRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -797,8 +797,8 @@ export interface FileRouteTypes {
     | '/schools'
     | '/students'
     | '/teachers'
-    | '/lessons/$program'
-    | '/lesssons/$lessonSlug'
+    | '/lessons/$course/$lesson'
+    | '/lessons/$course'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
@@ -867,8 +867,8 @@ export interface FileRouteTypes {
     | '/schools'
     | '/students'
     | '/teachers'
-    | '/lessons/$program'
-    | '/lesssons/$lessonSlug'
+    | '/lessons/$course/$lesson'
+    | '/lessons/$course'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
@@ -940,8 +940,8 @@ export interface FileRouteTypes {
     | '/(main)/(teacher)/schools'
     | '/(main)/(teacher)/students'
     | '/(main)/(teacher)/teachers'
-    | '/(main)/(students)/lessons/$program'
-    | '/(main)/(students)/lesssons/$lessonSlug'
+    | '/(main)/(students)/lessons/$course/$lesson'
+    | '/(main)/(students)/lessons/$course/'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
@@ -1124,18 +1124,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof maincommonDashboardRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/(students)/lesssons/$lessonSlug': {
-      id: '/(main)/(students)/lesssons/$lessonSlug'
-      path: '/lesssons/$lessonSlug'
-      fullPath: '/lesssons/$lessonSlug'
-      preLoaderRoute: typeof mainstudentsLesssonsLessonSlugRouteImport
+    '/(main)/(students)/lessons/$course/': {
+      id: '/(main)/(students)/lessons/$course/'
+      path: '/lessons/$course'
+      fullPath: '/lessons/$course'
+      preLoaderRoute: typeof mainstudentsLessonsCourseIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/(students)/lessons/$program': {
-      id: '/(main)/(students)/lessons/$program'
-      path: '/lessons/$program'
-      fullPath: '/lessons/$program'
-      preLoaderRoute: typeof mainstudentsLessonsProgramRouteImport
+    '/(main)/(students)/lessons/$course/$lesson': {
+      id: '/(main)/(students)/lessons/$course/$lesson'
+      path: '/lessons/$course/$lesson'
+      fullPath: '/lessons/$course/$lesson'
+      preLoaderRoute: typeof mainstudentsLessonsCourseLessonRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/': {
@@ -1547,8 +1547,8 @@ interface mainRouteRouteChildren {
   maincommonDashboardRoute: typeof maincommonDashboardRoute
   maincommonProfileRoute: typeof maincommonProfileRoute
   maincommonSettingsRoute: typeof maincommonSettingsRoute
-  mainstudentsLessonsProgramRoute: typeof mainstudentsLessonsProgramRoute
-  mainstudentsLesssonsLessonSlugRoute: typeof mainstudentsLesssonsLessonSlugRoute
+  mainstudentsLessonsCourseLessonRoute: typeof mainstudentsLessonsCourseLessonRoute
+  mainstudentsLessonsCourseIndexRoute: typeof mainstudentsLessonsCourseIndexRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRoute
@@ -1608,8 +1608,8 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   maincommonDashboardRoute: maincommonDashboardRoute,
   maincommonProfileRoute: maincommonProfileRoute,
   maincommonSettingsRoute: maincommonSettingsRoute,
-  mainstudentsLessonsProgramRoute: mainstudentsLessonsProgramRoute,
-  mainstudentsLesssonsLessonSlugRoute: mainstudentsLesssonsLessonSlugRoute,
+  mainstudentsLessonsCourseLessonRoute: mainstudentsLessonsCourseLessonRoute,
+  mainstudentsLessonsCourseIndexRoute: mainstudentsLessonsCourseIndexRoute,
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute:
     mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRoute,
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRoute:

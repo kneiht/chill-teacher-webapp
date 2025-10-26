@@ -10,15 +10,15 @@ interface Lesson {
   imageUrl: string
 }
 
-export const Route = createFileRoute('/(main)/(students)/lessons/$program')({
-  loader: async ({ params }): Promise<Lesson[] | { error: string }> => {
+export const Route = createFileRoute('/(main)/(students)/lessons/$course/')({
+  loader: async ({ params }): Promise<Array<Lesson> | { error: string }> => {
     try {
       const data = (await import(
-        `./mock-data/program.${params.program}.json`
-      )) as { default: Lesson[] }
+        `../../mock-data/courses/${params.course}.json`
+      )) as { default: Array<Lesson> }
       return data.default
     } catch {
-      return { error: 'Cannot find this program' }
+      return { error: 'Cannot find this course' }
     }
   },
   component: LessonProgram,

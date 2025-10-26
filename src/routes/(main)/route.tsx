@@ -142,11 +142,11 @@ function MainLayout() {
           icon: <DashboardOutlined />,
           label: <Link to="/dashboard">{t('Dashboard')}</Link>,
         },
-        {
-          key: '/lessons',
-          icon: <ReadOutlined />,
-          label: <Link to="/lessons">{t('Lessons')}</Link>,
-        },
+        // {
+        //   key: '/lessons',
+        //   icon: <ReadOutlined />,
+        //   label: <Link to="/lessons/">{t('Lessons')}</Link>,
+        // },
       ]
     }
 
@@ -155,7 +155,7 @@ function MainLayout() {
 
   const menuItems = getMenuItems()
 
-  // Define the user menu items
+  // Define the user menu itemss
   const userMenuItems: MenuProps['items'] = [
     {
       key: '/profile',
@@ -382,8 +382,9 @@ function EscapeMainLayout() {
 function LayoutSelector() {
   const { pathname } = useLocation()
   const escapedRoutes = ['/lessons/everybody-up-0', '/lessons/advanced-topics']
-  const isEscapedRoute = escapedRoutes.some((route) =>
-    pathname.startsWith(route),
+  const isEscapedRoute = escapedRoutes.some(
+    // Check if the pathname starts with an escaped route and has another path segment after it
+    (route) => pathname.startsWith(route) && pathname.length - route.length > 1,
   )
   return isEscapedRoute ? <EscapeMainLayout /> : <MainLayout />
 }
