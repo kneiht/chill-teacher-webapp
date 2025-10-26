@@ -17,6 +17,8 @@ interface VocabItem {
   word: string
   pronunciation?: string
   exampleSentenceEn?: string
+  wordPronunciation?: string
+  sentencePronunciation?: string
   // other fields
 }
 
@@ -24,6 +26,8 @@ interface Question {
   english: string
   pronunciation: string
   exampleSentence: string
+  wordPronunciation?: string
+  sentencePronunciation?: string
 }
 
 interface ListeningTypingEnGameProps {
@@ -54,11 +58,10 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   const [isAnswering, setIsAnswering] = useState(false)
   const [userAnswer, setUserAnswer] = useState('')
   const [feedback, setFeedback] = useState('')
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
-  const { speak } = useVoice()
+  const { speakWord, speakSentence, isPlaying } = useVoice()
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -113,6 +116,8 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
       english: word.word,
       pronunciation: word.pronunciation || '',
       exampleSentence: word.exampleSentenceEn || '',
+      wordPronunciation: word.wordPronunciation || '',
+      sentencePronunciation: word.sentencePronunciation || '',
     }))
   }
 
@@ -128,7 +133,7 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     setIsAnswering(false)
     setUserAnswer('')
     setFeedback('')
-    setIsPlayingAudio(false)
+
     resetTimer()
     resetGame()
     setTotalQuestions(newQuestions.length)
@@ -147,7 +152,7 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
     setIsAnswering(false)
     setUserAnswer('')
     setFeedback('')
-    setIsPlayingAudio(false)
+
     resetTimer()
     resetGame()
     setTotalQuestions(newQuestions.length)
@@ -155,20 +160,18 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   }
 
   const playCurrentWord = () => {
-    if (isPlayingAudio || !currentQuestion) return
+    if (isPlaying || !currentQuestion) return
 
     playSound('click')
-    setIsPlayingAudio(true)
-    const text = currentQuestion.exampleSentence
-      ? `${currentQuestion.english}. ${currentQuestion.exampleSentence}`
-      : currentQuestion.english
-
-    speak(text, 'en-US')
-
-    // Reset playing state after a delay
-    setTimeout(() => {
-      setIsPlayingAudio(false)
-    }, 2000)
+    if (currentQuestion.exampleSentence) {
+      speakWord(currentQuestion.english, currentQuestion.wordPronunciation)
+      speakSentence(
+        currentQuestion.exampleSentence,
+        currentQuestion.sentencePronunciation,
+      )
+    } else {
+      speakWord(currentQuestion.english, currentQuestion.wordPronunciation)
+    }
   }
 
   const submitAnswer = () => {
@@ -209,7 +212,6 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
       setIsAnswering(false)
       setUserAnswer('')
       setFeedback('')
-      setIsPlayingAudio(false)
     } else {
       playSound('success')
       stopMusic()
@@ -237,11 +239,16 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
   // Auto-focus input and auto-speak when moving to next question
   useEffect(() => {
     if (isGameStarted && !isAnswering && currentQuestion) {
-      // Auto-speak the word
-      const text = currentQuestion.exampleSentence
-        ? `${currentQuestion.english}. ${currentQuestion.exampleSentence}`
-        : currentQuestion.english
-      speak(text, 'en-US')
+      // Auto-speak the word and sentence
+      if (currentQuestion.exampleSentence) {
+        speakWord(currentQuestion.english, currentQuestion.wordPronunciation)
+        speakSentence(
+          currentQuestion.exampleSentence,
+          currentQuestion.sentencePronunciation,
+        )
+      } else {
+        speakWord(currentQuestion.english, currentQuestion.wordPronunciation)
+      }
 
       // Focus input after a short delay
       setTimeout(() => {
@@ -319,10 +326,10 @@ const ListeningTypingEnGameCore: React.FC<ListeningTypingEnGameProps> = ({
               <div className="flex flex-col items-center gap-4">
                 <button
                   onClick={playCurrentWord}
-                  disabled={isPlayingAudio}
+                  disabled={isPlaying}
                   className="bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-full shadow-lg text-2xl"
                 >
-                  <span className={isPlayingAudio ? 'animate-pulse' : ''}>
+                  <span className={isPlaying ? 'animate-pulse' : ''}>
                     🔊 Nghe
                   </span>
                 </button>

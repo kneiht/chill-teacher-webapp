@@ -109,7 +109,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
                   alt={vocab.word}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute top-3 inset-x-0 flex items-center justify-center">
+                <div className="absolute bottom-5 inset-x-0 flex items-center justify-center">
                   <h3 className="text-3xl font-bold text-indigo-600 px-6 py-3 rounded-lg bg-[#ffffff9b]">
                     {vocab.vietnameseMeaning}
                   </h3>

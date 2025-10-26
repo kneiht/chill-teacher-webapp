@@ -153,7 +153,8 @@ export const useVoice = () => {
     speak,
     speakWord,
     speakSentence,
-    stopAll,
     isSupported,
+    isPlaying,
+    stopAll,
   }
 }

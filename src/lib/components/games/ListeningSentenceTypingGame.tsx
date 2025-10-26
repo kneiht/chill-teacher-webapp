@@ -17,11 +17,14 @@ interface VocabItem {
   word: string
   pronunciation?: string
   sampleSentence?: string
+  wordPronunciation?: string
+  sentencePronunciation?: string
   // other fields
 }
 
 interface Question {
   sentence: string
+  sentencePronunciation?: string
 }
 
 interface ListeningSentenceTypingGameProps {
@@ -50,11 +53,10 @@ const ListeningSentenceTypingGameCore: React.FC<
   const [isAnswering, setIsAnswering] = useState(false)
   const [userAnswer, setUserAnswer] = useState('')
   const [feedback, setFeedback] = useState('')
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
-  const { speak } = useVoice()
+  const { speakSentence, isPlaying } = useVoice()
 
   const vocabWords: Array<VocabItem> = vocabData
 
@@ -116,6 +118,7 @@ const ListeningSentenceTypingGameCore: React.FC<
       .slice(0, num)
       .map((word) => ({
         sentence: word.sampleSentence || '',
+        sentencePronunciation: word.sentencePronunciation || '',
       }))
       .filter((q) => q.sentence) // Only include items with sentences
   }
@@ -132,7 +135,7 @@ const ListeningSentenceTypingGameCore: React.FC<
     setIsAnswering(false)
     setUserAnswer('')
     setFeedback('')
-    setIsPlayingAudio(false)
+
     resetTimer()
     resetGame()
     setTotalQuestions(newQuestions.length)
@@ -151,7 +154,7 @@ const ListeningSentenceTypingGameCore: React.FC<
     setIsAnswering(false)
     setUserAnswer('')
     setFeedback('')
-    setIsPlayingAudio(false)
+
     resetTimer()
     resetGame()
     setTotalQuestions(newQuestions.length)
@@ -159,18 +162,13 @@ const ListeningSentenceTypingGameCore: React.FC<
   }
 
   const playCurrentSentence = () => {
-    if (isPlayingAudio || !currentQuestion) return
+    if (isPlaying || !currentQuestion) return
 
     playSound('click')
-    setIsPlayingAudio(true)
-    const text = currentQuestion.sentence
-
-    speak(text, 'en-US')
-
-    // Reset playing state after a delay
-    setTimeout(() => {
-      setIsPlayingAudio(false)
-    }, 3000)
+    speakSentence(
+      currentQuestion.sentence,
+      currentQuestion.sentencePronunciation,
+    )
   }
 
   const submitAnswer = () => {
@@ -211,7 +209,6 @@ const ListeningSentenceTypingGameCore: React.FC<
       setIsAnswering(false)
       setUserAnswer('')
       setFeedback('')
-      setIsPlayingAudio(false)
     } else {
       playSound('success')
       stopMusic()
@@ -240,7 +237,10 @@ const ListeningSentenceTypingGameCore: React.FC<
   useEffect(() => {
     if (isGameStarted && !isAnswering && currentQuestion) {
       // Auto-speak the sentence
-      speak(currentQuestion.sentence, 'en-US')
+      speakSentence(
+        currentQuestion.sentence,
+        currentQuestion.sentencePronunciation,
+      )
 
       // Focus input after a short delay
       setTimeout(() => {
@@ -318,10 +318,10 @@ const ListeningSentenceTypingGameCore: React.FC<
               <div className="flex flex-col items-center gap-4">
                 <button
                   onClick={playCurrentSentence}
-                  disabled={isPlayingAudio}
+                  disabled={isPlaying}
                   className="bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-full shadow-lg text-2xl"
                 >
-                  <span className={isPlayingAudio ? 'animate-pulse' : ''}>
+                  <span className={isPlaying ? 'animate-pulse' : ''}>
                     🔊 Nghe câu
                   </span>
                 </button>
