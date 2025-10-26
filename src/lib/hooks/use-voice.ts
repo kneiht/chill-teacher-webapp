@@ -37,6 +37,39 @@ export const useVoice = () => {
     speechSynthesis.speak(utterance)
   }
 
+  const playOnlineAudio = (
+    url: string,
+    fallbackText: string,
+    lang: string = 'en-US',
+  ) => {
+    const audio = new Audio(url)
+    audio.play().catch(() => {
+      speak(fallbackText, lang)
+    })
+  }
+
+  const speakWord = (word: string, pronunciation?: string) => {
+    if (pronunciation) {
+      playOnlineAudio(
+        `https://storage.chillteacher.com/audio-words/${pronunciation.replace('.mp3', '.wav')}`,
+        word,
+      )
+    } else {
+      speak(word)
+    }
+  }
+
+  const speakSentence = (sentence: string, pronunciation?: string) => {
+    if (pronunciation) {
+      playOnlineAudio(
+        `https://storage.chillteacher.com/audio-sentences/${pronunciation.replace('.mp3', '.wav')}`,
+        sentence,
+      )
+    } else {
+      speak(sentence)
+    }
+  }
+
   return {
     voices,
     voice,
@@ -44,6 +77,8 @@ export const useVoice = () => {
     setVoice,
     setRate,
     speak,
+    speakWord,
+    speakSentence,
     isSupported,
   }
 }

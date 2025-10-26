@@ -15,6 +15,8 @@ interface VocabItem {
   vietnameseMeaning: string
   sampleSentence: string
   vietnameseTranslation: string
+  wordPronunciation?: string
+  sentencePronunciation?: string
 }
 
 interface FlashcardProps {
@@ -25,7 +27,7 @@ interface FlashcardProps {
 const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const settings = useStore(flashcardStore)
-  const { speak } = useVoice()
+  const { speakWord, speakSentence } = useVoice()
 
   useEffect(() => {
     // Reset flip state when card becomes active or inactive
@@ -37,10 +39,25 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
       // Delay 500ms before speaking
       setTimeout(() => {
         // Speak word
-        speak(`${vocab.word}. ${vocab.sampleSentence}`)
+        speakWord(vocab.word, vocab.wordPronunciation)
       }, 500)
     }
-  }, [isActive, isFlipped, vocab.word, vocab.sampleSentence, speak])
+  }, [isActive, isFlipped, vocab.word, vocab.wordPronunciation, speakWord])
+
+  useEffect(() => {
+    if (isActive && settings.soundEnabled && isFlipped) {
+      // Speak sentence when flipped
+      setTimeout(() => {
+        speakSentence(vocab.sampleSentence, vocab.sentencePronunciation)
+      }, 500)
+    }
+  }, [
+    isActive,
+    isFlipped,
+    vocab.sampleSentence,
+    vocab.sentencePronunciation,
+    speakSentence,
+  ])
 
   useEffect(() => {
     if (isActive) {
@@ -139,6 +156,22 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
           ) : (
             <VolumeX className="text-lg" />
           )}
+        </button>
+        <button
+          onClick={() => speakWord(vocab.word, vocab.wordPronunciation)}
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors shadow-lg"
+          title="Play word audio"
+        >
+          <Volume2 className="text-lg" />
+        </button>
+        <button
+          onClick={() =>
+            speakSentence(vocab.sampleSentence, vocab.sentencePronunciation)
+          }
+          className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors shadow-lg"
+          title="Play sentence audio"
+        >
+          <Volume2 className="text-lg" />
         </button>
       </div>
     </div>

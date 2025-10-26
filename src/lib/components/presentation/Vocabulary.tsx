@@ -10,6 +10,8 @@ interface VocabItem {
   vietnameseMeaning: string
   sampleSentence: string
   vietnameseTranslation: string
+  wordPronunciation?: string
+  sentencePronunciation?: string
 }
 
 interface VocabularyProps {
@@ -18,7 +20,7 @@ interface VocabularyProps {
 }
 
 const Vocabulary: React.FC<VocabularyProps> = ({ vocab, isActive }) => {
-  const { speak } = useVoice()
+  const { speakWord, speakSentence } = useVoice()
 
   if (!isActive) return null
 
@@ -30,8 +32,18 @@ const Vocabulary: React.FC<VocabularyProps> = ({ vocab, isActive }) => {
       <div className="flex items-center mb-4">
         <h1 className="text-6xl font-bold text-indigo-600">{vocab.word}</h1>
         <button
-          onClick={() => speak(`${vocab.word}. ${vocab.sampleSentence}`)}
+          onClick={() => speakWord(vocab.word, vocab.wordPronunciation)}
           className="ml-4 p-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors"
+          title="Play word audio"
+        >
+          <Volume2 className="text-2xl" />
+        </button>
+        <button
+          onClick={() =>
+            speakSentence(vocab.sampleSentence, vocab.sentencePronunciation)
+          }
+          className="ml-2 p-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors"
+          title="Play sentence audio"
         >
           <Volume2 className="text-2xl" />
         </button>
