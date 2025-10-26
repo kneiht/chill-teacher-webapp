@@ -6,6 +6,7 @@ import { Route as flashcardsRoute } from './flashcards'
 import { Route as assignmentsRoute } from './assignments'
 import { Route as presentationLessonRoute } from './presentation-lesson'
 import { Route as youtubeLessonRoute } from './youtube-lesson'
+import { Route as youtubeOpeningRoute } from './youtube-opening-lesson'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
@@ -82,7 +83,11 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             Lesson 1: Vocabulary - Part 1
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
-            <Link to={presentationLessonRoute.to}>
+            <Link to={assignmentsRoute.to}>
+              <WoodenButton className={buttonStyle}>Nhiệm vụ</WoodenButton>
+            </Link>
+
+            <Link to={youtubeOpeningRoute.to}>
               <WoodenButton className={buttonStyle}>Video mở đầu</WoodenButton>
             </Link>
 
@@ -90,18 +95,14 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
               <WoodenButton className={buttonStyle}>Bộ từ vựng 1</WoodenButton>
             </Link>
 
-            <Link to={youtubeLessonRoute.to}>
+            {/* <Link to={youtubeLessonRoute.to}>
               <WoodenButton className={buttonStyle}>
                 Video bài giảng
               </WoodenButton>
-            </Link>
+            </Link> */}
 
             <Link to={flashcardsRoute.to}>
               <WoodenButton className={buttonStyle}>Flashcards</WoodenButton>
-            </Link>
-
-            <Link to={assignmentsRoute.to}>
-              <WoodenButton className={buttonStyle}>Nhiệm vụ</WoodenButton>
             </Link>
 
             {lessonGames.map((lessonGame) => (

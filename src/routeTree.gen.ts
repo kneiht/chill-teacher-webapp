@@ -84,6 +84,7 @@ import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLe
 import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
 import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
 import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
 import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
 import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
 import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
@@ -633,6 +634,14 @@ const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2Assignm
       getParentRoute: () => mainRouteRoute,
     } as any,
   )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
 const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute =
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRouteImport.update(
     {
@@ -939,6 +948,7 @@ export interface FileRoutesByFullPath {
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
@@ -1045,6 +1055,7 @@ export interface FileRoutesByTo {
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
   '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
@@ -1155,6 +1166,7 @@ export interface FileRoutesById {
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
@@ -1263,6 +1275,7 @@ export interface FileRouteTypes {
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
@@ -1369,6 +1382,7 @@ export interface FileRouteTypes {
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
     | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
@@ -1478,6 +1492,7 @@ export interface FileRouteTypes {
     | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
     | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
     | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
     | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
     | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
     | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
@@ -2070,6 +2085,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': {
       id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
       path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
@@ -2373,6 +2395,7 @@ interface mainRouteRouteChildren {
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
@@ -2502,6 +2525,8 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
     mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute,
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute:
     mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeOpeningLessonRoute,
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute:
     mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute,
   mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute:
