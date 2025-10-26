@@ -68,14 +68,14 @@ const Dashboard: React.FC = () => {
           >
             {t('The dashboard page is under construction')}
           </Text>
-          <Button
+          {/* <Button
             type="primary"
             size="large"
             icon={<BookOutlined />}
             onClick={() => navigate({ to: '/lessons' })}
           >
             {t('Go to Lessons')}
-          </Button>
+          </Button> */}
         </Card>
       </div>
     )
