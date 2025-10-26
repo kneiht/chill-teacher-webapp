@@ -6,8 +6,8 @@ import sharp from 'sharp'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const folders = ['vocab-images', 'backgrounds', 'textures']
-const baseDir = path.join(__dirname, 'public')
+const folders = ['images']
+const baseDir = path.join(__dirname)
 
 // Supported image extensions
 const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff']

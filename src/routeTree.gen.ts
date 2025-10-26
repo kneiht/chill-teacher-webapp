@@ -31,6 +31,14 @@ import { Route as mainstudentsLessonsCourseLessonRouteImport } from './routes/(m
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/index'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-2/index'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/index'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/index'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/index'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-7/index'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson6IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-6/index'
@@ -52,6 +60,34 @@ import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson1YoutubeLessonRouteI
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson1PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+import { Route as mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments'
@@ -193,6 +229,70 @@ const mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute =
     path: '/lessons/everybody-up-0/unit-1/lesson-1/',
     getParentRoute: () => mainRouteRoute,
   } as any)
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
 const mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute =
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRouteImport.update(
     {
@@ -341,6 +441,230 @@ const mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute =
     path: '/lessons/everybody-up-0/unit-1/lesson-1/assignments',
     getParentRoute: () => mainRouteRoute,
   } as any)
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
+const mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute =
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRouteImport.update(
+    {
+      id: '/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments',
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments',
+      getParentRoute: () => mainRouteRoute,
+    } as any,
+  )
 const mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute =
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRouteImport.update(
     {
@@ -611,6 +935,34 @@ export interface FileRoutesByFullPath {
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
@@ -632,6 +984,14 @@ export interface FileRoutesByFullPath {
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-6': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson6IndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-7': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-2': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-3': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
@@ -681,6 +1041,34 @@ export interface FileRoutesByTo {
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8AssignmentsRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
@@ -702,6 +1090,14 @@ export interface FileRoutesByTo {
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-6': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson6IndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-7': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute
+  '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-1': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-2': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-3': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
@@ -755,6 +1151,34 @@ export interface FileRoutesById {
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8AssignmentsRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/assignments': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/flashcards': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
@@ -776,6 +1200,14 @@ export interface FileRoutesById {
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-6/': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson6IndexRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-7/': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute
+  '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/': typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-2/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
@@ -827,6 +1259,34 @@ export interface FileRouteTypes {
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
@@ -848,6 +1308,14 @@ export interface FileRouteTypes {
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-6'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-7'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
     | '/lessons/everybody-up-0/unit-1/lesson-2'
     | '/lessons/everybody-up-0/unit-1/lesson-3'
@@ -897,6 +1365,34 @@ export interface FileRouteTypes {
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
     | '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
     | '/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
@@ -918,6 +1414,14 @@ export interface FileRouteTypes {
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-6'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-7'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7'
+    | '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8'
     | '/lessons/everybody-up-0/unit-1/lesson-1'
     | '/lessons/everybody-up-0/unit-1/lesson-2'
     | '/lessons/everybody-up-0/unit-1/lesson-3'
@@ -970,6 +1474,34 @@ export interface FileRouteTypes {
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/assignments'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/guide'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/assignments'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/flashcards'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/presentation-lesson'
@@ -991,6 +1523,14 @@ export interface FileRouteTypes {
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-6/'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-7/'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/'
+    | '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-1/'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-2/'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/'
@@ -1159,6 +1699,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/': {
       id: '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/'
       path: '/lessons/advanced-topics/multiple-intelligence-theory/lesson-8'
@@ -1304,6 +1900,202 @@ declare module '@tanstack/react-router' {
       path: '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-1/assignments'
       preLoaderRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/guide'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-8/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/guide'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-7/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/exercises'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-6/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/exercises'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-5/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/presentation-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/flashcards'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/exercises'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-4/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/presentation-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/flashcards'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-3/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/presentation-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/flashcards'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-2/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/presentation-lesson'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/flashcards'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments': {
+      id: '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
+      path: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
+      fullPath: '/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/assignments'
+      preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-8/youtube-lesson': {
@@ -1577,6 +2369,34 @@ interface mainRouteRouteChildren {
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8AssignmentsRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1PresentationLessonRoute
@@ -1598,6 +2418,14 @@ interface mainRouteRouteChildren {
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson6IndexRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson6IndexRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute: typeof mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
@@ -1666,6 +2494,62 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
     mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8GuideRoute,
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute:
     mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1FlashcardsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1PresentationLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2FlashcardsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2PresentationLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3FlashcardsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3PresentationLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4ExercisesRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4FlashcardsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4PresentationLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5ExercisesRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6ExercisesRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6YoutubeLessonRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7GuideRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8AssignmentsRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8GuideRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8YoutubeLessonRoute,
   mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute:
     mainstudentsLessonsEverybodyUp0Unit1Lesson1AssignmentsRoute,
   mainstudentsLessonsEverybodyUp0Unit1Lesson1FlashcardsRoute:
@@ -1708,6 +2592,22 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
     mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson7IndexRoute,
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute:
     mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson8IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson1IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson2IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson3IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson4IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson5IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson6IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson7IndexRoute,
+  mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute:
+    mainstudentsLessonsAdvancedTopicsWhalesGuardiansOfTheClimateLesson8IndexRoute,
   mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute:
     mainstudentsLessonsEverybodyUp0Unit1Lesson1IndexRoute,
   mainstudentsLessonsEverybodyUp0Unit1Lesson2IndexRoute:
