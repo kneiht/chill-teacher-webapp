@@ -3,35 +3,45 @@ import { Card, Col, Row, Typography } from 'antd'
 
 const { Title } = Typography
 
-const lessons = [
-  {
-    title: 'Everybody Up Starter - Unit 1',
-    description: 'Lesson 1: School Supplies - Vocabulary 1',
-    path: '../../lessons/everybody-up-0/unit-1/lesson-1/',
-    imageUrl: '/backgrounds/EU0-U1L1.webp',
-  },
-  {
-    title: 'Everybody Up Starter - Unit 1',
-    description: 'Lesson 2: School Supplies - Vocabulary 2',
-    path: '../../lessons/everybody-up-0/unit-1/lesson-2/',
-    imageUrl: '/backgrounds/EU0-U1L2.webp',
-  },
-  {
-    title: 'Everybody Up Starter - Unit 1',
-    description: 'Lesson 3: School Supplies - Reading',
-    path: '../../lessons/everybody-up-0/unit-1/lesson-3/',
-    imageUrl: '/backgrounds/EU0-U1L2.webp',
-  },
-]
+interface Lesson {
+  title: string
+  description: string
+  path: string
+  imageUrl: string
+}
 
-export const Route = createFileRoute('/(main)/(students)/lessons/eu')({
-  component: RouteComponent,
+export const Route = createFileRoute('/(main)/(students)/lessons/$program')({
+  loader: async ({ params }): Promise<Lesson[] | { error: string }> => {
+    try {
+      const data = (await import(
+        `./mock-data/program.${params.program}.json`
+      )) as { default: Lesson[] }
+      return data.default
+    } catch {
+      return { error: 'Cannot find this program' }
+    }
+  },
+  component: LessonProgram,
 })
 
-function RouteComponent() {
+function LessonProgram() {
+  const data = Route.useLoaderData()
+
+  if ('error' in data) {
+    return (
+      <div>
+        <Title level={2}>Error</Title>
+        <p>{data.error}</p>
+      </div>
+    )
+  }
+
+  const lessons = data
+
   return (
     <div>
       <Title level={2}>Available Lessons</Title>
+
       <Row gutter={[16, 16]}>
         {lessons.map((lesson) => (
           <Col

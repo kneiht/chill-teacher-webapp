@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Everybody Up Starter - Unit 1",
+    "description": "Lesson 1: School Supplies - Vocabulary 1",
+    "path": "../../lessons/everybody-up-0/unit-1/lesson-1/",
+    "imageUrl": "/backgrounds/EU0-U1L1.webp"
+  },
+  {
+    "title": "Everybody Up Starter - Unit 1",
+    "description": "Lesson 2: School Supplies - Vocabulary 2",
+    "path": "../../lessons/everybody-up-0/unit-1/lesson-2/",
+    "imageUrl": "/backgrounds/EU0-U1L2.webp"
+  },
+  {
+    "title": "Everybody Up Starter - Unit 1",
+    "description": "Lesson 3: School Supplies - Reading",
+    "path": "../../lessons/everybody-up-0/unit-1/lesson-3/",
+    "imageUrl": "/backgrounds/EU0-U1L2.webp"
+  }
+]
