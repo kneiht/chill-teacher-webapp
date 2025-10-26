@@ -15,14 +15,38 @@ type SupplyKey =
   | 'crayon'
 
 const supplies: Record<SupplyKey, { label: string; image: string }> = {
-  paper: { label: 'Paper', image: '/vocab-images/paper.webp' },
-  glue: { label: 'Glue', image: '/vocab-images/glue.webp' },
-  paint: { label: 'Paint', image: '/vocab-images/paint.webp' },
-  scissors: { label: 'Scissors', image: '/vocab-images/scissors.webp' },
-  pen: { label: 'Pen', image: '/vocab-images/pen.webp' },
-  pencil: { label: 'Pencil', image: '/vocab-images/pencil.webp' },
-  marker: { label: 'Marker', image: '/vocab-images/marker.webp' },
-  crayon: { label: 'Crayon', image: '/vocab-images/crayon.webp' },
+  paper: {
+    label: 'Paper',
+    image: 'https://storage.chillteacher.com/images-words/paper.webp',
+  },
+  glue: {
+    label: 'Glue',
+    image: 'https://storage.chillteacher.com/images-words/glue.webp',
+  },
+  paint: {
+    label: 'Paint',
+    image: 'https://storage.chillteacher.com/images-words/paint.webp',
+  },
+  scissors: {
+    label: 'Scissors',
+    image: 'https://storage.chillteacher.com/images-words/scissors.webp',
+  },
+  pen: {
+    label: 'Pen',
+    image: 'https://storage.chillteacher.com/images-words/pen.webp',
+  },
+  pencil: {
+    label: 'Pencil',
+    image: 'https://storage.chillteacher.com/images-words/pencil.webp',
+  },
+  marker: {
+    label: 'Marker',
+    image: 'https://storage.chillteacher.com/images-words/marker.webp',
+  },
+  crayon: {
+    label: 'Crayon',
+    image: 'https://storage.chillteacher.com/images-words/crayon.webp',
+  },
 }
 
 type CharacterTask = {
