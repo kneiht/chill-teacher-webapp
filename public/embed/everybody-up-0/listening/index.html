@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids Listening Fun!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Baloo 2', cursive;
+        background: linear-gradient(135deg, #6ee7b7, #3b82f6, #9333ea);
+        color: #1f2937;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+      .main-card {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 1.5rem;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+      }
+      .tab-btn {
+        color: white;
+        opacity: 0.7;
+        border-bottom: 4px solid transparent;
+        transition: all 0.3s;
+      }
+      .tab-btn.active {
+        opacity: 1;
+        border-bottom-color: #fbbf24;
+        transform: scale(1.1);
+      }
+      .question-card {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 1rem;
+        border-left: 8px solid transparent;
+        transition: all 0.3s;
+      }
+      .question-card.correct {
+        border-left-color: #34d399;
+      }
+      .question-card.incorrect {
+        border-left-color: #f87171;
+      }
+      .btn {
+        border-radius: 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem 2rem;
+        transition: all 0.3s;
+        border: none;
+      }
+      .btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      audio::-webkit-media-controls-panel {
+        background-color: #93c5fd;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="container">
+      <header class="text-center mb-6">
+        <h1
+          class="text-6xl font-extrabold text-white"
+          style="text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2)"
+        >
+          Listening !
+        </h1>
+      </header>
+
+      <main class="main-card p-4 sm:p-8 space-y-6">
+        <div class="border-b-2 border-white/20 mb-6">
+          <nav class="flex justify-center -mb-px space-x-2 sm:space-x-8">
+            <button class="tab-btn p-4 text-xl" data-tab="listen-and-choose">
+              Exercise 1
+            </button>
+            <button class="tab-btn p-4 text-xl" data-tab="fill-in-the-blank">
+              Exercise 2
+            </button>
+            <button class="tab-btn p-4 text-xl" data-tab="dialogues">
+              Exercise 3
+            </button>
+          </nav>
+        </div>
+
+        <div id="tab-content-container">
+          <div id="listen-and-choose" class="tab-content hidden space-y-4">
+            <h2 class="text-3xl font-bold text-center text-white">
+              Listen and Choose (Nghe và chọn)
+            </h2>
+
+            <div id="lc_q_101" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 101</p>
+              <audio controls class="w-full">
+                <source src="assets/lc_q_101.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-1">
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_101"
+                    value="I have a pen."
+                    class="mr-2"
+                  />
+                  <span>I have a pen.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_101"
+                    value="I see a pen."
+                    class="mr-2"
+                  />
+                  <span>I see a pen.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_101"
+                    value="He has a pen."
+                    class="mr-2"
+                  />
+                  <span>He has a pen.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_101"
+                    value="I have a pan."
+                    class="mr-2"
+                  />
+                  <span>I have a pan.</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="lc_q_102" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 102</p>
+              <audio controls class="w-full">
+                <source src="assets/lc_q_102.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-1">
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_102"
+                    value="I have a pencil."
+                    class="mr-2"
+                  />
+                  <span>I have a pencil.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_102"
+                    value="I have a paper."
+                    class="mr-2"
+                  />
+                  <span>I have a paper.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_102"
+                    value="She has a pencil."
+                    class="mr-2"
+                  />
+                  <span>She has a pencil.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_102"
+                    value="I like the pencil."
+                    class="mr-2"
+                  />
+                  <span>I like the pencil.</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="lc_q_103" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 103</p>
+              <audio controls class="w-full">
+                <source src="assets/lc_q_103.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-1">
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_103"
+                    value="I have paper."
+                    class="mr-2"
+                  />
+                  <span>I have paper.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_103"
+                    value="I have paint."
+                    class="mr-2"
+                  />
+                  <span>I have paint.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_103"
+                    value="I have a pear."
+                    class="mr-2"
+                  />
+                  <span>I have a pear.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_103"
+                    value="You have paper."
+                    class="mr-2"
+                  />
+                  <span>You have paper.</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="lc_q_104" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 104</p>
+              <audio controls class="w-full">
+                <source src="assets/lc_q_104.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-1">
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_104"
+                    value="I have sisters."
+                    class="mr-2"
+                  />
+                  <span>I have sisters.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_104"
+                    value="I have scissors."
+                    class="mr-2"
+                  />
+                  <span>I have scissors.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_104"
+                    value="He has scissors."
+                    class="mr-2"
+                  />
+                  <span>He has scissors.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_104"
+                    value="I have glasses."
+                    class="mr-2"
+                  />
+                  <span>I have glasses.</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="lc_q_105" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 105</p>
+              <audio controls class="w-full">
+                <source src="assets/lc_q_105.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-1">
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_105"
+                    value="I have paint."
+                    class="mr-2"
+                  />
+                  <span>I have paint.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_105"
+                    value="I have pain."
+                    class="mr-2"
+                  />
+                  <span>I have pain.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_105"
+                    value="I have a pet."
+                    class="mr-2"
+                  />
+                  <span>I have a pet.</span>
+                </label>
+
+                <label
+                  class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                >
+                  <input
+                    type="radio"
+                    name="lc_q_105"
+                    value="You have paint."
+                    class="mr-2"
+                  />
+                  <span>You have paint.</span>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="results-container mt-4 p-4 text-center rounded-2xl bg-black/20"
+              style="display: none"
+            ></div>
+          </div>
+          <div id="fill-in-the-blank" class="tab-content hidden space-y-4">
+            <h2 class="text-3xl font-bold text-center text-white">
+              Fill in the Blank (Điền vào chỗ trống)
+            </h2>
+
+            <div id="fb_q_201" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 201</p>
+              <audio controls class="w-full">
+                <source src="assets/fb_q_201.wav" type="audio/wav" />
+              </audio>
+              <div class="flex items-center gap-2 bg-blue-100 p-3 rounded-lg">
+                <p class="text-lg">I have a .</p>
+                <input
+                  type="text"
+                  placeholder="word"
+                  class="p-2 rounded border-2 border-blue-300 focus:border-yellow-400 outline-none w-28"
+                />
+              </div>
+            </div>
+
+            <div id="fb_q_202" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 202</p>
+              <audio controls class="w-full">
+                <source src="assets/fb_q_202.wav" type="audio/wav" />
+              </audio>
+              <div class="flex items-center gap-2 bg-blue-100 p-3 rounded-lg">
+                <p class="text-lg">I have a .</p>
+                <input
+                  type="text"
+                  placeholder="word"
+                  class="p-2 rounded border-2 border-blue-300 focus:border-yellow-400 outline-none w-28"
+                />
+              </div>
+            </div>
+
+            <div id="fb_q_203" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 203</p>
+              <audio controls class="w-full">
+                <source src="assets/fb_q_203.wav" type="audio/wav" />
+              </audio>
+              <div class="flex items-center gap-2 bg-blue-100 p-3 rounded-lg">
+                <p class="text-lg">I have .</p>
+                <input
+                  type="text"
+                  placeholder="word"
+                  class="p-2 rounded border-2 border-blue-300 focus:border-yellow-400 outline-none w-28"
+                />
+              </div>
+            </div>
+
+            <div id="fb_q_204" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 204</p>
+              <audio controls class="w-full">
+                <source src="assets/fb_q_204.wav" type="audio/wav" />
+              </audio>
+              <div class="flex items-center gap-2 bg-blue-100 p-3 rounded-lg">
+                <p class="text-lg">I have a .</p>
+                <input
+                  type="text"
+                  placeholder="word"
+                  class="p-2 rounded border-2 border-blue-300 focus:border-yellow-400 outline-none w-28"
+                />
+              </div>
+            </div>
+
+            <div id="fb_q_205" class="question-card p-4 space-y-2">
+              <p class="font-bold text-lg text-white">Question 205</p>
+              <audio controls class="w-full">
+                <source src="assets/fb_q_205.wav" type="audio/wav" />
+              </audio>
+              <div class="flex items-center gap-2 bg-blue-100 p-3 rounded-lg">
+                <p class="text-lg">I have .</p>
+                <input
+                  type="text"
+                  placeholder="word"
+                  class="p-2 rounded border-2 border-blue-300 focus:border-yellow-400 outline-none w-28"
+                />
+              </div>
+            </div>
+
+            <div
+              class="results-container mt-4 p-4 text-center rounded-2xl bg-black/20"
+              style="display: none"
+            ></div>
+          </div>
+          <div id="dialogues" class="tab-content hidden space-y-4">
+            <h2 class="text-3xl font-bold text-center text-white">
+              Listen to the Story and Answer the Questions (Nghe câu chuyện và
+              trả lời câu hỏi)
+            </h2>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 301</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_301.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_301_3011" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person A have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_301_3011"
+                        value="a pen"
+                        class="mr-2"
+                      />
+                      <span>a pen</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_301_3011"
+                        value="a pencil"
+                        class="mr-2"
+                      />
+                      <span>a pencil</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_301_3011"
+                        value="paper"
+                        class="mr-2"
+                      />
+                      <span>paper</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 302</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_302.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_302_3021" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">How is person B?</p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_302_3021"
+                        value="good"
+                        class="mr-2"
+                      />
+                      <span>good</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_302_3021"
+                        value="great"
+                        class="mr-2"
+                      />
+                      <span>great</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_302_3021"
+                        value="happy"
+                        class="mr-2"
+                      />
+                      <span>happy</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 303</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_303.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_303_3031" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person B have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_303_3031"
+                        value="paint"
+                        class="mr-2"
+                      />
+                      <span>paint</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_303_3031"
+                        value="paper"
+                        class="mr-2"
+                      />
+                      <span>paper</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_303_3031"
+                        value="glue"
+                        class="mr-2"
+                      />
+                      <span>glue</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 304</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_304.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_304_3041" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person A have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_304_3041"
+                        value="a crayon"
+                        class="mr-2"
+                      />
+                      <span>a crayon</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_304_3041"
+                        value="a pen"
+                        class="mr-2"
+                      />
+                      <span>a pen</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_304_3041"
+                        value="a marker"
+                        class="mr-2"
+                      />
+                      <span>a marker</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 305</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_305.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_305_3051" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person B have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_305_3051"
+                        value="a pen"
+                        class="mr-2"
+                      />
+                      <span>a pen</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_305_3051"
+                        value="glue"
+                        class="mr-2"
+                      />
+                      <span>glue</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_305_3051"
+                        value="paper"
+                        class="mr-2"
+                      />
+                      <span>paper</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 306</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_306.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_306_3061" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person B have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_306_3061"
+                        value="a pencil"
+                        class="mr-2"
+                      />
+                      <span>a pencil</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_306_3061"
+                        value="paper"
+                        class="mr-2"
+                      />
+                      <span>paper</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_306_3061"
+                        value="paint"
+                        class="mr-2"
+                      />
+                      <span>paint</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 307</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_307.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_307_3071" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person B have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_307_3071"
+                        value="a pen"
+                        class="mr-2"
+                      />
+                      <span>a pen</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_307_3071"
+                        value="a pencil"
+                        class="mr-2"
+                      />
+                      <span>a pencil</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_307_3071"
+                        value="a marker"
+                        class="mr-2"
+                      />
+                      <span>a marker</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 308</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_308.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_308_3081" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person B have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_308_3081"
+                        value="scissors"
+                        class="mr-2"
+                      />
+                      <span>scissors</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_308_3081"
+                        value="a crayon"
+                        class="mr-2"
+                      />
+                      <span>a crayon</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_308_3081"
+                        value="a marker"
+                        class="mr-2"
+                      />
+                      <span>a marker</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 309</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_309.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_309_3091" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person A have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_309_3091"
+                        value="paint"
+                        class="mr-2"
+                      />
+                      <span>paint</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_309_3091"
+                        value="paper"
+                        class="mr-2"
+                      />
+                      <span>paper</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_309_3091"
+                        value="glue"
+                        class="mr-2"
+                      />
+                      <span>glue</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dialogue-card p-4 space-y-4 bg-white/30 rounded-2xl">
+              <h3 class="text-2xl font-bold text-white">Story 310</h3>
+              <audio controls class="w-full">
+                <source src="assets/diag_310.wav" type="audio/wav" />
+              </audio>
+              <div class="space-y-4">
+                <div id="diag_q_310_3101" class="question-card p-4 space-y-2">
+                  <p class="font-bold text-lg text-white">
+                    What does person B have?
+                  </p>
+                  <div class="space-y-1">
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_310_3101"
+                        value="scissors"
+                        class="mr-2"
+                      />
+                      <span>scissors</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_310_3101"
+                        value="a pen"
+                        class="mr-2"
+                      />
+                      <span>a pen</span>
+                    </label>
+
+                    <label
+                      class="block p-3 rounded-lg bg-blue-100 hover:bg-yellow-200 cursor-pointer transition"
+                    >
+                      <input
+                        type="radio"
+                        name="diag_q_310_3101"
+                        value="paper"
+                        class="mr-2"
+                      />
+                      <span>paper</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="results-container mt-4 p-4 text-center rounded-2xl bg-black/20"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+
+        <div class="flex justify-center pt-6">
+          <button
+            id="check-answers-btn"
+            class="btn bg-yellow-400 hover:bg-yellow-500 text-yellow-900 shadow-lg"
+          >
+            Check My Work!
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      window.exerciseData = {
+        listenAndChoose: [
+          {
+            id: 101,
+            audioScript: 'I have a pen.',
+            options: [
+              'I have a pen.',
+              'I see a pen.',
+              'He has a pen.',
+              'I have a pan.',
+            ],
+            correctAnswer: 'I have a pen.',
+          },
+          {
+            id: 102,
+            audioScript: 'I have a pencil.',
+            options: [
+              'I have a pencil.',
+              'I have a paper.',
+              'She has a pencil.',
+              'I like the pencil.',
+            ],
+            correctAnswer: 'I have a pencil.',
+          },
+          {
+            id: 103,
+            audioScript: 'I have paper.',
+            options: [
+              'I have paper.',
+              'I have paint.',
+              'I have a pear.',
+              'You have paper.',
+            ],
+            correctAnswer: 'I have paper.',
+          },
+          {
+            id: 104,
+            audioScript: 'I have scissors.',
+            options: [
+              'I have sisters.',
+              'I have scissors.',
+              'He has scissors.',
+              'I have glasses.',
+            ],
+            correctAnswer: 'I have scissors.',
+          },
+          {
+            id: 105,
+            audioScript: 'I have paint.',
+            options: [
+              'I have paint.',
+              'I have pain.',
+              'I have a pet.',
+              'You have paint.',
+            ],
+            correctAnswer: 'I have paint.',
+          },
+        ],
+        fillInTheBlank: [
+          {
+            id: 201,
+            audioScript: 'I have a crayon.',
+            questionText: 'I have a ____.',
+            correctAnswer: 'crayon',
+          },
+          {
+            id: 202,
+            audioScript: 'I have a marker.',
+            questionText: 'I have a ____.',
+            correctAnswer: 'marker',
+          },
+          {
+            id: 203,
+            audioScript: 'I have glue.',
+            questionText: 'I have ____.',
+            correctAnswer: 'glue',
+          },
+          {
+            id: 204,
+            audioScript: 'I have a pen.',
+            questionText: 'I have a ____.',
+            correctAnswer: 'pen',
+          },
+          {
+            id: 205,
+            audioScript: 'I have paper.',
+            questionText: 'I have ____.',
+            correctAnswer: 'paper',
+          },
+        ],
+        dialogues: [
+          {
+            id: 301,
+            dialogueScript:
+              'A: Hi. B: Hello. What do you have? A: I have a pen.',
+            questions: [
+              {
+                id: 3011,
+                questionText: 'What does person A have?',
+                options: ['a pen', 'a pencil', 'paper'],
+                correctAnswer: 'a pen',
+              },
+            ],
+          },
+          {
+            id: 302,
+            dialogueScript:
+              "A: Hello. How are you? B: I'm great. I have scissors.",
+            questions: [
+              {
+                id: 3021,
+                questionText: 'How is person B?',
+                options: ['good', 'great', 'happy'],
+                correctAnswer: 'great',
+              },
+            ],
+          },
+          {
+            id: 303,
+            dialogueScript: 'A: What do you have? B: I have paint.',
+            questions: [
+              {
+                id: 3031,
+                questionText: 'What does person B have?',
+                options: ['paint', 'paper', 'glue'],
+                correctAnswer: 'paint',
+              },
+            ],
+          },
+          {
+            id: 304,
+            dialogueScript:
+              'A: Hi. I have a marker. B: Hello. I have a crayon.',
+            questions: [
+              {
+                id: 3041,
+                questionText: 'What does person A have?',
+                options: ['a crayon', 'a pen', 'a marker'],
+                correctAnswer: 'a marker',
+              },
+            ],
+          },
+          {
+            id: 305,
+            dialogueScript:
+              "A: How are you? B: I'm good. A: What do you have? B: I have glue.",
+            questions: [
+              {
+                id: 3051,
+                questionText: 'What does person B have?',
+                options: ['a pen', 'glue', 'paper'],
+                correctAnswer: 'glue',
+              },
+            ],
+          },
+          {
+            id: 306,
+            dialogueScript: 'A: Hello. B: Hi. I have paper.',
+            questions: [
+              {
+                id: 3061,
+                questionText: 'What does person B have?',
+                options: ['a pencil', 'paper', 'paint'],
+                correctAnswer: 'paper',
+              },
+            ],
+          },
+          {
+            id: 307,
+            dialogueScript: 'A: I have a pencil. B: I have a pen.',
+            questions: [
+              {
+                id: 3071,
+                questionText: 'What does person B have?',
+                options: ['a pen', 'a pencil', 'a marker'],
+                correctAnswer: 'a pen',
+              },
+            ],
+          },
+          {
+            id: 308,
+            dialogueScript: 'A: Hi. What do you have? B: I have a crayon.',
+            questions: [
+              {
+                id: 3081,
+                questionText: 'What does person B have?',
+                options: ['scissors', 'a crayon', 'a marker'],
+                correctAnswer: 'a crayon',
+              },
+            ],
+          },
+          {
+            id: 309,
+            dialogueScript:
+              "A: Hello. I'm good. B: Hi. What do you have? A: I have paint.",
+            questions: [
+              {
+                id: 3091,
+                questionText: 'What does person A have?',
+                options: ['paint', 'paper', 'glue'],
+                correctAnswer: 'paint',
+              },
+            ],
+          },
+          {
+            id: 310,
+            dialogueScript: "A: How are you? B: I'm great. I have scissors.",
+            questions: [
+              {
+                id: 3101,
+                questionText: 'What does person B have?',
+                options: ['scissors', 'a pen', 'paper'],
+                correctAnswer: 'scissors',
+              },
+            ],
+          },
+        ],
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

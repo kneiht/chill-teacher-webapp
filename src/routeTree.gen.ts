@@ -49,6 +49,7 @@ import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLes
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson2IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-2/index'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/index'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson'
+import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/flashcards'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson4ExercisesRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/exercises'
@@ -374,6 +375,12 @@ const mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute =
   mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRouteImport.update({
     id: '/(students)/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson',
     path: '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson',
+    getParentRoute: () => mainRouteRoute,
+  } as any)
+const mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute =
+  mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRouteImport.update({
+    id: '/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing',
+    path: '/lessons/everybody-up-0/unit-1/lesson-4/shadowing',
     getParentRoute: () => mainRouteRoute,
   } as any)
 const mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute =
@@ -1034,6 +1041,7 @@ export interface FileRoutesByFullPath {
   '/lessons/everybody-up-0/unit-1/lesson-4/exercises': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-4/flashcards': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-4/shadowing': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute
   '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-2': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson2IndexRoute
@@ -1147,6 +1155,7 @@ export interface FileRoutesByTo {
   '/lessons/everybody-up-0/unit-1/lesson-4/exercises': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ExercisesRoute
   '/lessons/everybody-up-0/unit-1/lesson-4/flashcards': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRoute
   '/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute
+  '/lessons/everybody-up-0/unit-1/lesson-4/shadowing': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute
   '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
   '/lessons/advanced-topics/multiple-intelligence-theory/lesson-2': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson2IndexRoute
@@ -1264,6 +1273,7 @@ export interface FileRoutesById {
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/exercises': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ExercisesRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/flashcards': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute
+  '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
   '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-2/': typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson2IndexRoute
@@ -1379,6 +1389,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-4/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-4/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
     | '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-2'
@@ -1492,6 +1503,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-4/exercises'
     | '/lessons/everybody-up-0/unit-1/lesson-4/flashcards'
     | '/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson'
+    | '/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
     | '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-1'
     | '/lessons/advanced-topics/multiple-intelligence-theory/lesson-2'
@@ -1608,6 +1620,7 @@ export interface FileRouteTypes {
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/exercises'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/flashcards'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson'
+    | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/'
     | '/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-2/'
@@ -1918,6 +1931,13 @@ declare module '@tanstack/react-router' {
       path: '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson'
       fullPath: '/lessons/everybody-up-0/unit-1/lesson-4/youtube-lesson'
       preLoaderRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing': {
+      id: '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
+      path: '/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
+      fullPath: '/lessons/everybody-up-0/unit-1/lesson-4/shadowing'
+      preLoaderRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/presentation-lesson': {
@@ -2559,6 +2579,7 @@ interface mainRouteRouteChildren {
   mainstudentsLessonsEverybodyUp0Unit1Lesson4ExercisesRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ExercisesRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute
+  mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute
   mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute: typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson2IndexRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson2IndexRoute
@@ -2737,6 +2758,8 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
     mainstudentsLessonsEverybodyUp0Unit1Lesson4FlashcardsRoute,
   mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute:
     mainstudentsLessonsEverybodyUp0Unit1Lesson4PresentationLessonRoute,
+  mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute:
+    mainstudentsLessonsEverybodyUp0Unit1Lesson4ShadowingRoute,
   mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute:
     mainstudentsLessonsEverybodyUp0Unit1Lesson4YoutubeLessonRoute,
   mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1IndexRoute:

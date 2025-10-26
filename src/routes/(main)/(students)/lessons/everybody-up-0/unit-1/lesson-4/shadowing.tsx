@@ -10,9 +10,9 @@ const ReadingAssessmentSlide: React.FC<{ isActive: boolean }> = ({
     <Slide isActive={isActive} scrollable={true}>
       <div className="flex flex-row gap-2 h-full w-full">
         <iframe
-          src="/embed/everybody-up-0/listening/index.html"
+          src="/embed/everybody-up-0/shadowing/index.html"
           className="w-full h-full border-0"
-          title="Exercises"
+          title="Shadowing"
         />
       </div>
     </Slide>
@@ -36,7 +36,7 @@ const HomeworkPage: React.FC = () => {
 }
 
 export const Route = createFileRoute(
-  '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/exercises',
+  '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/shadowing',
 )({
   component: HomeworkPage,
 })

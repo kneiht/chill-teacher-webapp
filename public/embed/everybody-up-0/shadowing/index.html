@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadowing Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a, #4c1d95);
+            color: #e5e7eb;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 2rem auto; 
+            padding: 2rem; 
+            background: rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(10px); 
+            border-radius: 1.5rem; 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .tab-btn { color: #d1d5db; opacity: 0.7; border-bottom: 3px solid transparent; transition: all 0.3s ease; }
+        .tab-btn.active { color: #ffffff; opacity: 1; border-bottom-color: #a78bfa; transform: translateY(-2px); }
+        .audio-player::-webkit-media-controls-panel { background-color: rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-white">Shadowing Practice</h1>
+            <p class="mt-2 text-gray-300">Listen to each sentence and repeat it aloud. Use the 'Practice' tab to read along, and the 'Shadowing' tab to test yourself without text.</p>
+            <p class="mt-2 text-gray-300">Nghe từng câu và lặp lại câu. Sử dụng trang 'Practice' để đọc theo, và trang 'Shadowing' để tập nói lại mà không đọc chữ.</p>
+
+        <div class="border-b border-white/20 mb-6">
+            <nav class="flex justify-center -mb-px space-x-4">
+                <button class="tab-btn px-4 py-3 text-lg font-semibold" data-tab="practice">Practice</button>
+                <button class="tab-btn px-4 py-3 text-lg font-semibold" data-tab="shadowing">Shadowing</button>
+            </nav>
+        </div>
+
+        <div id="tab-content-container">
+            <div id="practice" class="tab-content hidden">
+                <div class="space-y-6">
+                    
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 1</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Lisa: Hi Jenny, Hi Tom.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 2</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">How are you?</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 3</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Jenny: Hi Lisa.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 4</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">I’m good!</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 5</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Tom: Hello Lisa.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 6</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">I’m great!</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 7</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_7.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Lisa: Tom, what do you have today?</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 8</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Tom: I have paper and glue.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 9</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Tom: Jenny, what do you have?</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 10</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Jenny: I have paint and scissors.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 11</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_11.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Jenny: What about you?</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 12</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">What do you have, Lisa?</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 13</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Lisa: I have a pen and a pencil.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 14</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Tom: But we don’t have a marker and a crayon.</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 15</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_15.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Lisa: Oh no!</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 16</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_16.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">Teacher: Don’t worry, children!</p>
+            </div>
+        
+            <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 17</p>
+                <audio controls class="w-full mb-3 audio-player">
+                    <source src="assets/sentence_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-100 text-lg leading-relaxed">I have markers and crayons.</p>
+            </div>
+        
+                </div>
+            </div>
+            <div id="shadowing" class="tab-content hidden">
+                 <div class="space-y-6">
+                    
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 1</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 2</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 3</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 4</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 5</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 6</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 7</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_7.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 8</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 9</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 10</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 11</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_11.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 12</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 13</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 14</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 15</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_15.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 16</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_16.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+             <div class="p-5 bg-black/20 rounded-xl shadow-md">
+                <p class="text-gray-300 mb-3 font-medium text-sm">Sentence 17</p>
+                <audio controls class="w-full audio-player">
+                    <source src="assets/sentence_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.audioSpeed = 1;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+    
