@@ -1,26 +1,16 @@
-// Router
-import { createFileRoute, useNavigate } from '@tanstack/react-router'
-
-// Components
-import PresentationShell from '@/lib/components/presentation/PresentationShell'
-import YoutubeSlide from '@/lib/components/presentation/YoutubeSlide'
-
-// Url
-import urls from './assets/urls.json'
+import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute(
   '/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson',
 )({
-  component: () => {
-    const navigate = useNavigate()
-    const goHome = () => navigate({ to: '..' })
-
-    const slides = [
-      ({ isActive }: { isActive: boolean }) => (
-        <YoutubeSlide isActive={isActive} src={urls.youtubeOpening} />
-      ),
-    ]
-
-    return <PresentationShell slides={slides} onHomeClick={goHome} />
-  },
+  component: RouteComponent,
 })
+
+function RouteComponent() {
+  return (
+    <div>
+      Hello
+      "/(main)/(students)/lessons/advanced-topics/whales-guardians-of-the-climate/lesson-1/youtube-opening-lesson"!
+    </div>
+  )
+}

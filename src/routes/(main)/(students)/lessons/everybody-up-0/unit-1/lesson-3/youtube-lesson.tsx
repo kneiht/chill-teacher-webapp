@@ -3,7 +3,7 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
-import YoutubeSlide from '@/lib/components/presentation/YoutubeSlide'
+import YoutubeSlide from '@/lib/components/activities/YoutubeSlide'
 
 // Url
 import urls from './assets/urls.json'

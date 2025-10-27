@@ -1,31 +1,65 @@
 {
-  "urls": {
-    "background": "/backgrounds/multiple-intelligence-theory.webp"
-  },
-  "vocab": [
-    {
-      "word": "intelligence",
-      "definition": "the ability to learn, understand, and make judgments or have opinions that are based on reason",
-      "example": "She has a high level of intelligence."
+  "lesson-1-vocab": {
+    "urls": {
+      "background": "/backgrounds/multiple-intelligence-theory.webp"
     },
-    {
-      "word": "theory",
-      "definition": "a formal statement of the rules on which a subject of study is based or of ideas that are suggested to explain a fact or event or, more generally, an opinion or explanation",
-      "example": "The theory of evolution is widely accepted."
-    }
-  ],
-  "cloze": {
-    "text": "Multiple intelligence theory suggests that there are several types of intelligence, including linguistic, logical-mathematical, spatial, bodily-kinesthetic, musical, interpersonal, intrapersonal, and naturalistic.",
-    "blanks": [
-      "intelligence",
-      "linguistic",
-      "logical-mathematical",
-      "spatial",
-      "bodily-kinesthetic",
-      "musical",
-      "interpersonal",
-      "intrapersonal",
-      "naturalistic"
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 1: Vocabulary Practice",
+    "vocab": [
+      {
+        "word": "intelligence",
+        "translation": "trí thông minh",
+        "definition": "the ability to learn, understand, and make judgments or have opinions that are based on reason",
+        "example": "She has a high level of intelligence.",
+        "image": "/vocab-images/intelligence.webp",
+        "audio": "/sounds/intelligence.mp3"
+      },
+      {
+        "word": "theory",
+        "translation": "lý thuyết",
+        "definition": "a formal statement of the rules on which a subject of study is based or of ideas that are suggested to explain a fact or event",
+        "example": "The theory of evolution is widely accepted.",
+        "image": "/vocab-images/theory.webp",
+        "audio": "/sounds/theory.mp3"
+      },
+      {
+        "word": "linguistic",
+        "translation": "ngôn ngữ học",
+        "definition": "relating to language or linguistics",
+        "example": "She has strong linguistic abilities.",
+        "image": "/vocab-images/linguistic.webp",
+        "audio": "/sounds/linguistic.mp3"
+      }
+    ],
+    "activities": [
+      {
+        "id": "flashcards",
+        "title": "Flashcards",
+        "icon": "🃏",
+        "type": "flashcard",
+        "description": "Study vocabulary with interactive flashcards"
+      },
+      {
+        "id": "presentation",
+        "title": "Bài giảng",
+        "icon": "📖",
+        "type": "link",
+        "path": "/lessons/lesson-1-vocab/presentation"
+      },
+      {
+        "id": "matching-game",
+        "title": "Matching Game",
+        "icon": "🎯",
+        "type": "game",
+        "gameId": "MatchingGame"
+      },
+      {
+        "id": "memory-game",
+        "title": "Memory Game",
+        "icon": "🧠",
+        "type": "game",
+        "gameId": "MemoryGame"
+      }
     ]
   }
 }

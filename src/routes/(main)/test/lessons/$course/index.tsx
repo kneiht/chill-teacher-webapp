@@ -46,7 +46,7 @@ function LessonProgram() {
 
       <Row gutter={[16, 16]}>
         {lessons.map((lesson) => {
-          const lessonPath = `/test/lessons/${lesson.course}/lessons/${lesson.course}/${lesson.unit}/${lesson.lesson}`
+          const lessonPath = `/test/lessons/${lesson.course}/${lesson.unit}/${lesson.lesson}`
 
           return (
             <Col

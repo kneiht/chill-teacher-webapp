@@ -3,7 +3,7 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
-import GoogleSlide from '@/lib/components/presentation/GoogleSlide'
+import GoogleSlide from '@/lib/components/activities/GoogleSlide'
 
 // Url
 import urls from './assets/urls.json'
