@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 1: Vocabulary - Part 1",
+    "course": "demo-course",
+    "unit": "demo-unit",
+    "lesson": "lesson-1-vocab",
+    "bg": "/backgrounds/multiple-intelligence-theory.webp"
+  },
+  {
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 2: Grammar Basics",
+    "course": "demo-course",
+    "unit": "demo-unit",
+    "lesson": "lesson-2-grammar",
+    "bg": "/backgrounds/multiple-intelligence-theory.webp"
+  },
+  {
+    "title": "Whales - Guardians of the Climate",
+    "description": "Lesson 1: Reading Comprehension",
+    "course": "demo-course",
+    "unit": "unit-2",
+    "lesson": "lesson-1-reading",
+    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
+  },
+  {
+    "title": "Everybody Up 0",
+    "description": "Unit 1 - Lesson 1: School Supplies",
+    "course": "demo-course",
+    "unit": "everybody-up",
+    "lesson": "lesson-1-supplies",
+    "bg": "/backgrounds/EU0-U1L1.webp"
+  }
+]
