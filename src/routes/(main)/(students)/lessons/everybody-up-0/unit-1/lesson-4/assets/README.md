@@ -11,7 +11,7 @@ File `questions.json` chứa danh sách câu hỏi cho game Candy Crush English.
   "type": "multipleChoice",
   "question": "\"pencil\" nghĩa là gì?",
   "correctAnswer": "bút chì",
-  "options": ["bút chì", "bút mực", "bút dạ", "kéo"]
+  "options": ["bút chì", "bút mực", "bút lông", "kéo"]
 }
 ```
 
@@ -32,7 +32,7 @@ File `questions.json` chứa danh sách câu hỏi cho game Candy Crush English.
 ```json
 {
   "type": "fillBlank",
-  "question": "Điền từ tiếng Anh cho: \"bút dạ\"",
+  "question": "Điền từ tiếng Anh cho: \"bút lông\"",
   "correctAnswer": "marker"
 }
 ```

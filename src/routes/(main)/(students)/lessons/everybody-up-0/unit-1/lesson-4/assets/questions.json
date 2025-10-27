@@ -24,7 +24,7 @@
     "type": "multipleChoice",
     "question": "\"pencil\" nghĩa là gì?",
     "correctAnswer": "bút chì",
-    "options": ["bút chì", "bút mực", "bút dạ", "kéo"]
+    "options": ["bút chì", "bút mực", "bút lông", "kéo"]
   },
   {
     "type": "multipleChoice",
@@ -36,7 +36,7 @@
     "type": "multipleChoice",
     "question": "\"glue\" nghĩa là gì?",
     "correctAnswer": "hồ dán",
-    "options": ["hồ dán", "giấy", "sơn", "bút chì"]
+    "options": ["hồ dán", "giấy", "màu vẽ", "bút chì"]
   },
   {
     "type": "listening",
@@ -54,7 +54,7 @@
   },
   {
     "type": "fillBlank",
-    "question": "Điền từ tiếng Anh cho: \"bút dạ\"",
+    "question": "Điền từ tiếng Anh cho: \"bút lông\"",
     "correctAnswer": "marker"
   },
   {
@@ -77,8 +77,8 @@
   {
     "type": "imageToVietnamese",
     "question": "Hình này nghĩa là gì?",
-    "correctAnswer": "sơn",
-    "options": ["sơn", "bút màu", "hồ dán", "giấy"],
+    "correctAnswer": "màu vẽ",
+    "options": ["màu vẽ", "bút màu", "hồ dán", "giấy"],
     "image": "https://storage.chillteacher.com/images-words/paint.webp"
   },
   {
@@ -92,13 +92,13 @@
     "type": "multipleChoice",
     "question": "\"crayon\" nghĩa là gì?",
     "correctAnswer": "bút sáp màu",
-    "options": ["bút sáp màu", "bút chì màu", "bút dạ", "sơn"]
+    "options": ["bút sáp màu", "bút chì màu", "bút lông", "màu vẽ"]
   },
   {
     "type": "multipleChoice",
     "question": "\"paint\" nghĩa là gì?",
-    "correctAnswer": "sơn",
-    "options": ["sơn", "bút màu", "hồ dán", "giấy"]
+    "correctAnswer": "màu vẽ",
+    "options": ["màu vẽ", "bút màu", "hồ dán", "giấy"]
   },
   {
     "type": "listening",
@@ -123,7 +123,7 @@
     "type": "imageToVietnamese",
     "question": "Đây là gì?",
     "correctAnswer": "bút mực",
-    "options": ["bút mực", "bút chì", "bút dạ", "bút sáp"],
+    "options": ["bút mực", "bút chì", "bút lông", "bút sáp"],
     "image": "https://storage.chillteacher.com/images-words/pen.webp"
   }
 ]
