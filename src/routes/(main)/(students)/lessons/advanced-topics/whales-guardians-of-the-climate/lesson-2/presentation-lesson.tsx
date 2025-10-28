@@ -14,7 +14,7 @@ const TitleSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => (
   <Slide isActive={isActive}>
     <div className="flex flex-col items-center justify-center h-full gap-5  ">
       <h1 className="text-center text-6xl font-bold text-indigo-600 bg-[#ffffffae] px-6 py-3 rounded-lg">
-        Multiple Intelligence Theory
+        Whales – Guardians of the Climate
       </h1>
       <h1 className="text-center text-6xl font-bold text-indigo-600 bg-[#ffffffae] px-6 py-3 rounded-lg">
         Vocabulary - Part 2

@@ -1,84 +1,104 @@
 {
   "sentences": [
     {
-      "sentence": "Her research focuses on _____ changes in immigrant communities, such as how they adopt new words and accents, comparing the evolution of their language usage over generations.",
-      "word": "linguistic"
+      "sentence": "A parent acts as a _____, keeping their child safe from harm and danger.",
+      "word": "guardian"
     },
     {
-      "sentence": "The team scheduled a _____ to resolve the budget concerns, hoping to reach an agreement, with everyone invited to talk openly around the conference table.",
-      "word": "discussion"
+      "sentence": "The Earth's _____ includes temperature and rainfall patterns that make it suitable for life.",
+      "word": "climate"
     },
     {
-      "sentence": "Students mapped the rainfall _____ across the region to see where it rains most and least, charting recurring shapes on their climate graphs.",
-      "word": "pattern"
+      "sentence": "The BFG is a famous Roald Dahl character who is a friendly _____ much taller than normal people.",
+      "word": "giant"
     },
     {
-      "sentence": "Daily _____ exercises helped the apprentices adapt quickly by tackling tricky puzzles, training them to analyze each challenge step by step.",
-      "word": "problem-solving"
+      "sentence": "People _____ firefighters because they risk their lives to help others in emergencies.",
+      "word": "admire"
     },
     {
-      "sentence": "Pilots train with _____ simulations to improve navigation, learning to judge distances and directions visually, so they can picture three-dimensional routes.",
-      "word": "spatial"
+      "sentence": "Teachers _____ their students by guiding and encouraging them to succeed in school.",
+      "word": "support"
     },
     {
-      "sentence": "The illustrator's _____ brought the fantasy world to life, filling it with magical creatures, vivid scenes, and original story ideas.",
-      "word": "imagination"
+      "sentence": "A marine _____ studies whales and ocean animals to learn more about their lives.",
+      "word": "scientist"
     },
     {
-      "sentence": "Gymnasts rely on their _____ awareness during complex flips, knowing exactly where their arms and legs are, coordinating muscle memory with body position.",
-      "word": "bodily-kinesthetic"
+      "sentence": "Please _____ the main features of a whale, such as its size and color.",
+      "word": "describe"
     },
     {
-      "sentence": "The team proposed a _____ marketing strategy for local shops, using bright colors and catchy slogans, brainstorming fresh ideas no one had tried before.",
-      "word": "creative"
+      "sentence": "An _____ needs to solve difficult problems when building skyscrapers or bridges.",
+      "word": "engineer"
     },
     {
-      "sentence": "Her _____ approach helped mediate the conflict between departments, listening carefully to both sides, reading emotions, and building positive relationships.",
-      "word": "interpersonal"
+      "sentence": "A banana is a healthy snack rich in more than one important _____.",
+      "word": "nutrient"
     },
     {
-      "sentence": "He kept a travel _____ to document each coastal village he visited, writing down stories and sketches, adding daily entries like a personal diary.",
-      "word": "journal"
+      "sentence": "Tiny _____ organisms, too small to see without a microscope, float in ocean water.",
+      "word": "microscopic"
     },
     {
-      "sentence": "The policy analyst warned about the long-term _____ of ignoring the report, saying it could hurt future funding and create serious consequences.",
-      "word": "implication"
+      "sentence": "To help the environment, we should _____ the amount of plastic we use and recycle more.",
+      "word": "reduce"
     },
     {
-      "sentence": "Researchers debated whether _____ can be expanded through training, like learning new ways to solve problems, improving overall mental ability.",
-      "word": "intelligence"
+      "sentence": "Plants take in _____ _____ from the air, helping to lower pollution.",
+      "word": "carbon dioxide"
     },
     {
-      "sentence": "The seminar explored a new _____ about how memories form, suggesting they are rebuilt each time we recall them, outlining a fresh scientific explanation.",
-      "word": "theory"
+      "sentence": "If we _____ forests and oceans, people and animals will have what they need for many years.",
+      "word": "sustain"
     },
     {
-      "sentence": "The study compared each child's _____ with their classroom performance, looking at test scores and grades, noting how the standardized number matched achievement.",
-      "word": "intelligence quotient"
+      "sentence": "Getting enough sleep and eating well help keep the body in _____.",
+      "word": "balance"
     },
     {
-      "sentence": "Street food stalls are increasingly _____ among visiting tourists, who love trying local snacks, posting rave reviews on social media.",
-      "word": "popular"
+      "sentence": "Climate change is a growing _____ that puts polar bears and other wild animals at risk.",
+      "word": "threat"
     },
     {
-      "sentence": "Daily podcasts strengthened her _____ before the job interview, helping her speak more fluently, expand vocabulary, and polish pronunciation.",
-      "word": "language skills"
+      "sentence": "Lemon juice tastes very _____ because it has a lot of acid.",
+      "word": "acidic"
     },
     {
-      "sentence": "Chess clubs nurture students' _____ through strategic play, teaching them to plan several moves ahead and calculate numerical advantages.",
-      "word": "logical-mathematical skills"
+      "sentence": "Sharks and whales are examples of _____ animals that live in the ocean.",
+      "word": "marine"
     },
     {
-      "sentence": "That proposal takes a _____ view of what success looks like, focusing only on money and ignoring happiness, community impact, or personal growth.",
-      "word": "narrow"
+      "sentence": "The boat sailed close to the _____, where the land meets the sea.",
+      "word": "coast"
     },
     {
-      "sentence": "The _____ assigned a field project instead of a final exam, wanting students to learn by doing real-world tasks, as the university instructor valued hands-on experience.",
-      "word": "professor"
+      "sentence": "We need an _____ to check the new building’s safety and design.",
+      "word": "expert"
     },
     {
-      "sentence": "Pairing seniors with mentors proved an _____ way to boost retention, keeping new employees from quitting because the strategy actually produced measurable results.",
-      "word": "effective"
+      "sentence": "Car _____ make the air dirty, especially in big cities.",
+      "word": "emissions"
+    },
+    {
+      "sentence": "The dog was _____ in the house and couldn’t get out.",
+      "word": "trapped"
+    },
+    {
+      "sentence": "Farmers use _____ to help plants grow faster and healthier.",
+      "word": "fertilizer"
+    },
+    {
+      "sentence": "_____ are tiny plants that float in the ocean and provide food for many sea animals.",
+      "word": "Phytoplankton"
+    },
+    {
+      "sentence": "Sponge can _____ water quickly, making it useful for cleaning spills.",
+      "word": "absorb"
+    },
+    {
+      "sentence": "We are all _____ for keeping our neighborhood clean.",
+      "word": "responsible"
     }
   ]
 }
