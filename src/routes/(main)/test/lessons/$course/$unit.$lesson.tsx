@@ -2,26 +2,27 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import { games } from '@/lib/components/games'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
+import Flashcard from '@/lib/components/activities/Flashcard'
 
 interface Activity {
   id: string
   title: string
   icon: string
-  type: 'flashcard' | 'link' | 'game'
+  type: 'flashcard' | 'link'
   description?: string
   path?: string
-  gameId?: string
 }
 
 interface VocabItem {
   word: string
-  translation: string
-  definition: string
-  example: string
-  image?: string
-  audio?: string
+  phonics: string
+  image: string
+  vietnameseMeaning: string
+  sampleSentence: string
+  vietnameseTranslation: string
+  wordPronunciation?: string
+  sentencePronunciation?: string
 }
 
 interface LessonData {
@@ -60,136 +61,51 @@ export const Route = createFileRoute(
 
 function RouteComponent() {
   const lessonData = Route.useLoaderData()
-
   const { urls, title, description, vocab, activities } = lessonData
 
-  const [activeActivity, setActiveActivity] = useState<Activity | null>(null)
   const [showFlashcards, setShowFlashcards] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const handleActivityClick = (activity: Activity) => {
     if (activity.type === 'flashcard') {
       setShowFlashcards(true)
-    } else if (activity.type === 'game') {
-      setActiveActivity(activity)
+      setCurrentIndex(0)
     } else if (activity.type === 'link' && activity.path) {
       window.open(activity.path, '_blank')
     }
   }
 
-  const FlashcardViewer = () => {
-    if (!showFlashcards) return null
-
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [isFlipped, setIsFlipped] = useState(false)
-    const currentCard = vocab[currentIndex]
-
-    return (
-      <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex flex-col items-center justify-center">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl w-full mx-4">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-800">
-              Flashcards ({currentIndex + 1}/{vocab.length})
-            </h2>
-            <button
-              onClick={() => setShowFlashcards(false)}
-              className="text-4xl text-gray-600 hover:text-gray-800"
-            >
-              ×
-            </button>
-          </div>
-
-          <div
-            className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 min-h-[300px] flex flex-col justify-center items-center cursor-pointer hover:shadow-lg transition-shadow"
-            onClick={() => setIsFlipped(!isFlipped)}
-          >
-            {!isFlipped ? (
-              <div className="text-center">
-                <div className="text-5xl font-bold text-blue-600 mb-4">
-                  {currentCard.word}
-                </div>
-                <div className="text-xl text-gray-600">
-                  {currentCard.translation}
-                </div>
-              </div>
-            ) : (
-              <div className="text-center">
-                <div className="text-2xl text-gray-800 mb-4">
-                  {currentCard.definition}
-                </div>
-                <div className="text-xl text-gray-600 italic">
-                  "{currentCard.example}"
-                </div>
-              </div>
-            )}
-          </div>
-
-          <div className="flex justify-between items-center mt-6">
-            <button
-              onClick={() => {
-                setCurrentIndex((prev) => Math.max(0, prev - 1))
-                setIsFlipped(false)
-              }}
-              disabled={currentIndex === 0}
-              className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg disabled:opacity-50 hover:bg-gray-300"
-            >
-              ← Previous
-            </button>
-            <button
-              onClick={() => setIsFlipped(!isFlipped)}
-              className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-            >
-              {isFlipped ? 'Show Word' : 'Show Definition'}
-            </button>
-            <button
-              onClick={() => {
-                setCurrentIndex((prev) => Math.min(vocab.length - 1, prev + 1))
-                setIsFlipped(false)
-              }}
-              disabled={currentIndex === vocab.length - 1}
-              className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg disabled:opacity-50 hover:bg-gray-300"
-            >
-              Next →
-            </button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  const GamePlayer = () => {
-    if (!activeActivity || activeActivity.type !== 'game') return null
-
-    const gameDefinition = Object.values(games).find(
-      (g) => g.id === activeActivity.gameId,
-    )
-    if (!gameDefinition) return null
-
-    const GameComponent = gameDefinition.component
-
-    const props: any = {
-      backgroundUrl: urls.background,
-      title: `${gameDefinition.title} - ${title}`,
-      onClose: () => setActiveActivity(null),
-      vocabData: vocab,
-    }
-
-    return (
-      <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
-        <div className="relative w-full h-full">
-          <GameComponent {...props} />
-        </div>
-      </div>
-    )
-  }
-
   const buttonStyle =
     'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
+  const flashcardSlides = showFlashcards
+    ? vocab.map((vocabItem, index) => {
+        return function FlashcardSlide({ isActive }: { isActive: boolean }) {
+          return <Flashcard vocab={vocabItem} isActive={isActive} />
+        }
+      })
+    : []
+
+  const allSlides = showFlashcards ? flashcardSlides : [LessonHomepageSlide]
+
   return (
-    <PresentationShell
-      slides={[LessonHomepageSlide]}
-      backgroundUrl={urls.background}
-    />
+    <>
+      <PresentationShell slides={allSlides} backgroundUrl={urls.background} />
+
+      {showFlashcards && (
+        <div className="fixed top-4 right-4 z-50 flex gap-2">
+          <button
+            onClick={handleCloseFlashcards}
+            className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 shadow-lg text-xl font-bold"
+          >
+            ✕ Close
+          </button>
+          <div className="px-6 py-3 bg-white text-gray-800 rounded-lg shadow-lg text-xl font-bold">
+            {currentIndex + 1} / {vocab.length}
+          </div>
+        </div>
+      )}
+    </>
   )
 
   function LessonHomepageSlide({ isActive }: { isActive: boolean }) {
@@ -215,9 +131,6 @@ function RouteComponent() {
               ))}
             </div>
           </div>
-
-          <FlashcardViewer />
-          <GamePlayer />
         </Slide>
       </div>
     )

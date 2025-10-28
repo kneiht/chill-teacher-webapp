@@ -28,6 +28,7 @@ import { Route as maincommonProfileRouteImport } from './routes/(main)/(common)/
 import { Route as maincommonDashboardRouteImport } from './routes/(main)/(common)/dashboard'
 import { Route as mainTestLessonsCourseIndexRouteImport } from './routes/(main)/test/lessons/$course/index'
 import { Route as mainstudentsLessonsCourseIndexRouteImport } from './routes/(main)/(students)/lessons/$course/index'
+import { Route as mainTestLessonsCourseFlashcardsRouteImport } from './routes/(main)/test/lessons/$course/flashcards'
 import { Route as mainstudentsLessonsCourseLessonRouteImport } from './routes/(main)/(students)/lessons/$course/$lesson'
 import { Route as mainTestLessonsCourseUnitLessonRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson'
 import { Route as mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRouteImport } from './routes/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/index'
@@ -219,6 +220,12 @@ const mainstudentsLessonsCourseIndexRoute =
   mainstudentsLessonsCourseIndexRouteImport.update({
     id: '/(students)/lessons/$course/',
     path: '/lessons/$course/',
+    getParentRoute: () => mainRouteRoute,
+  } as any)
+const mainTestLessonsCourseFlashcardsRoute =
+  mainTestLessonsCourseFlashcardsRouteImport.update({
+    id: '/test/lessons/$course/flashcards',
+    path: '/test/lessons/$course/flashcards',
     getParentRoute: () => mainRouteRoute,
   } as any)
 const mainstudentsLessonsCourseLessonRoute =
@@ -980,6 +987,7 @@ export interface FileRoutesByFullPath {
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
   '/lessons/$course/$lesson': typeof mainstudentsLessonsCourseLessonRoute
+  '/test/lessons/$course/flashcards': typeof mainTestLessonsCourseFlashcardsRoute
   '/lessons/$course': typeof mainstudentsLessonsCourseIndexRoute
   '/test/lessons/$course': typeof mainTestLessonsCourseIndexRoute
   '/test/lessons/$course/$unit/$lesson': typeof mainTestLessonsCourseUnitLessonRoute
@@ -1096,6 +1104,7 @@ export interface FileRoutesByTo {
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
   '/lessons/$course/$lesson': typeof mainstudentsLessonsCourseLessonRoute
+  '/test/lessons/$course/flashcards': typeof mainTestLessonsCourseFlashcardsRoute
   '/lessons/$course': typeof mainstudentsLessonsCourseIndexRoute
   '/test/lessons/$course': typeof mainTestLessonsCourseIndexRoute
   '/test/lessons/$course/$unit/$lesson': typeof mainTestLessonsCourseUnitLessonRoute
@@ -1216,6 +1225,7 @@ export interface FileRoutesById {
   '/(main)/(teacher)/students': typeof mainteacherStudentsRoute
   '/(main)/(teacher)/teachers': typeof mainteacherTeachersRoute
   '/(main)/(students)/lessons/$course/$lesson': typeof mainstudentsLessonsCourseLessonRoute
+  '/(main)/test/lessons/$course/flashcards': typeof mainTestLessonsCourseFlashcardsRoute
   '/(main)/(students)/lessons/$course/': typeof mainstudentsLessonsCourseIndexRoute
   '/(main)/test/lessons/$course/': typeof mainTestLessonsCourseIndexRoute
   '/(main)/test/lessons/$course/$unit/$lesson': typeof mainTestLessonsCourseUnitLessonRoute
@@ -1334,6 +1344,7 @@ export interface FileRouteTypes {
     | '/students'
     | '/teachers'
     | '/lessons/$course/$lesson'
+    | '/test/lessons/$course/flashcards'
     | '/lessons/$course'
     | '/test/lessons/$course'
     | '/test/lessons/$course/$unit/$lesson'
@@ -1450,6 +1461,7 @@ export interface FileRouteTypes {
     | '/students'
     | '/teachers'
     | '/lessons/$course/$lesson'
+    | '/test/lessons/$course/flashcards'
     | '/lessons/$course'
     | '/test/lessons/$course'
     | '/test/lessons/$course/$unit/$lesson'
@@ -1569,6 +1581,7 @@ export interface FileRouteTypes {
     | '/(main)/(teacher)/students'
     | '/(main)/(teacher)/teachers'
     | '/(main)/(students)/lessons/$course/$lesson'
+    | '/(main)/test/lessons/$course/flashcards'
     | '/(main)/(students)/lessons/$course/'
     | '/(main)/test/lessons/$course/'
     | '/(main)/test/lessons/$course/$unit/$lesson'
@@ -1810,6 +1823,13 @@ declare module '@tanstack/react-router' {
       path: '/lessons/$course'
       fullPath: '/lessons/$course'
       preLoaderRoute: typeof mainstudentsLessonsCourseIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/test/lessons/$course/flashcards': {
+      id: '/(main)/test/lessons/$course/flashcards'
+      path: '/test/lessons/$course/flashcards'
+      fullPath: '/test/lessons/$course/flashcards'
+      preLoaderRoute: typeof mainTestLessonsCourseFlashcardsRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/(students)/lessons/$course/$lesson': {
@@ -2544,6 +2564,7 @@ interface mainRouteRouteChildren {
   maincommonProfileRoute: typeof maincommonProfileRoute
   maincommonSettingsRoute: typeof maincommonSettingsRoute
   mainstudentsLessonsCourseLessonRoute: typeof mainstudentsLessonsCourseLessonRoute
+  mainTestLessonsCourseFlashcardsRoute: typeof mainTestLessonsCourseFlashcardsRoute
   mainstudentsLessonsCourseIndexRoute: typeof mainstudentsLessonsCourseIndexRoute
   mainTestLessonsCourseIndexRoute: typeof mainTestLessonsCourseIndexRoute
   mainTestLessonsCourseUnitLessonRoute: typeof mainTestLessonsCourseUnitLessonRoute
@@ -2651,6 +2672,7 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   maincommonProfileRoute: maincommonProfileRoute,
   maincommonSettingsRoute: maincommonSettingsRoute,
   mainstudentsLessonsCourseLessonRoute: mainstudentsLessonsCourseLessonRoute,
+  mainTestLessonsCourseFlashcardsRoute: mainTestLessonsCourseFlashcardsRoute,
   mainstudentsLessonsCourseIndexRoute: mainstudentsLessonsCourseIndexRoute,
   mainTestLessonsCourseIndexRoute: mainTestLessonsCourseIndexRoute,
   mainTestLessonsCourseUnitLessonRoute: mainTestLessonsCourseUnitLessonRoute,

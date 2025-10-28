@@ -8,27 +8,53 @@
     "vocab": [
       {
         "word": "intelligence",
-        "translation": "trí thông minh",
-        "definition": "the ability to learn, understand, and make judgments or have opinions that are based on reason",
-        "example": "She has a high level of intelligence.",
-        "image": "/vocab-images/intelligence.webp",
-        "audio": "/sounds/intelligence.mp3"
+        "phonics": "/ɪnˈtel.ɪ.dʒəns/",
+        "image": "/vocab-images/pencil.webp",
+        "vietnameseMeaning": "trí thông minh",
+        "sampleSentence": "She has a high level of intelligence.",
+        "vietnameseTranslation": "Cô ấy có trí thông minh cao.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
       },
       {
         "word": "theory",
-        "translation": "lý thuyết",
-        "definition": "a formal statement of the rules on which a subject of study is based or of ideas that are suggested to explain a fact or event",
-        "example": "The theory of evolution is widely accepted.",
-        "image": "/vocab-images/theory.webp",
-        "audio": "/sounds/theory.mp3"
+        "phonics": "/ˈθɪə.ri/",
+        "image": "/vocab-images/paper.webp",
+        "vietnameseMeaning": "lý thuyết",
+        "sampleSentence": "The theory of evolution is widely accepted.",
+        "vietnameseTranslation": "Thuyết tiến hóa được chấp nhận rộng rãi.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
       },
       {
         "word": "linguistic",
-        "translation": "ngôn ngữ học",
-        "definition": "relating to language or linguistics",
-        "example": "She has strong linguistic abilities.",
-        "image": "/vocab-images/linguistic.webp",
-        "audio": "/sounds/linguistic.mp3"
+        "phonics": "/lɪŋˈɡwɪs.tɪk/",
+        "image": "/vocab-images/pen.webp",
+        "vietnameseMeaning": "ngôn ngữ học",
+        "sampleSentence": "She has strong linguistic abilities.",
+        "vietnameseTranslation": "Cô ấy có khả năng ngôn ngữ mạnh mẽ.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      },
+      {
+        "word": "spatial",
+        "phonics": "/ˈspeɪ.ʃəl/",
+        "image": "/vocab-images/marker.webp",
+        "vietnameseMeaning": "không gian",
+        "sampleSentence": "He has excellent spatial awareness.",
+        "vietnameseTranslation": "Anh ấy có nhận thức không gian xuất sắc.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      },
+      {
+        "word": "musical",
+        "phonics": "/ˈmjuː.zɪ.kəl/",
+        "image": "/vocab-images/crayon.webp",
+        "vietnameseMeaning": "âm nhạc",
+        "sampleSentence": "She is very musical and plays three instruments.",
+        "vietnameseTranslation": "Cô ấy rất có năng khiếu âm nhạc và chơi ba nhạc cụ.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
       }
     ],
     "activities": [
@@ -45,20 +71,6 @@
         "icon": "📖",
         "type": "link",
         "path": "/lessons/lesson-1-vocab/presentation"
-      },
-      {
-        "id": "matching-game",
-        "title": "Matching Game",
-        "icon": "🎯",
-        "type": "game",
-        "gameId": "MatchingGame"
-      },
-      {
-        "id": "memory-game",
-        "title": "Memory Game",
-        "icon": "🧠",
-        "type": "game",
-        "gameId": "MemoryGame"
       }
     ]
   }
