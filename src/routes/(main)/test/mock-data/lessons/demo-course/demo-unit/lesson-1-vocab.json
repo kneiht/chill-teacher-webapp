@@ -59,6 +59,13 @@
     ],
     "activities": [
       {
+        "id": "vocabulary",
+        "title": "Vocabulary",
+        "icon": "📚",
+        "type": "Vocabulary",
+        "description": "Learn vocabulary with detailed explanations"
+      },
+      {
         "id": "flashcards",
         "title": "Flashcards",
         "icon": "🃏",

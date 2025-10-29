@@ -4,12 +4,14 @@ import { Route as parentRoute } from './route'
 
 // Activity Components
 import Flashcard from '@/lib/components/activities/Flashcard'
+import Vocabulary from '@/lib/components/activities/Vocabulary'
 import MatchingGame from '@/lib/components/activities/MatchingGame'
 import MemoryGame from '@/lib/components/activities/MemoryGame'
 
-// Activity Registrys
+// Activity Registry
 const activityComponents: Record<string, React.FC<any>> = {
   Flashcard: Flashcard,
+  Vocabulary: Vocabulary,
   MatchingGame: MatchingGame,
   MemoryGame: MemoryGame,
 }
