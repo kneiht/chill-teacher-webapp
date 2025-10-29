@@ -62,15 +62,22 @@
         "id": "flashcards",
         "title": "Flashcards",
         "icon": "🃏",
-        "type": "flashcard",
+        "type": "Flashcard",
         "description": "Study vocabulary with interactive flashcards"
       },
       {
-        "id": "presentation",
-        "title": "Bài giảng",
-        "icon": "📖",
-        "type": "link",
-        "path": "/lessons/lesson-1-vocab/presentation"
+        "id": "matching-game",
+        "title": "Matching Game",
+        "icon": "🎮",
+        "type": "MatchingGame",
+        "description": "Match English words with Vietnamese meanings"
+      },
+      {
+        "id": "memory-game",
+        "title": "Memory Game",
+        "icon": "🧠",
+        "type": "MemoryGame",
+        "description": "Find matching pairs of vocabulary cards"
       }
     ]
   }

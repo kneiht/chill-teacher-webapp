@@ -1,5 +1,5 @@
 import { ArrowRightLeft, Volume2, VolumeX } from 'lucide-react'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { useStore } from '@tanstack/react-store'
 import {
   flashcardStore,
@@ -7,6 +7,10 @@ import {
   toggleSound,
 } from '@/lib/stores/flashcard.store'
 import { useVoice } from '@/lib/hooks/use-voice'
+
+// Components
+import PresentationShell from '@/lib/components/presentation/PresentationShell'
+import Slide from '@/lib/components/presentation/Slide'
 
 interface VocabItem {
   word: string
@@ -19,12 +23,17 @@ interface VocabItem {
   sentencePronunciation?: string
 }
 
-interface FlashcardProps {
+interface FlashcardCoreProps {
   vocab: VocabItem
   isActive: boolean
+  title?: string
 }
 
-const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
+const FlashcardCore: React.FC<FlashcardCoreProps> = ({
+  vocab,
+  isActive,
+  title,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const settings = useStore(flashcardStore)
   const { speakWord, speakSentence, stopAll } = useVoice()
@@ -68,7 +77,13 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
   if (!isActive) return null
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center p-8">
+    <div className="relative w-full h-full flex flex-col items-center justify-center p-8">
+      {/* Title */}
+      {title && (
+        <h2 className="text-xl font-bold text-indigo-700 text-center mb-4">
+          {title}
+        </h2>
+      )}
       <div
         className="relative w-[70%] h-[80%] cursor-pointer"
         onClick={() => setIsFlipped(!isFlipped)}
@@ -167,6 +182,41 @@ const Flashcard: React.FC<FlashcardProps> = ({ vocab, isActive }) => {
         </button>
       </div>
     </div>
+  )
+}
+
+// Activity Interface
+interface FlashcardProps {
+  vocabData: VocabItem[]
+  backgroundUrl: string
+  title?: string
+  onClose?: () => void
+}
+
+const Flashcard: React.FC<FlashcardProps> = ({
+  vocabData,
+  backgroundUrl,
+  title,
+  onClose,
+}) => {
+  const flashcardSlides = useMemo(
+    () =>
+      vocabData.map((vocab) => ({ isActive }: { isActive: boolean }) => (
+        <Slide isActive={isActive}>
+          <FlashcardCore vocab={vocab} isActive={isActive} title={title} />
+        </Slide>
+      )),
+    [vocabData, title],
+  )
+
+  return (
+    <PresentationShell
+      slides={flashcardSlides}
+      backgroundUrl={backgroundUrl}
+      onHomeClick={onClose}
+      showNavButtons={true}
+      showSlideCounter={true}
+    />
   )
 }
 
