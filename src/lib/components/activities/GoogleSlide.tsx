@@ -14,17 +14,10 @@ interface GoogleSlideCoreProps {
 const GoogleSlideCore: React.FC<GoogleSlideCoreProps> = ({
   isActive,
   src,
-  title,
   style,
 }) => {
   return (
     <div className="w-full h-full flex flex-col">
-      {/* Title */}
-      {title && (
-        <h2 className="text-xl font-bold text-indigo-700 text-center py-4 bg-white/80">
-          {title}
-        </h2>
-      )}
       <div
         className={`flex-1 slide rounded-xl ${isActive ? 'active' : ''}`}
         style={{ ...style, overflow: 'hidden' }}
@@ -42,30 +35,27 @@ const GoogleSlideCore: React.FC<GoogleSlideCoreProps> = ({
 
 // Activity Interface
 interface GoogleSlideProps {
-  slides: Array<{ url: string; title?: string }>
+  url: string
   backgroundUrl: string
   title?: string
   onClose?: () => void
 }
 
 const GoogleSlide: React.FC<GoogleSlideProps> = ({
-  slides,
+  url,
   backgroundUrl,
   title,
   onClose,
 }) => {
   const googleSlides = useMemo(
-    () =>
-      slides.map((slideData) => ({ isActive }: { isActive: boolean }) => (
-        <Slide isActive={isActive}>
-          <GoogleSlideCore
-            src={slideData.url}
-            isActive={isActive}
-            title={slideData.title || title}
-          />
+    () => [
+      ({ isActive }: { isActive: boolean }) => (
+        <Slide isActive={isActive} style={{ margin: 0, padding: 0 }}>
+          <GoogleSlideCore src={url} isActive={isActive} title={title} />
         </Slide>
-      )),
-    [slides, title],
+      ),
+    ],
+    [url, title],
   )
 
   return (
@@ -73,8 +63,8 @@ const GoogleSlide: React.FC<GoogleSlideProps> = ({
       slides={googleSlides}
       backgroundUrl={backgroundUrl}
       onHomeClick={onClose}
-      showNavButtons={true}
-      showSlideCounter={slides.length > 1}
+      showNavButtons={false}
+      showSlideCounter={false}
     />
   )
 }

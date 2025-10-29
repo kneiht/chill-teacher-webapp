@@ -13,7 +13,6 @@ interface YoutubeSlideCoreProps {
 const YoutubeSlideCore: React.FC<YoutubeSlideCoreProps> = ({
   isActive,
   src,
-  title,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
@@ -54,66 +53,54 @@ const YoutubeSlideCore: React.FC<YoutubeSlideCoreProps> = ({
   }
 
   return (
-    <div className="w-full h-full flex flex-col bg-black">
-      {/* Title */}
-      {title && (
-        <h2 className="text-xl font-bold text-white text-center py-4 bg-black/50">
-          {title}
-        </h2>
+    <div className="w-full h-full bg-black flex items-center justify-center">
+      {isActive && (
+        <iframe
+          ref={iframeRef}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full max-w-[calc(100vh*16/9)] max-h-full rounded-xl"
+          style={{ aspectRatio: '16/9' }}
+        />
       )}
-      <div className="flex-1 flex items-center justify-center">
-        {isActive && (
-          <iframe
-            ref={iframeRef}
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full max-w-[calc(100vh*16/9)] max-h-full"
-            style={{ aspectRatio: '16/9' }}
-          />
-        )}
-      </div>
     </div>
   )
 }
 
 // Activity Interface
 interface YoutubeSlideProps {
-  slides: Array<{ url: string; title?: string }>
+  url: string
   backgroundUrl: string
   title?: string
   onClose?: () => void
 }
 
 const YoutubeSlide: React.FC<YoutubeSlideProps> = ({
-  slides,
+  url,
   backgroundUrl,
   title,
   onClose,
 }) => {
-  const youtubeSlides = useMemo(
-    () =>
-      slides.map((slideData) => ({ isActive }: { isActive: boolean }) => (
-        <Slide isActive={isActive}>
-          <YoutubeSlideCore
-            src={slideData.url}
-            isActive={isActive}
-            title={slideData.title || title}
-          />
+  const youtubeSlide = useMemo(
+    () => [
+      ({ isActive }: { isActive: boolean }) => (
+        <Slide isActive={isActive} style={{ margin: 0, padding: 0 }}>
+          <YoutubeSlideCore src={url} isActive={isActive} title={title} />
         </Slide>
-      )),
-    [slides, title],
+      ),
+    ],
+    [url, title],
   )
 
   return (
     <PresentationShell
-      slides={youtubeSlides}
+      slides={youtubeSlide}
       backgroundUrl={backgroundUrl}
       onHomeClick={onClose}
-      showNavButtons={true}
-      showSlideCounter={slides.length > 1}
+      showNavButtons={false}
+      showSlideCounter={false}
     />
   )
 }

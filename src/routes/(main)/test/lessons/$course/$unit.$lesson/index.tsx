@@ -21,10 +21,43 @@ export const Route = createFileRoute(
 function RouteComponent() {
   const lessonData = parentRoute.useLoaderData()
   const params = Route.useParams()
-  const { urls, title, description, activities } = lessonData
+  const { urls, title, description, activities, externalContent } = lessonData
 
   const buttonStyle =
     'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
+
+  // Auto-generate activities từ externalContent
+  const allActivities = [...activities]
+
+  // Add Youtube videos as individual activities
+  if (externalContent?.videos) {
+    externalContent.videos.forEach((video) => {
+      allActivities.push({
+        id: `video-${video.id}`,
+        title: video.title || 'Video',
+        icon: '🎥',
+        type: 'YoutubeSlide',
+        description: video.title,
+        contentType: 'videos' as const,
+        contentIds: [video.id],
+      })
+    })
+  }
+
+  // Add Google Slides as individual activities
+  if (externalContent?.googleSlides) {
+    externalContent.googleSlides.forEach((slide) => {
+      allActivities.push({
+        id: `slide-${slide.id}`,
+        title: slide.title || 'Presentation',
+        icon: '📊',
+        type: 'GoogleSlide',
+        description: slide.title,
+        contentType: 'googleSlides' as const,
+        contentIds: [slide.id],
+      })
+    })
+  }
 
   function LessonHomepageSlide({ isActive }: { isActive: boolean }) {
     return (
@@ -37,7 +70,7 @@ function RouteComponent() {
             <p className="text-2xl text-gray-700 mb-8">{description}</p>
 
             <div className="grid grid-cols-2 gap-x-20 gap-y-7 max-w-4xl">
-              {activities.map((activity) => (
+              {allActivities.map((activity) => (
                 <Link
                   key={activity.id}
                   to="/test/lessons/$course/$unit/$lesson/$activity"

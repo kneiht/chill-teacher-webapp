@@ -11,13 +11,20 @@ interface VocabItem {
   sentencePronunciation?: string
 }
 
+interface ExternalContentItem {
+  id: string
+  url: string
+  title?: string
+}
+
 interface Activity {
   id: string
   title: string
   icon: string
   type: string // Activity type: 'Flashcard', 'MatchingGame', 'MemoryGame', 'YoutubeSlide', etc.
   description?: string
-  slides?: Array<{ url: string; title?: string }> // For YoutubeSlide, GoogleSlide
+  contentType?: 'videos' | 'googleSlides' // For slide-based activities (auto-generated)
+  contentIds?: string[] // Reference to single externalContent item (auto-generated uses [id])
 }
 
 interface LessonData {
@@ -27,6 +34,10 @@ interface LessonData {
   title: string
   description: string
   vocab: VocabItem[]
+  externalContent?: {
+    videos?: ExternalContentItem[]
+    googleSlides?: ExternalContentItem[]
+  }
   activities: Activity[]
 }
 

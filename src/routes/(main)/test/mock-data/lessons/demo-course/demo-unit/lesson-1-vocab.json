@@ -5,6 +5,27 @@
     },
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 1: Vocabulary Practice",
+    "externalContent": {
+      "videos": [
+        {
+          "id": "intro-video",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Introduction to Multiple Intelligence Theory"
+        },
+        {
+          "id": "detailed-explanation",
+          "url": "https://www.youtube.com/watch?v=example2",
+          "title": "Detailed Explanation"
+        }
+      ],
+      "googleSlides": [
+        {
+          "id": "presentation-1",
+          "url": "https://docs.google.com/presentation/d/example/embed",
+          "title": "Multiple Intelligence Theory Slides"
+        }
+      ]
+    },
     "vocab": [
       {
         "word": "intelligence",
@@ -58,19 +79,6 @@
       }
     ],
     "activities": [
-      {
-        "id": "youtube-intro",
-        "title": "Video Introduction",
-        "icon": "🎥",
-        "type": "YoutubeSlide",
-        "description": "Watch introduction video",
-        "slides": [
-          {
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "title": "Introduction to Multiple Intelligence Theory"
-          }
-        ]
-      },
       {
         "id": "vocabulary",
         "title": "Vocabulary",
