@@ -131,6 +131,7 @@ import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLes
 import { Route as mainTestLessonsCourseUnitLessonYoutubeIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/youtube.$id'
 import { Route as mainTestLessonsCourseUnitLessonPagesIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/pages.$id'
 import { Route as mainTestLessonsCourseUnitLessonGoogleslideIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/googleslide.$id'
+import { Route as mainTestLessonsCourseUnitLessonEmbedIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/embed.$id'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -998,6 +999,12 @@ const mainTestLessonsCourseUnitLessonGoogleslideIdRoute =
     path: '/googleslide/$id',
     getParentRoute: () => mainTestLessonsCourseUnitLessonRouteRoute,
   } as any)
+const mainTestLessonsCourseUnitLessonEmbedIdRoute =
+  mainTestLessonsCourseUnitLessonEmbedIdRouteImport.update({
+    id: '/embed/$id',
+    path: '/embed/$id',
+    getParentRoute: () => mainTestLessonsCourseUnitLessonRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof mainteacherRouteRouteWithChildren
@@ -1116,6 +1123,7 @@ export interface FileRoutesByFullPath {
   '/lessons/everybody-up-0/unit-1/lesson-3': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-4': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRoute
   '/test/lessons/$course/$unit/$lesson/': typeof mainTestLessonsCourseUnitLessonIndexRoute
+  '/test/lessons/$course/$unit/$lesson/embed/$id': typeof mainTestLessonsCourseUnitLessonEmbedIdRoute
   '/test/lessons/$course/$unit/$lesson/googleslide/$id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
   '/test/lessons/$course/$unit/$lesson/pages/$id': typeof mainTestLessonsCourseUnitLessonPagesIdRoute
   '/test/lessons/$course/$unit/$lesson/youtube/$id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
@@ -1236,6 +1244,7 @@ export interface FileRoutesByTo {
   '/lessons/everybody-up-0/unit-1/lesson-3': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-4': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRoute
   '/test/lessons/$course/$unit/$lesson': typeof mainTestLessonsCourseUnitLessonIndexRoute
+  '/test/lessons/$course/$unit/$lesson/embed/$id': typeof mainTestLessonsCourseUnitLessonEmbedIdRoute
   '/test/lessons/$course/$unit/$lesson/googleslide/$id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
   '/test/lessons/$course/$unit/$lesson/pages/$id': typeof mainTestLessonsCourseUnitLessonPagesIdRoute
   '/test/lessons/$course/$unit/$lesson/youtube/$id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
@@ -1361,6 +1370,7 @@ export interface FileRoutesById {
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRoute
   '/(main)/test/lessons/$course/$unit/$lesson/': typeof mainTestLessonsCourseUnitLessonIndexRoute
+  '/(main)/test/lessons/$course/$unit/$lesson/embed/$id': typeof mainTestLessonsCourseUnitLessonEmbedIdRoute
   '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
   '/(main)/test/lessons/$course/$unit/$lesson/pages/$id': typeof mainTestLessonsCourseUnitLessonPagesIdRoute
   '/(main)/test/lessons/$course/$unit/$lesson/youtube/$id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
@@ -1484,6 +1494,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-3'
     | '/lessons/everybody-up-0/unit-1/lesson-4'
     | '/test/lessons/$course/$unit/$lesson/'
+    | '/test/lessons/$course/$unit/$lesson/embed/$id'
     | '/test/lessons/$course/$unit/$lesson/googleslide/$id'
     | '/test/lessons/$course/$unit/$lesson/pages/$id'
     | '/test/lessons/$course/$unit/$lesson/youtube/$id'
@@ -1604,6 +1615,7 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-3'
     | '/lessons/everybody-up-0/unit-1/lesson-4'
     | '/test/lessons/$course/$unit/$lesson'
+    | '/test/lessons/$course/$unit/$lesson/embed/$id'
     | '/test/lessons/$course/$unit/$lesson/googleslide/$id'
     | '/test/lessons/$course/$unit/$lesson/pages/$id'
     | '/test/lessons/$course/$unit/$lesson/youtube/$id'
@@ -1728,6 +1740,7 @@ export interface FileRouteTypes {
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/'
     | '/(main)/test/lessons/$course/$unit/$lesson/'
+    | '/(main)/test/lessons/$course/$unit/$lesson/embed/$id'
     | '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id'
     | '/(main)/test/lessons/$course/$unit/$lesson/pages/$id'
     | '/(main)/test/lessons/$course/$unit/$lesson/youtube/$id'
@@ -2596,6 +2609,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainTestLessonsCourseUnitLessonGoogleslideIdRouteImport
       parentRoute: typeof mainTestLessonsCourseUnitLessonRouteRoute
     }
+    '/(main)/test/lessons/$course/$unit/$lesson/embed/$id': {
+      id: '/(main)/test/lessons/$course/$unit/$lesson/embed/$id'
+      path: '/embed/$id'
+      fullPath: '/test/lessons/$course/$unit/$lesson/embed/$id'
+      preLoaderRoute: typeof mainTestLessonsCourseUnitLessonEmbedIdRouteImport
+      parentRoute: typeof mainTestLessonsCourseUnitLessonRouteRoute
+    }
   }
 }
 
@@ -2639,6 +2659,7 @@ const mainteacherRouteRouteWithChildren =
 interface mainTestLessonsCourseUnitLessonRouteRouteChildren {
   mainTestLessonsCourseUnitLessonActivityRoute: typeof mainTestLessonsCourseUnitLessonActivityRoute
   mainTestLessonsCourseUnitLessonIndexRoute: typeof mainTestLessonsCourseUnitLessonIndexRoute
+  mainTestLessonsCourseUnitLessonEmbedIdRoute: typeof mainTestLessonsCourseUnitLessonEmbedIdRoute
   mainTestLessonsCourseUnitLessonGoogleslideIdRoute: typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
   mainTestLessonsCourseUnitLessonPagesIdRoute: typeof mainTestLessonsCourseUnitLessonPagesIdRoute
   mainTestLessonsCourseUnitLessonYoutubeIdRoute: typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
@@ -2650,6 +2671,8 @@ const mainTestLessonsCourseUnitLessonRouteRouteChildren: mainTestLessonsCourseUn
       mainTestLessonsCourseUnitLessonActivityRoute,
     mainTestLessonsCourseUnitLessonIndexRoute:
       mainTestLessonsCourseUnitLessonIndexRoute,
+    mainTestLessonsCourseUnitLessonEmbedIdRoute:
+      mainTestLessonsCourseUnitLessonEmbedIdRoute,
     mainTestLessonsCourseUnitLessonGoogleslideIdRoute:
       mainTestLessonsCourseUnitLessonGoogleslideIdRoute,
     mainTestLessonsCourseUnitLessonPagesIdRoute:

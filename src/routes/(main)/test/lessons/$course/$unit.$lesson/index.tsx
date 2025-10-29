@@ -14,15 +14,8 @@ export const Route = createFileRoute(
 function RouteComponent() {
   const lessonData = parentRoute.useLoaderData()
   const params = Route.useParams()
-  const {
-    background,
-    title,
-    description,
-    activities,
-    externalContent,
-    pages,
-    menu,
-  } = lessonData
+  const { background, title, description, externalContent, pages, menu } =
+    lessonData
 
   const buttonStyle =
     'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
@@ -63,6 +56,18 @@ function RouteComponent() {
         }
       }
 
+      case 'embedPage': {
+        const embed = externalContent?.embedPages?.find((e) => e.id === id)
+        if (!embed) return null
+        return {
+          id: `embed-${embed.id}`,
+          title: embed.title || 'Interactive Page',
+          icon: '🎮',
+          route: `/test/lessons/$course/$unit/$lesson/embed/${embed.id}`,
+          description: embed.title,
+        }
+      }
+
       case 'page': {
         const page = pages?.find((p) => p.id === id)
         if (!page) return null
@@ -76,8 +81,6 @@ function RouteComponent() {
       }
 
       case 'activity': {
-        // Check if activity exists in lesson's enabled activities
-        if (!activities.includes(id)) return null
         // Get metadata from registry
         const activityMeta = ACTIVITY_REGISTRY[id]
         if (!activityMeta) return null
@@ -95,7 +98,7 @@ function RouteComponent() {
     }
   }
 
-  // Build activities list
+  // Build activities list from menu
   const allActivities: Array<{
     id: string
     title: string
@@ -104,46 +107,12 @@ function RouteComponent() {
     description?: string
   }> = []
 
-  if (menu && menu.length > 0) {
-    // Use custom menu order
-    menu.forEach((menuItem) => {
-      const item = getItemDetails(menuItem.type, menuItem.id)
-      if (item) {
-        allActivities.push(item)
-      }
-    })
-  } else {
-    // Default order: videos → slides → pages → activities
-    // Add Youtube videos
-    if (externalContent?.videos) {
-      externalContent.videos.forEach((video) => {
-        const item = getItemDetails('video', video.id)
-        if (item) allActivities.push(item)
-      })
+  menu.forEach((menuItem) => {
+    const item = getItemDetails(menuItem.type, menuItem.id)
+    if (item) {
+      allActivities.push(item)
     }
-
-    // Add Google Slides
-    if (externalContent?.googleSlides) {
-      externalContent.googleSlides.forEach((slide) => {
-        const item = getItemDetails('googleSlide', slide.id)
-        if (item) allActivities.push(item)
-      })
-    }
-
-    // Add Pages
-    if (pages) {
-      pages.forEach((page) => {
-        const item = getItemDetails('page', page.id!)
-        if (item) allActivities.push(item)
-      })
-    }
-
-    // Add regular activities
-    activities.forEach((activityId) => {
-      const item = getItemDetails('activity', activityId)
-      if (item) allActivities.push(item)
-    })
-  }
+  })
 
   function LessonHomepageSlide({ isActive }: { isActive: boolean }) {
     return (

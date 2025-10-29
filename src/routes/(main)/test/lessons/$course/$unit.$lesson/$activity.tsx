@@ -160,11 +160,14 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { background, vocab, title, activities, clozeData, questions } =
-    lessonData
+  const { background, vocab, title, menu, clozeData, questions } = lessonData
 
-  // Check if activity exists in lesson's enabled activities
-  if (!activities.includes(activityId)) {
+  // Check if activity exists in lesson's menu
+  const activityInMenu = menu.some(
+    (item) => item.type === 'activity' && item.id === activityId,
+  )
+
+  if (!activityInMenu) {
     throw notFound()
   }
 

@@ -3,6 +3,58 @@
     "background": "/backgrounds/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 1: Vocabulary Practice",
+    "vocab": [
+      {
+        "word": "intelligence",
+        "phonics": "/ɪnˈtel.ɪ.dʒəns/",
+        "image": "/vocab-images/pencil.webp",
+        "vietnameseMeaning": "trí thông minh",
+        "sampleSentence": "She has a high level of intelligence.",
+        "vietnameseTranslation": "Cô ấy có trí thông minh cao.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      },
+      {
+        "word": "theory",
+        "phonics": "/ˈθɪə.ri/",
+        "image": "/vocab-images/paper.webp",
+        "vietnameseMeaning": "lý thuyết",
+        "sampleSentence": "The theory of evolution is widely accepted.",
+        "vietnameseTranslation": "Thuyết tiến hóa được chấp nhận rộng rãi.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      },
+      {
+        "word": "linguistic",
+        "phonics": "/lɪŋˈɡwɪs.tɪk/",
+        "image": "/vocab-images/pen.webp",
+        "vietnameseMeaning": "ngôn ngữ học",
+        "sampleSentence": "She has strong linguistic abilities.",
+        "vietnameseTranslation": "Cô ấy có khả năng ngôn ngữ mạnh mẽ.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      },
+      {
+        "word": "spatial",
+        "phonics": "/ˈspeɪ.ʃəl/",
+        "image": "/vocab-images/marker.webp",
+        "vietnameseMeaning": "không gian",
+        "sampleSentence": "He has excellent spatial awareness.",
+        "vietnameseTranslation": "Anh ấy có nhận thức không gian xuất sắc.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      },
+      {
+        "word": "musical",
+        "phonics": "/ˈmjuː.zɪ.kəl/",
+        "image": "/vocab-images/crayon.webp",
+        "vietnameseMeaning": "âm nhạc",
+        "sampleSentence": "She is very musical and plays three instruments.",
+        "vietnameseTranslation": "Cô ấy rất có năng khiếu âm nhạc và chơi ba nhạc cụ.",
+        "wordPronunciation": "",
+        "sentencePronunciation": ""
+      }
+    ],
     "clozeData": {
       "paragraph": "Multiple _____ theory suggests that there are different types of _____ abilities. These include _____ intelligence for language skills, _____ intelligence for understanding space, and _____ intelligence for rhythm and melody.",
       "words": ["intelligence", "cognitive", "linguistic", "spatial", "musical"]
@@ -43,6 +95,39 @@
         "correctAnswer": "musical"
       }
     ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "intro-video",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Introduction to Multiple Intelligence Theory"
+        },
+        {
+          "id": "detailed-explanation",
+          "url": "https://www.youtube.com/watch?v=example2",
+          "title": "Detailed Explanation"
+        }
+      ],
+      "googleSlides": [
+        {
+          "id": "presentation-1",
+          "url": "https://docs.google.com/presentation/d/example/embed",
+          "title": "Multiple Intelligence Theory Slides"
+        }
+      ],
+      "embedPages": [
+        {
+          "id": "listening-exercise",
+          "url": "/embed/multitple-intelligence-theory/listening/index.html",
+          "title": "Listening Exercise"
+        },
+        {
+          "id": "shadowing-exercise",
+          "url": "/embed/multitple-intelligence-theory/shadowing/index.html",
+          "title": "Shadowing Exercise"
+        }
+      ]
+    },
     "pages": [
       {
         "id": "chapter-1",
@@ -365,6 +450,8 @@
       { "type": "video", "id": "intro-video" },
       { "type": "video", "id": "detailed-explanation" },
       { "type": "googleSlide", "id": "presentation-1" },
+      { "type": "embedPage", "id": "listening-exercise" },
+      { "type": "embedPage", "id": "shadowing-exercise" },
       { "type": "page", "id": "chapter-1" },
       { "type": "activity", "id": "vocabulary" },
       { "type": "activity", "id": "flashcards" },
@@ -387,97 +474,6 @@
       { "type": "activity", "id": "candy-crush" },
       { "type": "activity", "id": "image-reveal" },
       { "type": "activity", "id": "assignments" }
-    ],
-    "externalContent": {
-      "videos": [
-        {
-          "id": "intro-video",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-          "title": "Introduction to Multiple Intelligence Theory"
-        },
-        {
-          "id": "detailed-explanation",
-          "url": "https://www.youtube.com/watch?v=example2",
-          "title": "Detailed Explanation"
-        }
-      ],
-      "googleSlides": [
-        {
-          "id": "presentation-1",
-          "url": "https://docs.google.com/presentation/d/example/embed",
-          "title": "Multiple Intelligence Theory Slides"
-        }
-      ]
-    },
-    "vocab": [
-      {
-        "word": "intelligence",
-        "phonics": "/ɪnˈtel.ɪ.dʒəns/",
-        "image": "/vocab-images/pencil.webp",
-        "vietnameseMeaning": "trí thông minh",
-        "sampleSentence": "She has a high level of intelligence.",
-        "vietnameseTranslation": "Cô ấy có trí thông minh cao.",
-        "wordPronunciation": "",
-        "sentencePronunciation": ""
-      },
-      {
-        "word": "theory",
-        "phonics": "/ˈθɪə.ri/",
-        "image": "/vocab-images/paper.webp",
-        "vietnameseMeaning": "lý thuyết",
-        "sampleSentence": "The theory of evolution is widely accepted.",
-        "vietnameseTranslation": "Thuyết tiến hóa được chấp nhận rộng rãi.",
-        "wordPronunciation": "",
-        "sentencePronunciation": ""
-      },
-      {
-        "word": "linguistic",
-        "phonics": "/lɪŋˈɡwɪs.tɪk/",
-        "image": "/vocab-images/pen.webp",
-        "vietnameseMeaning": "ngôn ngữ học",
-        "sampleSentence": "She has strong linguistic abilities.",
-        "vietnameseTranslation": "Cô ấy có khả năng ngôn ngữ mạnh mẽ.",
-        "wordPronunciation": "",
-        "sentencePronunciation": ""
-      },
-      {
-        "word": "spatial",
-        "phonics": "/ˈspeɪ.ʃəl/",
-        "image": "/vocab-images/marker.webp",
-        "vietnameseMeaning": "không gian",
-        "sampleSentence": "He has excellent spatial awareness.",
-        "vietnameseTranslation": "Anh ấy có nhận thức không gian xuất sắc.",
-        "wordPronunciation": "",
-        "sentencePronunciation": ""
-      },
-      {
-        "word": "musical",
-        "phonics": "/ˈmjuː.zɪ.kəl/",
-        "image": "/vocab-images/crayon.webp",
-        "vietnameseMeaning": "âm nhạc",
-        "sampleSentence": "She is very musical and plays three instruments.",
-        "vietnameseTranslation": "Cô ấy rất có năng khiếu âm nhạc và chơi ba nhạc cụ.",
-        "wordPronunciation": "",
-        "sentencePronunciation": ""
-      }
-    ],
-    "activities": [
-      "vocabulary",
-      "flashcards",
-      "matching-game",
-      "memory-game",
-      "anagram-game",
-      "multiple-choice-envi",
-      "multiple-choice-vien",
-      "unjumble-game",
-      "cloze-game",
-      "picture-choice",
-      "picture-typing",
-      "listening-typing",
-      "listening-sentence",
-      "translation-game",
-      "candy-crush",
-      "image-reveal"
     ]
   }
 }

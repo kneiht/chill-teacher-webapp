@@ -23,7 +23,6 @@
     "scripts": true,
     "eslint.config.js": true,
     "src/routeTree.gen.ts": false,
-    "src/reportWebVitals.ts": true,
-    "src/routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory": true
+    "src/reportWebVitals.ts": true
   }
 }

@@ -18,7 +18,7 @@ interface ExternalContentItem {
 }
 
 interface MenuItem {
-  type: 'activity' | 'page' | 'video' | 'googleSlide'
+  type: 'activity' | 'page' | 'video' | 'googleSlide' | 'embedPage'
   id: string
 }
 
@@ -120,9 +120,9 @@ interface LessonData {
   externalContent?: {
     videos?: ExternalContentItem[]
     googleSlides?: ExternalContentItem[]
+    embedPages?: ExternalContentItem[]
   }
-  activities: string[] // Array of activity IDs (metadata in ACTIVITY_REGISTRY)
-  menu?: MenuItem[] // Optional: Define custom menu order
+  menu: MenuItem[] // Define menu order (all items: videos, slides, pages, activities, embeds)
 }
 
 export const Route = createFileRoute(
