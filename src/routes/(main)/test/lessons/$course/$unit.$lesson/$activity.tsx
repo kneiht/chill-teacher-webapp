@@ -160,14 +160,8 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const {
-    background,
-    vocab,
-    title,
-    activities,
-    clozeData,
-    candyCrushQuestions,
-  } = lessonData
+  const { background, vocab, title, activities, clozeData, questions } =
+    lessonData
 
   // Check if activity exists in lesson's enabled activities
   if (!activities.includes(activityId)) {
@@ -218,9 +212,7 @@ function ActivityComponent() {
   }
 
   if (activityMeta.component === 'CandyCrushEnglishGame') {
-    return (
-      <ActivityComponent {...baseProps} questionsData={candyCrushQuestions} />
-    )
+    return <ActivityComponent {...baseProps} questionsData={questions} />
   }
   // Render standard vocab-based activity
   return <ActivityComponent {...baseProps} />

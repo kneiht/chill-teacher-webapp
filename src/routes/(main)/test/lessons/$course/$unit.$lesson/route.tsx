@@ -114,7 +114,7 @@ interface LessonData {
   description: string
   vocab: VocabItem[]
   clozeData?: ClozeData
-  candyCrushQuestions?: CandyCrushQuestion[]
+  questions?: CandyCrushQuestion[]
   assignmentData?: AssignmentData
   pages?: ContentPageData[] // Array of pages with id
   externalContent?: {
