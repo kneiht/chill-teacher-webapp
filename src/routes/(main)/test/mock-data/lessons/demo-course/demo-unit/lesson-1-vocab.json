@@ -45,220 +45,324 @@
         "correctAnswer": "musical"
       }
     ],
-    "pageData": {
-      "title": "Study Guide: Multiple Intelligence Theory",
-      "subtitle": "A comprehensive guide to understanding different types of intelligence",
-      "scrollable": true,
-      "content": [
-        {
-          "type": "heading",
-          "level": 2,
-          "text": "📚 Introduction"
-        },
-        {
-          "type": "paragraph",
-          "text": "Multiple Intelligence Theory, developed by Howard Gardner in 1983, suggests that intelligence is not a single entity, but rather a combination of different types of cognitive abilities. This revolutionary theory changed how we think about learning and education."
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "text": "🧠 The Eight Types of Intelligence"
-        },
-        {
-          "type": "list",
-          "ordered": true,
-          "items": [
-            "Linguistic Intelligence - The ability to use language effectively",
-            "Logical-Mathematical Intelligence - Reasoning and problem-solving skills",
-            "Spatial Intelligence - Understanding visual and spatial information",
-            "Musical Intelligence - Sensitivity to rhythm, pitch, and melody",
-            "Bodily-Kinesthetic Intelligence - Control of body movements",
-            "Interpersonal Intelligence - Understanding others' emotions",
-            "Intrapersonal Intelligence - Self-awareness and reflection",
-            "Naturalist Intelligence - Recognition of patterns in nature"
-          ]
-        },
-        {
-          "type": "card",
-          "title": "💡 Key Concept",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Everyone has all eight intelligences, but we each have a unique combination. Some intelligences are stronger than others in different individuals."
-            }
-          ]
-        },
-        {
-          "type": "heading",
-          "level": 3,
-          "text": "📊 Intelligence Comparison Table"
-        },
-        {
-          "type": "table",
-          "headers": ["Intelligence Type", "Strengths", "Career Examples"],
-          "rows": [
-            [
-              "Linguistic",
-              "Reading, writing, speaking",
-              "Writer, Teacher, Lawyer"
-            ],
-            [
-              "Logical-Mathematical",
-              "Problem-solving, calculations",
-              "Scientist, Engineer, Programmer"
-            ],
-            ["Spatial", "Visualizing, designing", "Architect, Artist, Pilot"],
-            [
-              "Musical",
-              "Playing instruments, composing",
-              "Musician, Composer, DJ"
-            ],
-            [
-              "Bodily-Kinesthetic",
-              "Sports, dance, acting",
-              "Athlete, Dancer, Surgeon"
-            ],
-            [
-              "Interpersonal",
-              "Communication, empathy",
-              "Counselor, Manager, Politician"
-            ],
-            [
-              "Intrapersonal",
-              "Self-reflection, goal-setting",
-              "Philosopher, Therapist, Writer"
-            ],
-            [
-              "Naturalist",
-              "Nature observation, classification",
-              "Biologist, Farmer, Environmentalist"
+    "pages": [
+      {
+        "id": "chapter-1",
+        "title": "Chapter 1: Introduction to Multiple Intelligence Theory",
+        "subtitle": "Understanding the basics",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "📚 What is Multiple Intelligence Theory?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Multiple Intelligence Theory, developed by Howard Gardner in 1983, revolutionized our understanding of human intelligence. Rather than viewing intelligence as a single, fixed entity measured by IQ tests, Gardner proposed that humans possess at least eight distinct types of intelligence."
+          },
+          {
+            "type": "card",
+            "title": "💡 Key Insight",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Intelligence is not one-dimensional. Each person has a unique combination of intelligences, and education should recognize and nurture all forms."
+              }
             ]
-          ]
-        },
-        {
-          "type": "spacer",
-          "height": "1rem"
-        },
-        {
-          "type": "quote",
-          "text": "It's not how smart you are, it's how you are smart.",
-          "author": "Howard Gardner"
-        },
-        {
-          "type": "heading",
-          "level": 3,
-          "text": "🎯 Learning Activities by Intelligence Type"
-        },
-        {
-          "type": "card",
-          "content": [
-            {
-              "type": "heading",
-              "level": 4,
-              "text": "For Linguistic Learners:"
-            },
-            {
-              "type": "list",
-              "ordered": false,
-              "items": [
-                "Write essays and stories",
-                "Read books and articles",
-                "Participate in debates",
-                "Create word games and puzzles"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "card",
-          "content": [
-            {
-              "type": "heading",
-              "level": 4,
-              "text": "For Visual-Spatial Learners:"
-            },
-            {
-              "type": "list",
-              "ordered": false,
-              "items": [
-                "Create mind maps and diagrams",
-                "Use color-coding systems",
-                "Watch educational videos",
-                "Draw and design projects"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "card",
-          "content": [
-            {
-              "type": "heading",
-              "level": 4,
-              "text": "For Musical Learners:"
-            },
-            {
-              "type": "list",
-              "ordered": false,
-              "items": [
-                "Create songs to remember facts",
-                "Listen to music while studying",
-                "Use rhythm and rhyme",
-                "Play instruments to reduce stress"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "text": "🎬 Video Resources"
-        },
-        {
-          "type": "paragraph",
-          "text": "Watch these videos to learn more about Multiple Intelligence Theory:"
-        },
-        {
-          "type": "button",
-          "text": "📺 Watch Introduction Video",
-          "href": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "type": "spacer",
-          "height": "1rem"
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "text": "📝 Self-Assessment"
-        },
-        {
-          "type": "paragraph",
-          "text": "Answer these questions to discover your dominant intelligence types:"
-        },
-        {
-          "type": "list",
-          "ordered": true,
-          "items": [
-            "Do you enjoy reading and writing? (Linguistic)",
-            "Are you good at solving puzzles and math problems? (Logical-Mathematical)",
-            "Do you remember faces and places easily? (Spatial)",
-            "Can you easily remember melodies and rhythms? (Musical)",
-            "Do you prefer learning by doing physical activities? (Bodily-Kinesthetic)",
-            "Are you good at understanding others' feelings? (Interpersonal)",
-            "Do you spend time reflecting on your thoughts? (Intrapersonal)",
-            "Do you enjoy being outdoors and observing nature? (Naturalist)"
-          ]
-        }
-      ],
-      "footer": "Remember: Everyone has a unique combination of intelligences! 🌟"
-    },
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "🎯 Why Does This Matter?"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Helps students understand their own strengths",
+              "Encourages diverse teaching methods",
+              "Promotes inclusive education",
+              "Recognizes that everyone is smart in different ways"
+            ]
+          },
+          {
+            "type": "quote",
+            "text": "It's not how smart you are, it's how you are smart.",
+            "author": "Howard Gardner"
+          }
+        ],
+        "footer": "Chapter 1 of 5 - Continue to Chapter 2 →"
+      },
+      {
+        "id": "chapter-2",
+        "title": "Chapter 2: The Eight Types of Intelligence",
+        "subtitle": "Exploring each intelligence type",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "🧠 The Eight Intelligences"
+          },
+          {
+            "type": "paragraph",
+            "text": "Gardner identified eight distinct types of intelligence. Each represents a different way of processing information and solving problems."
+          },
+          {
+            "type": "table",
+            "headers": ["Intelligence", "Description", "Famous Examples"],
+            "rows": [
+              ["Linguistic", "Words and language", "Shakespeare, J.K. Rowling"],
+              [
+                "Logical-Mathematical",
+                "Numbers and reasoning",
+                "Einstein, Stephen Hawking"
+              ],
+              [
+                "Spatial",
+                "Visual and spatial thinking",
+                "Picasso, Frank Lloyd Wright"
+              ],
+              ["Musical", "Rhythm and melody", "Mozart, Beyoncé"],
+              [
+                "Bodily-Kinesthetic",
+                "Physical movement",
+                "Messi, Michael Jordan"
+              ],
+              [
+                "Interpersonal",
+                "Understanding others",
+                "Oprah, Nelson Mandela"
+              ],
+              ["Intrapersonal", "Self-awareness", "Buddha, Maya Angelou"],
+              ["Naturalist", "Nature and environment", "Darwin, Jane Goodall"]
+            ]
+          },
+          {
+            "type": "spacer",
+            "height": "1rem"
+          },
+          {
+            "type": "card",
+            "title": "🎨 Activity",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Try to identify which intelligences are your strongest. Most people excel in 2-3 areas!"
+              }
+            ]
+          }
+        ],
+        "footer": "Chapter 2 of 5 - Continue to Chapter 3 →"
+      },
+      {
+        "id": "chapter-3",
+        "title": "Chapter 3: Linguistic Intelligence",
+        "subtitle": "The power of words",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "📝 Linguistic Intelligence"
+          },
+          {
+            "type": "paragraph",
+            "text": "People with strong linguistic intelligence are skilled with words, languages, and written/spoken communication. They enjoy reading, writing, and storytelling."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Characteristics"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Love reading books and writing",
+              "Good at learning languages",
+              "Enjoy word games and puzzles",
+              "Remember written information well",
+              "Effective communicators"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Career Paths"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Writer / Author / Journalist",
+              "Teacher / Professor",
+              "Lawyer / Judge",
+              "Translator / Interpreter",
+              "Public Speaker"
+            ]
+          },
+          {
+            "type": "card",
+            "title": "💪 Develop Your Linguistic Intelligence",
+            "content": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  "Read diverse genres of books",
+                  "Write daily in a journal",
+                  "Learn a new language",
+                  "Play word games like Scrabble",
+                  "Join a debate club"
+                ]
+              }
+            ]
+          }
+        ],
+        "footer": "Chapter 3 of 5"
+      },
+      {
+        "id": "chapter-4",
+        "title": "Chapter 4: Logical-Mathematical Intelligence",
+        "subtitle": "Numbers and reasoning",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "🔢 Logical-Mathematical Intelligence"
+          },
+          {
+            "type": "paragraph",
+            "text": "This intelligence involves logical thinking, mathematical calculations, and scientific reasoning. People with this strength are good at problem-solving and pattern recognition."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Characteristics"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Enjoy solving puzzles and brain teasers",
+              "Good at mathematics and science",
+              "Think in abstract concepts",
+              "Like to categorize and classify",
+              "Ask lots of questions"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Career Paths"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Scientist / Researcher",
+              "Engineer / Programmer",
+              "Mathematician / Statistician",
+              "Accountant / Financial Analyst",
+              "Detective / Investigator"
+            ]
+          },
+          {
+            "type": "card",
+            "title": "💪 Develop Your Logical-Mathematical Intelligence",
+            "content": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  "Solve logic puzzles daily",
+                  "Learn programming or coding",
+                  "Study chess strategies",
+                  "Conduct science experiments",
+                  "Practice mental math"
+                ]
+              }
+            ]
+          }
+        ],
+        "footer": "Chapter 4 of 5"
+      },
+      {
+        "id": "chapter-5",
+        "title": "Chapter 5: Summary & Assessment",
+        "subtitle": "Putting it all together",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "🎯 Key Takeaways"
+          },
+          {
+            "type": "card",
+            "title": "✅ What We Learned",
+            "content": [
+              {
+                "type": "list",
+                "ordered": true,
+                "items": [
+                  "Intelligence is multi-dimensional, not single",
+                  "There are 8 distinct types of intelligence",
+                  "Everyone has a unique combination",
+                  "Each intelligence can be developed",
+                  "Education should address all intelligences"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "📝 Self-Assessment Questions"
+          },
+          {
+            "type": "paragraph",
+            "text": "Reflect on these questions to identify your strongest intelligences:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Which activities do you enjoy most?",
+              "What subjects come naturally to you?",
+              "How do you prefer to learn new things?",
+              "What do people often compliment you on?",
+              "What careers interest you most?"
+            ]
+          },
+          {
+            "type": "card",
+            "title": "🎓 Next Steps",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Now that you understand the theory, complete the vocabulary exercises and games to master the key terms. Then, create a personal learning plan based on your strongest intelligences!"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "text": "📺 Watch Full Course Video",
+            "href": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          }
+        ],
+        "footer": "🌟 Chapter 5 of 5 - Course Complete! Great job!"
+      }
+    ],
     "externalContent": {
       "videos": [
         {

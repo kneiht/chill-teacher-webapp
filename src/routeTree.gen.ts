@@ -128,8 +128,9 @@ import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLes
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1PresentationLessonRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/presentation-lesson'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1FlashcardsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/flashcards'
 import { Route as mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport } from './routes/(main)/(students)/lessons/advanced-topics/multiple-intelligence-theory/lesson-1/assignments'
-import { Route as mainTestLessonsCourseUnitLessonYoutubeIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/youtube.$Id'
-import { Route as mainTestLessonsCourseUnitLessonGoogleslideIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/googleslide.$Id'
+import { Route as mainTestLessonsCourseUnitLessonYoutubeIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/youtube.$id'
+import { Route as mainTestLessonsCourseUnitLessonPagesIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/pages.$id'
+import { Route as mainTestLessonsCourseUnitLessonGoogleslideIdRouteImport } from './routes/(main)/test/lessons/$course/$unit.$lesson/googleslide.$id'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -981,14 +982,20 @@ const mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1Assignme
   )
 const mainTestLessonsCourseUnitLessonYoutubeIdRoute =
   mainTestLessonsCourseUnitLessonYoutubeIdRouteImport.update({
-    id: '/youtube/$Id',
-    path: '/youtube/$Id',
+    id: '/youtube/$id',
+    path: '/youtube/$id',
+    getParentRoute: () => mainTestLessonsCourseUnitLessonRouteRoute,
+  } as any)
+const mainTestLessonsCourseUnitLessonPagesIdRoute =
+  mainTestLessonsCourseUnitLessonPagesIdRouteImport.update({
+    id: '/pages/$id',
+    path: '/pages/$id',
     getParentRoute: () => mainTestLessonsCourseUnitLessonRouteRoute,
   } as any)
 const mainTestLessonsCourseUnitLessonGoogleslideIdRoute =
   mainTestLessonsCourseUnitLessonGoogleslideIdRouteImport.update({
-    id: '/googleslide/$Id',
-    path: '/googleslide/$Id',
+    id: '/googleslide/$id',
+    path: '/googleslide/$id',
     getParentRoute: () => mainTestLessonsCourseUnitLessonRouteRoute,
   } as any)
 
@@ -1109,8 +1116,9 @@ export interface FileRoutesByFullPath {
   '/lessons/everybody-up-0/unit-1/lesson-3': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-4': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRoute
   '/test/lessons/$course/$unit/$lesson/': typeof mainTestLessonsCourseUnitLessonIndexRoute
-  '/test/lessons/$course/$unit/$lesson/googleslide/$Id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
-  '/test/lessons/$course/$unit/$lesson/youtube/$Id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
+  '/test/lessons/$course/$unit/$lesson/googleslide/$id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
+  '/test/lessons/$course/$unit/$lesson/pages/$id': typeof mainTestLessonsCourseUnitLessonPagesIdRoute
+  '/test/lessons/$course/$unit/$lesson/youtube/$id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainteacherRouteRouteWithChildren
@@ -1228,8 +1236,9 @@ export interface FileRoutesByTo {
   '/lessons/everybody-up-0/unit-1/lesson-3': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
   '/lessons/everybody-up-0/unit-1/lesson-4': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRoute
   '/test/lessons/$course/$unit/$lesson': typeof mainTestLessonsCourseUnitLessonIndexRoute
-  '/test/lessons/$course/$unit/$lesson/googleslide/$Id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
-  '/test/lessons/$course/$unit/$lesson/youtube/$Id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
+  '/test/lessons/$course/$unit/$lesson/googleslide/$id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
+  '/test/lessons/$course/$unit/$lesson/pages/$id': typeof mainTestLessonsCourseUnitLessonPagesIdRoute
+  '/test/lessons/$course/$unit/$lesson/youtube/$id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -1352,8 +1361,9 @@ export interface FileRoutesById {
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson3IndexRoute
   '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/': typeof mainstudentsLessonsEverybodyUp0Unit1Lesson4IndexRoute
   '/(main)/test/lessons/$course/$unit/$lesson/': typeof mainTestLessonsCourseUnitLessonIndexRoute
-  '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$Id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
-  '/(main)/test/lessons/$course/$unit/$lesson/youtube/$Id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
+  '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id': typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
+  '/(main)/test/lessons/$course/$unit/$lesson/pages/$id': typeof mainTestLessonsCourseUnitLessonPagesIdRoute
+  '/(main)/test/lessons/$course/$unit/$lesson/youtube/$id': typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1474,8 +1484,9 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-3'
     | '/lessons/everybody-up-0/unit-1/lesson-4'
     | '/test/lessons/$course/$unit/$lesson/'
-    | '/test/lessons/$course/$unit/$lesson/googleslide/$Id'
-    | '/test/lessons/$course/$unit/$lesson/youtube/$Id'
+    | '/test/lessons/$course/$unit/$lesson/googleslide/$id'
+    | '/test/lessons/$course/$unit/$lesson/pages/$id'
+    | '/test/lessons/$course/$unit/$lesson/youtube/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1593,8 +1604,9 @@ export interface FileRouteTypes {
     | '/lessons/everybody-up-0/unit-1/lesson-3'
     | '/lessons/everybody-up-0/unit-1/lesson-4'
     | '/test/lessons/$course/$unit/$lesson'
-    | '/test/lessons/$course/$unit/$lesson/googleslide/$Id'
-    | '/test/lessons/$course/$unit/$lesson/youtube/$Id'
+    | '/test/lessons/$course/$unit/$lesson/googleslide/$id'
+    | '/test/lessons/$course/$unit/$lesson/pages/$id'
+    | '/test/lessons/$course/$unit/$lesson/youtube/$id'
   id:
     | '__root__'
     | '/'
@@ -1716,8 +1728,9 @@ export interface FileRouteTypes {
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-3/'
     | '/(main)/(students)/lessons/everybody-up-0/unit-1/lesson-4/'
     | '/(main)/test/lessons/$course/$unit/$lesson/'
-    | '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$Id'
-    | '/(main)/test/lessons/$course/$unit/$lesson/youtube/$Id'
+    | '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id'
+    | '/(main)/test/lessons/$course/$unit/$lesson/pages/$id'
+    | '/(main)/test/lessons/$course/$unit/$lesson/youtube/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -2562,17 +2575,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainstudentsLessonsAdvancedTopicsMultipleIntelligenceTheoryLesson1AssignmentsRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/test/lessons/$course/$unit/$lesson/youtube/$Id': {
-      id: '/(main)/test/lessons/$course/$unit/$lesson/youtube/$Id'
-      path: '/youtube/$Id'
-      fullPath: '/test/lessons/$course/$unit/$lesson/youtube/$Id'
+    '/(main)/test/lessons/$course/$unit/$lesson/youtube/$id': {
+      id: '/(main)/test/lessons/$course/$unit/$lesson/youtube/$id'
+      path: '/youtube/$id'
+      fullPath: '/test/lessons/$course/$unit/$lesson/youtube/$id'
       preLoaderRoute: typeof mainTestLessonsCourseUnitLessonYoutubeIdRouteImport
       parentRoute: typeof mainTestLessonsCourseUnitLessonRouteRoute
     }
-    '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$Id': {
-      id: '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$Id'
-      path: '/googleslide/$Id'
-      fullPath: '/test/lessons/$course/$unit/$lesson/googleslide/$Id'
+    '/(main)/test/lessons/$course/$unit/$lesson/pages/$id': {
+      id: '/(main)/test/lessons/$course/$unit/$lesson/pages/$id'
+      path: '/pages/$id'
+      fullPath: '/test/lessons/$course/$unit/$lesson/pages/$id'
+      preLoaderRoute: typeof mainTestLessonsCourseUnitLessonPagesIdRouteImport
+      parentRoute: typeof mainTestLessonsCourseUnitLessonRouteRoute
+    }
+    '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id': {
+      id: '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id'
+      path: '/googleslide/$id'
+      fullPath: '/test/lessons/$course/$unit/$lesson/googleslide/$id'
       preLoaderRoute: typeof mainTestLessonsCourseUnitLessonGoogleslideIdRouteImport
       parentRoute: typeof mainTestLessonsCourseUnitLessonRouteRoute
     }
@@ -2620,6 +2640,7 @@ interface mainTestLessonsCourseUnitLessonRouteRouteChildren {
   mainTestLessonsCourseUnitLessonActivityRoute: typeof mainTestLessonsCourseUnitLessonActivityRoute
   mainTestLessonsCourseUnitLessonIndexRoute: typeof mainTestLessonsCourseUnitLessonIndexRoute
   mainTestLessonsCourseUnitLessonGoogleslideIdRoute: typeof mainTestLessonsCourseUnitLessonGoogleslideIdRoute
+  mainTestLessonsCourseUnitLessonPagesIdRoute: typeof mainTestLessonsCourseUnitLessonPagesIdRoute
   mainTestLessonsCourseUnitLessonYoutubeIdRoute: typeof mainTestLessonsCourseUnitLessonYoutubeIdRoute
 }
 
@@ -2631,6 +2652,8 @@ const mainTestLessonsCourseUnitLessonRouteRouteChildren: mainTestLessonsCourseUn
       mainTestLessonsCourseUnitLessonIndexRoute,
     mainTestLessonsCourseUnitLessonGoogleslideIdRoute:
       mainTestLessonsCourseUnitLessonGoogleslideIdRoute,
+    mainTestLessonsCourseUnitLessonPagesIdRoute:
+      mainTestLessonsCourseUnitLessonPagesIdRoute,
     mainTestLessonsCourseUnitLessonYoutubeIdRoute:
       mainTestLessonsCourseUnitLessonYoutubeIdRoute,
   }

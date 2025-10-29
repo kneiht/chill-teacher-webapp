@@ -21,7 +21,8 @@ export const Route = createFileRoute(
 function RouteComponent() {
   const lessonData = parentRoute.useLoaderData()
   const params = Route.useParams()
-  const { urls, title, description, activities, externalContent } = lessonData
+  const { urls, title, description, activities, externalContent, pages } =
+    lessonData
 
   const buttonStyle =
     'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
@@ -57,6 +58,19 @@ function RouteComponent() {
         icon: '📊',
         route: `/test/lessons/$course/$unit/$lesson/googleslide/${slide.id}`,
         description: slide.title,
+      })
+    })
+  }
+
+  // Add Pages with dedicated routes
+  if (pages) {
+    pages.forEach((page) => {
+      allActivities.push({
+        id: `page-${page.id}`,
+        title: page.title || 'Page',
+        icon: '📄',
+        route: `/test/lessons/$course/$unit/$lesson/pages/${page.id}`,
+        description: page.subtitle || page.title,
       })
     })
   }

@@ -52,16 +52,8 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const {
-    urls,
-    vocab,
-    title,
-    activities,
-    clozeData,
-    candyCrushQuestions,
-    assignmentData,
-    pageData,
-  } = lessonData
+  const { urls, vocab, title, activities, clozeData, candyCrushQuestions } =
+    lessonData
 
   // Find the activity in the JSON data
   const activity = activities.find((a) => a.id === activityId)
@@ -105,15 +97,6 @@ function ActivityComponent() {
       <ActivityComponent {...baseProps} questionsData={candyCrushQuestions} />
     )
   }
-
-  if (activity.type === 'AssignmentSlide') {
-    return <ActivityComponent {...baseProps} assignmentData={assignmentData} />
-  }
-
-  if (activity.type === 'ContentPageSlide') {
-    return <ActivityComponent {...baseProps} pageData={pageData} />
-  }
-
   // Render standard vocab-based activity
   return <ActivityComponent {...baseProps} />
 }

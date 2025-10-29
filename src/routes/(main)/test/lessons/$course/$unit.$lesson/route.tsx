@@ -102,6 +102,7 @@ type ContentBlock =
   | { type: 'spacer'; height?: string }
 
 interface ContentPageData {
+  id?: string // For pages array
   title?: string
   subtitle?: string
   content: ContentBlock[]
@@ -120,7 +121,7 @@ interface LessonData {
   clozeData?: ClozeData
   candyCrushQuestions?: CandyCrushQuestion[]
   assignmentData?: AssignmentData
-  pageData?: ContentPageData
+  pages?: ContentPageData[] // Array of pages with id
   externalContent?: {
     videos?: ExternalContentItem[]
     googleSlides?: ExternalContentItem[]

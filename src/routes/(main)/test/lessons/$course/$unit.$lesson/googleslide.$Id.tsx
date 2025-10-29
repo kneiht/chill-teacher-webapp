@@ -3,14 +3,14 @@ import { Route as parentRoute } from './route'
 import GoogleSlide from '@/lib/components/activities/GoogleSlide'
 
 export const Route = createFileRoute(
-  '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$Id',
+  '/(main)/test/lessons/$course/$unit/$lesson/googleslide/$id',
 )({
   component: RouteComponent,
 })
 
 function RouteComponent() {
   const navigate = useNavigate()
-  const { Id: slideId, course, unit, lesson } = Route.useParams()
+  const { course, unit, lesson, id: slideId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
   const { urls, title, externalContent } = lessonData
 
