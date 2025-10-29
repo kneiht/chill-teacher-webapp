@@ -15,8 +15,9 @@ interface Activity {
   id: string
   title: string
   icon: string
-  type: string // Activity type: 'flashcard', 'MatchingGame', 'MemoryGame', etc.
+  type: string // Activity type: 'Flashcard', 'MatchingGame', 'MemoryGame', 'YoutubeSlide', etc.
   description?: string
+  slides?: Array<{ url: string; title?: string }> // For YoutubeSlide, GoogleSlide
 }
 
 interface LessonData {

@@ -5,6 +5,8 @@ import { Route as parentRoute } from './route'
 // Activity Components
 import Flashcard from '@/lib/components/activities/Flashcard'
 import Vocabulary from '@/lib/components/activities/Vocabulary'
+import YoutubeSlide from '@/lib/components/activities/YoutubeSlide'
+import GoogleSlide from '@/lib/components/activities/GoogleSlide'
 import MatchingGame from '@/lib/components/activities/MatchingGame'
 import MemoryGame from '@/lib/components/activities/MemoryGame'
 
@@ -12,6 +14,8 @@ import MemoryGame from '@/lib/components/activities/MemoryGame'
 const activityComponents: Record<string, React.FC<any>> = {
   Flashcard: Flashcard,
   Vocabulary: Vocabulary,
+  YoutubeSlide: YoutubeSlide,
+  GoogleSlide: GoogleSlide,
   MatchingGame: MatchingGame,
   MemoryGame: MemoryGame,
 }
@@ -52,7 +56,25 @@ function ActivityComponent() {
     )
   }
 
-  // Render the activity component
+  // Determine props based on activity type
+  const isSlideBasedActivity = ['YoutubeSlide', 'GoogleSlide'].includes(
+    activity.type,
+  )
+
+  // Render the activity component with appropriate props
+  if (isSlideBasedActivity) {
+    // Slide-based activities (YoutubeSlide, GoogleSlide)
+    return (
+      <ActivityComponent
+        slides={activity.slides || []}
+        title={`${activity.title} - ${title}`}
+        backgroundUrl={urls.background}
+        onClose={handleClose}
+      />
+    )
+  }
+
+  // Vocab-based activities (Flashcard, Vocabulary, Games)
   return (
     <ActivityComponent
       vocabData={vocab}

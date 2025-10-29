@@ -59,6 +59,19 @@
     ],
     "activities": [
       {
+        "id": "youtube-intro",
+        "title": "Video Introduction",
+        "icon": "🎥",
+        "type": "YoutubeSlide",
+        "description": "Watch introduction video",
+        "slides": [
+          {
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "title": "Introduction to Multiple Intelligence Theory"
+          }
+        ]
+      },
+      {
         "id": "vocabulary",
         "title": "Vocabulary",
         "icon": "📚",
