@@ -6,5 +6,13 @@
     "unit": "demo-unit",
     "lesson": "lesson-1-vocab",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
+  },
+  {
+    "title": "Reading Comprehension Example",
+    "description": "Lesson 1: Reading Comprehension - Part 1",
+    "course": "demo-course",
+    "unit": "demo-unit",
+    "lesson": "reading-example",
+    "bg": "/backgrounds/multiple-intelligence-theory.webp"
   }
 ]

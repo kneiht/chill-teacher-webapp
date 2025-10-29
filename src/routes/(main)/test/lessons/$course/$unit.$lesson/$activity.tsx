@@ -20,6 +20,7 @@ import ListeningSentenceTypingGame from '@/lib/components/activities/ListeningSe
 import VietnameseToEnglishTranslationGame from '@/lib/components/activities/VietnameseToEnglishTranslationGame'
 import CandyCrushEnglishGame from '@/lib/components/activities/CandyCrushEnglishGame'
 import ContentPageSlide from '@/lib/components/activities/ContentPageSlide'
+import ReadingComprehensionSlide from '@/lib/components/activities/ReadingComprehensionSlide'
 
 // Activity Components Registry
 const activityComponents: Record<string, React.FC<any>> = {
@@ -40,6 +41,7 @@ const activityComponents: Record<string, React.FC<any>> = {
   VietnameseToEnglishTranslationGame: VietnameseToEnglishTranslationGame,
   CandyCrushEnglishGame: CandyCrushEnglishGame,
   ContentPageSlide: ContentPageSlide,
+  ReadingComprehensionSlide: ReadingComprehensionSlide,
 }
 
 // Activity Metadata Registry - Fixed configuration for all activities
@@ -148,6 +150,12 @@ export const ACTIVITY_REGISTRY: Record<
     component: 'ImageRevealChoiceGame',
     description: 'Reveal the hidden image',
   },
+  'reading-comprehension': {
+    title: 'Reading Comprehension',
+    icon: '📖',
+    component: 'ReadingComprehensionSlide',
+    description: 'Reading comprehension with various question types',
+  },
 }
 
 export const Route = createFileRoute(
@@ -160,7 +168,8 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { background, vocab, title, menu, clozeData, questions } = lessonData
+  const { background, vocab, title, menu, clozeData, questions, readingData } =
+    lessonData
 
   // Check if activity exists in lesson's menu
   const activityInMenu = menu.some(
@@ -217,6 +226,18 @@ function ActivityComponent() {
   if (activityMeta.component === 'CandyCrushEnglishGame') {
     return <ActivityComponent {...baseProps} questionsData={questions} />
   }
+
+  if (activityMeta.component === 'ReadingComprehensionSlide') {
+    return (
+      <ActivityComponent
+        readingData={readingData}
+        backgroundUrl={background}
+        title={`${activityMeta.title} - ${title}`}
+        onClose={handleClose}
+      />
+    )
+  }
+
   // Render standard vocab-based activity
   return <ActivityComponent {...baseProps} />
 }

@@ -1,4 +1,5 @@
 import { createFileRoute, Outlet } from '@tanstack/react-router'
+import type { ReadingComprehensionData } from '@/lib/components/activities/ReadingComprehensionSlide'
 
 interface VocabItem {
   word: string
@@ -116,6 +117,7 @@ interface LessonData {
   clozeData?: ClozeData
   questions?: CandyCrushQuestion[]
   assignmentData?: AssignmentData
+  readingData?: ReadingComprehensionData
   pages?: ContentPageData[] // Array of pages with id
   externalContent?: {
     videos?: ExternalContentItem[]
