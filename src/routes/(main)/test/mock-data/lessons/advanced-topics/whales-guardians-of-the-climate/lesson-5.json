@@ -1,0 +1,1448 @@
+{
+  "lesson-5": {
+    "background": "/backgrounds/whales-guardians-of-the-climate.webp",
+    "title": "Whales: Guardians of the Climate",
+    "description": "Lesson 5: Listening",
+    "vocab": [
+      {
+        "word": "reflection",
+        "phonics": "/rɪˈflɛkʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "suy ngẫm, phản chiếu",
+        "sampleSentence": "Reflection helps us learn from mistakes.",
+        "vietnameseTranslation": "Suy ngẫm giúp chúng ta học từ những sai lầm."
+      },
+      {
+        "word": "independent",
+        "phonics": "/ˌɪndɪˈpɛndənt/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "độc lập",
+        "sampleSentence": "He likes to be independent in his work.",
+        "vietnameseTranslation": "Anh ấy thích làm việc một cách độc lập."
+      },
+      {
+        "word": "naturalist",
+        "phonics": "/ˈnætʃərəlist/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "người nghiên cứu thiên nhiên",
+        "sampleSentence": "Naturalist intelligence is about understanding nature.",
+        "vietnameseTranslation": "Trí thông minh tự nhiên là việc hiểu biết về thiên nhiên."
+      },
+      {
+        "word": "observe",
+        "phonics": "/əbˈzɜrv/",
+        "partOfSpeech": "v",
+        "image": "",
+        "vietnameseMeaning": "quan sát",
+        "sampleSentence": "Scientists observe animals in their natural environment.",
+        "vietnameseTranslation": "Các nhà khoa học quan sát động vật trong môi trường tự nhiên."
+      },
+      {
+        "word": "possibility",
+        "phonics": "/ˌpɑsəˈbɪləti/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "khả năng",
+        "sampleSentence": "There is a possibility of rain tomorrow.",
+        "vietnameseTranslation": "Có khả năng sẽ mưa vào ngày mai."
+      },
+      {
+        "word": "spiritual",
+        "phonics": "/ˈspɪrɪtʃuəl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "thuộc tinh thần, tâm linh",
+        "sampleSentence": "Meditation is often a spiritual practice.",
+        "vietnameseTranslation": "Thiền thường là một hoạt động tinh thần."
+      },
+      {
+        "word": "existential",
+        "phonics": "/ˌɛɡzɪˈstɛnʃəl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "thuộc về tồn tại",
+        "sampleSentence": "He asked deep existential questions about life.",
+        "vietnameseTranslation": "Anh ấy đặt ra những câu hỏi hiện sinh sâu sắc về cuộc sống."
+      },
+      {
+        "word": "conclusion",
+        "phonics": "/kənˈkluʒən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "kết luận",
+        "sampleSentence": "The teacher came to the conclusion after the test.",
+        "vietnameseTranslation": "Giáo viên đã đưa ra kết luận sau bài kiểm tra."
+      },
+      {
+        "word": "separate",
+        "phonics": "/ˈsɛpərət/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "riêng biệt, tách rời",
+        "sampleSentence": "The two ideas are separate but related.",
+        "vietnameseTranslation": "Hai ý tưởng này tách biệt nhưng có liên quan."
+      },
+      {
+        "word": "strength",
+        "phonics": "/strɛŋkθ/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "điểm mạnh, sức mạnh",
+        "sampleSentence": "Her strength is in problem-solving.",
+        "vietnameseTranslation": "Điểm mạnh của cô ấy là giải quyết vấn đề."
+      },
+      {
+        "word": "opportunity",
+        "phonics": "/ˌɑpərˈtunəti/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "cơ hội",
+        "sampleSentence": "Education gives everyone an equal opportunity.",
+        "vietnameseTranslation": "Giáo dục mang lại cơ hội bình đẳng cho mọi người."
+      },
+      {
+        "word": "linguistic",
+        "phonics": "/lɪŋˈɡwɪstɪk/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "ngôn ngữ học",
+        "sampleSentence": "Linguistic intelligence involves reading and writing.",
+        "vietnameseTranslation": "Trí thông minh ngôn ngữ liên quan đến đọc và viết."
+      },
+      {
+        "word": "discussion",
+        "phonics": "/dɪˈskʌʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "thảo luận",
+        "sampleSentence": "We had a discussion about the project.",
+        "vietnameseTranslation": "Chúng tôi đã thảo luận về dự án."
+      },
+      {
+        "word": "pattern",
+        "phonics": "/ˈpætərn/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "mẫu, khuôn mẫu",
+        "sampleSentence": "Children quickly notice patterns in language.",
+        "vietnameseTranslation": "Trẻ em nhanh chóng nhận ra các mẫu trong ngôn ngữ."
+      },
+      {
+        "word": "problem-solving",
+        "phonics": "/ˈprɑbləm ˌsɑlvɪŋ/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "giải quyết vấn đề",
+        "sampleSentence": "Problem-solving is an important skill in daily life.",
+        "vietnameseTranslation": "Giải quyết vấn đề là một kỹ năng quan trọng trong cuộc sống hàng ngày."
+      },
+      {
+        "word": "spatial",
+        "phonics": "/ˈspeɪʃəl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "không gian",
+        "sampleSentence": "Architects need strong spatial intelligence.",
+        "vietnameseTranslation": "Kiến trúc sư cần trí thông minh không gian mạnh."
+      },
+      {
+        "word": "imagination",
+        "phonics": "/ɪˌmædʒəˈneɪʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "trí tưởng tượng",
+        "sampleSentence": "Children often have a strong imagination.",
+        "vietnameseTranslation": "Trẻ em thường có trí tưởng tượng phong phú."
+      },
+      {
+        "word": "bodily-kinesthetic",
+        "phonics": "/ˈbɑdɪli kɪnəsˈθɛtɪk/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "vận động thể chất",
+        "sampleSentence": "Dancers use their bodily-kinesthetic intelligence.",
+        "vietnameseTranslation": "Các vũ công sử dụng trí thông minh vận động thể chất."
+      },
+      {
+        "word": "creative",
+        "phonics": "/kriˈeɪtɪv/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "sáng tạo",
+        "sampleSentence": "She is very creative with her art projects.",
+        "vietnameseTranslation": "Cô ấy rất sáng tạo trong các dự án nghệ thuật."
+      },
+      {
+        "word": "interpersonal",
+        "phonics": "/ˌɪntərˈpɜrsənl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "giữa người với người (giao tiếp)",
+        "sampleSentence": "Teachers need strong interpersonal skills.",
+        "vietnameseTranslation": "Giáo viên cần có kỹ năng giao tiếp tốt."
+      },
+      {
+        "word": "journal",
+        "phonics": "/ˈdʒɜrnəl/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "nhật ký, tạp chí",
+        "sampleSentence": "She writes in her journal every night.",
+        "vietnameseTranslation": "Cô ấy viết vào nhật ký của mình mỗi tối."
+      },
+      {
+        "word": "implication",
+        "phonics": "/ɪmplɪˈkeɪʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "hàm ý, ngụ ý, ẩn ý",
+        "sampleSentence": "The teacher explained the implications of the new rule.",
+        "vietnameseTranslation": "Giáo viên giải thích những hàm ý của quy định mới."
+      },
+      {
+        "word": "intelligence",
+        "phonics": "/ɪnˈtɛlədʒəns/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "trí thông minh",
+        "sampleSentence": "Emotional intelligence is as important as IQ.",
+        "vietnameseTranslation": "Trí tuệ cảm xúc cũng quan trọng như IQ."
+      },
+      {
+        "word": "theory",
+        "phonics": "/ˈθɪri/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "lý thuyết",
+        "sampleSentence": "The students studied the theory of evolution.",
+        "vietnameseTranslation": "Học sinh đã học về lý thuyết tiến hóa."
+      },
+      {
+        "word": "intelligence quotient",
+        "phonics": "/ɪnˈtɛlədʒəns ˈkwoʊʃənt/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "chỉ số IQ",
+        "sampleSentence": "Her intelligence quotient is above average.",
+        "vietnameseTranslation": "Chỉ số IQ của cô ấy cao hơn mức trung bình."
+      },
+      {
+        "word": "popular",
+        "phonics": "/ˈpɑpjələr/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "phổ biến, được ưa chuộng",
+        "sampleSentence": "Football is very popular in Vietnam.",
+        "vietnameseTranslation": "Bóng đá rất phổ biến ở Việt Nam."
+      },
+      {
+        "word": "language skills",
+        "phonics": "/ˈlæŋɡwɪdʒ skɪlz/",
+        "partOfSpeech": "phr",
+        "image": "",
+        "vietnameseMeaning": "kỹ năng ngôn ngữ",
+        "sampleSentence": "Reading books helps improve language skills.",
+        "vietnameseTranslation": "Đọc sách giúp cải thiện kỹ năng ngôn ngữ."
+      },
+      {
+        "word": "logical-mathematical skills",
+        "phonics": "/ˈlɑdʒɪkəl ˌmæθəˈmætɪkəl skɪlz/",
+        "partOfSpeech": "phr",
+        "image": "",
+        "vietnameseMeaning": "kỹ năng logic - toán học",
+        "sampleSentence": "Solving puzzles develops logical-mathematical skills.",
+        "vietnameseTranslation": "Giải đố phát triển kỹ năng logic - toán học."
+      },
+      {
+        "word": "narrow",
+        "phonics": "/ˈnæroʊ/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "hạn hẹp",
+        "sampleSentence": "That is a narrow definition of intelligence.",
+        "vietnameseTranslation": "Đó là một định nghĩa hạn hẹp về trí thông minh."
+      },
+      {
+        "word": "professor",
+        "phonics": "/prəˈfɛsər/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "giáo sư",
+        "sampleSentence": "The professor gave a lecture on psychology.",
+        "vietnameseTranslation": "Giáo sư đã giảng bài về tâm lý học."
+      },
+      {
+        "word": "effective",
+        "phonics": "/ɪˈfɛktɪv/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "hiệu quả",
+        "sampleSentence": "Group work can be very effective for learning.",
+        "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
+      }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "main-lesson",
+          "url": "https://youtu.be/GIZX0HYxCYw",
+          "title": "Video bài giảng"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Whales: Guardians of the Climate - Lesson 5: Listening",
+        "subtitle": "Homework Assignments",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Hãy hoàn thành các nhiệm vụ sau:",
+            "className": "text-3xl text-gray-700 mb-4"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Xem video bài học.",
+              "Luyện tập phát âm từ vựng và câu theo video.",
+              "Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả cho giáo viên.",
+              "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.",
+              "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+            ],
+            "className": "text-3xl text-left text-gray-800 space-y-8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúc các em học tốt!",
+            "className": "text-xl text-gray-600 mt-6 italic"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ],
+    "menu": [
+      {
+        "type": "video",
+        "id": "main-lesson"
+      },
+      {
+        "type": "page",
+        "id": "assignments"
+      },
+      {
+        "type": "activity",
+        "id": "flashcards"
+      },
+      {
+        "type": "activity",
+        "id": "candy-crush"
+      },
+      {
+        "type": "activity",
+        "id": "matching-game"
+      },
+      {
+        "type": "activity",
+        "id": "memory-game"
+      },
+      {
+        "type": "activity",
+        "id": "multiple-choice-envi"
+      },
+      {
+        "type": "activity",
+        "id": "multiple-choice-vien"
+      },
+      {
+        "type": "activity",
+        "id": "listening-typing"
+      },
+      {
+        "type": "activity",
+        "id": "listening-sentence"
+      },
+      {
+        "type": "activity",
+        "id": "translation-game"
+      }
+    ],
+    "questions": [
+      {
+        "type": "multipleChoice",
+        "question": "\"reflection\" nghĩa là gì?",
+        "correctAnswer": "suy ngẫm, phản chiếu",
+        "options": [
+          "suy ngẫm, phản chiếu",
+          "độc lập",
+          "quan sát",
+          "kết luận"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"independent\" nghĩa là gì?",
+        "correctAnswer": "độc lập",
+        "options": [
+          "độc lập",
+          "riêng biệt",
+          "sáng tạo",
+          "hiệu quả"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"naturalist\" nghĩa là gì?",
+        "correctAnswer": "người nghiên cứu thiên nhiên",
+        "options": [
+          "người nghiên cứu thiên nhiên",
+          "giáo sư",
+          "nhật ký",
+          "lý thuyết"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"observe\" nghĩa là gì?",
+        "correctAnswer": "quan sát",
+        "options": [
+          "quan sát",
+          "suy ngẫm",
+          "thảo luận",
+          "giải quyết vấn đề"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"possibility\" nghĩa là gì?",
+        "correctAnswer": "khả năng",
+        "options": [
+          "khả năng",
+          "cơ hội",
+          "điểm mạnh",
+          "mẫu"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"spiritual\" nghĩa là gì?",
+        "correctAnswer": "thuộc tinh thần, tâm linh",
+        "options": [
+          "thuộc tinh thần, tâm linh",
+          "thuộc về tồn tại",
+          "sáng tạo",
+          "hiệu quả"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"existential\" nghĩa là gì?",
+        "correctAnswer": "thuộc về tồn tại",
+        "options": [
+          "thuộc về tồn tại",
+          "thuộc tinh thần",
+          "không gian",
+          "độc lập"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"conclusion\" nghĩa là gì?",
+        "correctAnswer": "kết luận",
+        "options": [
+          "kết luận",
+          "thảo luận",
+          "hàm ý",
+          "lý thuyết"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"separate\" nghĩa là gì?",
+        "correctAnswer": "riêng biệt, tách rời",
+        "options": [
+          "riêng biệt, tách rời",
+          "độc lập",
+          "hạn hẹp",
+          "phổ biến"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"strength\" nghĩa là gì?",
+        "correctAnswer": "điểm mạnh, sức mạnh",
+        "options": [
+          "điểm mạnh, sức mạnh",
+          "khả năng",
+          "cơ hội",
+          "kỹ năng"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"opportunity\" nghĩa là gì?",
+        "correctAnswer": "cơ hội",
+        "options": [
+          "cơ hội",
+          "khả năng",
+          "điểm mạnh",
+          "kết luận"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"linguistic\" nghĩa là gì?",
+        "correctAnswer": "ngôn ngữ học",
+        "options": [
+          "ngôn ngữ học",
+          "không gian",
+          "vận động thể chất",
+          "giao tiếp"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"discussion\" nghĩa là gì?",
+        "correctAnswer": "thảo luận",
+        "options": [
+          "thảo luận",
+          "kết luận",
+          "hàm ý",
+          "suy ngẫm"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"pattern\" nghĩa là gì?",
+        "correctAnswer": "mẫu, khuôn mẫu",
+        "options": [
+          "mẫu, khuôn mẫu",
+          "lý thuyết",
+          "trí tưởng tượng",
+          "kỹ năng"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"problem-solving\" nghĩa là gì?",
+        "correctAnswer": "giải quyết vấn đề",
+        "options": [
+          "giải quyết vấn đề",
+          "thảo luận",
+          "quan sát",
+          "suy ngẫm"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"spatial\" nghĩa là gì?",
+        "correctAnswer": "không gian",
+        "options": [
+          "không gian",
+          "ngôn ngữ học",
+          "vận động thể chất",
+          "giao tiếp"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"imagination\" nghĩa là gì?",
+        "correctAnswer": "trí tưởng tượng",
+        "options": [
+          "trí tưởng tượng",
+          "trí thông minh",
+          "sáng tạo",
+          "mẫu"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"bodily-kinesthetic\" nghĩa là gì?",
+        "correctAnswer": "vận động thể chất",
+        "options": [
+          "vận động thể chất",
+          "không gian",
+          "ngôn ngữ học",
+          "giao tiếp"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"creative\" nghĩa là gì?",
+        "correctAnswer": "sáng tạo",
+        "options": [
+          "sáng tạo",
+          "hiệu quả",
+          "phổ biến",
+          "độc lập"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"interpersonal\" nghĩa là gì?",
+        "correctAnswer": "giữa người với người (giao tiếp)",
+        "options": [
+          "giữa người với người (giao tiếp)",
+          "độc lập",
+          "riêng biệt",
+          "sáng tạo"
+        ]
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "reflection",
+        "options": [
+          "reflection",
+          "independent",
+          "separate",
+          "creative"
+        ],
+        "wordToSpeak": "reflection"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "naturalist",
+        "options": [
+          "naturalist",
+          "professor",
+          "theory",
+          "journal"
+        ],
+        "wordToSpeak": "naturalist"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "observe",
+        "options": [
+          "observe",
+          "discussion",
+          "conclusion",
+          "implication"
+        ],
+        "wordToSpeak": "observe"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "spiritual",
+        "options": [
+          "spiritual",
+          "existential",
+          "spatial",
+          "linguistic"
+        ],
+        "wordToSpeak": "spiritual"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "intelligence",
+        "options": [
+          "intelligence",
+          "imagination",
+          "opportunity",
+          "possibility"
+        ],
+        "wordToSpeak": "intelligence"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "pattern",
+        "options": [
+          "pattern",
+          "strength",
+          "journal",
+          "theory"
+        ],
+        "wordToSpeak": "pattern"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "spatial",
+        "options": [
+          "spatial",
+          "spiritual",
+          "separate",
+          "popular"
+        ],
+        "wordToSpeak": "spatial"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "creative",
+        "options": [
+          "creative",
+          "effective",
+          "popular",
+          "narrow"
+        ],
+        "wordToSpeak": "creative"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "interpersonal",
+        "options": [
+          "interpersonal",
+          "independent",
+          "linguistic",
+          "existential"
+        ],
+        "wordToSpeak": "interpersonal"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "possibility",
+        "options": [
+          "possibility",
+          "opportunity",
+          "strength",
+          "implication"
+        ],
+        "wordToSpeak": "possibility"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "professor",
+        "options": [
+          "professor",
+          "naturalist",
+          "theory",
+          "journal"
+        ],
+        "wordToSpeak": "professor"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "bodily-kinesthetic",
+        "options": [
+          "bodily-kinesthetic",
+          "linguistic",
+          "spatial",
+          "interpersonal"
+        ],
+        "wordToSpeak": "bodily-kinesthetic"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "imagination",
+        "options": [
+          "imagination",
+          "intelligence",
+          "implication",
+          "discussion"
+        ],
+        "wordToSpeak": "imagination"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "conclusion",
+        "options": [
+          "conclusion",
+          "discussion",
+          "reflection",
+          "observation"
+        ],
+        "wordToSpeak": "conclusion"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "effective",
+        "options": [
+          "effective",
+          "creative",
+          "popular",
+          "separate"
+        ],
+        "wordToSpeak": "effective"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"suy ngẫm, phản chiếu\"",
+        "correctAnswer": "reflection"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"độc lập\"",
+        "correctAnswer": "independent"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"quan sát\"",
+        "correctAnswer": "observe"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"khả năng\"",
+        "correctAnswer": "possibility"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"kết luận\"",
+        "correctAnswer": "conclusion"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"riêng biệt, tách rời\"",
+        "correctAnswer": "separate"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"điểm mạnh, sức mạnh\"",
+        "correctAnswer": "strength"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"cơ hội\"",
+        "correctAnswer": "opportunity"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"thảo luận\"",
+        "correctAnswer": "discussion"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"mẫu, khuôn mẫu\"",
+        "correctAnswer": "pattern"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"giải quyết vấn đề\"",
+        "correctAnswer": "problem-solving"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"không gian\"",
+        "correctAnswer": "spatial"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"trí tưởng tượng\"",
+        "correctAnswer": "imagination"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"sáng tạo\"",
+        "correctAnswer": "creative"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"nhật ký, tạp chí\"",
+        "correctAnswer": "journal"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"journal\" nghĩa là gì?",
+        "correctAnswer": "nhật ký, tạp chí",
+        "options": [
+          "nhật ký, tạp chí",
+          "lý thuyết",
+          "mẫu",
+          "hàm ý"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"implication\" nghĩa là gì?",
+        "correctAnswer": "hàm ý, ngụ ý, ẩn ý",
+        "options": [
+          "hàm ý, ngụ ý, ẩn ý",
+          "kết luận",
+          "thảo luận",
+          "suy ngẫm"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"intelligence\" nghĩa là gì?",
+        "correctAnswer": "trí thông minh",
+        "options": [
+          "trí thông minh",
+          "trí tưởng tượng",
+          "sáng tạo",
+          "kỹ năng"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"theory\" nghĩa là gì?",
+        "correctAnswer": "lý thuyết",
+        "options": [
+          "lý thuyết",
+          "kết luận",
+          "hàm ý",
+          "mẫu"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"popular\" nghĩa là gì?",
+        "correctAnswer": "phổ biến, được ưa chuộng",
+        "options": [
+          "phổ biến, được ưa chuộng",
+          "hiệu quả",
+          "sáng tạo",
+          "hạn hẹp"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"narrow\" nghĩa là gì?",
+        "correctAnswer": "hạn hẹp",
+        "options": [
+          "hạn hẹp",
+          "riêng biệt",
+          "phổ biến",
+          "độc lập"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"professor\" nghĩa là gì?",
+        "correctAnswer": "giáo sư",
+        "options": [
+          "giáo sư",
+          "người nghiên cứu thiên nhiên",
+          "nhật ký",
+          "lý thuyết"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"effective\" nghĩa là gì?",
+        "correctAnswer": "hiệu quả",
+        "options": [
+          "hiệu quả",
+          "sáng tạo",
+          "phổ biến",
+          "độc lập"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"trí thông minh\"",
+        "correctAnswer": "intelligence"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"lý thuyết\"",
+        "correctAnswer": "theory"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ helps us learn from mistakes.",
+        "correctAnswer": "Reflection",
+        "options": [
+          "Reflection",
+          "Discussion",
+          "Journal",
+          "Pattern"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ helps us learn from mistakes.",
+        "correctAnswer": "Reflection"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "He likes to be ___ in his work.",
+        "correctAnswer": "independent",
+        "options": [
+          "independent",
+          "creative",
+          "popular",
+          "effective"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "He likes to be ___ in his work.",
+        "correctAnswer": "independent"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ intelligence is about understanding nature.",
+        "correctAnswer": "Naturalist",
+        "options": [
+          "Naturalist",
+          "Linguistic",
+          "Spatial",
+          "Interpersonal"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ intelligence is about understanding nature.",
+        "correctAnswer": "Naturalist"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Scientists ___ animals in their natural environment.",
+        "correctAnswer": "observe",
+        "options": [
+          "observe",
+          "discuss",
+          "solve",
+          "create"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Scientists ___ animals in their natural environment.",
+        "correctAnswer": "observe"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "There is a ___ of rain tomorrow.",
+        "correctAnswer": "possibility",
+        "options": [
+          "possibility",
+          "opportunity",
+          "strength",
+          "pattern"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "There is a ___ of rain tomorrow.",
+        "correctAnswer": "possibility"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Meditation is often a ___ practice.",
+        "correctAnswer": "spiritual",
+        "options": [
+          "spiritual",
+          "creative",
+          "narrow",
+          "popular"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Meditation is often a ___ practice.",
+        "correctAnswer": "spiritual"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "He asked deep ___ questions about life.",
+        "correctAnswer": "existential",
+        "options": [
+          "existential",
+          "spiritual",
+          "linguistic",
+          "effective"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "He asked deep ___ questions about life.",
+        "correctAnswer": "existential"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The teacher came to the ___ after the test.",
+        "correctAnswer": "conclusion",
+        "options": [
+          "conclusion",
+          "discussion",
+          "implication",
+          "reflection"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The teacher came to the ___ after the test.",
+        "correctAnswer": "conclusion"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The two ideas are ___ but related.",
+        "correctAnswer": "separate",
+        "options": [
+          "separate",
+          "creative",
+          "independent",
+          "popular"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The two ideas are ___ but related.",
+        "correctAnswer": "separate"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Her ___ is in problem-solving.",
+        "correctAnswer": "strength",
+        "options": [
+          "strength",
+          "opportunity",
+          "imagination",
+          "pattern"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Her ___ is in problem-solving.",
+        "correctAnswer": "strength"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Education gives everyone an equal ___.",
+        "correctAnswer": "opportunity",
+        "options": [
+          "opportunity",
+          "possibility",
+          "strength",
+          "pattern"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Education gives everyone an equal ___.",
+        "correctAnswer": "opportunity"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ intelligence involves reading and writing.",
+        "correctAnswer": "Linguistic",
+        "options": [
+          "Linguistic",
+          "Spatial",
+          "Naturalist",
+          "Interpersonal"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ intelligence involves reading and writing.",
+        "correctAnswer": "Linguistic"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "We had a ___ about the project.",
+        "correctAnswer": "discussion",
+        "options": [
+          "discussion",
+          "conclusion",
+          "reflection",
+          "implication"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "We had a ___ about the project.",
+        "correctAnswer": "discussion"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Children quickly notice ___ in language.",
+        "correctAnswer": "patterns",
+        "options": [
+          "patterns",
+          "implications",
+          "journals",
+          "theories"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Children quickly notice ___ in language.",
+        "correctAnswer": "patterns"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ is an important skill in daily life.",
+        "correctAnswer": "Problem-solving",
+        "options": [
+          "Problem-solving",
+          "Discussion",
+          "Reflection",
+          "Observation"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ is an important skill in daily life.",
+        "correctAnswer": "Problem-solving"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Architects need strong ___ intelligence.",
+        "correctAnswer": "spatial",
+        "options": [
+          "spatial",
+          "linguistic",
+          "naturalist",
+          "interpersonal"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Architects need strong ___ intelligence.",
+        "correctAnswer": "spatial"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Children often have a strong ___.",
+        "correctAnswer": "imagination",
+        "options": [
+          "imagination",
+          "discussion",
+          "journal",
+          "theory"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Children often have a strong ___.",
+        "correctAnswer": "imagination"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Dancers use their ___ intelligence.",
+        "correctAnswer": "bodily-kinesthetic",
+        "options": [
+          "bodily-kinesthetic",
+          "spatial",
+          "linguistic",
+          "naturalist"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Dancers use their ___ intelligence.",
+        "correctAnswer": "bodily-kinesthetic"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "She is very ___ with her art projects.",
+        "correctAnswer": "creative",
+        "options": [
+          "creative",
+          "independent",
+          "popular",
+          "effective"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "She is very ___ with her art projects.",
+        "correctAnswer": "creative"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Teachers need strong ___ skills.",
+        "correctAnswer": "interpersonal",
+        "options": [
+          "interpersonal",
+          "linguistic",
+          "spatial",
+          "creative"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Teachers need strong ___ skills.",
+        "correctAnswer": "interpersonal"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "She writes in her ___ every night.",
+        "correctAnswer": "journal",
+        "options": [
+          "journal",
+          "pattern",
+          "theory",
+          "conclusion"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "She writes in her ___ every night.",
+        "correctAnswer": "journal"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The teacher explained the ___ of the new rule.",
+        "correctAnswer": "implications",
+        "options": [
+          "implications",
+          "conclusions",
+          "patterns",
+          "discussions"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The teacher explained the ___ of the new rule.",
+        "correctAnswer": "implications"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Emotional ___ is as important as IQ.",
+        "correctAnswer": "intelligence",
+        "options": [
+          "intelligence",
+          "imagination",
+          "strength",
+          "opportunity"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Emotional ___ is as important as IQ.",
+        "correctAnswer": "intelligence"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The students studied the ___ of evolution.",
+        "correctAnswer": "theory",
+        "options": [
+          "theory",
+          "journal",
+          "pattern",
+          "implication"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The students studied the ___ of evolution.",
+        "correctAnswer": "theory"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Her ___ is above average.",
+        "correctAnswer": "intelligence quotient",
+        "options": [
+          "intelligence quotient",
+          "imagination",
+          "strength",
+          "opportunity"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Her ___ is above average.",
+        "correctAnswer": "intelligence quotient"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Football is very ___ in Vietnam.",
+        "correctAnswer": "popular",
+        "options": [
+          "popular",
+          "creative",
+          "effective",
+          "narrow"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Football is very ___ in Vietnam.",
+        "correctAnswer": "popular"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Reading books helps improve ___.",
+        "correctAnswer": "language skills",
+        "options": [
+          "language skills",
+          "imagination",
+          "pattern",
+          "journal"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Reading books helps improve ___.",
+        "correctAnswer": "language skills"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Solving puzzles develops ___.",
+        "correctAnswer": "logical-mathematical skills",
+        "options": [
+          "logical-mathematical skills",
+          "language skills",
+          "interpersonal skills",
+          "spatial intelligence"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Solving puzzles develops ___.",
+        "correctAnswer": "logical-mathematical skills"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "That is a ___ definition of intelligence.",
+        "correctAnswer": "narrow",
+        "options": [
+          "narrow",
+          "popular",
+          "creative",
+          "effective"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "That is a ___ definition of intelligence.",
+        "correctAnswer": "narrow"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The ___ gave a lecture on psychology.",
+        "correctAnswer": "professor",
+        "options": [
+          "professor",
+          "naturalist",
+          "student",
+          "journal"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The ___ gave a lecture on psychology.",
+        "correctAnswer": "professor"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Group work can be very ___ for learning.",
+        "correctAnswer": "effective",
+        "options": [
+          "effective",
+          "creative",
+          "popular",
+          "narrow"
+        ]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Group work can be very ___ for learning.",
+        "correctAnswer": "effective"
+      }
+    ]
+  }
+}

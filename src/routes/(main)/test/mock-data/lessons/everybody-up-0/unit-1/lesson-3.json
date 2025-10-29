@@ -1,0 +1,354 @@
+{
+  "lesson-3": {
+    "background": "/backgrounds/EU0-U1L2.webp",
+    "title": "Unit 1: Art Class",
+    "description": "Lesson 3: Reading",
+    "vocab": [
+      {
+        "word": "pen",
+        "phonics": "/pɛn/",
+        "image": "https://storage.chillteacher.com/images-words/pen.webp",
+        "vietnameseMeaning": "bút mực",
+        "sampleSentence": "What do you have? I have a pen.",
+        "vietnameseTranslation": "Tôi có một cây bút mực."
+      },
+      {
+        "word": "pencil",
+        "phonics": "/ˈpɛn.səl/",
+        "image": "https://storage.chillteacher.com/images-words/pencil.webp",
+        "vietnameseMeaning": "bút chì",
+        "sampleSentence": "What do you have? I have a pencil.",
+        "vietnameseTranslation": "Tôi có một cây bút chì."
+      },
+      {
+        "word": "crayon",
+        "phonics": "/ˈkreɪ.ɑn/",
+        "image": "https://storage.chillteacher.com/images-words/crayon.webp",
+        "vietnameseMeaning": "bút sáp màu",
+        "sampleSentence": "What do you have? I have a crayon.",
+        "vietnameseTranslation": "Tôi có một cây bút sáp màu."
+      },
+      {
+        "word": "marker",
+        "phonics": "/ˈmɑr.kɚ/",
+        "image": "https://storage.chillteacher.com/images-words/marker.webp",
+        "vietnameseMeaning": "bút lông",
+        "sampleSentence": "What do you have? I have a marker.",
+        "vietnameseTranslation": "Tôi có một cây bút lông."
+      },
+      {
+        "word": "paper",
+        "phonics": "/ˈpeɪ.pɚ/",
+        "image": "https://storage.chillteacher.com/images-words/paper.webp",
+        "vietnameseMeaning": "giấy",
+        "sampleSentence": "What do you have? I have paper.",
+        "vietnameseTranslation": "Tôi có giấy."
+      },
+      {
+        "word": "glue",
+        "phonics": "/ɡlu/",
+        "image": "https://storage.chillteacher.com/images-words/glue.webp",
+        "vietnameseMeaning": "keo dán",
+        "sampleSentence": "What do you have? I have glue.",
+        "vietnameseTranslation": "Tôi có keo dán."
+      },
+      {
+        "word": "scissors",
+        "phonics": "/ˈsɪz.ɚz/",
+        "image": "https://storage.chillteacher.com/images-words/scissors.webp",
+        "vietnameseMeaning": "kéo",
+        "sampleSentence": "What do you have? I have scissors.",
+        "vietnameseTranslation": "Tôi có kéo."
+      },
+      {
+        "word": "paint",
+        "phonics": "/peɪnt/",
+        "image": "https://storage.chillteacher.com/images-words/paint.webp",
+        "vietnameseMeaning": "màu vẽ",
+        "sampleSentence": "What do you have? I have paint.",
+        "vietnameseTranslation": "Tôi có màu vẽ."
+      }
+    ],
+    "questions": [
+      {
+        "type": "imageChoice",
+        "question": "Đây là từ gì trong tiếng Anh?",
+        "correctAnswer": "pencil",
+        "options": [
+          "pencil",
+          "pen",
+          "marker",
+          "crayon"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/pencil.webp"
+      },
+      {
+        "type": "imageToVietnamese",
+        "question": "Hình này nghĩa là gì?",
+        "correctAnswer": "cái kéo",
+        "options": [
+          "cái kéo",
+          "giấy",
+          "hồ dán",
+          "bút màu"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/scissors.webp"
+      },
+      {
+        "type": "imageChoice",
+        "question": "Đây là từ gì trong tiếng Anh?",
+        "correctAnswer": "glue",
+        "options": [
+          "glue",
+          "paint",
+          "paper",
+          "scissors"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/glue.webp"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"pencil\" nghĩa là gì?",
+        "correctAnswer": "bút chì",
+        "options": [
+          "bút chì",
+          "bút mực",
+          "bút lông",
+          "kéo"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"scissors\" nghĩa là gì?",
+        "correctAnswer": "cái kéo",
+        "options": [
+          "cái kéo",
+          "giấy",
+          "hồ dán",
+          "bút màu"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"glue\" nghĩa là gì?",
+        "correctAnswer": "hồ dán",
+        "options": [
+          "hồ dán",
+          "giấy",
+          "màu vẽ",
+          "bút chì"
+        ]
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "marker",
+        "options": [
+          "marker",
+          "pencil",
+          "pen",
+          "crayon"
+        ],
+        "wordToSpeak": "marker"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "paper",
+        "options": [
+          "paper",
+          "paint",
+          "glue",
+          "scissors"
+        ],
+        "wordToSpeak": "paper"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"bút lông\"",
+        "correctAnswer": "marker"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"giấy\"",
+        "correctAnswer": "paper"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"cái kéo\"",
+        "correctAnswer": "scissors"
+      },
+      {
+        "type": "imageChoice",
+        "question": "Đây là từ gì trong tiếng Anh?",
+        "correctAnswer": "marker",
+        "options": [
+          "marker",
+          "pen",
+          "pencil",
+          "crayon"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/marker.webp"
+      },
+      {
+        "type": "imageToVietnamese",
+        "question": "Hình này nghĩa là gì?",
+        "correctAnswer": "màu vẽ",
+        "options": [
+          "màu vẽ",
+          "bút màu",
+          "hồ dán",
+          "giấy"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/paint.webp"
+      },
+      {
+        "type": "imageChoice",
+        "question": "Từ tiếng Anh này là gì?",
+        "correctAnswer": "paper",
+        "options": [
+          "paper",
+          "paint",
+          "pen",
+          "pencil"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/paper.webp"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"crayon\" nghĩa là gì?",
+        "correctAnswer": "bút sáp màu",
+        "options": [
+          "bút sáp màu",
+          "bút chì màu",
+          "bút lông",
+          "màu vẽ"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"paint\" nghĩa là gì?",
+        "correctAnswer": "màu vẽ",
+        "options": [
+          "màu vẽ",
+          "bút màu",
+          "hồ dán",
+          "giấy"
+        ]
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "crayon",
+        "options": [
+          "crayon",
+          "marker",
+          "pencil",
+          "pen"
+        ],
+        "wordToSpeak": "crayon"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"bút mực\"",
+        "correctAnswer": "pen"
+      },
+      {
+        "type": "imageChoice",
+        "question": "Đây là từ gì?",
+        "correctAnswer": "crayon",
+        "options": [
+          "crayon",
+          "marker",
+          "pencil",
+          "pen"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/crayon.webp"
+      },
+      {
+        "type": "imageToVietnamese",
+        "question": "Đây là gì?",
+        "correctAnswer": "bút mực",
+        "options": [
+          "bút mực",
+          "bút chì",
+          "bút lông",
+          "bút sáp"
+        ],
+        "image": "https://storage.chillteacher.com/images-words/pen.webp"
+      }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "main-lesson",
+          "url": "https://youtu.be/gzfLjUq5AXQ",
+          "title": "Reading Lesson"
+        }
+      ],
+      "googleSlides": [
+        {
+          "id": "presentation",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTA9PJGguzwpRnUzPHOxA3RGvzOFHfy95MsbvzVgyFBKiCh4wcOwd5pJvgkF38bvdsQiRbMWb1L0wyW/pubembed",
+          "title": "Bài giảng"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Unit 1: Art Class - Lesson 3: Reading",
+        "subtitle": "Homework Assignments",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Hãy hoàn thành các nhiệm vụ sau:",
+            "className": "text-3xl text-gray-700 mb-4"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Xem lại Flashcards để nhớ từ vựng.",
+              "Xem video bài học, trong quá trình xem, luyện đọc cùng thầy.",
+              "Làm bài tập đọc hiểu, gửi chụp hình gửi thầy kết quả.",
+              "Tập đọc câu chuyện, bấm vào cái loa để nghe và tập nói lại, nói nhiều lần đến khi nhớ cách phát âm đúng.",
+              "Quay video đọc bài gửi giáo viên. Yêu cầu các câu liên quan tới từ vựng đã học phải đọc lưu loát, các câu có các từ khó có thể bỏ qua."
+            ],
+            "className": "text-3xl text-left text-gray-800 space-y-8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúc các em học tốt!",
+            "className": "text-xl text-gray-600 mt-6 italic"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ],
+    "menu": [
+      {
+        "type": "video",
+        "id": "main-lesson"
+      },
+      {
+        "type": "googleSlide",
+        "id": "presentation"
+      },
+      {
+        "type": "page",
+        "id": "assignments"
+      },
+      {
+        "type": "activity",
+        "id": "flashcards"
+      },
+      {
+        "type": "activity",
+        "id": "candy-crush"
+      }
+    ]
+  }
+}
