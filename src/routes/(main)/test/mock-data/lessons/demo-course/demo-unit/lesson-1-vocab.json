@@ -1,8 +1,6 @@
 {
   "lesson-1-vocab": {
-    "urls": {
-      "background": "/backgrounds/multiple-intelligence-theory.webp"
-    },
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 1: Vocabulary Practice",
     "clozeData": {
@@ -363,6 +361,33 @@
         "footer": "🌟 Chapter 5 of 5 - Course Complete! Great job!"
       }
     ],
+    "menu": [
+      { "type": "video", "id": "intro-video" },
+      { "type": "video", "id": "detailed-explanation" },
+      { "type": "googleSlide", "id": "presentation-1" },
+      { "type": "page", "id": "chapter-1" },
+      { "type": "activity", "id": "vocabulary" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "page", "id": "chapter-2" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "page", "id": "chapter-3" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "page", "id": "chapter-4" },
+      { "type": "activity", "id": "anagram-game" },
+      { "type": "activity", "id": "unjumble-game" },
+      { "type": "page", "id": "chapter-5" },
+      { "type": "activity", "id": "cloze-game" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "picture-typing" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "candy-crush" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "assignments" }
+    ],
     "externalContent": {
       "videos": [
         {
@@ -437,132 +462,22 @@
       }
     ],
     "activities": [
-      {
-        "id": "vocabulary",
-        "title": "Vocabulary",
-        "icon": "📚",
-        "type": "Vocabulary",
-        "description": "Learn vocabulary with detailed explanations"
-      },
-      {
-        "id": "flashcards",
-        "title": "Flashcards",
-        "icon": "🃏",
-        "type": "Flashcard",
-        "description": "Study vocabulary with interactive flashcards"
-      },
-      {
-        "id": "matching-game",
-        "title": "Matching Game",
-        "icon": "🎮",
-        "type": "MatchingGame",
-        "description": "Match English words with Vietnamese meanings"
-      },
-      {
-        "id": "memory-game",
-        "title": "Memory Game",
-        "icon": "🧠",
-        "type": "MemoryGame",
-        "description": "Find matching pairs of vocabulary cards"
-      },
-      {
-        "id": "anagram-game",
-        "title": "Anagram Game",
-        "icon": "🔤",
-        "type": "AnagramGame",
-        "description": "Arrange letters to form the correct word"
-      },
-      {
-        "id": "multiple-choice-envi",
-        "title": "Multiple Choice (En→Vi)",
-        "icon": "✅",
-        "type": "MultipleChoiceEnViGame",
-        "description": "Choose the correct Vietnamese meaning"
-      },
-      {
-        "id": "multiple-choice-vien",
-        "title": "Multiple Choice (Vi→En)",
-        "icon": "🔄",
-        "type": "MultipleChoiceViEnGame",
-        "description": "Choose the correct English word"
-      },
-      {
-        "id": "unjumble-game",
-        "title": "Unjumble Game",
-        "icon": "🧩",
-        "type": "UnjumbleGame",
-        "description": "Arrange words to form correct sentences"
-      },
-      {
-        "id": "cloze-game",
-        "title": "Cloze Game",
-        "icon": "📝",
-        "type": "ClozeGame",
-        "description": "Fill in the missing words in sentences"
-      },
-      {
-        "id": "picture-choice",
-        "title": "Picture Choice",
-        "icon": "🖼️",
-        "type": "PictureChoiceEnGame",
-        "description": "Choose the correct picture for the word"
-      },
-      {
-        "id": "picture-typing",
-        "title": "Picture Typing",
-        "icon": "⌨️",
-        "type": "PictureTypingEnGame",
-        "description": "Type the word shown in the picture"
-      },
-      {
-        "id": "listening-typing",
-        "title": "Listening Typing",
-        "icon": "🎧",
-        "type": "ListeningTypingEnGame",
-        "description": "Listen and type the word you hear"
-      },
-      {
-        "id": "listening-sentence",
-        "title": "Listening Sentence",
-        "icon": "🎵",
-        "type": "ListeningSentenceTypingGame",
-        "description": "Listen and type the full sentence"
-      },
-      {
-        "id": "translation-game",
-        "title": "Translation Game",
-        "icon": "🌐",
-        "type": "VietnameseToEnglishTranslationGame",
-        "description": "Translate Vietnamese sentences to English"
-      },
-      {
-        "id": "candy-crush",
-        "title": "Candy Crush English",
-        "icon": "🍬",
-        "type": "CandyCrushEnglishGame",
-        "description": "Match candies and learn English vocabulary"
-      },
-      {
-        "id": "image-reveal",
-        "title": "Image Reveal",
-        "icon": "🎨",
-        "type": "ImageRevealChoiceGame",
-        "description": "Reveal the image by answering correctly"
-      },
-      {
-        "id": "assignments",
-        "title": "Assignments",
-        "icon": "📋",
-        "type": "AssignmentSlide",
-        "description": "View homework and assignment instructions"
-      },
-      {
-        "id": "study-guide",
-        "title": "Study Guide",
-        "icon": "📖",
-        "type": "ContentPageSlide",
-        "description": "Comprehensive study guide with rich content"
-      }
+      "vocabulary",
+      "flashcards",
+      "matching-game",
+      "memory-game",
+      "anagram-game",
+      "multiple-choice-envi",
+      "multiple-choice-vien",
+      "unjumble-game",
+      "cloze-game",
+      "picture-choice",
+      "picture-typing",
+      "listening-typing",
+      "listening-sentence",
+      "translation-game",
+      "candy-crush",
+      "image-reveal"
     ]
   }
 }

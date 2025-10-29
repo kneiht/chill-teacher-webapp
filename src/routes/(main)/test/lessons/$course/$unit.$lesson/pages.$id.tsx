@@ -12,7 +12,7 @@ function RouteComponent() {
   const navigate = useNavigate()
   const { course, unit, lesson, id: pageId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { urls, title, pages } = lessonData
+  const { background, title, pages } = lessonData
 
   // Find page in pages array
   const page = pages?.find((p) => p.id === pageId)
@@ -31,7 +31,7 @@ function RouteComponent() {
   return (
     <ContentPageSlide
       pageData={page}
-      backgroundUrl={urls.background}
+      backgroundUrl={background}
       title={`${page.title || 'Page'} - ${title}`}
       onClose={handleClose}
     />

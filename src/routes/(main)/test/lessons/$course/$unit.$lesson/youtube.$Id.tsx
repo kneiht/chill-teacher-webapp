@@ -12,7 +12,7 @@ function RouteComponent() {
   const navigate = useNavigate()
   const { course, unit, lesson, id: videoId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { urls, title, externalContent } = lessonData
+  const { background, title, externalContent } = lessonData
 
   // Find video in externalContent
   const video = externalContent?.videos?.find((v) => v.id === videoId)
@@ -32,7 +32,7 @@ function RouteComponent() {
     <YoutubeSlide
       url={video.url}
       title={`${video.title || 'Video'} - ${title}`}
-      backgroundUrl={urls.background}
+      backgroundUrl={background}
       onClose={handleClose}
     />
   )

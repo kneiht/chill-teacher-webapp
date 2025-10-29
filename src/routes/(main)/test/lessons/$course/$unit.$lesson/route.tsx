@@ -17,12 +17,9 @@ interface ExternalContentItem {
   title?: string
 }
 
-interface Activity {
+interface MenuItem {
+  type: 'activity' | 'page' | 'video' | 'googleSlide'
   id: string
-  title: string
-  icon: string
-  type: string // Activity type: 'Flashcard', 'Vocabulary', 'MatchingGame', 'MemoryGame'
-  description?: string
 }
 
 interface ClozeData {
@@ -112,9 +109,7 @@ interface ContentPageData {
 }
 
 interface LessonData {
-  urls: {
-    background: string
-  }
+  background: string
   title: string
   description: string
   vocab: VocabItem[]
@@ -126,7 +121,8 @@ interface LessonData {
     videos?: ExternalContentItem[]
     googleSlides?: ExternalContentItem[]
   }
-  activities: Activity[]
+  activities: string[] // Array of activity IDs (metadata in ACTIVITY_REGISTRY)
+  menu?: MenuItem[] // Optional: Define custom menu order
 }
 
 export const Route = createFileRoute(

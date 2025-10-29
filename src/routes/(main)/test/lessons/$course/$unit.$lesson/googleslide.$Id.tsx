@@ -12,7 +12,7 @@ function RouteComponent() {
   const navigate = useNavigate()
   const { course, unit, lesson, id: slideId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { urls, title, externalContent } = lessonData
+  const { background, title, externalContent } = lessonData
 
   // Find slide in externalContent
   const slide = externalContent?.googleSlides?.find((s) => s.id === slideId)
@@ -32,7 +32,7 @@ function RouteComponent() {
     <GoogleSlide
       url={slide.url}
       title={`${slide.title || 'Presentation'} - ${title}`}
-      backgroundUrl={urls.background}
+      backgroundUrl={background}
       onClose={handleClose}
     />
   )

@@ -3,14 +3,7 @@ import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
 import WoodenButton from '@/lib/components/ui/WoodenButton'
 import { Route as parentRoute } from './route'
-
-interface Activity {
-  id: string
-  title: string
-  icon: string
-  type: string
-  description?: string
-}
+import { ACTIVITY_REGISTRY } from './$activity'
 
 export const Route = createFileRoute(
   '/(main)/test/lessons/$course/$unit/$lesson/',
@@ -21,13 +14,88 @@ export const Route = createFileRoute(
 function RouteComponent() {
   const lessonData = parentRoute.useLoaderData()
   const params = Route.useParams()
-  const { urls, title, description, activities, externalContent, pages } =
-    lessonData
+  const {
+    background,
+    title,
+    description,
+    activities,
+    externalContent,
+    pages,
+    menu,
+  } = lessonData
 
   const buttonStyle =
     'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
-  // Combine all activities with external content
+  // Helper function to get item details by type and id
+  const getItemDetails = (
+    type: string,
+    id: string,
+  ): {
+    id: string
+    title: string
+    icon: string
+    route: string
+    description?: string
+  } | null => {
+    switch (type) {
+      case 'video': {
+        const video = externalContent?.videos?.find((v) => v.id === id)
+        if (!video) return null
+        return {
+          id: `video-${video.id}`,
+          title: video.title || 'Video',
+          icon: '🎥',
+          route: `/test/lessons/$course/$unit/$lesson/youtube/${video.id}`,
+          description: video.title,
+        }
+      }
+
+      case 'googleSlide': {
+        const slide = externalContent?.googleSlides?.find((s) => s.id === id)
+        if (!slide) return null
+        return {
+          id: `slide-${slide.id}`,
+          title: slide.title || 'Presentation',
+          icon: '📊',
+          route: `/test/lessons/$course/$unit/$lesson/googleslide/${slide.id}`,
+          description: slide.title,
+        }
+      }
+
+      case 'page': {
+        const page = pages?.find((p) => p.id === id)
+        if (!page) return null
+        return {
+          id: `page-${page.id}`,
+          title: page.title || 'Page',
+          icon: '📄',
+          route: `/test/lessons/$course/$unit/$lesson/pages/${page.id}`,
+          description: page.subtitle || page.title,
+        }
+      }
+
+      case 'activity': {
+        // Check if activity exists in lesson's enabled activities
+        if (!activities.includes(id)) return null
+        // Get metadata from registry
+        const activityMeta = ACTIVITY_REGISTRY[id]
+        if (!activityMeta) return null
+        return {
+          id: id,
+          title: activityMeta.title,
+          icon: activityMeta.icon,
+          route: `/test/lessons/$course/$unit/$lesson/${id}`,
+          description: activityMeta.description,
+        }
+      }
+
+      default:
+        return null
+    }
+  }
+
+  // Build activities list
   const allActivities: Array<{
     id: string
     title: string
@@ -36,55 +104,46 @@ function RouteComponent() {
     description?: string
   }> = []
 
-  // Add Youtube videos with dedicated routes
-  if (externalContent?.videos) {
-    externalContent.videos.forEach((video) => {
-      allActivities.push({
-        id: `video-${video.id}`,
-        title: video.title || 'Video',
-        icon: '🎥',
-        route: `/test/lessons/$course/$unit/$lesson/youtube/${video.id}`,
-        description: video.title,
+  if (menu && menu.length > 0) {
+    // Use custom menu order
+    menu.forEach((menuItem) => {
+      const item = getItemDetails(menuItem.type, menuItem.id)
+      if (item) {
+        allActivities.push(item)
+      }
+    })
+  } else {
+    // Default order: videos → slides → pages → activities
+    // Add Youtube videos
+    if (externalContent?.videos) {
+      externalContent.videos.forEach((video) => {
+        const item = getItemDetails('video', video.id)
+        if (item) allActivities.push(item)
       })
+    }
+
+    // Add Google Slides
+    if (externalContent?.googleSlides) {
+      externalContent.googleSlides.forEach((slide) => {
+        const item = getItemDetails('googleSlide', slide.id)
+        if (item) allActivities.push(item)
+      })
+    }
+
+    // Add Pages
+    if (pages) {
+      pages.forEach((page) => {
+        const item = getItemDetails('page', page.id!)
+        if (item) allActivities.push(item)
+      })
+    }
+
+    // Add regular activities
+    activities.forEach((activityId) => {
+      const item = getItemDetails('activity', activityId)
+      if (item) allActivities.push(item)
     })
   }
-
-  // Add Google Slides with dedicated routes
-  if (externalContent?.googleSlides) {
-    externalContent.googleSlides.forEach((slide) => {
-      allActivities.push({
-        id: `slide-${slide.id}`,
-        title: slide.title || 'Presentation',
-        icon: '📊',
-        route: `/test/lessons/$course/$unit/$lesson/googleslide/${slide.id}`,
-        description: slide.title,
-      })
-    })
-  }
-
-  // Add Pages with dedicated routes
-  if (pages) {
-    pages.forEach((page) => {
-      allActivities.push({
-        id: `page-${page.id}`,
-        title: page.title || 'Page',
-        icon: '📄',
-        route: `/test/lessons/$course/$unit/$lesson/pages/${page.id}`,
-        description: page.subtitle || page.title,
-      })
-    })
-  }
-
-  // Add regular activities with activity route
-  activities.forEach((activity) => {
-    allActivities.push({
-      id: activity.id,
-      title: activity.title,
-      icon: activity.icon,
-      route: `/test/lessons/$course/$unit/$lesson/$activity`,
-      description: activity.description,
-    })
-  })
 
   function LessonHomepageSlide({ isActive }: { isActive: boolean }) {
     return (
@@ -123,5 +182,5 @@ function RouteComponent() {
   }
 
   const slides = [LessonHomepageSlide]
-  return <PresentationShell slides={slides} backgroundUrl={urls.background} />
+  return <PresentationShell slides={slides} backgroundUrl={background} />
 }
