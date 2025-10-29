@@ -38,7 +38,7 @@ function RouteComponent() {
         return {
           id: `video-${video.id}`,
           title: video.title || 'Video',
-          icon: '🎥',
+          icon: '',
           route: `/test/lessons/$course/$unit/$lesson/youtube/${video.id}`,
           description: video.title,
         }
@@ -50,7 +50,7 @@ function RouteComponent() {
         return {
           id: `slide-${slide.id}`,
           title: slide.title || 'Presentation',
-          icon: '📊',
+          icon: '',
           route: `/test/lessons/$course/$unit/$lesson/googleslide/${slide.id}`,
           description: slide.title,
         }
@@ -62,7 +62,7 @@ function RouteComponent() {
         return {
           id: `embed-${embed.id}`,
           title: embed.title || 'Interactive Page',
-          icon: '🎮',
+          icon: '',
           route: `/test/lessons/$course/$unit/$lesson/embed/${embed.id}`,
           description: embed.title,
         }
@@ -74,7 +74,7 @@ function RouteComponent() {
         return {
           id: `page-${page.id}`,
           title: page.title || 'Page',
-          icon: '📄',
+          icon: '',
           route: `/test/lessons/$course/$unit/$lesson/pages/${page.id}`,
           description: page.subtitle || page.title,
         }

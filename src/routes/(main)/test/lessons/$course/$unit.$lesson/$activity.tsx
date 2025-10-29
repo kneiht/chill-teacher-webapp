@@ -56,103 +56,103 @@ export const ACTIVITY_REGISTRY: Record<
 > = {
   vocabulary: {
     title: 'Vocabulary',
-    icon: '📚',
+    icon: '',
     component: 'Vocabulary',
     description: 'Learn new words',
   },
   flashcards: {
     title: 'Flashcards',
-    icon: '🎴',
+    icon: '',
     component: 'Flashcard',
     description: 'Practice with flashcards',
   },
   'matching-game': {
     title: 'Matching Game',
-    icon: '🎯',
+    icon: '',
     component: 'MatchingGame',
     description: 'Match words with meanings',
   },
   'memory-game': {
     title: 'Memory Game',
-    icon: '🧠',
+    icon: '',
     component: 'MemoryGame',
     description: 'Test your memory',
   },
   'multiple-choice-envi': {
     title: 'Multiple Choice (EN→VI)',
-    icon: '✅',
+    icon: '',
     component: 'MultipleChoiceEnViGame',
     description: 'Choose correct Vietnamese meaning',
   },
   'multiple-choice-vien': {
     title: 'Multiple Choice (VI→EN)',
-    icon: '✔️',
+    icon: '',
     component: 'MultipleChoiceViEnGame',
     description: 'Choose correct English word',
   },
   'anagram-game': {
     title: 'Anagram Game',
-    icon: '🔤',
+    icon: '',
     component: 'AnagramGame',
     description: 'Unscramble the letters',
   },
   'unjumble-game': {
     title: 'Unjumble Game',
-    icon: '📝',
+    icon: '',
     component: 'UnjumbleGame',
     description: 'Put words in order',
   },
   'cloze-game': {
     title: 'Fill in the Blanks',
-    icon: '📋',
+    icon: '',
     component: 'ClozeGame',
     description: 'Complete the sentences',
   },
   'picture-choice': {
     title: 'Picture Choice',
-    icon: '🖼️',
+    icon: '',
     component: 'PictureChoiceEnGame',
     description: 'Choose the correct word for picture',
   },
   'picture-typing': {
     title: 'Picture Typing',
-    icon: '⌨️',
+    icon: '',
     component: 'PictureTypingEnGame',
     description: 'Type the word for picture',
   },
   'listening-typing': {
     title: 'Listening & Typing',
-    icon: '🎧',
+    icon: '',
     component: 'ListeningTypingEnGame',
     description: 'Listen and type what you hear',
   },
   'listening-sentence': {
     title: 'Listening Sentence',
-    icon: '🎵',
+    icon: '',
     component: 'ListeningSentenceTypingGame',
     description: 'Listen and type the sentence',
   },
   'translation-game': {
     title: 'Translation (VI→EN)',
-    icon: '🌐',
+    icon: '',
     component: 'VietnameseToEnglishTranslationGame',
     description: 'Translate to English',
   },
   'candy-crush': {
     title: 'Candy Crush Quiz',
-    icon: '🍬',
+    icon: '',
     component: 'CandyCrushEnglishGame',
     description: 'Answer questions to crush candies',
   },
   'image-reveal': {
     title: 'Image Reveal',
-    icon: '🎨',
+    icon: '',
     component: 'ImageRevealChoiceGame',
     description: 'Reveal the hidden image',
   },
   'reading-comprehension': {
     title: 'Reading Comprehension',
-    icon: '📖',
+    icon: '',
     component: 'ReadingComprehensionSlide',
     description: 'Reading comprehension with various question types',
   },
@@ -213,7 +213,10 @@ function ActivityComponent() {
   // Prepare props based on activity type
   const baseProps = {
     vocabData: vocab,
-    title: `${activityMeta.title} - ${title}`,
+    activityTitle: `${activityMeta.title}`,
+    lessonTitle: `${title}`,
+    activityDescription: `${activityMeta.description}`,
+    lessonDescription: lessonData.description,
     backgroundUrl: background,
     onClose: handleClose,
   }
@@ -238,6 +241,5 @@ function ActivityComponent() {
     )
   }
 
-  // Render standard vocab-based activity
   return <ActivityComponent {...baseProps} />
 }

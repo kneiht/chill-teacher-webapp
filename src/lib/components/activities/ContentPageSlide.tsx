@@ -14,7 +14,16 @@ type ContentBlock =
     }
   | { type: 'paragraph'; text: string; className?: string }
   | { type: 'html'; content: string } // For raw HTML if needed
-  | { type: 'list'; ordered: boolean; items: string[]; className?: string }
+  | {
+      type: 'list'
+      ordered: boolean
+      items: (
+        | string
+        | ContentBlock
+        | { text: string; children?: ContentBlock[] }
+      )[]
+      className?: string
+    }
   | {
       type: 'image'
       src: string
@@ -66,12 +75,18 @@ const renderContentBlock = (
 ): React.ReactNode => {
   switch (block.type) {
     case 'heading': {
-      const HeadingTag = `h${block.level}` as keyof JSX.IntrinsicElements
+      const HeadingTag = `h${block.level}` as
+        | 'h1'
+        | 'h2'
+        | 'h3'
+        | 'h4'
+        | 'h5'
+        | 'h6'
       const defaultClass = {
-        1: 'text-5xl font-bold text-indigo-700 mb-6',
-        2: 'text-4xl font-bold text-indigo-600 mb-5',
-        3: 'text-3xl font-semibold text-indigo-600 mb-4',
-        4: 'text-2xl font-semibold text-gray-800 mb-3',
+        1: 'text-4xl font-bold text-indigo-700 mb-6',
+        2: 'text-3xl font-bold text-indigo-600 mb-5',
+        3: 'text-2xl font-semibold text-indigo-600 mb-4',
+        4: 'text-1xl font-semibold text-gray-800 mb-3',
         5: 'text-xl font-semibold text-gray-800 mb-2',
         6: 'text-lg font-semibold text-gray-700 mb-2',
       }[block.level]
@@ -110,15 +125,45 @@ const renderContentBlock = (
         <ListTag
           key={index}
           className={
-            block.className ||
-            `${listClass} list-inside text-xl text-gray-800 space-y-3 mb-6 ml-4`
+            `${listClass} list-inside ` + (block.className || '') ||
+            `text-xl text-gray-800 space-y-3 mb-6 ml-4`
           }
         >
-          {block.items.map((item, i) => (
-            <li key={i} className="leading-relaxed">
-              {item}
-            </li>
-          ))}
+          {block.items.map((item, i) => {
+            // If item is a string, render as plain text
+            if (typeof item === 'string') {
+              return (
+                <li key={i} className="leading-relaxed">
+                  {item}
+                </li>
+              )
+            }
+            // If item is an object with text and children (for nested content in same li)
+            if (
+              typeof item === 'object' &&
+              'text' in item &&
+              !('type' in item)
+            ) {
+              return (
+                <li key={i} className="leading-relaxed">
+                  {item.text}
+                  {item.children && (
+                    <div className="mt-2">
+                      {item.children.map((child, j) =>
+                        renderContentBlock(child, j),
+                      )}
+                    </div>
+                  )}
+                </li>
+              )
+            }
+            // If item is a ContentBlock (nested content), render it
+            return (
+              <li key={i} className="leading-relaxed">
+                {renderContentBlock(item, i)}
+              </li>
+            )
+          })}
         </ListTag>
       )
 
@@ -308,18 +353,6 @@ const ContentPageSlideCore: React.FC<ContentPageSlideCoreProps> = ({
             'bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl w-full max-w-6xl'
           }
         >
-          {/* Title */}
-          {pageData.title && (
-            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-3">
-              {pageData.title}
-            </h1>
-          )}
-
-          {/* Subtitle */}
-          {pageData.subtitle && (
-            <p className="text-2xl text-gray-600 mb-8">{pageData.subtitle}</p>
-          )}
-
           {/* Content Blocks */}
           <div className="text-left">
             {pageData.content.map((block, index) =>

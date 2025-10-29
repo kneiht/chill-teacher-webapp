@@ -83,13 +83,7 @@ const VocabularyCore: React.FC<VocabularyCoreProps> = ({
 
   // Render the new two-column layout if an image exists
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center p-8">
-      {/* Title */}
-      {title && (
-        <h2 className="text-xl font-bold text-indigo-700 text-center mb-4">
-          {title}
-        </h2>
-      )}
+    <div className="relative w-full h-full flex flex-col items-center justify-center">
       <div
         className="flex flex-row items-start justify-center flex-1 rounded-xl p-8 bg-[#ffffffae] gap-12 w-full"
         style={{ fontFamily: "'Roboto', sans-serif" }}
@@ -146,25 +140,58 @@ const VocabularyCore: React.FC<VocabularyCoreProps> = ({
 interface VocabularyProps {
   vocabData: VocabItem[]
   backgroundUrl: string
-  title?: string
+  activityTitle?: string
+  lessonTitle?: string
+  activityDescription?: string
+  lessonDescription?: string
   onClose?: () => void
 }
 
 const Vocabulary: React.FC<VocabularyProps> = ({
   vocabData,
   backgroundUrl,
-  title,
+  activityTitle,
+  lessonTitle,
+  activityDescription,
+  lessonDescription,
   onClose,
 }) => {
-  const vocabularySlides = useMemo(
-    () =>
-      vocabData.map((vocab) => ({ isActive }: { isActive: boolean }) => (
+  const vocabularySlides = useMemo(() => {
+    const slides = []
+
+    // Add title slide as the first slide
+    if (lessonTitle) {
+      slides.push(({ isActive }: { isActive: boolean }) => (
         <Slide isActive={isActive}>
-          <VocabularyCore vocab={vocab} isActive={isActive} title={title} />
+          <div className="flex flex-col items-center justify-center h-full gap-5">
+            {lessonTitle && (
+              <>
+                <h1 className="text-center text-6xl font-bold text-indigo-600 bg-[#ffffffae] px-6 py-3 rounded-lg">
+                  {lessonTitle}
+                </h1>
+              </>
+            )}
+            {lessonDescription && (
+              <h1 className="text-center text-6xl font-bold text-indigo-600 bg-[#ffffffae] px-6 py-3 rounded-lg">
+                {lessonDescription}
+              </h1>
+            )}
+          </div>
         </Slide>
-      )),
-    [vocabData, title],
-  )
+      ))
+    }
+
+    // Add vocabulary slides
+    vocabData.forEach((vocab) => {
+      slides.push(({ isActive }: { isActive: boolean }) => (
+        <Slide isActive={isActive}>
+          <VocabularyCore vocab={vocab} isActive={isActive} />
+        </Slide>
+      ))
+    })
+
+    return slides
+  }, [vocabData, activityTitle, lessonTitle, lessonDescription])
 
   return (
     <PresentationShell
