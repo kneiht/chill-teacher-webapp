@@ -1,0 +1,366 @@
+{
+  "lesson-2": {
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 2: Vocabulary - Part 2",
+    "vocab": [
+      {
+        "word": "linguistic",
+        "phonics": "/lɪŋˈɡwɪstɪk/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "ngôn ngữ học",
+        "sampleSentence": "Linguistic intelligence involves reading and writing.",
+        "vietnameseTranslation": "Trí thông minh ngôn ngữ liên quan đến đọc và viết."
+      },
+      {
+        "word": "discussion",
+        "phonics": "/dɪˈskʌʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "thảo luận",
+        "sampleSentence": "We had a discussion about the project.",
+        "vietnameseTranslation": "Chúng tôi đã thảo luận về dự án."
+      },
+      {
+        "word": "pattern",
+        "phonics": "/ˈpætərn/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "mẫu, khuôn mẫu",
+        "sampleSentence": "Children quickly notice patterns in language.",
+        "vietnameseTranslation": "Trẻ em nhanh chóng nhận ra các mẫu trong ngôn ngữ."
+      },
+      {
+        "word": "problem-solving",
+        "phonics": "/ˈprɑbləm ˌsɑlvɪŋ/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "giải quyết vấn đề",
+        "sampleSentence": "Problem-solving is an important skill in daily life.",
+        "vietnameseTranslation": "Giải quyết vấn đề là một kỹ năng quan trọng trong cuộc sống hàng ngày."
+      },
+      {
+        "word": "spatial",
+        "phonics": "/ˈspeɪʃəl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "không gian",
+        "sampleSentence": "Architects need strong spatial intelligence.",
+        "vietnameseTranslation": "Kiến trúc sư cần trí thông minh không gian mạnh."
+      },
+      {
+        "word": "imagination",
+        "phonics": "/ɪˌmædʒəˈneɪʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "trí tưởng tượng",
+        "sampleSentence": "Children often have a strong imagination.",
+        "vietnameseTranslation": "Trẻ em thường có trí tưởng tượng phong phú."
+      },
+      {
+        "word": "bodily-kinesthetic",
+        "phonics": "/ˈbɑdɪli kɪnəsˈθɛtɪk/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "vận động thể chất",
+        "sampleSentence": "Dancers use their bodily-kinesthetic intelligence.",
+        "vietnameseTranslation": "Các vũ công sử dụng trí thông minh vận động thể chất."
+      },
+      {
+        "word": "creative",
+        "phonics": "/kriˈeɪtɪv/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "sáng tạo",
+        "sampleSentence": "She is very creative with her art projects.",
+        "vietnameseTranslation": "Cô ấy rất sáng tạo trong các dự án nghệ thuật."
+      },
+      {
+        "word": "interpersonal",
+        "phonics": "/ˌɪntərˈpɜrsənl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "giữa người với người (giao tiếp)",
+        "sampleSentence": "Teachers need strong interpersonal skills.",
+        "vietnameseTranslation": "Giáo viên cần có kỹ năng giao tiếp tốt."
+      },
+      {
+        "word": "journal",
+        "phonics": "/ˈdʒɜrnəl/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "nhật ký, tạp chí",
+        "sampleSentence": "She writes in her journal every night.",
+        "vietnameseTranslation": "Cô ấy viết vào nhật ký của mình mỗi tối."
+      },
+      {
+        "word": "implication",
+        "phonics": "/ɪmplɪˈkeɪʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "hàm ý, ngụ ý, ẩn ý",
+        "sampleSentence": "The teacher explained the implications of the new rule.",
+        "vietnameseTranslation": "Giáo viên giải thích những hàm ý của quy định mới."
+      },
+      {
+        "word": "intelligence",
+        "phonics": "/ɪnˈtɛlədʒəns/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "trí thông minh",
+        "sampleSentence": "Emotional intelligence is as important as IQ.",
+        "vietnameseTranslation": "Trí tuệ cảm xúc cũng quan trọng như IQ."
+      },
+      {
+        "word": "theory",
+        "phonics": "/ˈθɪri/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "lý thuyết",
+        "sampleSentence": "The students studied the theory of evolution.",
+        "vietnameseTranslation": "Học sinh đã học về lý thuyết tiến hóa."
+      },
+      {
+        "word": "intelligence quotient",
+        "phonics": "/ɪnˈtɛlədʒəns ˈkwoʊʃənt/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "chỉ số IQ",
+        "sampleSentence": "Her intelligence quotient is above average.",
+        "vietnameseTranslation": "Chỉ số IQ của cô ấy cao hơn mức trung bình."
+      },
+      {
+        "word": "popular",
+        "phonics": "/ˈpɑpjələr/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "phổ biến, được ưa chuộng",
+        "sampleSentence": "Football is very popular in Vietnam.",
+        "vietnameseTranslation": "Bóng đá rất phổ biến ở Việt Nam."
+      },
+      {
+        "word": "language skills",
+        "phonics": "/ˈlæŋɡwɪdʒ skɪlz/",
+        "partOfSpeech": "phr",
+        "image": "",
+        "vietnameseMeaning": "kỹ năng ngôn ngữ",
+        "sampleSentence": "Reading books helps improve language skills.",
+        "vietnameseTranslation": "Đọc sách giúp cải thiện kỹ năng ngôn ngữ."
+      },
+      {
+        "word": "logical-mathematical skills",
+        "phonics": "/ˈlɑdʒɪkəl ˌmæθəˈmætɪkəl skɪlz/",
+        "partOfSpeech": "phr",
+        "image": "",
+        "vietnameseMeaning": "kỹ năng logic - toán học",
+        "sampleSentence": "Solving puzzles develops logical-mathematical skills.",
+        "vietnameseTranslation": "Giải đố phát triển kỹ năng logic - toán học."
+      },
+      {
+        "word": "narrow",
+        "phonics": "/ˈnæroʊ/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "hạn hẹp",
+        "sampleSentence": "That is a narrow definition of intelligence.",
+        "vietnameseTranslation": "Đó là một định nghĩa hạn hẹp về trí thông minh."
+      },
+      {
+        "word": "professor",
+        "phonics": "/prəˈfɛsər/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "giáo sư",
+        "sampleSentence": "The professor gave a lecture on psychology.",
+        "vietnameseTranslation": "Giáo sư đã giảng bài về tâm lý học."
+      },
+      {
+        "word": "effective",
+        "phonics": "/ɪˈfɛktɪv/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "hiệu quả",
+        "sampleSentence": "Group work can be very effective for learning.",
+        "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
+      }
+    ],
+    "clozeData": {
+      "sentences": [
+        {
+          "sentence": "Her research focuses on _____ changes in immigrant communities, such as how they adopt new words and accents, comparing the evolution of their language usage over generations.",
+          "word": "linguistic"
+        },
+        {
+          "sentence": "The team scheduled a _____ to resolve the budget concerns, hoping to reach an agreement, with everyone invited to talk openly around the conference table.",
+          "word": "discussion"
+        },
+        {
+          "sentence": "Students mapped the rainfall _____ across the region to see where it rains most and least, charting recurring shapes on their climate graphs.",
+          "word": "pattern"
+        },
+        {
+          "sentence": "Daily _____ exercises helped the apprentices adapt quickly by tackling tricky puzzles, training them to analyze each challenge step by step.",
+          "word": "problem-solving"
+        },
+        {
+          "sentence": "Pilots train with _____ simulations to improve navigation, learning to judge distances and directions visually, so they can picture three-dimensional routes.",
+          "word": "spatial"
+        },
+        {
+          "sentence": "The illustrator's _____ brought the fantasy world to life, filling it with magical creatures, vivid scenes, and original story ideas.",
+          "word": "imagination"
+        },
+        {
+          "sentence": "Gymnasts rely on their _____ awareness during complex flips, knowing exactly where their arms and legs are, coordinating muscle memory with body position.",
+          "word": "bodily-kinesthetic"
+        },
+        {
+          "sentence": "The team proposed a _____ marketing strategy for local shops, using bright colors and catchy slogans, brainstorming fresh ideas no one had tried before.",
+          "word": "creative"
+        },
+        {
+          "sentence": "Her _____ approach helped mediate the conflict between departments, listening carefully to both sides, reading emotions, and building positive relationships.",
+          "word": "interpersonal"
+        },
+        {
+          "sentence": "He kept a travel _____ to document each coastal village he visited, writing down stories and sketches, adding daily entries like a personal diary.",
+          "word": "journal"
+        },
+        {
+          "sentence": "The policy analyst warned about the long-term _____ of ignoring the report, saying it could hurt future funding and create serious consequences.",
+          "word": "implication"
+        },
+        {
+          "sentence": "Researchers debated whether _____ can be expanded through training, like learning new ways to solve problems, improving overall mental ability.",
+          "word": "intelligence"
+        },
+        {
+          "sentence": "The seminar explored a new _____ about how memories form, suggesting they are rebuilt each time we recall them, outlining a fresh scientific explanation.",
+          "word": "theory"
+        },
+        {
+          "sentence": "The study compared each child's _____ with their classroom performance, looking at test scores and grades, noting how the standardized number matched achievement.",
+          "word": "intelligence quotient"
+        },
+        {
+          "sentence": "Street food stalls are increasingly _____ among visiting tourists, who love trying local snacks, posting rave reviews on social media.",
+          "word": "popular"
+        },
+        {
+          "sentence": "Daily podcasts strengthened her _____ before the job interview, helping her speak more fluently, expand vocabulary, and polish pronunciation.",
+          "word": "language skills"
+        },
+        {
+          "sentence": "Chess clubs nurture students' _____ through strategic play, teaching them to plan several moves ahead and calculate numerical advantages.",
+          "word": "logical-mathematical skills"
+        },
+        {
+          "sentence": "That proposal takes a _____ view of what success looks like, focusing only on money and ignoring happiness, community impact, or personal growth.",
+          "word": "narrow"
+        },
+        {
+          "sentence": "The _____ assigned a field project instead of a final exam, wanting students to learn by doing real-world tasks, as the university instructor valued hands-on experience.",
+          "word": "professor"
+        },
+        {
+          "sentence": "Pairing seniors with mentors proved an _____ way to boost retention, keeping new employees from quitting because the strategy actually produced measurable results.",
+          "word": "effective"
+        }
+      ]
+    },
+    "externalContent": {
+      "videos": [
+        {
+          "id": "main-lesson",
+          "url": "https://youtu.be/9ha2F_QmtNI",
+          "title": "Video bài giảng"
+        }
+      ]
+    },
+    "menu": [
+      {
+        "type": "video",
+        "id": "main-lesson"
+      },
+      {
+        "type": "activity",
+        "id": "vocabulary"
+      },
+      {
+        "type": "page",
+        "id": "assignments"
+      },
+      {
+        "type": "activity",
+        "id": "flashcards"
+      },
+      {
+        "type": "activity",
+        "id": "matching-game"
+      },
+      {
+        "type": "activity",
+        "id": "memory-game"
+      },
+      {
+        "type": "activity",
+        "id": "multiple-choice-envi"
+      },
+      {
+        "type": "activity",
+        "id": "multiple-choice-vien"
+      },
+      {
+        "type": "activity",
+        "id": "listening-typing"
+      },
+      {
+        "type": "activity",
+        "id": "listening-sentence"
+      },
+      {
+        "type": "activity",
+        "id": "translation-game"
+      },
+      {
+        "type": "activity",
+        "id": "cloze-game"
+      }
+    ],
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Multiple Intelligence Theory - Lesson 2: Vocabulary - Part 2",
+        "subtitle": "Homework Assignments",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Hãy hoàn thành các nhiệm vụ sau:",
+            "className": "text-3xl text-gray-700 mb-4"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Xem video bài học.",
+              "Luyện tập phát âm từ vựng và câu theo video.",
+              "Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả cho giáo viên.",
+              "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.",
+              "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+            ],
+            "className": "text-3xl text-left text-gray-800 space-y-8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúc các em học tốt!",
+            "className": "text-xl text-gray-600 mt-6 italic"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}

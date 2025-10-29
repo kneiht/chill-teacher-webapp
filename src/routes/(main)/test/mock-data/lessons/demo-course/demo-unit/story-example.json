@@ -1,0 +1,148 @@
+{
+  "story-example": {
+    "background": "/backgrounds/EU0-U1L1.webp",
+    "title": "Interactive Reading Example",
+    "description": "Practice reading comprehension",
+    "vocab": [],
+    "readingData": {
+      "title": "In the Art Class",
+      "passage": [
+        {
+          "text": "In the Art Class, there are 4 friends, Lisa, Jenny and Tom."
+        },
+        {
+          "dialog": [
+            "Lisa: Hi Jenny, Hi Tom. How are you?",
+            "Jenny: Hi Lisa. I'm good!",
+            "Tom: Hello Lisa. I'm great!",
+            "Lisa: Tom, what do you have today?",
+            "Tom: I have paper and glue.",
+            "Tom: Jenny, what do you have?",
+            "Jenny: I have paint and scissors.",
+            "Jenny: What about you? What do you have, Lisa?",
+            "Lisa: I have a pen and a pencil.",
+            "Tom: But we don't have a marker and a crayon.",
+            "Lisa: Oh no!",
+            "Teacher: Don't worry, children! I have markers and crayons."
+          ]
+        },
+        {
+          "text": "Then, they have fun together in the Art Class"
+        }
+      ],
+      "items": {
+        "paper": {
+          "label": "Paper",
+          "image": "https://storage.chillteacher.com/images-words/paper.webp"
+        },
+        "glue": {
+          "label": "Glue",
+          "image": "https://storage.chillteacher.com/images-words/glue.webp"
+        },
+        "paint": {
+          "label": "Paint",
+          "image": "https://storage.chillteacher.com/images-words/paint.webp"
+        },
+        "scissors": {
+          "label": "Scissors",
+          "image": "https://storage.chillteacher.com/images-words/scissors.webp"
+        },
+        "pen": {
+          "label": "Pen",
+          "image": "https://storage.chillteacher.com/images-words/pen.webp"
+        },
+        "pencil": {
+          "label": "Pencil",
+          "image": "https://storage.chillteacher.com/images-words/pencil.webp"
+        },
+        "marker": {
+          "label": "Marker",
+          "image": "https://storage.chillteacher.com/images-words/marker.webp"
+        },
+        "crayon": {
+          "label": "Crayon",
+          "image": "https://storage.chillteacher.com/images-words/crayon.webp"
+        }
+      },
+      "questions": {
+        "multiSelectItem": [
+          {
+            "id": "tom",
+            "name": "Tom",
+            "prompt": "I have ...",
+            "options": ["paper", "glue", "marker", "paint"],
+            "correct": ["paper", "glue"]
+          },
+          {
+            "id": "jenny",
+            "name": "Jenny",
+            "prompt": "I have ...",
+            "options": ["paint", "scissors", "pen", "crayon"],
+            "correct": ["paint", "scissors"]
+          },
+          {
+            "id": "lisa",
+            "name": "Lisa",
+            "prompt": "I have ...",
+            "options": ["pen", "pencil", "paper", "marker"],
+            "correct": ["pen", "pencil"]
+          },
+          {
+            "id": "teacher",
+            "name": "Teacher",
+            "prompt": "I have ...",
+            "options": ["marker", "crayon", "glue", "paper"],
+            "correct": ["marker", "crayon"]
+          }
+        ],
+        "pictureChoice": [
+          {
+            "id": "q1",
+            "prompt": "What do you have? I have glue.",
+            "options": ["glue", "paper", "crayon"],
+            "correct": "glue"
+          },
+          {
+            "id": "q2",
+            "prompt": "What do you have? I have a pencil.",
+            "options": ["pencil", "marker", "paint"],
+            "correct": "pencil"
+          }
+        ],
+        "textComprehension": [
+          {
+            "id": "end",
+            "prompt": "How do they feel at the end? (Họ cảm thấy như thế nào ở cuối bài đọc)",
+            "answers": [
+              "They have fun together",
+              "They go home early",
+              "They lose their supplies"
+            ],
+            "correct": "They have fun together"
+          },
+          {
+            "id": "ask",
+            "prompt": "What does Lisa ask Tom? (Lisa hỏi gì Tom)",
+            "answers": [
+              "What do you have today?",
+              "Where is the teacher?",
+              "Can I go outside?"
+            ],
+            "correct": "What do you have today?"
+          },
+          {
+            "id": "need",
+            "prompt": "What does the teacher have? (Giáo viên có gì)",
+            "answers": [
+              "Markers and crayons",
+              "Paper and glue",
+              "Paint and scissors"
+            ],
+            "correct": "Markers and crayons"
+          }
+        ]
+      }
+    },
+    "menu": [{ "type": "activity", "id": "reading-comprehension" }]
+  }
+}

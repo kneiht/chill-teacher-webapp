@@ -381,11 +381,9 @@ function EscapeMainLayout() {
 // Define the Layout Selector
 function LayoutSelector() {
   const { pathname } = useLocation()
-  const escapedRoutes = ['/lessons/everybody-up-0', '/lessons/advanced-topics']
-  const isEscapedRoute = escapedRoutes.some(
-    // Check if the pathname starts with an escaped route and has another path segment after it
-    (route) => pathname.startsWith(route) && pathname.length - route.length > 1,
-  )
+  // Escape main layout for all lesson routes
+  const lessonRoutePattern = /^\/(lessons|test\/lessons)\/.+\/.+/
+  const isEscapedRoute = lessonRoutePattern.test(pathname)
   return isEscapedRoute ? <EscapeMainLayout /> : <MainLayout />
 }
 

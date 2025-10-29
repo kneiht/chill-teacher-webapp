@@ -1,0 +1,152 @@
+{
+  "reading-example": {
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "title": "Reading Comprehension Example",
+    "description": "Practice reading comprehension skills",
+    "vocab": [],
+    "readingData": {
+      "title": "The Implications of Multiple Intelligence Theory",
+      "passage": [
+        {
+          "content": "At the beginning of the 20th century, Alfred Binet in France created the first test to measure intelligence. From this, the idea of IQ (Intelligence Quotient) became popular. For many years, IQ tests were used in schools and workplaces around the world. However, these tests only measured language skills and logical-mathematical skills, which made the idea of intelligence too narrow."
+        },
+        {
+          "content": "Later, the American professor Howard Gardner from Harvard University introduced a new way of thinking. He developed the Multiple Intelligence (MI) theory, which changed how people understood intelligence. Gardner explained three important points: people are not all the same, people do not all learn in the same way, and education is more effective if it respects these differences."
+        },
+        {
+          "heading": "The Eight Types of Intelligence",
+          "content": "According to Gardner, there are at least eight types of intelligence:",
+          "list": [
+            "<span class=\"font-semibold\">Linguistic intelligence</span>: the ability to read, write, speak, and learn languages. It can be developed by reading books, listening to recordings, and joining discussions.",
+            "<span class=\"font-semibold\">Logical-mathematical intelligence</span>: the ability to work with numbers, patterns, and logical problems. It can be developed through puzzles, games, and problem-solving tasks.",
+            "<span class=\"font-semibold\">Musical intelligence</span>: the ability to understand and create music, rhythm, or dance. It can be developed by listening to music, singing, or playing instruments.",
+            "<span class=\"font-semibold\">Spatial intelligence</span>: the ability to see and create images, shapes, and directions. It can be improved by drawing, solving mazes, and practicing imagination.",
+            "<span class=\"font-semibold\">Bodily-kinesthetic intelligence</span>: the ability to use the body to learn and express ideas. It can be developed through sports, acting, or creative movement.",
+            "<span class=\"font-semibold\">Interpersonal intelligence</span>: the ability to understand and work with other people. It can be developed through teamwork, group projects, and role-play.",
+            "<span class=\"font-semibold\">Intrapersonal intelligence</span>: the ability to understand yourself and your emotions. It can be developed through journaling, reflection, or independent study.",
+            "<span class=\"font-semibold\">Naturalist intelligence</span>: the ability to understand nature and the environment. It can be developed through exploring nature, observing animals, or collecting natural items."
+          ]
+        },
+        {
+          "heading": "How It Affects Education",
+          "content": "Gardner believes that these intelligences are separate but connected. Each person has a unique profile: some intelligences may be stronger, others weaker. If one area is developed, it may also help improve other areas. For teachers, this means students cannot all learn in the same way. A classroom full of different learners needs different activities."
+        },
+        {
+          "heading": "Conclusion",
+          "content": "The Multiple Intelligence theory suggests that intelligence is not fixed and not limited to language or mathematics. Instead, people have many different strengths that can grow with practice and opportunity. For teachers, this means education should not treat all students the same. Instead, schools should respect differences and create lessons that help every kind of mind succeed."
+        }
+      ],
+      "questions": {
+        "singleChoice": [
+          {
+            "id": "sc1",
+            "prompt": "What was the main limitation of the first IQ tests?",
+            "options": [
+              {
+                "value": "too-hard",
+                "label": "They were too difficult for young learners."
+              },
+              {
+                "value": "narrow-focus",
+                "label": "They only measured linguistic and logical-mathematical skills."
+              },
+              {
+                "value": "ignored-numbers",
+                "label": "They failed to include any numerical tasks."
+              }
+            ],
+            "correct": "narrow-focus"
+          },
+          {
+            "id": "sc2",
+            "prompt": "Which statement best describes Gardner's Multiple Intelligence theory?",
+            "options": [
+              {
+                "value": "single-score",
+                "label": "Intelligence can be represented by one exact score."
+              },
+              {
+                "value": "varied-profile",
+                "label": "Each person has a unique profile of different intelligences."
+              },
+              {
+                "value": "fixed-talent",
+                "label": "Talents are fixed and cannot be developed."
+              }
+            ],
+            "correct": "varied-profile"
+          }
+        ],
+        "tfng": [
+          {
+            "id": "tfng1",
+            "statement": "Alfred Binet developed the first intelligence test in France.",
+            "correct": "true"
+          },
+          {
+            "id": "tfng2",
+            "statement": "Gardner claimed that all learners should follow the same classroom activities.",
+            "correct": "false"
+          },
+          {
+            "id": "tfng3",
+            "statement": "The passage states that MI theory immediately replaced IQ tests worldwide.",
+            "correct": "not_given"
+          }
+        ],
+        "matching": {
+          "questions": [
+            {
+              "id": "match1",
+              "statement": "Historical origins of IQ testing",
+              "correct": "paragraph1"
+            },
+            {
+              "id": "match2",
+              "statement": "Gardner's core principles about learners",
+              "correct": "paragraph2"
+            },
+            {
+              "id": "match3",
+              "statement": "Descriptions of the eight main intelligences",
+              "correct": "paragraph3"
+            }
+          ],
+          "options": [
+            { "value": "paragraph1", "label": "Paragraph 1" },
+            { "value": "paragraph2", "label": "Paragraph 2" },
+            { "value": "paragraph3", "label": "Paragraph 3" },
+            { "value": "paragraph4", "label": "Paragraph 4" },
+            { "value": "paragraph5", "label": "Paragraph 5" }
+          ]
+        },
+        "summary": [
+          {
+            "id": "summary1",
+            "prompt": "Complete the sentence: IQ tests traditionally focused on ______ skills.",
+            "answers": [
+              "linguistic and logical-mathematical",
+              "language and logical-mathematical"
+            ]
+          },
+          {
+            "id": "summary2",
+            "prompt": "Complete the sentence: Gardner argues that people do not learn in the same ______.",
+            "answers": ["way", "manner"]
+          }
+        ],
+        "shortAnswer": [
+          {
+            "id": "sa1",
+            "prompt": "Which type of intelligence from the passage do you relate to most, and why?"
+          },
+          {
+            "id": "sa2",
+            "prompt": "How could a teacher support multiple intelligences in one classroom activity?"
+          }
+        ]
+      }
+    },
+    "menu": [{ "type": "activity", "id": "reading-comprehension" }]
+  }
+}

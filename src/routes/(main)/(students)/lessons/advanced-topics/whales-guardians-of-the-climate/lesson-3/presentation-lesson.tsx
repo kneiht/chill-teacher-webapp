@@ -3,7 +3,7 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
-import Vocabulary from '@/lib/components/presentation/Vocabulary'
+import Vocabulary from '@/lib/components/activities/Vocabulary'
 
 // Assets
 import vocabData from './assets/vocab.json'

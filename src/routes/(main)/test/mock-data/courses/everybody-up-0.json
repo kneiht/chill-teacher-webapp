@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Unit 1: Art Class - Lesson 1",
+    "description": "School Supplies Vocabulary",
+    "course": "everybody-up-0",
+    "unit": "unit-1",
+    "lesson": "lesson-1",
+    "bg": "/backgrounds/EU0-U1L1.webp"
+  },
+  {
+    "title": "Unit 1: Art Class - Lesson 2",
+    "description": "School Supplies Review",
+    "course": "everybody-up-0",
+    "unit": "unit-1",
+    "lesson": "lesson-2",
+    "bg": "/backgrounds/EU0-U1L2.webp"
+  },
+  {
+    "title": "Unit 1: Art Class - Lesson 3",
+    "description": "Reading Practice",
+    "course": "everybody-up-0",
+    "unit": "unit-1",
+    "lesson": "lesson-3",
+    "bg": "/backgrounds/EU0-U1L1.webp"
+  },
+  {
+    "title": "Unit 1: Art Class - Lesson 4",
+    "description": "Listening & Shadowing",
+    "course": "everybody-up-0",
+    "unit": "unit-1",
+    "lesson": "lesson-4",
+    "bg": "/backgrounds/EU0-U1L2.webp"
+  }
+]
