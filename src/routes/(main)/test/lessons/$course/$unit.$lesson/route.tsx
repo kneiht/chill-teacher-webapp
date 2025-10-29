@@ -21,10 +21,8 @@ interface Activity {
   id: string
   title: string
   icon: string
-  type: string // Activity type: 'Flashcard', 'MatchingGame', 'MemoryGame', 'YoutubeSlide', etc.
+  type: string // Activity type: 'Flashcard', 'Vocabulary', 'MatchingGame', 'MemoryGame'
   description?: string
-  contentType?: 'videos' | 'googleSlides' // For slide-based activities (auto-generated)
-  contentIds?: string[] // Reference to single externalContent item (auto-generated uses [id])
 }
 
 interface LessonData {

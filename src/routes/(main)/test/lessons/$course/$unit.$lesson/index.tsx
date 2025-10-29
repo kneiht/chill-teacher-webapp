@@ -26,38 +26,51 @@ function RouteComponent() {
   const buttonStyle =
     'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
-  // Auto-generate activities từ externalContent
-  const allActivities = [...activities]
+  // Combine all activities with external content
+  const allActivities: Array<{
+    id: string
+    title: string
+    icon: string
+    route: string
+    description?: string
+  }> = []
 
-  // Add Youtube videos as individual activities
+  // Add Youtube videos with dedicated routes
   if (externalContent?.videos) {
     externalContent.videos.forEach((video) => {
       allActivities.push({
         id: `video-${video.id}`,
         title: video.title || 'Video',
         icon: '🎥',
-        type: 'YoutubeSlide',
+        route: `/test/lessons/$course/$unit/$lesson/youtube/${video.id}`,
         description: video.title,
-        contentType: 'videos' as const,
-        contentIds: [video.id],
       })
     })
   }
 
-  // Add Google Slides as individual activities
+  // Add Google Slides with dedicated routes
   if (externalContent?.googleSlides) {
     externalContent.googleSlides.forEach((slide) => {
       allActivities.push({
         id: `slide-${slide.id}`,
         title: slide.title || 'Presentation',
         icon: '📊',
-        type: 'GoogleSlide',
+        route: `/test/lessons/$course/$unit/$lesson/googleslide/${slide.id}`,
         description: slide.title,
-        contentType: 'googleSlides' as const,
-        contentIds: [slide.id],
       })
     })
   }
+
+  // Add regular activities with activity route
+  activities.forEach((activity) => {
+    allActivities.push({
+      id: activity.id,
+      title: activity.title,
+      icon: activity.icon,
+      route: `/test/lessons/$course/$unit/$lesson/$activity`,
+      description: activity.description,
+    })
+  })
 
   function LessonHomepageSlide({ isActive }: { isActive: boolean }) {
     return (
@@ -70,17 +83,21 @@ function RouteComponent() {
             <p className="text-2xl text-gray-700 mb-8">{description}</p>
 
             <div className="grid grid-cols-2 gap-x-20 gap-y-7 max-w-4xl">
-              {allActivities.map((activity) => (
+              {allActivities.map((item) => (
                 <Link
-                  key={activity.id}
-                  to="/test/lessons/$course/$unit/$lesson/$activity"
-                  params={{ ...params, activity: activity.id }}
+                  key={item.id}
+                  to={item.route}
+                  params={
+                    item.route.includes('$activity')
+                      ? { ...params, activity: item.id }
+                      : params
+                  }
                 >
                   <WoodenButton
                     className={buttonStyle}
-                    title={activity.description}
+                    title={item.description}
                   >
-                    {activity.icon} {activity.title}
+                    {item.icon} {item.title}
                   </WoodenButton>
                 </Link>
               ))}
