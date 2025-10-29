@@ -19,6 +19,7 @@ import ListeningTypingEnGame from '@/lib/components/activities/ListeningTypingEn
 import ListeningSentenceTypingGame from '@/lib/components/activities/ListeningSentenceTypingGame'
 import VietnameseToEnglishTranslationGame from '@/lib/components/activities/VietnameseToEnglishTranslationGame'
 import CandyCrushEnglishGame from '@/lib/components/activities/CandyCrushEnglishGame'
+import ContentPageSlide from '@/lib/components/activities/ContentPageSlide'
 
 // Activity Registry (vocab-based activities only)
 const activityComponents: Record<string, React.FC<any>> = {
@@ -38,6 +39,7 @@ const activityComponents: Record<string, React.FC<any>> = {
   ListeningSentenceTypingGame: ListeningSentenceTypingGame,
   VietnameseToEnglishTranslationGame: VietnameseToEnglishTranslationGame,
   CandyCrushEnglishGame: CandyCrushEnglishGame,
+  ContentPageSlide: ContentPageSlide,
 }
 
 export const Route = createFileRoute(
@@ -50,8 +52,16 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { urls, vocab, title, activities, clozeData, candyCrushQuestions } =
-    lessonData
+  const {
+    urls,
+    vocab,
+    title,
+    activities,
+    clozeData,
+    candyCrushQuestions,
+    assignmentData,
+    pageData,
+  } = lessonData
 
   // Find the activity in the JSON data
   const activity = activities.find((a) => a.id === activityId)
@@ -94,6 +104,14 @@ function ActivityComponent() {
     return (
       <ActivityComponent {...baseProps} questionsData={candyCrushQuestions} />
     )
+  }
+
+  if (activity.type === 'AssignmentSlide') {
+    return <ActivityComponent {...baseProps} assignmentData={assignmentData} />
+  }
+
+  if (activity.type === 'ContentPageSlide') {
+    return <ActivityComponent {...baseProps} pageData={pageData} />
   }
 
   // Render standard vocab-based activity

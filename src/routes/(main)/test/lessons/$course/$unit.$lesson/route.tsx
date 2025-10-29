@@ -45,6 +45,71 @@ interface CandyCrushQuestion {
   image?: string
 }
 
+interface AssignmentQuestion {
+  question: string
+  type?: 'text' | 'bullet'
+}
+
+interface AssignmentTask {
+  task: string
+  subQuestions?: AssignmentQuestion[]
+}
+
+interface AssignmentData {
+  lessonTitle: string
+  instructions: string
+  tasks: AssignmentTask[]
+  footer?: string
+}
+
+type ContentBlock =
+  | {
+      type: 'heading'
+      level: 1 | 2 | 3 | 4 | 5 | 6
+      text: string
+      className?: string
+    }
+  | { type: 'paragraph'; text: string; className?: string }
+  | { type: 'html'; content: string }
+  | { type: 'list'; ordered: boolean; items: string[]; className?: string }
+  | {
+      type: 'image'
+      src: string
+      alt?: string
+      caption?: string
+      className?: string
+    }
+  | { type: 'video'; url: string; title?: string; className?: string }
+  | {
+      type: 'iframe'
+      src: string
+      title?: string
+      height?: string
+      className?: string
+    }
+  | { type: 'divider'; className?: string }
+  | {
+      type: 'card'
+      title?: string
+      content: ContentBlock[]
+      className?: string
+    }
+  | { type: 'columns'; columns: ContentBlock[][]; className?: string }
+  | { type: 'button'; text: string; href: string; className?: string }
+  | { type: 'quote'; text: string; author?: string; className?: string }
+  | { type: 'code'; language?: string; code: string; className?: string }
+  | { type: 'table'; headers: string[]; rows: string[][]; className?: string }
+  | { type: 'spacer'; height?: string }
+
+interface ContentPageData {
+  title?: string
+  subtitle?: string
+  content: ContentBlock[]
+  footer?: string
+  containerClassName?: string
+  scrollable?: boolean
+}
+
 interface LessonData {
   urls: {
     background: string
@@ -54,6 +119,8 @@ interface LessonData {
   vocab: VocabItem[]
   clozeData?: ClozeData
   candyCrushQuestions?: CandyCrushQuestion[]
+  assignmentData?: AssignmentData
+  pageData?: ContentPageData
   externalContent?: {
     videos?: ExternalContentItem[]
     googleSlides?: ExternalContentItem[]

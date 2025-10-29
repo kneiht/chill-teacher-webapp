@@ -45,6 +45,220 @@
         "correctAnswer": "musical"
       }
     ],
+    "pageData": {
+      "title": "Study Guide: Multiple Intelligence Theory",
+      "subtitle": "A comprehensive guide to understanding different types of intelligence",
+      "scrollable": true,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "📚 Introduction"
+        },
+        {
+          "type": "paragraph",
+          "text": "Multiple Intelligence Theory, developed by Howard Gardner in 1983, suggests that intelligence is not a single entity, but rather a combination of different types of cognitive abilities. This revolutionary theory changed how we think about learning and education."
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "🧠 The Eight Types of Intelligence"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Linguistic Intelligence - The ability to use language effectively",
+            "Logical-Mathematical Intelligence - Reasoning and problem-solving skills",
+            "Spatial Intelligence - Understanding visual and spatial information",
+            "Musical Intelligence - Sensitivity to rhythm, pitch, and melody",
+            "Bodily-Kinesthetic Intelligence - Control of body movements",
+            "Interpersonal Intelligence - Understanding others' emotions",
+            "Intrapersonal Intelligence - Self-awareness and reflection",
+            "Naturalist Intelligence - Recognition of patterns in nature"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "💡 Key Concept",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Everyone has all eight intelligences, but we each have a unique combination. Some intelligences are stronger than others in different individuals."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📊 Intelligence Comparison Table"
+        },
+        {
+          "type": "table",
+          "headers": ["Intelligence Type", "Strengths", "Career Examples"],
+          "rows": [
+            [
+              "Linguistic",
+              "Reading, writing, speaking",
+              "Writer, Teacher, Lawyer"
+            ],
+            [
+              "Logical-Mathematical",
+              "Problem-solving, calculations",
+              "Scientist, Engineer, Programmer"
+            ],
+            ["Spatial", "Visualizing, designing", "Architect, Artist, Pilot"],
+            [
+              "Musical",
+              "Playing instruments, composing",
+              "Musician, Composer, DJ"
+            ],
+            [
+              "Bodily-Kinesthetic",
+              "Sports, dance, acting",
+              "Athlete, Dancer, Surgeon"
+            ],
+            [
+              "Interpersonal",
+              "Communication, empathy",
+              "Counselor, Manager, Politician"
+            ],
+            [
+              "Intrapersonal",
+              "Self-reflection, goal-setting",
+              "Philosopher, Therapist, Writer"
+            ],
+            [
+              "Naturalist",
+              "Nature observation, classification",
+              "Biologist, Farmer, Environmentalist"
+            ]
+          ]
+        },
+        {
+          "type": "spacer",
+          "height": "1rem"
+        },
+        {
+          "type": "quote",
+          "text": "It's not how smart you are, it's how you are smart.",
+          "author": "Howard Gardner"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎯 Learning Activities by Intelligence Type"
+        },
+        {
+          "type": "card",
+          "content": [
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "For Linguistic Learners:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Write essays and stories",
+                "Read books and articles",
+                "Participate in debates",
+                "Create word games and puzzles"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "content": [
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "For Visual-Spatial Learners:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Create mind maps and diagrams",
+                "Use color-coding systems",
+                "Watch educational videos",
+                "Draw and design projects"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "content": [
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "For Musical Learners:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Create songs to remember facts",
+                "Listen to music while studying",
+                "Use rhythm and rhyme",
+                "Play instruments to reduce stress"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "🎬 Video Resources"
+        },
+        {
+          "type": "paragraph",
+          "text": "Watch these videos to learn more about Multiple Intelligence Theory:"
+        },
+        {
+          "type": "button",
+          "text": "📺 Watch Introduction Video",
+          "href": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "type": "spacer",
+          "height": "1rem"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "📝 Self-Assessment"
+        },
+        {
+          "type": "paragraph",
+          "text": "Answer these questions to discover your dominant intelligence types:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Do you enjoy reading and writing? (Linguistic)",
+            "Are you good at solving puzzles and math problems? (Logical-Mathematical)",
+            "Do you remember faces and places easily? (Spatial)",
+            "Can you easily remember melodies and rhythms? (Musical)",
+            "Do you prefer learning by doing physical activities? (Bodily-Kinesthetic)",
+            "Are you good at understanding others' feelings? (Interpersonal)",
+            "Do you spend time reflecting on your thoughts? (Intrapersonal)",
+            "Do you enjoy being outdoors and observing nature? (Naturalist)"
+          ]
+        }
+      ],
+      "footer": "Remember: Everyone has a unique combination of intelligences! 🌟"
+    },
     "externalContent": {
       "videos": [
         {
@@ -230,6 +444,20 @@
         "icon": "🎨",
         "type": "ImageRevealChoiceGame",
         "description": "Reveal the image by answering correctly"
+      },
+      {
+        "id": "assignments",
+        "title": "Assignments",
+        "icon": "📋",
+        "type": "AssignmentSlide",
+        "description": "View homework and assignment instructions"
+      },
+      {
+        "id": "study-guide",
+        "title": "Study Guide",
+        "icon": "📖",
+        "type": "ContentPageSlide",
+        "description": "Comprehensive study guide with rich content"
       }
     ]
   }
