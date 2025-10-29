@@ -7,6 +7,18 @@ import Flashcard from '@/lib/components/activities/Flashcard'
 import Vocabulary from '@/lib/components/activities/Vocabulary'
 import MatchingGame from '@/lib/components/activities/MatchingGame'
 import MemoryGame from '@/lib/components/activities/MemoryGame'
+import AnagramGame from '@/lib/components/activities/AnagramGame'
+import MultipleChoiceEnViGame from '@/lib/components/activities/MultipleChoiceEnViGame'
+import MultipleChoiceViEnGame from '@/lib/components/activities/MultipleChoiceViEnGame'
+import UnjumbleGame from '@/lib/components/activities/UnjumbleGame'
+import ClozeGame from '@/lib/components/activities/ClozeGame'
+import PictureChoiceEnGame from '@/lib/components/activities/PictureChoiceEnGame'
+import PictureTypingEnGame from '@/lib/components/activities/PictureTypingEnGame'
+import ImageRevealChoiceGame from '@/lib/components/activities/ImageRevealChoiceGame'
+import ListeningTypingEnGame from '@/lib/components/activities/ListeningTypingEnGame'
+import ListeningSentenceTypingGame from '@/lib/components/activities/ListeningSentenceTypingGame'
+import VietnameseToEnglishTranslationGame from '@/lib/components/activities/VietnameseToEnglishTranslationGame'
+import CandyCrushEnglishGame from '@/lib/components/activities/CandyCrushEnglishGame'
 
 // Activity Registry (vocab-based activities only)
 const activityComponents: Record<string, React.FC<any>> = {
@@ -14,6 +26,18 @@ const activityComponents: Record<string, React.FC<any>> = {
   Vocabulary: Vocabulary,
   MatchingGame: MatchingGame,
   MemoryGame: MemoryGame,
+  AnagramGame: AnagramGame,
+  MultipleChoiceEnViGame: MultipleChoiceEnViGame,
+  MultipleChoiceViEnGame: MultipleChoiceViEnGame,
+  UnjumbleGame: UnjumbleGame,
+  ClozeGame: ClozeGame,
+  PictureChoiceEnGame: PictureChoiceEnGame,
+  PictureTypingEnGame: PictureTypingEnGame,
+  ImageRevealChoiceGame: ImageRevealChoiceGame,
+  ListeningTypingEnGame: ListeningTypingEnGame,
+  ListeningSentenceTypingGame: ListeningSentenceTypingGame,
+  VietnameseToEnglishTranslationGame: VietnameseToEnglishTranslationGame,
+  CandyCrushEnglishGame: CandyCrushEnglishGame,
 }
 
 export const Route = createFileRoute(
@@ -26,7 +50,8 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { urls, vocab, title, activities } = lessonData
+  const { urls, vocab, title, activities, clozeData, candyCrushQuestions } =
+    lessonData
 
   // Find the activity in the JSON data
   const activity = activities.find((a) => a.id === activityId)
@@ -52,13 +77,25 @@ function ActivityComponent() {
     )
   }
 
-  // Render vocab-based activity
-  return (
-    <ActivityComponent
-      vocabData={vocab}
-      title={`${activity.title} - ${title}`}
-      backgroundUrl={urls.background}
-      onClose={handleClose}
-    />
-  )
+  // Prepare props based on activity type
+  const baseProps = {
+    vocabData: vocab,
+    title: `${activity.title} - ${title}`,
+    backgroundUrl: urls.background,
+    onClose: handleClose,
+  }
+
+  // Add special data for specific games
+  if (activity.type === 'ClozeGame') {
+    return <ActivityComponent {...baseProps} clozeData={clozeData} />
+  }
+
+  if (activity.type === 'CandyCrushEnglishGame') {
+    return (
+      <ActivityComponent {...baseProps} questionsData={candyCrushQuestions} />
+    )
+  }
+
+  // Render standard vocab-based activity
+  return <ActivityComponent {...baseProps} />
 }

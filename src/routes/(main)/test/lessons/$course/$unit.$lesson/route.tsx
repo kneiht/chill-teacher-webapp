@@ -25,6 +25,26 @@ interface Activity {
   description?: string
 }
 
+interface ClozeData {
+  paragraph?: string
+  words?: string[]
+  sentences?: Array<{ sentence: string; word: string }>
+}
+
+interface CandyCrushQuestion {
+  type:
+    | 'multipleChoice'
+    | 'listening'
+    | 'fillBlank'
+    | 'imageChoice'
+    | 'imageToVietnamese'
+  question: string
+  correctAnswer: string
+  options?: string[]
+  wordToSpeak?: string
+  image?: string
+}
+
 interface LessonData {
   urls: {
     background: string
@@ -32,6 +52,8 @@ interface LessonData {
   title: string
   description: string
   vocab: VocabItem[]
+  clozeData?: ClozeData
+  candyCrushQuestions?: CandyCrushQuestion[]
   externalContent?: {
     videos?: ExternalContentItem[]
     googleSlides?: ExternalContentItem[]

@@ -9,7 +9,7 @@ import {
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import '@/lib/components/games/game-styles.css'
+import './game-styles.css'
 
 // Hooks
 import { useSoundEffects } from '@/lib/hooks/useSoundEffects'
