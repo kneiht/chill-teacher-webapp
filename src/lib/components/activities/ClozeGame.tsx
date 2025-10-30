@@ -48,6 +48,9 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
   const [answers, setAnswers] = useState<Array<string>>([])
   const [shuffledWords, setShuffledWords] = useState<Array<string>>([])
   const [correctAnswers, setCorrectAnswers] = useState<Array<boolean>>([])
+  const [displayedSentences, setDisplayedSentences] = useState<
+    Array<{ sentence: string; word: string }>
+  >([])
 
   const parts =
     clozeData && clozeData.paragraph ? clozeData.paragraph.split('_____') : []
@@ -104,11 +107,15 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
       setAnswers(new Array(clozeData.words.length).fill(''))
       setCorrectAnswers(new Array(clozeData.words.length).fill(false))
     } else if (clozeData.sentences) {
-      setShuffledWords(
-        clozeData.sentences.map((s) => s.word).sort(() => Math.random() - 0.5),
+      const shuffledSentences = [...clozeData.sentences].sort(
+        () => Math.random() - 0.5,
       )
-      setAnswers(new Array(clozeData.sentences.length).fill(''))
-      setCorrectAnswers(new Array(clozeData.sentences.length).fill(false))
+      setDisplayedSentences(shuffledSentences)
+      setShuffledWords(
+        shuffledSentences.map((s) => s.word).sort(() => Math.random() - 0.5),
+      )
+      setAnswers(new Array(shuffledSentences.length).fill(''))
+      setCorrectAnswers(new Array(shuffledSentences.length).fill(false))
     }
     setIsGameStarted(true)
     setIsGameOver(false)
@@ -146,10 +153,13 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
       newCorrectAnswers = answers.map(
         (answer, index) =>
           normalizeText(answer) ===
-          normalizeText(clozeData.sentences![index].word),
+          normalizeText(
+            (displayedSentences[index] ?? clozeData.sentences![index]).word,
+          ),
       )
       correctCount = newCorrectAnswers.filter(Boolean).length
-      totalBlanks = clozeData.sentences.length
+      totalBlanks = (displayedSentences?.length ||
+        clozeData.sentences.length) as number
     } else {
       return
     }
@@ -300,7 +310,10 @@ const ClozeGameCore: React.FC<ClozeGameProps> = ({ clozeData, title }) => {
 
               {clozeData.sentences ? (
                 <div className="space-y-4">
-                  {clozeData.sentences.map((item, index) => {
+                  {(displayedSentences.length
+                    ? displayedSentences
+                    : clozeData.sentences
+                  ).map((item, index) => {
                     const sentenceParts = item.sentence.split('_____')
                     return (
                       <div
