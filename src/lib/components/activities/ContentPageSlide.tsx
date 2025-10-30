@@ -14,6 +14,7 @@ type ContentBlock =
     }
   | { type: 'paragraph'; text: string; className?: string }
   | { type: 'html'; content: string } // For raw HTML if needed
+  | { type: 'link'; text: string; href: string; className?: string }
   | {
       type: 'list'
       ordered: boolean
@@ -99,12 +100,7 @@ const renderContentBlock = (
 
     case 'paragraph':
       return (
-        <p
-          key={index}
-          className={
-            block.className || 'text-xl text-gray-700 mb-4 leading-relaxed'
-          }
-        >
+        <p key={index} className={block.className}>
           {block.text}
         </p>
       )
@@ -116,6 +112,22 @@ const renderContentBlock = (
           dangerouslySetInnerHTML={{ __html: block.content }}
           className="mb-4"
         />
+      )
+
+    case 'link':
+      return (
+        <a
+          key={index}
+          href={block.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={
+            block.className ||
+            'text-indigo-600 underline hover:text-indigo-800 break-all'
+          }
+        >
+          {block.text}
+        </a>
       )
 
     case 'list':
