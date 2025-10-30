@@ -4,7 +4,7 @@
     "description": "Vocabulary - Part 1",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-1",
+    "lesson": "lesson-1-vocab",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
@@ -12,7 +12,7 @@
     "description": "Vocabulary - Part 2",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-2",
+    "lesson": "lesson-2-vocab",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
@@ -20,7 +20,7 @@
     "description": "Vocabulary - Part 3",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-3",
+    "lesson": "lesson-3-vocab",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
@@ -28,7 +28,7 @@
     "description": "Reading",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-4",
+    "lesson": "lesson-4-reading",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
@@ -36,95 +36,31 @@
     "description": "Listening",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-5",
+    "lesson": "lesson-5-listening",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
     "title": "Multiple Intelligence Theory - Lesson 6",
-    "description": "Listening Practice",
+    "description": "Shadowing and Writing",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-6",
+    "lesson": "lesson-6-shadowing-and-writing",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
     "title": "Multiple Intelligence Theory - Lesson 7",
-    "description": "Review",
+    "description": "Writing",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-7",
+    "lesson": "lesson-7-writing",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
   },
   {
     "title": "Multiple Intelligence Theory - Lesson 8",
-    "description": "Final Review",
+    "description": "Presentation",
     "course": "advanced-topics",
     "unit": "multiple-intelligence-theory",
-    "lesson": "lesson-8",
+    "lesson": "lesson-8-presentation",
     "bg": "/backgrounds/multiple-intelligence-theory.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 1",
-    "description": "Vocabulary - Part 1",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-1",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 2",
-    "description": "Vocabulary - Part 2",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-2",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 3",
-    "description": "Vocabulary - Part 3",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-3",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 4",
-    "description": "Reading",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-4",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 5",
-    "description": "Listening",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-5",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 6",
-    "description": "Listening Practice",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-6",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 7",
-    "description": "Review",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-7",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
-  },
-  {
-    "title": "Whales: Guardians of the Climate - Lesson 8",
-    "description": "Final Review",
-    "course": "advanced-topics",
-    "unit": "whales-guardians-of-the-climate",
-    "lesson": "lesson-8",
-    "bg": "/backgrounds/whales-guardians-of-the-climate.webp"
   }
 ]

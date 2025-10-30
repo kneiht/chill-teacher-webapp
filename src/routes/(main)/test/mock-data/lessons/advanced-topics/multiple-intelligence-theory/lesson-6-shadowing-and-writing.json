@@ -1,0 +1,82 @@
+{
+  "lesson-6-shadowing-and-writing": {
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 6: Shadowing and Writing",
+
+    "externalContent": {
+      "embedPages": [
+        {
+          "id": "shadowing-exercise",
+          "url": "/embed/multitple-intelligence-theory/shadowing/index.html",
+          "title": "Shadowing Exercise"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Multiple Intelligence Theory",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 6: Shadowing and Writing",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Hãy hoàn thành các nhiệm vụ sau:",
+            "className": "text-3xl text-gray-800 mb-4 text-center"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "Xem video hướng dẫn shadowing.",
+                "children": [
+                  {
+                    "type": "link",
+                    "text": "https://vimeo.com/1128712432/757356c90b?share=copy&fl=sv&fe=ci",
+                    "href": "https://vimeo.com/1128712432/757356c90b?share=copy&fl=sv&fe=ci"
+                  }
+                ]
+              },
+              "Luyện tập shadowing và quay video.",
+              {
+                "text": "Thực hiện bài test multiple intelligences bên dưới và gửi thầy kết quả.",
+                "children": [
+                  {
+                    "type": "link",
+                    "text": "https://personalitymax.com/multiple-intelligences-test/",
+                    "href": "https://personalitymax.com/multiple-intelligences-test/"
+                  }
+                ]
+              }
+            ],
+            "className": "text-3xl text-left text-gray-800 space-y-8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúc các em học tốt!",
+            "className": "text-xl text-gray-600 mt-6 italic text-center"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ],
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "embedPage", "id": "shadowing-exercise" }
+    ]
+  }
+}

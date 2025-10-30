@@ -1,5 +1,5 @@
 {
-  "lesson-2": {
+  "lesson-2-vocab": {
     "background": "/backgrounds/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 2: Vocabulary - Part 2",
@@ -272,74 +272,35 @@
     "externalContent": {
       "videos": [
         {
-          "id": "main-lesson",
+          "id": "youtube-lesson",
           "url": "https://youtu.be/9ha2F_QmtNI",
-          "title": "Video bài giảng"
+          "title": "Lesson Video"
         }
       ]
     },
-    "menu": [
-      {
-        "type": "video",
-        "id": "main-lesson"
-      },
-      {
-        "type": "activity",
-        "id": "vocabulary"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "activity",
-        "id": "matching-game"
-      },
-      {
-        "type": "activity",
-        "id": "memory-game"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-envi"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-vien"
-      },
-      {
-        "type": "activity",
-        "id": "listening-typing"
-      },
-      {
-        "type": "activity",
-        "id": "listening-sentence"
-      },
-      {
-        "type": "activity",
-        "id": "translation-game"
-      },
-      {
-        "type": "activity",
-        "id": "cloze-game"
-      }
-    ],
     "pages": [
       {
         "id": "assignments",
-        "title": "Multiple Intelligence Theory - Lesson 2: Vocabulary - Part 2",
-        "subtitle": "Homework Assignments",
+        "title": "Nhiệm vụ",
         "scrollable": true,
         "content": [
           {
             "type": "heading",
+            "level": 1,
+            "text": "Multiple Intelligence Theory",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 2: Vocabulary - Part 2",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
             "level": 3,
             "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-700 mb-4"
+            "className": "text-3xl text-gray-800 mb-4 text-center"
           },
           {
             "type": "list",
@@ -347,7 +308,7 @@
             "items": [
               "Xem video bài học.",
               "Luyện tập phát âm từ vựng và câu theo video.",
-              "Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả cho giáo viên.",
+              "Luyện tập từ vựng bằng các hoạt động tương tác, chụp kết quả gửi kết quả cho giáo viên, quan trọng là các hoạt động trắc nghiệm và nghe.",
               "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.",
               "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
             ],
@@ -356,11 +317,30 @@
           {
             "type": "paragraph",
             "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic"
+            "className": "text-xl text-gray-600 mt-6 italic text-center"
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
       }
+    ],
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "video", "id": "youtube-lesson" },
+      { "type": "activity", "id": "vocabulary" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "anagram-game" },
+      { "type": "activity", "id": "unjumble-game" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "picture-typing" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "cloze-game" }
     ]
   }
 }

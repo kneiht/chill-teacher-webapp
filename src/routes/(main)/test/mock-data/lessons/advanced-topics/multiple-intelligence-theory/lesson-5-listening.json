@@ -1,9 +1,108 @@
 {
-  "lesson-2": {
-    "background": "/backgrounds/whales-guardians-of-the-climate.webp",
-    "title": "Whales: Guardians of the Climate",
-    "description": "Lesson 2: Vocabulary - Part 2",
+  "lesson-5-listening": {
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 5: Listening",
     "vocab": [
+      {
+        "word": "reflection",
+        "phonics": "/rɪˈflɛkʃən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "suy ngẫm, phản chiếu",
+        "sampleSentence": "Reflection helps us learn from mistakes.",
+        "vietnameseTranslation": "Suy ngẫm giúp chúng ta học từ những sai lầm."
+      },
+      {
+        "word": "independent",
+        "phonics": "/ˌɪndɪˈpɛndənt/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "độc lập",
+        "sampleSentence": "He likes to be independent in his work.",
+        "vietnameseTranslation": "Anh ấy thích làm việc một cách độc lập."
+      },
+      {
+        "word": "naturalist",
+        "phonics": "/ˈnætʃərəlist/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "người nghiên cứu thiên nhiên",
+        "sampleSentence": "Naturalist intelligence is about understanding nature.",
+        "vietnameseTranslation": "Trí thông minh tự nhiên là việc hiểu biết về thiên nhiên."
+      },
+      {
+        "word": "observe",
+        "phonics": "/əbˈzɜrv/",
+        "partOfSpeech": "v",
+        "image": "",
+        "vietnameseMeaning": "quan sát",
+        "sampleSentence": "Scientists observe animals in their natural environment.",
+        "vietnameseTranslation": "Các nhà khoa học quan sát động vật trong môi trường tự nhiên."
+      },
+      {
+        "word": "possibility",
+        "phonics": "/ˌpɑsəˈbɪləti/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "khả năng",
+        "sampleSentence": "There is a possibility of rain tomorrow.",
+        "vietnameseTranslation": "Có khả năng sẽ mưa vào ngày mai."
+      },
+      {
+        "word": "spiritual",
+        "phonics": "/ˈspɪrɪtʃuəl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "thuộc tinh thần, tâm linh",
+        "sampleSentence": "Meditation is often a spiritual practice.",
+        "vietnameseTranslation": "Thiền thường là một hoạt động tinh thần."
+      },
+      {
+        "word": "existential",
+        "phonics": "/ˌɛɡzɪˈstɛnʃəl/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "thuộc về tồn tại",
+        "sampleSentence": "He asked deep existential questions about life.",
+        "vietnameseTranslation": "Anh ấy đặt ra những câu hỏi hiện sinh sâu sắc về cuộc sống."
+      },
+      {
+        "word": "conclusion",
+        "phonics": "/kənˈkluʒən/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "kết luận",
+        "sampleSentence": "The teacher came to the conclusion after the test.",
+        "vietnameseTranslation": "Giáo viên đã đưa ra kết luận sau bài kiểm tra."
+      },
+      {
+        "word": "separate",
+        "phonics": "/ˈsɛpərət/",
+        "partOfSpeech": "adj",
+        "image": "",
+        "vietnameseMeaning": "riêng biệt, tách rời",
+        "sampleSentence": "The two ideas are separate but related.",
+        "vietnameseTranslation": "Hai ý tưởng này tách biệt nhưng có liên quan."
+      },
+      {
+        "word": "strength",
+        "phonics": "/strɛŋkθ/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "điểm mạnh, sức mạnh",
+        "sampleSentence": "Her strength is in problem-solving.",
+        "vietnameseTranslation": "Điểm mạnh của cô ấy là giải quyết vấn đề."
+      },
+      {
+        "word": "opportunity",
+        "phonics": "/ˌɑpərˈtunəti/",
+        "partOfSpeech": "n",
+        "image": "",
+        "vietnameseMeaning": "cơ hội",
+        "sampleSentence": "Education gives everyone an equal opportunity.",
+        "vietnameseTranslation": "Giáo dục mang lại cơ hội bình đẳng cho mọi người."
+      },
       {
         "word": "linguistic",
         "phonics": "/lɪŋˈɡwɪstɪk/",
@@ -188,179 +287,67 @@
     "externalContent": {
       "videos": [
         {
-          "id": "main-lesson",
-          "url": "https://youtu.be/9ha2F_QmtNI",
-          "title": "Video bài giảng"
+          "id": "lesson-video",
+          "url": "https://youtu.be/GIZX0HYxCYw",
+          "title": "Video Overview"
+        }
+      ],
+      "embedPages": [
+        {
+          "id": "listening-exercise",
+          "url": "/embed/multitple-intelligence-theory/listening/index.html",
+          "title": "Listening Exercise"
         }
       ]
     },
     "pages": [
       {
         "id": "assignments",
-        "title": "Whales: Guardians of the Climate - Lesson 2: Vocabulary - Part 2",
-        "subtitle": "Homework Assignments",
+        "title": "Nhiệm vụ",
         "scrollable": true,
         "content": [
           {
             "type": "heading",
+            "level": 1,
+            "text": "Multiple Intelligence Theory",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 5: Listening",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
             "level": 3,
             "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-700 mb-4"
+            "className": "text-3xl text-gray-800 mb-4 text-center"
           },
           {
             "type": "list",
             "ordered": true,
             "items": [
-              "Xem video bài học.",
-              "Luyện tập phát âm từ vựng và câu theo video.",
-              "Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả cho giáo viên.",
-              "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.",
-              "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+              "Xem lại flashcards để nhớ từ vựng.",
+              "Xem video tóm tắt bài học.",
+              "Làm các bài tập nghe hiểu. Chụp điểm số gửi giáo viên."
             ],
             "className": "text-3xl text-left text-gray-800 space-y-8"
           },
           {
             "type": "paragraph",
             "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic"
+            "className": "text-xl text-gray-600 mt-6 italic text-center"
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
       }
     ],
     "menu": [
-      {
-        "type": "video",
-        "id": "main-lesson"
-      },
-      {
-        "type": "activity",
-        "id": "vocabulary"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "activity",
-        "id": "matching-game"
-      },
-      {
-        "type": "activity",
-        "id": "memory-game"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-envi"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-vien"
-      },
-      {
-        "type": "activity",
-        "id": "listening-typing"
-      },
-      {
-        "type": "activity",
-        "id": "listening-sentence"
-      },
-      {
-        "type": "activity",
-        "id": "translation-game"
-      },
-      {
-        "type": "activity",
-        "id": "cloze-game"
-      }
-    ],
-    "clozeData": {
-      "sentences": [
-        {
-          "sentence": "Her research focuses on _____ changes in immigrant communities, such as how they adopt new words and accents, comparing the evolution of their language usage over generations.",
-          "word": "linguistic"
-        },
-        {
-          "sentence": "The team scheduled a _____ to resolve the budget concerns, hoping to reach an agreement, with everyone invited to talk openly around the conference table.",
-          "word": "discussion"
-        },
-        {
-          "sentence": "Students mapped the rainfall _____ across the region to see where it rains most and least, charting recurring shapes on their climate graphs.",
-          "word": "pattern"
-        },
-        {
-          "sentence": "Daily _____ exercises helped the apprentices adapt quickly by tackling tricky puzzles, training them to analyze each challenge step by step.",
-          "word": "problem-solving"
-        },
-        {
-          "sentence": "Pilots train with _____ simulations to improve navigation, learning to judge distances and directions visually, so they can picture three-dimensional routes.",
-          "word": "spatial"
-        },
-        {
-          "sentence": "The illustrator's _____ brought the fantasy world to life, filling it with magical creatures, vivid scenes, and original story ideas.",
-          "word": "imagination"
-        },
-        {
-          "sentence": "Gymnasts rely on their _____ awareness during complex flips, knowing exactly where their arms and legs are, coordinating muscle memory with body position.",
-          "word": "bodily-kinesthetic"
-        },
-        {
-          "sentence": "The team proposed a _____ marketing strategy for local shops, using bright colors and catchy slogans, brainstorming fresh ideas no one had tried before.",
-          "word": "creative"
-        },
-        {
-          "sentence": "Her _____ approach helped mediate the conflict between departments, listening carefully to both sides, reading emotions, and building positive relationships.",
-          "word": "interpersonal"
-        },
-        {
-          "sentence": "He kept a travel _____ to document each coastal village he visited, writing down stories and sketches, adding daily entries like a personal diary.",
-          "word": "journal"
-        },
-        {
-          "sentence": "The policy analyst warned about the long-term _____ of ignoring the report, saying it could hurt future funding and create serious consequences.",
-          "word": "implication"
-        },
-        {
-          "sentence": "Researchers debated whether _____ can be expanded through training, like learning new ways to solve problems, improving overall mental ability.",
-          "word": "intelligence"
-        },
-        {
-          "sentence": "The seminar explored a new _____ about how memories form, suggesting they are rebuilt each time we recall them, outlining a fresh scientific explanation.",
-          "word": "theory"
-        },
-        {
-          "sentence": "The study compared each child's _____ with their classroom performance, looking at test scores and grades, noting how the standardized number matched achievement.",
-          "word": "intelligence quotient"
-        },
-        {
-          "sentence": "Street food stalls are increasingly _____ among visiting tourists, who love trying local snacks, posting rave reviews on social media.",
-          "word": "popular"
-        },
-        {
-          "sentence": "Daily podcasts strengthened her _____ before the job interview, helping her speak more fluently, expand vocabulary, and polish pronunciation.",
-          "word": "language skills"
-        },
-        {
-          "sentence": "Chess clubs nurture students' _____ through strategic play, teaching them to plan several moves ahead and calculate numerical advantages.",
-          "word": "logical-mathematical skills"
-        },
-        {
-          "sentence": "That proposal takes a _____ view of what success looks like, focusing only on money and ignoring happiness, community impact, or personal growth.",
-          "word": "narrow"
-        },
-        {
-          "sentence": "The _____ assigned a field project instead of a final exam, wanting students to learn by doing real-world tasks, as the university instructor valued hands-on experience.",
-          "word": "professor"
-        },
-        {
-          "sentence": "Pairing seniors with mentors proved an _____ way to boost retention, keeping new employees from quitting because the strategy actually produced measurable results.",
-          "word": "effective"
-        }
-      ]
-    }
+      { "type": "page", "id": "assignments" },
+      { "type": "video", "id": "lesson-video" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "embedPage", "id": "listening-exercise" }
+    ]
   }
 }

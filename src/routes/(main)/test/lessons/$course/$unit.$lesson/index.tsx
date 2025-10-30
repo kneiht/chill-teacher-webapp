@@ -121,8 +121,9 @@ function RouteComponent() {
           <div className="flex flex-col items-center justify-start h-full text-center">
             <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4 mt-6 text-center leading-tight">
               {title}
+              <br />
+              {description}
             </h1>
-            <p className="text-2xl text-gray-700 mb-8">{description}</p>
 
             <div className="grid grid-cols-2 gap-x-20 gap-y-7 max-w-4xl">
               {allActivities.map((item) => (

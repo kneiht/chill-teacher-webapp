@@ -1,8 +1,8 @@
 {
-  "lesson-7": {
-    "background": "/backgrounds/whales-guardians-of-the-climate.webp",
-    "title": "Whales: Guardians of the Climate",
-    "description": "Lesson 7: Review",
+  "lesson-4-reading": {
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 4: Reading",
     "vocab": [
       {
         "word": "reflection",
@@ -284,139 +284,157 @@
         "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
       }
     ],
-    "externalContent": {
-      "videos": [
+    "readingData": {
+      "title": "Applying Multiple Intelligence Theory in the Classroom",
+      "passage": [
         {
-          "id": "main-lesson",
-          "url": "https://youtu.be/GIZX0HYxCYw",
-          "title": "Video bài giảng"
+          "content": "Multiple Intelligence (MI) theory suggests that learners have different strengths, such as linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, and naturalist intelligences. Instead of assuming one fixed measure of intelligence, MI theory encourages teachers to design varied activities that reach many kinds of minds."
+        },
+        {
+          "content": "In practice, teachers can rotate tasks to include speaking and writing for linguistic learners, problem-solving games for logical thinkers, drawing and mapping for spatial learners, and rhythm or song for musical learners. Group projects support interpersonal skills, while journals and reflection build intrapersonal awareness. Outdoor observations, experiments, and nature logs engage naturalist intelligence. When these activities are combined, students who might be quiet in one format can shine in another."
+        },
+        {
+          "heading": "Benefits and Considerations",
+          "content": "Classrooms using MI-informed lessons often report higher engagement, more equitable participation, and deeper retention. However, MI is not a rigid labeling system. Students are not confined to one type; they can develop multiple areas through practice and opportunity. Effective implementation focuses on offering diverse entry points and giving students choices, rather than sorting them by a single category."
+        },
+        {
+          "heading": "Designing a Balanced Lesson",
+          "content": "A balanced lesson might begin with a short reading and discussion (linguistic/interpersonal), include a concept map (spatial), a quick data classification task (logical-mathematical), a movement-based activity or role-play (bodily-kinesthetic), and end with a reflection prompt (intrapersonal). Over a unit, teachers can rotate through different emphases so that each intelligence is practiced multiple times."
+        },
+        {
+          "heading": "Conclusion",
+          "content": "MI theory does not replace core skills; instead, it broadens the pathways for mastering them. By acknowledging varied strengths, teachers create inclusive environments that help more students build confidence and achieve meaningful learning outcomes."
         }
+      ],
+      "questions": {
+        "singleChoice": [
+          {
+            "id": "sc1",
+            "prompt": "What is the main idea behind Multiple Intelligence theory?",
+            "options": [
+              {
+                "value": "one-score",
+                "label": "Intelligence should be measured by a single score."
+              },
+              {
+                "value": "varied-strengths",
+                "label": "Learners have varied strengths that can be developed."
+              },
+              {
+                "value": "music-only",
+                "label": "Music is the most important form of intelligence."
+              }
+            ],
+            "correct": "varied-strengths"
+          },
+          {
+            "id": "sc2",
+            "prompt": "Which classroom approach best reflects MI theory?",
+            "options": [
+              {
+                "value": "same-task",
+                "label": "Use the same task for every lesson."
+              },
+              {
+                "value": "varied-tasks",
+                "label": "Rotate varied activities to engage different intelligences."
+              },
+              {
+                "value": "labeling",
+                "label": "Assign each student one intelligence and stick to it."
+              }
+            ],
+            "correct": "varied-tasks"
+          }
+        ],
+        "tfng": [
+          {
+            "id": "tf1",
+            "statement": "MI theory argues that students can develop multiple intelligences.",
+            "correct": "true"
+          },
+          {
+            "id": "tf2",
+            "statement": "MI implementation requires labeling students permanently.",
+            "correct": "false"
+          },
+          {
+            "id": "tf3",
+            "statement": "The passage claims MI eliminates the need for core reading skills.",
+            "correct": "not_given"
+          }
+        ],
+        "matching": {
+          "questions": [
+            {
+              "id": "m1",
+              "statement": "Activity for spatial intelligence",
+              "correct": "option2"
+            },
+            {
+              "id": "m2",
+              "statement": "Activity for intrapersonal intelligence",
+              "correct": "option3"
+            },
+            {
+              "id": "m3",
+              "statement": "Activity for interpersonal intelligence",
+              "correct": "option1"
+            }
+          ],
+          "options": [
+            { "value": "option1", "label": "Small-group discussion" },
+            { "value": "option2", "label": "Concept map / visual organizer" },
+            { "value": "option3", "label": "Personal reflection journal" },
+            { "value": "option4", "label": "Outdoor nature log" }
+          ]
+        },
+        "summary": [
+          {
+            "id": "sum1",
+            "prompt": "Complete: MI encourages offering diverse ______ points to learning.",
+            "answers": ["entry", "entry points"]
+          },
+          {
+            "id": "sum2",
+            "prompt": "Complete: Students are not ______ to one intelligence type.",
+            "answers": ["confined", "limited"]
+          }
+        ],
+        "shortAnswer": [
+          {
+            "id": "sa1",
+            "prompt": "Design a short activity sequence that touches at least three intelligences."
+          },
+          {
+            "id": "sa2",
+            "prompt": "How would you give students choice while keeping lesson goals clear?"
+          }
+        ]
+      }
+    },
+    "clozeData": {
+      "paragraph": "Teachers can combine activities for different intelligences. A short reading and writing task supports _____ learners. A concept map benefits _____ thinkers. Adding songs or rhythm helps _____ intelligence. Small-group projects develop _____ skills, while a reflection journal strengthens _____ awareness.",
+      "words": [
+        "linguistic",
+        "spatial",
+        "musical",
+        "interpersonal",
+        "intrapersonal"
       ]
     },
-    "pages": [
-      {
-        "id": "assignments",
-        "title": "Whales: Guardians of the Climate - Lesson 7: Review",
-        "subtitle": "Homework Assignments",
-        "scrollable": true,
-        "content": [
-          {
-            "type": "heading",
-            "level": 3,
-            "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-700 mb-4"
-          },
-          {
-            "type": "list",
-            "ordered": true,
-            "items": [
-              "Xem video bài học.",
-              "Luyện tập phát âm từ vựng và câu theo video.",
-              "Luyện tập từ vựng bằng các game tương tác, chụp kết quả gửi kết quả cho giáo viên.",
-              "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên.",
-              "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
-            ],
-            "className": "text-3xl text-left text-gray-800 space-y-8"
-          },
-          {
-            "type": "paragraph",
-            "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic"
-          }
-        ],
-        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
-      },
-      {
-        "id": "guide",
-        "title": "Writing Guide: Whales & Climate",
-        "subtitle": "Hướng dẫn",
-        "scrollable": true,
-        "content": [
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Writing Guide: Whales & Climate"
-          },
-          {
-            "type": "paragraph",
-            "text": "Detailed guide content for Lesson 7: Review"
-          }
-        ],
-        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
-      }
-    ],
-    "menu": [
-      {
-        "type": "video",
-        "id": "main-lesson"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "activity",
-        "id": "candy-crush"
-      },
-      {
-        "type": "activity",
-        "id": "matching-game"
-      },
-      {
-        "type": "activity",
-        "id": "memory-game"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-envi"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-vien"
-      },
-      {
-        "type": "activity",
-        "id": "listening-typing"
-      },
-      {
-        "type": "activity",
-        "id": "listening-sentence"
-      },
-      {
-        "type": "activity",
-        "id": "translation-game"
-      },
-      {
-        "type": "page",
-        "id": "guide"
-      }
-    ],
     "questions": [
       {
         "type": "multipleChoice",
         "question": "\"reflection\" nghĩa là gì?",
         "correctAnswer": "suy ngẫm, phản chiếu",
-        "options": [
-          "suy ngẫm, phản chiếu",
-          "độc lập",
-          "quan sát",
-          "kết luận"
-        ]
+        "options": ["suy ngẫm, phản chiếu", "độc lập", "quan sát", "kết luận"]
       },
       {
         "type": "multipleChoice",
         "question": "\"independent\" nghĩa là gì?",
         "correctAnswer": "độc lập",
-        "options": [
-          "độc lập",
-          "riêng biệt",
-          "sáng tạo",
-          "hiệu quả"
-        ]
+        "options": ["độc lập", "riêng biệt", "sáng tạo", "hiệu quả"]
       },
       {
         "type": "multipleChoice",
@@ -433,23 +451,13 @@
         "type": "multipleChoice",
         "question": "\"observe\" nghĩa là gì?",
         "correctAnswer": "quan sát",
-        "options": [
-          "quan sát",
-          "suy ngẫm",
-          "thảo luận",
-          "giải quyết vấn đề"
-        ]
+        "options": ["quan sát", "suy ngẫm", "thảo luận", "giải quyết vấn đề"]
       },
       {
         "type": "multipleChoice",
         "question": "\"possibility\" nghĩa là gì?",
         "correctAnswer": "khả năng",
-        "options": [
-          "khả năng",
-          "cơ hội",
-          "điểm mạnh",
-          "mẫu"
-        ]
+        "options": ["khả năng", "cơ hội", "điểm mạnh", "mẫu"]
       },
       {
         "type": "multipleChoice",
@@ -477,45 +485,25 @@
         "type": "multipleChoice",
         "question": "\"conclusion\" nghĩa là gì?",
         "correctAnswer": "kết luận",
-        "options": [
-          "kết luận",
-          "thảo luận",
-          "hàm ý",
-          "lý thuyết"
-        ]
+        "options": ["kết luận", "thảo luận", "hàm ý", "lý thuyết"]
       },
       {
         "type": "multipleChoice",
         "question": "\"separate\" nghĩa là gì?",
         "correctAnswer": "riêng biệt, tách rời",
-        "options": [
-          "riêng biệt, tách rời",
-          "độc lập",
-          "hạn hẹp",
-          "phổ biến"
-        ]
+        "options": ["riêng biệt, tách rời", "độc lập", "hạn hẹp", "phổ biến"]
       },
       {
         "type": "multipleChoice",
         "question": "\"strength\" nghĩa là gì?",
         "correctAnswer": "điểm mạnh, sức mạnh",
-        "options": [
-          "điểm mạnh, sức mạnh",
-          "khả năng",
-          "cơ hội",
-          "kỹ năng"
-        ]
+        "options": ["điểm mạnh, sức mạnh", "khả năng", "cơ hội", "kỹ năng"]
       },
       {
         "type": "multipleChoice",
         "question": "\"opportunity\" nghĩa là gì?",
         "correctAnswer": "cơ hội",
-        "options": [
-          "cơ hội",
-          "khả năng",
-          "điểm mạnh",
-          "kết luận"
-        ]
+        "options": ["cơ hội", "khả năng", "điểm mạnh", "kết luận"]
       },
       {
         "type": "multipleChoice",
@@ -532,34 +520,19 @@
         "type": "multipleChoice",
         "question": "\"discussion\" nghĩa là gì?",
         "correctAnswer": "thảo luận",
-        "options": [
-          "thảo luận",
-          "kết luận",
-          "hàm ý",
-          "suy ngẫm"
-        ]
+        "options": ["thảo luận", "kết luận", "hàm ý", "suy ngẫm"]
       },
       {
         "type": "multipleChoice",
         "question": "\"pattern\" nghĩa là gì?",
         "correctAnswer": "mẫu, khuôn mẫu",
-        "options": [
-          "mẫu, khuôn mẫu",
-          "lý thuyết",
-          "trí tưởng tượng",
-          "kỹ năng"
-        ]
+        "options": ["mẫu, khuôn mẫu", "lý thuyết", "trí tưởng tượng", "kỹ năng"]
       },
       {
         "type": "multipleChoice",
         "question": "\"problem-solving\" nghĩa là gì?",
         "correctAnswer": "giải quyết vấn đề",
-        "options": [
-          "giải quyết vấn đề",
-          "thảo luận",
-          "quan sát",
-          "suy ngẫm"
-        ]
+        "options": ["giải quyết vấn đề", "thảo luận", "quan sát", "suy ngẫm"]
       },
       {
         "type": "multipleChoice",
@@ -576,12 +549,7 @@
         "type": "multipleChoice",
         "question": "\"imagination\" nghĩa là gì?",
         "correctAnswer": "trí tưởng tượng",
-        "options": [
-          "trí tưởng tượng",
-          "trí thông minh",
-          "sáng tạo",
-          "mẫu"
-        ]
+        "options": ["trí tưởng tượng", "trí thông minh", "sáng tạo", "mẫu"]
       },
       {
         "type": "multipleChoice",
@@ -598,12 +566,7 @@
         "type": "multipleChoice",
         "question": "\"creative\" nghĩa là gì?",
         "correctAnswer": "sáng tạo",
-        "options": [
-          "sáng tạo",
-          "hiệu quả",
-          "phổ biến",
-          "độc lập"
-        ]
+        "options": ["sáng tạo", "hiệu quả", "phổ biến", "độc lập"]
       },
       {
         "type": "multipleChoice",
@@ -620,48 +583,28 @@
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "reflection",
-        "options": [
-          "reflection",
-          "independent",
-          "separate",
-          "creative"
-        ],
+        "options": ["reflection", "independent", "separate", "creative"],
         "wordToSpeak": "reflection"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "naturalist",
-        "options": [
-          "naturalist",
-          "professor",
-          "theory",
-          "journal"
-        ],
+        "options": ["naturalist", "professor", "theory", "journal"],
         "wordToSpeak": "naturalist"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "observe",
-        "options": [
-          "observe",
-          "discussion",
-          "conclusion",
-          "implication"
-        ],
+        "options": ["observe", "discussion", "conclusion", "implication"],
         "wordToSpeak": "observe"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "spiritual",
-        "options": [
-          "spiritual",
-          "existential",
-          "spatial",
-          "linguistic"
-        ],
+        "options": ["spiritual", "existential", "spatial", "linguistic"],
         "wordToSpeak": "spiritual"
       },
       {
@@ -680,36 +623,21 @@
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "pattern",
-        "options": [
-          "pattern",
-          "strength",
-          "journal",
-          "theory"
-        ],
+        "options": ["pattern", "strength", "journal", "theory"],
         "wordToSpeak": "pattern"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "spatial",
-        "options": [
-          "spatial",
-          "spiritual",
-          "separate",
-          "popular"
-        ],
+        "options": ["spatial", "spiritual", "separate", "popular"],
         "wordToSpeak": "spatial"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "creative",
-        "options": [
-          "creative",
-          "effective",
-          "popular",
-          "narrow"
-        ],
+        "options": ["creative", "effective", "popular", "narrow"],
         "wordToSpeak": "creative"
       },
       {
@@ -728,24 +656,14 @@
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "possibility",
-        "options": [
-          "possibility",
-          "opportunity",
-          "strength",
-          "implication"
-        ],
+        "options": ["possibility", "opportunity", "strength", "implication"],
         "wordToSpeak": "possibility"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "professor",
-        "options": [
-          "professor",
-          "naturalist",
-          "theory",
-          "journal"
-        ],
+        "options": ["professor", "naturalist", "theory", "journal"],
         "wordToSpeak": "professor"
       },
       {
@@ -764,36 +682,21 @@
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "imagination",
-        "options": [
-          "imagination",
-          "intelligence",
-          "implication",
-          "discussion"
-        ],
+        "options": ["imagination", "intelligence", "implication", "discussion"],
         "wordToSpeak": "imagination"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "conclusion",
-        "options": [
-          "conclusion",
-          "discussion",
-          "reflection",
-          "observation"
-        ],
+        "options": ["conclusion", "discussion", "reflection", "observation"],
         "wordToSpeak": "conclusion"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "effective",
-        "options": [
-          "effective",
-          "creative",
-          "popular",
-          "separate"
-        ],
+        "options": ["effective", "creative", "popular", "separate"],
         "wordToSpeak": "effective"
       },
       {
@@ -875,45 +778,25 @@
         "type": "multipleChoice",
         "question": "\"journal\" nghĩa là gì?",
         "correctAnswer": "nhật ký, tạp chí",
-        "options": [
-          "nhật ký, tạp chí",
-          "lý thuyết",
-          "mẫu",
-          "hàm ý"
-        ]
+        "options": ["nhật ký, tạp chí", "lý thuyết", "mẫu", "hàm ý"]
       },
       {
         "type": "multipleChoice",
         "question": "\"implication\" nghĩa là gì?",
         "correctAnswer": "hàm ý, ngụ ý, ẩn ý",
-        "options": [
-          "hàm ý, ngụ ý, ẩn ý",
-          "kết luận",
-          "thảo luận",
-          "suy ngẫm"
-        ]
+        "options": ["hàm ý, ngụ ý, ẩn ý", "kết luận", "thảo luận", "suy ngẫm"]
       },
       {
         "type": "multipleChoice",
         "question": "\"intelligence\" nghĩa là gì?",
         "correctAnswer": "trí thông minh",
-        "options": [
-          "trí thông minh",
-          "trí tưởng tượng",
-          "sáng tạo",
-          "kỹ năng"
-        ]
+        "options": ["trí thông minh", "trí tưởng tượng", "sáng tạo", "kỹ năng"]
       },
       {
         "type": "multipleChoice",
         "question": "\"theory\" nghĩa là gì?",
         "correctAnswer": "lý thuyết",
-        "options": [
-          "lý thuyết",
-          "kết luận",
-          "hàm ý",
-          "mẫu"
-        ]
+        "options": ["lý thuyết", "kết luận", "hàm ý", "mẫu"]
       },
       {
         "type": "multipleChoice",
@@ -930,12 +813,7 @@
         "type": "multipleChoice",
         "question": "\"narrow\" nghĩa là gì?",
         "correctAnswer": "hạn hẹp",
-        "options": [
-          "hạn hẹp",
-          "riêng biệt",
-          "phổ biến",
-          "độc lập"
-        ]
+        "options": ["hạn hẹp", "riêng biệt", "phổ biến", "độc lập"]
       },
       {
         "type": "multipleChoice",
@@ -952,12 +830,7 @@
         "type": "multipleChoice",
         "question": "\"effective\" nghĩa là gì?",
         "correctAnswer": "hiệu quả",
-        "options": [
-          "hiệu quả",
-          "sáng tạo",
-          "phổ biến",
-          "độc lập"
-        ]
+        "options": ["hiệu quả", "sáng tạo", "phổ biến", "độc lập"]
       },
       {
         "type": "fillBlank",
@@ -973,12 +846,7 @@
         "type": "multipleChoice",
         "question": "___ helps us learn from mistakes.",
         "correctAnswer": "Reflection",
-        "options": [
-          "Reflection",
-          "Discussion",
-          "Journal",
-          "Pattern"
-        ]
+        "options": ["Reflection", "Discussion", "Journal", "Pattern"]
       },
       {
         "type": "fillBlank",
@@ -989,12 +857,7 @@
         "type": "multipleChoice",
         "question": "He likes to be ___ in his work.",
         "correctAnswer": "independent",
-        "options": [
-          "independent",
-          "creative",
-          "popular",
-          "effective"
-        ]
+        "options": ["independent", "creative", "popular", "effective"]
       },
       {
         "type": "fillBlank",
@@ -1005,12 +868,7 @@
         "type": "multipleChoice",
         "question": "___ intelligence is about understanding nature.",
         "correctAnswer": "Naturalist",
-        "options": [
-          "Naturalist",
-          "Linguistic",
-          "Spatial",
-          "Interpersonal"
-        ]
+        "options": ["Naturalist", "Linguistic", "Spatial", "Interpersonal"]
       },
       {
         "type": "fillBlank",
@@ -1021,12 +879,7 @@
         "type": "multipleChoice",
         "question": "Scientists ___ animals in their natural environment.",
         "correctAnswer": "observe",
-        "options": [
-          "observe",
-          "discuss",
-          "solve",
-          "create"
-        ]
+        "options": ["observe", "discuss", "solve", "create"]
       },
       {
         "type": "fillBlank",
@@ -1037,12 +890,7 @@
         "type": "multipleChoice",
         "question": "There is a ___ of rain tomorrow.",
         "correctAnswer": "possibility",
-        "options": [
-          "possibility",
-          "opportunity",
-          "strength",
-          "pattern"
-        ]
+        "options": ["possibility", "opportunity", "strength", "pattern"]
       },
       {
         "type": "fillBlank",
@@ -1053,12 +901,7 @@
         "type": "multipleChoice",
         "question": "Meditation is often a ___ practice.",
         "correctAnswer": "spiritual",
-        "options": [
-          "spiritual",
-          "creative",
-          "narrow",
-          "popular"
-        ]
+        "options": ["spiritual", "creative", "narrow", "popular"]
       },
       {
         "type": "fillBlank",
@@ -1069,12 +912,7 @@
         "type": "multipleChoice",
         "question": "He asked deep ___ questions about life.",
         "correctAnswer": "existential",
-        "options": [
-          "existential",
-          "spiritual",
-          "linguistic",
-          "effective"
-        ]
+        "options": ["existential", "spiritual", "linguistic", "effective"]
       },
       {
         "type": "fillBlank",
@@ -1085,12 +923,7 @@
         "type": "multipleChoice",
         "question": "The teacher came to the ___ after the test.",
         "correctAnswer": "conclusion",
-        "options": [
-          "conclusion",
-          "discussion",
-          "implication",
-          "reflection"
-        ]
+        "options": ["conclusion", "discussion", "implication", "reflection"]
       },
       {
         "type": "fillBlank",
@@ -1101,12 +934,7 @@
         "type": "multipleChoice",
         "question": "The two ideas are ___ but related.",
         "correctAnswer": "separate",
-        "options": [
-          "separate",
-          "creative",
-          "independent",
-          "popular"
-        ]
+        "options": ["separate", "creative", "independent", "popular"]
       },
       {
         "type": "fillBlank",
@@ -1117,12 +945,7 @@
         "type": "multipleChoice",
         "question": "Her ___ is in problem-solving.",
         "correctAnswer": "strength",
-        "options": [
-          "strength",
-          "opportunity",
-          "imagination",
-          "pattern"
-        ]
+        "options": ["strength", "opportunity", "imagination", "pattern"]
       },
       {
         "type": "fillBlank",
@@ -1133,12 +956,7 @@
         "type": "multipleChoice",
         "question": "Education gives everyone an equal ___.",
         "correctAnswer": "opportunity",
-        "options": [
-          "opportunity",
-          "possibility",
-          "strength",
-          "pattern"
-        ]
+        "options": ["opportunity", "possibility", "strength", "pattern"]
       },
       {
         "type": "fillBlank",
@@ -1149,12 +967,7 @@
         "type": "multipleChoice",
         "question": "___ intelligence involves reading and writing.",
         "correctAnswer": "Linguistic",
-        "options": [
-          "Linguistic",
-          "Spatial",
-          "Naturalist",
-          "Interpersonal"
-        ]
+        "options": ["Linguistic", "Spatial", "Naturalist", "Interpersonal"]
       },
       {
         "type": "fillBlank",
@@ -1165,12 +978,7 @@
         "type": "multipleChoice",
         "question": "We had a ___ about the project.",
         "correctAnswer": "discussion",
-        "options": [
-          "discussion",
-          "conclusion",
-          "reflection",
-          "implication"
-        ]
+        "options": ["discussion", "conclusion", "reflection", "implication"]
       },
       {
         "type": "fillBlank",
@@ -1181,12 +989,7 @@
         "type": "multipleChoice",
         "question": "Children quickly notice ___ in language.",
         "correctAnswer": "patterns",
-        "options": [
-          "patterns",
-          "implications",
-          "journals",
-          "theories"
-        ]
+        "options": ["patterns", "implications", "journals", "theories"]
       },
       {
         "type": "fillBlank",
@@ -1213,12 +1016,7 @@
         "type": "multipleChoice",
         "question": "Architects need strong ___ intelligence.",
         "correctAnswer": "spatial",
-        "options": [
-          "spatial",
-          "linguistic",
-          "naturalist",
-          "interpersonal"
-        ]
+        "options": ["spatial", "linguistic", "naturalist", "interpersonal"]
       },
       {
         "type": "fillBlank",
@@ -1229,12 +1027,7 @@
         "type": "multipleChoice",
         "question": "Children often have a strong ___.",
         "correctAnswer": "imagination",
-        "options": [
-          "imagination",
-          "discussion",
-          "journal",
-          "theory"
-        ]
+        "options": ["imagination", "discussion", "journal", "theory"]
       },
       {
         "type": "fillBlank",
@@ -1245,12 +1038,7 @@
         "type": "multipleChoice",
         "question": "Dancers use their ___ intelligence.",
         "correctAnswer": "bodily-kinesthetic",
-        "options": [
-          "bodily-kinesthetic",
-          "spatial",
-          "linguistic",
-          "naturalist"
-        ]
+        "options": ["bodily-kinesthetic", "spatial", "linguistic", "naturalist"]
       },
       {
         "type": "fillBlank",
@@ -1261,12 +1049,7 @@
         "type": "multipleChoice",
         "question": "She is very ___ with her art projects.",
         "correctAnswer": "creative",
-        "options": [
-          "creative",
-          "independent",
-          "popular",
-          "effective"
-        ]
+        "options": ["creative", "independent", "popular", "effective"]
       },
       {
         "type": "fillBlank",
@@ -1277,12 +1060,7 @@
         "type": "multipleChoice",
         "question": "Teachers need strong ___ skills.",
         "correctAnswer": "interpersonal",
-        "options": [
-          "interpersonal",
-          "linguistic",
-          "spatial",
-          "creative"
-        ]
+        "options": ["interpersonal", "linguistic", "spatial", "creative"]
       },
       {
         "type": "fillBlank",
@@ -1293,12 +1071,7 @@
         "type": "multipleChoice",
         "question": "She writes in her ___ every night.",
         "correctAnswer": "journal",
-        "options": [
-          "journal",
-          "pattern",
-          "theory",
-          "conclusion"
-        ]
+        "options": ["journal", "pattern", "theory", "conclusion"]
       },
       {
         "type": "fillBlank",
@@ -1309,12 +1082,7 @@
         "type": "multipleChoice",
         "question": "The teacher explained the ___ of the new rule.",
         "correctAnswer": "implications",
-        "options": [
-          "implications",
-          "conclusions",
-          "patterns",
-          "discussions"
-        ]
+        "options": ["implications", "conclusions", "patterns", "discussions"]
       },
       {
         "type": "fillBlank",
@@ -1325,12 +1093,7 @@
         "type": "multipleChoice",
         "question": "Emotional ___ is as important as IQ.",
         "correctAnswer": "intelligence",
-        "options": [
-          "intelligence",
-          "imagination",
-          "strength",
-          "opportunity"
-        ]
+        "options": ["intelligence", "imagination", "strength", "opportunity"]
       },
       {
         "type": "fillBlank",
@@ -1341,12 +1104,7 @@
         "type": "multipleChoice",
         "question": "The students studied the ___ of evolution.",
         "correctAnswer": "theory",
-        "options": [
-          "theory",
-          "journal",
-          "pattern",
-          "implication"
-        ]
+        "options": ["theory", "journal", "pattern", "implication"]
       },
       {
         "type": "fillBlank",
@@ -1373,12 +1131,7 @@
         "type": "multipleChoice",
         "question": "Football is very ___ in Vietnam.",
         "correctAnswer": "popular",
-        "options": [
-          "popular",
-          "creative",
-          "effective",
-          "narrow"
-        ]
+        "options": ["popular", "creative", "effective", "narrow"]
       },
       {
         "type": "fillBlank",
@@ -1389,12 +1142,7 @@
         "type": "multipleChoice",
         "question": "Reading books helps improve ___.",
         "correctAnswer": "language skills",
-        "options": [
-          "language skills",
-          "imagination",
-          "pattern",
-          "journal"
-        ]
+        "options": ["language skills", "imagination", "pattern", "journal"]
       },
       {
         "type": "fillBlank",
@@ -1421,12 +1169,7 @@
         "type": "multipleChoice",
         "question": "That is a ___ definition of intelligence.",
         "correctAnswer": "narrow",
-        "options": [
-          "narrow",
-          "popular",
-          "creative",
-          "effective"
-        ]
+        "options": ["narrow", "popular", "creative", "effective"]
       },
       {
         "type": "fillBlank",
@@ -1437,12 +1180,7 @@
         "type": "multipleChoice",
         "question": "The ___ gave a lecture on psychology.",
         "correctAnswer": "professor",
-        "options": [
-          "professor",
-          "naturalist",
-          "student",
-          "journal"
-        ]
+        "options": ["professor", "naturalist", "student", "journal"]
       },
       {
         "type": "fillBlank",
@@ -1453,18 +1191,85 @@
         "type": "multipleChoice",
         "question": "Group work can be very ___ for learning.",
         "correctAnswer": "effective",
-        "options": [
-          "effective",
-          "creative",
-          "popular",
-          "narrow"
-        ]
+        "options": ["effective", "creative", "popular", "narrow"]
       },
       {
         "type": "fillBlank",
         "question": "Group work can be very ___ for learning.",
         "correctAnswer": "effective"
       }
+    ],
+
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Multiple Intelligence Theory",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 4: Reading",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Hãy hoàn thành các nhiệm vụ sau:",
+            "className": "text-3xl text-gray-800 mb-4 text-center"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Ôn từ vựng bằng Flashcards.",
+              "Chơi game luyện từ vựng.",
+              "Làm bài điền từ vào đoạn văn.",
+              "Xem video bài học.",
+              "Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên.",
+              "Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và ngữ điệu khi đọc."
+            ],
+            "className": "text-3xl text-left text-gray-800 space-y-8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúc các em học tốt!",
+            "className": "text-xl text-gray-600 mt-6 italic text-center"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "reading-lesson-video",
+          "url": "https://youtu.be/rI2JW7NjKsg",
+          "title": "Video bài giảng"
+        }
+      ],
+      "googleSlides": [
+        {
+          "id": "reading-slides",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTz5J7jQyzAyUvHhHm3FjhvHNv9zrHhhLl1Am7TPfnoQ7G0fIVAVh70bezfy3xch7aKUHcmPK4k4NiL/pubembed",
+          "title": "Bài đọc"
+        }
+      ]
+    },
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "candy-crush" },
+      { "type": "activity", "id": "cloze-game" },
+      { "type": "video", "id": "reading-lesson-video" },
+      { "type": "googleSlide", "id": "reading-slides" },
+      { "type": "activity", "id": "reading-comprehension" }
     ]
   }
 }

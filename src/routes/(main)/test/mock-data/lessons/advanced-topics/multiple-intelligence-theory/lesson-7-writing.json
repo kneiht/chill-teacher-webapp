@@ -1,0 +1,367 @@
+{
+  "lesson-7-writing": {
+    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "title": "Multiple Intelligence Theory",
+    "description": "Lesson 7: Writing",
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Multiple Intelligence Theory",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 7: Writing",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Hãy hoàn thành các nhiệm vụ sau:",
+            "className": "text-3xl text-gray-800 mb-4 text-center"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              {
+                "text": "Xem video hướng dẫn viết.",
+                "children": [
+                  {
+                    "type": "link",
+                    "text": "https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci",
+                    "href": "https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci"
+                  }
+                ]
+              },
+              "Viết bài vào vở và chụp hình bài viết cho thầy (Không nhận bài đánh máy)."
+            ],
+            "className": "text-3xl text-left text-gray-800 space-y-8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúc các em học tốt!",
+            "className": "text-xl text-gray-600 mt-6 italic text-center"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      },
+      {
+        "id": "writing-guide",
+        "title": "Writing Guide",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Multiple Intelligence Theory",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 7: Writing Guide",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "HƯỚNG DẪN VIẾT VỀ “MULTIPLE INTELLIGENCES CHART”",
+            "className": "text-2xl font-bold text-blue-600"
+          },
+
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "1. Hiểu mục tiêu bài viết",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          { "type": "paragraph", "text": "Bài viết này giúp bạn:" },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Mô tả điểm số của từng loại trí thông minh (Multiple Intelligences).",
+              "Phân tích điểm mạnh và điểm yếu của bản thân.",
+              "Rút ra kết luận về phong cách học tập (learning style) của bạn."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1"
+          },
+
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "2. Cấu trúc bài viết (Structure)",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Introduction (Mở bài)",
+            "className": "text-lg font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Giới thiệu ngắn gọn về bài kiểm tra Multiple Intelligences và mục đích của nó."
+          },
+          { "type": "paragraph", "text": "Gợi ý câu mở đầu:" },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "\"According to my Multiple Intelligence test, everyone has different types of intelligence.\"",
+              "\"This chart shows my results from a Multiple Intelligence test.\"",
+              "\"The chart illustrates how I learn best based on my intelligence types.\""
+            ],
+            "className": "list-disc list-inside ml-8 space-y-1"
+          },
+          {
+            "type": "paragraph",
+            "text": "Gợi ý: Dùng thì hiện tại đơn và giới thiệu nhẹ nhàng, không cần nêu chi tiết điểm số ở phần này.",
+            "className": "italic mt-2"
+          },
+
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Body (Thân bài)",
+            "className": "text-lg font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chia phần thân bài thành ba phần nhỏ:"
+          },
+
+          {
+            "type": "paragraph",
+            "text": "a. Describe your strongest intelligences",
+            "className": "font-semibold"
+          },
+          {
+            "type": "paragraph",
+            "text": "Nêu rõ 2–3 loại trí thông minh cao nhất, viết riêng từng đoạn nhỏ cho từng loại.",
+            "className": "ml-4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cấu trúc gợi ý:",
+            "className": "ml-8"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "My strongest intelligence is [type] with a score of [number].",
+              "This means I am good at [skills/abilities].",
+              "I learn best through [methods].",
+              "For example, I enjoy [specific activity]."
+            ],
+            "className": "list-disc list-inside ml-12 space-y-1"
+          },
+          { "type": "paragraph", "text": "Ví dụ:", "className": "ml-8 mt-2" },
+          {
+            "type": "paragraph",
+            "text": "\"My strongest intelligence is Interpersonal, with a score of 77. This means I am good at communicating and understanding others. I learn best through group work and discussions. For example, I enjoy sharing ideas with classmates.\"",
+            "className": "ml-12 italic"
+          },
+
+          {
+            "type": "paragraph",
+            "text": "b. Describe your moderate intelligences",
+            "className": "font-semibold ml-4 mt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Nêu những loại có điểm trung bình (khoảng 50–60).",
+            "className": "ml-4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cấu trúc gợi ý:",
+            "className": "ml-8"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "I have moderate [type] intelligence with a score of [number].",
+              "I can [ability], but I still need to improve."
+            ],
+            "className": "list-disc list-inside ml-12 space-y-1"
+          },
+
+          {
+            "type": "paragraph",
+            "text": "c. Describe your weaker intelligences",
+            "className": "font-semibold ml-4 mt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Nêu những loại có điểm thấp nhất (dưới 50).",
+            "className": "ml-4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cấu trúc gợi ý:",
+            "className": "ml-8"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "My weakest intelligence is [type], with a score of [number].",
+              "It means I don’t often [related skill].",
+              "However, I can develop it by [learning method]."
+            ],
+            "className": "list-disc list-inside ml-12 space-y-1"
+          },
+
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Conclusion (Kết bài)",
+            "className": "text-lg font-semibold text-blue-600 pt-2 mt-4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tổng kết lại phong cách học tập (learning style) của bạn."
+          },
+          { "type": "paragraph", "text": "Gợi ý câu kết:" },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "\"In conclusion, I am mainly a [type]-smart and [type]-smart learner.\"",
+              "\"Overall, I learn best through [learning method].\"",
+              "\"This test helps me understand myself and find better ways to study.\""
+            ],
+            "className": "list-disc list-inside ml-8 space-y-1"
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "3. Từ vựng gợi ý (Useful Vocabulary)",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Loại trí thông minh",
+              "Từ/cụm từ mô tả đi kèm",
+              "Nghĩa"
+            ],
+            "rows": [
+              [
+                "Interpersonal",
+                "communicate with others, teamwork, understand people",
+                "giao tiếp, làm việc nhóm"
+              ],
+              [
+                "Intrapersonal",
+                "understand myself, reflect, manage emotions",
+                "hiểu bản thân, tự nhận thức"
+              ],
+              [
+                "Logical",
+                "problem solving, reasoning, thinking logically",
+                "tư duy logic, giải quyết vấn đề"
+              ],
+              [
+                "Linguistic",
+                "reading, writing, speaking",
+                "ngôn ngữ, đọc viết"
+              ],
+              [
+                "Kinesthetic",
+                "moving, touching, hands-on learning",
+                "vận động, thực hành"
+              ],
+              [
+                "Musical",
+                "rhythm, singing, playing instruments",
+                "âm nhạc, giai điệu"
+              ],
+              [
+                "Naturalist",
+                "nature, animals, environment",
+                "thiên nhiên, sinh học"
+              ],
+              [
+                "Visual/Spatial",
+                "drawing, imagining, visual memory",
+                "hình ảnh, tưởng tượng"
+              ]
+            ]
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "4. Mẫu câu hữu ích (Sentence Patterns)",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "table",
+            "headers": ["Mục đích", "Cấu trúc gợi ý"],
+            "rows": [
+              [
+                "Nêu điểm mạnh",
+                "My strongest intelligence is … with a score of …"
+              ],
+              [
+                "Giải thích ý nghĩa",
+                "This means I am good at … / It shows that I can …"
+              ],
+              [
+                "Cách học tốt nhất",
+                "I learn best through … / I enjoy learning by …"
+              ],
+              ["Đưa ví dụ", "For example, I enjoy … / One example is …"],
+              [
+                "Nói về điểm yếu",
+                "My weakest intelligence is … / I am not very strong in …"
+              ],
+              [
+                "Kết luận",
+                "In conclusion, I am a … learner. / Overall, this test helps me …"
+              ]
+            ]
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "5. Lưu ý",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Chia nhỏ đoạn: mỗi loại trí thông minh mạnh nên được viết thành một đoạn riêng.",
+              "Sử dụng từ nối: also, besides, however, on the other hand, in conclusion…",
+              "Dùng thì hiện tại đơn để mô tả thói quen và đặc điểm cá nhân.",
+              "Không chỉ liệt kê điểm số, hãy giải thích và đưa ví dụ minh họa thực tế."
+            ],
+            "className": "list-disc list-inside ml-4 space-y-1"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+      }
+    ],
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "page", "id": "writing-guide" }
+    ]
+  }
+}
