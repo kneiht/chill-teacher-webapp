@@ -78,12 +78,6 @@ const FlashcardCore: React.FC<FlashcardCoreProps> = ({
 
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-center p-8">
-      {/* Title */}
-      {title && (
-        <h2 className="text-xl font-bold text-indigo-700 text-center mb-4">
-          {title}
-        </h2>
-      )}
       <div
         className="relative w-[70%] h-[80%] cursor-pointer"
         onClick={() => setIsFlipped(!isFlipped)}
