@@ -1,14 +1,10 @@
 import { useState } from 'react'
-import vocabData from './assets/vocab.json'
-import questionsData from './assets/questions.json'
-import clozeData from './assets/cloze.json'
 
 // Router
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Route as flashcardsRoute } from './flashcards'
 import { Route as assignmentsRoute } from './assignments'
 import { Route as presentationLessonRoute } from './presentation-lesson'
-import { Route as youtubeLessonRoute } from './youtube-lesson'
 
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
@@ -19,27 +15,32 @@ import WoodenButton from '@/lib/components/ui/WoodenButton'
 
 // Assets
 import urls from './assets/urls.json'
+import vocabData from './assets/vocab.json'
+import clozeData from './assets/cloze.json'
 
 const buttonStyle =
   'w-100 text-blue-800 cursor-pointer font-bold py-4 px-2 rounded-xl text-3xl transition-transform transform hover:scale-105'
 
-// Game Configuration with VocabData
+// Game Configuration with VocabData and optional ClozeData
 interface LessonGame {
   game: GameDefinition
-  vocabData: Array<any>
+  vocabData?: Array<any>
+  clozeData?: any
 }
 
-// Configure which games to include in this lesson - just import and assign data!
+// Configure which games to include in this lesson
 const lessonGames: Array<LessonGame> = [
-  { game: games.CandyCrushEnglishGame, vocabData: vocabData },
   { game: games.MatchingGame, vocabData: vocabData },
   { game: games.MemoryGame, vocabData: vocabData },
   { game: games.MultipleChoiceEnViGame, vocabData: vocabData },
   { game: games.MultipleChoiceViEnGame, vocabData: vocabData },
+  { game: games.PictureChoiceEnGame, vocabData: vocabData },
+  { game: games.ImageRevealChoiceGame, vocabData: vocabData },
+  { game: games.PictureTypingEnGame, vocabData: vocabData },
   { game: games.ListeningTypingEnGame, vocabData: vocabData },
   { game: games.ListeningSentenceTypingGame, vocabData: vocabData },
   { game: games.VietnameseToEnglishTranslationGame, vocabData: vocabData },
-  { game: games.ClozeGame, vocabData: vocabData },
+  { game: games.ClozeGame, clozeData: clozeData },
 ]
 
 const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
@@ -50,17 +51,24 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
 
     const GameComponent = activeGame.game.component
 
+    const props: any = {
+      backgroundUrl: urls.background,
+      title: `${activeGame.game.title} - Whales – Guardians of the Climate`,
+      onClose: () => setActiveGame(null),
+    }
+
+    if (activeGame.vocabData) {
+      props.vocabData = activeGame.vocabData
+    }
+
+    if (activeGame.clozeData) {
+      props.clozeData = activeGame.clozeData
+    }
+
     return (
       <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <div className="relative w-full h-full">
-          <GameComponent
-            vocabData={activeGame.vocabData}
-            questionsData={questionsData}
-            clozeData={clozeData}
-            backgroundUrl={urls.background}
-            title={`${activeGame.game.title} - Multiple Intelligence Theory`}
-            onClose={() => setActiveGame(null)}
-          />
+          <GameComponent {...props} />
         </div>
       </div>
     )
@@ -71,27 +79,27 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
       <Slide isActive={isActive}>
         <div className="flex flex-col items-center justify-start h-full text-center">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 mt-6 text-center leading-tight">
-            Multiple Intelligence Theory
+            Whales – Guardians of the Climate
             <br />
             Lesson 3: Vocabulary - Part 3
           </h1>
           <div className="grid grid-cols-2 gap-x-20  gap-y-7">
-            <Link to={presentationLessonRoute.to}>
-              <WoodenButton className={buttonStyle}>📖 Bài giảng</WoodenButton>
+            <Link to={assignmentsRoute.to}>
+              <WoodenButton className={buttonStyle}>Nhiệm vụ</WoodenButton>
             </Link>
 
-            <Link to={youtubeLessonRoute.to}>
-              <WoodenButton className={buttonStyle}>
-                🎥 Video bài giảng
-              </WoodenButton>
+            <Link to={presentationLessonRoute.to}>
+              <WoodenButton className={buttonStyle}>Bộ từ vựng 3</WoodenButton>
             </Link>
+
+            {/* <Link to={youtubeLessonRoute.to}>
+              <WoodenButton className={buttonStyle}>
+                Video bài giảng
+              </WoodenButton>d
+            </Link> */}
 
             <Link to={flashcardsRoute.to}>
-              <WoodenButton className={buttonStyle}>🃏 Flashcards</WoodenButton>
-            </Link>
-
-            <Link to={assignmentsRoute.to}>
-              <WoodenButton className={buttonStyle}>📝 Nhiệm vụ</WoodenButton>
+              <WoodenButton className={buttonStyle}>Flashcards</WoodenButton>
             </Link>
 
             {lessonGames.map((lessonGame) => (
@@ -100,7 +108,7 @@ const LessonHomepageSlide: React.FC<{ isActive: boolean }> = ({ isActive }) => {
                 onClick={() => setActiveGame(lessonGame)}
                 className={buttonStyle}
               >
-                {lessonGame.game.icon} {lessonGame.game.name}
+                {lessonGame.game.name}
               </WoodenButton>
             ))}
           </div>
