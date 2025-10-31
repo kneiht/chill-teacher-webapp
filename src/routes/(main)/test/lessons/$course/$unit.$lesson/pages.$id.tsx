@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate, notFound } from '@tanstack/react-router'
 import { Route as parentRoute } from './route'
 import ContentPageSlide from '@/lib/components/activities/ContentPageSlide'
+import HtmlLikeSlide from '@/lib/components/activities/HtmlLikeSlide'
 
 export const Route = createFileRoute(
   '/(main)/test/lessons/$course/$unit/$lesson/pages/$id',
@@ -28,11 +29,21 @@ function RouteComponent() {
     })
   }
 
-  return (
-    <ContentPageSlide
-      pageData={page}
+  const isHtmlLike =
+    typeof page === 'object' && page !== null && 'root' in (page as any)
+
+  return isHtmlLike ? (
+    <HtmlLikeSlide
+      pageData={page as any}
       backgroundUrl={background}
-      title={`${page.title || 'Page'} - ${title}`}
+      title={`${(page as any).title || 'Page'} - ${title}`}
+      onClose={handleClose}
+    />
+  ) : (
+    <ContentPageSlide
+      pageData={page as any}
+      backgroundUrl={background}
+      title={`${(page as any).title || 'Page'} - ${title}`}
       onClose={handleClose}
     />
   )

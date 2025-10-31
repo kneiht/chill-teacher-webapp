@@ -132,7 +132,7 @@ const renderContentBlock = (
 
     case 'list':
       const ListTag = block.ordered ? 'ol' : 'ul'
-      const listClass = block.ordered ? 'list-decimal' : 'list-disc'
+      const listClass = block.ordered ? 'list-decimal' : ''
       return (
         <ListTag
           key={index}
@@ -158,7 +158,11 @@ const renderContentBlock = (
             ) {
               return (
                 <li key={i} className="leading-relaxed">
-                  {item.text}
+                  {'bold' in item && (item as any).bold ? (
+                    <strong>{(item as any).text}</strong>
+                  ) : (
+                    <>{(item as any).text}</>
+                  )}
                   {item.children && (
                     <div className="mt-2">
                       {item.children.map((child, j) =>

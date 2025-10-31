@@ -74,93 +74,53 @@
         "type": "imageChoice",
         "question": "Đây là từ gì trong tiếng Anh?",
         "correctAnswer": "pencil",
-        "options": [
-          "pencil",
-          "pen",
-          "marker",
-          "crayon"
-        ],
+        "options": ["pencil", "pen", "marker", "crayon"],
         "image": "https://storage.chillteacher.com/images-words/pencil.webp"
       },
       {
         "type": "imageToVietnamese",
         "question": "Hình này nghĩa là gì?",
         "correctAnswer": "cái kéo",
-        "options": [
-          "cái kéo",
-          "giấy",
-          "hồ dán",
-          "bút màu"
-        ],
+        "options": ["cái kéo", "giấy", "hồ dán", "bút màu"],
         "image": "https://storage.chillteacher.com/images-words/scissors.webp"
       },
       {
         "type": "imageChoice",
         "question": "Đây là từ gì trong tiếng Anh?",
         "correctAnswer": "glue",
-        "options": [
-          "glue",
-          "paint",
-          "paper",
-          "scissors"
-        ],
+        "options": ["glue", "paint", "paper", "scissors"],
         "image": "https://storage.chillteacher.com/images-words/glue.webp"
       },
       {
         "type": "multipleChoice",
         "question": "\"pencil\" nghĩa là gì?",
         "correctAnswer": "bút chì",
-        "options": [
-          "bút chì",
-          "bút mực",
-          "bút lông",
-          "kéo"
-        ]
+        "options": ["bút chì", "bút mực", "bút lông", "kéo"]
       },
       {
         "type": "multipleChoice",
         "question": "\"scissors\" nghĩa là gì?",
         "correctAnswer": "cái kéo",
-        "options": [
-          "cái kéo",
-          "giấy",
-          "hồ dán",
-          "bút màu"
-        ]
+        "options": ["cái kéo", "giấy", "hồ dán", "bút màu"]
       },
       {
         "type": "multipleChoice",
         "question": "\"glue\" nghĩa là gì?",
         "correctAnswer": "hồ dán",
-        "options": [
-          "hồ dán",
-          "giấy",
-          "màu vẽ",
-          "bút chì"
-        ]
+        "options": ["hồ dán", "giấy", "màu vẽ", "bút chì"]
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "marker",
-        "options": [
-          "marker",
-          "pencil",
-          "pen",
-          "crayon"
-        ],
+        "options": ["marker", "pencil", "pen", "crayon"],
         "wordToSpeak": "marker"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "paper",
-        "options": [
-          "paper",
-          "paint",
-          "glue",
-          "scissors"
-        ],
+        "options": ["paper", "paint", "glue", "scissors"],
         "wordToSpeak": "paper"
       },
       {
@@ -182,70 +142,40 @@
         "type": "imageChoice",
         "question": "Đây là từ gì trong tiếng Anh?",
         "correctAnswer": "marker",
-        "options": [
-          "marker",
-          "pen",
-          "pencil",
-          "crayon"
-        ],
+        "options": ["marker", "pen", "pencil", "crayon"],
         "image": "https://storage.chillteacher.com/images-words/marker.webp"
       },
       {
         "type": "imageToVietnamese",
         "question": "Hình này nghĩa là gì?",
         "correctAnswer": "màu vẽ",
-        "options": [
-          "màu vẽ",
-          "bút màu",
-          "hồ dán",
-          "giấy"
-        ],
+        "options": ["màu vẽ", "bút màu", "hồ dán", "giấy"],
         "image": "https://storage.chillteacher.com/images-words/paint.webp"
       },
       {
         "type": "imageChoice",
         "question": "Từ tiếng Anh này là gì?",
         "correctAnswer": "paper",
-        "options": [
-          "paper",
-          "paint",
-          "pen",
-          "pencil"
-        ],
+        "options": ["paper", "paint", "pen", "pencil"],
         "image": "https://storage.chillteacher.com/images-words/paper.webp"
       },
       {
         "type": "multipleChoice",
         "question": "\"crayon\" nghĩa là gì?",
         "correctAnswer": "bút sáp màu",
-        "options": [
-          "bút sáp màu",
-          "bút chì màu",
-          "bút lông",
-          "màu vẽ"
-        ]
+        "options": ["bút sáp màu", "bút chì màu", "bút lông", "màu vẽ"]
       },
       {
         "type": "multipleChoice",
         "question": "\"paint\" nghĩa là gì?",
         "correctAnswer": "màu vẽ",
-        "options": [
-          "màu vẽ",
-          "bút màu",
-          "hồ dán",
-          "giấy"
-        ]
+        "options": ["màu vẽ", "bút màu", "hồ dán", "giấy"]
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "crayon",
-        "options": [
-          "crayon",
-          "marker",
-          "pencil",
-          "pen"
-        ],
+        "options": ["crayon", "marker", "pencil", "pen"],
         "wordToSpeak": "crayon"
       },
       {
@@ -257,24 +187,14 @@
         "type": "imageChoice",
         "question": "Đây là từ gì?",
         "correctAnswer": "crayon",
-        "options": [
-          "crayon",
-          "marker",
-          "pencil",
-          "pen"
-        ],
+        "options": ["crayon", "marker", "pencil", "pen"],
         "image": "https://storage.chillteacher.com/images-words/crayon.webp"
       },
       {
         "type": "imageToVietnamese",
         "question": "Đây là gì?",
         "correctAnswer": "bút mực",
-        "options": [
-          "bút mực",
-          "bút chì",
-          "bút lông",
-          "bút sáp"
-        ],
+        "options": ["bút mực", "bút chì", "bút lông", "bút sáp"],
         "image": "https://storage.chillteacher.com/images-words/pen.webp"
       }
     ],
@@ -328,6 +248,145 @@
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
       }
     ],
+    "readingData": {
+      "title": "In the Art Class",
+      "passage": [
+        {
+          "text": "In the Art Class, there are 4 friends, Lisa, Jenny and Tom."
+        },
+        {
+          "dialog": [
+            "Lisa: Hi Jenny, Hi Tom. How are you?",
+            "Jenny: Hi Lisa. I'm good!",
+            "Tom: Hello Lisa. I'm great!",
+            "Lisa: Tom, what do you have today?",
+            "Tom: I have paper and glue.",
+            "Tom: Jenny, what do you have?",
+            "Jenny: I have paint and scissors.",
+            "Jenny: What about you? What do you have, Lisa?",
+            "Lisa: I have a pen and a pencil.",
+            "Tom: But we don't have a marker and a crayon.",
+            "Lisa: Oh no!",
+            "Teacher: Don't worry, children! I have markers and crayons."
+          ]
+        },
+        {
+          "text": "Then, they have fun together in the Art Class"
+        }
+      ],
+      "items": {
+        "paper": {
+          "label": "Paper",
+          "image": "https://storage.chillteacher.com/images-words/paper.webp"
+        },
+        "glue": {
+          "label": "Glue",
+          "image": "https://storage.chillteacher.com/images-words/glue.webp"
+        },
+        "paint": {
+          "label": "Paint",
+          "image": "https://storage.chillteacher.com/images-words/paint.webp"
+        },
+        "scissors": {
+          "label": "Scissors",
+          "image": "https://storage.chillteacher.com/images-words/scissors.webp"
+        },
+        "pen": {
+          "label": "Pen",
+          "image": "https://storage.chillteacher.com/images-words/pen.webp"
+        },
+        "pencil": {
+          "label": "Pencil",
+          "image": "https://storage.chillteacher.com/images-words/pencil.webp"
+        },
+        "marker": {
+          "label": "Marker",
+          "image": "https://storage.chillteacher.com/images-words/marker.webp"
+        },
+        "crayon": {
+          "label": "Crayon",
+          "image": "https://storage.chillteacher.com/images-words/crayon.webp"
+        }
+      },
+      "questions": {
+        "multiSelectItem": [
+          {
+            "id": "tom",
+            "name": "Tom",
+            "prompt": "I have ...",
+            "options": ["paper", "glue", "marker", "paint"],
+            "correct": ["paper", "glue"]
+          },
+          {
+            "id": "jenny",
+            "name": "Jenny",
+            "prompt": "I have ...",
+            "options": ["paint", "scissors", "pen", "crayon"],
+            "correct": ["paint", "scissors"]
+          },
+          {
+            "id": "lisa",
+            "name": "Lisa",
+            "prompt": "I have ...",
+            "options": ["pen", "pencil", "paper", "marker"],
+            "correct": ["pen", "pencil"]
+          },
+          {
+            "id": "teacher",
+            "name": "Teacher",
+            "prompt": "I have ...",
+            "options": ["marker", "crayon", "glue", "paper"],
+            "correct": ["marker", "crayon"]
+          }
+        ],
+        "pictureChoice": [
+          {
+            "id": "q1",
+            "prompt": "What do you have? I have glue.",
+            "options": ["glue", "paper", "crayon"],
+            "correct": "glue"
+          },
+          {
+            "id": "q2",
+            "prompt": "What do you have? I have a pencil.",
+            "options": ["pencil", "marker", "paint"],
+            "correct": "pencil"
+          }
+        ],
+        "textComprehension": [
+          {
+            "id": "end",
+            "prompt": "How do they feel at the end? (Họ cảm thấy như thế nào ở cuối bài đọc)",
+            "answers": [
+              "They have fun together",
+              "They go home early",
+              "They lose their supplies"
+            ],
+            "correct": "They have fun together"
+          },
+          {
+            "id": "ask",
+            "prompt": "What does Lisa ask Tom? (Lisa hỏi gì Tom)",
+            "answers": [
+              "What do you have today?",
+              "Where is the teacher?",
+              "Can I go outside?"
+            ],
+            "correct": "What do you have today?"
+          },
+          {
+            "id": "need",
+            "prompt": "What does the teacher have? (Giáo viên có gì)",
+            "answers": [
+              "Markers and crayons",
+              "Paper and glue",
+              "Paint and scissors"
+            ],
+            "correct": "Markers and crayons"
+          }
+        ]
+      }
+    },
     "menu": [
       {
         "type": "video",
@@ -348,7 +407,8 @@
       {
         "type": "activity",
         "id": "candy-crush"
-      }
+      },
+      { "type": "activity", "id": "reading-comprehension" }
     ]
   }
 }
