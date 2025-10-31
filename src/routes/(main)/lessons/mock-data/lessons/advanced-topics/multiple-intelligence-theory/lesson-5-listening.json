@@ -3,6 +3,28 @@
     "background": "/backgrounds/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 5: Listening",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "video", "id": "lesson-video" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "embedPage", "id": "listening-exercise" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "lesson-video",
+          "url": "https://youtu.be/GIZX0HYxCYw",
+          "title": "Video Overview"
+        }
+      ],
+      "embedPages": [
+        {
+          "id": "listening-exercise",
+          "url": "/embed/multitple-intelligence-theory/listening/index.html",
+          "title": "Listening Exercise"
+        }
+      ]
+    },
     "vocab": [
       {
         "word": "reflection",
@@ -284,70 +306,67 @@
         "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
       }
     ],
-    "externalContent": {
-      "videos": [
-        {
-          "id": "lesson-video",
-          "url": "https://youtu.be/GIZX0HYxCYw",
-          "title": "Video Overview"
-        }
-      ],
-      "embedPages": [
-        {
-          "id": "listening-exercise",
-          "url": "/embed/multitple-intelligence-theory/listening/index.html",
-          "title": "Listening Exercise"
-        }
-      ]
-    },
     "pages": [
       {
         "id": "assignments",
         "title": "Nhiệm vụ",
         "scrollable": true,
-        "content": [
+        "root": [
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Multiple Intelligence Theory",
-            "className": "text-4xl font-bold text-indigo-700 text-center"
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Multiple Intelligence Theory" }]
           },
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Lesson 5: Listening",
-            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 5: Listening" }]
           },
           {
-            "type": "heading",
-            "level": 3,
-            "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-800 mb-4 text-center"
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
           },
           {
-            "type": "list",
-            "ordered": true,
-            "items": [
-              "Xem lại flashcards để nhớ từ vựng.",
-              "Xem video tóm tắt bài học.",
-              "Làm các bài tập nghe hiểu. Chụp điểm số gửi giáo viên."
-            ],
-            "className": "text-3xl text-left text-gray-800 space-y-8"
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem lại flashcards để nhớ từ vựng." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video tóm tắt bài học." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm các bài tập nghe hiểu. Chụp điểm số gửi giáo viên."
+                  }
+                ]
+              }
+            ]
           },
           {
-            "type": "paragraph",
-            "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic text-center"
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
       }
-    ],
-    "menu": [
-      { "type": "page", "id": "assignments" },
-      { "type": "video", "id": "lesson-video" },
-      { "type": "activity", "id": "flashcards" },
-      { "type": "embedPage", "id": "listening-exercise" }
     ]
   }
 }

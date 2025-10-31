@@ -3,52 +3,85 @@
     "background": "/backgrounds/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 7: Writing",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "page", "id": "writing-guide" }
+    ],
     "pages": [
       {
         "id": "assignments",
         "title": "Nhiệm vụ",
         "scrollable": true,
-        "content": [
+        "root": [
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Multiple Intelligence Theory",
-            "className": "text-4xl font-bold text-indigo-700 text-center"
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Multiple Intelligence Theory" }]
           },
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Lesson 7: Writing",
-            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 7: Writing" }]
           },
           {
-            "type": "heading",
-            "level": 3,
-            "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-800 mb-4 text-center"
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
           },
           {
-            "type": "list",
-            "ordered": true,
-            "items": [
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8"
+            },
+            "children": [
               {
-                "text": "Xem video hướng dẫn viết.",
+                "tag": "li",
                 "children": [
+                  { "text": "Xem video hướng dẫn viết." },
                   {
-                    "type": "link",
-                    "text": "https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci",
-                    "href": "https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci"
+                    "tag": "div",
+                    "attributes": { "class": "mt-2" },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer",
+                          "class": "text-blue-600 hover:underline font-semibold"
+                        },
+                        "children": [
+                          {
+                            "text": "https://vimeo.com/1129035704/30da37c272?share=copy&fl=sv&fe=ci"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
-              "Viết bài vào vở và chụp hình bài viết cho thầy (Không nhận bài đánh máy)."
-            ],
-            "className": "text-3xl text-left text-gray-800 space-y-8"
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Viết bài vào vở và chụp hình bài viết cho thầy (Không nhận bài đánh máy)."
+                  }
+                ]
+              }
+            ]
           },
           {
-            "type": "paragraph",
-            "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic text-center"
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
@@ -358,10 +391,6 @@
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
       }
-    ],
-    "menu": [
-      { "type": "page", "id": "assignments" },
-      { "type": "page", "id": "writing-guide" }
     ]
   }
 }

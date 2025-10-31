@@ -3,6 +3,53 @@
     "background": "/backgrounds/EU0-U1L2.webp",
     "title": "Unit 1: Art Class",
     "description": "Lesson 4: Listening & Shadowing",
+    "menu": [
+      {
+        "type": "googleSlide",
+        "id": "presentation"
+      },
+      {
+        "type": "page",
+        "id": "assignments"
+      },
+      {
+        "type": "activity",
+        "id": "flashcards"
+      },
+      {
+        "type": "embedPage",
+        "id": "listening-exercise"
+      },
+      {
+        "type": "embedPage",
+        "id": "shadowing-exercise"
+      },
+      {
+        "type": "activity",
+        "id": "candy-crush"
+      }
+    ],
+    "externalContent": {
+      "googleSlides": [
+        {
+          "id": "presentation",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTA9PJGguzwpRnUzPHOxA3RGvzOFHfy95MsbvzVgyFBKiCh4wcOwd5pJvgkF38bvdsQiRbMWb1L0wyW/pubembed",
+          "title": "Ôn lại bài đọc"
+        }
+      ],
+      "embedPages": [
+        {
+          "id": "shadowing-exercise",
+          "url": "/embed/everybody-up-0/shadowing/index.html",
+          "title": "Bài tập nghe và lặp lại"
+        },
+        {
+          "id": "listening-exercise",
+          "url": "/embed/everybody-up-0/listening/index.html",
+          "title": "Bài tập nghe"
+        }
+      ]
+    },
     "vocab": [
       {
         "word": "pen",
@@ -74,93 +121,53 @@
         "type": "imageChoice",
         "question": "Đây là từ gì trong tiếng Anh?",
         "correctAnswer": "pencil",
-        "options": [
-          "pencil",
-          "pen",
-          "marker",
-          "crayon"
-        ],
+        "options": ["pencil", "pen", "marker", "crayon"],
         "image": "https://storage.chillteacher.com/images-words/pencil.webp"
       },
       {
         "type": "imageToVietnamese",
         "question": "Hình này nghĩa là gì?",
         "correctAnswer": "cái kéo",
-        "options": [
-          "cái kéo",
-          "giấy",
-          "hồ dán",
-          "bút màu"
-        ],
+        "options": ["cái kéo", "giấy", "hồ dán", "bút màu"],
         "image": "https://storage.chillteacher.com/images-words/scissors.webp"
       },
       {
         "type": "imageChoice",
         "question": "Đây là từ gì trong tiếng Anh?",
         "correctAnswer": "glue",
-        "options": [
-          "glue",
-          "paint",
-          "paper",
-          "scissors"
-        ],
+        "options": ["glue", "paint", "paper", "scissors"],
         "image": "https://storage.chillteacher.com/images-words/glue.webp"
       },
       {
         "type": "multipleChoice",
         "question": "\"pencil\" nghĩa là gì?",
         "correctAnswer": "bút chì",
-        "options": [
-          "bút chì",
-          "bút mực",
-          "bút lông",
-          "kéo"
-        ]
+        "options": ["bút chì", "bút mực", "bút lông", "kéo"]
       },
       {
         "type": "multipleChoice",
         "question": "\"scissors\" nghĩa là gì?",
         "correctAnswer": "cái kéo",
-        "options": [
-          "cái kéo",
-          "giấy",
-          "hồ dán",
-          "bút màu"
-        ]
+        "options": ["cái kéo", "giấy", "hồ dán", "bút màu"]
       },
       {
         "type": "multipleChoice",
         "question": "\"glue\" nghĩa là gì?",
         "correctAnswer": "hồ dán",
-        "options": [
-          "hồ dán",
-          "giấy",
-          "màu vẽ",
-          "bút chì"
-        ]
+        "options": ["hồ dán", "giấy", "màu vẽ", "bút chì"]
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "marker",
-        "options": [
-          "marker",
-          "pencil",
-          "pen",
-          "crayon"
-        ],
+        "options": ["marker", "pencil", "pen", "crayon"],
         "wordToSpeak": "marker"
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "paper",
-        "options": [
-          "paper",
-          "paint",
-          "glue",
-          "scissors"
-        ],
+        "options": ["paper", "paint", "glue", "scissors"],
         "wordToSpeak": "paper"
       },
       {
@@ -182,70 +189,40 @@
         "type": "imageChoice",
         "question": "Đây là từ gì trong tiếng Anh?",
         "correctAnswer": "marker",
-        "options": [
-          "marker",
-          "pen",
-          "pencil",
-          "crayon"
-        ],
+        "options": ["marker", "pen", "pencil", "crayon"],
         "image": "https://storage.chillteacher.com/images-words/marker.webp"
       },
       {
         "type": "imageToVietnamese",
         "question": "Hình này nghĩa là gì?",
         "correctAnswer": "màu vẽ",
-        "options": [
-          "màu vẽ",
-          "bút màu",
-          "hồ dán",
-          "giấy"
-        ],
+        "options": ["màu vẽ", "bút màu", "hồ dán", "giấy"],
         "image": "https://storage.chillteacher.com/images-words/paint.webp"
       },
       {
         "type": "imageChoice",
         "question": "Từ tiếng Anh này là gì?",
         "correctAnswer": "paper",
-        "options": [
-          "paper",
-          "paint",
-          "pen",
-          "pencil"
-        ],
+        "options": ["paper", "paint", "pen", "pencil"],
         "image": "https://storage.chillteacher.com/images-words/paper.webp"
       },
       {
         "type": "multipleChoice",
         "question": "\"crayon\" nghĩa là gì?",
         "correctAnswer": "bút sáp màu",
-        "options": [
-          "bút sáp màu",
-          "bút chì màu",
-          "bút lông",
-          "màu vẽ"
-        ]
+        "options": ["bút sáp màu", "bút chì màu", "bút lông", "màu vẽ"]
       },
       {
         "type": "multipleChoice",
         "question": "\"paint\" nghĩa là gì?",
         "correctAnswer": "màu vẽ",
-        "options": [
-          "màu vẽ",
-          "bút màu",
-          "hồ dán",
-          "giấy"
-        ]
+        "options": ["màu vẽ", "bút màu", "hồ dán", "giấy"]
       },
       {
         "type": "listening",
         "question": "🔊 Nghe và chọn từ đúng:",
         "correctAnswer": "crayon",
-        "options": [
-          "crayon",
-          "marker",
-          "pencil",
-          "pen"
-        ],
+        "options": ["crayon", "marker", "pencil", "pen"],
         "wordToSpeak": "crayon"
       },
       {
@@ -257,105 +234,72 @@
         "type": "imageChoice",
         "question": "Đây là từ gì?",
         "correctAnswer": "crayon",
-        "options": [
-          "crayon",
-          "marker",
-          "pencil",
-          "pen"
-        ],
+        "options": ["crayon", "marker", "pencil", "pen"],
         "image": "https://storage.chillteacher.com/images-words/crayon.webp"
       },
       {
         "type": "imageToVietnamese",
         "question": "Đây là gì?",
         "correctAnswer": "bút mực",
-        "options": [
-          "bút mực",
-          "bút chì",
-          "bút lông",
-          "bút sáp"
-        ],
+        "options": ["bút mực", "bút chì", "bút lông", "bút sáp"],
         "image": "https://storage.chillteacher.com/images-words/pen.webp"
       }
     ],
-    "externalContent": {
-      "googleSlides": [
-        {
-          "id": "presentation",
-          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTA9PJGguzwpRnUzPHOxA3RGvzOFHfy95MsbvzVgyFBKiCh4wcOwd5pJvgkF38bvdsQiRbMWb1L0wyW/pubembed",
-          "title": "Ôn lại bài đọc"
-        }
-      ],
-      "embedPages": [
-        {
-          "id": "shadowing-exercise",
-          "url": "/embed/everybody-up-0/shadowing/index.html",
-          "title": "Bài tập nghe và lặp lại"
-        },
-        {
-          "id": "listening-exercise",
-          "url": "/embed/everybody-up-0/listening/index.html",
-          "title": "Bài tập nghe"
-        }
-      ]
-    },
     "pages": [
       {
         "id": "assignments",
         "title": "Unit 1: Art Class - Lesson 4: Listening",
         "subtitle": "Homework Assignments",
         "scrollable": true,
-        "content": [
+        "root": [
           {
-            "type": "heading",
-            "level": 3,
-            "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-700 mb-4"
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
           },
           {
-            "type": "list",
-            "ordered": true,
-            "items": [
-              "Xem lại Flashcards để nhớ từ vựng.",
-              "Ôn lại bài đọc từ lesson 3.",
-              "Làm bài tập nghe và lặp lại (Shadowing).",
-              "Quay video phần practice gửi cho giáo viên."
-            ],
-            "className": "text-3xl text-left text-gray-800 space-y-8"
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem lại Flashcards để nhớ từ vựng." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Ôn lại bài đọc từ lesson 3." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm bài tập nghe và lặp lại (Shadowing)."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Quay video phần practice gửi cho giáo viên."
+                  }
+                ]
+              }
+            ]
           },
           {
-            "type": "paragraph",
-            "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic"
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
-      }
-    ],
-    "menu": [
-      {
-        "type": "googleSlide",
-        "id": "presentation"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "embedPage",
-        "id": "listening-exercise"
-      },
-      {
-        "type": "embedPage",
-        "id": "shadowing-exercise"
-      },
-      {
-        "type": "activity",
-        "id": "candy-crush"
       }
     ]
   }

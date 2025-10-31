@@ -3,6 +3,31 @@
     "background": "/backgrounds/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 4: Reading",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "candy-crush" },
+      { "type": "activity", "id": "cloze-game" },
+      { "type": "video", "id": "reading-lesson-video" },
+      { "type": "googleSlide", "id": "reading-slides" },
+      { "type": "activity", "id": "reading-comprehension" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "reading-lesson-video",
+          "url": "https://youtu.be/rI2JW7NjKsg",
+          "title": "Video bài giảng"
+        }
+      ],
+      "googleSlides": [
+        {
+          "id": "reading-slides",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTz5J7jQyzAyUvHhHm3FjhvHNv9zrHhhLl1Am7TPfnoQ7G0fIVAVh70bezfy3xch7aKUHcmPK4k4NiL/pubembed",
+          "title": "Bài đọc"
+        }
+      ]
+    },
     "vocab": [
       {
         "word": "reflection",
@@ -1199,77 +1224,83 @@
         "correctAnswer": "effective"
       }
     ],
-
     "pages": [
       {
         "id": "assignments",
         "title": "Nhiệm vụ",
         "scrollable": true,
-        "content": [
+        "root": [
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Multiple Intelligence Theory",
-            "className": "text-4xl font-bold text-indigo-700 text-center"
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Multiple Intelligence Theory" }]
           },
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Lesson 4: Reading",
-            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 4: Reading" }]
           },
           {
-            "type": "heading",
-            "level": 3,
-            "text": "Hãy hoàn thành các nhiệm vụ sau:",
-            "className": "text-3xl text-gray-800 mb-4 text-center"
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
           },
           {
-            "type": "list",
-            "ordered": true,
-            "items": [
-              "Ôn từ vựng bằng Flashcards.",
-              "Chơi game luyện từ vựng.",
-              "Làm bài điền từ vào đoạn văn.",
-              "Xem video bài học.",
-              "Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên.",
-              "Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và ngữ điệu khi đọc."
-            ],
-            "className": "text-3xl text-left text-gray-800 space-y-8"
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Ôn từ vựng bằng Flashcards." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Chơi game luyện từ vựng." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Làm bài điền từ vào đoạn văn." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video bài học." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và ngữ điệu khi đọc."
+                  }
+                ]
+              }
+            ]
           },
           {
-            "type": "paragraph",
-            "text": "Chúc các em học tốt!",
-            "className": "text-xl text-gray-600 mt-6 italic text-center"
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
       }
-    ],
-    "externalContent": {
-      "videos": [
-        {
-          "id": "reading-lesson-video",
-          "url": "https://youtu.be/rI2JW7NjKsg",
-          "title": "Video bài giảng"
-        }
-      ],
-      "googleSlides": [
-        {
-          "id": "reading-slides",
-          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTz5J7jQyzAyUvHhHm3FjhvHNv9zrHhhLl1Am7TPfnoQ7G0fIVAVh70bezfy3xch7aKUHcmPK4k4NiL/pubembed",
-          "title": "Bài đọc"
-        }
-      ]
-    },
-    "menu": [
-      { "type": "page", "id": "assignments" },
-      { "type": "activity", "id": "flashcards" },
-      { "type": "activity", "id": "candy-crush" },
-      { "type": "activity", "id": "cloze-game" },
-      { "type": "video", "id": "reading-lesson-video" },
-      { "type": "googleSlide", "id": "reading-slides" },
-      { "type": "activity", "id": "reading-comprehension" }
     ]
   }
 }
