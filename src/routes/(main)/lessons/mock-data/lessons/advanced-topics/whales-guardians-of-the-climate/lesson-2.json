@@ -1,0 +1,482 @@
+{
+  "lesson-2": {
+    "background": "https://storage.chillteacher.com/backgrounds/whales-guardians-of-the-climate.webp",
+    "title": "Whales – Guardians of the Climate",
+    "description": "Lesson 2: Vocabulary - Part 2",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "vocabulary" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "cloze-game" }
+    ],
+    "vocab": [
+      {
+        "word": "acidic",
+        "phonics": "/əˈsɪdɪk/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/acidic.webp",
+        "vietnameseMeaning": "có tính axit",
+        "sampleSentence": "Some lakes have become too acidic for fish to survive.",
+        "vietnameseTranslation": "Một số hồ đã trở nên quá axit khiến cá không thể sống được.",
+        "wordPronunciation": "acidic.wav",
+        "sentencePronunciation": "some-lakes-have-become-too-acidic-for-fish-to-survive.wav"
+      },
+      {
+        "word": "marine",
+        "phonics": "/məˈriːn/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/marine.webp",
+        "vietnameseMeaning": "thuộc về biển",
+        "sampleSentence": "Marine animals live in the ocean.",
+        "vietnameseTranslation": "Động vật biển sống trong đại dương.",
+        "wordPronunciation": "marine.wav",
+        "sentencePronunciation": "marine-animals-live-in-the-ocean.wav"
+      },
+      {
+        "word": "coast",
+        "phonics": "/koʊst/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/coast.webp",
+        "vietnameseMeaning": "bờ biển",
+        "sampleSentence": "We walked along the rocky coast at sunset.",
+        "vietnameseTranslation": "Chúng tôi đi dọc bờ biển đá vào lúc hoàng hôn.",
+        "wordPronunciation": "coast.wav",
+        "sentencePronunciation": "we-walked-along-the-rocky-coast-at-sunset.wav"
+      },
+      {
+        "word": "expert",
+        "phonics": "/ˈekspɜːrt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/expert.webp",
+        "vietnameseMeaning": "chuyên gia",
+        "sampleSentence": "An expert gave advice on how to save energy.",
+        "vietnameseTranslation": "Một chuyên gia đã đưa ra lời khuyên về cách tiết kiệm năng lượng.",
+        "wordPronunciation": "expert.wav",
+        "sentencePronunciation": "an-expert-gave-advice-on-how-to-save-energy.wav"
+      },
+      {
+        "word": "emission",
+        "phonics": "/ɪˈmɪʃən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/emission.webp",
+        "vietnameseMeaning": "sự phát thải",
+        "sampleSentence": "Car emissions contribute to air pollution.",
+        "vietnameseTranslation": "Khí thải từ xe hơi góp phần gây ô nhiễm không khí.",
+        "wordPronunciation": "emission.wav",
+        "sentencePronunciation": "car-emissions-contribute-to-air-pollution.wav"
+      },
+      {
+        "word": "trapped",
+        "phonics": "/træpt/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/trapped.webp",
+        "vietnameseMeaning": "bị mắc kẹt",
+        "sampleSentence": "The miners were trapped underground for two days.",
+        "vietnameseTranslation": "Những người thợ mỏ bị mắc kẹt dưới lòng đất trong hai ngày.",
+        "wordPronunciation": "trapped.wav",
+        "sentencePronunciation": "the-miners-were-trapped-underground-for-two-days.wav"
+      },
+      {
+        "word": "fertilizer",
+        "phonics": "/ˈfɜːrtəlaɪzər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/fertilizer.webp",
+        "vietnameseMeaning": "phân bón",
+        "sampleSentence": "Farmers use organic fertilizer to help plants grow.",
+        "vietnameseTranslation": "Nông dân sử dụng phân bón hữu cơ để giúp cây phát triển.",
+        "wordPronunciation": "fertilizer.wav",
+        "sentencePronunciation": "farmers-use-organic-fertilizer-to-help-plants-grow.wav"
+      },
+      {
+        "word": "phytoplankton",
+        "phonics": "/ˌfaɪtoʊˈplæŋktən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/phytoplankton.webp",
+        "vietnameseMeaning": "thực vật phù du",
+        "sampleSentence": "Phytoplankton are tiny plants that float in the ocean.",
+        "vietnameseTranslation": "Thực vật phù du là những loài cây nhỏ trôi nổi trong đại dương.",
+        "wordPronunciation": "phytoplankton.wav",
+        "sentencePronunciation": "phytoplankton-are-tiny-plants-that-float-in-the-ocean.wav"
+      },
+      {
+        "word": "absorb",
+        "phonics": "/əbˈzɔːrb/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/absorb.webp",
+        "vietnameseMeaning": "hấp thụ",
+        "sampleSentence": "Plants absorb sunlight to make food.",
+        "vietnameseTranslation": "Cây hấp thụ ánh sáng mặt trời để tạo ra thức ăn.",
+        "wordPronunciation": "absorb.wav",
+        "sentencePronunciation": "plants-absorb-sunlight-to-make-food.wav"
+      },
+      {
+        "word": "responsible",
+        "phonics": "/rɪˈspɒnsəbl/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/responsible.webp",
+        "vietnameseMeaning": "có trách nhiệm",
+        "sampleSentence": "We are all responsible for protecting the Earth.",
+        "vietnameseTranslation": "Tất cả chúng ta đều có trách nhiệm bảo vệ Trái Đất.",
+        "wordPronunciation": "responsible.wav",
+        "sentencePronunciation": "we-are-all-responsible-for-protecting-the-earth.wav"
+      },
+      {
+        "word": "guardian",
+        "phonics": "/ˈɡɑːrdiən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/guardian.webp",
+        "vietnameseMeaning": "người bảo vệ, người giám hộ",
+        "sampleSentence": "The dog acted as a guardian for the children.",
+        "vietnameseTranslation": "Con chó đóng vai trò như người bảo vệ cho lũ trẻ.",
+        "wordPronunciation": "guardian.wav",
+        "sentencePronunciation": "the-dog-acted-as-a-guardian-for-the-children.wav"
+      },
+      {
+        "word": "climate",
+        "phonics": "/ˈklaɪmət/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/climate.webp",
+        "vietnameseMeaning": "khí hậu",
+        "sampleSentence": "The tropical climate is warm and humid all year round.",
+        "vietnameseTranslation": "Khí hậu nhiệt đới ấm áp và ẩm ướt quanh năm.",
+        "wordPronunciation": "climate.wav",
+        "sentencePronunciation": "the-tropical-climate-is-warm-and-humid-all-year-round.wav"
+      },
+      {
+        "word": "giant",
+        "phonics": "/ˈdʒaɪənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/giant.webp",
+        "vietnameseMeaning": "người khổng lồ",
+        "sampleSentence": "The story tells of a kind giant who helps people.",
+        "vietnameseTranslation": "Câu chuyện kể về một người khổng lồ tốt bụng giúp đỡ mọi người.",
+        "wordPronunciation": "giant.wav",
+        "sentencePronunciation": "the-story-tells-of-a-kind-giant-who-helps-people.wav"
+      },
+      {
+        "word": "admire",
+        "phonics": "/ədˈmaɪər/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/admire.webp",
+        "vietnameseMeaning": "ngưỡng mộ, khâm phục",
+        "sampleSentence": "I really admire her for her honesty and courage.",
+        "vietnameseTranslation": "Tôi thực sự ngưỡng mộ cô ấy vì sự trung thực và dũng cảm.",
+        "wordPronunciation": "admire.wav",
+        "sentencePronunciation": "i-really-admire-her-for-her-honesty-and-courage.wav"
+      },
+      {
+        "word": "support",
+        "phonics": "/səˈpɔːrt/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/support.webp",
+        "vietnameseMeaning": "hỗ trợ, ủng hộ",
+        "sampleSentence": "Parents should always support their children's dreams.",
+        "vietnameseTranslation": "Cha mẹ nên luôn ủng hộ ước mơ của con cái.",
+        "wordPronunciation": "support.wav",
+        "sentencePronunciation": "parents-should-always-support-their-childrens-dreams.wav"
+      },
+      {
+        "word": "scientist",
+        "phonics": "/ˈsaɪəntɪst/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/scientist.webp",
+        "vietnameseMeaning": "nhà khoa học",
+        "sampleSentence": "The scientist discovered a new species of fish.",
+        "vietnameseTranslation": "Nhà khoa học đã phát hiện ra một loài cá mới.",
+        "wordPronunciation": "scientist.wav",
+        "sentencePronunciation": "the-scientist-discovered-a-new-species-of-fish.wav"
+      },
+      {
+        "word": "describe",
+        "phonics": "/dɪˈskraɪb/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/describe.webp",
+        "vietnameseMeaning": "miêu tả",
+        "sampleSentence": "Can you describe what the thief looked like?",
+        "vietnameseTranslation": "Bạn có thể miêu tả kẻ trộm trông như thế nào không?",
+        "wordPronunciation": "describe.wav",
+        "sentencePronunciation": "can-you-describe-what-the-thief-looked-like.wav"
+      },
+      {
+        "word": "engineer",
+        "phonics": "/ˌendʒɪˈnɪər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/engineer.webp",
+        "vietnameseMeaning": "kỹ sư",
+        "sampleSentence": "The engineer designed a strong and safe bridge.",
+        "vietnameseTranslation": "Người kỹ sư thiết kế một cây cầu chắc chắn và an toàn.",
+        "wordPronunciation": "engineer.wav",
+        "sentencePronunciation": "the-engineer-designed-a-strong-and-safe-bridge.wav"
+      },
+      {
+        "word": "nutrient",
+        "phonics": "/ˈnjuːtriənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/nutrient.webp",
+        "vietnameseMeaning": "chất dinh dưỡng",
+        "sampleSentence": "Fruits and vegetables contain important nutrients.",
+        "vietnameseTranslation": "Trái cây và rau củ chứa nhiều chất dinh dưỡng quan trọng.",
+        "wordPronunciation": "nutrient.wav",
+        "sentencePronunciation": "fruits-and-vegetables-contain-important-nutrients.wav"
+      },
+      {
+        "word": "microscopic",
+        "phonics": "/ˌmaɪkrəˈskɒpɪk/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/microscopic.webp",
+        "vietnameseMeaning": "siêu nhỏ, vi mô",
+        "sampleSentence": "Microscopic organisms live in the ocean.",
+        "vietnameseTranslation": "Các sinh vật siêu nhỏ sống trong đại dương.",
+        "wordPronunciation": "microscopic.wav",
+        "sentencePronunciation": "microscopic-organisms-live-in-the-ocean.wav"
+      },
+      {
+        "word": "reduce",
+        "phonics": "/rɪˈdjuːs/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/reduce.webp",
+        "vietnameseMeaning": "giảm bớt, cắt giảm",
+        "sampleSentence": "We must reduce waste to protect the planet.",
+        "vietnameseTranslation": "Chúng ta phải giảm rác thải để bảo vệ hành tinh.",
+        "wordPronunciation": "reduce.wav",
+        "sentencePronunciation": "we-must-reduce-waste-to-protect-the-planet.wav"
+      },
+      {
+        "word": "carbon dioxide",
+        "phonics": "/ˌkɑːrbən daɪˈɒksaɪd/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/carbon-dioxide.webp",
+        "vietnameseMeaning": "khí carbon dioxide (CO₂)",
+        "sampleSentence": "Trees absorb carbon dioxide from the air.",
+        "vietnameseTranslation": "Cây hấp thụ khí carbon dioxide từ không khí.",
+        "wordPronunciation": "carbon-dioxide.wav",
+        "sentencePronunciation": "trees-absorb-carbon-dioxide-from-the-air.wav"
+      },
+      {
+        "word": "sustain",
+        "phonics": "/səˈsteɪn/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/sustain.webp",
+        "vietnameseMeaning": "duy trì, bảo tồn",
+        "sampleSentence": "We must find ways to sustain natural resources.",
+        "vietnameseTranslation": "Chúng ta phải tìm cách duy trì các nguồn tài nguyên thiên nhiên.",
+        "wordPronunciation": "sustain.wav",
+        "sentencePronunciation": "we-must-find-ways-to-sustain-natural-resources.wav"
+      },
+      {
+        "word": "balance",
+        "phonics": "/ˈbæl.əns/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/balance.webp",
+        "vietnameseMeaning": "sự cân bằng",
+        "sampleSentence": "A good diet keeps your body in balance.",
+        "vietnameseTranslation": "Chế độ ăn uống hợp lý giúp cơ thể cân bằng.",
+        "wordPronunciation": "balance.wav",
+        "sentencePronunciation": "a-good-diet-keeps-your-body-in-balance.wav"
+      },
+      {
+        "word": "threat",
+        "phonics": "/θret/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/threat.webp",
+        "vietnameseMeaning": "mối đe dọa",
+        "sampleSentence": "Climate change is a serious threat to wildlife.",
+        "vietnameseTranslation": "Biến đổi khí hậu là một mối đe dọa nghiêm trọng đối với động vật hoang dã.",
+        "wordPronunciation": "threat.wav",
+        "sentencePronunciation": "climate-change-is-a-serious-threat-to-wildlife.wav"
+      }
+    ],
+    "clozeData": {
+      "sentences": [
+        {
+          "sentence": "A parent acts as a _____, keeping their child safe from harm and danger.",
+          "word": "guardian"
+        },
+        {
+          "sentence": "The Earth's _____ includes temperature and rainfall patterns that make it suitable for life.",
+          "word": "climate"
+        },
+        {
+          "sentence": "The BFG is a famous Roald Dahl character who is a friendly _____ much taller than normal people.",
+          "word": "giant"
+        },
+        {
+          "sentence": "People _____ firefighters because they risk their lives to help others in emergencies.",
+          "word": "admire"
+        },
+        {
+          "sentence": "Teachers _____ their students by guiding and encouraging them to succeed in school.",
+          "word": "support"
+        },
+        {
+          "sentence": "A marine _____ studies whales and ocean animals to learn more about their lives.",
+          "word": "scientist"
+        },
+        {
+          "sentence": "Please _____ the main features of a whale, such as its size and color.",
+          "word": "describe"
+        },
+        {
+          "sentence": "An _____ needs to solve difficult problems when building skyscrapers or bridges.",
+          "word": "engineer"
+        },
+        {
+          "sentence": "A banana is a healthy snack rich in more than one important _____.",
+          "word": "nutrient"
+        },
+        {
+          "sentence": "Tiny _____ organisms, too small to see without a microscope, float in ocean water.",
+          "word": "microscopic"
+        },
+        {
+          "sentence": "To help the environment, we should _____ the amount of plastic we use and recycle more.",
+          "word": "reduce"
+        },
+        {
+          "sentence": "Plants take in _____ _____ from the air, helping to lower pollution.",
+          "word": "carbon dioxide"
+        },
+        {
+          "sentence": "If we _____ forests and oceans, people and animals will have what they need for many years.",
+          "word": "sustain"
+        },
+        {
+          "sentence": "Getting enough sleep and eating well help keep the body in _____.",
+          "word": "balance"
+        },
+        {
+          "sentence": "Climate change is a growing _____ that puts polar bears and other wild animals at risk.",
+          "word": "threat"
+        },
+        {
+          "sentence": "Lemon juice tastes very _____ because it has a lot of acid.",
+          "word": "acidic"
+        },
+        {
+          "sentence": "Sharks and whales are examples of _____ animals that live in the ocean.",
+          "word": "marine"
+        },
+        {
+          "sentence": "The boat sailed close to the _____, where the land meets the sea.",
+          "word": "coast"
+        },
+        {
+          "sentence": "We need an _____ to check the new building's safety and design.",
+          "word": "expert"
+        },
+        {
+          "sentence": "Car _____ make the air dirty, especially in big cities.",
+          "word": "emissions"
+        },
+        {
+          "sentence": "The dog was _____ in the house and couldn't get out.",
+          "word": "trapped"
+        },
+        {
+          "sentence": "Farmers use _____ to help plants grow faster and healthier.",
+          "word": "fertilizer"
+        },
+        {
+          "sentence": "_____ are tiny plants that float in the ocean and provide food for many sea animals.",
+          "word": "Phytoplankton"
+        },
+        {
+          "sentence": "Sponge can _____ water quickly, making it useful for cleaning spills.",
+          "word": "absorb"
+        },
+        {
+          "sentence": "We are all _____ for keeping our neighborhood clean.",
+          "word": "responsible"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6"
+            },
+            "children": [
+              { "text": "Whales – Guardians of the Climate" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 2: Vocabulary - Part 2" }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video mở đầu." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Luyện tập phát âm từ vựng và câu." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập từ vựng bằng các hoạt động tương tác, chụp kết quả gửi kết quả cho giáo viên, quan trọng là cách hoạt động trắc nghiệm và nghe."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Chọn 10 từ vựng để đặt câu và gửi cho giáo viên." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}
+
