@@ -1,6 +1,6 @@
 {
   "lesson-6-shadowing": {
-    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 6: Shadowing",
     "menu": [
@@ -11,7 +11,7 @@
       "embedPages": [
         {
           "id": "shadowing-exercise",
-          "url": "/embed/multitple-intelligence-theory/shadowing/index.html",
+          "url": "https://storage.chillteacher.com/pages/multitple-intelligence-theory/shadowing/index.html",
           "title": "Shadowing Exercise"
         }
       ]

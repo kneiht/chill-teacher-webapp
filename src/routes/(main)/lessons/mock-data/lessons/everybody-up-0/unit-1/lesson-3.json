@@ -1,29 +1,14 @@
 {
   "lesson-3": {
-    "background": "/backgrounds/EU0-U1L2.webp",
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp",
     "title": "Unit 1: Art Class",
     "description": "Lesson 3: Reading",
     "menu": [
-      {
-        "type": "video",
-        "id": "main-lesson"
-      },
-      {
-        "type": "googleSlide",
-        "id": "presentation"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "activity",
-        "id": "candy-crush"
-      },
+      { "type": "video", "id": "main-lesson" },
+      { "type": "googleSlide", "id": "presentation" },
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "candy-crush" },
       { "type": "activity", "id": "reading-comprehension" }
     ],
     "externalContent": {

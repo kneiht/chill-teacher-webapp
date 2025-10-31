@@ -1,33 +1,16 @@
 {
   "lesson-4": {
-    "background": "/backgrounds/EU0-U1L2.webp",
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp",
     "title": "Unit 1: Art Class",
     "description": "Lesson 4: Listening & Shadowing",
     "menu": [
-      {
-        "type": "googleSlide",
-        "id": "presentation"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "embedPage",
-        "id": "listening-exercise"
-      },
-      {
-        "type": "embedPage",
-        "id": "shadowing-exercise"
-      },
-      {
-        "type": "activity",
-        "id": "candy-crush"
-      }
+      { "type": "video", "id": "main-lesson" },
+      { "type": "googleSlide", "id": "presentation" },
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "candy-crush" },
+      { "type": "activity", "id": "listening-exercise" },
+      { "type": "activity", "id": "shadowing-exercise" }
     ],
     "externalContent": {
       "googleSlides": [
@@ -40,12 +23,12 @@
       "embedPages": [
         {
           "id": "shadowing-exercise",
-          "url": "/embed/everybody-up-0/shadowing/index.html",
+          "url": "https://storage.chillteacher.com/pages/everybody-up-0/shadowing/index.html",
           "title": "Bài tập nghe và lặp lại"
         },
         {
           "id": "listening-exercise",
-          "url": "/embed/everybody-up-0/listening/index.html",
+          "url": "https://storage.chillteacher.com/pages/everybody-up-0/listening/index.html",
           "title": "Bài tập nghe"
         }
       ]

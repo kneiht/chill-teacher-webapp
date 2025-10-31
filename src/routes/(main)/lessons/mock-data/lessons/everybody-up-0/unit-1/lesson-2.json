@@ -1,73 +1,25 @@
 {
   "lesson-2": {
-    "background": "/backgrounds/EU0-U1L2.webp",
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp",
     "title": "Unit 1: Art Class",
     "description": "Lesson 2: School Supplies Review",
     "menu": [
-      {
-        "type": "video",
-        "id": "main-lesson"
-      },
-      {
-        "type": "googleSlide",
-        "id": "presentation"
-      },
-      {
-        "type": "page",
-        "id": "assignments"
-      },
-      {
-        "type": "activity",
-        "id": "flashcards"
-      },
-      {
-        "type": "activity",
-        "id": "matching-game"
-      },
-      {
-        "type": "activity",
-        "id": "anagram-game"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-envi"
-      },
-      {
-        "type": "activity",
-        "id": "multiple-choice-vien"
-      },
-      {
-        "type": "activity",
-        "id": "memory-game"
-      },
-      {
-        "type": "activity",
-        "id": "listening-typing"
-      },
-      {
-        "type": "activity",
-        "id": "unjumble-game"
-      },
-      {
-        "type": "activity",
-        "id": "listening-sentence"
-      },
-      {
-        "type": "activity",
-        "id": "translation-game"
-      },
-      {
-        "type": "activity",
-        "id": "picture-choice"
-      },
-      {
-        "type": "activity",
-        "id": "image-reveal"
-      },
-      {
-        "type": "activity",
-        "id": "picture-typing"
-      }
+      { "type": "video", "id": "main-lesson" },
+      { "type": "googleSlide", "id": "presentation" },
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "anagram-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "unjumble-game" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" }
     ],
     "externalContent": {
       "videos": [

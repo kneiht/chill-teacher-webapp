@@ -1,6 +1,6 @@
 {
   "lesson-5-listening": {
-    "background": "/backgrounds/multiple-intelligence-theory.webp",
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 5: Listening",
     "menu": [
@@ -20,7 +20,7 @@
       "embedPages": [
         {
           "id": "listening-exercise",
-          "url": "/embed/multitple-intelligence-theory/listening/index.html",
+          "url": "https://storage.chillteacher.com/pages/multitple-intelligence-theory/listening/index.html",
           "title": "Listening Exercise"
         }
       ]
