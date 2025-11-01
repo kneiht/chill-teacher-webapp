@@ -11,9 +11,10 @@
     "lint": "eslint",
     "format": "prettier",
     "check": "prettier --write . && eslint --fix",
-    "convert": "node convert-images.js",
-    "translate": "node collect-translations.js",
-    "upload-r2": "node upload-to-r2.js"
+    "convert": "node scripts/convert-images.js",
+    "translate": "node scripts/collect-translations.js",
+    "upload-r2": "node scripts/upload-to-r2.js",
+    "generate-image": "node scripts/generate_image.js"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.2",
