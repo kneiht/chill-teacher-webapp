@@ -20,7 +20,6 @@
     ".cta.json": true,
     ".vscode": true,
     "dist": true,
-    "scripts": true,
     "eslint.config.js": true,
     "src/routeTree.gen.ts": false,
     "src/reportWebVitals.ts": true
