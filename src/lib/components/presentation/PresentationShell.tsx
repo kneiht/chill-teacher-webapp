@@ -170,7 +170,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           {/* Left Edge Clickable Zone */}
           {showNavButtons && (
             <div
-              className="absolute left-0 top-0 bottom-0 w-40 z-30 cursor-pointer"
+              className="absolute left-0 top-0 bottom-0 w-10 z-30 cursor-pointer"
               onMouseEnter={() => setHoverLeftEdge(true)}
               onMouseLeave={() => setHoverLeftEdge(false)}
               onClick={() => showSlide(currentSlide - 1)}
@@ -180,7 +180,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           {/* Right Edge Clickable Zone */}
           {showNavButtons && (
             <div
-              className="absolute right-0 top-0 bottom-0 w-40 z-30 cursor-pointer"
+              className="absolute right-0 top-0 bottom-0 w-10 z-30 cursor-pointer"
               onMouseEnter={() => setHoverRightEdge(true)}
               onMouseLeave={() => setHoverRightEdge(false)}
               onClick={() => showSlide(currentSlide + 1)}
