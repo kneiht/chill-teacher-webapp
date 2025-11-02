@@ -13,7 +13,6 @@ import { useBackgroundMusic } from '@/lib/hooks/useBackgroundMusic'
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import './game-styles.css'
 
 interface VocabItem {
   word: string

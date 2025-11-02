@@ -120,8 +120,10 @@ interface LessonData {
   readingData?: ReadingComprehensionData
   readingSlidesData?: Array<{
     audio: string
-    image: string
+    image?: string
     text: string
+    title?: string
+    textTitle?: string
   }>
   pages?: ContentPageData[] // Array of pages with id
   externalContent?: {

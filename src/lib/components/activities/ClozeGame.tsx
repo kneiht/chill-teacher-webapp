@@ -11,7 +11,6 @@ import {
 // Components
 import PresentationShell from '@/lib/components/presentation/PresentationShell'
 import Slide from '@/lib/components/presentation/Slide'
-import './game-styles.css'
 
 // This game doesn't use vocabData directly for questions, but it's part of the standard interface.
 interface VocabItem {
