@@ -1,0 +1,41 @@
+{
+  "lesson-4-reading": {
+    "background": "https://storage.chillteacher.com/backgrounds/whales-guardians-of-the-climate.webp",
+    "title": "Whales – Guardians of the Climate",
+    "description": "Lesson 4: Reading",
+    "menu": [{ "type": "activity", "id": "reading-slides" }],
+    "readingSlidesData": [
+      {
+        "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio1.wav",
+        "image": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/images/image1.png",
+        "text": "Whales – Guardians of the Climate"
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio2.wav",
+        "image": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/images/image2.png",
+        "text": "More Than Ocean Giants\nWhales are among the largest and most intelligent animals on Earth. People often admire them for their beauty and size, but their true value lies in the way they support life on our planet. Scientists describe whales as \"engineers of the ocean\" because they help move nutrients through the water, support the growth of microscopic plants, and even reduce the amount of carbon dioxide in the atmosphere. In this sense, whales do not just inspire wonder — they quietly help sustain the balance of the natural world."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio3.wav",
+        "image": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/images/image3.png",
+        "text": "Oceans Under Threat\nHuman activities have caused serious changes to the global climate. As a result, the oceans are warming and becoming more acidic, which harms marine life. Melting ice and rising sea levels are threatening people who live near the coast, while stronger storms are becoming more frequent. According to climate experts, urgent action is needed to cut greenhouse gas emissions and protect both ocean ecosystems and human communities from further damage."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio4.wav",
+        "image": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/images/image4.png",
+        "text": "How Whales Help the Planet\nWhales play an unexpected role in the fight against climate change. Over their long lifetimes, they store large amounts of carbon in their bodies. When a whale dies and sinks to the ocean floor, that carbon remains trapped for centuries. Their waste also acts as fertilizer for phytoplankton — tiny ocean plants that absorb carbon dioxide and produce oxygen. These plants are responsible for about half of the oxygen we breathe. Scientists estimate that if whale populations increased, the rise in phytoplankton could remove hundreds of millions of tonnes of carbon from the atmosphere every year."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio5.wav",
+        "image": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/images/image5.png",
+        "text": "A Struggle for Survival\nDespite their importance, whale populations have not fully recovered from centuries of hunting. Today, many whales still face deadly dangers from ship collisions, fishing gear, and underwater noise pollution. The North Atlantic right whale, for example, has fewer than 400 individuals left. Many are trapped in ropes and die slowly from injuries or starvation. With so few calves being born, this species is moving dangerously close to extinction."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio6.wav",
+        "image": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/images/image6.png",
+        "text": "Protecting the Ocean's Giants\nSaving whales means saving the planet. Each whale that survives helps the ocean stay healthy and the atmosphere clean. Governments and individuals must work together to prevent ship strikes, improve fishing practices, and create safer habitats. By protecting whales, we protect the systems that give us air to breathe and a stable climate to live in."
+      }
+    ],
+    "vocab": []
+  }
+}
