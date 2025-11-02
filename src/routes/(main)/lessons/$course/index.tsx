@@ -16,7 +16,7 @@ export const Route = createFileRoute('/(main)/lessons/$course/')({
   loader: async ({ params }): Promise<Array<Lesson> | { error: string }> => {
     try {
       const data = (await import(
-        `../mock-data/courses/${params.course}.json`
+        `@/mock-data/courses/${params.course}.json`
       )) as { default: Array<Lesson> }
       return data.default
     } catch {
