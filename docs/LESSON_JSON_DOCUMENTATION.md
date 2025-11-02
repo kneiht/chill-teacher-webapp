@@ -27,6 +27,7 @@ src/routes/(main)/lessons/mock-data/lessons/{course}/{unit}/{lesson-name}.json
 ```
 
 **Example:**
+
 ```
 src/routes/(main)/lessons/mock-data/lessons/advanced-topics/multiple-intelligence-theory/lesson-1-vocab.json
 ```
@@ -36,6 +37,7 @@ src/routes/(main)/lessons/mock-data/lessons/advanced-topics/multiple-intelligenc
 Each JSON file must contain a single object with a key matching the lesson filename (without `.json` extension). The lesson data is nested under this key.
 
 **Structure:**
+
 ```json
 {
   "lesson-name": {
@@ -45,11 +47,12 @@ Each JSON file must contain a single object with a key matching the lesson filen
 ```
 
 **Example:**
+
 ```json
 {
   "lesson-1-vocab": {
     "background": "...",
-    "title": "...",
+    "title": "..."
     // ... rest of lesson data
   }
 }
@@ -66,10 +69,10 @@ Every lesson JSON file must include these required fields:
 ```json
 {
   "lesson-name": {
-    "background": "string",      // URL to background image
-    "title": "string",            // Main lesson title
-    "description": "string",      // Lesson subtitle/description
-    "menu": []                    // Array of menu items (see Menu System)
+    "background": "string", // URL to background image
+    "title": "string", // Main lesson title
+    "description": "string", // Lesson subtitle/description
+    "menu": [] // Array of menu items (see Menu System)
   }
 }
 ```
@@ -100,21 +103,22 @@ The `vocab` array contains vocabulary items that power most vocabulary-based act
 {
   "vocab": [
     {
-      "word": "string",                    // Required: English word
-      "phonics": "string",                  // Required: Phonetic pronunciation
-      "partOfSpeech": "string",             // Optional: Part of speech (n, v, adj, etc.)
-      "image": "string",                    // Optional: URL to word image
-      "vietnameseMeaning": "string",        // Required: Vietnamese translation
-      "sampleSentence": "string",           // Required: Example sentence in English
-      "vietnameseTranslation": "string",    // Required: Translation of sample sentence
-      "wordPronunciation": "string",        // Optional: Custom pronunciation URL/ID
-      "sentencePronunciation": "string"     // Optional: Custom sentence pronunciation
+      "word": "string", // Required: English word
+      "phonics": "string", // Required: Phonetic pronunciation
+      "partOfSpeech": "string", // Optional: Part of speech (n, v, adj, etc.)
+      "image": "string", // Optional: URL to word image
+      "vietnameseMeaning": "string", // Required: Vietnamese translation
+      "sampleSentence": "string", // Required: Example sentence in English
+      "vietnameseTranslation": "string", // Required: Translation of sample sentence
+      "wordPronunciation": "string", // Optional: Custom pronunciation URL/ID
+      "sentencePronunciation": "string" // Optional: Custom sentence pronunciation
     }
   ]
 }
 ```
 
 **Example:**
+
 ```json
 {
   "vocab": [
@@ -141,6 +145,7 @@ The `vocab` array contains vocabulary items that power most vocabulary-based act
 ```
 
 **Notes:**
+
 - If `image` is empty or omitted, activities will display without images
 - `partOfSpeech` is optional but recommended for better vocabulary learning
 - All fields except `partOfSpeech`, `image`, `wordPronunciation`, and `sentencePronunciation` are required for vocabulary items
@@ -154,6 +159,7 @@ The `menu` array defines what appears on the lesson homepage and in what order. 
 ### Menu Item Types
 
 Menu items can be one of five types:
+
 1. **`activity`** - Interactive learning activities
 2. **`page`** - Custom content pages
 3. **`video`** - YouTube videos
@@ -175,6 +181,7 @@ Menu items can be one of five types:
 ```
 
 **Important:**
+
 - The order in the `menu` array determines the display order on the homepage
 - The `id` must match:
   - For activities: a valid activity ID from the registry (see [Activities](#activities))
@@ -189,29 +196,30 @@ Activities are interactive learning games and exercises. They are referenced in 
 
 ### Available Activities
 
-| Activity ID | Title | Description | Requires Vocab |
-|------------|-------|-------------|----------------|
-| `vocabulary` | Vocabulary | Learn new words | ✅ Yes |
-| `flashcards` | Flashcards | Practice with flashcards | ✅ Yes |
-| `matching-game` | Matching Game | Match words with meanings | ✅ Yes |
-| `memory-game` | Memory Game | Test your memory | ✅ Yes |
-| `multiple-choice-envi` | Multiple Choice (EN→VI) | Choose correct Vietnamese meaning | ✅ Yes |
-| `multiple-choice-vien` | Multiple Choice (VI→EN) | Choose correct English word | ✅ Yes |
-| `anagram-game` | Anagram Game | Unscramble the letters | ✅ Yes |
-| `unjumble-game` | Unjumble Game | Put words in order | ✅ Yes |
-| `cloze-game` | Fill in the Blanks | Complete the sentences | ❌ No (needs `clozeData`) |
-| `picture-choice` | Picture Choice | Choose the correct word for picture | ✅ Yes |
-| `picture-typing` | Picture Typing | Type the word for picture | ✅ Yes |
-| `listening-typing` | Listening & Typing | Listen and type what you hear | ✅ Yes |
-| `listening-sentence` | Listening Sentence | Listen and type the sentence | ✅ Yes |
-| `translation-game` | Translation (VI→EN) | Translate to English | ✅ Yes |
-| `candy-crush` | Candy Crush Quiz | Answer questions to crush candies | ❌ No (needs `questions`) |
-| `image-reveal` | Image Reveal | Reveal the hidden image | ✅ Yes |
-| `reading-comprehension` | Reading Comprehension | Reading comprehension with various question types | ❌ No (needs `readingData`) |
+| Activity ID             | Title                   | Description                                       | Requires Vocab                           |
+| ----------------------- | ----------------------- | ------------------------------------------------- | ---------------------------------------- |
+| `vocabulary`            | Vocabulary              | Learn new words                                   | ✅ Yes                                   |
+| `flashcards`            | Flashcards              | Practice with flashcards                          | ✅ Yes                                   |
+| `matching-game`         | Matching Game           | Match words with meanings                         | ✅ Yes                                   |
+| `memory-game`           | Memory Game             | Test your memory                                  | ✅ Yes                                   |
+| `multiple-choice-envi`  | Multiple Choice (EN→VI) | Choose correct Vietnamese meaning                 | ✅ Yes                                   |
+| `multiple-choice-vien`  | Multiple Choice (VI→EN) | Choose correct English word                       | ✅ Yes                                   |
+| `anagram-game`          | Anagram Game            | Unscramble the letters                            | ✅ Yes                                   |
+| `unjumble-game`         | Unjumble Game           | Put words in order                                | ✅ Yes                                   |
+| `cloze-game`            | Fill in the Blanks      | Complete the sentences                            | ❌ No (needs `clozeData`)                |
+| `picture-choice`        | Picture Choice          | Choose the correct word for picture               | ✅ Yes                                   |
+| `picture-typing`        | Picture Typing          | Type the word for picture                         | ✅ Yes                                   |
+| `listening-typing`      | Listening & Typing      | Listen and type what you hear                     | ✅ Yes                                   |
+| `listening-sentence`    | Listening Sentence      | Listen and type the sentence                      | ✅ Yes                                   |
+| `translation-game`      | Translation (VI→EN)     | Translate to English                              | ✅ Yes                                   |
+| `candy-crush`           | Candy Crush Quiz        | Answer questions to crush candies                 | ❌ No (needs `questions`)                |
+| `image-reveal`          | Image Reveal            | Reveal the hidden image                           | ✅ Yes                                   |
+| `reading-comprehension` | Reading Comprehension   | Reading comprehension with various question types | ❌ No (needs `readingComprehensionData`) |
 
 ### Activity Requirements
 
 **Most activities require vocabulary data:**
+
 - If an activity uses `vocab`, you must include the `vocab` array in your lesson JSON
 - Activities automatically use all vocabulary items from the `vocab` array
 
@@ -221,7 +229,7 @@ Activities are interactive learning games and exercises. They are referenced in 
 
 2. **`candy-crush`** requires `questions` array (see [Candy Crush Questions](#candy-crush-questions))
 
-3. **`reading-comprehension`** requires `readingData` (see [Reading Comprehension Data](#reading-comprehension-data))
+3. **`reading-comprehension`** requires `readingComprehensionData` (see [Reading Comprehension Data](#reading-comprehension-data))
 
 ### Example Menu with Activities
 
@@ -235,8 +243,12 @@ Activities are interactive learning games and exercises. They are referenced in 
     { "type": "activity", "id": "memory-game" },
     { "type": "activity", "id": "cloze-game" }
   ],
-  "vocab": [ /* vocabulary items */ ],
-  "clozeData": { /* cloze data */ }
+  "vocab": [
+    /* vocabulary items */
+  ],
+  "clozeData": {
+    /* cloze data */
+  }
 }
 ```
 
@@ -253,23 +265,23 @@ External content includes videos, Google Slides, and embedded pages. These are d
   "externalContent": {
     "videos": [
       {
-        "id": "string",          // Required: Unique ID (used in menu)
-        "url": "string",          // Required: YouTube URL
-        "title": "string"         // Optional: Display title
+        "id": "string", // Required: Unique ID (used in menu)
+        "url": "string", // Required: YouTube URL
+        "title": "string" // Optional: Display title
       }
     ],
     "googleSlides": [
       {
-        "id": "string",          // Required: Unique ID (used in menu)
-        "url": "string",          // Required: Google Slides embed URL
-        "title": "string"         // Optional: Display title
+        "id": "string", // Required: Unique ID (used in menu)
+        "url": "string", // Required: Google Slides embed URL
+        "title": "string" // Optional: Display title
       }
     ],
     "embedPages": [
       {
-        "id": "string",          // Required: Unique ID (used in menu)
-        "url": "string",         // Required: Full URL to embed
-        "title": "string"        // Optional: Display title
+        "id": "string", // Required: Unique ID (used in menu)
+        "url": "string", // Required: Full URL to embed
+        "title": "string" // Optional: Display title
       }
     ]
   }
@@ -279,10 +291,12 @@ External content includes videos, Google Slides, and embedded pages. These are d
 ### Video Format
 
 Videos use YouTube URLs. Supported formats:
+
 - Full URL: `https://www.youtube.com/watch?v=VIDEO_ID`
 - Short URL: `https://youtu.be/VIDEO_ID`
 
 **Example:**
+
 ```json
 {
   "externalContent": {
@@ -294,20 +308,20 @@ Videos use YouTube URLs. Supported formats:
       }
     ]
   },
-  "menu": [
-    { "type": "video", "id": "lesson-video" }
-  ]
+  "menu": [{ "type": "video", "id": "lesson-video" }]
 }
 ```
 
 ### Google Slides Format
 
 Use the Google Slides publish/embed URL format:
+
 ```
 https://docs.google.com/presentation/d/e/2PACX-1v.../pubembed
 ```
 
 **Example:**
+
 ```json
 {
   "externalContent": {
@@ -319,15 +333,14 @@ https://docs.google.com/presentation/d/e/2PACX-1v.../pubembed
       }
     ]
   },
-  "menu": [
-    { "type": "googleSlide", "id": "presentation" }
-  ]
+  "menu": [{ "type": "googleSlide", "id": "presentation" }]
 }
 ```
 
 ### Embed Pages Format
 
 Embed pages allow you to include external HTML pages via iframe:
+
 ```json
 {
   "externalContent": {
@@ -339,9 +352,7 @@ Embed pages allow you to include external HTML pages via iframe:
       }
     ]
   },
-  "menu": [
-    { "type": "embedPage", "id": "listening-exercise" }
-  ]
+  "menu": [{ "type": "embedPage", "id": "listening-exercise" }]
 }
 ```
 
@@ -386,6 +397,7 @@ Pages use an HTML-like tree structure with tags, attributes, and children:
 ### Supported HTML Tags
 
 Commonly used tags:
+
 - `h1`, `h2`, `h3`, `h4`, `h5`, `h6` - Headings
 - `p` - Paragraphs
 - `ol`, `ul` - Ordered/unordered lists
@@ -423,7 +435,7 @@ Commonly used tags:
         {
           "tag": "ol",
           "attributes": {
-            "class": "text-3xl text-left text-gray-800 space-y-8"
+            "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
           },
           "children": [
             {
@@ -432,7 +444,9 @@ Commonly used tags:
             },
             {
               "tag": "li",
-              "children": [{ "text": "Luyện tập từ vựng bằng các hoạt động tương tác." }]
+              "children": [
+                { "text": "Luyện tập từ vựng bằng các hoạt động tương tác." }
+              ]
             }
           ]
         }
@@ -440,9 +454,7 @@ Commonly used tags:
       "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
     }
   ],
-  "menu": [
-    { "type": "page", "id": "assignments" }
-  ]
+  "menu": [{ "type": "page", "id": "assignments" }]
 }
 ```
 
@@ -478,6 +490,7 @@ You can nest elements within lists and other containers:
 Cloze data is used by the `cloze-game` activity. It provides sentences with blanks for students to fill.
 
 **Structure:**
+
 ```json
 {
   "clozeData": {
@@ -495,6 +508,7 @@ Cloze data is used by the `cloze-game` activity. It provides sentences with blan
 ```
 
 **Example with sentences:**
+
 ```json
 {
   "clozeData": {
@@ -513,6 +527,7 @@ Cloze data is used by the `cloze-game` activity. It provides sentences with blan
 ```
 
 **Example with paragraph:**
+
 ```json
 {
   "clozeData": {
@@ -529,6 +544,7 @@ Cloze data is used by the `cloze-game` activity. It provides sentences with blan
 The `candy-crush` activity uses a questions array with various question types.
 
 **Question Types:**
+
 - `multipleChoice` - Multiple choice questions
 - `listening` - Listening comprehension (with audio)
 - `fillBlank` - Fill in the blank questions
@@ -536,6 +552,7 @@ The `candy-crush` activity uses a questions array with various question types.
 - `imageToVietnamese` - Match image to Vietnamese word
 
 **Structure:**
+
 ```json
 {
   "questions": [
@@ -569,6 +586,7 @@ The `candy-crush` activity uses a questions array with various question types.
 ```
 
 **Example:**
+
 ```json
 {
   "questions": [
@@ -601,9 +619,10 @@ The `candy-crush` activity uses a questions array with various question types.
 Reading comprehension data is used by the `reading-comprehension` activity. It includes a passage and various question types.
 
 **Structure:**
+
 ```json
 {
-  "readingData": {
+  "readingComprehensionData": {
     "title": "string",                    // Reading passage title
     "passage": [                          // Array of passage paragraphs
       {
@@ -638,25 +657,27 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 #### Question Types
 
 **1. Single Choice Questions:**
+
 ```json
 {
   "singleChoice": [
     {
-      "id": "string",                    // Unique question ID
-      "prompt": "string",                 // Question text
+      "id": "string", // Unique question ID
+      "prompt": "string", // Question text
       "options": [
         {
-          "value": "string",             // Option value
-          "label": "string"              // Display label
+          "value": "string", // Option value
+          "label": "string" // Display label
         }
       ],
-      "correct": "string"                // Correct option value
+      "correct": "string" // Correct option value
     }
   ]
 }
 ```
 
 **2. True/False/Not Given Questions:**
+
 ```json
 {
   "tfng": [
@@ -670,6 +691,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **3. Matching Questions:**
+
 ```json
 {
   "matching": {
@@ -677,7 +699,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
       {
         "id": "string",
         "statement": "string",
-        "correct": "string"              // Option value
+        "correct": "string" // Option value
       }
     ],
     "options": [
@@ -691,6 +713,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **4. Summary Questions:**
+
 ```json
 {
   "summary": [
@@ -704,6 +727,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **5. Short Answer Questions:**
+
 ```json
 {
   "shortAnswer": [
@@ -716,6 +740,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **6. Multi-Select Item Questions:**
+
 ```json
 {
   "multiSelectItem": [
@@ -731,6 +756,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **7. Picture Choice Questions:**
+
 ```json
 {
   "pictureChoice": [
@@ -745,6 +771,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **8. Text Comprehension Questions:**
+
 ```json
 {
   "textComprehension": [
@@ -759,9 +786,10 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ```
 
 **Complete Reading Comprehension Example:**
+
 ```json
 {
-  "readingData": {
+  "readingComprehensionData": {
     "title": "Applying Multiple Intelligence Theory in the Classroom",
     "passage": [
       {
@@ -778,9 +806,18 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
           "id": "sc1",
           "prompt": "What is the main idea behind Multiple Intelligence theory?",
           "options": [
-            { "value": "one-score", "label": "Intelligence should be measured by a single score." },
-            { "value": "varied-strengths", "label": "Learners have varied strengths that can be developed." },
-            { "value": "music-only", "label": "Music is the most important form of intelligence." }
+            {
+              "value": "one-score",
+              "label": "Intelligence should be measured by a single score."
+            },
+            {
+              "value": "varied-strengths",
+              "label": "Learners have varied strengths that can be developed."
+            },
+            {
+              "value": "music-only",
+              "label": "Music is the most important form of intelligence."
+            }
           ],
           "correct": "varied-strengths"
         }
@@ -870,12 +907,16 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
         "root": [
           {
             "tag": "h1",
-            "attributes": { "class": "text-4xl font-bold text-indigo-700 text-center" },
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
             "children": [{ "text": "Multiple Intelligence Theory" }]
           },
           {
             "tag": "ol",
-            "attributes": { "class": "text-3xl text-left text-gray-800 space-y-8" },
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
             "children": [
               {
                 "tag": "li",
@@ -883,7 +924,9 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
               },
               {
                 "tag": "li",
-                "children": [{ "text": "Luyện tập từ vựng bằng các hoạt động tương tác." }]
+                "children": [
+                  { "text": "Luyện tập từ vựng bằng các hoạt động tương tác." }
+                ]
               }
             ]
           }
@@ -903,9 +946,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
     "background": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 1: Vocabulary - Part 1",
-    "menu": [
-      { "type": "activity", "id": "cloze-game" }
-    ],
+    "menu": [{ "type": "activity", "id": "cloze-game" }],
     "vocab": [
       {
         "word": "intelligence",
@@ -939,10 +980,8 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
     "background": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp",
     "title": "Multiple Intelligence Theory",
     "description": "Lesson 4: Reading",
-    "menu": [
-      { "type": "activity", "id": "reading-comprehension" }
-    ],
-    "readingData": {
+    "menu": [{ "type": "activity", "id": "reading-comprehension" }],
+    "readingComprehensionData": {
       "title": "Applying Multiple Intelligence Theory in the Classroom",
       "passage": [
         {
@@ -955,7 +994,10 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
             "id": "sc1",
             "prompt": "What is the main idea behind Multiple Intelligence theory?",
             "options": [
-              { "value": "varied-strengths", "label": "Learners have varied strengths that can be developed." }
+              {
+                "value": "varied-strengths",
+                "label": "Learners have varied strengths that can be developed."
+              }
             ],
             "correct": "varied-strengths"
           }
@@ -1012,7 +1054,7 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 
 6. **Candy Crush game not working**: Verify `questions` array is included with valid question objects
 
-7. **Reading comprehension error**: Ensure `readingData` has correct structure with `title`, `passage`, and `questions`
+7. **Reading comprehension error**: Ensure `readingComprehensionData` has correct structure with `title`, `passage`, and `questions`
 
 ---
 
@@ -1026,4 +1068,3 @@ Reading comprehension data is used by the `reading-comprehension` activity. It i
 ---
 
 **Last Updated**: Based on codebase analysis as of documentation creation date.
-

@@ -37,7 +37,7 @@ const VocabularyCore: React.FC<VocabularyCoreProps> = ({
   if (!vocab.image) {
     return (
       <div
-        className="flex flex-col items-center justify-center flex-1 rounded-xl p-8 bg-[#ffffffae] w-full"
+        className="flex flex-col items-center justify-center flex-1 rounded-xl p-8 bg-[#ffffffae] w-full h-full"
         style={{ fontFamily: "'Roboto', sans-serif" }}
       >
         <div className="flex items-center mb-4">

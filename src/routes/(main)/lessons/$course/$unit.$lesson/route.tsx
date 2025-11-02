@@ -117,7 +117,7 @@ interface LessonData {
   clozeData?: ClozeData
   questions?: CandyCrushQuestion[]
   assignmentData?: AssignmentData
-  readingData?: ReadingComprehensionData
+  readingComprehensionData?: ReadingComprehensionData
   readingSlidesData?: Array<{
     audio: string
     image?: string

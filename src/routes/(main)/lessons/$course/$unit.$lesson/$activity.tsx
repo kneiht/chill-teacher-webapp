@@ -183,7 +183,7 @@ function ActivityComponent() {
     menu,
     clozeData,
     questions,
-    readingData,
+    readingComprehensionData,
     readingSlidesData,
   } = lessonData
 
@@ -249,7 +249,7 @@ function ActivityComponent() {
   if (activityMeta.component === 'ReadingComprehensionSlide') {
     return (
       <ActivityComponent
-        readingData={readingData}
+        readingComprehensionData={readingComprehensionData}
         backgroundUrl={background}
         title={`${activityMeta.title} - ${title}`}
         onClose={handleClose}
@@ -260,7 +260,7 @@ function ActivityComponent() {
   if (activityMeta.component === 'ReadingSlide') {
     return (
       <ActivityComponent
-        readingData={readingSlidesData || []}
+        readingComprehensionData={readingSlidesData || []}
         backgroundUrl={background}
         activityTitle={activityMeta.title}
         lessonTitle={title}

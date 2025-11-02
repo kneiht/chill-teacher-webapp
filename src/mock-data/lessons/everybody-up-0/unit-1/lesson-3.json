@@ -222,7 +222,7 @@
         "image": "https://storage.chillteacher.com/images-words/pen.webp"
       }
     ],
-    "readingData": {
+    "readingComprehensionData": {
       "title": "In the Art Class",
       "passage": [
         {
@@ -378,7 +378,7 @@
           {
             "tag": "ol",
             "attributes": {
-              "class": "text-3xl text-left text-gray-800 space-y-8"
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
             },
             "children": [
               {

@@ -12,12 +12,7 @@
       { "type": "activity", "id": "memory-game" },
       { "type": "activity", "id": "multiple-choice-envi" },
       { "type": "activity", "id": "multiple-choice-vien" },
-      { "type": "activity", "id": "picture-choice" },
-      { "type": "activity", "id": "image-reveal" },
-      { "type": "activity", "id": "anagram-game" },
-      { "type": "activity", "id": "unjumble-game" },
       { "type": "activity", "id": "translation-game" },
-      { "type": "activity", "id": "picture-typing" },
       { "type": "activity", "id": "listening-typing" },
       { "type": "activity", "id": "listening-sentence" },
       { "type": "activity", "id": "cloze-game" }
@@ -36,280 +31,342 @@
         "word": "reflection",
         "phonics": "/rɪˈflɛkʃən/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "suy ngẫm, phản chiếu",
         "sampleSentence": "Reflection helps us learn from mistakes.",
-        "vietnameseTranslation": "Suy ngẫm giúp chúng ta học từ những sai lầm."
+        "vietnameseTranslation": "Suy ngẫm giúp chúng ta học từ những sai lầm.",
+        "image": "",
+        "wordPronunciation": "reflection.mp3",
+        "sentencePronunciation": "reflection-helps-us-learn-from-mistakes.mp3"
       },
       {
         "word": "independent",
         "phonics": "/ˌɪndɪˈpɛndənt/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "độc lập",
         "sampleSentence": "He likes to be independent in his work.",
-        "vietnameseTranslation": "Anh ấy thích làm việc một cách độc lập."
+        "vietnameseTranslation": "Anh ấy thích làm việc một cách độc lập.",
+        "image": "",
+        "wordPronunciation": "independent.mp3",
+        "sentencePronunciation": "he-likes-to-be-independent-in-his-work.mp3"
       },
       {
         "word": "naturalist",
         "phonics": "/ˈnætʃərəlist/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "người nghiên cứu thiên nhiên",
         "sampleSentence": "Naturalist intelligence is about understanding nature.",
-        "vietnameseTranslation": "Trí thông minh tự nhiên là việc hiểu biết về thiên nhiên."
+        "vietnameseTranslation": "Trí thông minh tự nhiên là việc hiểu biết về thiên nhiên.",
+        "image": "",
+        "wordPronunciation": "naturalist.mp3",
+        "sentencePronunciation": "naturalist-intelligence-is-about-understanding-nature.mp3"
       },
       {
         "word": "observe",
         "phonics": "/əbˈzɜrv/",
         "partOfSpeech": "v",
-        "image": "",
         "vietnameseMeaning": "quan sát",
         "sampleSentence": "Scientists observe animals in their natural environment.",
-        "vietnameseTranslation": "Các nhà khoa học quan sát động vật trong môi trường tự nhiên."
+        "vietnameseTranslation": "Các nhà khoa học quan sát động vật trong môi trường tự nhiên.",
+        "image": "",
+        "wordPronunciation": "observe.mp3",
+        "sentencePronunciation": "scientists-observe-animals-in-their-natural-environment.mp3"
       },
       {
         "word": "possibility",
         "phonics": "/ˌpɑsəˈbɪləti/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "khả năng",
         "sampleSentence": "There is a possibility of rain tomorrow.",
-        "vietnameseTranslation": "Có khả năng sẽ mưa vào ngày mai."
+        "vietnameseTranslation": "Có khả năng sẽ mưa vào ngày mai.",
+        "image": "",
+        "wordPronunciation": "possibility.mp3",
+        "sentencePronunciation": "there-is-a-possibility-of-rain-tomorrow.mp3"
       },
       {
         "word": "spiritual",
         "phonics": "/ˈspɪrɪtʃuəl/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "thuộc tinh thần, tâm linh",
         "sampleSentence": "Meditation is often a spiritual practice.",
-        "vietnameseTranslation": "Thiền thường là một hoạt động tinh thần."
+        "vietnameseTranslation": "Thiền thường là một hoạt động tinh thần.",
+        "image": "",
+        "wordPronunciation": "spiritual.mp3",
+        "sentencePronunciation": "meditation-is-often-a-spiritual-practice.mp3"
       },
       {
         "word": "existential",
         "phonics": "/ˌɛɡzɪˈstɛnʃəl/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "thuộc về tồn tại",
         "sampleSentence": "He asked deep existential questions about life.",
-        "vietnameseTranslation": "Anh ấy đặt ra những câu hỏi hiện sinh sâu sắc về cuộc sống."
+        "vietnameseTranslation": "Anh ấy đặt ra những câu hỏi hiện sinh sâu sắc về cuộc sống.",
+        "image": "",
+        "wordPronunciation": "existential.mp3",
+        "sentencePronunciation": "he-asked-deep-existential-questions-about-life.mp3"
       },
       {
         "word": "conclusion",
         "phonics": "/kənˈkluʒən/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "kết luận",
         "sampleSentence": "The teacher came to the conclusion after the test.",
-        "vietnameseTranslation": "Giáo viên đã đưa ra kết luận sau bài kiểm tra."
+        "vietnameseTranslation": "Giáo viên đã đưa ra kết luận sau bài kiểm tra.",
+        "image": "",
+        "wordPronunciation": "conclusion.mp3",
+        "sentencePronunciation": "the-teacher-came-to-the-conclusion-after-the-test.mp3"
       },
       {
         "word": "separate",
         "phonics": "/ˈsɛpərət/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "riêng biệt, tách rời",
         "sampleSentence": "The two ideas are separate but related.",
-        "vietnameseTranslation": "Hai ý tưởng này tách biệt nhưng có liên quan."
+        "vietnameseTranslation": "Hai ý tưởng này tách biệt nhưng có liên quan.",
+        "image": "",
+        "wordPronunciation": "separate.mp3",
+        "sentencePronunciation": "the-two-ideas-are-separate-but-related.mp3"
       },
       {
         "word": "strength",
         "phonics": "/strɛŋkθ/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "điểm mạnh, sức mạnh",
         "sampleSentence": "Her strength is in problem-solving.",
-        "vietnameseTranslation": "Điểm mạnh của cô ấy là giải quyết vấn đề."
+        "vietnameseTranslation": "Điểm mạnh của cô ấy là giải quyết vấn đề.",
+        "image": "",
+        "wordPronunciation": "strength.mp3",
+        "sentencePronunciation": "her-strength-is-in-problem-solving.mp3"
       },
       {
         "word": "opportunity",
         "phonics": "/ˌɑpərˈtunəti/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "cơ hội",
         "sampleSentence": "Education gives everyone an equal opportunity.",
-        "vietnameseTranslation": "Giáo dục mang lại cơ hội bình đẳng cho mọi người."
+        "vietnameseTranslation": "Giáo dục mang lại cơ hội bình đẳng cho mọi người.",
+        "image": "",
+        "wordPronunciation": "opportunity.mp3",
+        "sentencePronunciation": "education-gives-everyone-an-equal-opportunity.mp3"
       },
       {
         "word": "linguistic",
         "phonics": "/lɪŋˈɡwɪstɪk/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "ngôn ngữ học",
         "sampleSentence": "Linguistic intelligence involves reading and writing.",
-        "vietnameseTranslation": "Trí thông minh ngôn ngữ liên quan đến đọc và viết."
+        "vietnameseTranslation": "Trí thông minh ngôn ngữ liên quan đến đọc và viết.",
+        "image": "",
+        "wordPronunciation": "linguistic.mp3",
+        "sentencePronunciation": "linguistic-intelligence-involves-reading-and-writing.mp3"
       },
       {
         "word": "discussion",
         "phonics": "/dɪˈskʌʃən/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "thảo luận",
         "sampleSentence": "We had a discussion about the project.",
-        "vietnameseTranslation": "Chúng tôi đã thảo luận về dự án."
+        "vietnameseTranslation": "Chúng tôi đã thảo luận về dự án.",
+        "image": "",
+        "wordPronunciation": "discussion.mp3",
+        "sentencePronunciation": "we-had-a-discussion-about-the-project.mp3"
       },
       {
         "word": "pattern",
         "phonics": "/ˈpætərn/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "mẫu, khuôn mẫu",
         "sampleSentence": "Children quickly notice patterns in language.",
-        "vietnameseTranslation": "Trẻ em nhanh chóng nhận ra các mẫu trong ngôn ngữ."
+        "vietnameseTranslation": "Trẻ em nhanh chóng nhận ra các mẫu trong ngôn ngữ.",
+        "image": "",
+        "wordPronunciation": "pattern.mp3",
+        "sentencePronunciation": "children-quickly-notice-patterns-in-language.mp3"
       },
       {
         "word": "problem-solving",
         "phonics": "/ˈprɑbləm ˌsɑlvɪŋ/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "giải quyết vấn đề",
         "sampleSentence": "Problem-solving is an important skill in daily life.",
-        "vietnameseTranslation": "Giải quyết vấn đề là một kỹ năng quan trọng trong cuộc sống hàng ngày."
+        "vietnameseTranslation": "Giải quyết vấn đề là một kỹ năng quan trọng trong cuộc sống hàng ngày.",
+        "image": "",
+        "wordPronunciation": "problem-solving.mp3",
+        "sentencePronunciation": "problem-solving-is-an-important-skill-in-daily-life.mp3"
       },
       {
         "word": "spatial",
         "phonics": "/ˈspeɪʃəl/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "không gian",
         "sampleSentence": "Architects need strong spatial intelligence.",
-        "vietnameseTranslation": "Kiến trúc sư cần trí thông minh không gian mạnh."
+        "vietnameseTranslation": "Kiến trúc sư cần trí thông minh không gian mạnh.",
+        "image": "",
+        "wordPronunciation": "spatial.mp3",
+        "sentencePronunciation": "architects-need-strong-spatial-intelligence.mp3"
       },
       {
         "word": "imagination",
         "phonics": "/ɪˌmædʒəˈneɪʃən/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "trí tưởng tượng",
         "sampleSentence": "Children often have a strong imagination.",
-        "vietnameseTranslation": "Trẻ em thường có trí tưởng tượng phong phú."
+        "vietnameseTranslation": "Trẻ em thường có trí tưởng tượng phong phú.",
+        "image": "",
+        "wordPronunciation": "imagination.mp3",
+        "sentencePronunciation": "children-often-have-a-strong-imagination.mp3"
       },
       {
         "word": "bodily-kinesthetic",
         "phonics": "/ˈbɑdɪli kɪnəsˈθɛtɪk/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "vận động thể chất",
         "sampleSentence": "Dancers use their bodily-kinesthetic intelligence.",
-        "vietnameseTranslation": "Các vũ công sử dụng trí thông minh vận động thể chất."
+        "vietnameseTranslation": "Các vũ công sử dụng trí thông minh vận động thể chất.",
+        "image": "",
+        "wordPronunciation": "bodily-kinesthetic.mp3",
+        "sentencePronunciation": "dancers-use-their-bodily-kinesthetic-intelligence.mp3"
       },
       {
         "word": "creative",
         "phonics": "/kriˈeɪtɪv/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "sáng tạo",
         "sampleSentence": "She is very creative with her art projects.",
-        "vietnameseTranslation": "Cô ấy rất sáng tạo trong các dự án nghệ thuật."
+        "vietnameseTranslation": "Cô ấy rất sáng tạo trong các dự án nghệ thuật.",
+        "image": "",
+        "wordPronunciation": "creative.mp3",
+        "sentencePronunciation": "she-is-very-creative-with-her-art-projects.mp3"
       },
       {
         "word": "interpersonal",
         "phonics": "/ˌɪntərˈpɜrsənl/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "giữa người với người (giao tiếp)",
         "sampleSentence": "Teachers need strong interpersonal skills.",
-        "vietnameseTranslation": "Giáo viên cần có kỹ năng giao tiếp tốt."
+        "vietnameseTranslation": "Giáo viên cần có kỹ năng giao tiếp tốt.",
+        "image": "",
+        "wordPronunciation": "interpersonal.mp3",
+        "sentencePronunciation": "teachers-need-strong-interpersonal-skills.mp3"
       },
       {
         "word": "journal",
         "phonics": "/ˈdʒɜrnəl/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "nhật ký, tạp chí",
         "sampleSentence": "She writes in her journal every night.",
-        "vietnameseTranslation": "Cô ấy viết vào nhật ký của mình mỗi tối."
+        "vietnameseTranslation": "Cô ấy viết vào nhật ký của mình mỗi tối.",
+        "image": "",
+        "wordPronunciation": "journal.mp3",
+        "sentencePronunciation": "she-writes-in-her-journal-every-night.mp3"
       },
       {
         "word": "implication",
         "phonics": "/ɪmplɪˈkeɪʃən/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "hàm ý, ngụ ý, ẩn ý",
         "sampleSentence": "The teacher explained the implications of the new rule.",
-        "vietnameseTranslation": "Giáo viên giải thích những hàm ý của quy định mới."
+        "vietnameseTranslation": "Giáo viên giải thích những hàm ý của quy định mới.",
+        "image": "",
+        "wordPronunciation": "implication.mp3",
+        "sentencePronunciation": "the-teacher-explained-the-implications-of-the-new-rule.mp3"
       },
       {
         "word": "intelligence",
         "phonics": "/ɪnˈtɛlədʒəns/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "trí thông minh",
         "sampleSentence": "Emotional intelligence is as important as IQ.",
-        "vietnameseTranslation": "Trí tuệ cảm xúc cũng quan trọng như IQ."
+        "vietnameseTranslation": "Trí tuệ cảm xúc cũng quan trọng như IQ.",
+        "image": "",
+        "wordPronunciation": "intelligence.mp3",
+        "sentencePronunciation": "emotional-intelligence-is-as-important-as-iq.mp3"
       },
       {
         "word": "theory",
         "phonics": "/ˈθɪri/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "lý thuyết",
         "sampleSentence": "The students studied the theory of evolution.",
-        "vietnameseTranslation": "Học sinh đã học về lý thuyết tiến hóa."
+        "vietnameseTranslation": "Học sinh đã học về lý thuyết tiến hóa.",
+        "image": "",
+        "wordPronunciation": "theory.mp3",
+        "sentencePronunciation": "the-students-studied-the-theory-of-evolution.mp3"
       },
       {
         "word": "intelligence quotient",
         "phonics": "/ɪnˈtɛlədʒəns ˈkwoʊʃənt/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "chỉ số IQ",
         "sampleSentence": "Her intelligence quotient is above average.",
-        "vietnameseTranslation": "Chỉ số IQ của cô ấy cao hơn mức trung bình."
+        "vietnameseTranslation": "Chỉ số IQ của cô ấy cao hơn mức trung bình.",
+        "image": "",
+        "wordPronunciation": "intelligence-quotient.mp3",
+        "sentencePronunciation": "her-intelligence-quotient-is-above-average.mp3"
       },
       {
         "word": "popular",
         "phonics": "/ˈpɑpjələr/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "phổ biến, được ưa chuộng",
         "sampleSentence": "Football is very popular in Vietnam.",
-        "vietnameseTranslation": "Bóng đá rất phổ biến ở Việt Nam."
+        "vietnameseTranslation": "Bóng đá rất phổ biến ở Việt Nam.",
+        "image": "",
+        "wordPronunciation": "popular.mp3",
+        "sentencePronunciation": "football-is-very-popular-in-vietnam.mp3"
       },
       {
         "word": "language skills",
         "phonics": "/ˈlæŋɡwɪdʒ skɪlz/",
         "partOfSpeech": "phr",
-        "image": "",
         "vietnameseMeaning": "kỹ năng ngôn ngữ",
         "sampleSentence": "Reading books helps improve language skills.",
-        "vietnameseTranslation": "Đọc sách giúp cải thiện kỹ năng ngôn ngữ."
+        "vietnameseTranslation": "Đọc sách giúp cải thiện kỹ năng ngôn ngữ.",
+        "image": "",
+        "wordPronunciation": "language-skills.mp3",
+        "sentencePronunciation": "reading-books-helps-improve-language-skills.mp3"
       },
       {
         "word": "logical-mathematical skills",
         "phonics": "/ˈlɑdʒɪkəl ˌmæθəˈmætɪkəl skɪlz/",
         "partOfSpeech": "phr",
-        "image": "",
         "vietnameseMeaning": "kỹ năng logic - toán học",
         "sampleSentence": "Solving puzzles develops logical-mathematical skills.",
-        "vietnameseTranslation": "Giải đố phát triển kỹ năng logic - toán học."
+        "vietnameseTranslation": "Giải đố phát triển kỹ năng logic - toán học.",
+        "image": "",
+        "wordPronunciation": "logical-mathematical-skills.mp3",
+        "sentencePronunciation": "solving-puzzles-develops-logical-mathematical-skills.mp3"
       },
       {
         "word": "narrow",
         "phonics": "/ˈnæroʊ/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "hạn hẹp",
         "sampleSentence": "That is a narrow definition of intelligence.",
-        "vietnameseTranslation": "Đó là một định nghĩa hạn hẹp về trí thông minh."
+        "vietnameseTranslation": "Đó là một định nghĩa hạn hẹp về trí thông minh.",
+        "image": "",
+        "wordPronunciation": "narrow.mp3",
+        "sentencePronunciation": "that-is-a-narrow-definition-of-intelligence.mp3"
       },
       {
         "word": "professor",
         "phonics": "/prəˈfɛsər/",
         "partOfSpeech": "n",
-        "image": "",
         "vietnameseMeaning": "giáo sư",
         "sampleSentence": "The professor gave a lecture on psychology.",
-        "vietnameseTranslation": "Giáo sư đã giảng bài về tâm lý học."
+        "vietnameseTranslation": "Giáo sư đã giảng bài về tâm lý học.",
+        "image": "",
+        "wordPronunciation": "professor.mp3",
+        "sentencePronunciation": "the-professor-gave-a-lecture-on-psychology.mp3"
       },
       {
         "word": "effective",
         "phonics": "/ɪˈfɛktɪv/",
         "partOfSpeech": "adj",
-        "image": "",
         "vietnameseMeaning": "hiệu quả",
         "sampleSentence": "Group work can be very effective for learning.",
-        "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
+        "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học.",
+        "image": "",
+        "wordPronunciation": "effective.mp3",
+        "sentencePronunciation": "group-work-can-be-very-effective-for-learning.mp3"
       }
     ],
     "clozeData": {
@@ -470,7 +527,7 @@
           {
             "tag": "ol",
             "attributes": {
-              "class": "text-3xl text-left text-gray-800 space-y-8"
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
             },
             "children": [
               {

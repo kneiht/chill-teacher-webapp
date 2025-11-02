@@ -9,7 +9,7 @@
       { "type": "activity", "id": "candy-crush" },
       { "type": "activity", "id": "cloze-game" },
       { "type": "video", "id": "reading-lesson-video" },
-      { "type": "googleSlide", "id": "reading-slides" },
+      { "type": "activity", "id": "reading-slides" },
       { "type": "activity", "id": "reading-comprehension" }
     ],
     "externalContent": {
@@ -22,12 +22,50 @@
       ],
       "googleSlides": [
         {
-          "id": "reading-slides",
+          "id": "reading-slides-old",
           "url": "https://docs.google.com/presentation/d/e/2PACX-1vTz5J7jQyzAyUvHhHm3FjhvHNv9zrHhhLl1Am7TPfnoQ7G0fIVAVh70bezfy3xch7aKUHcmPK4k4NiL/pubembed",
           "title": "Bài đọc"
         }
       ]
     },
+    "readingSlidesData": [
+      {
+        "audio": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/audio/audio1.wav",
+        "image": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/images/image1.png",
+        "title": "The Implications of Multiple Intelligence Theory",
+        "text": ""
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/audio/audio2.wav",
+        "image": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/images/image2.png",
+        "textTitle": "The Beginning of Intelligence Testing",
+        "text": "At the beginning of the 20th century, Alfred Binet in France created the first test to measure intelligence. From this, the idea of IQ (Intelligence Quotient) became popular. For many years, IQ tests were used in schools and workplaces around the world. However, these tests only measured language skills and logical-mathematical skills, which made the idea of intelligence too narrow."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/audio/audio3.wav",
+        "image": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/images/image3.png",
+        "textTitle": "Howard Gardner's Revolutionary Idea",
+        "text": "Later, the American professor Howard Gardner from Harvard University introduced a new way of thinking. He developed the Multiple Intelligence (MI) theory, which changed how people understood intelligence. Gardner explained three important points: \n- people are not all the same\n- people do not all learn in the same way\n- education is more effective if it respects these differences."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/audio/audio4.wav",
+        "image": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/images/image4.png",
+        "textTitle": "Eight Types of Intelligence",
+        "text": "According to Gardner, there are at least eight types of intelligence:\n\nLinguistic intelligence: the ability to read, write, speak, and learn languages. It can be developed by reading books, listening to recordings, and joining discussions.\n\nLogical-mathematical intelligence: the ability to work with numbers, patterns, and logical problems. It can be developed through puzzles, games, and problem-solving tasks.\n\nMusical intelligence: the ability to understand and create music, rhythm, or dance. It can be developed by listening to music, singing, or playing instruments.\n\nSpatial intelligence: the ability to see and create images, shapes, and directions. It can be improved by drawing, solving mazes, and practicing imagination.\n\nBodily-kinesthetic intelligence: the ability to use the body to learn and express ideas. It can be developed through sports, acting, or creative movement.\n\nInterpersonal intelligence: the ability to understand and work with other people. It can be developed through teamwork, group projects, and role-play.\n\nIntrapersonal intelligence: the ability to understand yourself and your emotions. It can be developed through journaling, reflection, or independent study.\n\nNaturalist intelligence: the ability to understand nature and the environment. It can be developed through exploring nature, observing animals, or collecting natural items.\n\nGardner also suggested the possibility of spiritual intelligence and existential intelligence, but he did not make clear conclusions about them."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/audio/audio5.wav",
+        "image": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/images/image5.png",
+        "textTitle": "How It Affects Education",
+        "text": "Gardner believes that these intelligences are separate but connected. Each person has a unique profile: some intelligences may be stronger, others weaker. If one area is developed, it may also help improve other areas.\n\nFor teachers, this means students cannot all learn in the same way. A classroom full of different learners needs different activities. While it is impossible to design one special lesson for every student, teachers can create a variety of tasks that use different intelligences. For example, a lesson might include reading, group work, problem-solving, and creative activities, so every learner finds a way to connect."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/audio/audio6.wav",
+        "image": "https://storage.chillteacher.com/page-data/multiple-intelligence-theory/reading/images/image6.png",
+        "textTitle": "Conclusion",
+        "text": "The Multiple Intelligence theory suggests that intelligence is not fixed and not limited to language or mathematics. Instead, people have many different strengths that can grow with practice and opportunity. For teachers, this means education should not treat all students the same. Instead, schools should respect differences and create lessons that help every kind of mind succeed."
+      }
+    ],
     "vocab": [
       {
         "word": "reflection",
@@ -309,143 +347,213 @@
         "vietnameseTranslation": "Làm việc nhóm có thể rất hiệu quả cho việc học."
       }
     ],
-    "readingData": {
-      "title": "Applying Multiple Intelligence Theory in the Classroom",
+    "readingComprehensionData": {
+      "title": "The Implications of Multiple Intelligence Theory",
       "passage": [
         {
-          "content": "Multiple Intelligence (MI) theory suggests that learners have different strengths, such as linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, and naturalist intelligences. Instead of assuming one fixed measure of intelligence, MI theory encourages teachers to design varied activities that reach many kinds of minds."
+          "content": "At the beginning of the 20th century, Alfred Binet in France created the first test to measure intelligence. From this, the idea of IQ (Intelligence Quotient) became popular. \n\nFor many years, IQ tests were used in schools and workplaces around the world. However, these tests only measured language skills and logical-mathematical skills, which made the idea of intelligence too narrow."
         },
         {
-          "content": "In practice, teachers can rotate tasks to include speaking and writing for linguistic learners, problem-solving games for logical thinkers, drawing and mapping for spatial learners, and rhythm or song for musical learners. Group projects support interpersonal skills, while journals and reflection build intrapersonal awareness. Outdoor observations, experiments, and nature logs engage naturalist intelligence. When these activities are combined, students who might be quiet in one format can shine in another."
+          "heading": "Howard Gardner's Revolutionary Idea",
+          "content": "Later, the American professor Howard Gardner from Harvard University introduced a new way of thinking. He developed the Multiple Intelligence (MI) theory, which changed how people understood intelligence. Gardner explained three important points: \n- people are not all the same\n- people do not all learn in the same way\n- education is more effective if it respects these differences."
         },
         {
-          "heading": "Benefits and Considerations",
-          "content": "Classrooms using MI-informed lessons often report higher engagement, more equitable participation, and deeper retention. However, MI is not a rigid labeling system. Students are not confined to one type; they can develop multiple areas through practice and opportunity. Effective implementation focuses on offering diverse entry points and giving students choices, rather than sorting them by a single category."
+          "heading": "Eight Types of Intelligence",
+          "content": "According to Gardner, there are at least eight types of intelligence. \n\nLinguistic intelligence is the ability to read, write, speak, and learn languages. It can be developed by reading books, listening to recordings, and joining discussions. \n\nLogical-mathematical intelligence is the ability to work with numbers, patterns, and logical problems. It can be developed through puzzles, games, and problem-solving tasks. \n\nMusical intelligence is the ability to understand and create music, rhythm, or dance. It can be developed by listening to music, singing, or playing instruments. \n\nSpatial intelligence is the ability to see and create images, shapes, and directions. It can be improved by drawing, solving mazes, and practicing imagination. \n\nBodily-kinesthetic intelligence is the ability to use the body to learn and express ideas. It can be developed through sports, acting, or creative movement. \n\nInterpersonal intelligence is the ability to understand and work with other people. It can be developed through teamwork, group projects, and role-play. \n\nIntrapersonal intelligence is the ability to understand yourself and your emotions. It can be developed through journaling, reflection, or independent study. \n\nNaturalist intelligence is the ability to understand nature and the environment. It can be developed through exploring nature, observing animals, or collecting natural items. \n\nGardner also suggested the possibility of spiritual intelligence and existential intelligence, but he did not make clear conclusions about them."
         },
         {
-          "heading": "Designing a Balanced Lesson",
-          "content": "A balanced lesson might begin with a short reading and discussion (linguistic/interpersonal), include a concept map (spatial), a quick data classification task (logical-mathematical), a movement-based activity or role-play (bodily-kinesthetic), and end with a reflection prompt (intrapersonal). Over a unit, teachers can rotate through different emphases so that each intelligence is practiced multiple times."
+          "heading": "How It Affects Education",
+          "content": "Gardner believes that these intelligences are separate but connected. Each person has a unique profile: some intelligences may be stronger, others weaker. If one area is developed, it may also help improve other areas. \n\nFor teachers, this means students cannot all learn in the same way. A classroom full of different learners needs different activities. While it is impossible to design one special lesson for every student, teachers can create a variety of tasks that use different intelligences. For example, a lesson might include reading, group work, problem-solving, and creative activities, so every learner finds a way to connect."
         },
         {
           "heading": "Conclusion",
-          "content": "MI theory does not replace core skills; instead, it broadens the pathways for mastering them. By acknowledging varied strengths, teachers create inclusive environments that help more students build confidence and achieve meaningful learning outcomes."
+          "content": "The Multiple Intelligence theory suggests that intelligence is not fixed and not limited to language or mathematics. Instead, people have many different strengths that can grow with practice and opportunity. For teachers, this means education should not treat all students the same. Instead, schools should respect differences and create lessons that help every kind of mind succeed."
         }
       ],
       "questions": {
         "singleChoice": [
           {
             "id": "sc1",
-            "prompt": "What is the main idea behind Multiple Intelligence theory?",
+            "prompt": "Who created the first intelligence test?",
             "options": [
               {
-                "value": "one-score",
-                "label": "Intelligence should be measured by a single score."
+                "value": "gardner",
+                "label": "Howard Gardner"
               },
               {
-                "value": "varied-strengths",
-                "label": "Learners have varied strengths that can be developed."
+                "value": "binet",
+                "label": "Alfred Binet"
               },
               {
-                "value": "music-only",
-                "label": "Music is the most important form of intelligence."
+                "value": "unknown",
+                "label": "Unknown researcher"
               }
             ],
-            "correct": "varied-strengths"
+            "correct": "binet"
           },
           {
             "id": "sc2",
-            "prompt": "Which classroom approach best reflects MI theory?",
+            "prompt": "What was the main problem with IQ tests according to the passage?",
             "options": [
               {
-                "value": "same-task",
-                "label": "Use the same task for every lesson."
+                "value": "too-expensive",
+                "label": "They were too expensive."
               },
               {
-                "value": "varied-tasks",
-                "label": "Rotate varied activities to engage different intelligences."
+                "value": "too-narrow",
+                "label": "They only measured language and logical-mathematical skills."
               },
               {
-                "value": "labeling",
-                "label": "Assign each student one intelligence and stick to it."
+                "value": "too-difficult",
+                "label": "They were too difficult for students."
               }
             ],
-            "correct": "varied-tasks"
+            "correct": "too-narrow"
+          },
+          {
+            "id": "sc3",
+            "prompt": "How many types of intelligence did Gardner identify?",
+            "options": [
+              {
+                "value": "six",
+                "label": "Six"
+              },
+              {
+                "value": "eight",
+                "label": "At least eight"
+              },
+              {
+                "value": "ten",
+                "label": "Ten"
+              }
+            ],
+            "correct": "eight"
+          },
+          {
+            "id": "sc4",
+            "prompt": "According to Gardner, what does MI theory suggest about intelligence?",
+            "options": [
+              {
+                "value": "fixed",
+                "label": "Intelligence is fixed and cannot change."
+              },
+              {
+                "value": "varied-strengths",
+                "label": "People have different strengths that can grow with practice."
+              },
+              {
+                "value": "only-academic",
+                "label": "Intelligence is only about academic skills."
+              }
+            ],
+            "correct": "varied-strengths"
           }
         ],
         "tfng": [
           {
             "id": "tf1",
-            "statement": "MI theory argues that students can develop multiple intelligences.",
+            "statement": "IQ tests became popular in schools and workplaces for many years.",
             "correct": "true"
           },
           {
             "id": "tf2",
-            "statement": "MI implementation requires labeling students permanently.",
+            "statement": "Gardner developed MI theory at the beginning of the 20th century.",
             "correct": "false"
           },
           {
             "id": "tf3",
-            "statement": "The passage claims MI eliminates the need for core reading skills.",
-            "correct": "not_given"
+            "statement": "Gardner made clear conclusions about spiritual and existential intelligence.",
+            "correct": "false"
+          },
+          {
+            "id": "tf4",
+            "statement": "According to Gardner, all intelligences are completely separate from each other.",
+            "correct": "false"
+          },
+          {
+            "id": "tf5",
+            "statement": "The passage states that teachers should design the same lesson for every student.",
+            "correct": "false"
           }
         ],
         "matching": {
           "questions": [
             {
               "id": "m1",
-              "statement": "Activity for spatial intelligence",
-              "correct": "option2"
+              "statement": "Linguistic intelligence can be developed by",
+              "correct": "option1"
             },
             {
               "id": "m2",
-              "statement": "Activity for intrapersonal intelligence",
+              "statement": "Logical-mathematical intelligence can be developed through",
               "correct": "option3"
             },
             {
               "id": "m3",
-              "statement": "Activity for interpersonal intelligence",
-              "correct": "option1"
+              "statement": "Interpersonal intelligence can be developed through",
+              "correct": "option4"
+            },
+            {
+              "id": "m4",
+              "statement": "Intrapersonal intelligence can be developed through",
+              "correct": "option2"
             }
           ],
           "options": [
-            { "value": "option1", "label": "Small-group discussion" },
-            { "value": "option2", "label": "Concept map / visual organizer" },
-            { "value": "option3", "label": "Personal reflection journal" },
-            { "value": "option4", "label": "Outdoor nature log" }
+            {
+              "value": "option1",
+              "label": "Reading books and joining discussions"
+            },
+            { "value": "option2", "label": "Journaling and reflection" },
+            {
+              "value": "option3",
+              "label": "Puzzles and problem-solving tasks"
+            },
+            { "value": "option4", "label": "Teamwork and group projects" }
           ]
         },
         "summary": [
           {
             "id": "sum1",
-            "prompt": "Complete: MI encourages offering diverse ______ points to learning.",
-            "answers": ["entry", "entry points"]
+            "prompt": "Complete: IQ tests only measured language skills and logical-mathematical skills, which made the idea of intelligence too ______.",
+            "answers": ["narrow"]
           },
           {
             "id": "sum2",
-            "prompt": "Complete: Students are not ______ to one intelligence type.",
-            "answers": ["confined", "limited"]
+            "prompt": "Complete: Gardner believes that intelligences are separate but ______.",
+            "answers": ["connected"]
+          },
+          {
+            "id": "sum3",
+            "prompt": "Complete: Intelligence can grow with practice and ______.",
+            "answers": ["opportunity"]
           }
         ],
         "shortAnswer": [
           {
             "id": "sa1",
-            "prompt": "Design a short activity sequence that touches at least three intelligences."
+            "prompt": "Name three types of intelligence and explain how each can be developed."
           },
           {
             "id": "sa2",
-            "prompt": "How would you give students choice while keeping lesson goals clear?"
+            "prompt": "Why does Gardner think education should respect differences among students?"
           }
         ]
       }
     },
     "clozeData": {
-      "paragraph": "Teachers can combine activities for different intelligences. A short reading and writing task supports _____ learners. A concept map benefits _____ thinkers. Adding songs or rhythm helps _____ intelligence. Small-group projects develop _____ skills, while a reflection journal strengthens _____ awareness.",
+      "paragraph": "MI theory recognizes various strengths. A student using words and writing shows _____ intelligence. Solving math puzzles develops _____ abilities. Drawing and building use _____ skills. Singing and playing instruments show _____ ability. Working with others uses _____ skills; working alone uses _____. Observing the environment uses _____ skills. Understanding feelings connects to _____ intelligence. Deep thinking about existence shows _____ thinking. Being strong in a subject is a personal _____.",
       "words": [
         "linguistic",
+        "logical-mathematical",
         "spatial",
         "musical",
         "interpersonal",
-        "intrapersonal"
+        "intrapersonal",
+        "naturalist",
+        "emotional",
+        "existential",
+        "strength"
       ]
     },
     "questions": [
@@ -1254,7 +1362,7 @@
           {
             "tag": "ol",
             "attributes": {
-              "class": "text-3xl text-left text-gray-800 space-y-8"
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
             },
             "children": [
               {

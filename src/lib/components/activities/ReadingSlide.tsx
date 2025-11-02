@@ -292,7 +292,7 @@ const ReadingSlideCore: React.FC<ReadingSlideCoreProps> = ({
 
 // Activity Interface
 interface ReadingSlideProps {
-  readingData: ReadingSlideItem[]
+  readingComprehensionData: ReadingSlideItem[]
   backgroundUrl: string
   activityTitle?: string
   lessonTitle?: string
@@ -302,7 +302,7 @@ interface ReadingSlideProps {
 }
 
 const ReadingSlide: React.FC<ReadingSlideProps> = ({
-  readingData,
+  readingComprehensionData,
   backgroundUrl,
   activityTitle,
   lessonTitle,
@@ -314,7 +314,7 @@ const ReadingSlide: React.FC<ReadingSlideProps> = ({
     const slides: React.FC<{ isActive: boolean }>[] = []
 
     // Add reading slides
-    readingData.forEach((slide) => {
+    readingComprehensionData.forEach((slide) => {
       slides.push(({ isActive }: { isActive: boolean }) => (
         <Slide isActive={isActive}>
           <ReadingSlideCore slide={slide} isActive={isActive} />
@@ -324,7 +324,7 @@ const ReadingSlide: React.FC<ReadingSlideProps> = ({
 
     return slides
   }, [
-    readingData,
+    readingComprehensionData,
     activityTitle,
     lessonTitle,
     activityDescription,

@@ -1,6 +1,6 @@
 {
-  "lesson-2": {
-    "background": "https://storage.chillteacher.com/backgrounds/whales-guardians-of-the-climate.webp",
+  "lesson-2-vocab": {
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp",
     "title": "Whales – Guardians of the Climate",
     "description": "Lesson 2: Vocabulary - Part 2",
     "menu": [
@@ -450,11 +450,17 @@
               },
               {
                 "tag": "li",
-                "children": [{ "text": "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên." }]
+                "children": [
+                  {
+                    "text": "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên."
+                  }
+                ]
               },
               {
                 "tag": "li",
-                "children": [{ "text": "Chọn 10 từ vựng để đặt câu và gửi cho giáo viên." }]
+                "children": [
+                  { "text": "Chọn 10 từ vựng để đặt câu và gửi cho giáo viên." }
+                ]
               },
               {
                 "tag": "li",
@@ -479,4 +485,3 @@
     ]
   }
 }
-

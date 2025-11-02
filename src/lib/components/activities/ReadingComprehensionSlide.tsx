@@ -322,7 +322,7 @@ const ReadingComprehensionSlideCore: React.FC<
                   </h3>
                 )}
                 {(para.content || para.text) && (
-                  <p className="text-xl text-gray-700">
+                  <p className="text-xl text-gray-700 whitespace-pre-line">
                     {para.content || para.text}
                   </p>
                 )}
@@ -853,14 +853,14 @@ const ReadingComprehensionSlideCore: React.FC<
 
 // Main Component Interface
 interface ReadingComprehensionSlideProps {
-  readingData: ReadingComprehensionData
+  readingComprehensionData: ReadingComprehensionData
   backgroundUrl: string
   title?: string
   onClose?: () => void
 }
 
 const ReadingComprehensionSlide: React.FC<ReadingComprehensionSlideProps> = ({
-  readingData,
+  readingComprehensionData,
   backgroundUrl,
   title,
   onClose,
@@ -868,10 +868,13 @@ const ReadingComprehensionSlide: React.FC<ReadingComprehensionSlideProps> = ({
   const slides = useMemo(
     () => [
       ({ isActive }: { isActive: boolean }) => (
-        <ReadingComprehensionSlideCore isActive={isActive} data={readingData} />
+        <ReadingComprehensionSlideCore
+          isActive={isActive}
+          data={readingComprehensionData}
+        />
       ),
     ],
-    [readingData],
+    [readingComprehensionData],
   )
 
   return (
