@@ -21,6 +21,7 @@ import VietnameseToEnglishTranslationGame from '@/lib/components/activities/Viet
 import CandyCrushEnglishGame from '@/lib/components/activities/CandyCrushEnglishGame'
 import ContentPageSlide from '@/lib/components/activities/ContentPageSlide'
 import ReadingComprehensionSlide from '@/lib/components/activities/ReadingComprehensionSlide'
+import ReadingSlide from '@/lib/components/activities/ReadingSlide'
 
 // Activity Components Registry
 const activityComponents: Record<string, React.FC<any>> = {
@@ -42,6 +43,7 @@ const activityComponents: Record<string, React.FC<any>> = {
   CandyCrushEnglishGame: CandyCrushEnglishGame,
   ContentPageSlide: ContentPageSlide,
   ReadingComprehensionSlide: ReadingComprehensionSlide,
+  ReadingSlide: ReadingSlide,
 }
 
 // Activity Metadata Registry - Fixed configuration for all activities
@@ -156,6 +158,12 @@ export const ACTIVITY_REGISTRY: Record<
     component: 'ReadingComprehensionSlide',
     description: 'Reading comprehension with various question types',
   },
+  'reading-slides': {
+    title: 'Reading Slides',
+    icon: '',
+    component: 'ReadingSlide',
+    description: 'Reading slides with images and audio',
+  },
 }
 
 export const Route = createFileRoute(
@@ -168,8 +176,16 @@ function ActivityComponent() {
   const navigate = useNavigate()
   const { activity: activityId } = Route.useParams()
   const lessonData = parentRoute.useLoaderData()
-  const { background, vocab, title, menu, clozeData, questions, readingData } =
-    lessonData
+  const {
+    background,
+    vocab,
+    title,
+    menu,
+    clozeData,
+    questions,
+    readingData,
+    readingSlidesData,
+  } = lessonData
 
   // Check if activity exists in lesson's menu
   const activityInMenu = menu.some(
@@ -236,6 +252,19 @@ function ActivityComponent() {
         readingData={readingData}
         backgroundUrl={background}
         title={`${activityMeta.title} - ${title}`}
+        onClose={handleClose}
+      />
+    )
+  }
+
+  if (activityMeta.component === 'ReadingSlide') {
+    return (
+      <ActivityComponent
+        readingData={readingSlidesData || []}
+        backgroundUrl={background}
+        activityTitle={activityMeta.title}
+        lessonTitle={title}
+        lessonDescription={lessonData.description}
         onClose={handleClose}
       />
     )

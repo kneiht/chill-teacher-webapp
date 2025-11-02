@@ -118,6 +118,11 @@ interface LessonData {
   questions?: CandyCrushQuestion[]
   assignmentData?: AssignmentData
   readingData?: ReadingComprehensionData
+  readingSlidesData?: Array<{
+    audio: string
+    image: string
+    text: string
+  }>
   pages?: ContentPageData[] // Array of pages with id
   externalContent?: {
     videos?: ExternalContentItem[]
