@@ -1,6 +1,6 @@
 /**
  * Script upload files lên Cloudflare R2 Storage
- * 
+ *
  * Cách sử dụng:
  * 1. Tạo file .env trong thư mục root với các biến:
  *    R2_ACCOUNT_ID=your_account_id
@@ -8,19 +8,19 @@
  *    R2_SECRET_ACCESS_KEY=your_secret_access_key
  *    R2_BUCKET_NAME=your_bucket_name
  *    R2_PUBLIC_URL=https://your-domain.com (optional)
- * 
+ *
  * 2. Đặt các file cần upload vào folder wait-upload/
- * 
+ *
  * 3. Chạy script:
  *    npm run upload-r2
  *    hoặc
  *    node upload-to-r2.js
- * 
+ *
  * Script sẽ:
  * - Upload tất cả files trong wait-upload/ (bao gồm subfolders) lên R2
  * - Ghi log các file đã upload vào wait-upload/upload-log.txt
  * - Bỏ qua các file đã upload (dựa vào log)
- * 
+ *
  * Cài đặt dependencies:
  *    pnpm install
  *    hoặc
@@ -35,22 +35,34 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+// Lấy root directory (parent của scripts/)
+const rootDir = path.resolve(__dirname, '..')
+
 // Đọc .env file nếu có (Node.js 20.6+ hỗ trợ --env-file, nhưng cũng load thủ công)
-const envPath = path.join(__dirname, '.env')
+const envPath = path.join(rootDir, '.env')
 if (fs.existsSync(envPath)) {
+  console.log(`📄 Đọc file .env từ: ${envPath}`)
   const envContent = fs.readFileSync(envPath, 'utf-8')
+  let loadedCount = 0
   envContent.split('\n').forEach((line) => {
     const trimmedLine = line.trim()
     if (trimmedLine && !trimmedLine.startsWith('#')) {
       const [key, ...valueParts] = trimmedLine.split('=')
       if (key && valueParts.length > 0) {
-        const value = valueParts.join('=').trim().replace(/^["']|["']$/g, '')
+        const value = valueParts
+          .join('=')
+          .trim()
+          .replace(/^["']|["']$/g, '')
         if (!process.env[key.trim()]) {
           process.env[key.trim()] = value
+          loadedCount++
         }
       }
     }
   })
+  console.log(`✅ Đã load ${loadedCount} biến môi trường từ .env\n`)
+} else {
+  console.log(`⚠️  Không tìm thấy file .env tại: ${envPath}\n`)
 }
 
 // Cấu hình Cloudflare R2
@@ -61,8 +73,8 @@ const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY || ''
 const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || ''
 const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || '' // URL công khai của R2 bucket
 
-// Đường dẫn folder chứa files cần upload
-const WAIT_UPLOAD_DIR = path.join(__dirname, 'wait-upload')
+// Đường dẫn folder chứa files cần upload (ở root directory)
+const WAIT_UPLOAD_DIR = path.join(rootDir, 'wait-upload')
 const LOG_FILE = path.join(WAIT_UPLOAD_DIR, 'upload-log.txt')
 
 // Khởi tạo S3 client cho Cloudflare R2
@@ -90,7 +102,7 @@ function getUploadedFiles() {
   try {
     const logContent = fs.readFileSync(LOG_FILE, 'utf-8')
     const uploadedFiles = new Set()
-    
+
     // Đọc từng dòng trong log file
     logContent.split('\n').forEach((line) => {
       const trimmedLine = line.trim()
@@ -102,7 +114,7 @@ function getUploadedFiles() {
         }
       }
     })
-    
+
     return uploadedFiles
   } catch (error) {
     console.error('Lỗi khi đọc log file:', error.message)
@@ -114,7 +126,7 @@ function getUploadedFiles() {
 function logUploadedFile(relativePath, r2Path) {
   const timestamp = new Date().toISOString()
   const logEntry = `${relativePath}|${r2Path}|${timestamp}\n`
-  
+
   try {
     // Thêm vào cuối file log
     fs.appendFileSync(LOG_FILE, logEntry, 'utf-8')
@@ -138,11 +150,11 @@ async function uploadFileToR2(filePath, r2Key) {
     })
 
     await s3Client.send(command)
-    
-    const publicUrl = R2_PUBLIC_URL 
+
+    const publicUrl = R2_PUBLIC_URL
       ? `${R2_PUBLIC_URL}/${r2Key}`.replace(/\/+/g, '/')
       : `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${R2_BUCKET_NAME}/${r2Key}`
-    
+
     return { success: true, url: publicUrl }
   } catch (error) {
     console.error(`Lỗi khi upload ${filePath}:`, error.message)
@@ -171,8 +183,20 @@ function getContentType(filePath) {
     '.js': 'application/javascript',
     '.ts': 'application/typescript',
   }
-  
+
   return contentTypes[ext] || 'application/octet-stream'
+}
+
+// Kiểm tra file có nên bỏ qua không
+function shouldSkipFile(fileName) {
+  const skipFiles = [
+    'upload-log.txt',
+    '.DS_Store',
+    'Thumbs.db',
+    '.gitkeep',
+    '.gitignore',
+  ]
+  return skipFiles.includes(fileName)
 }
 
 // Lấy tất cả files trong folder (recursive)
@@ -181,9 +205,9 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
 
   files.forEach((file) => {
     const filePath = path.join(dirPath, file)
-    
-    // Bỏ qua log file và folder
-    if (file === 'upload-log.txt') {
+
+    // Bỏ qua các file hệ thống và log file
+    if (shouldSkipFile(file)) {
       return
     }
 
@@ -200,7 +224,12 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
 // Hàm chính
 async function main() {
   // Kiểm tra cấu hình
-  if (!R2_ACCOUNT_ID || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY || !R2_BUCKET_NAME) {
+  if (
+    !R2_ACCOUNT_ID ||
+    !R2_ACCESS_KEY_ID ||
+    !R2_SECRET_ACCESS_KEY ||
+    !R2_BUCKET_NAME
+  ) {
     console.error('❌ Thiếu cấu hình R2!')
     console.error('Vui lòng set các environment variables:')
     console.error('  - R2_ACCOUNT_ID')
@@ -212,10 +241,12 @@ async function main() {
   }
 
   console.log('🚀 Bắt đầu upload files lên Cloudflare R2...\n')
+  console.log(`📁 Folder wait-upload: ${WAIT_UPLOAD_DIR}\n`)
 
   // Kiểm tra folder wait-upload có tồn tại không
   if (!fs.existsSync(WAIT_UPLOAD_DIR)) {
     console.error(`❌ Folder không tồn tại: ${WAIT_UPLOAD_DIR}`)
+    console.error(`   Vui lòng tạo folder wait-upload trong thư mục root`)
     process.exit(1)
   }
 
@@ -225,10 +256,18 @@ async function main() {
 
   // Lấy tất cả files cần upload
   const allFiles = getAllFiles(WAIT_UPLOAD_DIR)
-  
-  // Lọc ra các files chưa upload
+
+  // Lọc ra các files chưa upload và bỏ qua các file hệ thống
   const filesToUpload = allFiles.filter((filePath) => {
-    const relativePath = path.relative(WAIT_UPLOAD_DIR, filePath).replace(/\\/g, '/')
+    const fileName = path.basename(filePath)
+    // Bỏ qua các file hệ thống
+    if (shouldSkipFile(fileName)) {
+      return false
+    }
+
+    const relativePath = path
+      .relative(WAIT_UPLOAD_DIR, filePath)
+      .replace(/\\/g, '/')
     return !uploadedFiles.has(relativePath)
   })
 
@@ -250,8 +289,10 @@ async function main() {
   let failCount = 0
 
   for (const filePath of filesToUpload) {
-    const relativePath = path.relative(WAIT_UPLOAD_DIR, filePath).replace(/\\/g, '/')
-    
+    const relativePath = path
+      .relative(WAIT_UPLOAD_DIR, filePath)
+      .replace(/\\/g, '/')
+
     // Tạo key cho R2 (giữ nguyên cấu trúc folder)
     const r2Key = relativePath
 
@@ -264,7 +305,7 @@ async function main() {
       if (result.url) {
         console.log(`   URL: ${result.url}`)
       }
-      
+
       // Ghi log với relative path
       logUploadedFile(relativePath, r2Key)
       successCount++
@@ -272,7 +313,7 @@ async function main() {
       console.error(`❌ Lỗi: ${relativePath} - ${result.error}`)
       failCount++
     }
-    
+
     console.log('')
   }
 
@@ -290,4 +331,3 @@ main().catch((error) => {
   console.error('❌ Lỗi khi chạy script:', error)
   process.exit(1)
 })
-
