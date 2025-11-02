@@ -6,18 +6,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Menu,
-  Settings,
 } from 'lucide-react'
 import './PresentationShell.css'
-import { useVoice } from '@/lib/hooks/use-voice'
-import { useStore } from '@tanstack/react-store'
-import {
-  audioStore,
-  toggleBackgroundMusic,
-  toggleSoundEffects,
-  setBackgroundMusicVolume,
-  setSoundEffectsVolume,
-} from '@/lib/stores/audio.store'
 
 interface PresentationShellProps {
   slides: Array<React.ComponentType<{ isActive: boolean }>>
@@ -44,9 +34,8 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0)
   const [showOutline, setShowOutline] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [showSettings, setShowSettings] = useState(false)
-  const { voices, voice, rate, setVoice, setRate, isSupported } = useVoice()
-  const audioSettings = useStore(audioStore)
+  const [hoverLeftEdge, setHoverLeftEdge] = useState(false)
+  const [hoverRightEdge, setHoverRightEdge] = useState(false)
   const totalSlides = slides.length
   const slideContainerRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef<number>(0)
@@ -166,7 +155,7 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
       >
         {/* Slides container */}
         <div
-          className="w-full h-full overflow-hidden rounded-xl shadow-2xl"
+          className="w-full h-full overflow-hidden rounded-xl shadow-2xl relative"
           style={{
             backgroundImage:
               backgroundUrl && backgroundUrl !== 'None'
@@ -178,11 +167,64 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
+          {/* Left Edge Clickable Zone */}
+          {showNavButtons && (
+            <div
+              className="absolute left-0 top-0 bottom-0 w-40 z-30 cursor-pointer"
+              onMouseEnter={() => setHoverLeftEdge(true)}
+              onMouseLeave={() => setHoverLeftEdge(false)}
+              onClick={() => showSlide(currentSlide - 1)}
+            />
+          )}
+
+          {/* Right Edge Clickable Zone */}
+          {showNavButtons && (
+            <div
+              className="absolute right-0 top-0 bottom-0 w-40 z-30 cursor-pointer"
+              onMouseEnter={() => setHoverRightEdge(true)}
+              onMouseLeave={() => setHoverRightEdge(false)}
+              onClick={() => showSlide(currentSlide + 1)}
+            />
+          )}
+
+          {/* Left Navigation Button */}
+          {showNavButtons && (
+            <button
+              onClick={() => showSlide(currentSlide - 1)}
+              className={`absolute left-4 top-1/2 -translate-y-1/2 z-40 p-4 rounded-full transition-all duration-300 hover:cursor-pointer hover:bg-black/50 ${
+                hoverLeftEdge ? 'bg-black/50' : ''
+              }`}
+              title="Previous Slide"
+            >
+              <ChevronLeft className="h-12 w-12 md:h-8 md:w-8 text-white transition-opacity drop-shadow-lg opacity-70" />
+            </button>
+          )}
+
+          {/* Right Navigation Button */}
+          {showNavButtons && (
+            <button
+              onClick={() => showSlide(currentSlide + 1)}
+              className={`absolute right-4 top-1/2 -translate-y-1/2 z-40 p-4 rounded-full transition-all duration-300 hover:cursor-pointer hover:bg-black/50 ${
+                hoverRightEdge ? 'bg-black/50' : ''
+              }`}
+              title="Next Slide"
+            >
+              <ChevronRight className="h-12 w-12 md:h-8 md:w-8 text-white transition-opacity drop-shadow-lg opacity-70" />
+            </button>
+          )}
+
           {/* Slides will be rendered here */}
           {slides.map((SlideComponent, index) => (
             <SlideComponent key={index} isActive={currentSlide === index} />
           ))}
         </div>
+
+        {/* Slide Counter - Top Left */}
+        {showSlideCounter && (
+          <div className="absolute top-3 left-3 z-50 bg-black/50 text-white px-2 py-1 rounded-2xl text-xs font-medium">
+            {currentSlide + 1}/{totalSlides}
+          </div>
+        )}
 
         {/* Top Controls Bar */}
         <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
@@ -190,55 +232,19 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             <button
               onClick={onHomeClick}
               title="Go Back"
-              className="presentation-fullscreen p-4 h-12 w-12 md:h-10 md:w-10"
+              className="p-3 rounded-full transition-all duration-300 bg-black/30 hover:bg-black/50 hover:cursor-pointer"
             >
-              <Home className="h-10 w-10 md:h-6 md:w-6" />
-            </button>
-          )}
-
-          {showNavButtons && (
-            <button
-              onClick={() => showSlide(currentSlide - 1)}
-              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
-              title="Previous Slide"
-            >
-              <ChevronLeft className="h-10 w-10 md:h-6 md:w-6" />
-            </button>
-          )}
-
-          {showSlideCounter && (
-            <div className="presentation-counter p-2 h-12 w-12 md:h-10 md:w-10 text-sm">
-              {currentSlide + 1}/{totalSlides}
-            </div>
-          )}
-
-          {showNavButtons && (
-            <button
-              onClick={() => showSlide(currentSlide + 1)}
-              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
-              title="Next Slide"
-            >
-              <ChevronRight className="h-10 w-10 md:h-6 md:w-6" />
+              <Home className="h-6 w-6 text-white opacity-50 transition-opacity drop-shadow-lg" />
             </button>
           )}
 
           {showOutlineButton && (
             <button
               onClick={toggleOutline}
-              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
+              className="p-3 rounded-full transition-all duration-300 bg-black/30 hover:bg-black/50 hover:cursor-pointer"
               title="Outline"
             >
-              <Menu className="h-10 w-10 md:h-6 md:w-6" />
-            </button>
-          )}
-
-          {showSettingsButton && (
-            <button
-              onClick={() => setShowSettings(true)}
-              className="presentation-button p-2 h-12 w-12 md:h-10 md:w-10"
-              title="Settings"
-            >
-              <Settings className="h-10 w-10 md:h-6 md:w-6" />
+              <Menu className="h-6 w-6 text-white opacity-50 transition-opacity drop-shadow-lg" />
             </button>
           )}
 
@@ -246,12 +252,12 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
             <button
               onClick={toggleFullscreen}
               title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-              className="presentation-fullscreen p-2 h-12 w-12 md:h-10 md:w-10"
+              className="p-3 rounded-full transition-all duration-300 bg-black/30 hover:bg-black/50 hover:cursor-pointer"
             >
               {isFullscreen ? (
-                <Minimize className="h-10 w-10 md:h-6 md:w-6" />
+                <Minimize className="h-6 w-6 text-white opacity-50 transition-opacity drop-shadow-lg" />
               ) : (
-                <Maximize className="h-10 w-10 md:h-6 md:w-6" />
+                <Maximize className="h-6 w-6 text-white opacity-50 transition-opacity drop-shadow-lg" />
               )}
             </button>
           )}
@@ -288,169 +294,6 @@ const PresentationShell: React.FC<PresentationShellProps> = ({
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        )}
-
-        {/* Settings Modal */}
-        {showSettings && (
-          <div
-            className="fixed inset-0 bg-[#00000075] z-50 flex items-center justify-center"
-            onClick={(e) =>
-              e.target === e.currentTarget && setShowSettings(false)
-            }
-          >
-            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[80vh] overflow-y-auto">
-              <h3 className="text-xl font-bold mb-6">⚙️ Settings</h3>
-
-              {/* Audio Settings Section */}
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-md font-semibold mb-3 text-gray-700">
-                    🎵 Audio
-                  </h4>
-                  <div className="space-y-4 pl-2">
-                    {/* Background Music Toggle */}
-                    <div className="flex items-center justify-between">
-                      <label className="text-sm font-medium">
-                        Background Music
-                      </label>
-                      <button
-                        onClick={toggleBackgroundMusic}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                          audioSettings.backgroundMusicEnabled
-                            ? 'bg-indigo-600'
-                            : 'bg-gray-300'
-                        }`}
-                      >
-                        <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            audioSettings.backgroundMusicEnabled
-                              ? 'translate-x-6'
-                              : 'translate-x-1'
-                          }`}
-                        />
-                      </button>
-                    </div>
-
-                    {/* Background Music Volume */}
-                    {audioSettings.backgroundMusicEnabled && (
-                      <div>
-                        <label className="block text-sm font-medium mb-1">
-                          Volume:{' '}
-                          {Math.round(
-                            audioSettings.backgroundMusicVolume * 100,
-                          )}
-                          %
-                        </label>
-                        <input
-                          type="range"
-                          min="0"
-                          max="1"
-                          step="0.05"
-                          value={audioSettings.backgroundMusicVolume}
-                          onChange={(e) =>
-                            setBackgroundMusicVolume(parseFloat(e.target.value))
-                          }
-                          className="w-full"
-                        />
-                      </div>
-                    )}
-
-                    {/* Sound Effects Toggle */}
-                    <div className="flex items-center justify-between">
-                      <label className="text-sm font-medium">
-                        Sound Effects
-                      </label>
-                      <button
-                        onClick={toggleSoundEffects}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                          audioSettings.soundEffectsEnabled
-                            ? 'bg-indigo-600'
-                            : 'bg-gray-300'
-                        }`}
-                      >
-                        <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            audioSettings.soundEffectsEnabled
-                              ? 'translate-x-6'
-                              : 'translate-x-1'
-                          }`}
-                        />
-                      </button>
-                    </div>
-
-                    {/* Sound Effects Volume */}
-                    {audioSettings.soundEffectsEnabled && (
-                      <div>
-                        <label className="block text-sm font-medium mb-1">
-                          Volume:{' '}
-                          {Math.round(audioSettings.soundEffectsVolume * 100)}%
-                        </label>
-                        <input
-                          type="range"
-                          min="0"
-                          max="1"
-                          step="0.05"
-                          value={audioSettings.soundEffectsVolume}
-                          onChange={(e) =>
-                            setSoundEffectsVolume(parseFloat(e.target.value))
-                          }
-                          className="w-full"
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* TTS Settings Section */}
-                {isSupported && (
-                  <div>
-                    <h4 className="text-md font-semibold mb-3 text-gray-700">
-                      🗣️ Text-to-Speech
-                    </h4>
-                    <div className="space-y-4 pl-2">
-                      <div>
-                        <label className="block text-sm font-medium mb-2">
-                          Voice
-                        </label>
-                        <select
-                          value={voice}
-                          onChange={(e) => setVoice(e.target.value)}
-                          className="w-full p-2 border rounded"
-                        >
-                          {voices.map((v) => (
-                            <option key={v.name} value={v.name}>
-                              {v.name} ({v.lang})
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium mb-1">
-                          Speed: {rate.toFixed(1)}
-                        </label>
-                        <input
-                          type="range"
-                          min="0.5"
-                          max="2.0"
-                          step="0.1"
-                          value={rate}
-                          onChange={(e) => setRate(parseFloat(e.target.value))}
-                          className="w-full"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <button
-                onClick={() => setShowSettings(false)}
-                className="mt-6 w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium"
-              >
-                Close
-              </button>
             </div>
           </div>
         )}
