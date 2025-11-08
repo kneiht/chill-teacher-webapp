@@ -17,6 +17,7 @@ import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
 import { Route as mainteacherRouteRouteImport } from './routes/(main)/(teacher)/route'
 import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons/index'
+import { Route as mainLessonsSplatRouteImport } from './routes/(main)/lessons/$'
 import { Route as mainteacherTeachersRouteImport } from './routes/(main)/(teacher)/teachers'
 import { Route as mainteacherStudentsRouteImport } from './routes/(main)/(teacher)/students'
 import { Route as mainteacherSchoolsRouteImport } from './routes/(main)/(teacher)/schools'
@@ -27,14 +28,13 @@ import { Route as mainteacherAttendanceRouteImport } from './routes/(main)/(teac
 import { Route as maincommonSettingsRouteImport } from './routes/(main)/(common)/settings'
 import { Route as maincommonProfileRouteImport } from './routes/(main)/(common)/profile'
 import { Route as maincommonDashboardRouteImport } from './routes/(main)/(common)/dashboard'
-import { Route as mainLessonsCourseIndexRouteImport } from './routes/(main)/lessons/$course/index'
-import { Route as mainLessonsCourseUnitLessonRouteRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/route'
-import { Route as mainLessonsCourseUnitLessonIndexRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/index'
-import { Route as mainLessonsCourseUnitLessonActivityRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/$activity'
-import { Route as mainLessonsCourseUnitLessonYoutubeIdRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/youtube.$id'
-import { Route as mainLessonsCourseUnitLessonPagesIdRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/pages.$id'
-import { Route as mainLessonsCourseUnitLessonGoogleslideIdRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/googleslide.$id'
-import { Route as mainLessonsCourseUnitLessonEmbedIdRouteImport } from './routes/(main)/lessons/$course/$unit.$lesson/embed.$id'
+import { Route as mainLessonsCourseUnitLessonRouteRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/route'
+import { Route as mainLessonsCourseUnitLessonIndexRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/index'
+import { Route as mainLessonsCourseUnitLessonActivityRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/$activity'
+import { Route as mainLessonsCourseUnitLessonYoutubeIdRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/youtube.$id'
+import { Route as mainLessonsCourseUnitLessonPagesIdRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/pages.$id'
+import { Route as mainLessonsCourseUnitLessonGoogleslideIdRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/googleslide.$id'
+import { Route as mainLessonsCourseUnitLessonEmbedIdRouteImport } from './routes/(main)/lessons/$course.$unit.$lesson/embed.$id'
 
 const SplatRoute = SplatRouteImport.update({
   id: '/$splat',
@@ -71,6 +71,11 @@ const mainteacherRouteRoute = mainteacherRouteRouteImport.update({
 const mainLessonsIndexRoute = mainLessonsIndexRouteImport.update({
   id: '/lessons/',
   path: '/lessons/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainLessonsSplatRoute = mainLessonsSplatRouteImport.update({
+  id: '/lessons/$',
+  path: '/lessons/$',
   getParentRoute: () => mainRouteRoute,
 } as any)
 const mainteacherTeachersRoute = mainteacherTeachersRouteImport.update({
@@ -121,11 +126,6 @@ const maincommonProfileRoute = maincommonProfileRouteImport.update({
 const maincommonDashboardRoute = maincommonDashboardRouteImport.update({
   id: '/(common)/dashboard',
   path: '/dashboard',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainLessonsCourseIndexRoute = mainLessonsCourseIndexRouteImport.update({
-  id: '/lessons/$course/',
-  path: '/lessons/$course/',
   getParentRoute: () => mainRouteRoute,
 } as any)
 const mainLessonsCourseUnitLessonRouteRoute =
@@ -186,8 +186,8 @@ export interface FileRoutesByFullPath {
   '/schools': typeof mainteacherSchoolsRoute
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
+  '/lessons/$': typeof mainLessonsSplatRoute
   '/lessons': typeof mainLessonsIndexRoute
-  '/lessons/$course': typeof mainLessonsCourseIndexRoute
   '/lessons/$course/$unit/$lesson': typeof mainLessonsCourseUnitLessonRouteRouteWithChildren
   '/lessons/$course/$unit/$lesson/$activity': typeof mainLessonsCourseUnitLessonActivityRoute
   '/lessons/$course/$unit/$lesson/': typeof mainLessonsCourseUnitLessonIndexRoute
@@ -211,8 +211,8 @@ export interface FileRoutesByTo {
   '/schools': typeof mainteacherSchoolsRoute
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
+  '/lessons/$': typeof mainLessonsSplatRoute
   '/lessons': typeof mainLessonsIndexRoute
-  '/lessons/$course': typeof mainLessonsCourseIndexRoute
   '/lessons/$course/$unit/$lesson/$activity': typeof mainLessonsCourseUnitLessonActivityRoute
   '/lessons/$course/$unit/$lesson': typeof mainLessonsCourseUnitLessonIndexRoute
   '/lessons/$course/$unit/$lesson/embed/$id': typeof mainLessonsCourseUnitLessonEmbedIdRoute
@@ -239,8 +239,8 @@ export interface FileRoutesById {
   '/(main)/(teacher)/schools': typeof mainteacherSchoolsRoute
   '/(main)/(teacher)/students': typeof mainteacherStudentsRoute
   '/(main)/(teacher)/teachers': typeof mainteacherTeachersRoute
+  '/(main)/lessons/$': typeof mainLessonsSplatRoute
   '/(main)/lessons/': typeof mainLessonsIndexRoute
-  '/(main)/lessons/$course/': typeof mainLessonsCourseIndexRoute
   '/(main)/lessons/$course/$unit/$lesson': typeof mainLessonsCourseUnitLessonRouteRouteWithChildren
   '/(main)/lessons/$course/$unit/$lesson/$activity': typeof mainLessonsCourseUnitLessonActivityRoute
   '/(main)/lessons/$course/$unit/$lesson/': typeof mainLessonsCourseUnitLessonIndexRoute
@@ -266,8 +266,8 @@ export interface FileRouteTypes {
     | '/schools'
     | '/students'
     | '/teachers'
+    | '/lessons/$'
     | '/lessons'
-    | '/lessons/$course'
     | '/lessons/$course/$unit/$lesson'
     | '/lessons/$course/$unit/$lesson/$activity'
     | '/lessons/$course/$unit/$lesson/'
@@ -291,8 +291,8 @@ export interface FileRouteTypes {
     | '/schools'
     | '/students'
     | '/teachers'
+    | '/lessons/$'
     | '/lessons'
-    | '/lessons/$course'
     | '/lessons/$course/$unit/$lesson/$activity'
     | '/lessons/$course/$unit/$lesson'
     | '/lessons/$course/$unit/$lesson/embed/$id'
@@ -318,8 +318,8 @@ export interface FileRouteTypes {
     | '/(main)/(teacher)/schools'
     | '/(main)/(teacher)/students'
     | '/(main)/(teacher)/teachers'
+    | '/(main)/lessons/$'
     | '/(main)/lessons/'
-    | '/(main)/lessons/$course/'
     | '/(main)/lessons/$course/$unit/$lesson'
     | '/(main)/lessons/$course/$unit/$lesson/$activity'
     | '/(main)/lessons/$course/$unit/$lesson/'
@@ -394,6 +394,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainLessonsIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/(main)/lessons/$': {
+      id: '/(main)/lessons/$'
+      path: '/lessons/$'
+      fullPath: '/lessons/$'
+      preLoaderRoute: typeof mainLessonsSplatRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/(teacher)/teachers': {
       id: '/(main)/(teacher)/teachers'
       path: '/teachers'
@@ -462,13 +469,6 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof maincommonDashboardRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/lessons/$course/': {
-      id: '/(main)/lessons/$course/'
-      path: '/lessons/$course'
-      fullPath: '/lessons/$course'
-      preLoaderRoute: typeof mainLessonsCourseIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/lessons/$course/$unit/$lesson': {
@@ -595,8 +595,8 @@ interface mainRouteRouteChildren {
   maincommonDashboardRoute: typeof maincommonDashboardRoute
   maincommonProfileRoute: typeof maincommonProfileRoute
   maincommonSettingsRoute: typeof maincommonSettingsRoute
+  mainLessonsSplatRoute: typeof mainLessonsSplatRoute
   mainLessonsIndexRoute: typeof mainLessonsIndexRoute
-  mainLessonsCourseIndexRoute: typeof mainLessonsCourseIndexRoute
   mainLessonsCourseUnitLessonRouteRoute: typeof mainLessonsCourseUnitLessonRouteRouteWithChildren
 }
 
@@ -605,8 +605,8 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   maincommonDashboardRoute: maincommonDashboardRoute,
   maincommonProfileRoute: maincommonProfileRoute,
   maincommonSettingsRoute: maincommonSettingsRoute,
+  mainLessonsSplatRoute: mainLessonsSplatRoute,
   mainLessonsIndexRoute: mainLessonsIndexRoute,
-  mainLessonsCourseIndexRoute: mainLessonsCourseIndexRoute,
   mainLessonsCourseUnitLessonRouteRoute:
     mainLessonsCourseUnitLessonRouteRouteWithChildren,
 }

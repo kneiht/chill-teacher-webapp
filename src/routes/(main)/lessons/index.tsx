@@ -53,17 +53,36 @@ export const Route = createFileRoute('/(main)/lessons/')({
 function LessonsList() {
   const { lessons, groupedByCourseAndUnit } = Route.useLoaderData()
 
-  // Format course name for display
-  const formatCourseName = (course: string): string => {
+  // Get display name for course (use courseDisplay if available, otherwise format)
+  const getCourseDisplayName = (course: string, lessons: Lesson[]): string => {
+    const firstLesson = lessons.find((l) => l.course === course)
+    if (firstLesson?.courseDisplay) {
+      return firstLesson.courseDisplay
+    }
     return course
       .split('-')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
   }
 
-  // Format unit name for display
-  const formatUnitName = (unit: string): string => {
+  // Get display name for unit (use unitDisplay if available, otherwise format)
+  const getUnitDisplayName = (unit: string, lessons: Lesson[]): string => {
+    const firstLesson = lessons.find((l) => l.unit === unit)
+    if (firstLesson?.unitDisplay) {
+      return firstLesson.unitDisplay
+    }
     return unit
+      .split('-')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+  }
+
+  // Get display name for lesson (use lessonDisplay if available, otherwise format)
+  const getLessonDisplayName = (lesson: Lesson): string => {
+    if (lesson.lessonDisplay) {
+      return lesson.lessonDisplay
+    }
+    return lesson.lesson
       .split('-')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
@@ -97,7 +116,7 @@ function LessonsList() {
           <div key={course} style={{ marginBottom: '3rem' }}>
             {courseIndex > 0 && <Divider style={{ margin: '2rem 0' }} />}
             <Title level={3} style={{ marginBottom: '1rem' }}>
-              {formatCourseName(course)}
+              {getCourseDisplayName(course, lessons)}
             </Title>
 
             {/* Display units within course */}
@@ -110,7 +129,7 @@ function LessonsList() {
                   <Divider style={{ margin: '1.5rem 0' }} orientation="left" />
                 )}
                 <Title level={4} style={{ marginBottom: '0.5rem' }}>
-                  {formatUnitName(unit)}
+                  {getUnitDisplayName(unit, lessons)}
                 </Title>
                 <Text
                   type="secondary"
@@ -149,7 +168,11 @@ function LessonsList() {
                                 }}
                               >
                                 <img
-                                  alt={lesson.title}
+                                  alt={
+                                    lesson.lessonDisplay ||
+                                    lesson.lesson ||
+                                    'Lesson'
+                                  }
                                   src={lesson.bg}
                                   style={{
                                     width: '100%',
@@ -178,13 +201,17 @@ function LessonsList() {
                                     textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
                                   }}
                                 >
-                                  {lesson.title}
+                                  {getUnitDisplayName(lesson.unit, lessons)}
+                                  {getLessonDisplayName(lesson)}
                                 </div>
                               </div>
                             }
                           >
                             <Card.Meta
-                              title={lesson.title}
+                              title={`${getUnitDisplayName(
+                                lesson.unit,
+                                lessons,
+                              )} - ${getLessonDisplayName(lesson)}`}
                               description={lesson.description}
                             />
                           </Card>

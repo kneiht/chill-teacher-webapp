@@ -2,12 +2,14 @@ import { LocalStorageKeys, getFromLocalStorage } from './local-storage-helpers'
 import type { AuthSuccessData } from '@/lib/fetches/auth.fetch'
 
 export interface Lesson {
-  title: string
-  description: string
   course: string
   unit: string
   lesson: string
   bg: string
+  courseDisplay?: string
+  unitDisplay?: string
+  lessonDisplay?: string
+  description?: string
 }
 
 export interface AllowedLesson {
