@@ -1,16 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Card, Col, Row, Typography } from 'antd'
+import { filterLessonsByUser, type Lesson } from '@/lib/utils/lesson-helpers'
 
 const { Title } = Typography
-
-interface Lesson {
-  title: string
-  description: string
-  course: string
-  unit: string
-  lesson: string
-  bg: string
-}
 
 export const Route = createFileRoute('/(main)/lessons/$course/')({
   loader: async ({ params }): Promise<Array<Lesson> | { error: string }> => {
@@ -18,7 +10,12 @@ export const Route = createFileRoute('/(main)/lessons/$course/')({
       const data = (await import(
         `@/mock-data/courses/${params.course}.json`
       )) as { default: Array<Lesson> }
-      return data.default
+      const allLessons = data.default
+
+      // Filter lessons based on user permissions
+      const filteredLessons = await filterLessonsByUser(allLessons)
+
+      return filteredLessons
     } catch {
       return { error: 'Cannot find this course' }
     }
@@ -39,6 +36,16 @@ function LessonProgram() {
   }
 
   const lessons: Lesson[] = data
+
+  // Show message if no lessons available
+  if (lessons.length === 0) {
+    return (
+      <div>
+        <Title level={2}>Available Lessons</Title>
+        <p>No lessons available for your account.</p>
+      </div>
+    )
+  }
 
   return (
     <div>

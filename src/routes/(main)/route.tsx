@@ -142,11 +142,11 @@ function MainLayout() {
           icon: <DashboardOutlined />,
           label: <Link to="/dashboard">{t('Dashboard')}</Link>,
         },
-        // {
-        //   key: '/lessons',
-        //   icon: <ReadOutlined />,
-        //   label: <Link to="/lessons/">{t('Lessons')}</Link>,
-        // },
+        {
+          key: '/lessons',
+          icon: <ReadOutlined />,
+          label: <Link to="/lessons">{t('Lessons')}</Link>,
+        },
       ]
     }
 

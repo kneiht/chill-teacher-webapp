@@ -1,12 +1,13 @@
 import { Outlet, createFileRoute, redirect } from '@tanstack/react-router'
 import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
+import { getDefaultRoute } from '@/lib/utils/route-helpers'
 
 export const Route = createFileRoute('/(auth)')({
   beforeLoad: () => {
     const user = localStorage.getItem(LocalStorageKeys.USER)
     const refreshToken = localStorage.getItem('refresh_token')
     if (user && refreshToken) {
-      throw redirect({ to: '/dashboard', replace: true })
+      throw redirect({ to: getDefaultRoute(), replace: true })
     }
   },
   component: AuthLayout,

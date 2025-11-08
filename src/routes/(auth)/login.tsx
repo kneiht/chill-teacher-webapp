@@ -5,6 +5,7 @@ import { Logo } from '@/lib/components/ui/Logo'
 import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
 import { useLang } from '@/lib/hooks/use-lang'
 import { useAuth } from '@/lib/hooks/use-auth'
+import { getDefaultRoute } from '@/lib/utils/route-helpers'
 
 export const Route = createFileRoute('/(auth)/login')({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -24,7 +25,13 @@ function LoginPage() {
     const result = await login(values.login, values.password)
     if (result.success) {
       message.success(result.message)
-      navigate({ to: redirect || '/dashboard' })
+      // Use redirect if provided, otherwise use default route based on user role
+      // Get user role from result data or use default route helper
+      const userRole = result.data?.user?.role?.toLowerCase()
+      const defaultDestination =
+        userRole === 'student' ? '/lessons' : '/dashboard'
+      const destination = redirect || defaultDestination
+      navigate({ to: destination })
     } else {
       message.error(result.error)
     }

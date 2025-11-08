@@ -1,4 +1,5 @@
-import { createFileRoute, Outlet } from '@tanstack/react-router'
+import { createFileRoute, Outlet, redirect } from '@tanstack/react-router'
+import { hasLessonAccess } from '@/lib/utils/lesson-helpers'
 import type { ReadingComprehensionData } from '@/lib/components/activities/ReadingComprehensionSlide'
 
 interface VocabItem {
@@ -135,6 +136,21 @@ interface LessonData {
 }
 
 export const Route = createFileRoute('/(main)/lessons/$course/$unit/$lesson')({
+  beforeLoad: async ({ params }) => {
+    // Check if user has access to this lesson
+    const hasAccess = await hasLessonAccess(
+      params.course,
+      params.unit,
+      params.lesson,
+    )
+    if (!hasAccess) {
+      throw redirect({
+        to: '/lessons/$course',
+        params: { course: params.course },
+        replace: true,
+      })
+    }
+  },
   loader: async ({ params }): Promise<LessonData> => {
     try {
       const data = (await import(
