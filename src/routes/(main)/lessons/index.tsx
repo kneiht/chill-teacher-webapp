@@ -5,7 +5,7 @@ import { filterLessonsByUser, type Lesson } from '@/lib/utils/lesson-helpers'
 const { Title, Text } = Typography
 
 // List of available courses
-const AVAILABLE_COURSES = ['advanced', 'eu'] as const
+const AVAILABLE_COURSES = ['advanced-topics', 'everybody-up-starter'] as const
 
 export const Route = createFileRoute('/(main)/lessons/')({
   loader: async (): Promise<{
