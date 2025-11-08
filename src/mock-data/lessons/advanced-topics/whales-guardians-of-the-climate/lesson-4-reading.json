@@ -3,7 +3,410 @@
     "background": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp",
     "title": "Whales – Guardians of the Climate",
     "description": "Lesson 4: Reading",
-    "menu": [{ "type": "activity", "id": "reading-slides" }],
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "candy-crush" },
+      { "type": "activity", "id": "cloze-game" },
+      { "type": "activity", "id": "reading-slides" },
+      { "type": "activity", "id": "reading-comprehension" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "reading-lesson-video",
+          "url": "https://youtu.be/rI2JW7NjKsg",
+          "title": "Video bài giảng"
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "estimate",
+        "phonics": "/ˈestɪmeɪt/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/estimate.webp",
+        "vietnameseMeaning": "ước lượng, ước tính",
+        "sampleSentence": "Scientists estimate that whales store millions of tonnes of carbon.",
+        "vietnameseTranslation": "Các nhà khoa học ước tính rằng cá voi lưu trữ hàng triệu tấn carbon.",
+        "wordPronunciation": "estimate.wav",
+        "sentencePronunciation": "scientists-estimate-that-whales-store-millions-of-tonnes-of-carbon.wav"
+      },
+      {
+        "word": "population",
+        "phonics": "/ˌpɒpjəˈleɪʃən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/population.webp",
+        "vietnameseMeaning": "dân số",
+        "sampleSentence": "The world's population is growing every year.",
+        "vietnameseTranslation": "Dân số thế giới đang tăng lên mỗi năm.",
+        "wordPronunciation": "population.wav",
+        "sentencePronunciation": "the-worlds-population-is-growing-every-year.wav"
+      },
+      {
+        "word": "tonnes",
+        "phonics": "/tʌnz/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/tonnes.webp",
+        "vietnameseMeaning": "tấn (đơn vị đo trọng lượng)",
+        "sampleSentence": "The ship can carry over ten thousand tonnes of goods.",
+        "vietnameseTranslation": "Con tàu có thể chở hơn mười nghìn tấn hàng hóa.",
+        "wordPronunciation": "tonnes.wav",
+        "sentencePronunciation": "the-ship-can-carry-over-ten-thousand-tonnes-of-goods.wav"
+      },
+      {
+        "word": "survival",
+        "phonics": "/səˈvaɪvəl/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/survival.webp",
+        "vietnameseMeaning": "sự sống sót, tồn tại",
+        "sampleSentence": "Clean oceans are essential for the survival of many species.",
+        "vietnameseTranslation": "Đại dương sạch là điều cần thiết cho sự sống sót của nhiều loài.",
+        "wordPronunciation": "survival.wav",
+        "sentencePronunciation": "clean-oceans-are-essential-for-the-survival-of-many-species.wav"
+      },
+      {
+        "word": "collision",
+        "phonics": "/kəˈlɪʒən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/collision.webp",
+        "vietnameseMeaning": "sự va chạm",
+        "sampleSentence": "Ship collisions are a serious threat to whales.",
+        "vietnameseTranslation": "Các vụ va chạm tàu là mối đe dọa nghiêm trọng đối với cá voi.",
+        "wordPronunciation": "collision.wav",
+        "sentencePronunciation": "ship-collisions-are-a-serious-threat-to-whales.wav"
+      },
+      {
+        "word": "pollution",
+        "phonics": "/pəˈluːʃən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/pollution.webp",
+        "vietnameseMeaning": "ô nhiễm",
+        "sampleSentence": "Ocean pollution affects marine life.",
+        "vietnameseTranslation": "Ô nhiễm đại dương ảnh hưởng đến sinh vật biển.",
+        "wordPronunciation": "pollution.wav",
+        "sentencePronunciation": "ocean-pollution-affects-marine-life.wav"
+      },
+      {
+        "word": "starvation",
+        "phonics": "/stɑːˈveɪʃən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/starvation.webp",
+        "vietnameseMeaning": "nạn đói, sự chết đói",
+        "sampleSentence": "Some sea animals face starvation due to lack of food.",
+        "vietnameseTranslation": "Một số sinh vật biển phải đối mặt với nạn đói do thiếu thức ăn.",
+        "wordPronunciation": "starvation.wav",
+        "sentencePronunciation": "some-sea-animals-face-starvation-due-to-lack-of-food.wav"
+      },
+      {
+        "word": "extinction",
+        "phonics": "/ɪkˈstɪŋkʃən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/extinction.webp",
+        "vietnameseMeaning": "sự tuyệt chủng",
+        "sampleSentence": "Whales are protected to prevent extinction.",
+        "vietnameseTranslation": "Cá voi được bảo vệ để ngăn ngừa sự tuyệt chủng.",
+        "wordPronunciation": "extinction.wav",
+        "sentencePronunciation": "whales-are-protected-to-prevent-extinction.wav"
+      },
+      {
+        "word": "government",
+        "phonics": "/ˈɡʌvənmənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/government.webp",
+        "vietnameseMeaning": "chính phủ",
+        "sampleSentence": "The government created new laws to protect the ocean.",
+        "vietnameseTranslation": "Chính phủ đã ban hành luật mới để bảo vệ đại dương.",
+        "wordPronunciation": "government.wav",
+        "sentencePronunciation": "the-government-created-new-laws-to-protect-the-ocean.wav"
+      },
+      {
+        "word": "habitat",
+        "phonics": "/ˈhæbɪtæt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/habitat.webp",
+        "vietnameseMeaning": "môi trường sống",
+        "sampleSentence": "Pollution destroys the natural habitat of many animals.",
+        "vietnameseTranslation": "Ô nhiễm phá hủy môi trường sống tự nhiên của nhiều loài động vật.",
+        "wordPronunciation": "habitat.wav",
+        "sentencePronunciation": "pollution-destroys-the-natural-habitat-of-many-animals.wav"
+      },
+      {
+        "word": "acidic",
+        "phonics": "/əˈsɪdɪk/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/acidic.webp",
+        "vietnameseMeaning": "có tính axit",
+        "sampleSentence": "Some lakes have become too acidic for fish to survive.",
+        "vietnameseTranslation": "Một số hồ đã trở nên quá axit khiến cá không thể sống được.",
+        "wordPronunciation": "acidic.wav",
+        "sentencePronunciation": "some-lakes-have-become-too-acidic-for-fish-to-survive.wav"
+      },
+      {
+        "word": "marine",
+        "phonics": "/məˈriːn/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/marine.webp",
+        "vietnameseMeaning": "thuộc về biển",
+        "sampleSentence": "Marine animals live in the ocean.",
+        "vietnameseTranslation": "Động vật biển sống trong đại dương.",
+        "wordPronunciation": "marine.wav",
+        "sentencePronunciation": "marine-animals-live-in-the-ocean.wav"
+      },
+      {
+        "word": "coast",
+        "phonics": "/koʊst/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/coast.webp",
+        "vietnameseMeaning": "bờ biển",
+        "sampleSentence": "We walked along the rocky coast at sunset.",
+        "vietnameseTranslation": "Chúng tôi đi dọc bờ biển đá vào lúc hoàng hôn.",
+        "wordPronunciation": "coast.wav",
+        "sentencePronunciation": "we-walked-along-the-rocky-coast-at-sunset.wav"
+      },
+      {
+        "word": "expert",
+        "phonics": "/ˈekspɜːrt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/expert.webp",
+        "vietnameseMeaning": "chuyên gia",
+        "sampleSentence": "An expert gave advice on how to save energy.",
+        "vietnameseTranslation": "Một chuyên gia đã đưa ra lời khuyên về cách tiết kiệm năng lượng.",
+        "wordPronunciation": "expert.wav",
+        "sentencePronunciation": "an-expert-gave-advice-on-how-to-save-energy.wav"
+      },
+      {
+        "word": "emission",
+        "phonics": "/ɪˈmɪʃən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/emission.webp",
+        "vietnameseMeaning": "sự phát thải",
+        "sampleSentence": "Car emissions contribute to air pollution.",
+        "vietnameseTranslation": "Khí thải từ xe hơi góp phần gây ô nhiễm không khí.",
+        "wordPronunciation": "emission.wav",
+        "sentencePronunciation": "car-emissions-contribute-to-air-pollution.wav"
+      },
+      {
+        "word": "trapped",
+        "phonics": "/træpt/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/trapped.webp",
+        "vietnameseMeaning": "bị mắc kẹt",
+        "sampleSentence": "The miners were trapped underground for two days.",
+        "vietnameseTranslation": "Những người thợ mỏ bị mắc kẹt dưới lòng đất trong hai ngày.",
+        "wordPronunciation": "trapped.wav",
+        "sentencePronunciation": "the-miners-were-trapped-underground-for-two-days.wav"
+      },
+      {
+        "word": "fertilizer",
+        "phonics": "/ˈfɜːrtəlaɪzər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/fertilizer.webp",
+        "vietnameseMeaning": "phân bón",
+        "sampleSentence": "Farmers use organic fertilizer to help plants grow.",
+        "vietnameseTranslation": "Nông dân sử dụng phân bón hữu cơ để giúp cây phát triển.",
+        "wordPronunciation": "fertilizer.wav",
+        "sentencePronunciation": "farmers-use-organic-fertilizer-to-help-plants-grow.wav"
+      },
+      {
+        "word": "phytoplankton",
+        "phonics": "/ˌfaɪtoʊˈplæŋktən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/phytoplankton.webp",
+        "vietnameseMeaning": "thực vật phù du",
+        "sampleSentence": "Phytoplankton are tiny plants that float in the ocean.",
+        "vietnameseTranslation": "Thực vật phù du là những loài cây nhỏ trôi nổi trong đại dương.",
+        "wordPronunciation": "phytoplankton.wav",
+        "sentencePronunciation": "phytoplankton-are-tiny-plants-that-float-in-the-ocean.wav"
+      },
+      {
+        "word": "absorb",
+        "phonics": "/əbˈzɔːrb/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/absorb.webp",
+        "vietnameseMeaning": "hấp thụ",
+        "sampleSentence": "Plants absorb sunlight to make food.",
+        "vietnameseTranslation": "Cây hấp thụ ánh sáng mặt trời để tạo ra thức ăn.",
+        "wordPronunciation": "absorb.wav",
+        "sentencePronunciation": "plants-absorb-sunlight-to-make-food.wav"
+      },
+      {
+        "word": "responsible",
+        "phonics": "/rɪˈspɒnsəbl/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/responsible.webp",
+        "vietnameseMeaning": "có trách nhiệm",
+        "sampleSentence": "We are all responsible for protecting the Earth.",
+        "vietnameseTranslation": "Tất cả chúng ta đều có trách nhiệm bảo vệ Trái Đất.",
+        "wordPronunciation": "responsible.wav",
+        "sentencePronunciation": "we-are-all-responsible-for-protecting-the-earth.wav"
+      },
+      {
+        "word": "guardian",
+        "phonics": "/ˈɡɑːrdiən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/guardian.webp",
+        "vietnameseMeaning": "người bảo vệ, người giám hộ",
+        "sampleSentence": "The dog acted as a guardian for the children.",
+        "vietnameseTranslation": "Con chó đóng vai trò như người bảo vệ cho lũ trẻ.",
+        "wordPronunciation": "guardian.wav",
+        "sentencePronunciation": "the-dog-acted-as-a-guardian-for-the-children.wav"
+      },
+      {
+        "word": "climate",
+        "phonics": "/ˈklaɪmət/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/climate.webp",
+        "vietnameseMeaning": "khí hậu",
+        "sampleSentence": "The tropical climate is warm and humid all year round.",
+        "vietnameseTranslation": "Khí hậu nhiệt đới ấm áp và ẩm ướt quanh năm.",
+        "wordPronunciation": "climate.wav",
+        "sentencePronunciation": "the-tropical-climate-is-warm-and-humid-all-year-round.wav"
+      },
+      {
+        "word": "giant",
+        "phonics": "/ˈdʒaɪənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/giant.webp",
+        "vietnameseMeaning": "người khổng lồ",
+        "sampleSentence": "The story tells of a kind giant who helps people.",
+        "vietnameseTranslation": "Câu chuyện kể về một người khổng lồ tốt bụng giúp đỡ mọi người.",
+        "wordPronunciation": "giant.wav",
+        "sentencePronunciation": "the-story-tells-of-a-kind-giant-who-helps-people.wav"
+      },
+      {
+        "word": "admire",
+        "phonics": "/ədˈmaɪər/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/admire.webp",
+        "vietnameseMeaning": "ngưỡng mộ, khâm phục",
+        "sampleSentence": "I really admire her for her honesty and courage.",
+        "vietnameseTranslation": "Tôi thực sự ngưỡng mộ cô ấy vì sự trung thực và dũng cảm.",
+        "wordPronunciation": "admire.wav",
+        "sentencePronunciation": "i-really-admire-her-for-her-honesty-and-courage.wav"
+      },
+      {
+        "word": "support",
+        "phonics": "/səˈpɔːrt/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/support.webp",
+        "vietnameseMeaning": "hỗ trợ, ủng hộ",
+        "sampleSentence": "Parents should always support their children's dreams.",
+        "vietnameseTranslation": "Cha mẹ nên luôn ủng hộ ước mơ của con cái.",
+        "wordPronunciation": "support.wav",
+        "sentencePronunciation": "parents-should-always-support-their-childrens-dreams.wav"
+      },
+      {
+        "word": "scientist",
+        "phonics": "/ˈsaɪəntɪst/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/scientist.webp",
+        "vietnameseMeaning": "nhà khoa học",
+        "sampleSentence": "The scientist discovered a new species of fish.",
+        "vietnameseTranslation": "Nhà khoa học đã phát hiện ra một loài cá mới.",
+        "wordPronunciation": "scientist.wav",
+        "sentencePronunciation": "the-scientist-discovered-a-new-species-of-fish.wav"
+      },
+      {
+        "word": "describe",
+        "phonics": "/dɪˈskraɪb/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/describe.webp",
+        "vietnameseMeaning": "miêu tả",
+        "sampleSentence": "Can you describe what the thief looked like?",
+        "vietnameseTranslation": "Bạn có thể miêu tả kẻ trộm trông như thế nào không?",
+        "wordPronunciation": "describe.wav",
+        "sentencePronunciation": "can-you-describe-what-the-thief-looked-like.wav"
+      },
+      {
+        "word": "engineer",
+        "phonics": "/ˌendʒɪˈnɪər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/engineer.webp",
+        "vietnameseMeaning": "kỹ sư",
+        "sampleSentence": "The engineer designed a strong and safe bridge.",
+        "vietnameseTranslation": "Người kỹ sư thiết kế một cây cầu chắc chắn và an toàn.",
+        "wordPronunciation": "engineer.wav",
+        "sentencePronunciation": "the-engineer-designed-a-strong-and-safe-bridge.wav"
+      },
+      {
+        "word": "nutrient",
+        "phonics": "/ˈnjuːtriənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/nutrient.webp",
+        "vietnameseMeaning": "chất dinh dưỡng",
+        "sampleSentence": "Fruits and vegetables contain important nutrients.",
+        "vietnameseTranslation": "Trái cây và rau củ chứa nhiều chất dinh dưỡng quan trọng.",
+        "wordPronunciation": "nutrient.wav",
+        "sentencePronunciation": "fruits-and-vegetables-contain-important-nutrients.wav"
+      },
+      {
+        "word": "microscopic",
+        "phonics": "/ˌmaɪkrəˈskɒpɪk/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/microscopic.webp",
+        "vietnameseMeaning": "siêu nhỏ, vi mô",
+        "sampleSentence": "Microscopic organisms live in the ocean.",
+        "vietnameseTranslation": "Các sinh vật siêu nhỏ sống trong đại dương.",
+        "wordPronunciation": "microscopic.wav",
+        "sentencePronunciation": "microscopic-organisms-live-in-the-ocean.wav"
+      },
+      {
+        "word": "reduce",
+        "phonics": "/rɪˈdjuːs/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/reduce.webp",
+        "vietnameseMeaning": "giảm bớt, cắt giảm",
+        "sampleSentence": "We must reduce waste to protect the planet.",
+        "vietnameseTranslation": "Chúng ta phải giảm rác thải để bảo vệ hành tinh.",
+        "wordPronunciation": "reduce.wav",
+        "sentencePronunciation": "we-must-reduce-waste-to-protect-the-planet.wav"
+      },
+      {
+        "word": "carbon dioxide",
+        "phonics": "/ˌkɑːrbən daɪˈɒksaɪd/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/carbon-dioxide.webp",
+        "vietnameseMeaning": "khí carbon dioxide (CO₂)",
+        "sampleSentence": "Trees absorb carbon dioxide from the air.",
+        "vietnameseTranslation": "Cây hấp thụ khí carbon dioxide từ không khí.",
+        "wordPronunciation": "carbon-dioxide.wav",
+        "sentencePronunciation": "trees-absorb-carbon-dioxide-from-the-air.wav"
+      },
+      {
+        "word": "sustain",
+        "phonics": "/səˈsteɪn/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/sustain.webp",
+        "vietnameseMeaning": "duy trì, bảo tồn",
+        "sampleSentence": "We must find ways to sustain natural resources.",
+        "vietnameseTranslation": "Chúng ta phải tìm cách duy trì các nguồn tài nguyên thiên nhiên.",
+        "wordPronunciation": "sustain.wav",
+        "sentencePronunciation": "we-must-find-ways-to-sustain-natural-resources.wav"
+      },
+      {
+        "word": "balance",
+        "phonics": "/ˈbæl.əns/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/balance.webp",
+        "vietnameseMeaning": "sự cân bằng",
+        "sampleSentence": "A good diet keeps your body in balance.",
+        "vietnameseTranslation": "Chế độ ăn uống hợp lý giúp cơ thể cân bằng.",
+        "wordPronunciation": "balance.wav",
+        "sentencePronunciation": "a-good-diet-keeps-your-body-in-balance.wav"
+      },
+      {
+        "word": "threat",
+        "phonics": "/θret/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/threat.webp",
+        "vietnameseMeaning": "mối đe dọa",
+        "sampleSentence": "Climate change is a serious threat to wildlife.",
+        "vietnameseTranslation": "Biến đổi khí hậu là một mối đe dọa nghiêm trọng đối với động vật hoang dã.",
+        "wordPronunciation": "threat.wav",
+        "sentencePronunciation": "climate-change-is-a-serious-threat-to-wildlife.wav"
+      }
+    ],
     "readingSlidesData": [
       {
         "audio": "https://storage.chillteacher.com/page-data/whales-guardians-of-the-climate/reading/audio/audio1.wav",
@@ -42,6 +445,1149 @@
         "text": "Saving whales means saving the planet. Each whale that survives helps the ocean stay healthy and the atmosphere clean. Governments and individuals must work together to prevent ship strikes, improve fishing practices, and create safer habitats. By protecting whales, we protect the systems that give us air to breathe and a stable climate to live in."
       }
     ],
-    "vocab": []
+    "readingComprehensionData": {
+      "title": "Whales – Guardians of the Climate",
+      "passage": [
+        {
+          "content": "Whales are among the largest and most intelligent animals on Earth. People often admire them for their beauty and size, but their true value lies in the way they support life on our planet. Scientists describe whales as \"engineers of the ocean\" because they help move nutrients through the water, support the growth of microscopic plants, and even reduce the amount of carbon dioxide in the atmosphere. In this sense, whales do not just inspire wonder — they quietly help sustain the balance of the natural world."
+        },
+        {
+          "heading": "Oceans Under Threat",
+          "content": "Human activities have caused serious changes to the global climate. As a result, the oceans are warming and becoming more acidic, which harms marine life. Melting ice and rising sea levels are threatening people who live near the coast, while stronger storms are becoming more frequent. According to climate experts, urgent action is needed to cut greenhouse gas emissions and protect both ocean ecosystems and human communities from further damage."
+        },
+        {
+          "heading": "How Whales Help the Planet",
+          "content": "Whales play an unexpected role in the fight against climate change. Over their long lifetimes, they store large amounts of carbon in their bodies. When a whale dies and sinks to the ocean floor, that carbon remains trapped for centuries. Their waste also acts as fertilizer for phytoplankton — tiny ocean plants that absorb carbon dioxide and produce oxygen. These plants are responsible for about half of the oxygen we breathe. Scientists estimate that if whale populations increased, the rise in phytoplankton could remove hundreds of millions of tonnes of carbon from the atmosphere every year."
+        },
+        {
+          "heading": "A Struggle for Survival",
+          "content": "Despite their importance, whale populations have not fully recovered from centuries of hunting. Today, many whales still face deadly dangers from ship collisions, fishing gear, and underwater noise pollution. The North Atlantic right whale, for example, has fewer than 400 individuals left. Many are trapped in ropes and die slowly from injuries or starvation. With so few calves being born, this species is moving dangerously close to extinction."
+        },
+        {
+          "heading": "Protecting the Ocean's Giants",
+          "content": "Saving whales means saving the planet. Each whale that survives helps the ocean stay healthy and the atmosphere clean. Governments and individuals must work together to prevent ship strikes, improve fishing practices, and create safer habitats. By protecting whales, we protect the systems that give us air to breathe and a stable climate to live in."
+        }
+      ],
+      "questions": {
+        "singleChoice": [
+          {
+            "id": "sc1",
+            "prompt": "What do scientists call whales according to the passage?",
+            "options": [
+              {
+                "value": "ocean-giants",
+                "label": "Ocean giants"
+              },
+              {
+                "value": "engineers",
+                "label": "Engineers of the ocean"
+              },
+              {
+                "value": "predators",
+                "label": "Ocean predators"
+              }
+            ],
+            "correct": "engineers"
+          },
+          {
+            "id": "sc2",
+            "prompt": "What is one way whales help reduce carbon dioxide?",
+            "options": [
+              {
+                "value": "breathing",
+                "label": "By breathing"
+              },
+              {
+                "value": "phytoplankton",
+                "label": "By helping phytoplankton grow"
+              },
+              {
+                "value": "swimming",
+                "label": "By swimming"
+              }
+            ],
+            "correct": "phytoplankton"
+          },
+          {
+            "id": "sc3",
+            "prompt": "How many North Atlantic right whales are left?",
+            "options": [
+              {
+                "value": "fewer-400",
+                "label": "Fewer than 400"
+              },
+              {
+                "value": "about-1000",
+                "label": "About 1,000"
+              },
+              {
+                "value": "more-2000",
+                "label": "More than 2,000"
+              }
+            ],
+            "correct": "fewer-400"
+          },
+          {
+            "id": "sc4",
+            "prompt": "What percentage of oxygen do phytoplankton produce?",
+            "options": [
+              {
+                "value": "quarter",
+                "label": "About a quarter"
+              },
+              {
+                "value": "half",
+                "label": "About half"
+              },
+              {
+                "value": "three-quarters",
+                "label": "About three-quarters"
+              }
+            ],
+            "correct": "half"
+          }
+        ],
+        "tfng": [
+          {
+            "id": "tf1",
+            "statement": "Whales help move nutrients through the water.",
+            "correct": "true"
+          },
+          {
+            "id": "tf2",
+            "statement": "Whale populations have fully recovered from hunting.",
+            "correct": "false"
+          },
+          {
+            "id": "tf3",
+            "statement": "The passage states that all whale species are endangered.",
+            "correct": "not_given"
+          },
+          {
+            "id": "tf4",
+            "statement": "Phytoplankton produce about half of the oxygen we breathe.",
+            "correct": "true"
+          },
+          {
+            "id": "tf5",
+            "statement": "Ship collisions are the only threat to whales mentioned in the passage.",
+            "correct": "false"
+          }
+        ],
+        "matching": {
+          "questions": [
+            {
+              "id": "m1",
+              "statement": "Threat to whales from fishing equipment",
+              "correct": "option2"
+            },
+            {
+              "id": "m2",
+              "statement": "Threat to whales from ships",
+              "correct": "option1"
+            },
+            {
+              "id": "m3",
+              "statement": "What helps phytoplankton grow",
+              "correct": "option3"
+            }
+          ],
+          "options": [
+            { "value": "option1", "label": "Ship collisions" },
+            { "value": "option2", "label": "Fishing gear" },
+            { "value": "option3", "label": "Whale waste" }
+          ]
+        },
+        "summary": [
+          {
+            "id": "sum1",
+            "prompt": "Complete: Whales are described as \"engineers of the ______\".",
+            "answers": ["ocean"]
+          },
+          {
+            "id": "sum2",
+            "prompt": "Complete: Whales store carbon in their bodies over their long ______.",
+            "answers": ["lifetimes", "lives"]
+          },
+          {
+            "id": "sum3",
+            "prompt": "Complete: Protecting whales helps protect the systems that give us air to ______.",
+            "answers": ["breathe"]
+          }
+        ],
+        "shortAnswer": [
+          {
+            "id": "sa1",
+            "prompt": "Explain how whales help fight climate change."
+          },
+          {
+            "id": "sa2",
+            "prompt": "What are the main threats to whale survival today?"
+          }
+        ]
+      }
+    },
+    "clozeData": {
+      "paragraph": "Whales are among the largest and most intelligent animals on Earth. Scientists describe whales as \"engineers of the ocean\" because they help move _____ through the water and support the growth of microscopic plants. Whales store large amounts of _____ in their bodies. Their waste acts as _____ for phytoplankton, which produce about half of the _____ we breathe. However, whale populations face many threats, including ship _____, fishing _____, and underwater noise _____. The North Atlantic right whale has fewer than 400 individuals left. By protecting whales, we protect the systems that give us air to breathe and a stable _____ to live in.",
+      "words": [
+        "nutrients",
+        "carbon",
+        "fertilizer",
+        "oxygen",
+        "collisions",
+        "gear",
+        "pollution",
+        "climate"
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Whales – Guardians of the Climate" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 4: Reading" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Ôn từ vựng bằng Flashcards." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Làm bài điền từ vào đoạn văn." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và ngữ điệu khi đọc."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ],
+    "questions": [
+      {
+        "type": "multipleChoice",
+        "question": "\"estimate\" nghĩa là gì?",
+        "correctAnswer": "ước lượng, ước tính",
+        "options": ["ước lượng, ước tính", "mô tả", "giảm bớt", "hấp thụ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"population\" nghĩa là gì?",
+        "correctAnswer": "dân số",
+        "options": [
+          "dân số",
+          "chất dinh dưỡng",
+          "môi trường sống",
+          "sự tuyệt chủng"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"tonnes\" nghĩa là gì?",
+        "correctAnswer": "tấn (đơn vị đo trọng lượng)",
+        "options": ["tấn (đơn vị đo trọng lượng)", "kilogram", "pound", "gram"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"survival\" nghĩa là gì?",
+        "correctAnswer": "sự sống sót, tồn tại",
+        "options": [
+          "sự sống sót, tồn tại",
+          "sự tuyệt chủng",
+          "mối đe dọa",
+          "sự va chạm"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"collision\" nghĩa là gì?",
+        "correctAnswer": "sự va chạm",
+        "options": ["sự va chạm", "sự tuyệt chủng", "ô nhiễm", "sự sống sót"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"pollution\" nghĩa là gì?",
+        "correctAnswer": "ô nhiễm",
+        "options": ["ô nhiễm", "khí hậu", "bờ biển", "chất dinh dưỡng"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"starvation\" nghĩa là gì?",
+        "correctAnswer": "nạn đói, sự chết đói",
+        "options": [
+          "nạn đói, sự chết đói",
+          "sự sống sót",
+          "sự tuyệt chủng",
+          "ô nhiễm"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"extinction\" nghĩa là gì?",
+        "correctAnswer": "sự tuyệt chủng",
+        "options": ["sự tuyệt chủng", "sự sống sót", "nạn đói", "sự va chạm"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"government\" nghĩa là gì?",
+        "correctAnswer": "chính phủ",
+        "options": ["chính phủ", "nhà khoa học", "chuyên gia", "kỹ sư"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"habitat\" nghĩa là gì?",
+        "correctAnswer": "môi trường sống",
+        "options": ["môi trường sống", "bờ biển", "đại dương", "khí hậu"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"acidic\" nghĩa là gì?",
+        "correctAnswer": "có tính axit",
+        "options": ["có tính axit", "thuộc về biển", "sạch sẽ", "trong suốt"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"marine\" nghĩa là gì?",
+        "correctAnswer": "thuộc về biển",
+        "options": ["thuộc về biển", "có tính axit", "sạch sẽ", "ô nhiễm"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"coast\" nghĩa là gì?",
+        "correctAnswer": "bờ biển",
+        "options": ["bờ biển", "đại dương", "sông", "hồ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"expert\" nghĩa là gì?",
+        "correctAnswer": "chuyên gia",
+        "options": ["chuyên gia", "nhà khoa học", "kỹ sư", "giáo sư"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"emission\" nghĩa là gì?",
+        "correctAnswer": "sự phát thải",
+        "options": ["sự phát thải", "sự hấp thụ", "sự giảm bớt", "sự duy trì"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"trapped\" nghĩa là gì?",
+        "correctAnswer": "bị mắc kẹt",
+        "options": ["bị mắc kẹt", "tự do", "an toàn", "nguy hiểm"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"fertilizer\" nghĩa là gì?",
+        "correctAnswer": "phân bón",
+        "options": ["phân bón", "thức ăn", "nước", "không khí"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"phytoplankton\" nghĩa là gì?",
+        "correctAnswer": "thực vật phù du",
+        "options": ["thực vật phù du", "cá voi", "cá", "san hô"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"absorb\" nghĩa là gì?",
+        "correctAnswer": "hấp thụ",
+        "options": ["hấp thụ", "phát thải", "giảm bớt", "duy trì"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"responsible\" nghĩa là gì?",
+        "correctAnswer": "có trách nhiệm",
+        "options": ["có trách nhiệm", "vô trách nhiệm", "nguy hiểm", "an toàn"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"guardian\" nghĩa là gì?",
+        "correctAnswer": "người bảo vệ, người giám hộ",
+        "options": [
+          "người bảo vệ, người giám hộ",
+          "kẻ thù",
+          "đối thủ",
+          "người lạ"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"climate\" nghĩa là gì?",
+        "correctAnswer": "khí hậu",
+        "options": ["khí hậu", "thời tiết", "nhiệt độ", "độ ẩm"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"giant\" nghĩa là gì?",
+        "correctAnswer": "người khổng lồ",
+        "options": [
+          "người khổng lồ",
+          "người nhỏ bé",
+          "người bình thường",
+          "người cao"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"admire\" nghĩa là gì?",
+        "correctAnswer": "ngưỡng mộ, khâm phục",
+        "options": ["ngưỡng mộ, khâm phục", "ghét bỏ", "sợ hãi", "thờ ơ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"support\" nghĩa là gì?",
+        "correctAnswer": "hỗ trợ, ủng hộ",
+        "options": ["hỗ trợ, ủng hộ", "phản đối", "tấn công", "bỏ qua"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"scientist\" nghĩa là gì?",
+        "correctAnswer": "nhà khoa học",
+        "options": ["nhà khoa học", "chuyên gia", "kỹ sư", "bác sĩ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"describe\" nghĩa là gì?",
+        "correctAnswer": "miêu tả",
+        "options": ["miêu tả", "giải thích", "hỏi", "trả lời"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"engineer\" nghĩa là gì?",
+        "correctAnswer": "kỹ sư",
+        "options": ["kỹ sư", "nhà khoa học", "bác sĩ", "giáo viên"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"nutrient\" nghĩa là gì?",
+        "correctAnswer": "chất dinh dưỡng",
+        "options": ["chất dinh dưỡng", "phân bón", "thức ăn", "nước"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"microscopic\" nghĩa là gì?",
+        "correctAnswer": "siêu nhỏ, vi mô",
+        "options": ["siêu nhỏ, vi mô", "rất lớn", "bình thường", "to lớn"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"reduce\" nghĩa là gì?",
+        "correctAnswer": "giảm bớt, cắt giảm",
+        "options": ["giảm bớt, cắt giảm", "tăng lên", "duy trì", "hấp thụ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"carbon dioxide\" nghĩa là gì?",
+        "correctAnswer": "khí carbon dioxide (CO₂)",
+        "options": [
+          "khí carbon dioxide (CO₂)",
+          "khí oxy",
+          "khí nitơ",
+          "khí hydro"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"sustain\" nghĩa là gì?",
+        "correctAnswer": "duy trì, bảo tồn",
+        "options": ["duy trì, bảo tồn", "phá hủy", "giảm bớt", "tăng lên"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"balance\" nghĩa là gì?",
+        "correctAnswer": "sự cân bằng",
+        "options": [
+          "sự cân bằng",
+          "sự mất cân bằng",
+          "sự thay đổi",
+          "sự ổn định"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"threat\" nghĩa là gì?",
+        "correctAnswer": "mối đe dọa",
+        "options": ["mối đe dọa", "sự an toàn", "sự bảo vệ", "sự hỗ trợ"]
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "estimate",
+        "options": ["estimate", "pollution", "habitat", "climate"],
+        "wordToSpeak": "estimate"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "population",
+        "options": ["population", "pollution", "emission", "extinction"],
+        "wordToSpeak": "population"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "collision",
+        "options": ["collision", "extinction", "starvation", "pollution"],
+        "wordToSpeak": "collision"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "phytoplankton",
+        "options": [
+          "phytoplankton",
+          "fertilizer",
+          "nutrient",
+          "carbon dioxide"
+        ],
+        "wordToSpeak": "phytoplankton"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "guardian",
+        "options": ["guardian", "giant", "scientist", "engineer"],
+        "wordToSpeak": "guardian"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "marine",
+        "options": ["marine", "acidic", "microscopic", "trapped"],
+        "wordToSpeak": "marine"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "absorb",
+        "options": ["absorb", "reduce", "sustain", "support"],
+        "wordToSpeak": "absorb"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "extinction",
+        "options": ["extinction", "survival", "collision", "starvation"],
+        "wordToSpeak": "extinction"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "fertilizer",
+        "options": [
+          "fertilizer",
+          "nutrient",
+          "phytoplankton",
+          "carbon dioxide"
+        ],
+        "wordToSpeak": "fertilizer"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "habitat",
+        "options": ["habitat", "coast", "climate", "pollution"],
+        "wordToSpeak": "habitat"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "starvation",
+        "options": ["starvation", "extinction", "survival", "collision"],
+        "wordToSpeak": "starvation"
+      },
+      {
+        "type": "listening",
+        "question": "🔊 Nghe và chọn từ đúng:",
+        "correctAnswer": "sustain",
+        "options": ["sustain", "reduce", "absorb", "support"],
+        "wordToSpeak": "sustain"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"ước lượng, ước tính\"",
+        "correctAnswer": "estimate"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"dân số\"",
+        "correctAnswer": "population"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"tấn (đơn vị đo trọng lượng)\"",
+        "correctAnswer": "tonnes"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"sự sống sót, tồn tại\"",
+        "correctAnswer": "survival"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"sự va chạm\"",
+        "correctAnswer": "collision"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"ô nhiễm\"",
+        "correctAnswer": "pollution"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"nạn đói, sự chết đói\"",
+        "correctAnswer": "starvation"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"sự tuyệt chủng\"",
+        "correctAnswer": "extinction"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"chính phủ\"",
+        "correctAnswer": "government"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"môi trường sống\"",
+        "correctAnswer": "habitat"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"có tính axit\"",
+        "correctAnswer": "acidic"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"thuộc về biển\"",
+        "correctAnswer": "marine"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"bờ biển\"",
+        "correctAnswer": "coast"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"chuyên gia\"",
+        "correctAnswer": "expert"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"sự phát thải\"",
+        "correctAnswer": "emission"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"bị mắc kẹt\"",
+        "correctAnswer": "trapped"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"phân bón\"",
+        "correctAnswer": "fertilizer"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"thực vật phù du\"",
+        "correctAnswer": "phytoplankton"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"hấp thụ\"",
+        "correctAnswer": "absorb"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"có trách nhiệm\"",
+        "correctAnswer": "responsible"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"người bảo vệ, người giám hộ\"",
+        "correctAnswer": "guardian"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"khí hậu\"",
+        "correctAnswer": "climate"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"người khổng lồ\"",
+        "correctAnswer": "giant"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"ngưỡng mộ, khâm phục\"",
+        "correctAnswer": "admire"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"hỗ trợ, ủng hộ\"",
+        "correctAnswer": "support"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"nhà khoa học\"",
+        "correctAnswer": "scientist"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"miêu tả\"",
+        "correctAnswer": "describe"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"kỹ sư\"",
+        "correctAnswer": "engineer"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"chất dinh dưỡng\"",
+        "correctAnswer": "nutrient"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"siêu nhỏ, vi mô\"",
+        "correctAnswer": "microscopic"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"giảm bớt, cắt giảm\"",
+        "correctAnswer": "reduce"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"khí carbon dioxide (CO₂)\"",
+        "correctAnswer": "carbon dioxide"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"duy trì, bảo tồn\"",
+        "correctAnswer": "sustain"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"sự cân bằng\"",
+        "correctAnswer": "balance"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Điền từ tiếng Anh cho: \"mối đe dọa\"",
+        "correctAnswer": "threat"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Scientists ___ that whale populations could remove millions of tonnes of carbon.",
+        "correctAnswer": "estimate",
+        "options": ["estimate", "describe", "admire", "support"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Scientists ___ that whale populations could remove millions of tonnes of carbon.",
+        "correctAnswer": "estimate"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The world's ___ is growing every year.",
+        "correctAnswer": "population",
+        "options": ["population", "pollution", "extinction", "habitat"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The world's ___ is growing every year.",
+        "correctAnswer": "population"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Clean oceans are essential for the ___ of many species.",
+        "correctAnswer": "survival",
+        "options": ["survival", "extinction", "collision", "starvation"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Clean oceans are essential for the ___ of many species.",
+        "correctAnswer": "survival"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Ship ___ are a serious threat to whales.",
+        "correctAnswer": "collisions",
+        "options": ["collisions", "extinctions", "pollutions", "habitats"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Ship ___ are a serious threat to whales.",
+        "correctAnswer": "collisions"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Ocean ___ affects marine life.",
+        "correctAnswer": "pollution",
+        "options": ["pollution", "population", "climate", "habitat"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Ocean ___ affects marine life.",
+        "correctAnswer": "pollution"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Whales are protected to prevent ___.",
+        "correctAnswer": "extinction",
+        "options": ["extinction", "survival", "collision", "starvation"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Whales are protected to prevent ___.",
+        "correctAnswer": "extinction"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The ___ created new laws to protect the ocean.",
+        "correctAnswer": "government",
+        "options": ["government", "scientist", "expert", "engineer"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The ___ created new laws to protect the ocean.",
+        "correctAnswer": "government"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Pollution destroys the natural ___ of many animals.",
+        "correctAnswer": "habitat",
+        "options": ["habitat", "coast", "climate", "pollution"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Pollution destroys the natural ___ of many animals.",
+        "correctAnswer": "habitat"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Some lakes have become too ___ for fish to survive.",
+        "correctAnswer": "acidic",
+        "options": ["acidic", "marine", "microscopic", "trapped"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Some lakes have become too ___ for fish to survive.",
+        "correctAnswer": "acidic"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ animals live in the ocean.",
+        "correctAnswer": "Marine",
+        "options": ["Marine", "Acidic", "Microscopic", "Trapped"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ animals live in the ocean.",
+        "correctAnswer": "Marine"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "We walked along the rocky ___ at sunset.",
+        "correctAnswer": "coast",
+        "options": ["coast", "habitat", "climate", "ocean"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "We walked along the rocky ___ at sunset.",
+        "correctAnswer": "coast"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "An ___ gave advice on how to save energy.",
+        "correctAnswer": "expert",
+        "options": ["expert", "scientist", "engineer", "government"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "An ___ gave advice on how to save energy.",
+        "correctAnswer": "expert"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Car ___ contribute to air pollution.",
+        "correctAnswer": "emissions",
+        "options": ["emissions", "absorptions", "reductions", "sustains"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Car ___ contribute to air pollution.",
+        "correctAnswer": "emissions"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The miners were ___ underground for two days.",
+        "correctAnswer": "trapped",
+        "options": ["trapped", "free", "safe", "dangerous"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The miners were ___ underground for two days.",
+        "correctAnswer": "trapped"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Farmers use organic ___ to help plants grow.",
+        "correctAnswer": "fertilizer",
+        "options": ["fertilizer", "nutrient", "phytoplankton", "carbon dioxide"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Farmers use organic ___ to help plants grow.",
+        "correctAnswer": "fertilizer"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ are tiny plants that float in the ocean.",
+        "correctAnswer": "Phytoplankton",
+        "options": ["Phytoplankton", "Fertilizer", "Nutrient", "Carbon dioxide"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ are tiny plants that float in the ocean.",
+        "correctAnswer": "Phytoplankton"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Plants ___ sunlight to make food.",
+        "correctAnswer": "absorb",
+        "options": ["absorb", "emit", "reduce", "sustain"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Plants ___ sunlight to make food.",
+        "correctAnswer": "absorb"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "We are all ___ for protecting the Earth.",
+        "correctAnswer": "responsible",
+        "options": ["responsible", "irresponsible", "dangerous", "safe"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "We are all ___ for protecting the Earth.",
+        "correctAnswer": "responsible"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The dog acted as a ___ for the children.",
+        "correctAnswer": "guardian",
+        "options": ["guardian", "giant", "scientist", "engineer"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The dog acted as a ___ for the children.",
+        "correctAnswer": "guardian"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The tropical ___ is warm and humid all year round.",
+        "correctAnswer": "climate",
+        "options": ["climate", "weather", "temperature", "humidity"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The tropical ___ is warm and humid all year round.",
+        "correctAnswer": "climate"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The story tells of a kind ___ who helps people.",
+        "correctAnswer": "giant",
+        "options": ["giant", "guardian", "scientist", "engineer"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The story tells of a kind ___ who helps people.",
+        "correctAnswer": "giant"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "I really ___ her for her honesty and courage.",
+        "correctAnswer": "admire",
+        "options": ["admire", "hate", "fear", "ignore"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "I really ___ her for her honesty and courage.",
+        "correctAnswer": "admire"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Parents should always ___ their children's dreams.",
+        "correctAnswer": "support",
+        "options": ["support", "oppose", "attack", "ignore"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Parents should always ___ their children's dreams.",
+        "correctAnswer": "support"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The ___ discovered a new species of fish.",
+        "correctAnswer": "scientist",
+        "options": ["scientist", "expert", "engineer", "doctor"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The ___ discovered a new species of fish.",
+        "correctAnswer": "scientist"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Can you ___ what the thief looked like?",
+        "correctAnswer": "describe",
+        "options": ["describe", "explain", "ask", "answer"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Can you ___ what the thief looked like?",
+        "correctAnswer": "describe"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "The ___ designed a strong and safe bridge.",
+        "correctAnswer": "engineer",
+        "options": ["engineer", "scientist", "doctor", "teacher"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "The ___ designed a strong and safe bridge.",
+        "correctAnswer": "engineer"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Fruits and vegetables contain important ___.",
+        "correctAnswer": "nutrients",
+        "options": ["nutrients", "fertilizers", "foods", "waters"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Fruits and vegetables contain important ___.",
+        "correctAnswer": "nutrients"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "___ organisms live in the ocean.",
+        "correctAnswer": "Microscopic",
+        "options": ["Microscopic", "Giant", "Normal", "Large"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "___ organisms live in the ocean.",
+        "correctAnswer": "Microscopic"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "We must ___ waste to protect the planet.",
+        "correctAnswer": "reduce",
+        "options": ["reduce", "increase", "maintain", "absorb"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "We must ___ waste to protect the planet.",
+        "correctAnswer": "reduce"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Trees absorb ___ from the air.",
+        "correctAnswer": "carbon dioxide",
+        "options": ["carbon dioxide", "oxygen", "nitrogen", "hydrogen"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Trees absorb ___ from the air.",
+        "correctAnswer": "carbon dioxide"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "We must find ways to ___ natural resources.",
+        "correctAnswer": "sustain",
+        "options": ["sustain", "destroy", "reduce", "increase"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "We must find ways to ___ natural resources.",
+        "correctAnswer": "sustain"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "A good diet keeps your body in ___.",
+        "correctAnswer": "balance",
+        "options": ["balance", "imbalance", "change", "stability"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "A good diet keeps your body in ___.",
+        "correctAnswer": "balance"
+      },
+      {
+        "type": "multipleChoice",
+        "question": "Climate change is a serious ___ to wildlife.",
+        "correctAnswer": "threat",
+        "options": ["threat", "safety", "protection", "support"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Climate change is a serious ___ to wildlife.",
+        "correctAnswer": "threat"
+      }
+    ]
   }
 }
