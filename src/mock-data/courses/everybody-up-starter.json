@@ -1,42 +1,42 @@
 [
   {
-    "description": "School Supplies Vocabulary",
-    "course": "everybody-up-0",
+    "course": "everybody-up-starter",
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
     "lesson": "lesson-1",
     "lessonDisplay": "Lesson 1",
+    "description": "School Supplies Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L1.webp"
   },
   {
-    "description": "School Supplies Review",
-    "course": "everybody-up-0",
+    "course": "everybody-up-starter",
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
     "lesson": "lesson-2",
     "lessonDisplay": "Lesson 2",
+    "description": "School Supplies Review",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp"
   },
   {
-    "description": "Reading Practice",
-    "course": "everybody-up-0",
+    "course": "everybody-up-starter",
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
     "lesson": "lesson-3",
     "lessonDisplay": "Lesson 3",
+    "description": "Reading Practice",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L1.webp"
   },
   {
-    "description": "Listening & Shadowing",
-    "course": "everybody-up-0",
+    "course": "everybody-up-starter",
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
     "lesson": "lesson-4",
     "lessonDisplay": "Lesson 4",
+    "description": "Listening & Shadowing",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp"
   }
 ]

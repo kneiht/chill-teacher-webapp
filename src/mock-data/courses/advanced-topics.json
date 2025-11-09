@@ -1,122 +1,122 @@
 [
   {
-    "description": "Vocabulary - Part 1",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-1-vocab",
     "lessonDisplay": "Lesson 1: Vocabulary - Part 1",
+    "description": "Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Vocabulary - Part 2",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-2-vocab",
     "lessonDisplay": "Lesson 2: Vocabulary - Part 2",
+    "description": "Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Vocabulary - Part 3",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-3-vocab",
     "lessonDisplay": "Lesson 3: Vocabulary - Part 3",
+    "description": "Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Reading",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-4-reading",
     "lessonDisplay": "Lesson 4: Reading",
+    "description": "Reading",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Listening",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-5-listening",
     "lessonDisplay": "Lesson 5: Listening",
+    "description": "Listening",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Shadowing",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-6-shadowing",
     "lessonDisplay": "Lesson 6: Shadowing",
+    "description": "Shadowing",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Writing",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-7-writing",
     "lessonDisplay": "Lesson 7: Writing",
+    "description": "Writing",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Presentation",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "multiple-intelligence-theory",
     "unitDisplay": "Multiple Intelligence Theory",
     "lesson": "lesson-8-presentation",
     "lessonDisplay": "Lesson 8: Presentation",
+    "description": "Presentation",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/multiple-intelligence-theory.webp"
   },
   {
-    "description": "Vocabulary - Part 1",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "whales-guardians-of-the-climate",
     "unitDisplay": "Whales – Guardians of the Climate",
     "lesson": "lesson-1-vocab",
     "lessonDisplay": "Lesson 1: Vocabulary - Part 1",
+    "description": "Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
   },
   {
-    "description": "Vocabulary - Part 2",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "whales-guardians-of-the-climate",
     "unitDisplay": "Whales – Guardians of the Climate",
     "lesson": "lesson-2-vocab",
     "lessonDisplay": "Lesson 2: Vocabulary - Part 2",
+    "description": "Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
   },
   {
-    "description": "Vocabulary - Part 3",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "whales-guardians-of-the-climate",
     "unitDisplay": "Whales – Guardians of the Climate",
     "lesson": "lesson-3-vocab",
     "lessonDisplay": "Lesson 3: Vocabulary - Part 3",
+    "description": "Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
   },
   {
-    "description": "Reading",
     "course": "advanced-topics",
     "courseDisplay": "Advanced Topics",
     "unit": "whales-guardians-of-the-climate",
     "unitDisplay": "Whales – Guardians of the Climate",
     "lesson": "lesson-4-reading",
     "lessonDisplay": "Lesson 4: Reading",
+    "description": "Reading",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
   }
 ]

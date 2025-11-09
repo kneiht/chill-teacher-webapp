@@ -17,7 +17,6 @@ import { Route as authSignupRouteImport } from './routes/(auth)/signup'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
 import { Route as mainteacherRouteRouteImport } from './routes/(main)/(teacher)/route'
 import { Route as mainLessonsIndexRouteImport } from './routes/(main)/lessons/index'
-import { Route as mainLessonsSplatRouteImport } from './routes/(main)/lessons/$'
 import { Route as mainteacherTeachersRouteImport } from './routes/(main)/(teacher)/teachers'
 import { Route as mainteacherStudentsRouteImport } from './routes/(main)/(teacher)/students'
 import { Route as mainteacherSchoolsRouteImport } from './routes/(main)/(teacher)/schools'
@@ -71,11 +70,6 @@ const mainteacherRouteRoute = mainteacherRouteRouteImport.update({
 const mainLessonsIndexRoute = mainLessonsIndexRouteImport.update({
   id: '/lessons/',
   path: '/lessons/',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainLessonsSplatRoute = mainLessonsSplatRouteImport.update({
-  id: '/lessons/$',
-  path: '/lessons/$',
   getParentRoute: () => mainRouteRoute,
 } as any)
 const mainteacherTeachersRoute = mainteacherTeachersRouteImport.update({
@@ -186,7 +180,6 @@ export interface FileRoutesByFullPath {
   '/schools': typeof mainteacherSchoolsRoute
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
-  '/lessons/$': typeof mainLessonsSplatRoute
   '/lessons': typeof mainLessonsIndexRoute
   '/lessons/$course/$unit/$lesson': typeof mainLessonsCourseUnitLessonRouteRouteWithChildren
   '/lessons/$course/$unit/$lesson/$activity': typeof mainLessonsCourseUnitLessonActivityRoute
@@ -211,7 +204,6 @@ export interface FileRoutesByTo {
   '/schools': typeof mainteacherSchoolsRoute
   '/students': typeof mainteacherStudentsRoute
   '/teachers': typeof mainteacherTeachersRoute
-  '/lessons/$': typeof mainLessonsSplatRoute
   '/lessons': typeof mainLessonsIndexRoute
   '/lessons/$course/$unit/$lesson/$activity': typeof mainLessonsCourseUnitLessonActivityRoute
   '/lessons/$course/$unit/$lesson': typeof mainLessonsCourseUnitLessonIndexRoute
@@ -239,7 +231,6 @@ export interface FileRoutesById {
   '/(main)/(teacher)/schools': typeof mainteacherSchoolsRoute
   '/(main)/(teacher)/students': typeof mainteacherStudentsRoute
   '/(main)/(teacher)/teachers': typeof mainteacherTeachersRoute
-  '/(main)/lessons/$': typeof mainLessonsSplatRoute
   '/(main)/lessons/': typeof mainLessonsIndexRoute
   '/(main)/lessons/$course/$unit/$lesson': typeof mainLessonsCourseUnitLessonRouteRouteWithChildren
   '/(main)/lessons/$course/$unit/$lesson/$activity': typeof mainLessonsCourseUnitLessonActivityRoute
@@ -266,7 +257,6 @@ export interface FileRouteTypes {
     | '/schools'
     | '/students'
     | '/teachers'
-    | '/lessons/$'
     | '/lessons'
     | '/lessons/$course/$unit/$lesson'
     | '/lessons/$course/$unit/$lesson/$activity'
@@ -291,7 +281,6 @@ export interface FileRouteTypes {
     | '/schools'
     | '/students'
     | '/teachers'
-    | '/lessons/$'
     | '/lessons'
     | '/lessons/$course/$unit/$lesson/$activity'
     | '/lessons/$course/$unit/$lesson'
@@ -318,7 +307,6 @@ export interface FileRouteTypes {
     | '/(main)/(teacher)/schools'
     | '/(main)/(teacher)/students'
     | '/(main)/(teacher)/teachers'
-    | '/(main)/lessons/$'
     | '/(main)/lessons/'
     | '/(main)/lessons/$course/$unit/$lesson'
     | '/(main)/lessons/$course/$unit/$lesson/$activity'
@@ -392,13 +380,6 @@ declare module '@tanstack/react-router' {
       path: '/lessons'
       fullPath: '/lessons'
       preLoaderRoute: typeof mainLessonsIndexRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/lessons/$': {
-      id: '/(main)/lessons/$'
-      path: '/lessons/$'
-      fullPath: '/lessons/$'
-      preLoaderRoute: typeof mainLessonsSplatRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/(teacher)/teachers': {
@@ -595,7 +576,6 @@ interface mainRouteRouteChildren {
   maincommonDashboardRoute: typeof maincommonDashboardRoute
   maincommonProfileRoute: typeof maincommonProfileRoute
   maincommonSettingsRoute: typeof maincommonSettingsRoute
-  mainLessonsSplatRoute: typeof mainLessonsSplatRoute
   mainLessonsIndexRoute: typeof mainLessonsIndexRoute
   mainLessonsCourseUnitLessonRouteRoute: typeof mainLessonsCourseUnitLessonRouteRouteWithChildren
 }
@@ -605,7 +585,6 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   maincommonDashboardRoute: maincommonDashboardRoute,
   maincommonProfileRoute: maincommonProfileRoute,
   maincommonSettingsRoute: maincommonSettingsRoute,
-  mainLessonsSplatRoute: mainLessonsSplatRoute,
   mainLessonsIndexRoute: mainLessonsIndexRoute,
   mainLessonsCourseUnitLessonRouteRoute:
     mainLessonsCourseUnitLessonRouteRouteWithChildren,

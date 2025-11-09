@@ -201,7 +201,6 @@ function LessonsList() {
                                     textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
                                   }}
                                 >
-                                  {getUnitDisplayName(lesson.unit, lessons)}
                                   {getLessonDisplayName(lesson)}
                                 </div>
                               </div>
@@ -211,7 +210,7 @@ function LessonsList() {
                               title={`${getUnitDisplayName(
                                 lesson.unit,
                                 lessons,
-                              )} - ${getLessonDisplayName(lesson)}`}
+                              )}`}
                               description={lesson.description}
                             />
                           </Card>
