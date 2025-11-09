@@ -4,8 +4,8 @@
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
-    "lesson": "lesson-1",
-    "lessonDisplay": "Lesson 1",
+    "lesson": "lesson-1-vocab",
+    "lessonDisplay": "Lesson 1: School Supplies?",
     "description": "School Supplies Vocabulary",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L1.webp"
   },
@@ -14,8 +14,8 @@
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
-    "lesson": "lesson-2",
-    "lessonDisplay": "Lesson 2",
+    "lesson": "lesson-2-vocab",
+    "lessonDisplay": "Lesson 2: School Supplies",
     "description": "School Supplies Review",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp"
   },
@@ -24,8 +24,8 @@
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
-    "lesson": "lesson-3",
-    "lessonDisplay": "Lesson 3",
+    "lesson": "lesson-3-reading",
+    "lessonDisplay": "Lesson 3: Reading",
     "description": "Reading Practice",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L1.webp"
   },
@@ -34,8 +34,8 @@
     "courseDisplay": "Everybody Up Starter",
     "unit": "unit-1",
     "unitDisplay": "Unit 1: Art Class",
-    "lesson": "lesson-4",
-    "lessonDisplay": "Lesson 4",
+    "lesson": "lesson-4-listening",
+    "lessonDisplay": "Lesson 4: Listening & Shadowing",
     "description": "Listening & Shadowing",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp"
   }
