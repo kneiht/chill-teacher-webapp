@@ -274,7 +274,7 @@
           {
             "tag": "h2",
             "attributes": {
-              "class": "text-4xl font-bold text-indigo-700 mb-6"
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
             },
             "children": [
               { "text": "Whales – Guardians of the Climate" },
@@ -390,7 +390,7 @@
           {
             "tag": "p",
             "attributes": {
-              "class": "text-xl text-gray-600 mt-6 italic"
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
             },
             "children": [{ "text": "Chúc các em học tốt!" }]
           }

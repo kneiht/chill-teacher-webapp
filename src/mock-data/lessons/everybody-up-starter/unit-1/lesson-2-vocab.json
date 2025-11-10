@@ -1,8 +1,8 @@
 {
-  "lesson-1-vocab": {
-    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L1.webp",
+  "lesson-2-vocab": {
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp",
     "title": "Unit 1: Art Class",
-    "description": "Lesson 1: School Supplies",
+    "description": "Lesson 2: School Supplies Review",
     "menu": [
       { "type": "video", "id": "main-lesson" },
       { "type": "googleSlide", "id": "presentation" },
@@ -25,41 +25,73 @@
       "videos": [
         {
           "id": "main-lesson",
-          "url": "https://www.youtube.com/watch?v=Bd0_AFgKw4k",
-          "title": "School Supplies Lesson"
+          "url": "https://youtu.be/Ku-WJOsRLqk",
+          "title": "School Supplies Review"
         }
       ],
       "googleSlides": [
         {
           "id": "presentation",
-          "url": "https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vSGdTu6SwVIlKBKq15hxUsIinqbPog0iDZ08uus14BfaDDQeVOzhCLkrWxWzEc0CWdfw1IW25UJefSa/pubembed",
           "title": "Bài giảng"
         }
       ]
     },
     "vocab": [
       {
+        "word": "pen",
+        "phonics": "/pɛn/",
+        "image": "https://storage.chillteacher.com/images-words/pen.webp",
+        "vietnameseMeaning": "bút mực",
+        "sampleSentence": "What do you have? I have a pen.",
+        "vietnameseTranslation": "Tôi có một cây bút mực."
+      },
+      {
+        "word": "pencil",
+        "phonics": "/ˈpɛn.səl/",
+        "image": "https://storage.chillteacher.com/images-words/pencil.webp",
+        "vietnameseMeaning": "bút chì",
+        "sampleSentence": "What do you have? I have a pencil.",
+        "vietnameseTranslation": "Tôi có một cây bút chì."
+      },
+      {
+        "word": "crayon",
+        "phonics": "/ˈkreɪ.ɑn/",
+        "image": "https://storage.chillteacher.com/images-words/crayon.webp",
+        "vietnameseMeaning": "bút sáp màu",
+        "sampleSentence": "What do you have? I have a crayon.",
+        "vietnameseTranslation": "Tôi có một cây bút sáp màu."
+      },
+      {
+        "word": "marker",
+        "phonics": "/ˈmɑr.kɚ/",
+        "image": "https://storage.chillteacher.com/images-words/marker.webp",
+        "vietnameseMeaning": "bút lông",
+        "sampleSentence": "What do you have? I have a marker.",
+        "vietnameseTranslation": "Tôi có một cây bút lông."
+      },
+      {
         "word": "paper",
-        "phonics": "/ˈpeɪ.pər/",
+        "phonics": "/ˈpeɪ.pɚ/",
         "image": "https://storage.chillteacher.com/images-words/paper.webp",
         "vietnameseMeaning": "giấy",
-        "sampleSentence": "I have paper.",
+        "sampleSentence": "What do you have? I have paper.",
         "vietnameseTranslation": "Tôi có giấy."
       },
       {
         "word": "glue",
-        "phonics": "/ɡluː/",
+        "phonics": "/ɡlu/",
         "image": "https://storage.chillteacher.com/images-words/glue.webp",
         "vietnameseMeaning": "keo dán",
-        "sampleSentence": "I have glue.",
+        "sampleSentence": "What do you have? I have glue.",
         "vietnameseTranslation": "Tôi có keo dán."
       },
       {
         "word": "scissors",
-        "phonics": "/ˈsɪz.əz/",
+        "phonics": "/ˈsɪz.ɚz/",
         "image": "https://storage.chillteacher.com/images-words/scissors.webp",
         "vietnameseMeaning": "kéo",
-        "sampleSentence": "I have scissors.",
+        "sampleSentence": "What do you have? I have scissors.",
         "vietnameseTranslation": "Tôi có kéo."
       },
       {
@@ -67,14 +99,14 @@
         "phonics": "/peɪnt/",
         "image": "https://storage.chillteacher.com/images-words/paint.webp",
         "vietnameseMeaning": "màu vẽ",
-        "sampleSentence": "I have paint.",
+        "sampleSentence": "What do you have? I have paint.",
         "vietnameseTranslation": "Tôi có màu vẽ."
       }
     ],
     "pages": [
       {
         "id": "assignments",
-        "title": "Unit 1: Art Class - Lesson 1: School Supplies",
+        "title": "Unit 1: Art Class - Lesson 2: School Supplies",
         "subtitle": "Homework Assignments",
         "scrollable": true,
         "root": [
@@ -126,22 +158,22 @@
                       {
                         "tag": "li",
                         "attributes": { "class": "ml-10" },
-                        "children": [{ "text": "I have paper." }]
+                        "children": [{ "text": "I have a pen." }]
                       },
                       {
                         "tag": "li",
                         "attributes": { "class": "ml-10" },
-                        "children": [{ "text": "I have glue." }]
+                        "children": [{ "text": "I have a pencil." }]
                       },
                       {
                         "tag": "li",
                         "attributes": { "class": "ml-10" },
-                        "children": [{ "text": "I have scissors." }]
+                        "children": [{ "text": "I have a crayon." }]
                       },
                       {
                         "tag": "li",
                         "attributes": { "class": "ml-10" },
-                        "children": [{ "text": "I have paint." }]
+                        "children": [{ "text": "I have a marker." }]
                       }
                     ]
                   },
@@ -168,7 +200,7 @@
                         "attributes": { "class": "ml-10" },
                         "children": [
                           {
-                            "text": "I have paper. I have paper. I have paper."
+                            "text": "I have a pen. I have a pen. I have a pen."
                           }
                         ]
                       },
@@ -177,7 +209,7 @@
                         "attributes": { "class": "ml-10" },
                         "children": [
                           {
-                            "text": "I have glue. I have glue. I have glue."
+                            "text": "I have a pencil. I have a pencil. I have a pencil."
                           }
                         ]
                       },
@@ -186,7 +218,7 @@
                         "attributes": { "class": "ml-10" },
                         "children": [
                           {
-                            "text": "I have scissors. I have scissors. I have scissors."
+                            "text": "I have a crayon. I have a crayon. I have a crayon."
                           }
                         ]
                       },
@@ -195,7 +227,7 @@
                         "attributes": { "class": "ml-10" },
                         "children": [
                           {
-                            "text": "I have paint. I have paint. I have paint."
+                            "text": "I have a marker. I have a marker. I have a marker."
                           }
                         ]
                       }
@@ -250,14 +282,14 @@
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "Paper" }]
+                                "children": [{ "text": "Pen" }]
                               },
                               {
                                 "tag": "td",
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "I have paper." }]
+                                "children": [{ "text": "I have a pen." }]
                               }
                             ]
                           },
@@ -269,14 +301,14 @@
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "Scissors" }]
+                                "children": [{ "text": "Pencil" }]
                               },
                               {
                                 "tag": "td",
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "I have scissors." }]
+                                "children": [{ "text": "I have a pencil." }]
                               }
                             ]
                           },
@@ -288,14 +320,14 @@
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "Glue" }]
+                                "children": [{ "text": "Crayon" }]
                               },
                               {
                                 "tag": "td",
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "I have glue." }]
+                                "children": [{ "text": "I have a crayon." }]
                               }
                             ]
                           },
@@ -307,14 +339,14 @@
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "Paint" }]
+                                "children": [{ "text": "Marker" }]
                               },
                               {
                                 "tag": "td",
                                 "attributes": {
                                   "class": "border border-gray-400 px-4 py-2"
                                 },
-                                "children": [{ "text": "I have paint." }]
+                                "children": [{ "text": "I have a marker." }]
                               }
                             ]
                           }
@@ -337,7 +369,7 @@
           {
             "tag": "p",
             "attributes": {
-              "class": "text-xl text-gray-600 mt-6 italic"
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
             },
             "children": [{ "text": "Chúc các em học tốt!" }]
           }

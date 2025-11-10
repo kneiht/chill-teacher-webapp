@@ -61,7 +61,7 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Dùng PowerPoint, Google Slides hoặc Canva để tạo slides thuyết trình."
+                    "text": "Dùng PowerPoint, Google Slides hoặc Canva để tạo slides thuyết trình theo hướng dẫn. Hỏi giáo viên hướng dẫn hỗ trợ nếu gặp khó khăn."
                   }
                 ]
               },
@@ -329,7 +329,16 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: working with numbers, solving problems, finding patterns."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " working with numbers, solving problems, finding patterns."
+                      }
+                    ]
                   }
                 ]
               },
@@ -337,7 +346,13 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “Logical thinkers enjoy puzzles and problem-solving. They are good at reasoning and analyzing information.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “Logical thinkers enjoy puzzles and problem-solving. They are good at reasoning and analyzing information.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -359,14 +374,29 @@
               {
                 "tag": "li",
                 "children": [
-                  { "text": "Talk about: rhythm, sound, music creation." }
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " rhythm, sound, music creation." }
+                    ]
+                  }
                 ]
               },
               {
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “People with musical intelligence recognize rhythm and melody easily. They learn through music, singing, or playing instruments.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “People with musical intelligence recognize rhythm and melody easily. They learn through music, singing, or playing instruments.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -389,7 +419,14 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: visual imagination, drawing, directions."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " visual imagination, drawing, directions." }
+                    ]
                   }
                 ]
               },
@@ -397,7 +434,13 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “Spatial learners think in pictures. They are good at design, art, and visualizing things in space.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “Spatial learners think in pictures. They are good at design, art, and visualizing things in space.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -420,7 +463,16 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: movement, hands-on activities, expressing through body."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " movement, hands-on activities, expressing through body."
+                      }
+                    ]
                   }
                 ]
               },
@@ -428,7 +480,13 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “These learners use their bodies to express ideas. They learn best through physical activities or role-playing.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “These learners use their bodies to express ideas. They learn best through physical activities or role-playing.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -451,7 +509,16 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: teamwork, understanding others, communication."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " teamwork, understanding others, communication."
+                      }
+                    ]
                   }
                 ]
               },
@@ -459,7 +526,13 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “Interpersonal learners are good at understanding others and working in teams. They enjoy discussions and group projects.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “Interpersonal learners are good at understanding others and working in teams. They enjoy discussions and group projects.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -482,7 +555,14 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: self-awareness, emotions, reflection."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " self-awareness, emotions, reflection." }
+                    ]
                   }
                 ]
               },
@@ -490,7 +570,13 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “Intrapersonal learners understand their feelings and motivations. They prefer studying alone and reflecting on their thoughts.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “Intrapersonal learners understand their feelings and motivations. They prefer studying alone and reflecting on their thoughts.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -512,14 +598,29 @@
               {
                 "tag": "li",
                 "children": [
-                  { "text": "Talk about: nature, animals, environment." }
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " nature, animals, environment." }
+                    ]
+                  }
                 ]
               },
               {
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “Naturalist learners are connected to nature. They learn by exploring, observing, and discovering the environment.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “Naturalist learners are connected to nature. They learn by exploring, observing, and discovering the environment.”"
+                      }
+                    ]
                   }
                 ]
               }
@@ -539,14 +640,15 @@
               {
                 "tag": "li",
                 "children": [
-                  { "text": "Talk about: how MI theory affects classrooms." }
-                ]
-              },
-              {
-                "tag": "li",
-                "children": [
                   {
-                    "text": "Script: “Teachers should use varied methods — reading, teamwork, problem-solving, and creative tasks — to help all types of learners.”"
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " how MI theory affects classrooms." }
+                    ]
                   }
                 ]
               },
@@ -554,7 +656,30 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: recognizing strengths, avoiding one-size-fits-all teaching."
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “Teachers should use varied methods — reading, teamwork, problem-solving, and creative tasks — to help all types of learners.”"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " recognizing strengths, avoiding one-size-fits-all teaching."
+                      }
+                    ]
                   }
                 ]
               }
@@ -575,7 +700,14 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: your strongest and weakest intelligences."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " your strongest and weakest intelligences." }
+                    ]
                   }
                 ]
               },
@@ -583,7 +715,16 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script example: “My strongest intelligences are linguistic and interpersonal. I love communicating with people and sharing ideas. My weakest one is logical, so I try to practice problem-solving more often.”"
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “My strongest intelligences are linguistic and interpersonal. I love communicating with people and sharing ideas. My weakest one is logical, so I try to practice problem-solving more often.”"
+                      }
+                    ]
                   }
                 ]
               },
@@ -591,7 +732,16 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: how you use your strengths and improve weaker areas."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " how you use your strengths and improve weaker areas."
+                      }
+                    ]
                   }
                 ]
               }
@@ -612,7 +762,14 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: the idea that intelligence is not fixed."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      { "text": " the idea that intelligence is not fixed." }
+                    ]
                   }
                 ]
               },
@@ -620,7 +777,13 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Script: “In conclusion, intelligence comes in many forms. Every person has different strengths that can be developed. Education should support every learner’s unique way of thinking.”"
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “In conclusion, intelligence comes in many forms. Every person has different strengths that can be developed. Education should support every learner's unique way of thinking.”"
+                      }
+                    ]
                   }
                 ]
               },
@@ -628,7 +791,16 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Talk about: thanking the audience and acknowledging sources."
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " thanking the audience and acknowledging sources."
+                      }
+                    ]
                   }
                 ]
               }

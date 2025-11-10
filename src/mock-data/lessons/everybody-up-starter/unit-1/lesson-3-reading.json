@@ -422,7 +422,7 @@
           {
             "tag": "p",
             "attributes": {
-              "class": "text-xl text-gray-600 mt-6 italic"
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
             },
             "children": [{ "text": "Chúc các em học tốt!" }]
           }

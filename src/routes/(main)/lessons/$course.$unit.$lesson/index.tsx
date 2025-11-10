@@ -5,9 +5,7 @@ import WoodenButton from '@/lib/components/ui/WoodenButton'
 import { Route as parentRoute } from './route'
 import { ACTIVITY_REGISTRY } from './$activity'
 
-export const Route = createFileRoute(
-  '/(main)/lessons/$course/$unit/$lesson/',
-)({
+export const Route = createFileRoute('/(main)/lessons/$course/$unit/$lesson/')({
   component: RouteComponent,
 })
 
@@ -121,7 +119,7 @@ function RouteComponent() {
       <div className="h-[98%] overflow-auto">
         <Slide isActive={isActive}>
           <div className="flex flex-col items-center justify-start h-full text-center">
-            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4 mt-6 text-center leading-tight">
+            <h1 className="text-4xl font-bold text-indigo-600 bg-white/50 rounded-lg px-6 py-1 mb-4 mt-6 text-center leading-tight drop-shadow-lg">
               {title}
               <br />
               {description}
