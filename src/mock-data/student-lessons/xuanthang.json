@@ -3,12 +3,6 @@
   "allowedLessons": [
     {
       "course": "advanced-topics",
-      "unit": "whales-guardians-of-the-climate",
-      "lesson": "lesson-4-reading"
-    },
-
-    {
-      "course": "advanced-topics",
       "unit": "multiple-intelligence-theory",
       "lesson": "lesson-1-vocab"
     },
