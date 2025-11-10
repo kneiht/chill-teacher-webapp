@@ -16,14 +16,14 @@
         {
           "id": "main-lesson",
           "url": "https://youtu.be/gzfLjUq5AXQ",
-          "title": "Reading Lesson"
+          "title": "Bài học video"
         }
       ],
       "googleSlides": [
         {
           "id": "presentation",
           "url": "https://docs.google.com/presentation/d/e/2PACX-1vTA9PJGguzwpRnUzPHOxA3RGvzOFHfy95MsbvzVgyFBKiCh4wcOwd5pJvgkF38bvdsQiRbMWb1L0wyW/pubembed",
-          "title": "Bài giảng"
+          "title": "Bài đọc"
         }
       ]
     },
@@ -364,12 +364,25 @@
     "pages": [
       {
         "id": "assignments",
-        "title": "Unit 1: Art Class - Lesson 3: Reading",
+        "title": "Nhiệm vụ",
         "subtitle": "Homework Assignments",
         "scrollable": true,
         "root": [
           {
-            "tag": "h3",
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "Unit 1: Art Class" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 3: Reading" }
+            ]
+          },
+          {
+            "tag": "p",
             "attributes": {
               "class": "text-3xl text-gray-700 mb-4"
             },

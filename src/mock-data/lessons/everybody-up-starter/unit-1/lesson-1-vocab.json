@@ -26,14 +26,14 @@
         {
           "id": "main-lesson",
           "url": "https://www.youtube.com/watch?v=Bd0_AFgKw4k",
-          "title": "Bài học"
+          "title": "Bài giảng video"
         }
       ],
       "googleSlides": [
         {
           "id": "presentation",
           "url": "https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed",
-          "title": "Bài giảng"
+          "title": "Bài học"
         }
       ]
     },
@@ -79,7 +79,20 @@
         "scrollable": true,
         "root": [
           {
-            "tag": "h3",
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "Unit 1: Art Class" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 1: School Supplies" }
+            ]
+          },
+          {
+            "tag": "p",
             "attributes": {
               "class": "text-3xl text-gray-700 mb-4"
             },
@@ -160,7 +173,9 @@
                     "tag": "ul",
                     "attributes": {
                       "class": "ml-8 mt-2 space-y-5",
-                      "style": "font-family: 'Playwrite AU NSW Guides', cursive"
+                      "style": {
+                        "fontFamily": "'Playwrite AU NSW Guides', cursive"
+                      }
                     },
                     "children": [
                       {

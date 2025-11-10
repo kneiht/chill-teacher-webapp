@@ -2,15 +2,15 @@
   "lesson-4-listening": {
     "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp",
     "title": "Unit 1: Art Class",
-    "description": "Lesson 4: Listening & Shadowing",
+    "description": "Lesson 4: Listening and Shadowing",
     "menu": [
       { "type": "video", "id": "main-lesson" },
       { "type": "googleSlide", "id": "presentation" },
       { "type": "page", "id": "assignments" },
       { "type": "activity", "id": "flashcards" },
       { "type": "activity", "id": "candy-crush" },
-      { "type": "activity", "id": "listening-exercise" },
-      { "type": "activity", "id": "shadowing-exercise" }
+      { "type": "embedPage", "id": "listening-exercise" },
+      { "type": "embedPage", "id": "shadowing-exercise" }
     ],
     "externalContent": {
       "googleSlides": [
@@ -231,12 +231,25 @@
     "pages": [
       {
         "id": "assignments",
-        "title": "Unit 1: Art Class - Lesson 4: Listening",
+        "title": "Nhiệm vụ",
         "subtitle": "Homework Assignments",
         "scrollable": true,
         "root": [
           {
-            "tag": "h3",
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "Unit 1: Art Class" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 4: Listening and Shadowing" }
+            ]
+          },
+          {
+            "tag": "p",
             "attributes": {
               "class": "text-3xl text-gray-700 mb-4"
             },
