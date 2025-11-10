@@ -3,6 +3,12 @@
   "allowedLessons": [
     {
       "course": "advanced-topics",
+      "unit": "whales-guardians-of-the-climate",
+      "lesson": "lesson-1-vocab"
+    },
+
+    {
+      "course": "advanced-topics",
       "unit": "multiple-intelligence-theory",
       "lesson": "lesson-1-vocab"
     },
@@ -10,6 +16,11 @@
       "course": "advanced-topics",
       "unit": "multiple-intelligence-theory",
       "lesson": "lesson-2-vocab"
+    },
+    {
+      "course": "advanced-topics",
+      "unit": "multiple-intelligence-theory",
+      "lesson": "lesson-3-vocab"
     },
     {
       "course": "advanced-topics",
@@ -18,13 +29,23 @@
     },
     {
       "course": "advanced-topics",
-      "unit": "whales-guardians-of-the-climate",
-      "lesson": "lesson-1-vocab"
+      "unit": "multiple-intelligence-theory",
+      "lesson": "lesson-5-listening"
     },
     {
       "course": "advanced-topics",
-      "unit": "whales-guardians-of-the-climate",
-      "lesson": "lesson-2-vocab"
+      "unit": "multiple-intelligence-theory",
+      "lesson": "lesson-6-shadowing"
+    },
+    {
+      "course": "advanced-topics",
+      "unit": "multiple-intelligence-theory",
+      "lesson": "lesson-7-writing"
+    },
+    {
+      "course": "advanced-topics",
+      "unit": "multiple-intelligence-theory",
+      "lesson": "lesson-8-presentation"
     }
   ]
 }
