@@ -145,8 +145,7 @@ export const Route = createFileRoute('/(main)/lessons/$course/$unit/$lesson')({
     )
     if (!hasAccess) {
       throw redirect({
-        to: '/lessons/$course',
-        params: { course: params.course },
+        to: '/lessons',
         replace: true,
       })
     }
@@ -163,6 +162,12 @@ export const Route = createFileRoute('/(main)/lessons/$course/$unit/$lesson')({
       if (!lessonData) {
         throw new Error('Lesson not found')
       }
+      
+      // Preload all media assets (images and audio) from the lesson data
+      // This is done asynchronously and doesn't block the UI
+      const { preloadLessonMediaAsync } = await import('@/lib/utils/media-preloader')
+      preloadLessonMediaAsync(lessonData)
+      
       return lessonData
     } catch (error) {
       console.error('Error loading lesson:', error)
