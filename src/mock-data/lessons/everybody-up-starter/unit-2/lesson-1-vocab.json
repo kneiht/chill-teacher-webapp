@@ -1,0 +1,364 @@
+{
+  "lesson-1-vocab": {
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L1.webp",
+    "title": "Unit 2: Let's Play",
+    "description": "Lesson 1: Toys",
+    "menu": [
+      { "type": "video", "id": "main-lesson" },
+      { "type": "googleSlide", "id": "presentation" },
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "anagram-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "unjumble-game" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "main-lesson",
+          "url": "https://www.youtube.com/watch?v=Bd0_AFgKw4k",
+          "title": "Bài giảng video"
+        }
+      ],
+      "googleSlides": [
+        {
+          "id": "presentation",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vQD_Kjx3u1n71tBseCyScoYfdSEsQ-Kgc6WFrLRstqat7unOA38uOa0KiL1Xy5sHMMmh7fTbxMycViR/pubembed",
+          "title": "Bài học"
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "paper",
+        "phonics": "/ˈpeɪ.pər/",
+        "image": "https://storage.chillteacher.com/images-words/paper.webp",
+        "vietnameseMeaning": "giấy",
+        "sampleSentence": "I have paper.",
+        "vietnameseTranslation": "Tôi có giấy."
+      },
+      {
+        "word": "glue",
+        "phonics": "/ɡluː/",
+        "image": "https://storage.chillteacher.com/images-words/glue.webp",
+        "vietnameseMeaning": "keo dán",
+        "sampleSentence": "I have glue.",
+        "vietnameseTranslation": "Tôi có keo dán."
+      },
+      {
+        "word": "scissors",
+        "phonics": "/ˈsɪz.əz/",
+        "image": "https://storage.chillteacher.com/images-words/scissors.webp",
+        "vietnameseMeaning": "kéo",
+        "sampleSentence": "I have scissors.",
+        "vietnameseTranslation": "Tôi có kéo."
+      },
+      {
+        "word": "paint",
+        "phonics": "/peɪnt/",
+        "image": "https://storage.chillteacher.com/images-words/paint.webp",
+        "vietnameseMeaning": "màu vẽ",
+        "sampleSentence": "I have paint.",
+        "vietnameseTranslation": "Tôi có màu vẽ."
+      }
+    ],
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "subtitle": "Homework Assignments",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "Unit 1: Art Class" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 1: School Supplies" }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video bài học." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập phát âm từ vựng và câu theo video."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập từ vựng bằng các game tương tác."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Viết các câu sau, mỗi câu tối thiểu 5 lần, chụp hình bài viết gửi giáo viên:"
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "ml-8 mt-2 space-y-1"
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "I have paper." }]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "I have glue." }]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "I have scissors." }]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "I have paint." }]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "attributes": {
+                      "class": "text-xl mt-6 italic px-10"
+                    },
+                    "children": [
+                      {
+                        "text": "Ví dụ cách viết (lưu ý cách viết theo chuẩn Tiếng Anh nên một số chữ sẽ có nét viết khác Tiếng Việt)"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "ml-8 mt-2 space-y-5",
+                      "style": {
+                        "fontFamily": "'Playwrite AU NSW Guides', cursive"
+                      }
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [
+                          {
+                            "text": "I have paper. I have paper. I have paper."
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [
+                          {
+                            "text": "I have glue. I have glue. I have glue."
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [
+                          {
+                            "text": "I have scissors. I have scissors. I have scissors."
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [
+                          {
+                            "text": "I have paint. I have paint. I have paint."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên:"
+                  },
+                  {
+                    "tag": "table",
+                    "attributes": {
+                      "class": "ml-8 mt-2 border-collapse border border-gray-400"
+                    },
+                    "children": [
+                      {
+                        "tag": "thead",
+                        "children": [
+                          {
+                            "tag": "tr",
+                            "children": [
+                              {
+                                "tag": "th",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "Word (từ)" }]
+                              },
+                              {
+                                "tag": "th",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "Sentence (câu)" }]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "tbody",
+                        "children": [
+                          {
+                            "tag": "tr",
+                            "children": [
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "Paper" }]
+                              },
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "I have paper." }]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "tr",
+                            "children": [
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "Scissors" }]
+                              },
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "I have scissors." }]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "tr",
+                            "children": [
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "Glue" }]
+                              },
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "I have glue." }]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "tr",
+                            "children": [
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "Paint" }]
+                              },
+                              {
+                                "tag": "td",
+                                "attributes": {
+                                  "class": "border border-gray-400 px-4 py-2"
+                                },
+                                "children": [{ "text": "I have paint." }]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Quay video phần practice (luyện tập) ở cuối video bài học gửi cho giáo viên."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}
