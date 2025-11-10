@@ -46,6 +46,7 @@ import {
 import {
   getFromLocalStorage,
   LocalStorageKeys,
+  removeFromLocalStorage,
 } from '@/lib/utils/local-storage-helpers'
 
 // Import Components
@@ -394,11 +395,16 @@ function LayoutSelector() {
 export const Route = createFileRoute('/(main)')({
   beforeLoad: (ctx) => {
     const user = getFromLocalStorage(LocalStorageKeys.USER) as User
-    const refreshToken = getFromLocalStorage(LocalStorageKeys.REFRESH_TOKEN)
+    const refreshToken = getFromLocalStorage(
+      LocalStorageKeys.REFRESH_TOKEN,
+    ) as string
+    console.log('user', user)
 
     // TODO: Remove this later
     // if user is student, logout
-    if (user.username === 'student') {
+    if (user && user.username === 'student') {
+      removeFromLocalStorage(LocalStorageKeys.USER)
+      removeFromLocalStorage(LocalStorageKeys.REFRESH_TOKEN)
       throw redirect({
         to: '/login',
         search: { redirect: ctx.location.pathname },

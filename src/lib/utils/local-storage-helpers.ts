@@ -15,8 +15,13 @@ export enum LocalStorageKeys {
 export function getFromLocalStorage<T>(key: LocalStorageKeys): T | null {
   if (isBrowser()) {
     const value = localStorage.getItem(key)
+
     if (value) {
-      return JSON.parse(value) as T
+      try {
+        return JSON.parse(value) as T
+      } catch {
+        return value as unknown as T
+      }
     }
   }
   return null
