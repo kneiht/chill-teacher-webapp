@@ -43,7 +43,10 @@ import {
 } from '@tanstack/react-router'
 
 // Import local storage helpers
-import { LocalStorageKeys } from '@/lib/utils/local-storage-helpers'
+import {
+  getFromLocalStorage,
+  LocalStorageKeys,
+} from '@/lib/utils/local-storage-helpers'
 
 // Import Components
 import { Logo } from '@/lib/components/ui/Logo'
@@ -52,6 +55,7 @@ import { ThemeLangControl } from '@/lib/components/ui/ThemeLangControl'
 // Import contexts
 import { useAuth } from '@/lib/hooks/use-auth'
 import { useLang } from '@/lib/hooks/use-lang'
+import type { User } from '@/lib/types'
 
 // Destructure Layout components from Ant Design
 const { Header, Sider, Content } = Layout
@@ -389,8 +393,19 @@ function LayoutSelector() {
 
 export const Route = createFileRoute('/(main)')({
   beforeLoad: (ctx) => {
-    const user = localStorage.getItem(LocalStorageKeys.USER)
-    const refreshToken = localStorage.getItem('refresh_token')
+    const user = getFromLocalStorage(LocalStorageKeys.USER) as User
+    const refreshToken = getFromLocalStorage(LocalStorageKeys.REFRESH_TOKEN)
+
+    // TODO: Remove this later
+    // if user is student, logout
+    if (user.username === 'student') {
+      throw redirect({
+        to: '/login',
+        search: { redirect: ctx.location.pathname },
+        replace: true,
+      })
+    }
+
     if (!user || !refreshToken) {
       throw redirect({
         to: '/login',

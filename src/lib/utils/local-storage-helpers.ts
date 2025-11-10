@@ -8,6 +8,7 @@ export enum LocalStorageKeys {
   USER = 'user',
   FLASHCARD_SETTINGS = 'flashcard-settings',
   TTS_SETTINGS = 'tts-settings',
+  REFRESH_TOKEN = 'refresh_token',
 }
 
 // Get a value from the local storage
