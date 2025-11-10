@@ -2,29 +2,24 @@
   "username": "khaianh",
   "allowedLessons": [
     {
-      "course": "advanced-topics",
-      "unit": "multiple-intelligence-theory",
+      "course": "everybody-up-starter",
+      "unit": "unit-1",
       "lesson": "lesson-1-vocab"
     },
     {
-      "course": "advanced-topics",
-      "unit": "multiple-intelligence-theory",
+      "course": "everybody-up-starter",
+      "unit": "unit-1",
       "lesson": "lesson-2-vocab"
     },
     {
-      "course": "advanced-topics",
-      "unit": "multiple-intelligence-theory",
-      "lesson": "lesson-4-reading"
+      "course": "everybody-up-starter",
+      "unit": "unit-1",
+      "lesson": "lesson-3-reading"
     },
     {
-      "course": "advanced-topics",
-      "unit": "whales-guardians-of-the-climate",
-      "lesson": "lesson-1-vocab"
-    },
-    {
-      "course": "advanced-topics",
-      "unit": "whales-guardians-of-the-climate",
-      "lesson": "lesson-2-vocab"
+      "course": "everybody-up-starter",
+      "unit": "unit-1",
+      "lesson": "lesson-4-listening"
     }
   ]
 }
