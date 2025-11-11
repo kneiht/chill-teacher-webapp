@@ -13,7 +13,7 @@
     "check": "prettier --write . && eslint --fix",
     "convert": "node scripts/convert-images.js",
     "translate": "node scripts/collect-translations.js",
-    "upload-r2": "node scripts/upload-to-r2.js",
+    "r2": "node scripts/upload-to-r2.js",
     "generate-image": "node scripts/generate_image.js"
   },
   "dependencies": {

@@ -12,12 +12,5 @@ count.txt
 \#*
 *.tar.gz
 
-# Images
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-
 # R2
 wait-upload/
