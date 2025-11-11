@@ -2,9 +2,7 @@ import type { ApiResponse } from '@/lib/types'
 
 // Prefer environment variable, fallback to localhost for dev
 const API_BASE_URL =
-  (import.meta as any)?.env?.VITE_API_BASE_URL ||
-  (typeof process !== 'undefined' && (process as any).env?.VITE_API_BASE_URL) ||
-  'http://localhost:3000'
+  import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'
 
 // Handle unauthorized responses by clearing tokens and redirecting
 const handleUnauthorized = () => {
