@@ -1,6 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Card, Col, Row, Typography, Empty, Divider } from 'antd'
+import { Card, Col, Row, Typography, Empty, Divider, Button } from 'antd'
+import { EditOutlined, DownloadOutlined } from '@ant-design/icons'
 import { filterLessonsByUser, type Lesson } from '@/lib/utils/lesson-helpers'
+import { useAuth } from '@/lib/hooks/use-auth'
+import { useState } from 'react'
+import { LessonEditModal } from '@/lib/components/admin/LessonEditModal'
 
 const { Title, Text } = Typography
 
@@ -52,6 +56,9 @@ export const Route = createFileRoute('/(main)/lessons/')({
 
 function LessonsList() {
   const { lessons, groupedByCourseAndUnit } = Route.useLoaderData()
+  const { user } = useAuth()
+  const [editingLesson, setEditingLesson] = useState<Lesson | null>(null)
+  const [editModalVisible, setEditModalVisible] = useState(false)
 
   // Get display name for course (use courseDisplay if available, otherwise format)
   const getCourseDisplayName = (course: string, lessons: Lesson[]): string => {
@@ -86,6 +93,21 @@ function LessonsList() {
       .split('-')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
+  }
+
+  // Check if user is admin
+  const isAdmin = user?.role === 'Admin'
+
+  // Handle edit button click
+  const handleEditLesson = (lesson: Lesson) => {
+    setEditingLesson(lesson)
+    setEditModalVisible(true)
+  }
+
+  // Handle modal close
+  const handleCloseModal = () => {
+    setEditingLesson(null)
+    setEditModalVisible(false)
   }
 
   if (lessons.length === 0) {
@@ -151,70 +173,99 @@ function LessonsList() {
                         lg={6}
                         xl={6}
                       >
-                        <a
-                          href={lessonPath}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ textDecoration: 'none' }}
-                        >
-                          <Card
-                            hoverable
-                            cover={
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  height: 200,
-                                  overflow: 'hidden',
-                                }}
-                              >
-                                <img
-                                  alt={
-                                    lesson.lessonDisplay ||
-                                    lesson.lesson ||
-                                    'Lesson'
-                                  }
-                                  src={lesson.bg}
-                                  style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                  }}
-                                  onError={(e) => {
-                                    // Fallback to a placeholder if image fails to load
-                                    ;(e.target as HTMLImageElement).src =
-                                      'https://via.placeholder.com/400x200?text=Lesson'
-                                  }}
-                                />
+                        <div style={{ position: 'relative' }}>
+                          <a
+                            href={lessonPath}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
+                          >
+                            <Card
+                              hoverable
+                              cover={
                                 <div
                                   style={{
-                                    position: 'absolute',
-                                    top: '50%',
-                                    left: '50%',
-                                    transform: 'translate(-50%, -50%)',
-                                    color: '#fff',
-                                    fontSize: 20,
-                                    fontWeight: 700,
-                                    textAlign: 'center',
-                                    width: '100%',
-                                    padding: '12px 16px',
-                                    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                                    textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                                    position: 'relative',
+                                    height: 200,
+                                    overflow: 'hidden',
                                   }}
                                 >
-                                  {getLessonDisplayName(lesson)}
+                                  <img
+                                    alt={
+                                      lesson.lessonDisplay ||
+                                      lesson.lesson ||
+                                      'Lesson'
+                                    }
+                                    src={lesson.bg}
+                                    style={{
+                                      width: '100%',
+                                      height: '100%',
+                                      objectFit: 'cover',
+                                    }}
+                                    onError={(e) => {
+                                      // Fallback to a placeholder if image fails to load
+                                      ;(e.target as HTMLImageElement).src =
+                                        'https://via.placeholder.com/400x200?text=Lesson'
+                                    }}
+                                  />
+                                  <div
+                                    style={{
+                                      position: 'absolute',
+                                      top: '50%',
+                                      left: '50%',
+                                      transform: 'translate(-50%, -50%)',
+                                      color: '#fff',
+                                      fontSize: 20,
+                                      fontWeight: 700,
+                                      textAlign: 'center',
+                                      width: '100%',
+                                      padding: '12px 16px',
+                                      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                      textShadow:
+                                        '0 2px 8px rgba(0, 0, 0, 0.5)',
+                                    }}
+                                  >
+                                    {getLessonDisplayName(lesson)}
+                                  </div>
                                 </div>
-                              </div>
-                            }
-                          >
-                            <Card.Meta
-                              title={`${getUnitDisplayName(
-                                lesson.unit,
-                                lessons,
-                              )}`}
-                              description={lesson.description}
-                            />
-                          </Card>
-                        </a>
+                              }
+                            >
+                              <Card.Meta
+                                title={`${getUnitDisplayName(
+                                  lesson.unit,
+                                  lessons,
+                                )}`}
+                                description={lesson.description}
+                              />
+                            </Card>
+                          </a>
+                          {isAdmin && (
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: 8,
+                                right: 8,
+                                display: 'flex',
+                                gap: 4,
+                              }}
+                            >
+                              <Button
+                                type="primary"
+                                size="small"
+                                icon={<EditOutlined />}
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  e.stopPropagation()
+                                  handleEditLesson(lesson)
+                                }}
+                                style={{
+                                  backgroundColor: 'rgba(24, 144, 255, 0.9)',
+                                  borderColor: '#1890ff',
+                                }}
+                              />
+                            </div>
+                          )}
+                        </div>
                       </Col>
                     )
                   })}
@@ -223,6 +274,15 @@ function LessonsList() {
             ))}
           </div>
         ),
+      )}
+
+      {/* Lesson Edit Modal */}
+      {editModalVisible && editingLesson && (
+        <LessonEditModal
+          lesson={editingLesson}
+          visible={editModalVisible}
+          onClose={handleCloseModal}
+        />
       )}
     </div>
   )

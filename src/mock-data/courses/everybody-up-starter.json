@@ -38,5 +38,15 @@
     "lessonDisplay": "Lesson 4: Listening & Shadowing",
     "description": "Listening & Shadowing",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U1L2.webp"
+  },
+  {
+    "course": "everybody-up-starter",
+    "courseDisplay": "Everybody Up Starter",
+    "unit": "unit-2",
+    "unitDisplay": "Unit 2: Let's Play",
+    "lesson": "lesson-1-vocab",
+    "lessonDisplay": "Lesson 1: Vocabulary",
+    "description": "Vocabulary",
+    "bg": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U2L1.webp"
   }
 ]
