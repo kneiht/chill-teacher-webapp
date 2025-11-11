@@ -118,5 +118,15 @@
     "lessonDisplay": "Lesson 4: Reading",
     "description": "Reading",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
+  },
+  {
+    "course": "advanced-topics",
+    "courseDisplay": "Advanced Topics",
+    "unit": "whales-guardians-of-the-climate",
+    "unitDisplay": "Whales – Guardians of the Climate",
+    "lesson": "lesson-5-listening",
+    "lessonDisplay": "Lesson 5: Listening",
+    "description": "Listening",
+    "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
   }
 ]
