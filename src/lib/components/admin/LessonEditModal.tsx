@@ -10,7 +10,6 @@ import {
   Select,
   message,
   Card,
-  Typography,
   Row,
   Col,
 } from 'antd'
@@ -20,6 +19,7 @@ import {
   EditOutlined,
   DownloadOutlined,
   DragOutlined,
+  CopyOutlined,
 } from '@ant-design/icons'
 import type { Lesson } from '@/lib/utils/lesson-helpers'
 
@@ -78,7 +78,6 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
 }) => {
   const [form] = Form.useForm()
   const [lessonData, setLessonData] = useState<LessonData | null>(null)
-  const [loading, setLoading] = useState(false)
   const [activeTab, setActiveTab] = useState('basic')
 
   // Load lesson data when modal opens
@@ -90,7 +89,6 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
 
   const loadLessonData = async () => {
     try {
-      setLoading(true)
       const data = await import(
         `@/mock-data/lessons/${lesson.course}/${lesson.unit}/${lesson.lesson}.json`
       )
@@ -100,16 +98,15 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
     } catch (error) {
       message.error('Failed to load lesson data')
       console.error('Error loading lesson data:', error)
-    } finally {
-      setLoading(false)
     }
   }
 
   const handleSave = () => {
     form.validateFields().then((values) => {
-      // Create the complete lesson JSON structure
+      // Create complete lesson JSON structure with all current data
       const completeLessonData = {
         [lesson.lesson]: {
+          ...lessonData,
           ...values,
         },
       }
@@ -118,6 +115,34 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
       downloadJson(completeLessonData, `${lesson.lesson}.json`)
       message.success('Lesson JSON downloaded successfully!')
     })
+  }
+
+  const handleCopyJson = () => {
+    // Create complete lesson JSON structure with all current data
+    const completeLessonData = {
+      [lesson.lesson]: {
+        ...lessonData,
+      },
+    }
+
+    const jsonString = JSON.stringify(completeLessonData, null, 2)
+
+    // Copy to clipboard
+    navigator.clipboard
+      .writeText(jsonString)
+      .then(() => {
+        message.success('JSON copied to clipboard!')
+      })
+      .catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea')
+        textArea.value = jsonString
+        document.body.appendChild(textArea)
+        textArea.select()
+        document.execCommand('copy')
+        document.body.removeChild(textArea)
+        message.success('JSON copied to clipboard!')
+      })
   }
 
   const downloadJson = (data: any, filename: string) => {
@@ -202,8 +227,6 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
   }
 
   const editVocabItem = (index: number, item: VocabItem) => {
-    // This would open a sub-modal for editing the item
-    // For now, we'll use a simple prompt
     const updatedVocab = [...(lessonData?.vocab || [])]
     updatedVocab[index] = { ...item }
     updateLessonData('vocab', updatedVocab)
@@ -339,7 +362,9 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
                   value={video.id}
                   onChange={(e) => {
                     const updated = { ...lessonData }
-                    updated.externalContent!.videos![index].id = e.target.value
+                    if (updated.externalContent?.videos) {
+                      updated.externalContent.videos[index].id = e.target.value
+                    }
                     setLessonData(updated)
                   }}
                   style={{ marginBottom: 4 }}
@@ -349,7 +374,9 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
                   value={video.url}
                   onChange={(e) => {
                     const updated = { ...lessonData }
-                    updated.externalContent!.videos![index].url = e.target.value
+                    if (updated.externalContent?.videos) {
+                      updated.externalContent.videos[index].url = e.target.value
+                    }
                     setLessonData(updated)
                   }}
                 />
@@ -368,8 +395,10 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
                   value={slide.id}
                   onChange={(e) => {
                     const updated = { ...lessonData }
-                    updated.externalContent!.googleSlides![index].id =
-                      e.target.value
+                    if (updated.externalContent?.googleSlides) {
+                      updated.externalContent.googleSlides[index].id =
+                        e.target.value
+                    }
                     setLessonData(updated)
                   }}
                   style={{ marginBottom: 4 }}
@@ -379,8 +408,10 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
                   value={slide.url}
                   onChange={(e) => {
                     const updated = { ...lessonData }
-                    updated.externalContent!.googleSlides![index].url =
-                      e.target.value
+                    if (updated.externalContent?.googleSlides) {
+                      updated.externalContent.googleSlides[index].url =
+                        e.target.value
+                    }
                     setLessonData(updated)
                   }}
                 />
@@ -399,8 +430,10 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
                   value={embed.id}
                   onChange={(e) => {
                     const updated = { ...lessonData }
-                    updated.externalContent!.embedPages![index].id =
-                      e.target.value
+                    if (updated.externalContent?.embedPages) {
+                      updated.externalContent.embedPages[index].id =
+                        e.target.value
+                    }
                     setLessonData(updated)
                   }}
                   style={{ marginBottom: 4 }}
@@ -410,8 +443,10 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
                   value={embed.url}
                   onChange={(e) => {
                     const updated = { ...lessonData }
-                    updated.externalContent!.embedPages![index].url =
-                      e.target.value
+                    if (updated.externalContent?.embedPages) {
+                      updated.externalContent.embedPages[index].url =
+                        e.target.value
+                    }
                     setLessonData(updated)
                   }}
                 />
@@ -584,6 +619,16 @@ export const LessonEditModal: React.FC<LessonEditModalProps> = ({
         rows={20}
         style={{ fontFamily: 'monospace' }}
       />
+      <div style={{ marginTop: 16, textAlign: 'center' }}>
+        <Button
+          type="primary"
+          icon={<CopyOutlined />}
+          onClick={handleCopyJson}
+          size="large"
+        >
+          Copy Complete JSON to Clipboard
+        </Button>
+      </div>
     </Card>
   )
 

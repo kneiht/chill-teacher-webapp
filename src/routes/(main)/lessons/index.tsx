@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Card, Col, Row, Typography, Empty, Divider, Button } from 'antd'
-import { EditOutlined, DownloadOutlined } from '@ant-design/icons'
+import { EditOutlined } from '@ant-design/icons'
 import { filterLessonsByUser, type Lesson } from '@/lib/utils/lesson-helpers'
 import { useAuth } from '@/lib/hooks/use-auth'
 import { useState } from 'react'
