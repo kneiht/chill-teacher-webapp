@@ -5,7 +5,6 @@
     "description": "Lesson 5: Listening",
     "menu": [
       { "type": "page", "id": "assignments" },
-      { "type": "video", "id": "lesson-video" },
       { "type": "activity", "id": "flashcards" },
       { "type": "embedPage", "id": "listening-exercise" }
     ],
