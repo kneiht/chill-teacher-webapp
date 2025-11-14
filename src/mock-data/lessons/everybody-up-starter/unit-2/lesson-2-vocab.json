@@ -1,0 +1,381 @@
+{
+  "lesson-2-vocab": {
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/EU0-U2L1.webp",
+    "title": "Unit 2: Let's Play",
+    "description": "Lesson 1: Toys",
+    "menu": [
+      { "type": "video", "id": "main-lesson" },
+      { "type": "embedPage", "id": "presentation" },
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "anagram-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "unjumble-game" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "main-lesson",
+          "url": "https://youtu.be/FkjW8wOF6Kw",
+          "title": "Bài giảng video"
+        }
+      ],
+      "embedPages": [
+        {
+          "id": "presentation",
+          "url": "https://www.canva.com/design/DAG4WsDxB7I/2wmWkh6w14037xuD-m3TyA/view?embed",
+
+          "title": "Bài học"
+        }
+      ]
+    },
+
+    "vocab": [
+      {
+        "word": "car",
+        "phonics": "/kɑr/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/car.webp",
+        "vietnameseMeaning": "xe ô tô",
+        "sampleSentence": "What is it? It's a car.",
+        "vietnameseTranslation": "Nó là cái gì? Nó là một chiếc xe ô tô.",
+        "wordPronunciation": "car.mp3",
+        "sentencePronunciation": "what-is-it-its-a-car.mp3"
+      },
+      {
+        "word": "train",
+        "phonics": "/treɪn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/train.webp",
+        "vietnameseMeaning": "xe lửa, tàu hỏa",
+        "sampleSentence": "What is it? It's a train.",
+        "vietnameseTranslation": "Nó là cái gì? Nó là một chiếc xe lửa.",
+        "wordPronunciation": "train.mp3",
+        "sentencePronunciation": "what-is-it-its-a-train.mp3"
+      },
+      {
+        "word": "boat",
+        "phonics": "/bəʊt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/boat.webp",
+        "vietnameseMeaning": "tàu, thuyền",
+        "sampleSentence": "What is it? It's a boat.",
+        "vietnameseTranslation": "Nó là cái gì? Nó là một chiếc thuyền.",
+        "wordPronunciation": "boat.mp3",
+        "sentencePronunciation": "what-is-it-its-a-boat.mp3"
+      },
+      {
+        "word": "jet",
+        "phonics": "/dʒɛt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/jet.webp",
+        "vietnameseMeaning": "máy bay phản lực",
+        "sampleSentence": "What is it? It's a jet.",
+        "vietnameseTranslation": "Nó là cái gì? Nó là một chiếc máy bay phản lực.",
+        "wordPronunciation": "jet.mp3",
+        "sentencePronunciation": "what-is-it-its-a-jet.mp3"
+      },
+
+      {
+        "word": "doll",
+        "phonics": "/dɑːl/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/doll.webp",
+        "vietnameseMeaning": "búp bê",
+        "sampleSentence": "It's a doll.",
+        "vietnameseTranslation": "Đây là một con búp bê.",
+        "wordPronunciation": "doll.mp3",
+        "sentencePronunciation": "its-a-doll.mp3"
+      },
+      {
+        "word": "ball",
+        "phonics": "/bɔːl/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/ball.webp",
+        "vietnameseMeaning": "quả bóng",
+        "sampleSentence": "It's a ball.",
+        "vietnameseTranslation": "Đây là một quả bóng.",
+        "wordPronunciation": "ball.mp3",
+        "sentencePronunciation": "its-a-ball.mp3"
+      },
+      {
+        "word": "balloon",
+        "phonics": "/bəˈluːn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/balloon.webp",
+        "vietnameseMeaning": "bóng bay",
+        "sampleSentence": "It's a balloon.",
+        "vietnameseTranslation": "Đây là một quả bóng bay.",
+        "wordPronunciation": "balloon.mp3",
+        "sentencePronunciation": "its-a-balloon.mp3"
+      },
+      {
+        "word": "yoyo",
+        "phonics": "/ˈjəʊ.jəʊ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/yoyo.webp",
+        "vietnameseMeaning": "đồ chơi yoyo",
+        "sampleSentence": "It's a yoyo.",
+        "vietnameseTranslation": "Đây là một cái yoyo.",
+        "wordPronunciation": "yoyo.mp3",
+        "sentencePronunciation": "its-a-yoyo.mp3"
+      },
+      {
+        "word": "pen",
+        "phonics": "/pɛn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/pen.webp",
+        "vietnameseMeaning": "bút mực",
+        "sampleSentence": "What do you have? I have a pen.",
+        "vietnameseTranslation": "Tôi có một cây bút mực.",
+        "wordPronunciation": "pen.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-a-pen.mp3"
+      },
+      {
+        "word": "pencil",
+        "phonics": "/ˈpɛn.səl/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/pencil.webp",
+        "vietnameseMeaning": "bút chì",
+        "sampleSentence": "What do you have? I have a pencil.",
+        "vietnameseTranslation": "Tôi có một cây bút chì.",
+        "wordPronunciation": "pencil.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-a-pencil.mp3"
+      },
+      {
+        "word": "crayon",
+        "phonics": "/ˈkreɪ.ɑn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/crayon.webp",
+        "vietnameseMeaning": "bút sáp màu",
+        "sampleSentence": "What do you have? I have a crayon.",
+        "vietnameseTranslation": "Tôi có một cây bút sáp màu.",
+        "wordPronunciation": "crayon.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-a-crayon.mp3"
+      },
+      {
+        "word": "marker",
+        "phonics": "/ˈmɑr.kɚ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/marker.webp",
+        "vietnameseMeaning": "bút lông",
+        "sampleSentence": "What do you have? I have a marker.",
+        "vietnameseTranslation": "Tôi có một cây bút lông.",
+        "wordPronunciation": "marker.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-a-marker.mp3"
+      },
+      {
+        "word": "paper",
+        "phonics": "/ˈpeɪ.pɚ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/paper.webp",
+        "vietnameseMeaning": "giấy",
+        "sampleSentence": "What do you have? I have paper.",
+        "vietnameseTranslation": "Tôi có giấy.",
+        "wordPronunciation": "paper.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-paper.mp3"
+      },
+      {
+        "word": "glue",
+        "phonics": "/ɡlu/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/glue.webp",
+        "vietnameseMeaning": "keo dán",
+        "sampleSentence": "What do you have? I have glue.",
+        "vietnameseTranslation": "Tôi có keo dán.",
+        "wordPronunciation": "glue.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-glue.mp3"
+      },
+      {
+        "word": "scissors",
+        "phonics": "/ˈsɪz.ɚz/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/scissors.webp",
+        "vietnameseMeaning": "kéo",
+        "sampleSentence": "What do you have? I have scissors.",
+        "vietnameseTranslation": "Tôi có kéo.",
+        "wordPronunciation": "scissors.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-scissors.mp3"
+      },
+      {
+        "word": "paint",
+        "phonics": "/peɪnt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/paint.webp",
+        "vietnameseMeaning": "màu vẽ",
+        "sampleSentence": "What do you have? I have paint.",
+        "vietnameseTranslation": "Tôi có màu vẽ.",
+        "wordPronunciation": "paint.mp3",
+        "sentencePronunciation": "what-do-you-have-i-have-paint.mp3"
+      }
+    ],
+
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "subtitle": "Homework Assignments",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "Unit 2: Let's Play" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 2: Toys" }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video bài học." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập phát âm từ vựng và câu theo video."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập từ vựng bằng các game tương tác."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Viết các câu sau, mỗi câu tối thiểu 3 lần, chụp hình bài viết gửi giáo viên:"
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "ml-8 mt-2 space-y-1"
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "What is it? It's a car." }]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "What is it? It's a boat." }]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "What is it? It's a train." }]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [{ "text": "What is it? It's a jet." }]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "attributes": {
+                      "class": "text-xl mt-6 italic px-10"
+                    },
+                    "children": [
+                      {
+                        "text": "Ví dụ cách viết (lưu ý cách viết theo chuẩn Tiếng Anh nên một số chữ sẽ có nét viết khác Tiếng Việt)"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "ml-8 mt-2 space-y-5",
+                      "style": {
+                        "fontFamily": "'Playwrite AU NSW Guides', cursive"
+                      }
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [
+                          {
+                            "text": "What is it? It's a car. What is it? It's a car."
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "attributes": { "class": "ml-10" },
+                        "children": [
+                          {
+                            "text": "What is it? It's a train. What is it? It's a train."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Ghi âm hoặc quay video phát âm các từ vựng trong thẻ từ vựng"
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Quay video phần practice (luyện tập) ở cuối video bài học gửi cho giáo viên."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}
