@@ -138,5 +138,15 @@
     "lessonDisplay": "Lesson 5: Shadowing",
     "description": "Shadowing",
     "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
+  },
+  {
+    "course": "advanced-topics",
+    "courseDisplay": "Advanced Topics",
+    "unit": "whales-guardians-of-the-climate",
+    "unitDisplay": "Whales – Guardians of the Climate",
+    "lesson": "lesson-7-writing",
+    "lessonDisplay": "Lesson 7: Writing",
+    "description": "Writing",
+    "bg": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp"
   }
 ]

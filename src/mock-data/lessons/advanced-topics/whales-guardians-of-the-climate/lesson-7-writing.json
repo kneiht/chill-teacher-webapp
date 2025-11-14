@@ -1,0 +1,378 @@
+{
+  "lesson-7-writing": {
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp",
+    "title": "Whales – Guardians of the Climate",
+    "description": "Lesson 7: Writing",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "page", "id": "writing-guide" }
+    ],
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Whales – Guardians of the Climate" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 7: Writing" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Đọc kỹ bài đọc trong phần Writing Guide"
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm theo hướng dẫn viết và viết bài vào vở chụp hình cho thầy."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      },
+      {
+        "id": "writing-guide",
+        "title": "Writing Guide",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Whales – Guardians of the Climate",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 7: Writing Guide",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Bài đọc: Whales – Guardians of the Climate",
+            "className": "text-2xl font-bold text-blue-600 mt-8 mb-4"
+          },
+          {
+            "type": "card",
+            "className": "bg-gray-100 p-6 rounded-lg mb-8",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Kính gửi người dân Nhật Bản,",
+                "className": "mb-4 text-lg leading-relaxed font-medium"
+              },
+              {
+                "type": "paragraph",
+                "text": "Chúng tôi hiểu rằng việc săn bắt cá voi đã là một phần của văn hóa Nhật Bản trong nhiều thế kỷ. Tuy nhiên, trong thời đại ngày nay, khi mà nhiều loài cá voi đang đứng trước nguy cơ tuyệt chủng, chúng tôi tha thiết kêu gọi người dân Nhật Bản hãy cùng chung tay bảo vệ những sinh vật biển khổng lồ này.",
+                "className": "mb-4 text-lg leading-relaxed"
+              },
+              {
+                "type": "paragraph",
+                "text": "Cá voi không chỉ là những sinh vật thông minh với đời sống xã hội phức tạp, mà còn đóng vai trò vô cùng quan trọng trong việc duy trì sự cân bằng của đại dương. Mỗi con cá voi giúp hấp thụ một lượng lớn carbon, góp phần chống lại biến đổi khí hậu toàn cầu. Hơn nữa, phân của chúng cung cấp chất dinh dưỡng cho thực vật phù du - nguồn sản xuất hơn 50% lượng oxy chúng ta hít thở.",
+                "className": "mb-4 text-lg leading-relaxed"
+              },
+              {
+                "type": "paragraph",
+                "text": "Ngày nay, với sự phát triển của nông nghiệp và ngư nghiệp hiện đại, chúng ta hoàn toàn có thể tìm được những nguồn thực phẩm thay thế giàu dinh dưỡng và bền vững hơn. Nhiều người trẻ Nhật Bản cũng đã dần từ bỏ thói quen ăn thịt cá voi, ủng hộ cho việc bảo tồn loài vật này.",
+                "className": "mb-4 text-lg leading-relaxed"
+              },
+              {
+                "type": "paragraph",
+                "text": "Chúng tôi tin rằng với truyền thống tôn trọng thiên nhiên và sự khôn ngoan của mình, người dân Nhật Bản sẽ có những quyết định đúng đắn để bảo vệ đại dương và hành tinh xanh của chúng ta. Hãy cùng chung tay bảo vệ cá voi - những người bạn, những chiến binh thầm lặng của đại dương.",
+                "className": "mb-4 text-lg leading-relaxed"
+              },
+              {
+                "type": "paragraph",
+                "text": "Trân trọng,\nNhững người yêu quý đại dương",
+                "className": "text-lg leading-relaxed font-medium italic"
+              }
+            ]
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "HƯỚNG DẪN RÚT GỌN BÀI VIẾT VỀ “WHALES – GUARDIANS OF THE CLIMATE”",
+            "className": "text-2xl font-bold text-blue-600"
+          },
+
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "1. Hiểu mục tiêu bài viết",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bài viết này hướng dẫn cách rút gọn một bài viết dài về chủ đề cá voi và vai trò của chúng đối với khí hậu."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Cách xác định ý chính trong từng đoạn văn",
+              "Kỹ thuật tóm tắt thông tin quan trọng",
+              "Cách viết lại ý chính một cách ngắn gọn, súc tích"
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1"
+          },
+
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "2. Các bước rút gọn bài viết",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Bước 1: Đọc và xác định ý chính",
+            "className": "text-lg font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Đọc toàn bộ bài viết để nắm được nội dung chính. Xác định các ý chính trong từng đoạn văn."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Đoạn 1: Giới thiệu chung về cá voi và tầm quan trọng của chúng",
+              "Đoạn 2: Tác động của con người đến khí hậu và đại dương",
+              "Đoạn 3: Vai trò của cá voi trong việc chống biến đổi khí hậu",
+              "Đoạn 4: Các mối đe dọa đối với quần thể cá voi",
+              "Đoạn 5: Kêu gọi hành động bảo vệ cá voi"
+            ],
+            "className": "list-decimal list-inside ml-8 space-y-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mẹo: Gạch chân hoặc đánh dấu các từ khóa và ý chính trong mỗi đoạn."
+          },
+
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Bước 2: Tóm tắt từng đoạn",
+            "className": "text-lg font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tóm tắt mỗi đoạn thành 1-2 câu ngắn gọn:"
+          },
+
+          {
+            "type": "paragraph",
+            "text": "a. Đoạn 1: Giới thiệu",
+            "className": "font-semibold"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Nguyên văn: Dài 5 câu, giới thiệu chung về cá voi",
+              "Ý chính: Cá voi là động vật lớn, thông minh, đóng vai trò quan trọng trong hệ sinh thái biển"
+            ],
+            "className": "list-disc list-inside ml-4 space-y-1"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mẫu tóm tắt:",
+            "className": "ml-8 font-semibold mt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Whales, among Earth's largest and most intelligent creatures, play a crucial role as 'ocean engineers' by maintaining marine ecosystem balance.\"",
+            "className": "ml-12 italic bg-yellow-50 p-2 rounded"
+          },
+
+          {
+            "type": "paragraph",
+            "text": "b. Đoạn 2: Tác động của con người",
+            "className": "font-semibold mt-4"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Nguyên văn: 4 câu về tác động của con người",
+              "Ý chính: Hoạt động con người gây biến đổi khí hậu, ảnh hưởng đến đại dương và đời sống ven biển"
+            ],
+            "className": "list-disc list-inside ml-4 space-y-1"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mẫu tóm tắt:",
+            "className": "ml-8 font-semibold mt-2"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Human activities have significantly altered the climate, leading to warmer, more acidic oceans that threaten marine life and coastal communities.\"",
+            "className": "ml-12 italic bg-yellow-50 p-2 rounded"
+          },
+
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Bước 3: Kết hợp các ý chính",
+            "className": "text-lg font-semibold text-blue-600 pt-2 mt-4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Kết hợp các ý chính đã tóm tắt thành một đoạn văn ngắn gọn, mạch lạc."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Sử dụng các từ nối để liên kết các ý",
+              "Giữ nguyên thông tin quan trọng, bỏ chi tiết phụ",
+              "Đảm bảo đoạn văn vẫn đầy đủ ý nghĩa"
+            ],
+            "className": "list-decimal list-inside ml-8 space-y-1"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mẫu tóm tắt toàn bài:",
+            "className": "mt-4 font-semibold"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Whales, as ocean engineers, play a vital role in maintaining marine ecosystems and combating climate change. They help regulate the ocean's health through nutrient cycling and carbon storage. However, human activities and climate change threaten their survival. Protecting these gentle giants is essential for maintaining the delicate balance of our planet's climate and marine biodiversity.\"",
+            "className": "ml-4 italic bg-blue-50 p-4 rounded"
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "3. Từ nối hữu ích khi tóm tắt",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "table",
+            "headers": ["Mục đích", "Từ nối", "Ví dụ"],
+            "rows": [
+              [
+                "Giới thiệu chủ đề",
+                "As we know / It is widely known that / According to",
+                "As we know, whales play a crucial role in marine ecosystems."
+              ],
+              [
+                "Thêm thông tin",
+                "Moreover / Furthermore / Additionally",
+                "Moreover, their waste helps fertilize phytoplankton."
+              ],
+              [
+                "Nguyên nhân - Kết quả",
+                "As a result / Therefore / Consequently",
+                "Human activities have increased CO2 levels; as a result, oceans are becoming more acidic."
+              ],
+              [
+                "Tương phản",
+                "However / On the other hand / Despite",
+                "Whales are essential for carbon storage; however, their populations are declining."
+              ],
+              [
+                "Kết luận",
+                "In conclusion / To sum up / In summary",
+                "In conclusion, protecting whales is vital for our planet's health."
+              ]
+            ]
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "4. Cấu trúc câu hữu ích khi tóm tắt",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "table",
+            "headers": ["Mục đích", "Cấu trúc câu", "Ví dụ"],
+            "rows": [
+              [
+                "Tóm tắt ý chính",
+                "The main idea/point is that... / In essence,... / The key takeaway is...",
+                "The key takeaway is that whales are crucial for carbon storage."
+              ],
+              [
+                "Rút gọn thông tin",
+                "...which means... / In other words,... / This shows that...",
+                "Whales help fertilize phytoplankton, which means they support oxygen production."
+              ],
+              [
+                "Kết hợp ý",
+                "Not only... but also... / Both... and... / As well as...",
+                "Whales not only store carbon but also support marine biodiversity."
+              ],
+              [
+                "Thể hiện tầm quan trọng",
+                "It is essential/crucial that... / plays a vital role in... / is key to...",
+                "Protecting whales is crucial for maintaining ocean health."
+              ]
+            ]
+          },
+
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "5. Mẹo khi tóm tắt",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Chia nhỏ đoạn: mỗi loại trí thông minh mạnh nên được viết thành một đoạn riêng.",
+              "Sử dụng từ nối: also, besides, however, on the other hand, in conclusion…",
+              "Dùng thì hiện tại đơn để mô tả thói quen và đặc điểm cá nhân.",
+              "Không chỉ liệt kê điểm số, hãy giải thích và đưa ví dụ minh họa thực tế."
+            ],
+            "className": "list-disc list-inside ml-4 space-y-1"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+      }
+    ]
+  }
+}
