@@ -100,21 +100,43 @@
             "className": "text-xl font-semibold text-blue-600 pt-2"
           },
           {
+            "type": "heading",
+            "level": 5,
+            "text": "Instructions:",
+            "className": "text-lg font-semibold text-gray-700 pt-1"
+          },
+          {
             "type": "list",
             "ordered": true,
             "items": [
-              "Dear Japanese people,",
-              "Introduction of yourself (if needed)",
-              "State the reason for writing politely"
+              "Start with a formal greeting",
+              "Introduce yourself (if needed)",
+              "Politely state the purpose of your letter"
             ],
             "className": "list-decimal list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Examples:",
+            "className": "text-lg font-semibold text-gray-700 pt-1 mt-4"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Dear Japanese people,",
+              "I am a student from Vietnam, ... ",
+              "I am writing to express my concerns about..."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
           },
 
           {
             "type": "heading",
             "level": 4,
             "text": "2. Main Content",
-            "className": "text-xl font-semibold text-blue-600 pt-2"
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
           },
 
           {
@@ -124,13 +146,34 @@
             "className": "text-lg font-semibold text-blue-600 pt-2"
           },
           {
+            "type": "heading",
+            "level": 6,
+            "text": "Instructions:",
+            "className": "text-md font-semibold text-gray-700 pt-1"
+          },
+          {
             "type": "list",
             "ordered": false,
             "items": [
-              "Acknowledge cultural value (Example: \"I understand that whaling has been part of Japanese tradition for centuries...\")",
-              "Show respect for tradition (Example: \"We deeply respect Japan's rich maritime heritage and cultural practices...\")"
+              "Acknowledge cultural value",
+              "Show respect for tradition"
             ],
             "className": "list-disc list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 6,
+            "text": "Examples:",
+            "className": "text-md font-semibold text-gray-700 pt-1 mt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "I understand that whaling has been part of Japanese tradition for centuries...",
+              "We deeply respect Japan's rich maritime heritage and cultural practices..."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
           },
 
           {
@@ -140,14 +183,36 @@
             "className": "text-lg font-semibold text-blue-600 pt-2"
           },
           {
+            "type": "heading",
+            "level": 6,
+            "text": "Instructions:",
+            "className": "text-md font-semibold text-gray-700 pt-1"
+          },
+          {
             "type": "list",
             "ordered": false,
             "items": [
-              "Danger to whale species (Example: \"Many whale species are now endangered, with some populations reduced to just a few hundred individuals...\")",
-              "Ecological impact (Example: \"The decline of whale populations disrupts the ocean's delicate ecosystem balance...\")",
-              "Environmental importance (Example: \"Whales play a crucial role in carbon sequestration, helping to combat climate change...\")"
+              "Discuss the danger to whale species",
+              "Explain the ecological impact",
+              "Highlight environmental importance"
             ],
             "className": "list-disc list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 6,
+            "text": "Examples:",
+            "className": "text-md font-semibold text-gray-700 pt-1 mt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Many whale species are now endangered, with some populations reduced to just a few hundred individuals...",
+              "The decline of whale populations disrupts the ocean's delicate ecosystem balance...",
+              "Whales play a crucial role in carbon sequestration, helping to combat climate change..."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
           },
 
           {
@@ -157,38 +222,82 @@
             "className": "text-lg font-semibold text-blue-600 pt-2"
           },
           {
+            "type": "heading",
+            "level": 6,
+            "text": "Instructions:",
+            "className": "text-md font-semibold text-gray-700 pt-1"
+          },
+          {
             "type": "list",
             "ordered": false,
             "items": [
-              "Alternative food sources (Example: \"There are many sustainable seafood options that can provide similar nutritional benefits...\")",
-              "Whale watching tourism (Example: \"Whale watching offers a sustainable economic alternative that can benefit coastal communities...\")",
-              "International cooperation (Example: \"By working together on conservation efforts, we can protect these magnificent creatures for future generations...\")"
+              "Suggest alternative food sources",
+              "Propose sustainable tourism options",
+              "Encourage international cooperation"
             ],
             "className": "list-disc list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 6,
+            "text": "Examples:",
+            "className": "text-md font-semibold text-gray-700 pt-1 mt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "There are many sustainable seafood options that can provide similar nutritional benefits...",
+              "Whale watching offers a sustainable economic alternative that can benefit coastal communities...",
+              "By working together on conservation efforts, we can protect these magnificent creatures for future generations..."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
           },
 
           {
             "type": "heading",
             "level": 4,
             "text": "3. Letter Closing",
-            "className": "text-xl font-semibold text-blue-600 pt-2"
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Instructions:",
+            "className": "text-lg font-semibold text-gray-700 pt-1"
           },
           {
             "type": "list",
             "ordered": true,
             "items": [
-              "Summarize key message (Example: \"In conclusion, protecting whales is not just about conservation—it's about preserving the health of our entire planet.\")",
-              "Express hope for change (Example: \"I sincerely hope you will consider these points and join the global effort to protect these magnificent creatures.\")",
-              "Thank and sign off (Example: \"Thank you for taking the time to consider this important matter. Sincerely, [Your Name]\")"
+              "Summarize your key message",
+              "Express hope for positive change",
+              "Thank the reader and sign off"
             ],
             "className": "list-decimal list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Examples:",
+            "className": "text-lg font-semibold text-gray-700 pt-1 mt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "In conclusion, protecting whales is not just about conservation—it's about preserving the health of our entire planet.",
+              "I sincerely hope you will consider these points and join the global effort to protect these magnificent creatures.",
+              "Thank you for taking the time to consider this important matter. Sincerely, [Your Name]"
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
           },
 
           {
             "type": "heading",
             "level": 4,
             "text": "4. Useful Phrases",
-            "className": "text-xl font-semibold text-blue-600 pt-2"
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
           },
           {
             "type": "table",
@@ -222,19 +331,37 @@
             "type": "heading",
             "level": 4,
             "text": "5. Writing Tips",
-            "className": "text-xl font-semibold text-blue-600 pt-2"
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Be respectful and polite in tone (Example: \"I hope you'll consider...\" rather than \"You must...\")",
-              "Use facts and statistics (Example: \"According to a recent study by [Source], whale populations have declined by X%...\")",
-              "Show empathy and understanding (Example: \"I understand the cultural significance, and I believe we can find solutions that honor tradition while protecting nature.\")",
-              "Keep it concise and focused (Example: \"I'll be brief in outlining three key points...\")",
-              "End with a clear call to action (Example: \"I encourage you to support policies that protect marine life and promote sustainable alternatives.\")"
+              "Be respectful and polite in tone",
+              "Use facts and statistics to support your points",
+              "Show empathy and understanding of cultural perspectives",
+              "Keep your message concise and focused",
+              "End with a clear call to action"
             ],
             "className": "list-disc list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Examples of Good vs. Poor Phrasing:",
+            "className": "text-lg font-semibold text-gray-700 pt-1 mt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Better: 'I hope you'll consider...' (instead of 'You must...')",
+              "Better: 'Research shows that whale populations have declined by X%...' (instead of 'Everyone knows that...')",
+              "Better: 'I understand the cultural significance, and I believe we can find solutions...' (instead of 'Your traditions are wrong...')",
+              "Better: 'I'll be brief in outlining three key points...' (instead of 'There are many things to say about this...')",
+              "Better: 'I encourage you to support policies that protect marine life...' (instead of 'You need to do something about this...')"
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
