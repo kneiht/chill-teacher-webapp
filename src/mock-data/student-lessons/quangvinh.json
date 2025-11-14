@@ -23,8 +23,13 @@
     },
     {
       "course": "advanced-topics",
-      "unit": "whales-guardians-of-the-climate",
+      "unit": "multiple-intelligence-theory",
       "lesson": "lesson-5-listening"
+    },
+    {
+      "course": "advanced-topics",
+      "unit": "multiple-intelligence-theory",
+      "lesson": "lesson-5-shadowing"
     }
   ]
 }
