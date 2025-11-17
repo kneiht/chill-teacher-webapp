@@ -1,0 +1,593 @@
+{
+  "lesson-8-presentation": {
+    "background": "https://storage.chillteacher.com/backgrounds/lessons/whales-guardians-of-the-climate.webp",
+    "title": "Whales Guardians of the Climate",
+    "description": "Lesson 8: Presentation",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "page", "id": "presentation-guide" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "lesson-video",
+          "url": "https://youtu.be/ieet1davY3M",
+          "title": "Video Overview"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Whales Guardians of the Climate" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 8: Presentation" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Xem lại video overview để có ý tưởng về bài thuyết trình."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Dùng PowerPoint, Google Slides hoặc Canva để tạo slides thuyết trình theo hướng dẫn. Lưu ý: Toàn bộ nội dung thuyết trình đề nằm trong bài đọc. Hỏi giáo viên hướng dẫn hỗ trợ nếu gặp khó khăn."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Tập thuyết trình và quay video." }]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      },
+      {
+        "id": "presentation-guide",
+        "title": "Presentation Guide",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "Whales – Guardians of the Climate" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 8: Presentation" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": { "class": "text-2xl font-bold text-blue-600" },
+            "children": [
+              {
+                "text": "SAMPLE OUTLINE FOR PRESENTATION: “Whales – Guardians of the Climate”"
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "children": [
+              {
+                "text": "This is a sample outline for your presentation about "
+              },
+              {
+                "tag": "strong",
+                "children": [{ "text": "Whales – Guardians of the Climate" }]
+              },
+              {
+                "text": ". You can use it as a model or adapt it. The outline includes both the "
+              },
+              { "tag": "strong", "children": [{ "text": "onscreen content" }] },
+              { "text": " (what appears on the slide) and the " },
+              { "tag": "strong", "children": [{ "text": "speaker script" }] },
+              { "text": " (what you say during your presentation)." }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [{ "text": "1. Understanding the Goal" }]
+          },
+          { "tag": "p", "children": [{ "text": "This presentation will:" }] },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Explain why whales are ‘engineers of the ocean’ and how they sustain life."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Summarize climate threats to oceans: warming, acidification, sea-level rise, stronger storms."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Describe how whales store carbon and fertilize phytoplankton that absorb CO2 and produce oxygen."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Highlight current threats to whales: ship strikes, fishing gear, and noise; include the North Atlantic right whale case."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Present actions to protect whales and climate: slower ships, safer fishing, protected habitats."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [
+              { "text": "2. Presentation Structure (Slides Overview)" }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": { "class": "text-lg font-semibold text-blue-600" },
+            "children": [{ "text": "Slides 1–2: More Than Ocean Giants" }]
+          },
+          {
+            "tag": "p",
+            "children": [
+              {
+                "text": "Introduce whales as intelligent ocean engineers and why they matter for the planet."
+              }
+            ]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " whales’ size, intelligence, and role in moving nutrients and sustaining ocean life."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “Whales are not only majestic and intelligent - they are ‘engineers of the ocean’ that help circulate nutrients, support tiny plants, and keep Earth’s systems in balance.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 mt-4"
+            },
+            "children": [{ "text": "Slides 3–4: Oceans Under Threat" }]
+          },
+          {
+            "tag": "p",
+            "children": [
+              {
+                "text": "Explain climate-driven changes harming oceans and communities."
+              }
+            ]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " warming oceans, acidification, melting ice, rising seas, and stronger storms."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “Human activity is changing the climate. Oceans are warming and becoming more acidic, sea levels are rising, and storms intensify - threatening marine life and coastal communities.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": {
+              "class": "text-lg font-semibold text-blue-600 mt-4"
+            },
+            "children": [{ "text": "Slides 5–6: How Whales Help the Planet" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " whales store carbon over long lifetimes; when they die and sink (‘whale falls’), that carbon is locked away for centuries."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " whale waste fertilizes phytoplankton - tiny plants that absorb CO2 and produce about half of our oxygen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “By boosting phytoplankton and storing carbon, whales help remove hundreds of millions of tonnes of CO2 from the atmosphere each year.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": {
+              "class": "text-lg font-semibold text-blue-600 mt-4"
+            },
+            "children": [{ "text": "Slides 7–8: A Struggle for Survival" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " threats: ship collisions, entanglement in fishing gear, and underwater noise."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " the North Atlantic right whale - fewer than 400 individuals remain; many die slowly from injuries or starvation."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “Despite their importance, many whales face deadly dangers today, pushing some species dangerously close to extinction.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": {
+              "class": "text-lg font-semibold text-blue-600 mt-4"
+            },
+            "children": [
+              { "text": "Slides 9–10: Protecting the Ocean’s Giants" }
+            ]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " preventing ship strikes (speed limits, routing), improving fishing practices (ropeless gear), and creating safer habitats."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “Saving whales means saving the planet. Each whale that survives helps keep oceans healthy and the atmosphere cleaner.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": {
+              "class": "text-lg font-semibold text-blue-600 mt-4"
+            },
+            "children": [
+              { "text": "Slide 11: Why Protecting Whales Protects the Climate" }
+            ]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " whales help oceans stay productive and boost oxygen through phytoplankton."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " carbon storage and long-term sequestration when whales sink."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “By protecting whales, we strengthen the systems that give us air to breathe and a stable climate to live in.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h5",
+            "attributes": {
+              "class": "text-lg font-semibold text-blue-600 mt-4"
+            },
+            "children": [
+              { "text": "Slides 12–13: Call to Action and Conclusion" }
+            ]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " what governments and individuals can do: reduce emissions, protect habitats, adopt safer shipping and fishing."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      { "tag": "strong", "children": [{ "text": "Script:" }] },
+                      {
+                        "text": " “By protecting whales, we protect the ocean and the climate. Let’s act now so future generations inherit healthy seas and a livable planet.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+      }
+    ]
+  }
+}
