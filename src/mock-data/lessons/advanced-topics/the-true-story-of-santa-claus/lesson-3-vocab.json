@@ -1,0 +1,324 @@
+{
+  "lesson-3-vocab": {
+    "background": "https://hips.hearstapps.com/hmg-prod/images/decorated-christmas-tree-near-fireplace-at-home-royalty-free-image-1731335629.jpg?crop=1xw:0.84375xh;0,0.0538xh",
+    "title": "The True Story of Santa Claus",
+    "description": "Lesson 3: Vocabulary - Part 3",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "vocabulary" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "cloze-game" }
+    ],
+    "vocab": [
+      {
+        "word": "cartoonist",
+        "phonics": "/kɑːrˈtuːnɪst/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/cartoonist.webp",
+        "vietnameseMeaning": "họa sĩ vẽ tranh biếm họa/hoạt hình",
+        "sampleSentence": "The cartoonist drew a funny picture of the president.",
+        "vietnameseTranslation": "Họa sĩ biếm họa đã vẽ một bức tranh hài hước về tổng thống.",
+        "wordPronunciation": "cartoonist.wav",
+        "sentencePronunciation": "the-cartoonist-drew-a-funny-picture-of-the-president.wav"
+      },
+      {
+        "word": "crucial",
+        "phonics": "/ˈkruːʃəl/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/crucial.webp",
+        "vietnameseMeaning": "quan trọng, cốt yếu",
+        "sampleSentence": "Water is crucial for survival.",
+        "vietnameseTranslation": "Nước là yếu tố cốt yếu để sinh tồn.",
+        "wordPronunciation": "crucial.wav",
+        "sentencePronunciation": "water-is-crucial-for-survival.wav"
+      },
+      {
+        "word": "maintain",
+        "phonics": "/meɪnˈteɪn/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/maintain.webp",
+        "vietnameseMeaning": "duy trì, giữ gìn",
+        "sampleSentence": "He maintains a healthy lifestyle.",
+        "vietnameseTranslation": "Anh ấy duy trì một lối sống lành mạnh.",
+        "wordPronunciation": "maintain.wav",
+        "sentencePronunciation": "he-maintains-a-healthy-lifestyle.wav"
+      },
+      {
+        "word": "workshop",
+        "phonics": "/ˈwɜːrkʃɒp/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/workshop.webp",
+        "vietnameseMeaning": "xưởng, phân xưởng",
+        "sampleSentence": "The carpenter has a workshop in his garage.",
+        "vietnameseTranslation": "Người thợ mộc có một xưởng làm việc trong gara của mình.",
+        "wordPronunciation": "workshop.wav",
+        "sentencePronunciation": "the-carpenter-has-a-workshop-in-his-garage.wav"
+      },
+      {
+        "word": "illustrator",
+        "phonics": "/ˈɪləstreɪtər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/illustrator.webp",
+        "vietnameseMeaning": "người vẽ tranh minh họa",
+        "sampleSentence": "The illustrator created beautiful pictures for the book.",
+        "vietnameseTranslation": "Người vẽ tranh minh họa đã tạo ra những bức tranh đẹp cho cuốn sách.",
+        "wordPronunciation": "illustrator.wav",
+        "sentencePronunciation": "the-illustrator-created-beautiful-pictures-for-the-book.wav"
+      },
+      {
+        "word": "campaign",
+        "phonics": "/kæmˈpeɪn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/campaign.webp",
+        "vietnameseMeaning": "chiến dịch",
+        "sampleSentence": "The advertising campaign was very successful.",
+        "vietnameseTranslation": "Chiến dịch quảng cáo đã rất thành công.",
+        "wordPronunciation": "campaign.wav",
+        "sentencePronunciation": "the-advertising-campaign-was-very-successful.wav"
+      },
+      {
+        "word": "standardize",
+        "phonics": "/ˈstændərdaɪz/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/standardize.webp",
+        "vietnameseMeaning": "tiêu chuẩn hóa",
+        "sampleSentence": "They want to standardize the testing process.",
+        "vietnameseTranslation": "Họ muốn tiêu chuẩn hóa quy trình kiểm tra.",
+        "wordPronunciation": "standardize.wav",
+        "sentencePronunciation": "they-want-to-standardize-the-testing-process.wav"
+      },
+      {
+        "word": "version",
+        "phonics": "/ˈvɜːrʒən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/version.webp",
+        "vietnameseMeaning": "phiên bản",
+        "sampleSentence": "This is the latest version of the software.",
+        "vietnameseTranslation": "Đây là phiên bản mới nhất của phần mềm.",
+        "wordPronunciation": "version.wav",
+        "sentencePronunciation": "this-is-the-latest-version-of-the-software.wav"
+      },
+      {
+        "word": "icon",
+        "phonics": "/ˈaɪkɒn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/icon.webp",
+        "vietnameseMeaning": "biểu tượng",
+        "sampleSentence": "The Eiffel Tower is a global icon.",
+        "vietnameseTranslation": "Tháp Eiffel là một biểu tượng toàn cầu.",
+        "wordPronunciation": "icon.wav",
+        "sentencePronunciation": "the-eiffel-tower-is-a-global-icon.wav"
+      },
+      {
+        "word": "charitable",
+        "phonics": "/ˈtʃærɪtəbl/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/charitable.webp",
+        "vietnameseMeaning": "từ thiện, nhân đức",
+        "sampleSentence": "She is known for her charitable work.",
+        "vietnameseTranslation": "Cô ấy nổi tiếng với công việc từ thiện của mình.",
+        "wordPronunciation": "charitable.wav",
+        "sentencePronunciation": "she-is-known-for-her-charitable-work.wav"
+      },
+      {
+        "word": "generosity",
+        "phonics": "/ˌdʒenəˈrɒsəti/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/generosity.webp",
+        "vietnameseMeaning": "sự hào phóng",
+        "sampleSentence": "Thank you for your kindness and generosity.",
+        "vietnameseTranslation": "Cảm ơn lòng tốt và sự hào phóng của bạn.",
+        "wordPronunciation": "generosity.wav",
+        "sentencePronunciation": "thank-you-for-your-kindness-and-generosity.wav"
+      },
+      {
+        "word": "spirit",
+        "phonics": "/ˈspɪrɪt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/spirit.webp",
+        "vietnameseMeaning": "tinh thần",
+        "sampleSentence": "The team has a great fighting spirit.",
+        "vietnameseTranslation": "Đội bóng có tinh thần chiến đấu tuyệt vời.",
+        "wordPronunciation": "spirit.wav",
+        "sentencePronunciation": "the-team-has-a-great-fighting-spirit.wav"
+      }
+    ],
+    "clozeData": {
+      "sentences": [
+        {
+          "sentence": "A _____ creates drawings for newspapers and magazines.",
+          "word": "cartoonist"
+        },
+        {
+          "sentence": "It is _____ to follow the safety rules.",
+          "word": "crucial"
+        },
+        {
+          "sentence": "You must _____ your car to keep it running well.",
+          "word": "maintain"
+        },
+        {
+          "sentence": "The elves work hard in Santa's _____.",
+          "word": "workshop"
+        },
+        {
+          "sentence": "The _____ drew pictures of animals for the children's book.",
+          "word": "illustrator"
+        },
+        {
+          "sentence": "The election _____ lasted for three months.",
+          "word": "campaign"
+        },
+        {
+          "sentence": "Schools try to _____ the curriculum across the country.",
+          "word": "standardize"
+        },
+        {
+          "sentence": "I prefer the movie _____ of the story.",
+          "word": "version"
+        },
+        {
+          "sentence": "Marilyn Monroe is a Hollywood _____.",
+          "word": "icon"
+        },
+        {
+          "sentence": "He made a large donation to a _____ organization.",
+          "word": "charitable"
+        },
+        {
+          "sentence": "His _____ amazed everyone when he paid for the whole dinner.",
+          "word": "generosity"
+        },
+        {
+          "sentence": "Christmas is a time for the _____ of giving.",
+          "word": "spirit"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "The True Story of Santa Claus" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 3: Vocabulary - Part 3" }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video mở đầu." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Luyện tập phát âm từ vựng và câu." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập từ vựng bằng các hoạt động tương tác, chụp kết quả gửi kết quả cho giáo viên, quan trọng là cách hoạt động trắc nghiệm và nghe."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Quay video trả lời các câu hỏi sau và gửi cho giáo viên:"
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "text-2xl text-gray-700 mt-4 space-y-4 list-disc list-inside"
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "What did Thomas Nast add to the Santa legend?"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "How did Coca-Cola influence the image of Santa?"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "children": [
+                          { "text": "What is the core spirit of Santa Claus?" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}

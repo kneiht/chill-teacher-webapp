@@ -1,0 +1,360 @@
+{
+  "lesson-8-presentation": {
+    "background": "https://hips.hearstapps.com/hmg-prod/images/decorated-christmas-tree-near-fireplace-at-home-royalty-free-image-1731335629.jpg?crop=1xw:0.84375xh;0,0.0538xh",
+    "title": "The True Story of Santa Claus",
+    "description": "Lesson 8: Presentation",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "page", "id": "presentation-guide" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "lesson-video",
+          "url": "https://youtu.be/9k4y5p7u2tI",
+          "title": "Video Overview"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "The True Story of Santa Claus" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 8: Presentation" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Xem lại video overview để có ý tưởng về bài thuyết trình."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Dùng PowerPoint, Google Slides hoặc Canva để tạo slides thuyết trình theo hướng dẫn. Lưu ý: Toàn bộ nội dung thuyết trình đề nằm trong bài đọc."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Tập thuyết trình và quay video." }]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      },
+      {
+        "id": "presentation-guide",
+        "title": "Presentation Guide",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "The True Story of Santa Claus" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 8: Presentation" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": { "class": "text-2xl font-bold text-blue-600" },
+            "children": [
+              {
+                "text": "SAMPLE OUTLINE FOR PRESENTATION: “The History of Santa Claus”"
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "children": [
+              {
+                "text": "This is a sample outline for your presentation. You can use it as a model or adapt it."
+              }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [{ "text": "1. Introduction" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " The modern image of Santa (red suit, jolly, North Pole) vs. his history."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “When we think of Christmas, we think of Santa Claus. But did you know he wasn't always a jolly man in a red suit?”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [{ "text": "2. The Real Man: St. Nicholas" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " St. Nicholas in Myra (Turkey), his kindness, and the stocking story."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “It all started with St. Nicholas, a monk who gave away his wealth to help the poor. He is the reason we hang stockings today.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [{ "text": "3. Sinterklaas & The Dutch Influence" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " Dutch immigrants in New York, Sinterklaas (tall bishop), and the name evolution."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “The name 'Santa Claus' actually comes from the Dutch name 'Sinterklaas'. But back then, he looked very different!”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [{ "text": "4. The American Makeover" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " Clement Clarke Moore (sleigh, reindeer), Thomas Nast (red suit, North Pole), and Coca-Cola (friendly face)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “American writers and artists changed Santa's look. Coca-Cola helped create the friendly grandfather figure we love today.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "h4",
+            "attributes": {
+              "class": "text-xl font-semibold text-blue-600 pt-2"
+            },
+            "children": [{ "text": "5. Conclusion" }]
+          },
+          {
+            "tag": "ul",
+            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Talk about:" }]
+                      },
+                      {
+                        "text": " The core spirit of giving remains the same."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "tag": "span",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [{ "text": "Script example:" }]
+                      },
+                      {
+                        "text": " “Santa has changed a lot over history, but his message is still the same: the joy of giving to others.”"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+      }
+    ]
+  }
+}

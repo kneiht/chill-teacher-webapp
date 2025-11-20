@@ -1,0 +1,219 @@
+{
+  "lesson-7-writing": {
+    "background": "https://hips.hearstapps.com/hmg-prod/images/decorated-christmas-tree-near-fireplace-at-home-royalty-free-image-1731335629.jpg?crop=1xw:0.84375xh;0,0.0538xh",
+    "title": "The True Story of Santa Claus",
+    "description": "Lesson 7: Writing",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "page", "id": "writing-guide" }
+    ],
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "The True Story of Santa Claus" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 7: Writing" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Đọc kỹ bài đọc trong phần Writing Guide"
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm theo hướng dẫn viết và viết bài vào vở chụp hình cho thầy."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      },
+      {
+        "id": "writing-guide",
+        "title": "Writing Guide",
+        "scrollable": true,
+        "content": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "The True Story of Santa Claus",
+            "className": "text-4xl font-bold text-indigo-700 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Lesson 7: Writing Guide",
+            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "GUIDE TO WRITING AN ESSAY: THE EVOLUTION OF SANTA CLAUS",
+            "className": "text-2xl font-bold text-blue-600"
+          },
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "1. Introduction",
+            "className": "text-xl font-semibold text-blue-600 pt-2"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Instructions:",
+            "className": "text-lg font-semibold text-gray-700 pt-1"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Hook the reader with the modern image of Santa",
+              "State the thesis: Santa has evolved from a real person to a global icon",
+              "Briefly mention the key stages (St. Nicholas, Sinterklaas, American Santa)"
+            ],
+            "className": "list-decimal list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Examples:",
+            "className": "text-lg font-semibold text-gray-700 pt-1 mt-4"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Everyone knows Santa Claus as the jolly man in the red suit...",
+              "However, the real story starts centuries ago with a monk named St. Nicholas...",
+              "This essay will explore how a charitable bishop became the symbol of Christmas we know today."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
+          },
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "2. Body Paragraph 1: The Origins",
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Instructions:",
+            "className": "text-lg font-semibold text-gray-700 pt-1"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Describe St. Nicholas (Myra, 3rd century)",
+              "Mention his kindness and the stocking tradition",
+              "Introduce the Dutch 'Sinterklaas'"
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "3. Body Paragraph 2: The American Transformation",
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Instructions:",
+            "className": "text-lg font-semibold text-gray-700 pt-1"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Explain Clement Clarke Moore's contribution ('The Night Before Christmas')",
+              "Discuss Thomas Nast's drawings (Red suit, North Pole)",
+              "Mention Haddon Sundblom and Coca-Cola's influence"
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 4,
+            "text": "4. Conclusion",
+            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Instructions:",
+            "className": "text-lg font-semibold text-gray-700 pt-1"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Summarize the main points",
+              "Reflect on the core meaning of Santa (generosity)",
+              "Final thought"
+            ],
+            "className": "list-decimal list-inside ml-6 space-y-1"
+          },
+          {
+            "type": "heading",
+            "level": 5,
+            "text": "Examples:",
+            "className": "text-lg font-semibold text-gray-700 pt-1 mt-2"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "From a humble monk to a magical gift-giver, Santa's journey is fascinating.",
+              "Despite the changes in his appearance, the spirit of giving remains the same.",
+              "Santa Claus reminds us that kindness is timeless."
+            ],
+            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "object": "jolly",
+    "prompt": "a realistic photo of a happy, laughing older man with a white beard, wearing a red sweater, warm lighting, high quality",
+    "filename": "jolly.png"
+  },
+  {
+    "object": "ancient",
+    "prompt": "a realistic photo of an old, weathered stone scroll or book with ancient writing, dusty atmosphere, cinematic lighting",
+    "filename": "ancient.png"
+  },
+  {
+    "object": "legend",
+    "prompt": "a realistic photo of an old, leather-bound book titled 'Legends' sitting on a wooden table, candlelight, mysterious atmosphere",
+    "filename": "legend.png"
+  },
+  {
+    "object": "monk",
+    "prompt": "a realistic photo of a monk in a simple brown robe walking in a stone cloister, peaceful sunlight, historical setting",
+    "filename": "monk.png"
+  },
+  {
+    "object": "piety",
+    "prompt": "a realistic photo of a person with hands clasped in prayer, soft lighting, serene expression, spiritual atmosphere",
+    "filename": "piety.png"
+  },
+  {
+    "object": "wealth",
+    "prompt": "a realistic photo of a pile of gold coins and jewelry, sparkling, luxurious texture, high detail",
+    "filename": "wealth.png"
+  },
+  {
+    "object": "afford",
+    "prompt": "a realistic photo of a person looking at a price tag on a luxury item with a thoughtful expression, shopping context",
+    "filename": "afford.png"
+  },
+  {
+    "object": "chimney",
+    "prompt": "a realistic photo of a red brick chimney on a snowy roof, smoke rising, winter sky background",
+    "filename": "chimney.png"
+  },
+  {
+    "object": "stocking",
+    "prompt": "a realistic photo of a red and white knitted Christmas stocking hanging by a fireplace, warm glow",
+    "filename": "stocking.png"
+  },
+  {
+    "object": "origin",
+    "prompt": "a realistic photo of a small seedling sprouting from the ground, symbolizing a beginning, soft morning light, macro shot",
+    "filename": "origin.png"
+  },
+  {
+    "object": "saint",
+    "prompt": "a realistic photo of a stained glass window depicting a saint with a halo, colorful light streaming through",
+    "filename": "saint.png"
+  },
+  {
+    "object": "immigrant",
+    "prompt": "a realistic photo of a family with suitcases standing on a dock, looking at a city skyline in the distance, vintage style",
+    "filename": "immigrant.png"
+  },
+  {
+    "object": "depict",
+    "prompt": "a realistic photo of an artist painting a portrait on a canvas, brush in hand, focused expression",
+    "filename": "depict.png"
+  },
+  {
+    "object": "bishop",
+    "prompt": "a realistic photo of a bishop's mitre (hat) and staff resting on a velvet cushion, ornate details",
+    "filename": "bishop.png"
+  },
+  {
+    "object": "evolve",
+    "prompt": "a realistic photo showing the evolution of a butterfly from caterpillar to chrysalis to butterfly, nature documentary style",
+    "filename": "evolve.png"
+  },
+  {
+    "object": "nickname",
+    "prompt": "a realistic photo of a name tag with a handwritten nickname on a shirt, casual setting",
+    "filename": "nickname.png"
+  },
+  {
+    "object": "transform",
+    "prompt": "a realistic photo of a landscape changing from winter to spring, split screen or transition effect, nature photography",
+    "filename": "transform.png"
+  },
+  {
+    "object": "appearance",
+    "prompt": "a realistic photo of a person looking in a mirror, adjusting their tie or hair, getting ready",
+    "filename": "appearance.png"
+  },
+  {
+    "object": "poem",
+    "prompt": "a realistic photo of a handwritten poem on parchment paper with a quill pen nearby, romantic lighting",
+    "filename": "poem.png"
+  },
+  {
+    "object": "elf",
+    "prompt": "a realistic photo of a Christmas elf working on a toy, detailed costume, magical workshop background",
+    "filename": "elf.png"
+  },
+  {
+    "object": "miniature",
+    "prompt": "a realistic photo of a miniature model city or house, macro lens, high detail, tilt-shift effect",
+    "filename": "miniature.png"
+  },
+  {
+    "object": "sleigh",
+    "prompt": "a realistic photo of a wooden sleigh in the snow, vintage design, winter forest background",
+    "filename": "sleigh.png"
+  },
+  {
+    "object": "reindeer",
+    "prompt": "a realistic photo of a reindeer standing in the snow, antlers, breath visible in cold air, wildlife photography",
+    "filename": "reindeer.png"
+  },
+  {
+    "object": "lore",
+    "prompt": "a realistic photo of a group of people sitting around a campfire listening to a storyteller, night time, firelight",
+    "filename": "lore.png"
+  },
+  {
+    "object": "cartoonist",
+    "prompt": "a realistic photo of a cartoonist drawing a comic strip at a drafting table, pens and ink, creative workspace",
+    "filename": "cartoonist.png"
+  },
+  {
+    "object": "crucial",
+    "prompt": "a realistic photo of a puzzle with one missing piece being put into place, highlighting importance",
+    "filename": "crucial.png"
+  },
+  {
+    "object": "maintain",
+    "prompt": "a realistic photo of a mechanic working on a car engine, tools, grease, focused on maintenance",
+    "filename": "maintain.png"
+  },
+  {
+    "object": "workshop",
+    "prompt": "a realistic photo of a cluttered but organized workshop with tools, wood shavings, and a workbench",
+    "filename": "workshop.png"
+  },
+  {
+    "object": "illustrator",
+    "prompt": "a realistic photo of a digital illustrator working on a tablet, colorful screen, modern studio",
+    "filename": "illustrator.png"
+  },
+  {
+    "object": "campaign",
+    "prompt": "a realistic photo of election posters and banners, public rally atmosphere",
+    "filename": "campaign.png"
+  },
+  {
+    "object": "standardize",
+    "prompt": "a realistic photo of identical products on an assembly line, perfect alignment, industrial setting",
+    "filename": "standardize.png"
+  },
+  {
+    "object": "version",
+    "prompt": "a realistic photo of software version numbers on a computer screen or different editions of a book stacked",
+    "filename": "version.png"
+  },
+  {
+    "object": "icon",
+    "prompt": "a realistic photo of a famous landmark like the Statue of Liberty, clear blue sky, travel photography",
+    "filename": "icon.png"
+  },
+  {
+    "object": "charitable",
+    "prompt": "a realistic photo of hands giving a food package to someone in need, focus on the hands, compassionate tone",
+    "filename": "charitable.png"
+  },
+  {
+    "object": "generosity",
+    "prompt": "a realistic photo of a person giving a gift to another, smiling faces, warm interaction",
+    "filename": "generosity.png"
+  },
+  {
+    "object": "spirit",
+    "prompt": "a realistic photo of a glowing, ethereal light or energy, abstract but realistic texture, mystical",
+    "filename": "spirit.png"
+  }
+]

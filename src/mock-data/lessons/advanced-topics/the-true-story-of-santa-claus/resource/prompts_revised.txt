@@ -1,0 +1,42 @@
+[
+  {
+    "object": "legend",
+    "prompt": "a realistic photo of an open ancient storybook with a 3D holographic image of a knight fighting a dragon rising from the pages, magical atmosphere",
+    "filename": "legend.png"
+  },
+  {
+    "object": "origin",
+    "prompt": "a realistic photo of a small mountain spring where a large river begins, water bubbling from the earth, labeled 'The Source'",
+    "filename": "origin.png"
+  },
+  {
+    "object": "saint",
+    "prompt": "a realistic photo of a stone statue of a holy figure with a bright, glowing golden halo ring floating above the head",
+    "filename": "saint.png"
+  },
+  {
+    "object": "depict",
+    "prompt": "a realistic photo of an artist's hand drawing a portrait of a cat on paper, with the real cat sitting right next to it for comparison",
+    "filename": "depict.png"
+  },
+  {
+    "object": "bishop",
+    "prompt": "a realistic photo of a religious leader wearing a tall, pointed ceremonial hat (mitre) and holding a long hooked staff (crozier), standing in a church",
+    "filename": "bishop.png"
+  },
+  {
+    "object": "transform",
+    "prompt": "a realistic photo of a toy robot in the middle of changing into a toy car, showing the mechanical parts shifting",
+    "filename": "transform.png"
+  },
+  {
+    "object": "version",
+    "prompt": "a realistic photo of three book covers of 'Harry Potter' from different years side by side, showing different cover art styles",
+    "filename": "version.png"
+  },
+  {
+    "object": "spirit",
+    "prompt": "a realistic photo of a translucent, glowing white silhouette of a person (ghost) floating in a dimly lit room, mysterious",
+    "filename": "spirit.png"
+  }
+]

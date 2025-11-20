@@ -1,0 +1,512 @@
+{
+  "lesson-4-reading": {
+    "background": "https://hips.hearstapps.com/hmg-prod/images/decorated-christmas-tree-near-fireplace-at-home-royalty-free-image-1731335629.jpg?crop=1xw:0.84375xh;0,0.0538xh",
+    "title": "The True Story of Santa Claus",
+    "description": "Lesson 4: Reading",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "candy-crush" },
+      { "type": "activity", "id": "cloze-game" },
+      { "type": "activity", "id": "reading-slides" },
+      { "type": "activity", "id": "reading-comprehension" }
+    ],
+    "externalContent": {
+      "videos": []
+    },
+    "vocab": [
+      {
+        "word": "icon",
+        "phonics": "/ˈaɪkɒn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/icon.webp",
+        "vietnameseMeaning": "biểu tượng",
+        "sampleSentence": "Santa Claus has become a global icon of generosity.",
+        "vietnameseTranslation": "Ông già Noel đã trở thành biểu tượng toàn cầu của sự hào phóng.",
+        "wordPronunciation": "icon.wav",
+        "sentencePronunciation": "santa-claus-has-become-a-global-icon-of-generosity.wav"
+      },
+      {
+        "word": "legend",
+        "phonics": "/ˈledʒənd/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/legend.webp",
+        "vietnameseMeaning": "huyền thoại, truyền thuyết",
+        "sampleSentence": "The legend of St. Nicholas is hundreds of years old.",
+        "vietnameseTranslation": "Truyền thuyết về Thánh Nicholas đã có từ hàng trăm năm nay.",
+        "wordPronunciation": "legend.wav",
+        "sentencePronunciation": "the-legend-of-st-nicholas-is-hundreds-of-years-old.wav"
+      },
+      {
+        "word": "bishop",
+        "phonics": "/ˈbɪʃəp/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/bishop.webp",
+        "vietnameseMeaning": "giám mục",
+        "sampleSentence": "St. Nicholas was a bishop in Myra.",
+        "vietnameseTranslation": "Thánh Nicholas là một giám mục ở Myra.",
+        "wordPronunciation": "bishop.wav",
+        "sentencePronunciation": "st-nicholas-was-a-bishop-in-myra.wav"
+      },
+      {
+        "word": "immigrant",
+        "phonics": "/ˈɪmɪɡrənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/immigrant.webp",
+        "vietnameseMeaning": "người nhập cư",
+        "sampleSentence": "Dutch immigrants brought the story of Sinterklaas to New York.",
+        "vietnameseTranslation": "Những người nhập cư Hà Lan đã mang câu chuyện về Sinterklaas đến New York.",
+        "wordPronunciation": "immigrant.wav",
+        "sentencePronunciation": "dutch-immigrants-brought-the-story-of-sinterklaas-to-new-york.wav"
+      },
+      {
+        "word": "depict",
+        "phonics": "/dɪˈpɪkt/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/depict.webp",
+        "vietnameseMeaning": "mô tả, khắc họa",
+        "sampleSentence": "Early pictures depicted Santa as a tall, slim man.",
+        "vietnameseTranslation": "Những bức tranh đầu tiên khắc họa ông già Noel là một người đàn ông cao và gầy.",
+        "wordPronunciation": "depict.wav",
+        "sentencePronunciation": "early-pictures-depicted-santa-as-a-tall-slim-man.wav"
+      },
+      {
+        "word": "transform",
+        "phonics": "/trænsˈfɔːrm/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/transform.webp",
+        "vietnameseMeaning": "biến đổi, thay đổi hoàn toàn",
+        "sampleSentence": "Writers and artists transformed Santa's appearance over time.",
+        "vietnameseTranslation": "Các nhà văn và nghệ sĩ đã thay đổi hoàn toàn ngoại hình của ông già Noel theo thời gian.",
+        "wordPronunciation": "transform.wav",
+        "sentencePronunciation": "writers-and-artists-transformed-santas-appearance-over-time.wav"
+      },
+      {
+        "word": "miniature",
+        "phonics": "/ˈmɪnətʃər/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/miniature.webp",
+        "vietnameseMeaning": "thu nhỏ, tí hon",
+        "sampleSentence": "The poem described a miniature sleigh pulled by reindeer.",
+        "vietnameseTranslation": "Bài thơ mô tả một chiếc xe trượt tuyết tí hon được kéo bởi những chú tuần lộc.",
+        "wordPronunciation": "miniature.wav",
+        "sentencePronunciation": "the-poem-described-a-miniature-sleigh-pulled-by-reindeer.wav"
+      },
+      {
+        "word": "cartoonist",
+        "phonics": "/kɑːrˈtuːnɪst/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/cartoonist.webp",
+        "vietnameseMeaning": "họa sĩ truyện tranh/biếm họa",
+        "sampleSentence": "Thomas Nast was a famous political cartoonist.",
+        "vietnameseTranslation": "Thomas Nast là một họa sĩ biếm họa chính trị nổi tiếng.",
+        "wordPronunciation": "cartoonist.wav",
+        "sentencePronunciation": "thomas-nast-was-a-famous-political-cartoonist.wav"
+      },
+      {
+        "word": "illustrator",
+        "phonics": "/ˈɪləstreɪtər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/illustrator.webp",
+        "vietnameseMeaning": "họa sĩ minh họa",
+        "sampleSentence": "Coca-Cola hired an illustrator to create holiday ads.",
+        "vietnameseTranslation": "Coca-Cola đã thuê một họa sĩ minh họa để tạo ra các quảng cáo cho kỳ nghỉ.",
+        "wordPronunciation": "illustrator.wav",
+        "sentencePronunciation": "coca-cola-hired-an-illustrator-to-create-holiday-ads.wav"
+      },
+      {
+        "word": "standardize",
+        "phonics": "/ˈstændərdaɪz/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/standardize.webp",
+        "vietnameseMeaning": "tiêu chuẩn hóa",
+        "sampleSentence": "Haddon Sundblom helped standardize the image of Santa.",
+        "vietnameseTranslation": "Haddon Sundblom đã giúp tiêu chuẩn hóa hình ảnh của ông già Noel.",
+        "wordPronunciation": "standardize.wav",
+        "sentencePronunciation": "haddon-sundblom-helped-standardize-the-image-of-santa.wav"
+      },
+      {
+        "word": "charitable",
+        "phonics": "/ˈtʃærɪtəbl/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/charitable.webp",
+        "vietnameseMeaning": "từ thiện, nhân đức",
+        "sampleSentence": "St. Nicholas was known for his charitable acts.",
+        "vietnameseTranslation": "Thánh Nicholas nổi tiếng với những hành động từ thiện của mình.",
+        "wordPronunciation": "charitable.wav",
+        "sentencePronunciation": "st-nicholas-was-known-for-his-charitable-acts.wav"
+      },
+      {
+        "word": "generosity",
+        "phonics": "/ˌdʒenəˈrɒsəti/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/generosity.webp",
+        "vietnameseMeaning": "sự hào phóng",
+        "sampleSentence": "Santa Claus is a symbol of generosity.",
+        "vietnameseTranslation": "Ông già Noel là biểu tượng của sự hào phóng.",
+        "wordPronunciation": "generosity.wav",
+        "sentencePronunciation": "santa-claus-is-a-symbol-of-generosity.wav"
+      }
+    ],
+    "readingSlidesData": [
+      {
+        "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio1.wav",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image1.png",
+        "title": "The True Story of Santa Claus",
+        "text": ""
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio2.wav",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image2.png",
+        "textTitle": "From Bishop to Icon",
+        "text": "When people think of Christmas, the first image that often comes to mind is a jolly, overweight man with a white beard and a bright red suit. However, Santa Claus did not always look like the character we see in shopping malls today. His history is a fascinating mix of ancient legends, immigrant traditions, and modern marketing."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio3.wav",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image3.png",
+        "textTitle": "The Real Man: Saint Nicholas",
+        "text": "The story begins not at the North Pole, but in Myra (modern-day Turkey) during the 3rd century. There was a monk named St. Nicholas who was admired for his piety and kindness. Legends say he gave away all his inherited wealth and traveled the countryside helping the poor and sick. One famous story tells of how he secretly dropped a bag of gold down a chimney to help a poor father and his three daughters, which is the origin of the Christmas stocking tradition."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio4.wav",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image4.png",
+        "textTitle": "The Dutch Influence",
+        "text": "Over time, St. Nicholas became the most popular saint in Europe. When Dutch immigrants moved to New York in the late 18th century, they brought the story of \"Sinterklaas\" with them. Sinterklaas was depicted as a tall, slim bishop who rode a white horse. The name \"Santa Claus\" actually evolved from his Dutch nickname, Sinterklaas, which is a shortened form of Sint Nikolaas."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio5.wav",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image5.png",
+        "textTitle": "Shaping the Image",
+        "text": "In the 19th century, American writers and artists began to transform Santa’s appearance. In 1822, Clement Clarke Moore wrote \"The Night Before Christmas,\" describing Santa as a \"right jolly old elf\" with a miniature sleigh. Later, political cartoonist Thomas Nast added crucial details like the red suit and the North Pole workshop."
+      },
+      {
+        "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio6.wav",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image6.png",
+        "textTitle": "The Modern Santa",
+        "text": "In the 1930s, Coca-Cola hired illustrator Haddon Sundblom for their holiday ads. Sundblom drew a Santa who was larger than life, with a warm, friendly face and a twinkling smile. He standardized the image of Santa as a grandfatherly figure drinking a soda. This version became the global icon we recognize today. Despite these changes, the core spirit of Santa Claus remains the same: the joy of giving to others."
+      }
+    ],
+    "readingComprehensionData": {
+      "title": "The True Story of Santa Claus",
+      "passage": [
+        {
+          "heading": "From Bishop to Icon",
+          "content": "When people think of Christmas, the first image that often comes to mind is a jolly, overweight man with a white beard and a bright red suit. However, Santa Claus did not always look like the character we see in shopping malls today. His history is a fascinating mix of ancient legends, immigrant traditions, and modern marketing."
+        },
+        {
+          "heading": "The Real Man: Saint Nicholas",
+          "content": "The story begins not at the North Pole, but in Myra (modern-day Turkey) during the 3rd century. There was a monk named St. Nicholas who was admired for his piety and kindness. Legends say he gave away all his inherited wealth and traveled the countryside helping the poor and sick. One famous story tells of how he secretly dropped a bag of gold down a chimney to help a poor father and his three daughters, which is the origin of the Christmas stocking tradition."
+        },
+        {
+          "heading": "The Dutch Influence",
+          "content": "Over time, St. Nicholas became the most popular saint in Europe. When Dutch immigrants moved to New York in the late 18th century, they brought the story of \"Sinterklaas\" with them. Sinterklaas was depicted as a tall, slim bishop who rode a white horse. The name \"Santa Claus\" actually evolved from his Dutch nickname, Sinterklaas, which is a shortened form of Sint Nikolaas."
+        },
+        {
+          "heading": "Shaping the Image",
+          "content": "In the 19th century, American writers and artists began to transform Santa’s appearance. In 1822, Clement Clarke Moore wrote \"The Night Before Christmas,\" describing Santa as a \"right jolly old elf\" with a miniature sleigh. Later, political cartoonist Thomas Nast added crucial details like the red suit and the North Pole workshop."
+        },
+        {
+          "heading": "The Modern Santa",
+          "content": "In the 1930s, Coca-Cola hired illustrator Haddon Sundblom for their holiday ads. Sundblom drew a Santa who was larger than life, with a warm, friendly face and a twinkling smile. He standardized the image of Santa as a grandfatherly figure drinking a soda. This version became the global icon we recognize today. Despite these changes, the core spirit of Santa Claus remains the same: the joy of giving to others."
+        }
+      ],
+      "questions": {
+        "singleChoice": [
+          {
+            "id": "sc1",
+            "prompt": "Where did the real St. Nicholas live?",
+            "options": [
+              { "value": "north-pole", "label": "The North Pole" },
+              { "value": "myra", "label": "Myra (Turkey)" },
+              { "value": "new-york", "label": "New York" }
+            ],
+            "correct": "myra"
+          },
+          {
+            "id": "sc2",
+            "prompt": "What is the origin of the name \"Santa Claus\"?",
+            "options": [
+              { "value": "english", "label": "An English nickname" },
+              { "value": "dutch", "label": "The Dutch name \"Sinterklaas\"" },
+              { "value": "german", "label": "A German legend" }
+            ],
+            "correct": "dutch"
+          },
+          {
+            "id": "sc3",
+            "prompt": "Who first described Santa as a \"jolly old elf\"?",
+            "options": [
+              { "value": "nast", "label": "Thomas Nast" },
+              { "value": "moore", "label": "Clement Clarke Moore" },
+              { "value": "sundblom", "label": "Haddon Sundblom" }
+            ],
+            "correct": "moore"
+          },
+          {
+            "id": "sc4",
+            "prompt": "What company helped standardize the modern image of Santa?",
+            "options": [
+              { "value": "pepsi", "label": "Pepsi" },
+              { "value": "coca-cola", "label": "Coca-Cola" },
+              { "value": "macys", "label": "Macy's" }
+            ],
+            "correct": "coca-cola"
+          }
+        ],
+        "tfng": [
+          {
+            "id": "tf1",
+            "statement": "St. Nicholas was originally a wealthy merchant.",
+            "correct": "false"
+          },
+          {
+            "id": "tf2",
+            "statement": "The Christmas stocking tradition comes from a story about St. Nicholas dropping gold down a chimney.",
+            "correct": "true"
+          },
+          {
+            "id": "tf3",
+            "statement": "Sinterklaas rode a reindeer.",
+            "correct": "false"
+          },
+          {
+            "id": "tf4",
+            "statement": "Thomas Nast gave Santa his red suit.",
+            "correct": "true"
+          },
+          {
+            "id": "tf5",
+            "statement": "Haddon Sundblom was a Dutch immigrant.",
+            "correct": "not_given"
+          }
+        ],
+        "matching": {
+          "questions": [
+            {
+              "id": "m1",
+              "statement": "Wrote \"The Night Before Christmas\"",
+              "correct": "option1"
+            },
+            {
+              "id": "m2",
+              "statement": "Drew the modern Coca-Cola Santa",
+              "correct": "option3"
+            },
+            {
+              "id": "m3",
+              "statement": "Added the North Pole workshop",
+              "correct": "option2"
+            }
+          ],
+          "options": [
+            { "value": "option1", "label": "Clement Clarke Moore" },
+            { "value": "option2", "label": "Thomas Nast" },
+            { "value": "option3", "label": "Haddon Sundblom" }
+          ]
+        },
+        "summary": [
+          {
+            "id": "sum1",
+            "prompt": "Complete: St. Nicholas was a monk admired for his piety and ______.",
+            "answers": ["kindness"]
+          },
+          {
+            "id": "sum2",
+            "prompt": "Complete: The name Santa Claus evolved from the Dutch nickname ______.",
+            "answers": ["sinterklaas"]
+          },
+          {
+            "id": "sum3",
+            "prompt": "Complete: The core spirit of Santa Claus is the joy of ______ to others.",
+            "answers": ["giving"]
+          }
+        ],
+        "shortAnswer": [
+          {
+            "id": "sa1",
+            "prompt": "How did the image of Santa change from Sinterklaas to the modern version?"
+          },
+          {
+            "id": "sa2",
+            "prompt": "What contributions did Thomas Nast make to the Santa legend?"
+          }
+        ]
+      }
+    },
+    "clozeData": {
+      "paragraph": "The story of Santa Claus begins with St. Nicholas, a monk from Myra who was known for his _____. Dutch immigrants brought the story of _____ to New York, where he was depicted as a tall bishop. Later, Clement Clarke Moore described Santa as a \"jolly old _____\" who flew in a sleigh. Political cartoonist Thomas Nast added the red suit and the idea that Santa lived at the _____ Pole. Finally, Coca-Cola illustrator Haddon Sundblom _____ the image of Santa as a warm, grandfatherly figure. Today, Santa represents the spirit of _____.",
+      "words": [
+        "kindness",
+        "sinterklaas",
+        "elf",
+        "north",
+        "standardized",
+        "giving"
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 text-center"
+            },
+            "children": [{ "text": "The True Story of Santa Claus" }]
+          },
+          {
+            "tag": "h1",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [{ "text": "Lesson 4: Reading" }]
+          },
+          {
+            "tag": "h3",
+            "attributes": {
+              "class": "text-3xl text-gray-800 mb-4 text-center"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Ôn từ vựng bằng Flashcards." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Làm bài điền từ vào đoạn văn." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Làm các bài tập đọc hiểu. Chụp điểm số gửi giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện đọc thành tiếng và ghi âm lại gửi giáo viên. Chú ý phát âm và ngữ điệu khi đọc."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ],
+    "questions": [
+      {
+        "type": "multipleChoice",
+        "question": "\"icon\" nghĩa là gì?",
+        "correctAnswer": "biểu tượng",
+        "options": ["biểu tượng", "truyền thuyết", "giám mục", "người nhập cư"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"legend\" nghĩa là gì?",
+        "correctAnswer": "huyền thoại, truyền thuyết",
+        "options": [
+          "huyền thoại, truyền thuyết",
+          "sự hào phóng",
+          "họa sĩ",
+          "biểu tượng"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"bishop\" nghĩa là gì?",
+        "correctAnswer": "giám mục",
+        "options": ["giám mục", "kỹ sư", "nhà khoa học", "người khổng lồ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"immigrant\" nghĩa là gì?",
+        "correctAnswer": "người nhập cư",
+        "options": [
+          "người nhập cư",
+          "người bản địa",
+          "khách du lịch",
+          "giám mục"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"depict\" nghĩa là gì?",
+        "correctAnswer": "mô tả, khắc họa",
+        "options": ["mô tả, khắc họa", "biến đổi", "tiêu chuẩn hóa", "ủng hộ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"transform\" nghĩa là gì?",
+        "correctAnswer": "biến đổi, thay đổi hoàn toàn",
+        "options": [
+          "biến đổi, thay đổi hoàn toàn",
+          "duy trì",
+          "bảo vệ",
+          "mô tả"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"miniature\" nghĩa là gì?",
+        "correctAnswer": "thu nhỏ, tí hon",
+        "options": ["thu nhỏ, tí hon", "khổng lồ", "bình thường", "to lớn"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"cartoonist\" nghĩa là gì?",
+        "correctAnswer": "họa sĩ truyện tranh/biếm họa",
+        "options": [
+          "họa sĩ truyện tranh/biếm họa",
+          "nhà văn",
+          "nhà thơ",
+          "nhạc sĩ"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"illustrator\" nghĩa là gì?",
+        "correctAnswer": "họa sĩ minh họa",
+        "options": ["họa sĩ minh họa", "nhiếp ảnh gia", "đạo diễn", "diễn viên"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"standardize\" nghĩa là gì?",
+        "correctAnswer": "tiêu chuẩn hóa",
+        "options": ["tiêu chuẩn hóa", "thay đổi", "phá hủy", "tạo ra"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"charitable\" nghĩa là gì?",
+        "correctAnswer": "từ thiện, nhân đức",
+        "options": ["từ thiện, nhân đức", "ích kỷ", "độc ác", "lạnh lùng"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"generosity\" nghĩa là gì?",
+        "correctAnswer": "sự hào phóng",
+        "options": ["sự hào phóng", "sự keo kiệt", "sự nghèo đói", "sự giàu có"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "lesson-1-vocab": {
+    "background": "https://hips.hearstapps.com/hmg-prod/images/decorated-christmas-tree-near-fireplace-at-home-royalty-free-image-1731335629.jpg?crop=1xw:0.84375xh;0,0.0538xh",
+    "title": "The True Story of Santa Claus",
+    "description": "Lesson 1: Vocabulary - Part 1",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "video", "id": "youtube-opening" },
+      { "type": "activity", "id": "vocabulary" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "cloze-game" }
+    ],
+    "externalContent": {
+      "videos": [
+        {
+          "id": "youtube-opening",
+          "url": "https://www.youtube.com/watch?v=emSWhjUfEhE",
+          "title": "Video mở đầu"
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "jolly",
+        "phonics": "/ˈdʒɒli/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/jolly.webp",
+        "vietnameseMeaning": "vui vẻ, vui nhộn",
+        "sampleSentence": "Santa is often described as a jolly man.",
+        "vietnameseTranslation": "Ông già Noel thường được miêu tả là một người đàn ông vui vẻ.",
+        "wordPronunciation": "jolly.wav",
+        "sentencePronunciation": "santa-is-often-described-as-a-jolly-man.wav"
+      },
+      {
+        "word": "ancient",
+        "phonics": "/ˈeɪnʃənt/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/ancient.webp",
+        "vietnameseMeaning": "cổ xưa",
+        "sampleSentence": "The story is based on ancient legends.",
+        "vietnameseTranslation": "Câu chuyện dựa trên những truyền thuyết cổ xưa.",
+        "wordPronunciation": "ancient.wav",
+        "sentencePronunciation": "the-story-is-based-on-ancient-legends.wav"
+      },
+      {
+        "word": "legend",
+        "phonics": "/ˈledʒənd/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/legend.webp",
+        "vietnameseMeaning": "huyền thoại, truyền thuyết",
+        "sampleSentence": "The legend of St. Nicholas is famous.",
+        "vietnameseTranslation": "Truyền thuyết về Thánh Nicholas rất nổi tiếng.",
+        "wordPronunciation": "legend.wav",
+        "sentencePronunciation": "the-legend-of-st-nicholas-is-famous.wav"
+      },
+      {
+        "word": "monk",
+        "phonics": "/mʌŋk/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/monk.webp",
+        "vietnameseMeaning": "thầy tu",
+        "sampleSentence": "St. Nicholas was a monk in Myra.",
+        "vietnameseTranslation": "Thánh Nicholas là một thầy tu ở Myra.",
+        "wordPronunciation": "monk.wav",
+        "sentencePronunciation": "st-nicholas-was-a-monk-in-myra.wav"
+      },
+      {
+        "word": "piety",
+        "phonics": "/ˈpaɪəti/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/piety.webp",
+        "vietnameseMeaning": "lòng sùng kính, sự ngoan đạo",
+        "sampleSentence": "He was admired for his piety and kindness.",
+        "vietnameseTranslation": "Ông được ngưỡng mộ vì lòng sùng kính và lòng tốt của mình.",
+        "wordPronunciation": "piety.wav",
+        "sentencePronunciation": "he-was-admired-for-his-piety-and-kindness.wav"
+      },
+      {
+        "word": "wealth",
+        "phonics": "/welθ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/wealth.webp",
+        "vietnameseMeaning": "sự giàu có, của cải",
+        "sampleSentence": "He gave away all his wealth to the poor.",
+        "vietnameseTranslation": "Ông đã cho đi tất cả của cải của mình cho người nghèo.",
+        "wordPronunciation": "wealth.wav",
+        "sentencePronunciation": "he-gave-away-all-his-wealth-to-the-poor.wav"
+      },
+      {
+        "word": "afford",
+        "phonics": "/əˈfɔːrd/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/afford.webp",
+        "vietnameseMeaning": "có đủ khả năng chi trả",
+        "sampleSentence": "The father could not afford the marriage payment.",
+        "vietnameseTranslation": "Người cha không đủ khả năng chi trả tiền cưới.",
+        "wordPronunciation": "afford.wav",
+        "sentencePronunciation": "the-father-could-not-afford-the-marriage-payment.wav"
+      },
+      {
+        "word": "chimney",
+        "phonics": "/ˈtʃɪmni/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/chimney.webp",
+        "vietnameseMeaning": "ống khói",
+        "sampleSentence": "Santa comes down the chimney.",
+        "vietnameseTranslation": "Ông già Noel đi xuống qua ống khói.",
+        "wordPronunciation": "chimney.wav",
+        "sentencePronunciation": "santa-comes-down-the-chimney.wav"
+      },
+      {
+        "word": "stocking",
+        "phonics": "/ˈstɒkɪŋ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/stocking.webp",
+        "vietnameseMeaning": "chiếc tất (dài)",
+        "sampleSentence": "Children hang a stocking by the fireplace.",
+        "vietnameseTranslation": "Trẻ em treo một chiếc tất bên lò sưởi.",
+        "wordPronunciation": "stocking.wav",
+        "sentencePronunciation": "children-hang-a-stocking-by-the-fireplace.wav"
+      },
+      {
+        "word": "origin",
+        "phonics": "/ˈɔːrɪdʒɪn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/origin.webp",
+        "vietnameseMeaning": "nguồn gốc",
+        "sampleSentence": "This story is the origin of the tradition.",
+        "vietnameseTranslation": "Câu chuyện này là nguồn gốc của truyền thống.",
+        "wordPronunciation": "origin.wav",
+        "sentencePronunciation": "this-story-is-the-origin-of-the-tradition.wav"
+      },
+      {
+        "word": "saint",
+        "phonics": "/seɪnt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/saint.webp",
+        "vietnameseMeaning": "vị thánh",
+        "sampleSentence": "St. Nicholas became a popular saint.",
+        "vietnameseTranslation": "Thánh Nicholas trở thành một vị thánh nổi tiếng.",
+        "wordPronunciation": "saint.wav",
+        "sentencePronunciation": "st-nicholas-became-a-popular-saint.wav"
+      },
+      {
+        "word": "immigrant",
+        "phonics": "/ˈɪmɪɡrənt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/immigrant.webp",
+        "vietnameseMeaning": "người nhập cư",
+        "sampleSentence": "Dutch immigrants brought the story to America.",
+        "vietnameseTranslation": "Những người nhập cư Hà Lan đã mang câu chuyện đến Mỹ.",
+        "wordPronunciation": "immigrant.wav",
+        "sentencePronunciation": "dutch-immigrants-brought-the-story-to-america.wav"
+      }
+    ],
+    "clozeData": {
+      "sentences": [
+        {
+          "sentence": "Santa is known for his _____ laugh.",
+          "word": "jolly"
+        },
+        {
+          "sentence": "Pyramids are _____ structures from Egypt.",
+          "word": "ancient"
+        },
+        {
+          "sentence": "The _____ of King Arthur is well-known.",
+          "word": "legend"
+        },
+        {
+          "sentence": "The _____ lived a quiet life in the monastery.",
+          "word": "monk"
+        },
+        {
+          "sentence": "Her _____ and devotion to God were inspiring.",
+          "word": "piety"
+        },
+        {
+          "sentence": "Health is more important than _____.",
+          "word": "wealth"
+        },
+        {
+          "sentence": "I can't _____ to buy a new car right now.",
+          "word": "afford"
+        },
+        {
+          "sentence": "Smoke rose from the _____ on the roof.",
+          "word": "chimney"
+        },
+        {
+          "sentence": "She found candy in her Christmas _____.",
+          "word": "stocking"
+        },
+        {
+          "sentence": "The _____ of the universe is a big scientific question.",
+          "word": "origin"
+        },
+        {
+          "sentence": "Mother Teresa is considered a _____ by many.",
+          "word": "saint"
+        },
+        {
+          "sentence": "My grandfather was an _____ from Italy.",
+          "word": "immigrant"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "The True Story of Santa Claus" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 1: Vocabulary - Part 1" }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video mở đầu." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Luyện tập phát âm từ vựng và câu." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập từ vựng bằng các hoạt động tương tác, chụp kết quả gửi kết quả cho giáo viên, quan trọng là cách hoạt động trắc nghiệm và nghe."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Quay video trả lời các câu hỏi sau và gửi cho giáo viên:"
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "text-2xl text-gray-700 mt-4 space-y-4 list-disc list-inside"
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "Describe the Santa Claus that you know."
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "What do Santa Claus often do on Christmas that you are told when you were a kid?"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "What are other Christmas symbols you know?"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}

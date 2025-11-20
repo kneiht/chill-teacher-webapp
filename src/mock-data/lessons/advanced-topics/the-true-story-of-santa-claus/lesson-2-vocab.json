@@ -1,0 +1,324 @@
+{
+  "lesson-2-vocab": {
+    "background": "https://hips.hearstapps.com/hmg-prod/images/decorated-christmas-tree-near-fireplace-at-home-royalty-free-image-1731335629.jpg?crop=1xw:0.84375xh;0,0.0538xh",
+    "title": "The True Story of Santa Claus",
+    "description": "Lesson 2: Vocabulary - Part 2",
+    "menu": [
+      { "type": "page", "id": "assignments" },
+      { "type": "activity", "id": "vocabulary" },
+      { "type": "activity", "id": "flashcards" },
+      { "type": "activity", "id": "matching-game" },
+      { "type": "activity", "id": "memory-game" },
+      { "type": "activity", "id": "multiple-choice-envi" },
+      { "type": "activity", "id": "multiple-choice-vien" },
+      { "type": "activity", "id": "picture-choice" },
+      { "type": "activity", "id": "image-reveal" },
+      { "type": "activity", "id": "picture-typing" },
+      { "type": "activity", "id": "listening-typing" },
+      { "type": "activity", "id": "listening-sentence" },
+      { "type": "activity", "id": "translation-game" },
+      { "type": "activity", "id": "cloze-game" }
+    ],
+    "vocab": [
+      {
+        "word": "depict",
+        "phonics": "/dɪˈpɪkt/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/depict.webp",
+        "vietnameseMeaning": "mô tả, khắc họa",
+        "sampleSentence": "The painting depicts a beautiful landscape.",
+        "vietnameseTranslation": "Bức tranh khắc họa một phong cảnh đẹp.",
+        "wordPronunciation": "depict.wav",
+        "sentencePronunciation": "the-painting-depicts-a-beautiful-landscape.wav"
+      },
+      {
+        "word": "bishop",
+        "phonics": "/ˈbɪʃəp/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/bishop.webp",
+        "vietnameseMeaning": "giám mục",
+        "sampleSentence": "The bishop led the church service.",
+        "vietnameseTranslation": "Vị giám mục đã chủ trì buổi lễ nhà thờ.",
+        "wordPronunciation": "bishop.wav",
+        "sentencePronunciation": "the-bishop-led-the-church-service.wav"
+      },
+      {
+        "word": "evolve",
+        "phonics": "/ɪˈvɒlv/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/evolve.webp",
+        "vietnameseMeaning": "tiến hóa, phát triển",
+        "sampleSentence": "The plan evolved over time.",
+        "vietnameseTranslation": "Kế hoạch đã phát triển theo thời gian.",
+        "wordPronunciation": "evolve.wav",
+        "sentencePronunciation": "the-plan-evolved-over-time.wav"
+      },
+      {
+        "word": "nickname",
+        "phonics": "/ˈnɪkneɪm/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/nickname.webp",
+        "vietnameseMeaning": "biệt danh",
+        "sampleSentence": "His nickname at school was 'Speedy'.",
+        "vietnameseTranslation": "Biệt danh của anh ấy ở trường là 'Speedy'.",
+        "wordPronunciation": "nickname.wav",
+        "sentencePronunciation": "his-nickname-at-school-was-speedy.wav"
+      },
+      {
+        "word": "transform",
+        "phonics": "/trænsˈfɔːrm/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/transform.webp",
+        "vietnameseMeaning": "biến đổi",
+        "sampleSentence": "The caterpillar transformed into a butterfly.",
+        "vietnameseTranslation": "Con sâu bướm đã biến đổi thành một con bướm.",
+        "wordPronunciation": "transform.wav",
+        "sentencePronunciation": "the-caterpillar-transformed-into-a-butterfly.wav"
+      },
+      {
+        "word": "appearance",
+        "phonics": "/əˈpɪərəns/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/appearance.webp",
+        "vietnameseMeaning": "ngoại hình, sự xuất hiện",
+        "sampleSentence": "His sudden appearance surprised everyone.",
+        "vietnameseTranslation": "Sự xuất hiện đột ngột của anh ấy làm mọi người ngạc nhiên.",
+        "wordPronunciation": "appearance.wav",
+        "sentencePronunciation": "his-sudden-appearance-surprised-everyone.wav"
+      },
+      {
+        "word": "poem",
+        "phonics": "/ˈpoʊəm/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/poem.webp",
+        "vietnameseMeaning": "bài thơ",
+        "sampleSentence": "She wrote a beautiful poem about nature.",
+        "vietnameseTranslation": "Cô ấy đã viết một bài thơ đẹp về thiên nhiên.",
+        "wordPronunciation": "poem.wav",
+        "sentencePronunciation": "she-wrote-a-beautiful-poem-about-nature.wav"
+      },
+      {
+        "word": "elf",
+        "phonics": "/elf/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/elf.webp",
+        "vietnameseMeaning": "yêu tinh",
+        "sampleSentence": "The elf helped Santa make toys.",
+        "vietnameseTranslation": "Chú yêu tinh đã giúp ông già Noel làm đồ chơi.",
+        "wordPronunciation": "elf.wav",
+        "sentencePronunciation": "the-elf-helped-santa-make-toys.wav"
+      },
+      {
+        "word": "miniature",
+        "phonics": "/ˈmɪnətʃər/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/miniature.webp",
+        "vietnameseMeaning": "thu nhỏ, tí hon",
+        "sampleSentence": "He collects miniature cars.",
+        "vietnameseTranslation": "Anh ấy sưu tập những chiếc xe hơi tí hon.",
+        "wordPronunciation": "miniature.wav",
+        "sentencePronunciation": "he-collects-miniature-cars.wav"
+      },
+      {
+        "word": "sleigh",
+        "phonics": "/sleɪ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/sleigh.webp",
+        "vietnameseMeaning": "xe trượt tuyết",
+        "sampleSentence": "They rode in a horse-drawn sleigh.",
+        "vietnameseTranslation": "Họ đi trên một chiếc xe trượt tuyết do ngựa kéo.",
+        "wordPronunciation": "sleigh.wav",
+        "sentencePronunciation": "they-rode-in-a-horse-drawn-sleigh.wav"
+      },
+      {
+        "word": "reindeer",
+        "phonics": "/ˈreɪndɪər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/reindeer.webp",
+        "vietnameseMeaning": "tuần lộc",
+        "sampleSentence": "Reindeer live in cold climates.",
+        "vietnameseTranslation": "Tuần lộc sống ở những vùng khí hậu lạnh.",
+        "wordPronunciation": "reindeer.wav",
+        "sentencePronunciation": "reindeer-live-in-cold-climates.wav"
+      },
+      {
+        "word": "lore",
+        "phonics": "/lɔːr/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/lore.webp",
+        "vietnameseMeaning": "truyền thuyết, kho tàng kiến thức",
+        "sampleSentence": "The book is full of ancient lore.",
+        "vietnameseTranslation": "Cuốn sách chứa đầy những truyền thuyết cổ xưa.",
+        "wordPronunciation": "lore.wav",
+        "sentencePronunciation": "the-book-is-full-of-ancient-lore.wav"
+      }
+    ],
+    "clozeData": {
+      "sentences": [
+        {
+          "sentence": "The artist tried to _____ the emotion in her painting.",
+          "word": "depict"
+        },
+        {
+          "sentence": "The _____ wore a long robe and a special hat.",
+          "word": "bishop"
+        },
+        {
+          "sentence": "Technology continues to _____ rapidly.",
+          "word": "evolve"
+        },
+        {
+          "sentence": "My friends gave me a funny _____.",
+          "word": "nickname"
+        },
+        {
+          "sentence": "Makeup can _____ a person's look completely.",
+          "word": "transform"
+        },
+        {
+          "sentence": "She pays a lot of attention to her _____.",
+          "word": "appearance"
+        },
+        {
+          "sentence": "We had to memorize a _____ for class.",
+          "word": "poem"
+        },
+        {
+          "sentence": "In the story, the _____ had magical powers.",
+          "word": "elf"
+        },
+        {
+          "sentence": "The dollhouse had tiny, _____ furniture.",
+          "word": "miniature"
+        },
+        {
+          "sentence": "Santa's _____ is pulled by flying reindeer.",
+          "word": "sleigh"
+        },
+        {
+          "sentence": "Rudolph is the most famous _____.",
+          "word": "reindeer"
+        },
+        {
+          "sentence": "Vampire _____ says they cannot see their reflection.",
+          "word": "lore"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "id": "assignments",
+        "title": "Nhiệm vụ",
+        "scrollable": true,
+        "root": [
+          {
+            "tag": "h2",
+            "attributes": {
+              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            },
+            "children": [
+              { "text": "The True Story of Santa Claus" },
+              {
+                "tag": "br"
+              },
+              { "text": "Lesson 2: Vocabulary - Part 2" }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-3xl text-gray-700 mb-4"
+            },
+            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+          },
+          {
+            "tag": "ol",
+            "attributes": {
+              "class": "text-3xl text-left text-gray-800 space-y-8 list-decimal list-inside"
+            },
+            "children": [
+              {
+                "tag": "li",
+                "children": [{ "text": "Xem video mở đầu." }]
+              },
+              {
+                "tag": "li",
+                "children": [{ "text": "Luyện tập phát âm từ vựng và câu." }]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Luyện tập từ vựng bằng các hoạt động tương tác, chụp kết quả gửi kết quả cho giáo viên, quan trọng là cách hoạt động trắc nghiệm và nghe."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Viết lại từ vựng và câu vào vở, chụp hình gửi giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Quay video trả lời các câu hỏi sau và gửi cho giáo viên:"
+                  },
+                  {
+                    "tag": "ul",
+                    "attributes": {
+                      "class": "text-2xl text-gray-700 mt-4 space-y-4 list-disc list-inside"
+                    },
+                    "children": [
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "Who was Sinterklaas?"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "children": [
+                          {
+                            "text": "How did Clement Clarke Moore change Santa's image?"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "li",
+                        "children": [
+                          { "text": "What is 'The Night Before Christmas'?" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": {
+              "class": "text-xl text-gray-600 mt-6 italic text-center"
+            },
+            "children": [{ "text": "Chúc các em học tốt!" }]
+          }
+        ],
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
+      }
+    ]
+  }
+}
