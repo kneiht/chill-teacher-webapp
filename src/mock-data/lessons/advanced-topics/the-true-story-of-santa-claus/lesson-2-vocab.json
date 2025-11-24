@@ -268,44 +268,6 @@
                     "text": "Ghi âm hoặc quay video phát âm các từ vựng và câu gửi cho giáo viên."
                   }
                 ]
-              },
-              {
-                "tag": "li",
-                "children": [
-                  {
-                    "text": "Quay video trả lời các câu hỏi sau và gửi cho giáo viên:"
-                  },
-                  {
-                    "tag": "ul",
-                    "attributes": {
-                      "class": "text-2xl text-gray-700 mt-4 space-y-4 list-disc list-inside"
-                    },
-                    "children": [
-                      {
-                        "tag": "li",
-                        "children": [
-                          {
-                            "text": "Who was Sinterklaas?"
-                          }
-                        ]
-                      },
-                      {
-                        "tag": "li",
-                        "children": [
-                          {
-                            "text": "How did Clement Clarke Moore change Santa's image?"
-                          }
-                        ]
-                      },
-                      {
-                        "tag": "li",
-                        "children": [
-                          { "text": "What is 'The Night Before Christmas'?" }
-                        ]
-                      }
-                    ]
-                  }
-                ]
               }
             ]
           },
