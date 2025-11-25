@@ -16,15 +16,26 @@
     },
     "vocab": [
       {
-        "word": "icon",
-        "phonics": "/ˈaɪkɒn/",
-        "partOfSpeech": "n",
-        "image": "https://storage.chillteacher.com/images-words/icon.webp",
-        "vietnameseMeaning": "biểu tượng",
-        "sampleSentence": "Santa Claus has become a global icon of generosity.",
-        "vietnameseTranslation": "Ông già Noel đã trở thành biểu tượng toàn cầu của sự hào phóng.",
-        "wordPronunciation": "icon.wav",
-        "sentencePronunciation": "santa-claus-has-become-a-global-icon-of-generosity.wav"
+        "word": "jolly",
+        "phonics": "/ˈdʒɒli/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/jolly.webp",
+        "vietnameseMeaning": "vui vẻ, vui nhộn",
+        "sampleSentence": "Santa is often described as a jolly man.",
+        "vietnameseTranslation": "Ông già Noel thường được miêu tả là một người đàn ông vui vẻ.",
+        "wordPronunciation": "jolly.wav",
+        "sentencePronunciation": "santa-is-often-described-as-a-jolly-man.wav"
+      },
+      {
+        "word": "ancient",
+        "phonics": "/ˈeɪnʃənt/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/ancient.webp",
+        "vietnameseMeaning": "cổ xưa",
+        "sampleSentence": "The story is based on ancient legends.",
+        "vietnameseTranslation": "Câu chuyện dựa trên những truyền thuyết cổ xưa.",
+        "wordPronunciation": "ancient.wav",
+        "sentencePronunciation": "the-story-is-based-on-ancient-legends.wav"
       },
       {
         "word": "legend",
@@ -32,21 +43,98 @@
         "partOfSpeech": "n",
         "image": "https://storage.chillteacher.com/images-words/legend.webp",
         "vietnameseMeaning": "huyền thoại, truyền thuyết",
-        "sampleSentence": "The legend of St. Nicholas is hundreds of years old.",
-        "vietnameseTranslation": "Truyền thuyết về Thánh Nicholas đã có từ hàng trăm năm nay.",
+        "sampleSentence": "The legend of St. Nicholas is famous.",
+        "vietnameseTranslation": "Truyền thuyết về Thánh Nicholas rất nổi tiếng.",
         "wordPronunciation": "legend.wav",
-        "sentencePronunciation": "the-legend-of-st-nicholas-is-hundreds-of-years-old.wav"
+        "sentencePronunciation": "the-legend-of-st-nicholas-is-famous.wav"
       },
       {
-        "word": "bishop",
-        "phonics": "/ˈbɪʃəp/",
+        "word": "monk",
+        "phonics": "/mʌŋk/",
         "partOfSpeech": "n",
-        "image": "https://storage.chillteacher.com/images-words/bishop.webp",
-        "vietnameseMeaning": "giám mục",
-        "sampleSentence": "St. Nicholas was a bishop in Myra.",
-        "vietnameseTranslation": "Thánh Nicholas là một giám mục ở Myra.",
-        "wordPronunciation": "bishop.wav",
-        "sentencePronunciation": "st-nicholas-was-a-bishop-in-myra.wav"
+        "image": "https://storage.chillteacher.com/images-words/monk.webp",
+        "vietnameseMeaning": "thầy tu",
+        "sampleSentence": "St. Nicholas was a monk in Myra.",
+        "vietnameseTranslation": "Thánh Nicholas là một thầy tu ở Myra.",
+        "wordPronunciation": "monk.wav",
+        "sentencePronunciation": "st-nicholas-was-a-monk-in-myra.wav"
+      },
+      {
+        "word": "piety",
+        "phonics": "/ˈpaɪəti/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/piety.webp",
+        "vietnameseMeaning": "lòng sùng kính, sự ngoan đạo",
+        "sampleSentence": "He was admired for his piety and kindness.",
+        "vietnameseTranslation": "Ông được ngưỡng mộ vì lòng sùng kính và lòng tốt của mình.",
+        "wordPronunciation": "piety.wav",
+        "sentencePronunciation": "he-was-admired-for-his-piety-and-kindness.wav"
+      },
+      {
+        "word": "wealth",
+        "phonics": "/welθ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/wealth.webp",
+        "vietnameseMeaning": "sự giàu có, của cải",
+        "sampleSentence": "He gave away all his wealth to the poor.",
+        "vietnameseTranslation": "Ông đã cho đi tất cả của cải của mình cho người nghèo.",
+        "wordPronunciation": "wealth.wav",
+        "sentencePronunciation": "he-gave-away-all-his-wealth-to-the-poor.wav"
+      },
+      {
+        "word": "afford",
+        "phonics": "/əˈfɔːrd/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/afford.webp",
+        "vietnameseMeaning": "có đủ khả năng chi trả",
+        "sampleSentence": "The father could not afford the marriage payment.",
+        "vietnameseTranslation": "Người cha không đủ khả năng chi trả tiền cưới.",
+        "wordPronunciation": "afford.wav",
+        "sentencePronunciation": "the-father-could-not-afford-the-marriage-payment.wav"
+      },
+      {
+        "word": "chimney",
+        "phonics": "/ˈtʃɪmni/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/chimney.webp",
+        "vietnameseMeaning": "ống khói",
+        "sampleSentence": "Santa comes down the chimney.",
+        "vietnameseTranslation": "Ông già Noel đi xuống qua ống khói.",
+        "wordPronunciation": "chimney.wav",
+        "sentencePronunciation": "santa-comes-down-the-chimney.wav"
+      },
+      {
+        "word": "stocking",
+        "phonics": "/ˈstɒkɪŋ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/stocking.webp",
+        "vietnameseMeaning": "chiếc tất (dài)",
+        "sampleSentence": "Children hang a stocking by the fireplace.",
+        "vietnameseTranslation": "Trẻ em treo một chiếc tất bên lò sưởi.",
+        "wordPronunciation": "stocking.wav",
+        "sentencePronunciation": "children-hang-a-stocking-by-the-fireplace.wav"
+      },
+      {
+        "word": "origin",
+        "phonics": "/ˈɔːrɪdʒɪn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/origin.webp",
+        "vietnameseMeaning": "nguồn gốc",
+        "sampleSentence": "This story is the origin of the tradition.",
+        "vietnameseTranslation": "Câu chuyện này là nguồn gốc của truyền thống.",
+        "wordPronunciation": "origin.wav",
+        "sentencePronunciation": "this-story-is-the-origin-of-the-tradition.wav"
+      },
+      {
+        "word": "saint",
+        "phonics": "/seɪnt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/saint.webp",
+        "vietnameseMeaning": "vị thánh",
+        "sampleSentence": "St. Nicholas became a popular saint.",
+        "vietnameseTranslation": "Thánh Nicholas trở thành một vị thánh nổi tiếng.",
+        "wordPronunciation": "saint.wav",
+        "sentencePronunciation": "st-nicholas-became-a-popular-saint.wav"
       },
       {
         "word": "immigrant",
@@ -54,32 +142,99 @@
         "partOfSpeech": "n",
         "image": "https://storage.chillteacher.com/images-words/immigrant.webp",
         "vietnameseMeaning": "người nhập cư",
-        "sampleSentence": "Dutch immigrants brought the story of Sinterklaas to New York.",
-        "vietnameseTranslation": "Những người nhập cư Hà Lan đã mang câu chuyện về Sinterklaas đến New York.",
+        "sampleSentence": "Dutch immigrants brought the story to America.",
+        "vietnameseTranslation": "Những người nhập cư Hà Lan đã mang câu chuyện đến Mỹ.",
         "wordPronunciation": "immigrant.wav",
-        "sentencePronunciation": "dutch-immigrants-brought-the-story-of-sinterklaas-to-new-york.wav"
+        "sentencePronunciation": "dutch-immigrants-brought-the-story-to-america.wav"
       },
+      
       {
         "word": "depict",
         "phonics": "/dɪˈpɪkt/",
         "partOfSpeech": "v",
         "image": "https://storage.chillteacher.com/images-words/depict.webp",
         "vietnameseMeaning": "mô tả, khắc họa",
-        "sampleSentence": "Early pictures depicted Santa as a tall, slim man.",
-        "vietnameseTranslation": "Những bức tranh đầu tiên khắc họa ông già Noel là một người đàn ông cao và gầy.",
+        "sampleSentence": "The painting depicts a beautiful landscape.",
+        "vietnameseTranslation": "Bức tranh khắc họa một phong cảnh đẹp.",
         "wordPronunciation": "depict.wav",
-        "sentencePronunciation": "early-pictures-depicted-santa-as-a-tall-slim-man.wav"
+        "sentencePronunciation": "the-painting-depicts-a-beautiful-landscape.wav"
+      },
+      {
+        "word": "bishop",
+        "phonics": "/ˈbɪʃəp/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/bishop.webp",
+        "vietnameseMeaning": "giám mục",
+        "sampleSentence": "The bishop led the church service.",
+        "vietnameseTranslation": "Vị giám mục đã chủ trì buổi lễ nhà thờ.",
+        "wordPronunciation": "bishop.wav",
+        "sentencePronunciation": "the-bishop-led-the-church-service.wav"
+      },
+      {
+        "word": "evolve",
+        "phonics": "/ɪˈvɒlv/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/evolve.webp",
+        "vietnameseMeaning": "tiến hóa, phát triển",
+        "sampleSentence": "The plan evolved over time.",
+        "vietnameseTranslation": "Kế hoạch đã phát triển theo thời gian.",
+        "wordPronunciation": "evolve.wav",
+        "sentencePronunciation": "the-plan-evolved-over-time.wav"
+      },
+      {
+        "word": "nickname",
+        "phonics": "/ˈnɪkneɪm/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/nickname.webp",
+        "vietnameseMeaning": "biệt danh",
+        "sampleSentence": "His nickname at school was 'Speedy'.",
+        "vietnameseTranslation": "Biệt danh của anh ấy ở trường là 'Speedy'.",
+        "wordPronunciation": "nickname.wav",
+        "sentencePronunciation": "his-nickname-at-school-was-speedy.wav"
       },
       {
         "word": "transform",
         "phonics": "/trænsˈfɔːrm/",
         "partOfSpeech": "v",
         "image": "https://storage.chillteacher.com/images-words/transform.webp",
-        "vietnameseMeaning": "biến đổi, thay đổi hoàn toàn",
-        "sampleSentence": "Writers and artists transformed Santa's appearance over time.",
-        "vietnameseTranslation": "Các nhà văn và nghệ sĩ đã thay đổi hoàn toàn ngoại hình của ông già Noel theo thời gian.",
+        "vietnameseMeaning": "biến đổi",
+        "sampleSentence": "The caterpillar transformed into a butterfly.",
+        "vietnameseTranslation": "Con sâu bướm đã biến đổi thành một con bướm.",
         "wordPronunciation": "transform.wav",
-        "sentencePronunciation": "writers-and-artists-transformed-santas-appearance-over-time.wav"
+        "sentencePronunciation": "the-caterpillar-transformed-into-a-butterfly.wav"
+      },
+      {
+        "word": "appearance",
+        "phonics": "/əˈpɪərəns/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/appearance.webp",
+        "vietnameseMeaning": "ngoại hình, sự xuất hiện",
+        "sampleSentence": "His sudden appearance surprised everyone.",
+        "vietnameseTranslation": "Sự xuất hiện đột ngột của anh ấy làm mọi người ngạc nhiên.",
+        "wordPronunciation": "appearance.wav",
+        "sentencePronunciation": "his-sudden-appearance-surprised-everyone.wav"
+      },
+      {
+        "word": "poem",
+        "phonics": "/ˈpoʊəm/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/poem.webp",
+        "vietnameseMeaning": "bài thơ",
+        "sampleSentence": "She wrote a beautiful poem about nature.",
+        "vietnameseTranslation": "Cô ấy đã viết một bài thơ đẹp về thiên nhiên.",
+        "wordPronunciation": "poem.wav",
+        "sentencePronunciation": "she-wrote-a-beautiful-poem-about-nature.wav"
+      },
+      {
+        "word": "elf",
+        "phonics": "/elf/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/elf.webp",
+        "vietnameseMeaning": "yêu tinh",
+        "sampleSentence": "The elf helped Santa make toys.",
+        "vietnameseTranslation": "Chú yêu tinh đã giúp ông già Noel làm đồ chơi.",
+        "wordPronunciation": "elf.wav",
+        "sentencePronunciation": "the-elf-helped-santa-make-toys.wav"
       },
       {
         "word": "miniature",
@@ -87,32 +242,110 @@
         "partOfSpeech": "adj",
         "image": "https://storage.chillteacher.com/images-words/miniature.webp",
         "vietnameseMeaning": "thu nhỏ, tí hon",
-        "sampleSentence": "The poem described a miniature sleigh pulled by reindeer.",
-        "vietnameseTranslation": "Bài thơ mô tả một chiếc xe trượt tuyết tí hon được kéo bởi những chú tuần lộc.",
+        "sampleSentence": "He collects miniature cars.",
+        "vietnameseTranslation": "Anh ấy sưu tập những chiếc xe hơi tí hon.",
         "wordPronunciation": "miniature.wav",
-        "sentencePronunciation": "the-poem-described-a-miniature-sleigh-pulled-by-reindeer.wav"
+        "sentencePronunciation": "he-collects-miniature-cars.wav"
       },
+      {
+        "word": "sleigh",
+        "phonics": "/sleɪ/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/sleigh.webp",
+        "vietnameseMeaning": "xe trượt tuyết",
+        "sampleSentence": "They rode in a horse-drawn sleigh.",
+        "vietnameseTranslation": "Họ đi trên một chiếc xe trượt tuyết do ngựa kéo.",
+        "wordPronunciation": "sleigh.wav",
+        "sentencePronunciation": "they-rode-in-a-horse-drawn-sleigh.wav"
+      },
+      {
+        "word": "reindeer",
+        "phonics": "/ˈreɪndɪər/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/reindeer.webp",
+        "vietnameseMeaning": "tuần lộc",
+        "sampleSentence": "Reindeer live in cold climates.",
+        "vietnameseTranslation": "Tuần lộc sống ở những vùng khí hậu lạnh.",
+        "wordPronunciation": "reindeer.wav",
+        "sentencePronunciation": "reindeer-live-in-cold-climates.wav"
+      },
+      {
+        "word": "lore",
+        "phonics": "/lɔːr/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/lore.webp",
+        "vietnameseMeaning": "truyền thuyết, kho tàng kiến thức",
+        "sampleSentence": "The book is full of ancient lore.",
+        "vietnameseTranslation": "Cuốn sách chứa đầy những truyền thuyết cổ xưa.",
+        "wordPronunciation": "lore.wav",
+        "sentencePronunciation": "the-book-is-full-of-ancient-lore.wav"
+      },
+
       {
         "word": "cartoonist",
         "phonics": "/kɑːrˈtuːnɪst/",
         "partOfSpeech": "n",
         "image": "https://storage.chillteacher.com/images-words/cartoonist.webp",
-        "vietnameseMeaning": "họa sĩ truyện tranh/biếm họa",
-        "sampleSentence": "Thomas Nast was a famous political cartoonist.",
-        "vietnameseTranslation": "Thomas Nast là một họa sĩ biếm họa chính trị nổi tiếng.",
+        "vietnameseMeaning": "họa sĩ vẽ tranh biếm họa/hoạt hình",
+        "sampleSentence": "The cartoonist drew a funny picture of the president.",
+        "vietnameseTranslation": "Họa sĩ biếm họa đã vẽ một bức tranh hài hước về tổng thống.",
         "wordPronunciation": "cartoonist.wav",
-        "sentencePronunciation": "thomas-nast-was-a-famous-political-cartoonist.wav"
+        "sentencePronunciation": "the-cartoonist-drew-a-funny-picture-of-the-president.wav"
+      },
+      {
+        "word": "crucial",
+        "phonics": "/ˈkruːʃəl/",
+        "partOfSpeech": "adj",
+        "image": "https://storage.chillteacher.com/images-words/crucial.webp",
+        "vietnameseMeaning": "quan trọng, cốt yếu",
+        "sampleSentence": "Water is crucial for survival.",
+        "vietnameseTranslation": "Nước là yếu tố cốt yếu để sinh tồn.",
+        "wordPronunciation": "crucial.wav",
+        "sentencePronunciation": "water-is-crucial-for-survival.wav"
+      },
+      {
+        "word": "maintain",
+        "phonics": "/meɪnˈteɪn/",
+        "partOfSpeech": "v",
+        "image": "https://storage.chillteacher.com/images-words/maintain.webp",
+        "vietnameseMeaning": "duy trì, giữ gìn",
+        "sampleSentence": "He maintains a healthy lifestyle.",
+        "vietnameseTranslation": "Anh ấy duy trì một lối sống lành mạnh.",
+        "wordPronunciation": "maintain.wav",
+        "sentencePronunciation": "he-maintains-a-healthy-lifestyle.wav"
+      },
+      {
+        "word": "workshop",
+        "phonics": "/ˈwɜːrkʃɒp/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/workshop.webp",
+        "vietnameseMeaning": "xưởng, phân xưởng",
+        "sampleSentence": "The carpenter has a workshop in his garage.",
+        "vietnameseTranslation": "Người thợ mộc có một xưởng làm việc trong gara của mình.",
+        "wordPronunciation": "workshop.wav",
+        "sentencePronunciation": "the-carpenter-has-a-workshop-in-his-garage.wav"
       },
       {
         "word": "illustrator",
         "phonics": "/ˈɪləstreɪtər/",
         "partOfSpeech": "n",
         "image": "https://storage.chillteacher.com/images-words/illustrator.webp",
-        "vietnameseMeaning": "họa sĩ minh họa",
-        "sampleSentence": "Coca-Cola hired an illustrator to create holiday ads.",
-        "vietnameseTranslation": "Coca-Cola đã thuê một họa sĩ minh họa để tạo ra các quảng cáo cho kỳ nghỉ.",
+        "vietnameseMeaning": "người vẽ tranh minh họa",
+        "sampleSentence": "The illustrator created beautiful pictures for the book.",
+        "vietnameseTranslation": "Người vẽ tranh minh họa đã tạo ra những bức tranh đẹp cho cuốn sách.",
         "wordPronunciation": "illustrator.wav",
-        "sentencePronunciation": "coca-cola-hired-an-illustrator-to-create-holiday-ads.wav"
+        "sentencePronunciation": "the-illustrator-created-beautiful-pictures-for-the-book.wav"
+      },
+      {
+        "word": "campaign",
+        "phonics": "/kæmˈpeɪn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/campaign.webp",
+        "vietnameseMeaning": "chiến dịch",
+        "sampleSentence": "The advertising campaign was very successful.",
+        "vietnameseTranslation": "Chiến dịch quảng cáo đã rất thành công.",
+        "wordPronunciation": "campaign.wav",
+        "sentencePronunciation": "the-advertising-campaign-was-very-successful.wav"
       },
       {
         "word": "standardize",
@@ -120,10 +353,32 @@
         "partOfSpeech": "v",
         "image": "https://storage.chillteacher.com/images-words/standardize.webp",
         "vietnameseMeaning": "tiêu chuẩn hóa",
-        "sampleSentence": "Haddon Sundblom helped standardize the image of Santa.",
-        "vietnameseTranslation": "Haddon Sundblom đã giúp tiêu chuẩn hóa hình ảnh của ông già Noel.",
+        "sampleSentence": "They want to standardize the testing process.",
+        "vietnameseTranslation": "Họ muốn tiêu chuẩn hóa quy trình kiểm tra.",
         "wordPronunciation": "standardize.wav",
-        "sentencePronunciation": "haddon-sundblom-helped-standardize-the-image-of-santa.wav"
+        "sentencePronunciation": "they-want-to-standardize-the-testing-process.wav"
+      },
+      {
+        "word": "version",
+        "phonics": "/ˈvɜːrʒən/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/version.webp",
+        "vietnameseMeaning": "phiên bản",
+        "sampleSentence": "This is the latest version of the software.",
+        "vietnameseTranslation": "Đây là phiên bản mới nhất của phần mềm.",
+        "wordPronunciation": "version.wav",
+        "sentencePronunciation": "this-is-the-latest-version-of-the-software.wav"
+      },
+      {
+        "word": "icon",
+        "phonics": "/ˈaɪkɒn/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/icon.webp",
+        "vietnameseMeaning": "biểu tượng",
+        "sampleSentence": "The Eiffel Tower is a global icon.",
+        "vietnameseTranslation": "Tháp Eiffel là một biểu tượng toàn cầu.",
+        "wordPronunciation": "icon.wav",
+        "sentencePronunciation": "the-eiffel-tower-is-a-global-icon.wav"
       },
       {
         "word": "charitable",
@@ -131,10 +386,10 @@
         "partOfSpeech": "adj",
         "image": "https://storage.chillteacher.com/images-words/charitable.webp",
         "vietnameseMeaning": "từ thiện, nhân đức",
-        "sampleSentence": "St. Nicholas was known for his charitable acts.",
-        "vietnameseTranslation": "Thánh Nicholas nổi tiếng với những hành động từ thiện của mình.",
+        "sampleSentence": "She is known for her charitable work.",
+        "vietnameseTranslation": "Cô ấy nổi tiếng với công việc từ thiện của mình.",
         "wordPronunciation": "charitable.wav",
-        "sentencePronunciation": "st-nicholas-was-known-for-his-charitable-acts.wav"
+        "sentencePronunciation": "she-is-known-for-her-charitable-work.wav"
       },
       {
         "word": "generosity",
@@ -142,46 +397,60 @@
         "partOfSpeech": "n",
         "image": "https://storage.chillteacher.com/images-words/generosity.webp",
         "vietnameseMeaning": "sự hào phóng",
-        "sampleSentence": "Santa Claus is a symbol of generosity.",
-        "vietnameseTranslation": "Ông già Noel là biểu tượng của sự hào phóng.",
+        "sampleSentence": "Thank you for your kindness and generosity.",
+        "vietnameseTranslation": "Cảm ơn lòng tốt và sự hào phóng của bạn.",
         "wordPronunciation": "generosity.wav",
-        "sentencePronunciation": "santa-claus-is-a-symbol-of-generosity.wav"
+        "sentencePronunciation": "thank-you-for-your-kindness-and-generosity.wav"
+      },
+      {
+        "word": "spirit",
+        "phonics": "/ˈspɪrɪt/",
+        "partOfSpeech": "n",
+        "image": "https://storage.chillteacher.com/images-words/spirit.webp",
+        "vietnameseMeaning": "tinh thần",
+        "sampleSentence": "The team has a great fighting spirit.",
+        "vietnameseTranslation": "Đội bóng có tinh thần chiến đấu tuyệt vời.",
+        "wordPronunciation": "spirit.wav",
+        "sentencePronunciation": "the-team-has-a-great-fighting-spirit.wav"
       }
+    
+    
+    
     ],
     "readingSlidesData": [
       {
         "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio1.wav",
-        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image1.png",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image1.webp",
         "title": "The True Story of Santa Claus",
         "text": ""
       },
       {
         "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio2.wav",
-        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image2.png",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image2.webp",
         "textTitle": "From Bishop to Icon",
         "text": "When people think of Christmas, the first image that often comes to mind is a jolly, overweight man with a white beard and a bright red suit. However, Santa Claus did not always look like the character we see in shopping malls today. His history is a fascinating mix of ancient legends, immigrant traditions, and modern marketing."
       },
       {
         "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio3.wav",
-        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image3.png",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image3.webp",
         "textTitle": "The Real Man: Saint Nicholas",
         "text": "The story begins not at the North Pole, but in Myra (modern-day Turkey) during the 3rd century. There was a monk named St. Nicholas who was admired for his piety and kindness. Legends say he gave away all his inherited wealth and traveled the countryside helping the poor and sick. One famous story tells of how he secretly dropped a bag of gold down a chimney to help a poor father and his three daughters, which is the origin of the Christmas stocking tradition."
       },
       {
         "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio4.wav",
-        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image4.png",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image4.webp",
         "textTitle": "The Dutch Influence",
         "text": "Over time, St. Nicholas became the most popular saint in Europe. When Dutch immigrants moved to New York in the late 18th century, they brought the story of \"Sinterklaas\" with them. Sinterklaas was depicted as a tall, slim bishop who rode a white horse. The name \"Santa Claus\" actually evolved from his Dutch nickname, Sinterklaas, which is a shortened form of Sint Nikolaas."
       },
       {
         "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio5.wav",
-        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image5.png",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image5.webp",
         "textTitle": "Shaping the Image",
         "text": "In the 19th century, American writers and artists began to transform Santa’s appearance. In 1822, Clement Clarke Moore wrote \"The Night Before Christmas,\" describing Santa as a \"right jolly old elf\" with a miniature sleigh. Later, political cartoonist Thomas Nast added crucial details like the red suit and the North Pole workshop."
       },
       {
         "audio": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/audio/audio6.wav",
-        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image6.png",
+        "image": "https://storage.chillteacher.com/page-data/the-true-story-of-santa-claus/reading/images/image6.webp",
         "textTitle": "The Modern Santa",
         "text": "In the 1930s, Coca-Cola hired illustrator Haddon Sundblom for their holiday ads. Sundblom drew a Santa who was larger than life, with a warm, friendly face and a twinkling smile. He standardized the image of Santa as a grandfatherly figure drinking a soda. This version became the global icon we recognize today. Despite these changes, the core spirit of Santa Claus remains the same: the joy of giving to others."
       }
