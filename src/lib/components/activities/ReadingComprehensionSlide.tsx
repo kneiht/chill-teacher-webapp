@@ -606,7 +606,8 @@ const ReadingComprehensionSlideCore: React.FC<
           {shortAnswerQuestions.length > 0 && (
             <section className="space-y-4">
               <h3 className="text-2xl font-semibold text-gray-800">
-                5. Short Answer Questions
+                5. Short Answer Questions (Viết ra giấy giúp thầy, phần này chưa
+                phát triển xong, nên chưa lưu kết quả trả lời được)
               </h3>
               <p className="text-lg text-gray-600">
                 Respond in full sentences. These responses are not auto-graded.
