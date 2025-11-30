@@ -1,0 +1,238 @@
+:root {
+  --slide-width: 1280px;
+  --slide-height: 720px;
+  --font-main: 'Inter', sans-serif;
+  --font-playful: 'Luckiest Guy', cursive;
+  --color-text-light: #ffffff;
+  --color-text-dark: #1a1a1a;
+}
+
+/* Slide Basics */
+.json-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s;
+  z-index: 1;
+}
+
+.json-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Backgrounds */
+.bg-gradient-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.bg-gradient-2 {
+  background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
+}
+.bg-gradient-3 {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.bg-overlay-light::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+
+/* Elements */
+.slide-element {
+  position: absolute;
+  z-index: 10;
+}
+
+/* Typography */
+.text-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.text-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.text-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.text-body {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.text-caption {
+  font-size: 1rem;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Playful Font Styles */
+.font-playful {
+  font-family: var(--font-playful);
+  letter-spacing: 1px;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 8px white;
+  paint-order: stroke fill;
+  /* Fallback/Enhancement for shadow */
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.theme-teal-pop {
+  color: #4aa0a0; /* Teal color from image */
+}
+
+.theme-orange-pop {
+  color: #ff7e46; /* Orange color from image */
+}
+
+/* Themes */
+.theme-light {
+  color: var(--color-text-light);
+}
+.theme-dark {
+  color: var(--color-text-dark);
+}
+
+/* Positioning Utilities */
+.pos-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.pos-top-center {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.pos-bottom-center {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.pos-top-left {
+  top: 10%;
+  left: 10%;
+  text-align: left;
+}
+
+.pos-bottom-left {
+  bottom: 10%;
+  left: 10%;
+  text-align: left;
+}
+
+/* Animations */
+.animate-wrapper {
+  display: inline-block;
+}
+
+.active .fade-in .animate-content {
+  animation: fadeIn 0.8s ease forwards;
+}
+.active .slide-in-up .animate-content {
+  animation: slideInUpSimple 0.8s ease forwards;
+}
+.active .slide-in-left .animate-content {
+  animation: slideInLeftSimple 0.8s ease forwards;
+}
+.active .slide-in-right .animate-content {
+  animation: slideInRightSimple 0.8s ease forwards;
+}
+.active .zoom-in .animate-content {
+  animation: zoomInSimple 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInUpSimple {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeftSimple {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRightSimple {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes zoomInSimple {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

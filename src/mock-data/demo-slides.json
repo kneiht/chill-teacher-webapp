@@ -1,0 +1,279 @@
+{
+  "images": [
+    {
+      "id": "mountain",
+      "url": "/demo-slides/mountain.png"
+    },
+    {
+      "id": "office",
+      "url": "/demo-slides/office.png"
+    },
+    {
+      "id": "abstract",
+      "url": "/demo-slides/abstract.png"
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide-1",
+      "background": {
+        "type": "gradient",
+        "style": "bg-gradient-1"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "JSON Slide System",
+          "styles": ["text-title", "pos-center", "theme-light", "fade-in"]
+        },
+        {
+          "type": "text",
+          "content": "Hệ thống tạo slide từ JSON",
+          "styles": [
+            "text-caption",
+            "pos-bottom-center",
+            "theme-light",
+            "slide-in-up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-2",
+      "background": {
+        "type": "image",
+        "imageId": "mountain",
+        "style": "bg-cover",
+        "overlay": "bg-overlay-dark"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Thiên nhiên hùng vĩ",
+          "styles": ["text-title", "pos-center", "theme-light", "zoom-in"]
+        },
+        {
+          "type": "text",
+          "content": "Khám phá vẻ đẹp của núi non",
+          "styles": [
+            "text-subtitle",
+            "pos-bottom-center",
+            "theme-light",
+            "fade-in"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-3",
+      "background": {
+        "type": "gradient",
+        "style": "bg-gradient-2"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Tính năng chính",
+          "styles": [
+            "text-heading",
+            "pos-top-center",
+            "theme-light",
+            "slide-in-left"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "✓ Dễ dàng tạo slides từ JSON<br>✓ Styles được định nghĩa sẵn<br>✓ Hỗ trợ hình ảnh và text<br>✓ Animation mượt mà<br>✓ Điều hướng bàn phím",
+          "styles": ["text-body", "pos-center", "theme-light", "fade-in"]
+        }
+      ]
+    },
+    {
+      "id": "slide-4",
+      "background": {
+        "type": "image",
+        "imageId": "office",
+        "style": "bg-cover",
+        "overlay": "bg-overlay-light"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Môi trường làm việc",
+          "styles": [
+            "text-subtitle",
+            "pos-top-left",
+            "theme-dark",
+            "slide-in-right"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Không gian hiện đại và chuyên nghiệp",
+          "styles": [
+            "text-body",
+            "pos-bottom-left",
+            "theme-dark",
+            "slide-in-up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-5",
+      "background": {
+        "type": "image",
+        "imageId": "abstract",
+        "style": "bg-cover"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Công nghệ hiện đại",
+          "styles": ["text-title", "pos-center", "theme-light", "zoom-in"]
+        }
+      ]
+    },
+    {
+      "id": "slide-6",
+      "background": {
+        "type": "gradient",
+        "style": "bg-gradient-3"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Cảm ơn!",
+          "styles": ["text-title", "pos-center", "theme-light", "fade-in"]
+        },
+        {
+          "type": "text",
+          "content": "Bấm mũi tên để xem lại slides",
+          "styles": ["text-caption", "pos-bottom-center", "theme-light"]
+        }
+      ]
+    },
+    {
+      "id": "slide-7",
+      "background": {
+        "type": "image",
+        "imageId": "abstract",
+        "style": "bg-cover",
+        "overlay": "bg-overlay-light"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "UNIT 2: LET'S PLAY",
+          "styles": [
+            "text-title",
+            "font-playful",
+            "text-stroke-white",
+            "theme-teal-pop",
+            "pos-center",
+            "zoom-in"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "LESSON 2: TOYS",
+          "styles": [
+            "text-heading",
+            "font-playful",
+            "text-stroke-white",
+            "theme-orange-pop",
+            "pos-bottom-center",
+            "slide-in-up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-8",
+      "background": {
+        "type": "gradient",
+        "style": "bg-gradient-1"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Custom Positioning & Styling",
+          "styles": ["text-heading", "theme-light", "fade-in"],
+          "position": {
+            "top": "15%",
+            "left": "10%"
+          }
+        },
+        {
+          "type": "text",
+          "content": "This text is at 40% top, 10% left<br>Color: Yellow, Font: Monospace",
+          "styles": ["text-body", "slide-in-right"],
+          "position": {
+            "top": "40%",
+            "left": "10%"
+          },
+          "customStyles": {
+            "color": "#FFD700",
+            "fontFamily": "monospace"
+          }
+        },
+        {
+          "type": "text",
+          "content": "Bottom Right (10% from edges)",
+          "styles": ["text-caption", "theme-light", "slide-in-up"],
+          "position": {
+            "bottom": "10%",
+            "right": "10%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-9",
+      "background": {
+        "type": "gradient",
+        "style": "bg-gradient-2"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "<img src='/demo-slides/demo_image.png' style='width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);'>",
+          "styles": ["fade-in"],
+          "position": {
+            "top": "20%",
+            "left": "5%"
+          },
+          "customStyles": {
+            "width": "45%"
+          }
+        },
+        {
+          "type": "text",
+          "content": "Split Layout Demo",
+          "styles": ["text-heading", "theme-light", "slide-in-right"],
+          "position": {
+            "top": "30%",
+            "right": "5%"
+          },
+          "customStyles": {
+            "width": "40%",
+            "textAlign": "left"
+          }
+        },
+        {
+          "type": "text",
+          "content": "This layout demonstrates placing an image on the left and text on the right using percentage positioning.<br><br>Image source: Uploaded file.",
+          "styles": ["text-body", "theme-light", "slide-in-up"],
+          "position": {
+            "top": "45%",
+            "right": "5%"
+          },
+          "customStyles": {
+            "width": "40%",
+            "textAlign": "left"
+          }
+        }
+      ]
+    }
+  ]
+}
