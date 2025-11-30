@@ -137,7 +137,11 @@ const JsonSlide: React.FC<JsonSlideProps> = ({ data, onClose }) => {
   const slides = useMemo(
     () =>
       data.slides.map((slide) => ({ isActive }: { isActive: boolean }) => (
-        <Slide isActive={isActive} style={{ padding: 0, margin: 0 }}>
+        <Slide
+          isActive={isActive}
+          className="json-slide-wrapper"
+          style={{ padding: 0, margin: 0 }}
+        >
           <JsonSlideCore
             slide={slide}
             isActive={isActive}
