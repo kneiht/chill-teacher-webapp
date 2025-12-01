@@ -19,6 +19,7 @@ import ListeningTypingEnGame from '@/lib/components/activities/ListeningTypingEn
 import ListeningSentenceTypingGame from '@/lib/components/activities/ListeningSentenceTypingGame'
 import VietnameseToEnglishTranslationGame from '@/lib/components/activities/VietnameseToEnglishTranslationGame'
 import CandyCrushEnglishGame from '@/lib/components/activities/CandyCrushEnglishGame'
+import ClassicQuizGame from '@/lib/components/activities/ClassicQuizGame'
 import ContentPageSlide from '@/lib/components/activities/ContentPageSlide'
 import ReadingComprehensionSlide from '@/lib/components/activities/ReadingComprehensionSlide'
 import ReadingSlide from '@/lib/components/activities/ReadingSlide'
@@ -41,6 +42,7 @@ const activityComponents: Record<string, React.FC<any>> = {
   ListeningSentenceTypingGame: ListeningSentenceTypingGame,
   VietnameseToEnglishTranslationGame: VietnameseToEnglishTranslationGame,
   CandyCrushEnglishGame: CandyCrushEnglishGame,
+  ClassicQuizGame: ClassicQuizGame,
   ContentPageSlide: ContentPageSlide,
   ReadingComprehensionSlide: ReadingComprehensionSlide,
   ReadingSlide: ReadingSlide,
@@ -146,6 +148,12 @@ export const ACTIVITY_REGISTRY: Record<
     component: 'CandyCrushEnglishGame',
     description: 'Answer questions to crush candies',
   },
+  'classic-quiz-game': {
+    title: 'Classic Quiz Game',
+    icon: '',
+    component: 'ClassicQuizGame',
+    description: 'Answer questions to get high score',
+  },
   'image-reveal': {
     title: 'Image Reveal',
     icon: '',
@@ -243,6 +251,10 @@ function ActivityComponent() {
   }
 
   if (activityMeta.component === 'CandyCrushEnglishGame') {
+    return <ActivityComponent {...baseProps} questionsData={questions} />
+  }
+
+  if (activityMeta.component === 'ClassicQuizGame') {
     return <ActivityComponent {...baseProps} questionsData={questions} />
   }
 

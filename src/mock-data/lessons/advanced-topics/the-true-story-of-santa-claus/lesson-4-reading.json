@@ -6,7 +6,6 @@
     "menu": [
       { "type": "page", "id": "assignments" },
       { "type": "activity", "id": "flashcards" },
-      { "type": "activity", "id": "candy-crush" },
       { "type": "activity", "id": "cloze-game" },
       { "type": "activity", "id": "reading-slides" },
       { "type": "activity", "id": "reading-comprehension" }
@@ -147,7 +146,7 @@
         "wordPronunciation": "immigrant.wav",
         "sentencePronunciation": "dutch-immigrants-brought-the-story-to-america.wav"
       },
-      
+
       {
         "word": "depict",
         "phonics": "/dɪˈpɪkt/",
@@ -413,9 +412,6 @@
         "wordPronunciation": "spirit.wav",
         "sentencePronunciation": "the-team-has-a-great-fighting-spirit.wav"
       }
-    
-    
-    
     ],
     "readingSlidesData": [
       {
@@ -775,6 +771,245 @@
         "question": "\"generosity\" nghĩa là gì?",
         "correctAnswer": "sự hào phóng",
         "options": ["sự hào phóng", "sự keo kiệt", "sự nghèo đói", "sự giàu có"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"jolly\" nghĩa là gì?",
+        "correctAnswer": "vui vẻ, vui nhộn",
+        "options": ["vui vẻ, vui nhộn", "buồn bã", "giận dữ", "nghiêm khắc"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"ancient\" nghĩa là gì?",
+        "correctAnswer": "cổ xưa",
+        "options": ["cổ xưa", "hiện đại", "tương lai", "mới mẻ"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"monk\" nghĩa là gì?",
+        "correctAnswer": "thầy tu",
+        "options": ["thầy tu", "bác sĩ", "giáo viên", "nông dân"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"piety\" nghĩa là gì?",
+        "correctAnswer": "lòng sùng kính",
+        "options": [
+          "lòng sùng kính",
+          "sự lười biếng",
+          "sự tham lam",
+          "sự dối trá"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"wealth\" nghĩa là gì?",
+        "correctAnswer": "sự giàu có",
+        "options": ["sự giàu có", "sự nghèo khó", "sự ốm yếu", "sự cô đơn"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"afford\" nghĩa là gì?",
+        "correctAnswer": "có đủ khả năng chi trả",
+        "options": [
+          "có đủ khả năng chi trả",
+          "từ chối",
+          "chấp nhận",
+          "vay mượn"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"chimney\" nghĩa là gì?",
+        "correctAnswer": "ống khói",
+        "options": ["ống khói", "cửa sổ", "mái nhà", "cầu thang"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"stocking\" nghĩa là gì?",
+        "correctAnswer": "chiếc tất (dài)",
+        "options": ["chiếc tất (dài)", "chiếc mũ", "chiếc áo", "đôi giày"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"origin\" nghĩa là gì?",
+        "correctAnswer": "nguồn gốc",
+        "options": ["nguồn gốc", "kết thúc", "kết quả", "mục đích"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"saint\" nghĩa là gì?",
+        "correctAnswer": "vị thánh",
+        "options": ["vị thánh", "ác quỷ", "người thường", "vua"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"evolve\" nghĩa là gì?",
+        "correctAnswer": "tiến hóa, phát triển",
+        "options": ["tiến hóa, phát triển", "biến mất", "thu nhỏ", "đứng yên"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"nickname\" nghĩa là gì?",
+        "correctAnswer": "biệt danh",
+        "options": ["biệt danh", "tên thật", "họ", "chữ ký"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"appearance\" nghĩa là gì?",
+        "correctAnswer": "ngoại hình",
+        "options": ["ngoại hình", "tính cách", "sở thích", "tài năng"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"poem\" nghĩa là gì?",
+        "correctAnswer": "bài thơ",
+        "options": ["bài thơ", "câu chuyện", "bài hát", "vở kịch"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"elf\" nghĩa là gì?",
+        "correctAnswer": "yêu tinh",
+        "options": ["yêu tinh", "người khổng lồ", "rồng", "phù thủy"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"sleigh\" nghĩa là gì?",
+        "correctAnswer": "xe trượt tuyết",
+        "options": ["xe trượt tuyết", "xe đạp", "xe hơi", "máy bay"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"reindeer\" nghĩa là gì?",
+        "correctAnswer": "tuần lộc",
+        "options": ["tuần lộc", "ngựa", "chó", "mèo"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"lore\" nghĩa là gì?",
+        "correctAnswer": "truyền thuyết, kho tàng kiến thức",
+        "options": [
+          "truyền thuyết, kho tàng kiến thức",
+          "tin tức",
+          "sự thật",
+          "lịch sử"
+        ]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"crucial\" nghĩa là gì?",
+        "correctAnswer": "quan trọng, cốt yếu",
+        "options": ["quan trọng, cốt yếu", "vô dụng", "nhỏ bé", "tầm thường"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"maintain\" nghĩa là gì?",
+        "correctAnswer": "duy trì",
+        "options": ["duy trì", "phá bỏ", "thay đổi", "ngừng lại"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"workshop\" nghĩa là gì?",
+        "correctAnswer": "xưởng",
+        "options": ["xưởng", "văn phòng", "trường học", "bệnh viện"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"campaign\" nghĩa là gì?",
+        "correctAnswer": "chiến dịch",
+        "options": ["chiến dịch", "trận chiến", "cuộc họp", "bữa tiệc"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"version\" nghĩa là gì?",
+        "correctAnswer": "phiên bản",
+        "options": ["phiên bản", "bản gốc", "bản sao", "bản nháp"]
+      },
+      {
+        "type": "multipleChoice",
+        "question": "\"spirit\" nghĩa là gì?",
+        "correctAnswer": "tinh thần",
+        "options": ["tinh thần", "cơ thể", "vật chất", "tiền bạc"]
+      },
+      {
+        "type": "listening",
+        "question": "Nghe và chọn từ đúng:",
+        "correctAnswer": "jolly",
+        "wordToSpeak": "jolly",
+        "options": ["jolly", "jelly", "joyful", "journey"]
+      },
+      {
+        "type": "listening",
+        "question": "Nghe và chọn từ đúng:",
+        "correctAnswer": "ancient",
+        "wordToSpeak": "ancient",
+        "options": ["ancient", "angel", "anchor", "anger"]
+      },
+      {
+        "type": "listening",
+        "question": "Nghe và chọn từ đúng:",
+        "correctAnswer": "legend",
+        "wordToSpeak": "legend",
+        "options": ["legend", "legion", "lemon", "lesson"]
+      },
+      {
+        "type": "listening",
+        "question": "Nghe và chọn từ đúng:",
+        "correctAnswer": "chimney",
+        "wordToSpeak": "chimney",
+        "options": ["chimney", "cherry", "chicken", "children"]
+      },
+      {
+        "type": "listening",
+        "question": "Nghe và chọn từ đúng:",
+        "correctAnswer": "stocking",
+        "wordToSpeak": "stocking",
+        "options": ["stocking", "stacking", "sticking", "shocking"]
+      },
+      {
+        "type": "fillBlank",
+        "question": "Santa is often described as a _____ man.",
+        "correctAnswer": "jolly"
+      },
+      {
+        "type": "fillBlank",
+        "question": "The story is based on _____ legends.",
+        "correctAnswer": "ancient"
+      },
+      {
+        "type": "fillBlank",
+        "question": "St. Nicholas was a _____ in Myra.",
+        "correctAnswer": "monk"
+      },
+      {
+        "type": "fillBlank",
+        "question": "He gave away all his _____ to the poor.",
+        "correctAnswer": "wealth"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Santa comes down the _____.",
+        "correctAnswer": "chimney"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Children hang a _____ by the fireplace.",
+        "correctAnswer": "stocking"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Dutch immigrants brought the story to _____.",
+        "correctAnswer": "America"
+      },
+      {
+        "type": "fillBlank",
+        "question": "The elf helped Santa make _____.",
+        "correctAnswer": "toys"
+      },
+      {
+        "type": "fillBlank",
+        "question": "Reindeer live in _____ climates.",
+        "correctAnswer": "cold"
       }
     ]
   }
