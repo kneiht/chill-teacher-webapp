@@ -18,21 +18,21 @@
             "attributes": {
               "class": "text-4xl font-bold text-indigo-700 text-center"
             },
-            "children": [{ "text": "The True Story of Santa Claus" }]
+            "children": [{ "text": "Writing Task" }]
           },
           {
             "tag": "h1",
             "attributes": {
               "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
             },
-            "children": [{ "text": "Lesson 7: Writing" }]
+            "children": [{ "text": "A Memorable Christmas Memory" }]
           },
           {
             "tag": "h3",
             "attributes": {
               "class": "text-3xl text-gray-800 mb-4 text-center"
             },
-            "children": [{ "text": "Hãy hoàn thành các nhiệm vụ sau:" }]
+            "children": [{ "text": "Hãy hoàn thành nhiệm vụ sau:" }]
           },
           {
             "tag": "ol",
@@ -44,7 +44,7 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Đọc kỹ bài đọc trong phần Writing Guide"
+                    "text": "Đọc kỹ bài văn mẫu và hướng dẫn trong phần Writing Guide."
                   }
                 ]
               },
@@ -52,7 +52,15 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Làm theo hướng dẫn viết và viết bài vào vở chụp hình cho thầy."
+                    "text": "Viết một bài văn ngắn (150-200 từ) kể về một kỷ niệm Giáng sinh đáng nhớ nhất của em."
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "children": [
+                  {
+                    "text": "Nộp bài viết cho giáo viên chấm."
                   }
                 ]
               }
@@ -63,7 +71,7 @@
             "attributes": {
               "class": "text-xl text-gray-600 mt-6 italic text-center"
             },
-            "children": [{ "text": "Chúc các em học tốt!" }]
+            "children": [{ "text": "Chúc các em có một bài viết thật hay!" }]
           }
         ],
         "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
@@ -76,143 +84,58 @@
           {
             "type": "heading",
             "level": 1,
-            "text": "The True Story of Santa Claus",
-            "className": "text-4xl font-bold text-indigo-700 text-center"
+            "text": "Writing Guide: A Memorable Christmas",
+            "className": "text-4xl font-bold text-indigo-700 text-center mb-6"
           },
           {
-            "type": "heading",
-            "level": 1,
-            "text": "Lesson 7: Writing Guide",
-            "className": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+            "type": "paragraph",
+            "text": "A narrative essay tells a story. For this assignment, you will tell the story of a special Christmas memory.",
+            "className": "text-xl text-gray-700 mb-8 text-center"
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "GUIDE TO WRITING AN ESSAY: THE EVOLUTION OF SANTA CLAUS",
-            "className": "text-2xl font-bold text-blue-600"
-          },
-          {
-            "type": "heading",
-            "level": 4,
-            "text": "1. Introduction",
-            "className": "text-xl font-semibold text-blue-600 pt-2"
-          },
-          {
-            "type": "heading",
-            "level": 5,
-            "text": "Instructions:",
-            "className": "text-lg font-semibold text-gray-700 pt-1"
-          },
-          {
-            "type": "list",
-            "ordered": true,
-            "items": [
-              "Hook the reader with the modern image of Santa",
-              "State the thesis: Santa has evolved from a real person to a global icon",
-              "Briefly mention the key stages (St. Nicholas, Sinterklaas, American Santa)"
-            ],
-            "className": "list-decimal list-inside ml-6 space-y-1"
-          },
-          {
-            "type": "heading",
-            "level": 5,
-            "text": "Examples:",
-            "className": "text-lg font-semibold text-gray-700 pt-1 mt-4"
+            "text": "Structure of Your Essay",
+            "className": "text-2xl font-bold text-blue-600 mt-6"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Everyone knows Santa Claus as the jolly man in the red suit...",
-              "However, the real story starts centuries ago with a monk named St. Nicholas...",
-              "This essay will explore how a charitable bishop became the symbol of Christmas we know today."
+              "1. Introduction: Set the scene. When was it? Where were you? Who was there? Start with a 'hook' to grab the reader's attention.",
+              "2. Body Paragraphs: Tell the story in chronological order (what happened first, next, then). Use sensory details (what did you see, hear, smell, feel?).",
+              "3. Conclusion: End the story. How did you feel? Why is this memory special to you?"
             ],
-            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
+            "className": "list-none ml-6 space-y-4 text-lg text-gray-800"
           },
           {
             "type": "heading",
-            "level": 4,
-            "text": "2. Body Paragraph 1: The Origins",
-            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
+            "level": 3,
+            "text": "Sample Essay: The Christmas Surprise",
+            "className": "text-2xl font-bold text-blue-600 mt-8 mb-4"
           },
           {
-            "type": "heading",
-            "level": 5,
-            "text": "Instructions:",
-            "className": "text-lg font-semibold text-gray-700 pt-1"
+            "type": "paragraph",
+            "text": "   Christmas is always a special time for my family, but the Christmas of 2019 was truly unforgettable. It wasn't because of the presents or the delicious food, but because of a surprise that brought tears of joy to everyone's eyes.",
+            "className": "text-lg text-gray-700 mb-4 leading-relaxed"
           },
           {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Describe St. Nicholas (Myra, 3rd century)",
-              "Mention his kindness and the stocking tradition",
-              "Introduce the Dutch 'Sinterklaas'"
-            ],
-            "className": "list-disc list-inside ml-6 space-y-1"
+            "type": "paragraph",
+            "text": "   It was Christmas Eve, and my entire family was gathered in the living room. The tree was glowing with colorful lights, and the smell of roasted turkey filled the air. We were all excited to open our gifts. Suddenly, the doorbell rang. We looked at each other, puzzled, because we weren't expecting any guests. My father went to answer the door. A moment later, we heard him shout with joy.",
+            "className": "text-lg text-gray-700 mb-4 leading-relaxed"
           },
           {
-            "type": "heading",
-            "level": 4,
-            "text": "3. Body Paragraph 2: The American Transformation",
-            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
+            "type": "paragraph",
+            "text": "   Walking into the room was my older brother, who had been studying abroad in Australia for three years. He hadn't told anyone he was coming home! My mother burst into tears and ran to hug him. We all gathered around, laughing and crying at the same time. It was the best gift we could have asked for.",
+            "className": "text-lg text-gray-700 mb-4 leading-relaxed"
           },
           {
-            "type": "heading",
-            "level": 5,
-            "text": "Instructions:",
-            "className": "text-lg font-semibold text-gray-700 pt-1"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Explain Clement Clarke Moore's contribution ('The Night Before Christmas')",
-              "Discuss Thomas Nast's drawings (Red suit, North Pole)",
-              "Mention Haddon Sundblom and Coca-Cola's influence"
-            ],
-            "className": "list-disc list-inside ml-6 space-y-1"
-          },
-          {
-            "type": "heading",
-            "level": 4,
-            "text": "4. Conclusion",
-            "className": "text-xl font-semibold text-blue-600 pt-2 mt-4"
-          },
-          {
-            "type": "heading",
-            "level": 5,
-            "text": "Instructions:",
-            "className": "text-lg font-semibold text-gray-700 pt-1"
-          },
-          {
-            "type": "list",
-            "ordered": true,
-            "items": [
-              "Summarize the main points",
-              "Reflect on the core meaning of Santa (generosity)",
-              "Final thought"
-            ],
-            "className": "list-decimal list-inside ml-6 space-y-1"
-          },
-          {
-            "type": "heading",
-            "level": 5,
-            "text": "Examples:",
-            "className": "text-lg font-semibold text-gray-700 pt-1 mt-2"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "From a humble monk to a magical gift-giver, Santa's journey is fascinating.",
-              "Despite the changes in his appearance, the spirit of giving remains the same.",
-              "Santa Claus reminds us that kindness is timeless."
-            ],
-            "className": "list-disc list-inside ml-6 space-y-1 text-gray-700"
+            "type": "paragraph",
+            "text": "   That Christmas taught me that the best gifts aren't things you can buy in a store. The presence of loved ones is the most precious present of all. It is a memory I will cherish forever.",
+            "className": "text-lg text-gray-700 mb-4 leading-relaxed italic"
           }
         ],
-        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl"
       }
     ]
   }
