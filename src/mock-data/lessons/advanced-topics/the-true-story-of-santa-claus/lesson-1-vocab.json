@@ -138,7 +138,7 @@
         "sampleSentence": "This story is the origin of the tradition.",
         "vietnameseTranslation": "Câu chuyện này là nguồn gốc của truyền thống.",
         "wordPronunciation": "",
-        "sentencePronunciation": ""
+        "sentencePronunciation": "this-story-is-the-origin-of-the-tradition.wav"
       },
       {
         "word": "saint",
@@ -160,7 +160,7 @@
         "sampleSentence": "Dutch immigrants brought the story to America.",
         "vietnameseTranslation": "Những người nhập cư Hà Lan đã mang câu chuyện đến Mỹ.",
         "wordPronunciation": "immigrant.wav",
-        "sentencePronunciation": "dutch-immigrants-brought-the-story-to-america.wav"
+        "sentencePronunciation": ""
       }
     ],
     "clozeData": {
