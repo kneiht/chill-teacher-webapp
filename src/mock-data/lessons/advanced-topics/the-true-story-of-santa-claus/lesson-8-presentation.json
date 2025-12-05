@@ -11,7 +11,7 @@
       "videos": [
         {
           "id": "lesson-video",
-          "url": "https://youtu.be/9k4y5p7u2tI",
+          "url": "https://youtu.be/ULBpk6XA7x8",
           "title": "Video Overview"
         }
       ]
@@ -61,13 +61,30 @@
                 "tag": "li",
                 "children": [
                   {
-                    "text": "Dùng PowerPoint, Google Slides hoặc Canva để tạo slides thuyết trình theo hướng dẫn. Lưu ý: Toàn bộ nội dung thuyết trình đề nằm trong bài đọc."
+                    "text": "Bấm vào link bên dưới để xem infographic về Santa Claus. Dựa vào infographic để thuyết trình về lịch sử của Santa Claus."
                   }
                 ]
               },
               {
                 "tag": "li",
                 "children": [{ "text": "Tập thuyết trình và quay video." }]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "attributes": {
+              "class": "text-center my-8"
+            },
+            "children": [
+              {
+                "tag": "a",
+                "attributes": {
+                  "href": "https://storage.chillteacher.com/pages/the-true-story-of-santa-claus/presentation/santa-clause.webp",
+                  "target": "_blank",
+                  "class": "inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-2xl font-bold py-4 px-8 rounded-lg shadow-lg transition duration-300"
+                },
+                "children": [{ "text": "Xem Infographic Santa Claus" }]
               }
             ]
           },
@@ -89,271 +106,235 @@
           {
             "tag": "h1",
             "attributes": {
-              "class": "text-4xl font-bold text-indigo-700 text-center"
+              "class": "text-4xl font-bold text-indigo-700 text-center mb-2"
             },
             "children": [{ "text": "The True Story of Santa Claus" }]
           },
           {
-            "tag": "h1",
+            "tag": "h2",
             "attributes": {
-              "class": "text-4xl font-bold text-indigo-700 mb-6 text-center"
+              "class": "text-3xl font-bold text-indigo-600 mb-8 text-center"
             },
-            "children": [{ "text": "Lesson 8: Presentation" }]
+            "children": [{ "text": "Presentation Script" }]
           },
           {
             "tag": "h3",
-            "attributes": { "class": "text-2xl font-bold text-blue-600" },
+            "attributes": {
+              "class": "text-2xl font-bold text-blue-600 mt-6 mb-3"
+            },
+            "children": [{ "text": "INTRODUCTION: The Childhood Memory" }]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
             "children": [
               {
-                "text": "SAMPLE OUTLINE FOR PRESENTATION: “The History of Santa Claus”"
+                "text": "\"Hello everyone. Before I explain this infographic, I want to share a small personal memory."
               }
             ]
           },
           {
             "tag": "p",
+            "attributes": { "class": "mb-3" },
             "children": [
               {
-                "text": "This is a sample outline for your presentation. You can use it as a model or adapt it."
+                "text": "When I was a little kid, I truly believed that Santa Claus was real. I remember every December, I would carefully write a letter listing the toys I wanted. On Christmas Eve, I would try to stay awake to catch him arriving at night, but I always fell asleep. Next morning, the gifts were there like magic!"
               }
             ]
           },
           {
-            "tag": "h4",
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
+            "children": [
+              {
+                "text": "Of course, as I grew up, I discovered the truth: the 'magic' was actually my parents. They were the ones buying the gifts and eating the cookies. But that realization made me curious... If my parents were just playing a role, who created that role? Where did this character actually come from?"
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-4 font-semibold" },
+            "children": [
+              {
+                "text": "Today, based on this timeline, I will take you through the fascinating history of Santa Claus.\""
+              }
+            ]
+          },
+          {
+            "tag": "h3",
             "attributes": {
-              "class": "text-xl font-semibold text-blue-600 pt-2"
+              "class": "text-2xl font-bold text-blue-600 mt-6 mb-3"
             },
-            "children": [{ "text": "1. Introduction" }]
+            "children": [
+              { "text": "BODY PART 1: The Real Man (Saint Nicholas)" }
+            ]
           },
           {
-            "tag": "ul",
-            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "tag": "p",
+            "attributes": { "class": "mb-2 italic text-gray-600" },
             "children": [
               {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Talk about:" }]
-                      },
-                      {
-                        "text": " The modern image of Santa (red suit, jolly, North Pole) vs. his history."
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Script example:" }]
-                      },
-                      {
-                        "text": " “When we think of Christmas, we think of Santa Claus. But did you know he wasn't always a jolly man in a red suit?”"
-                      }
-                    ]
-                  }
-                ]
+                "text": "(Point to the first section on the left)"
               }
             ]
           },
           {
-            "tag": "h4",
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
+            "children": [
+              {
+                "text": "\"The story doesn't start at the North Pole. It starts here, in the 3rd Century, in a place called Myra-modern-day Turkey."
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
+            "children": [
+              {
+                "text": "This is Saint Nicholas. He wasn't a magical elf; he was a real monk known for his incredible kindness. There is a famous legend that says he wanted to help a poor father who had three daughters. To save them, Nicholas secretly left bags of gold at their doorstep. The gold was placed in stockings that were hanging by the door."
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-4" },
+            "children": [
+              {
+                "text": "So, when you hang a stocking by your bed this Christmas, you are actually repeating a tradition started by this man nearly 2,000 years ago.\""
+              }
+            ]
+          },
+          {
+            "tag": "h3",
             "attributes": {
-              "class": "text-xl font-semibold text-blue-600 pt-2"
+              "class": "text-2xl font-bold text-blue-600 mt-6 mb-3"
             },
-            "children": [{ "text": "2. The Real Man: St. Nicholas" }]
+            "children": [{ "text": "BODY PART 2: The Dutch Influence" }]
           },
           {
-            "tag": "ul",
-            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "tag": "p",
+            "attributes": { "class": "mb-2 italic text-gray-600" },
+            "children": [{ "text": "(Move your hand to the second column)" }]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
             "children": [
               {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Talk about:" }]
-                      },
-                      {
-                        "text": " St. Nicholas in Myra (Turkey), his kindness, and the stocking story."
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Script example:" }]
-                      },
-                      {
-                        "text": " “It all started with St. Nicholas, a monk who gave away his wealth to help the poor. He is the reason we hang stockings today.”"
-                      }
-                    ]
-                  }
-                ]
+                "text": "\"Fast forward to the late 18th century. When Dutch immigrants moved to New York, they brought their stories with them. They called this figure 'Sinterklaas'."
               }
             ]
           },
           {
-            "tag": "h4",
+            "tag": "p",
+            "attributes": { "class": "mb-4" },
+            "children": [
+              {
+                "text": "As you can see in this picture, he looked very different from our Santa. He was a tall, slim bishop wearing red robes and riding a white horse. Over time, English speakers had trouble pronouncing 'Sinterklaas,' and the name slowly evolved into 'Santa Claus'.\""
+              }
+            ]
+          },
+          {
+            "tag": "h3",
             "attributes": {
-              "class": "text-xl font-semibold text-blue-600 pt-2"
+              "class": "text-2xl font-bold text-blue-600 mt-6 mb-3"
             },
-            "children": [{ "text": "3. Sinterklaas & The Dutch Influence" }]
+            "children": [{ "text": "BODY PART 3: Shaping The Image" }]
           },
           {
-            "tag": "ul",
-            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "tag": "p",
+            "attributes": { "class": "mb-2 italic text-gray-600" },
             "children": [
               {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Talk about:" }]
-                      },
-                      {
-                        "text": " Dutch immigrants in New York, Sinterklaas (tall bishop), and the name evolution."
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Script example:" }]
-                      },
-                      {
-                        "text": " “The name 'Santa Claus' actually comes from the Dutch name 'Sinterklaas'. But back then, he looked very different!”"
-                      }
-                    ]
-                  }
-                ]
+                "text": "(Point to the third column - The book and the cartoonist)"
               }
             ]
           },
           {
-            "tag": "h4",
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
+            "children": [
+              {
+                "text": "\"But where did the flying sleigh come from? That happened in the 19th Century in America."
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-4" },
+            "children": [
+              {
+                "text": "A writer named Clement Clarke Moore wrote a famous poem that described Santa as a 'jolly old elf' with a miniature sleigh and eight reindeer. Later, a political cartoonist named Thomas Nast drew Santa wearing this iconic red suit with white fur. Nast was also the person who decided that Santa lives at the cold North Pole and has a workshop to make toys.\""
+              }
+            ]
+          },
+          {
+            "tag": "h3",
             "attributes": {
-              "class": "text-xl font-semibold text-blue-600 pt-2"
+              "class": "text-2xl font-bold text-blue-600 mt-6 mb-3"
             },
-            "children": [{ "text": "4. The American Makeover" }]
+            "children": [{ "text": "BODY PART 4: The Modern Santa" }]
           },
           {
-            "tag": "ul",
-            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "tag": "p",
+            "attributes": { "class": "mb-2 italic text-gray-600" },
             "children": [
               {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Talk about:" }]
-                      },
-                      {
-                        "text": " Clement Clarke Moore (sleigh, reindeer), Thomas Nast (red suit, North Pole), and Coca-Cola (friendly face)."
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Script example:" }]
-                      },
-                      {
-                        "text": " “American writers and artists changed Santa's look. Coca-Cola helped create the friendly grandfather figure we love today.”"
-                      }
-                    ]
-                  }
-                ]
+                "text": "(Point to the final column - The Santa holding a Coke)"
               }
             ]
           },
           {
-            "tag": "h4",
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
+            "children": [
+              {
+                "text": "\"Finally, we arrive at the Santa we know today. Believe it or not, a soda company played a huge role in this!"
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-4" },
+            "children": [
+              {
+                "text": "In the 1930s, Coca-Cola hired an artist named Haddon Sundblom for their ads. He drew Santa as a larger-than-life, friendly grandfather with a twinkling smile. This standardized the image of Santa Claus as a warm, happy figure that we see in every shopping mall and movie today.\""
+              }
+            ]
+          },
+          {
+            "tag": "h3",
             "attributes": {
-              "class": "text-xl font-semibold text-blue-600 pt-2"
+              "class": "text-2xl font-bold text-blue-600 mt-6 mb-3"
             },
-            "children": [{ "text": "5. Conclusion" }]
+            "children": [{ "text": "CONCLUSION:" }]
           },
           {
-            "tag": "ul",
-            "attributes": { "class": "list-inside ml-6 space-y-1" },
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
             "children": [
               {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Talk about:" }]
-                      },
-                      {
-                        "text": " The core spirit of giving remains the same."
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "li",
-                "children": [
-                  {
-                    "tag": "span",
-                    "children": [
-                      {
-                        "tag": "strong",
-                        "children": [{ "text": "Script example:" }]
-                      },
-                      {
-                        "text": " “Santa has changed a lot over history, but his message is still the same: the joy of giving to others.”"
-                      }
-                    ]
-                  }
-                ]
+                "text": "\"So, Santa has changed a lot from a monk in Turkey to a Coca-Cola icon."
               }
             ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "mb-3" },
+            "children": [
+              {
+                "text": "Looking back at my childhood, even though I found out my parents were the real 'Santa,' the spirit of the character is still true. Just like Saint Nicholas helping the poor, and just like my parents giving gifts to me, the true meaning of Santa Claus isn't about the red suit or the reindeer. It is simply about the joy of giving to others."
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "attributes": { "class": "font-bold text-lg" },
+            "children": [{ "text": "Thank you for listening!\"" }]
           }
         ],
-        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-xl"
+        "containerClassName": "bg-white bg-opacity-90 rounded-xl p-10 shadow-2xl text-lg leading-relaxed"
       }
     ]
   }
